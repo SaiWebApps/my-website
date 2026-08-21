@@ -1,0 +1,74 @@
+# Sairam Krishnan
+
+> Senior AI/ML engineering leader at Apple and Wharton MBA 2026. Eleven years
+> building data and ML platforms, then the teams that ship them. Publishes
+> research on managing engineering teams in the age of generative AI and on
+> evaluating enterprise AI return on investment, and builds independent
+> products end to end.
+
+Current role: Principal Software Engineer and AI/ML platform lead at Apple,
+leading an eight-engineer team across three continents on platforms serving
+more than 100 million users. Previously Amazon (Senior Software Engineer,
+Alexa), Susquehanna International Group, Microsoft, and Amazon Web Services.
+Executive MBA from The Wharton School, Class of 2026, with five majors.
+Dual degrees in Electrical and Computer Engineering from Carnegie Mellon.
+
+Open to senior AI/ML engineering leadership roles — VP, Director, or Head of
+AI/ML Engineering — and to speaking engagements and executive workshops.
+
+## Pages
+
+- [Home](https://sairambkrishnan.com/): Career record, education, honors, and
+  verbatim recommendations from colleagues and an Apple manager.
+- [Ventures](https://sairambkrishnan.com/ventures): Four products designed,
+  architected, coded, and operated solo — Ondoway, Persuaider, Lore / DependIQ,
+  and Crucible (claude-kit).
+- [Projects](https://sairambkrishnan.com/projects): Fifty-four open-source
+  repositories grouped into six clusters by the question behind them.
+- [Research](https://sairambkrishnan.com/research): Published papers, plus
+  speaking and teaching work.
+
+## Research
+
+- Who Trains the Next Senior? Managing engineering teams when AI makes code
+  cheap. Working paper, engrXiv, 2026. Co-authored with Gajendra Babu Thokala.
+- A Multi-Layer Framework for Evaluating the ROI of AI Projects. SSRN, 2026.
+  DOI 10.2139/ssrn.6732598. Faculty sponsor Prof. Gad Allon, The Wharton School.
+- Drone-Megaddon: commanding drone swarms like a real-time strategy game.
+  engrXiv. 2014 original DOI 10.31224/6924; 2026 extension DOI 10.31224/6987.
+
+## Documented impact
+
+- $40M saved per year at Amazon Alexa, via a batching and clustering approach
+  to Alexa Engine data mining that also improved model accuracy 40%.
+- Apple's media knowledge graph unifying metadata from 15+ sources, powering
+  search, recommendations, and discovery for 100M+ users.
+- 40% better data quality and 30% faster delivery at Apple.
+
+## Honors
+
+Benjamin Franklin Award (peer-voted, one of three in a class of 250), Palmer
+Scholar, Graduation With Honors, First Year Honors, Director's List in all six
+terms — all The Wharton School. Dean's List all three years at Carnegie
+Institute of Technology. Jesse Jones Scholarship, Houston Endowment. National
+Merit Finalist.
+
+## Speaking and teaching
+
+- Praxtera AI Institute — AI/ML Technical Leader. Designed the executive
+  curriculum for evaluating, governing, and implementing AI initiatives.
+  Clients include HP, Morgan Lewis, PBS, and the Philadelphia Eagles.
+- Eagles Care Summit 2026 keynote, Lincoln Financial Field, on "AI for Impact:
+  Basics to Advanced Automation," before more than 300 leaders.
+- Carnegie Mellon — Head TA, Web Applications Development, 105+ students.
+
+## Elsewhere
+
+- GitHub: https://github.com/SaiWebApps
+- LinkedIn: https://linkedin.com/in/sairambkrishnan
+- ORCID: https://orcid.org/0009-0004-2626-1273
+- Résumé: https://sairambkrishnan.com/assets/Sairam_Krishnan_Resume.pdf
+
+## Contact
+
+sairambkrishnan@gmail.com

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ventures: Ondoway, Persuaider, Lore — Sairam Krishnan</title>
+<meta name="description" content="Four products designed, architected, coded, and operated solo: knowledge-graph modeling, multi-provider LLM orchestration, graph algorithms, agent discipline.">
+<link rel="canonical" href="https://sairambkrishnan.com/ventures">
+<meta name="author" content="Sairam Krishnan">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sairam Krishnan">
+<meta property="og:title" content="Ventures: Ondoway, Persuaider, Lore — Sairam Krishnan">
+<meta property="og:description" content="Four products designed, architected, coded, and operated solo: knowledge-graph modeling, multi-provider LLM orchestration, graph algorithms, agent discipline.">
+<meta property="og:url" content="https://sairambkrishnan.com/ventures">
+<meta property="og:image" content="https://sairambkrishnan.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sairam Krishnan — AI/ML engineering leadership">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ventures: Ondoway, Persuaider, Lore — Sairam Krishnan">
+<meta name="twitter:description" content="Four products designed, architected, coded, and operated solo: knowledge-graph modeling, multi-provider LLM orchestration, graph algorithms, agent discipline.">
+<meta name="twitter:image" content="https://sairambkrishnan.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400&family=Martian+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1EA; --paper2:#EEEADF; --ink:#14120F; --ink2:#413A2F; --ink3:#6E685C;
+    --rule:#D8D1C2; --hair:#8A8274; --rule2:#E4DED0; --accent:#7A2E2E; --dot:#B8B0A0; --star:#14120F;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+      --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B; --star:#FFF8EB;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+    --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B; --star:#FFF8EB;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Spectral',Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"kern" 1,"liga" 1}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--ink)}
+  @media print{
+    :root, :root[data-theme="dark"]{
+      --paper:#fff; --paper2:#fff; --ink:#14120F; --ink2:#413A2F; --ink3:#6E685C;
+      --rule:#C9C2B4; --hair:#8A8274; --rule2:#DED8CA; --accent:#7A2E2E; --dot:#B8B0A0; --star:#14120F;
+    }
+  }
+  .hdr{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
+  .hdrIn{max-width:1400px;margin:0 auto;padding:13px clamp(18px,4vw,44px);display:flex;align-items:center;gap:clamp(16px,2vw,24px)}
+  .mark{flex:0 0 auto;white-space:nowrap}
+  .nav{flex:1 1 auto;display:flex;align-items:center;justify-content:flex-end;gap:clamp(13px,1.9vw,26px);flex-wrap:wrap}
+  .nav a,.nav span{padding:7px 0}
+  .tgl{flex:0 0 auto}
+  div[id]{scroll-margin-top:80px}
+  @media(max-width:760px){
+    .hdrIn{flex-wrap:wrap;padding:11px clamp(18px,4vw,44px) 0;gap:0 14px}
+    .mark{flex:1 1 auto;order:1}
+    .tgl{order:2}
+    .nav{order:3;width:100%;justify-content:flex-start;gap:2px 12px;margin-top:9px;border-top:1px solid var(--rule2)}
+    .nav a,.nav span{padding:10px 0}
+    div[id]{scroll-margin-top:96px}
+  }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .ftr a{padding:7px 0}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
+</style>
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<div style="background:var(--paper);color:var(--ink);min-height:100vh">
+
+  <div class="hdr">
+    <div class="hdrIn">
+      <a href="/" class="mark" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+      <div class="nav">
+        <a href="/#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+        <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink)">Ventures</a>
+        <a href="/projects" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Projects</a>
+        <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Research</a>
+        <a href="/#contact" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Contact</a>
+      </div>
+        <button type="button" class="tgl" ref="{{ btnRef }}" onClick="{{ cycleTheme }}" aria-label="Toggle colour theme" style="display:flex;align-items:center;justify-content:center;width:34px;height:30px;flex:0 0 auto;color:var(--ink3);background:transparent;border:1px solid var(--hair);padding:0;cursor:pointer;transition:transform .11s cubic-bezier(.22,1,.36,1),border-color .28s ease,color .28s ease,box-shadow .3s ease" style-hover="color:var(--ink);border-color:var(--ink3)" style-active="transform:scale(.88)"><span ref="{{ iconRef }}" style="display:flex;align-items:center;justify-content:center;width:16px;height:16px"></span></button>
+    </div>
+  </div>
+
+  <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,8vw,104px) clamp(18px,4vw,44px) clamp(36px,4.5vw,56px)">
+    <div style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(20px,3vw,32px)">Independent ventures</div>
+    <h1 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(38px,6.6vw,82px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 clamp(24px,3.2vw,34px);max-width:18ch">Built end to end. Then red-teamed.</h1>
+    <div style="width:52px;height:1px;background:var(--accent);margin-bottom:clamp(22px,2.8vw,30px)"></div>
+    <p style="font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:var(--ink2);margin:0">Four products I designed, architected, coded, and operated solo, from concept to deployment. Each owns a hard problem: knowledge-graph modeling, multi-provider LLM orchestration, graph algorithms, or the discipline of autonomous agents. Together they are proof that my leadership comes from doing the work, not describing it.</p>
+  </div>
+
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(44px,5.5vw,72px)">
+    <div style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3);padding-bottom:12px;border-bottom:1px solid var(--ink)">Four mechanisms</div>
+    <div ref="{{ glyphRef }}" style="position:relative;height:clamp(300px,34vw,380px);border-left:1px solid var(--rule);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--paper2)"></div>
+  </div>
+
+  <div id="ondoway" style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6vw,84px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+        <span style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);font-variant-numeric:tabular-nums">01</span>
+        <h2 style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(28px,3.6vw,46px);letter-spacing:-0.03em;margin:0">Ondoway</h2>
+      </div>
+      <div style="font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(17px,1.8vw,21px);color:var(--ink2);margin-bottom:clamp(24px,3vw,34px)">A local storyteller in your pocket.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:start;margin-bottom:clamp(28px,3.4vw,40px)">
+        <div>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0 0 16px">A Neo4j knowledge graph of city points-of-interest and narrative beats that powers GPS-triggered, personalized audio walking tours. The launch city is Paris. The pitch is simple: a knowledgeable local, narrating the right story at the right corner.</p>
+          <p style="font-size:15px;line-height:1.62;color:var(--ink3);margin:0"><span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)">What it proves &nbsp;</span>Senior-architect graph-modeling judgment, including a documented record of what the design deliberately skips (RDF/SPARQL, OWL, embeddings) and the triggers to revisit each. I owned the graph, the backend, the ML and audio pipeline, the generative content, an interactive authoring frontend, and a Flutter mobile app with GPS geofencing.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(22px,3vw,40px);border-top:1px solid var(--rule);padding-top:22px">
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Graph model</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Versioned, event-centric, CIDOC-CRM-aligned schema. Eight core entity types and twelve relationship types, several as reified edges carrying their own properties. Controlled vocabularies, canonical IDs, per-fact provenance. A lens taxonomy of eight parent genres and twenty-one sub-genres.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Stack &amp; AI</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Python 3.11 and FastAPI (JWT, Google and Apple sign-in, rate limiting), Neo4j 5.28 with spatial indexes, Flutter mobile, AWS S3. Dual-provider TTS behind a protocol, narration glue via Claude Haiku, fact-check via Gemini.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Scope &amp; rigor</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Sixteen REST endpoints, a 25-module deterministic tour engine in two modes, a browser graph editor, and a Leaflet editorial workbench. 177 tests with a CI tour-grading regression gate. Sentence-level provenance: every spoken sentence traces to a beat or a whitelisted label, so AI cannot fabricate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="persuaider" style="background:var(--paper2);border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6vw,84px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+        <span style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);font-variant-numeric:tabular-nums">02</span>
+        <h2 style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(28px,3.6vw,46px);letter-spacing:-0.03em;margin:0">Persuaider</h2>
+      </div>
+      <div style="font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(17px,1.8vw,21px);color:var(--ink2);margin-bottom:clamp(24px,3vw,34px)">Practice the hard conversation.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:start;margin-bottom:clamp(28px,3.4vw,40px)">
+        <div>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0 0 16px">Admins author negotiation scenarios with in-character AI personas. Learners practice live. An LLM evaluates each session and returns scored, framework-based feedback, with built-in CLEAR and AIDA frameworks plus admin-defined weighted ones, a 0-to-100 score, and the winning arguments.</p>
+          <p style="font-size:15px;line-height:1.62;color:var(--ink3);margin:0"><span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)">What it proves &nbsp;</span>Production-grade multi-provider LLM orchestration, not a single-API wrapper. Genuine full-stack ownership, and real operational maturity, including a &ldquo;zero skipped tests&rdquo; rule and a dedicated security and red-team layer.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(22px,3vw,40px);border-top:1px solid var(--rule);padding-top:22px">
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">LLM orchestration</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">A three-tier chain with pinned versions: Claude Sonnet 4.5 to Gemini 2.0 Flash to GPT-5.2 Instant. Exponential backoff, retryable-versus-terminal error classification, transparent mid-conversation failover. The LLM plays three roles: persona simulation, rubric evaluation, and scenario generation.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Stack</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">TypeScript and Next.js 16 (App Router), React 19.2, Tailwind v4. Prisma 6 over SQLite in dev and PostgreSQL in prod, eleven data models. Clerk auth, Upstash Redis rate limiting, React-PDF export, hosted on Vercel at roughly $0.07 per session.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Scope &amp; rigor</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Roughly 12,875 lines of non-test TypeScript, 24 React components, 65 API routes, fourteen documented user pathways across three actor types. 1,246 Jest unit tests and 15 end-to-end, zero skipped, including 67 security and middleware tests and dedicated red-team files.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="lore" style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6vw,84px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+        <span style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);font-variant-numeric:tabular-nums">03</span>
+        <h2 style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(28px,3.6vw,46px);letter-spacing:-0.03em;margin:0">Lore / DependIQ</h2>
+      </div>
+      <div style="font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(17px,1.8vw,21px);color:var(--ink2);margin-bottom:clamp(24px,3vw,34px)">The verification layer AI coding agents lack.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:start;margin-bottom:clamp(28px,3.4vw,40px)">
+        <div>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0 0 16px">A multi-tenant web app that builds a cross-project dependency graph over a workspace of repos and computes the blast radius of a change. Given a package upgrade, it shows which projects across the org break, in dependency order, with a streaming LLM explanation of why.</p>
+          <p style="font-size:15px;line-height:1.62;color:var(--ink3);margin:0"><span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)">What it proves &nbsp;</span>Real graph-systems and graph-algorithm work, deliberate polyglot persistence with explicit reasoning about the dual-write atomicity gap, and a strong leadership signal. The codebase ships alongside a brutally honest senior-engineer audit of itself, with file-and-line evidence and a prioritized fix plan, plus an investor-grade competitive memo.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(22px,3vw,40px);border-top:1px solid var(--rule);padding-top:22px">
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Graph algorithm</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Hand-written Cypher that starts from a package, finds directly-affected projects, then traverses inter-project semantics up to five hops via shortest path. Results carry distance and impact type, severity-bucketed by hop distance, behind a one-hour cache. Design-target scale near 50,000 package nodes.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Stack</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Python 3.11 and FastAPI. Polyglot persistence: PostgreSQL 14+ for identity, workspaces, and history, plus Neo4j 5.x with APOC for the dependency graph. WorkOS AuthKit. A deliberately build-free frontend in HTMX, Jinja2, Alpine, and Tailwind. Hosted on Render.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">LLM routing</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Provider-agnostic via litellm with a custom model router. Eleven task types tiered across Claude, OpenAI, and local Ollama models, in four modes: Quality, Balanced, Cost, and Local-Only for privacy, each with its own failover chain. Over 200 tests.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="crucible" style="background:var(--paper2);border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6vw,84px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+        <span style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);font-variant-numeric:tabular-nums">04</span>
+        <h2 style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(28px,3.6vw,46px);letter-spacing:-0.03em;margin:0">Crucible (claude-kit)</h2>
+      </div>
+      <div style="font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(17px,1.8vw,21px);color:var(--ink2);margin-bottom:clamp(24px,3vw,34px)">Discipline for AI coding agents.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:start;margin-bottom:clamp(28px,3.4vw,40px)">
+        <div>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0 0 16px">An open-source kit that encodes disciplined engineering practice into an AI coding agent: slash-command skills, multi-perspective agent definitions, reusable patterns, and mechanically-enforced behavioral hooks. Ten skills, ten agents, four patterns.</p>
+          <p style="font-size:15px;line-height:1.62;color:var(--ink3);margin:0"><span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)">What it proves &nbsp;</span>A clear thesis, in working code. An LLM coding agent must be treated as an adversary and disciplined with code, not prose, applying adversarial verification, test-first practice, deterministic gating, and honesty contracts. It is the operational twin of the management research.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(22px,3vw,40px);border-top:1px solid var(--rule);padding-top:22px">
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">The forge skill</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">A multi-perspective answer engine with hostile, evidence-gated verification behind a deterministic gate. Parallel generators, per-claim skeptics that re-open each cited file-and-line and confirm the quoted bytes, up to three adversaries. A pass requires positive evidence, never the mere absence of objections.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">What ships</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">Skills as Markdown with YAML frontmatter, a Node verification engine, and a Bash installer with enforcement hooks. The flagship workflow is backed by thirteen committed Node test files. Ten agents each carry an authority rank and persistent memory, and conflicts merge in authority order.</p>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">More skills</div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink2);margin:0">build-fix, an iterative build-fixer that never skips a failing test to go green. Plus ship, retro, error-diagnosis, prwalk, and agent-management skills, and four runnable patterns: observe, mutate, verify, and pipelines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6vw,84px) clamp(18px,4vw,44px)">
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(26px,3.4vw,44px);letter-spacing:-0.03em;margin:0 0 10px">Earlier and notable</h2>
+      <p style="font-size:15px;line-height:1.6;color:var(--ink3);margin:0 0 clamp(26px,3vw,36px)">A longer trail of systems, from Carnegie Mellon research to weekend builds, that show the same instincts at smaller scale.</p>
+      <div style="border-top:1px solid var(--ink)">
+        <div style="display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Spectral',Georgia,serif;font-size:19px;flex:0 0 auto;min-width:14em">Amazon ML Hackathon</span>
+          <span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:240px">OpenCV image-matching to detect whether two warehouse bins held the same objects. An ensemble of feature-matching and edge methods with averaged confidence, for a real Fulfillment and Kiva Robots problem.</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Spectral',Georgia,serif;font-size:19px;flex:0 0 auto;min-width:14em">N-an-Instant</span>
+          <span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:240px">A custom Google Instant built from n-grams over a 10,000-book corpus and Bayesian statistics, with Hadoop into HBase and a jQuery autocomplete front end.</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Spectral',Georgia,serif;font-size:19px;flex:0 0 auto;min-width:14em">End-to-end AWS cloud service</span>
+          <span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:240px">The second most cost-effective RESTful API in the cohort, analyzing a 200 GB Twitter corpus with an Elastic MapReduce ETL into HBase.</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Spectral',Georgia,serif;font-size:19px;flex:0 0 auto;min-width:14em">Twitter hashtag similarities</span>
+          <span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:240px">Co-occurrence counts over a 50 GB corpus via Hadoop, with a 78% speedup over the default solution.</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Spectral',Georgia,serif;font-size:19px;flex:0 0 auto;min-width:14em">Wikipedia page-views timeline</span>
+          <span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:240px">Monthly view counts via Elastic MapReduce on a twenty-dollar operating budget.</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--ink);flex-wrap:wrap">
+          <span style="font-family:'Spectral',Georgia,serif;font-size:19px;flex:0 0 auto;min-width:14em">Embedded &amp; systems work</span>
+          <span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:240px">An energy-aware real-time embedded Linux kernel, a Raspberry Pi motion-sensing capstone, and a discrete-time elevator simulation over a CAN network.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="ventures-contact" style="background:var(--paper2);border-top:1px solid var(--ink)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(18px,4vw,44px)">
+      <div style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px">For investors &amp; design partners</div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(34px,5.4vw,72px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 24px;max-width:18ch">Talk about the ventures.</h2>
+      <!-- PLACEHOLDER COPY - approve or rewrite. Deliberately makes no claim about
+           stage, traction, or terms; nothing here is sourced beyond this page. -->
+      <p style="font-size:16px;line-height:1.6;color:var(--ink2);margin:0 0 36px">Open to conversations about these products — the architecture, the code, or where each one goes next.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a href="mailto:sairambkrishnan@gmail.com?subject=Ventures%20inquiry" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:14px 22px" style-hover="background:var(--accent)">Start a conversation</a>
+        <a href="https://github.com/SaiWebApps" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">GitHub</a>
+        <a href="/research" style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">The research behind them</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr" style="border-top:1px solid var(--ink);background:var(--paper)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(34px,4vw,52px) clamp(18px,4vw,44px) clamp(30px,3.4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:clamp(26px,3.4vw,48px);align-items:start">
+        <div>
+          <a href="/" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:11px;line-height:1.8">Engineering leadership · AI &amp; ML<br>Apple · Wharton MBA 2026</div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Pages</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="/#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+          <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Ventures</a>
+          <a href="/projects" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Projects</a>
+          <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Research</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">The record</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="/#experience" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Charted roles</a>
+          <a href="/#honors" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Honors</a>
+          <a href="/#words" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">In their words</a>
+          <a href="/assets/Sairam_Krishnan_Resume.pdf" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Résumé (PDF)</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Reach me</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="mailto:sairambkrishnan@gmail.com" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Email</a>
+          <a href="https://linkedin.com/in/sairambkrishnan" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">LinkedIn</a>
+          <a href="https://github.com/SaiWebApps" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">GitHub</a>
+          <a href="https://orcid.org/0009-0004-2626-1273" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">ORCID</a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.glyphRef = React.createRef();
+    this.btnRef = React.createRef();
+    this.iconRef = React.createRef();
+    this.mode = 'auto';
+  }
+
+  renderVals(){
+    return {
+      glyphRef: this.glyphRef, btnRef: this.btnRef, iconRef: this.iconRef,
+      cycleTheme: () => {
+        const order = ['auto','light','dark'];
+        const next = order[(order.indexOf(this.mode) + 1) % 3];
+        this.applyMode(next);
+        try { localStorage.setItem('sk-ql-theme', next); } catch(e){}
+      }
+    };
+  }
+
+  applyMode(m){
+    this.mode = m;
+    const r = document.documentElement;
+    if (m === 'auto') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', m);
+    const b = this.btnRef.current;
+    if (b){
+      b.setAttribute('title', 'Theme: ' + m + ' — click to cycle (auto follows your system setting)');
+      b.style.boxShadow = '0 0 0 3px ' + this.hexA(this.palette().accent, 0.22);
+      if (this._flashT) clearTimeout(this._flashT);
+      this._flashT = setTimeout(() => { b.style.boxShadow = ''; }, 340);
+    }
+    const ic = this.iconRef.current;
+    if (ic){
+      ic.innerHTML = this.themeIcon(m);
+      ic.style.transition = 'none';
+      ic.style.transform = 'rotate(-140deg) scale(.5)';
+      ic.style.opacity = '0';
+      if (this._iconT) clearTimeout(this._iconT);
+      this._iconT = setTimeout(() => {
+        ic.style.transition = 'transform .46s cubic-bezier(.22,1,.36,1), opacity .24s ease';
+        ic.style.transform = 'rotate(0deg) scale(1)';
+        ic.style.opacity = '1';
+      }, 16);
+    }
+    this.pal = null;
+    if (this._repaint) this._repaint();
+  }
+
+  themeIcon(m){
+    const open = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block">';
+    if (m === 'light') return open + '<circle cx="12" cy="12" r="4.3"/><path d="M12 2.4v2.5M12 19.1v2.5M2.4 12h2.5M19.1 12h2.5M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></svg>';
+    if (m === 'dark') return open + '<path d="M20.4 14.9A8.7 8.7 0 0 1 9.1 3.6 8.7 8.7 0 1 0 20.4 14.9Z"/></svg>';
+    return open + '<circle cx="12" cy="12" r="8.3"/><path d="M12 3.7a8.3 8.3 0 0 0 0 16.6Z" fill="currentColor" stroke="none"/></svg>';
+  }
+
+  componentDidMount(){
+    let saved = 'auto';
+    try { saved = localStorage.getItem('sk-ql-theme') || 'auto'; } catch(e){}
+    if (['auto','light','dark'].indexOf(saved) < 0) saved = 'auto';
+
+    this._panels = [];
+    const host = this.glyphRef.current;
+    if (host){
+      while (host.firstChild) host.removeChild(host.firstChild);
+      const cv = document.createElement('canvas');
+      cv.style.cssText = 'display:block;width:100%;height:100%';
+      host.appendChild(cv);
+      this._panels.push({host, cv, ctx: cv.getContext('2d'), fn: (p,t,P)=>this.glyphs(p,t,P), w:0, h:0});
+    }
+
+    this._fit = () => {
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      this._panels.forEach(p => {
+        const r = p.host.getBoundingClientRect();
+        if (r.width < 4 || r.height < 4) return;
+        p.w = r.width; p.h = r.height;
+        const bw = Math.round(r.width*dpr), bh = Math.round(r.height*dpr);
+        if (p.cv.width !== bw || p.cv.height !== bh){
+          p.cv.width = bw; p.cv.height = bh;
+          p.ctx.setTransform(dpr,0,0,dpr,0,0);
+        }
+      });
+    };
+
+    this._t0 = performance.now();
+    this._repaint = () => { this._fit(); this.drawAll((performance.now() - this._t0)/1000); };
+    window.addEventListener('resize', this._repaint);
+    document.addEventListener('visibilitychange', this._repaint);
+    if (window.ResizeObserver){
+      this._ro = new ResizeObserver(() => this._repaint());
+      this._panels.forEach(p => this._ro.observe(p.host));
+    }
+    if (window.matchMedia){
+      this._mq = window.matchMedia('(prefers-color-scheme: dark)');
+      this._mqh = () => { this.pal = null; this._repaint(); };
+      if (this._mq.addEventListener) this._mq.addEventListener('change', this._mqh);
+      this._rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+      this.reduceMotion = this._rm.matches;
+      this._rmh = () => { this.reduceMotion = this._rm.matches; this.pump(); this._repaint(); };
+      if (this._rm.addEventListener) this._rm.addEventListener('change', this._rmh);
+    }
+    [0, 60, 240, 500, 1000, 1800, 3000].forEach(ms => setTimeout(this._repaint, ms));
+
+    this.applyMode(saved);
+
+    this._loop = () => { this.drawAll(this.clock()); this._raf = requestAnimationFrame(this._loop); };
+    if (window.IntersectionObserver && this._panels.length){
+      this._io = new IntersectionObserver(es => {
+        this.onScreen = es.some(e => e.isIntersecting);
+        this.pump();
+      }, { rootMargin: '140px' });
+      this._panels.forEach(pp => this._io.observe(pp.host));
+    } else {
+      this.onScreen = true;
+    }
+    this.pump();
+  }
+
+  clock(){
+    if (this.reduceMotion) return 7.4;
+    return (performance.now() - (this._t0 || 0))/1000;
+  }
+
+  // Figures animate only while on screen and only if the visitor has not asked for less motion.
+  pump(){
+    if (!this._loop) return;
+    const live = this.onScreen && !this.reduceMotion;
+    if (live && !this._raf){ this._raf = requestAnimationFrame(this._loop); return; }
+    if (!live && this._raf){
+      cancelAnimationFrame(this._raf);
+      this._raf = 0;
+      if (this._repaint) this._repaint();
+    }
+  }
+
+  componentWillUnmount(){
+    if (this._raf) cancelAnimationFrame(this._raf);
+    window.removeEventListener('resize', this._repaint);
+    document.removeEventListener('visibilitychange', this._repaint);
+    if (this._ro) this._ro.disconnect();
+    if (this._io) this._io.disconnect();
+    if (this._mq && this._mq.removeEventListener) this._mq.removeEventListener('change', this._mqh);
+    if (this._rm && this._rm.removeEventListener) this._rm.removeEventListener('change', this._rmh);
+  }
+
+  drawAll(t){
+    if (!this._panels) return;
+    const P = this.palette();
+    for (let k=0;k<this._panels.length;k++){
+      const p = this._panels[k];
+      if (p.w <= 4){ this._fit(); if (p.w <= 4) continue; }
+      try { p.ctx.save(); p.ctx.clearRect(0,0,p.w,p.h); p.fn(p,t,P); p.ctx.restore(); }
+      catch (err){ try { p.ctx.restore(); } catch(e2){} if (!p.warned){ p.warned = true; console.warn('panel '+k+' draw failed', err); } }
+    }
+  }
+
+  palette(){
+    if (this.pal) return this.pal;
+    const cs = getComputedStyle(document.documentElement);
+    const g = n => (cs.getPropertyValue(n) || '').trim();
+    this.pal = {
+      paper: g('--paper') || '#F4F1EA', paper2: g('--paper2') || '#EEEADF',
+      ink: g('--ink') || '#14120F', ink2: g('--ink2') || '#413A2F', ink3: g('--ink3') || '#6E685C',
+      rule: g('--rule') || '#D8D1C2', accent: g('--accent') || '#7A2E2E', dot: g('--dot') || '#B8B0A0'
+    };
+    return this.pal;
+  }
+
+  hexA(hx, a){
+    let h = (hx || '#000000').replace('#','').trim();
+    if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    const n = parseInt(h, 16);
+    if (isNaN(n)) return 'rgba(0,0,0,'+a+')';
+    return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';
+  }
+  mono(ctx, size, weight){ ctx.font = (weight||'400') + ' ' + size + "px 'Martian Mono', ui-monospace, monospace"; }
+
+  glyphs(p, t, P){
+    const ctx = p.ctx, w = p.w, h = p.h;
+    const G = [
+      {n:'Ondoway', s:'Graph traversal · Neo4j knowledge graph, 177 tests'},
+      {n:'Persuaider', s:'Failover cascade · 3 pinned providers, 1,246 tests'},
+      {n:'Lore / DependIQ', s:'Blast radius · five-hop shortest path'},
+      {n:'Crucible (claude-kit)', s:'Evidence-gated pipeline · three adversaries'}
+    ];
+    const rowH = (h-12)/4, gx = 16, gw = Math.min(96, w*0.15);
+    // Wide rows read as ledger lines: name, dot leader, then the mechanism at the
+    // right edge. Narrow rows stack instead of running the leader off the panel.
+    const wide = w >= 720;
+    G.forEach((g,i) => {
+      const y0 = 8 + i*rowH, mid = y0 + rowH*0.5;
+      if (i){
+        ctx.strokeStyle = this.hexA(P.ink, 0.1); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(0,y0-3); ctx.lineTo(w,y0-3); ctx.stroke();
+      }
+      this.glyph(ctx, i, gx, y0+8, gw, rowH-22, t, P);
+      const tx = gx+gw+24, rx = w - 18;
+      const nameSize = Math.min(23, Math.max(17, w*0.026));
+      const metaSize = Math.min(9.5, Math.max(8, w*0.0125));
+      ctx.textAlign = 'left';
+      ctx.font = "400 " + nameSize + "px 'Spectral', Georgia, serif";
+      ctx.fillStyle = P.ink;
+      ctx.fillText(g.n, tx, wide ? mid + nameSize*0.34 : mid-2);
+      const nameW = ctx.measureText(g.n).width;
+      const meta = g.s.toUpperCase();
+      this.mono(ctx, metaSize, '300');
+      ctx.fillStyle = this.hexA(P.ink3, 0.95);
+      if (wide){
+        const metaW = ctx.measureText(meta).width;
+        const a = tx + nameW + 16, b = rx - metaW - 16;
+        if (b > a){
+          ctx.save();
+          ctx.strokeStyle = this.hexA(P.dot || P.ink3, 0.55);
+          ctx.lineWidth = 1; ctx.setLineDash([1.5, 4]);
+          ctx.beginPath(); ctx.moveTo(a, mid + 1); ctx.lineTo(b, mid + 1); ctx.stroke();
+          ctx.restore();
+        }
+        ctx.textAlign = 'right';
+        ctx.fillText(meta, rx, mid + 4);
+      } else {
+        ctx.fillText(meta, tx, mid+15);
+      }
+    });
+  }
+
+  glyph(ctx, kind, x, y, w, h, t, P){
+    const A = this.hexA(P.accent, 0.95), dim = this.hexA(P.ink3, 0.5);
+    ctx.lineCap = 'round';
+    if (kind === 0){
+      const nodes = [[0.16,0.22],[0.5,0.08],[0.86,0.28],[0.28,0.66],[0.7,0.72],[0.5,0.42]];
+      const edges = [[0,5],[1,5],[2,5],[3,5],[4,5],[0,3],[1,2],[3,4]];
+      const Q = nodes.map(n => ({x:x+n[0]*w, y:y+n[1]*h}));
+      ctx.strokeStyle = dim; ctx.lineWidth = 0.9;
+      edges.forEach(e => { ctx.beginPath(); ctx.moveTo(Q[e[0]].x,Q[e[0]].y); ctx.lineTo(Q[e[1]].x,Q[e[1]].y); ctx.stroke(); });
+      const k = Math.floor(t*0.9) % edges.length, u = (t*0.9) % 1;
+      const a = Q[edges[k][0]], b = Q[edges[k][1]];
+      ctx.strokeStyle = A; ctx.lineWidth = 1.8;
+      ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(a.x+(b.x-a.x)*u, a.y+(b.y-a.y)*u); ctx.stroke();
+      Q.forEach((q,i) => { ctx.beginPath(); ctx.arc(q.x,q.y,i===5?3.4:2.4,0,6.2832); ctx.fillStyle = i===5?A:this.hexA(P.ink2,0.8); ctx.fill(); });
+    } else if (kind === 1){
+      const cyc = (t*0.5) % 3, tier = Math.floor(cyc);
+      for (let i=0;i<3;i++){
+        const yy = y + h*(0.16+i*0.34);
+        ctx.strokeStyle = i===tier ? A : dim; ctx.lineWidth = i===tier ? 2.2 : 1;
+        ctx.beginPath(); ctx.moveTo(x+13,yy); ctx.lineTo(x+w-4,yy); ctx.stroke();
+        this.mono(ctx,6.5,'400'); ctx.fillStyle = i===tier ? A : this.hexA(P.ink3,0.7);
+        ctx.textAlign='left'; ctx.fillText(['P','S','T'][i], x, yy+2.5);
+      }
+      const u = cyc - tier, ty = y + h*(0.16+tier*0.34);
+      ctx.beginPath(); ctx.arc(x+15+(w-26)*u, ty, 2.8, 0, 6.2832);
+      ctx.fillStyle = A; ctx.fill();
+    } else if (kind === 2){
+      const n = 5, yy = y + h*0.5, hop = Math.floor((t*1.1) % n);
+      for (let i=0;i<n;i++){
+        const cxp = x+6 + (w-14)*i/(n-1);
+        if (i < n-1){
+          ctx.strokeStyle = i < hop ? this.hexA(P.accent,0.6) : dim; ctx.lineWidth = i < hop ? 1.4 : 0.9;
+          ctx.beginPath(); ctx.moveTo(cxp+4.5,yy); ctx.lineTo(x+6+(w-14)*(i+1)/(n-1)-4.5,yy); ctx.stroke();
+        }
+        ctx.beginPath(); ctx.arc(cxp,yy, i===hop?3.6:2.5, 0, 6.2832);
+        ctx.fillStyle = i===hop ? A : this.hexA(P.ink2,0.55); ctx.fill();
+        if (i <= hop){
+          ctx.strokeStyle = this.hexA(P.accent,0.8); ctx.lineWidth = 1.1;
+          ctx.beginPath(); ctx.moveTo(cxp-2.6,yy-7); ctx.lineTo(cxp,yy-4.2); ctx.lineTo(cxp+3.2,yy-9.5); ctx.stroke();
+        }
+      }
+    } else {
+      const yy = y + h*0.5, cyc = (t*0.45) % 1;
+      ctx.strokeStyle = dim; ctx.lineWidth = 0.9;
+      ctx.beginPath(); ctx.moveTo(x+2,yy); ctx.lineTo(x+w-2,yy); ctx.stroke();
+      for (let i=0;i<3;i++){
+        const gxp = x+8 + (w-18)*(i+0.5)/3;
+        const passed = cyc > (i+0.5)/3;
+        ctx.strokeStyle = passed ? A : dim; ctx.lineWidth = passed ? 2 : 1;
+        ctx.beginPath(); ctx.moveTo(gxp, yy-h*0.32); ctx.lineTo(gxp, yy+h*0.32); ctx.stroke();
+      }
+      ctx.fillStyle = A;
+      ctx.fillRect(x+2+(w-12)*cyc, yy-3, 6, 6);
+    }
+  }
+}
+</script>
+</body>
+</html>

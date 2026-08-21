@@ -1,0 +1,11 @@
+# Source material fed to design tooling. Never commit, never deploy.
+# Performance reviews, compensation documents, working screenshots and
+# third-party LinkedIn captures all lived here once. Keep it that way.
+uploads/
+source-material/
+
+.DS_Store
+*.swp
+.vercel/
+node_modules/
+.vercel

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open-Source Projects: 54 Repositories — Sairam Krishnan</title>
+<meta name="description" content="Six clusters: systems and performance, automation and utilities, APIs and web services, machine learning and statistics, mobile and embedded, and explaining AI.">
+<link rel="canonical" href="https://sairambkrishnan.com/projects">
+<meta name="author" content="Sairam Krishnan">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sairam Krishnan">
+<meta property="og:title" content="Open-Source Projects: 54 Repositories — Sairam Krishnan">
+<meta property="og:description" content="Six clusters: systems and performance, automation and utilities, APIs and web services, machine learning and statistics, mobile and embedded, and explaining AI.">
+<meta property="og:url" content="https://sairambkrishnan.com/projects">
+<meta property="og:image" content="https://sairambkrishnan.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sairam Krishnan — AI/ML engineering leadership">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Open-Source Projects: 54 Repositories — Sairam Krishnan">
+<meta name="twitter:description" content="Six clusters: systems and performance, automation and utilities, APIs and web services, machine learning and statistics, mobile and embedded, and explaining AI.">
+<meta name="twitter:image" content="https://sairambkrishnan.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400&family=Martian+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1EA; --paper2:#EEEADF; --ink:#14120F; --ink2:#413A2F; --ink3:#6E685C;
+    --rule:#D8D1C2; --hair:#8A8274; --rule2:#E4DED0; --accent:#7A2E2E; --dot:#B8B0A0; --star:#14120F;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+      --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B; --star:#FFF8EB;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+    --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B; --star:#FFF8EB;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Spectral',Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"kern" 1,"liga" 1}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--ink)}
+  .cst{position:relative;width:100%}
+  .lst{display:none}
+  @media(max-width:1000px){.cst,.rdo{display:none}.lst{display:block}}
+  @keyframes orb{from{opacity:0}to{opacity:1}}
+  .hdr{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
+  .hdrIn{max-width:1400px;margin:0 auto;padding:13px clamp(18px,4vw,44px);display:flex;align-items:center;gap:clamp(16px,2vw,24px)}
+  .mark{flex:0 0 auto;white-space:nowrap}
+  .nav{flex:1 1 auto;display:flex;align-items:center;justify-content:flex-end;gap:clamp(13px,1.9vw,26px);flex-wrap:wrap}
+  .nav a,.nav span{padding:7px 0}
+  .tgl{flex:0 0 auto}
+  div[id]{scroll-margin-top:80px}
+  @media(max-width:760px){
+    .hdrIn{flex-wrap:wrap;padding:11px clamp(18px,4vw,44px) 0;gap:0 14px}
+    .mark{flex:1 1 auto;order:1}
+    .tgl{order:2}
+    .nav{order:3;width:100%;justify-content:flex-start;gap:2px 12px;margin-top:9px;border-top:1px solid var(--rule2)}
+    .nav a,.nav span{padding:10px 0}
+    div[id]{scroll-margin-top:96px}
+  }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .lst a span:first-child,.rdo div:first-child div{overflow-wrap:anywhere}
+  /* the 13em name column cannot hold a 36-character repo name on a 320px phone */
+  @media(max-width:520px){
+    .lst a span:first-child{flex:1 1 auto!important;min-width:0!important}
+  }
+  .ftr a{padding:7px 0}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
+</style>
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<div style="background:var(--paper);color:var(--ink);min-height:100vh">
+
+  <div class="hdr">
+    <div class="hdrIn">
+      <a href="/" class="mark" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+      <div class="nav">
+        <a href="/#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+        <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Ventures</a>
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:2px">Projects</span>
+        <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Research</a>
+        <a href="/#contact" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Contact</a>
+      </div>
+        <button type="button" class="tgl" ref="{{ btnRef }}" onClick="{{ cycleTheme }}" aria-label="Toggle colour theme" style="display:flex;align-items:center;justify-content:center;width:34px;height:30px;flex:0 0 auto;color:var(--ink3);background:transparent;border:1px solid var(--hair);padding:0;cursor:pointer;transition:transform .11s cubic-bezier(.22,1,.36,1),border-color .28s ease,color .28s ease,box-shadow .3s ease" style-hover="color:var(--ink);border-color:var(--ink3)" style-active="transform:scale(.88)"><span ref="{{ iconRef }}" style="display:flex;align-items:center;justify-content:center;width:16px;height:16px"></span></button>
+    </div>
+  </div>
+
+  <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,8vw,104px) clamp(18px,4vw,44px) clamp(36px,4.5vw,56px)">
+    <div style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(20px,3vw,32px)">Open-source projects</div>
+    <h1 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(38px,6.6vw,82px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 clamp(24px,3.2vw,34px);max-width:19ch">Fifty-four repositories, grouped by the question behind them.</h1>
+    <div style="width:52px;height:1px;background:var(--accent);margin-bottom:clamp(22px,2.8vw,30px)"></div>
+    <p style="font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:var(--ink2);margin:0">Six clusters: systems and performance, automation and utilities, APIs and web services, machine learning and statistics, mobile and embedded, and explaining AI.</p>
+  </div>
+
+  <div style="border-top:1px solid var(--rule);background:var(--paper2)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(30px,4vw,50px) clamp(18px,4vw,44px) clamp(40px,5vw,66px)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:clamp(6px,1vw,10px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums">01</span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">7 repositories</span>
+      </div>
+      <div class="cst" style="position:relative;width:100%;aspect-ratio:1000/620">
+        <svg viewBox="0 0 1000 620" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+          <line x1="500" y1="310" x2="500.0" y2="71.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="779.9" y2="161.2" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="849.0" y2="363.1" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="655.3" y2="525.1" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="344.7" y2="525.1" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="151.0" y2="363.1" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="220.1" y2="161.2" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="500.0" y2="71.3" ref="{{ lnR0 }}" stroke="var(--accent)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+        </svg>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(34%,275px);background:var(--paper2);border:1px solid var(--ink);padding:clamp(16px,2vw,26px);text-align:center">
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(19px,2.2vw,28px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:12px">Systems &amp; performance</div>
+          <div style="width:34px;height:1px;background:var(--accent);margin:0 auto 12px"></div>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(13px,1.2vw,15px);line-height:1.45;color:var(--ink2);margin:0">What is the machine actually doing, and how much faster can it be made to do it?</p>
+        </div>
+        <a href="https://github.com/SaiWebApps/DT-Convolution" target="_blank" rel="noopener" onMouseEnter="{{ h0_0 }}" onFocus="{{ h0_0 }}" style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-100%) translateY(-13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">DT-Convolution</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">SSE · OpenMP</span></a>
+        <span style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Basic-CUDA" target="_blank" rel="noopener" onMouseEnter="{{ h0_1 }}" onFocus="{{ h0_1 }}" style="position:absolute;left:77.990%;top:25.996%;transform:translate(-50%,-100%) translateY(-13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Basic-CUDA</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">NVIDIA CUDA</span></a>
+        <span style="position:absolute;left:77.990%;top:25.996%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/GCC_Function_Tracer" target="_blank" rel="noopener" onMouseEnter="{{ h0_2 }}" onFocus="{{ h0_2 }}" style="position:absolute;left:84.902%;top:58.567%;transform:translate(-50%,0) translateY(13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">GCC_Function_Tracer</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">C/C++ · gcc</span></a>
+        <span style="position:absolute;left:84.902%;top:58.567%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/InventoryManagement" target="_blank" rel="noopener" onMouseEnter="{{ h0_3 }}" onFocus="{{ h0_3 }}" style="position:absolute;left:65.533%;top:84.687%;transform:translate(-50%,0) translateY(13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">InventoryManagement</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">C++ · FIFO / LIFO</span></a>
+        <span style="position:absolute;left:65.533%;top:84.687%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/XMLParser" target="_blank" rel="noopener" onMouseEnter="{{ h0_4 }}" onFocus="{{ h0_4 }}" style="position:absolute;left:34.467%;top:84.687%;transform:translate(-50%,0) translateY(13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">XMLParser</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">C++</span></a>
+        <span style="position:absolute;left:34.467%;top:84.687%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Trie" target="_blank" rel="noopener" onMouseEnter="{{ h0_5 }}" onFocus="{{ h0_5 }}" style="position:absolute;left:15.098%;top:58.567%;transform:translate(-50%,0) translateY(13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Trie</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">C++</span></a>
+        <span style="position:absolute;left:15.098%;top:58.567%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ColorPrinter" target="_blank" rel="noopener" onMouseEnter="{{ h0_6 }}" onFocus="{{ h0_6 }}" style="position:absolute;left:22.010%;top:25.996%;transform:translate(-50%,-100%) translateY(-13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ColorPrinter</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">C++</span></a>
+        <span style="position:absolute;left:22.010%;top:25.996%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+      </div>
+      <div class="lst">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(24px,5vw,32px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:10px">Systems &amp; performance</div>
+        <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:17px;line-height:1.45;color:var(--ink2);margin:0 0 22px">What is the machine actually doing, and how much faster can it be made to do it?</p>
+        <div style="border-top:1px solid var(--ink)">
+        <a href="https://github.com/SaiWebApps/DT-Convolution" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">DT-Convolution</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Optimizing purely sequential DT Convolution through SSE; parallelizing through OpenMP.</span></a>
+        <a href="https://github.com/SaiWebApps/Basic-CUDA" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Basic-CUDA</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">NVIDIA CUDA programs.</span></a>
+        <a href="https://github.com/SaiWebApps/GCC_Function_Tracer" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">GCC_Function_Tracer</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Tracing function calls in C/C++ using gcc’s in-built profiling tools.</span></a>
+        <a href="https://github.com/SaiWebApps/InventoryManagement" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">InventoryManagement</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">C++ inventory management software. Supports FIFO and LIFO methods.</span></a>
+        <a href="https://github.com/SaiWebApps/XMLParser" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">XMLParser</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A C++ XML parser, built on the C++ Trie framework.</span></a>
+        <a href="https://github.com/SaiWebApps/Trie" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Trie</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A C++ Trie framework.</span></a>
+        <a href="https://github.com/SaiWebApps/ColorPrinter" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ColorPrinter</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A C++ program to print out characters in different colors.</span></a>
+        </div>
+      </div>
+      <div class="rdo" style="border-top:1px solid var(--ink);margin-top:clamp(14px,2vw,22px);padding-top:clamp(16px,2vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,3vw,44px);align-items:start;min-height:120px">
+        <div>
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(21px,2.4vw,30px);line-height:1.1;letter-spacing:-0.025em;margin-bottom:9px" ref="{{ nmR0 }}">DT-Convolution</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)" ref="{{ mtR0 }}">SSE · OpenMP</div>
+        </div>
+        <div style="grid-column:span 2">
+          <p style="font-size:clamp(15px,1.4vw,17.5px);line-height:1.55;color:var(--ink2);margin:0 0 14px;text-wrap:pretty" ref="{{ dsR0 }}">Optimizing purely sequential DT Convolution through SSE; parallelizing through OpenMP.</p>
+          <a href="https://github.com/SaiWebApps/DT-Convolution" ref="{{ urR0 }}" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--rule);background:var(--paper)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(30px,4vw,50px) clamp(18px,4vw,44px) clamp(40px,5vw,66px)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:clamp(6px,1vw,10px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums">02</span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">11 repositories</span>
+      </div>
+      <div class="cst" style="position:relative;width:100%;aspect-ratio:1000/710">
+        <svg viewBox="0 0 1000 710" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+          <line x1="500" y1="355" x2="500.0" y2="81.6" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="693.5" y2="125.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="825.6" y2="241.4" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="854.4" y2="393.9" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="770.6" y2="534.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="600.9" y2="617.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="399.1" y2="617.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="229.4" y2="534.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="145.6" y2="393.9" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="174.4" y2="241.4" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="306.5" y2="125.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="355" x2="500.0" y2="81.6" ref="{{ lnR1 }}" stroke="var(--accent)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+        </svg>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(34%,275px);background:var(--paper);border:1px solid var(--ink);padding:clamp(16px,2vw,26px);text-align:center">
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(19px,2.2vw,28px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:12px">Automation &amp; utilities</div>
+          <div style="width:34px;height:1px;background:var(--accent);margin:0 auto 12px"></div>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(13px,1.2vw,15px);line-height:1.45;color:var(--ink2);margin:0">Why am I still doing this by hand?</p>
+        </div>
+        <a href="https://github.com/SaiWebApps/Magpie" target="_blank" rel="noopener" onMouseEnter="{{ h1_0 }}" onFocus="{{ h1_0 }}" style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Magpie</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Tampermonkey · Python</span></a>
+        <span style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/vsccc" target="_blank" rel="noopener" onMouseEnter="{{ h1_1 }}" onFocus="{{ h1_1 }}" style="position:absolute;left:69.355%;top:17.612%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">vsccc</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">VS Code</span></a>
+        <span style="position:absolute;left:69.355%;top:17.612%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/AppleScriptUtils" target="_blank" rel="noopener" onMouseEnter="{{ h1_2 }}" onFocus="{{ h1_2 }}" style="position:absolute;left:82.565%;top:34.007%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">AppleScriptUtils</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">AppleScript</span></a>
+        <span style="position:absolute;left:82.565%;top:34.007%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/arc-delete-archived-tabs" target="_blank" rel="noopener" onMouseEnter="{{ h1_3 }}" onFocus="{{ h1_3 }}" style="position:absolute;left:85.436%;top:55.479%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">arc-delete-archived-tabs</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Script</span></a>
+        <span style="position:absolute;left:85.436%;top:55.479%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/claude-code-profile-switcher" target="_blank" rel="noopener" onMouseEnter="{{ h1_4 }}" onFocus="{{ h1_4 }}" style="position:absolute;left:77.056%;top:75.212%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">claude-code-profile-switcher</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">VS Code</span></a>
+        <span style="position:absolute;left:77.056%;top:75.212%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ThemeSwitcher" target="_blank" rel="noopener" onMouseEnter="{{ h1_5 }}" onFocus="{{ h1_5 }}" style="position:absolute;left:60.086%;top:86.940%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ThemeSwitcher</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Sublime Text</span></a>
+        <span style="position:absolute;left:60.086%;top:86.940%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ExcelDataPartitioner" target="_blank" rel="noopener" onMouseEnter="{{ h1_6 }}" onFocus="{{ h1_6 }}" style="position:absolute;left:39.914%;top:86.940%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ExcelDataPartitioner</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Excel</span></a>
+        <span style="position:absolute;left:39.914%;top:86.940%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/DepreciationCalculator" target="_blank" rel="noopener" onMouseEnter="{{ h1_7 }}" onFocus="{{ h1_7 }}" style="position:absolute;left:22.944%;top:75.212%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">DepreciationCalculator</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Perl</span></a>
+        <span style="position:absolute;left:22.944%;top:75.212%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/BingRewardsBot" target="_blank" rel="noopener" onMouseEnter="{{ h1_8 }}" onFocus="{{ h1_8 }}" style="position:absolute;left:14.564%;top:55.479%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">BingRewardsBot</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Automation</span></a>
+        <span style="position:absolute;left:14.564%;top:55.479%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/WindowsUtils" target="_blank" rel="noopener" onMouseEnter="{{ h1_9 }}" onFocus="{{ h1_9 }}" style="position:absolute;left:17.435%;top:34.007%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">WindowsUtils</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Windows</span></a>
+        <span style="position:absolute;left:17.435%;top:34.007%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ModernAppPSUtils" target="_blank" rel="noopener" onMouseEnter="{{ h1_10 }}" onFocus="{{ h1_10 }}" style="position:absolute;left:30.645%;top:17.612%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ModernAppPSUtils</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">PowerShell</span></a>
+        <span style="position:absolute;left:30.645%;top:17.612%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+      </div>
+      <div class="lst">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(24px,5vw,32px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:10px">Automation &amp; utilities</div>
+        <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:17px;line-height:1.45;color:var(--ink2);margin:0 0 22px">Why am I still doing this by hand?</p>
+        <div style="border-top:1px solid var(--ink)">
+        <a href="https://github.com/SaiWebApps/Magpie" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Magpie</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">One-click YouTube audio stash — a Tampermonkey userscript plus a local Python server.</span></a>
+        <a href="https://github.com/SaiWebApps/vsccc" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">vsccc</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">VS Code Theme Carousel — automatically switches your color theme on a schedule.</span></a>
+        <a href="https://github.com/SaiWebApps/AppleScriptUtils" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">AppleScriptUtils</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A collection of useful AppleScripts to automate common workflows on my Mac.</span></a>
+        <a href="https://github.com/SaiWebApps/arc-delete-archived-tabs" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">arc-delete-archived-tabs</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A script which deletes archived Arc tabs at regular intervals.</span></a>
+        <a href="https://github.com/SaiWebApps/claude-code-profile-switcher" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">claude-code-profile-switcher</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A VS Code extension to switch between multiple Claude Code configuration profiles via symlink management.</span></a>
+        <a href="https://github.com/SaiWebApps/ThemeSwitcher" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ThemeSwitcher</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Switch themes in the current Sublime tab by pressing ctrl+alt+t.</span></a>
+        <a href="https://github.com/SaiWebApps/ExcelDataPartitioner" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ExcelDataPartitioner</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Given an Excel file with a single sheet of data, partition it into multiple sheets by the specified columns.</span></a>
+        <a href="https://github.com/SaiWebApps/DepreciationCalculator" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">DepreciationCalculator</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An OO Perl script to calculate depreciation using different accounting methods.</span></a>
+        <a href="https://github.com/SaiWebApps/BingRewardsBot" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">BingRewardsBot</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Automates Bing searches to accumulate Bing Rewards points.</span></a>
+        <a href="https://github.com/SaiWebApps/WindowsUtils" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">WindowsUtils</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Windows utility scripts.</span></a>
+        <a href="https://github.com/SaiWebApps/ModernAppPSUtils" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ModernAppPSUtils</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">PowerShell 5.0 utilities for Windows 10 Modern/Universal apps.</span></a>
+        </div>
+      </div>
+      <div class="rdo" style="border-top:1px solid var(--ink);margin-top:clamp(14px,2vw,22px);padding-top:clamp(16px,2vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,3vw,44px);align-items:start;min-height:120px">
+        <div>
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(21px,2.4vw,30px);line-height:1.1;letter-spacing:-0.025em;margin-bottom:9px" ref="{{ nmR1 }}">Magpie</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)" ref="{{ mtR1 }}">Tampermonkey · Python</div>
+        </div>
+        <div style="grid-column:span 2">
+          <p style="font-size:clamp(15px,1.4vw,17.5px);line-height:1.55;color:var(--ink2);margin:0 0 14px;text-wrap:pretty" ref="{{ dsR1 }}">One-click YouTube audio stash — a Tampermonkey userscript plus a local Python server.</p>
+          <a href="https://github.com/SaiWebApps/Magpie" ref="{{ urR1 }}" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--rule);background:var(--paper2)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(30px,4vw,50px) clamp(18px,4vw,44px) clamp(40px,5vw,66px)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:clamp(6px,1vw,10px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums">03</span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">12 repositories</span>
+      </div>
+      <div class="cst" style="position:relative;width:100%;aspect-ratio:1000/800">
+        <svg viewBox="0 0 1000 800" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+          <line x1="500" y1="400" x2="500.0" y2="92.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="679.0" y2="133.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="810.0" y2="246.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="858.0" y2="400.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="810.0" y2="554.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="679.0" y2="666.7" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="500.0" y2="708.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="321.0" y2="666.7" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="190.0" y2="554.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="142.0" y2="400.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="190.0" y2="246.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="321.0" y2="133.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="500.0" y2="92.0" ref="{{ lnR2 }}" stroke="var(--accent)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+        </svg>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(34%,275px);background:var(--paper2);border:1px solid var(--ink);padding:clamp(16px,2vw,26px);text-align:center">
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(19px,2.2vw,28px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:12px">APIs &amp; web services</div>
+          <div style="width:34px;height:1px;background:var(--accent);margin:0 auto 12px"></div>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(13px,1.2vw,15px);line-height:1.45;color:var(--ink2);margin:0">Can I get at this data, and hand it to someone else cleanly?</p>
+        </div>
+        <a href="https://github.com/SaiWebApps/StockWatcherAPI" target="_blank" rel="noopener" onMouseEnter="{{ h2_0 }}" onFocus="{{ h2_0 }}" style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">StockWatcherAPI</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">API</span></a>
+        <span style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/EnglishDictionaryAPI" target="_blank" rel="noopener" onMouseEnter="{{ h2_1 }}" onFocus="{{ h2_1 }}" style="position:absolute;left:67.900%;top:16.658%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">EnglishDictionaryAPI</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Python</span></a>
+        <span style="position:absolute;left:67.900%;top:16.658%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/PySynonymsCrawler" target="_blank" rel="noopener" onMouseEnter="{{ h2_2 }}" onFocus="{{ h2_2 }}" style="position:absolute;left:81.004%;top:30.750%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">PySynonymsCrawler</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Python</span></a>
+        <span style="position:absolute;left:81.004%;top:30.750%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Heroku-Synonyms-Crawler" target="_blank" rel="noopener" onMouseEnter="{{ h2_3 }}" onFocus="{{ h2_3 }}" style="position:absolute;left:85.800%;top:50.000%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Heroku-Synonyms-Crawler</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">D3.js</span></a>
+        <span style="position:absolute;left:85.800%;top:50.000%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/RandomWordGenerator" target="_blank" rel="noopener" onMouseEnter="{{ h2_4 }}" onFocus="{{ h2_4 }}" style="position:absolute;left:81.004%;top:69.250%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">RandomWordGenerator</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Python</span></a>
+        <span style="position:absolute;left:81.004%;top:69.250%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/node-linkedin-scraper" target="_blank" rel="noopener" onMouseEnter="{{ h2_5 }}" onFocus="{{ h2_5 }}" style="position:absolute;left:67.900%;top:83.342%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">node-linkedin-scraper</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">NodeJS</span></a>
+        <span style="position:absolute;left:67.900%;top:83.342%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/node-linkedin-headless-oauth" target="_blank" rel="noopener" onMouseEnter="{{ h2_6 }}" onFocus="{{ h2_6 }}" style="position:absolute;left:50.000%;top:88.500%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">node-linkedin-headless-oauth</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">NodeJS</span></a>
+        <span style="position:absolute;left:50.000%;top:88.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Parallelax" target="_blank" rel="noopener" onMouseEnter="{{ h2_7 }}" onFocus="{{ h2_7 }}" style="position:absolute;left:32.100%;top:83.342%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Parallelax</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">NodeJS</span></a>
+        <span style="position:absolute;left:32.100%;top:83.342%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Spring-MVC-Survey" target="_blank" rel="noopener" onMouseEnter="{{ h2_8 }}" onFocus="{{ h2_8 }}" style="position:absolute;left:18.996%;top:69.250%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Spring-MVC-Survey</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Spring MVC</span></a>
+        <span style="position:absolute;left:18.996%;top:69.250%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Django-Survey" target="_blank" rel="noopener" onMouseEnter="{{ h2_9 }}" onFocus="{{ h2_9 }}" style="position:absolute;left:14.200%;top:50.000%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Django-Survey</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Django</span></a>
+        <span style="position:absolute;left:14.200%;top:50.000%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/DjangoPolls" target="_blank" rel="noopener" onMouseEnter="{{ h2_10 }}" onFocus="{{ h2_10 }}" style="position:absolute;left:18.996%;top:30.750%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">DjangoPolls</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Django</span></a>
+        <span style="position:absolute;left:18.996%;top:30.750%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/SimpleGoScripts" target="_blank" rel="noopener" onMouseEnter="{{ h2_11 }}" onFocus="{{ h2_11 }}" style="position:absolute;left:32.100%;top:16.658%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">SimpleGoScripts</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Go</span></a>
+        <span style="position:absolute;left:32.100%;top:16.658%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+      </div>
+      <div class="lst">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(24px,5vw,32px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:10px">APIs &amp; web services</div>
+        <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:17px;line-height:1.45;color:var(--ink2);margin:0 0 22px">Can I get at this data, and hand it to someone else cleanly?</p>
+        <div style="border-top:1px solid var(--ink)">
+        <a href="https://github.com/SaiWebApps/StockWatcherAPI" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">StockWatcherAPI</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Consolidate financials, headlines, and related companies info for a user-specified set of stock symbols.</span></a>
+        <a href="https://github.com/SaiWebApps/EnglishDictionaryAPI" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">EnglishDictionaryAPI</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A Python English dictionary API.</span></a>
+        <a href="https://github.com/SaiWebApps/PySynonymsCrawler" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">PySynonymsCrawler</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A Python utility that fetches synonyms for a specified word.</span></a>
+        <a href="https://github.com/SaiWebApps/Heroku-Synonyms-Crawler" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Heroku-Synonyms-Crawler</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Visualize the Synonym Crawler API’s results in a D3.js collapsible tree.</span></a>
+        <a href="https://github.com/SaiWebApps/RandomWordGenerator" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">RandomWordGenerator</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A Python library for generating random words.</span></a>
+        <a href="https://github.com/SaiWebApps/node-linkedin-scraper" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">node-linkedin-scraper</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A NodeJS implementation of a LinkedIn profile scraper.</span></a>
+        <a href="https://github.com/SaiWebApps/node-linkedin-headless-oauth" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">node-linkedin-headless-oauth</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Handle node-linkedin API authentication without any browser interaction.</span></a>
+        <a href="https://github.com/SaiWebApps/Parallelax" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Parallelax</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A library that leverages the NodeJS async API to execute multiple Blockspring functions in parallel.</span></a>
+        <a href="https://github.com/SaiWebApps/Spring-MVC-Survey" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Spring-MVC-Survey</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Survey apps created using Spring MVC.</span></a>
+        <a href="https://github.com/SaiWebApps/Django-Survey" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Django-Survey</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A Django-based survey web application.</span></a>
+        <a href="https://github.com/SaiWebApps/DjangoPolls" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">DjangoPolls</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">The first Django app I created.</span></a>
+        <a href="https://github.com/SaiWebApps/SimpleGoScripts" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">SimpleGoScripts</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A collection of simple Go language scripts.</span></a>
+        </div>
+      </div>
+      <div class="rdo" style="border-top:1px solid var(--ink);margin-top:clamp(14px,2vw,22px);padding-top:clamp(16px,2vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,3vw,44px);align-items:start;min-height:120px">
+        <div>
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(21px,2.4vw,30px);line-height:1.1;letter-spacing:-0.025em;margin-bottom:9px" ref="{{ nmR2 }}">StockWatcherAPI</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)" ref="{{ mtR2 }}">API</div>
+        </div>
+        <div style="grid-column:span 2">
+          <p style="font-size:clamp(15px,1.4vw,17.5px);line-height:1.55;color:var(--ink2);margin:0 0 14px;text-wrap:pretty" ref="{{ dsR2 }}">Consolidate financials, headlines, and related companies info for a user-specified set of stock symbols.</p>
+          <a href="https://github.com/SaiWebApps/StockWatcherAPI" ref="{{ urR2 }}" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--rule);background:var(--paper)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(30px,4vw,50px) clamp(18px,4vw,44px) clamp(40px,5vw,66px)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:clamp(6px,1vw,10px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums">04</span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">11 repositories</span>
+      </div>
+      <div class="cst" style="position:relative;width:100%;aspect-ratio:1000/800">
+        <svg viewBox="0 0 1000 800" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+          <line x1="500" y1="400" x2="500.0" y2="92.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="693.5" y2="140.9" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="825.6" y2="272.1" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="854.4" y2="443.8" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="770.6" y2="601.7" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="600.9" y2="695.5" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="399.1" y2="695.5" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="229.4" y2="601.7" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="145.6" y2="443.8" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="174.4" y2="272.1" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="306.5" y2="140.9" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="400" x2="500.0" y2="92.0" ref="{{ lnR3 }}" stroke="var(--accent)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+        </svg>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(34%,275px);background:var(--paper);border:1px solid var(--ink);padding:clamp(16px,2vw,26px);text-align:center">
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(19px,2.2vw,28px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:12px">Machine learning &amp; statistics</div>
+          <div style="width:34px;height:1px;background:var(--accent);margin:0 auto 12px"></div>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(13px,1.2vw,15px);line-height:1.45;color:var(--ink2);margin:0">Do I understand the algorithm well enough to implement it myself?</p>
+        </div>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-3" target="_blank" rel="noopener" onMouseEnter="{{ h3_0 }}" onFocus="{{ h3_0 }}" style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Machine-Learning-Exercise-3</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Coursera</span></a>
+        <span style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-1" target="_blank" rel="noopener" onMouseEnter="{{ h3_1 }}" onFocus="{{ h3_1 }}" style="position:absolute;left:69.355%;top:17.612%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Machine-Learning-Exercise-1</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Coursera</span></a>
+        <span style="position:absolute;left:69.355%;top:17.612%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-2" target="_blank" rel="noopener" onMouseEnter="{{ h3_2 }}" onFocus="{{ h3_2 }}" style="position:absolute;left:82.565%;top:34.007%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Machine-Learning-Exercise-2</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Coursera</span></a>
+        <span style="position:absolute;left:82.565%;top:34.007%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-4" target="_blank" rel="noopener" onMouseEnter="{{ h3_3 }}" onFocus="{{ h3_3 }}" style="position:absolute;left:85.436%;top:55.479%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Machine-Learning-Exercise-4</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Coursera</span></a>
+        <span style="position:absolute;left:85.436%;top:55.479%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-5" target="_blank" rel="noopener" onMouseEnter="{{ h3_4 }}" onFocus="{{ h3_4 }}" style="position:absolute;left:77.056%;top:75.212%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Machine-Learning-Exercise-5</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Coursera</span></a>
+        <span style="position:absolute;left:77.056%;top:75.212%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/CLT_ExponentialDistribution" target="_blank" rel="noopener" onMouseEnter="{{ h3_5 }}" onFocus="{{ h3_5 }}" style="position:absolute;left:60.086%;top:86.940%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">CLT_ExponentialDistribution</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">R</span></a>
+        <span style="position:absolute;left:60.086%;top:86.940%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/RProgrammingAssignment1" target="_blank" rel="noopener" onMouseEnter="{{ h3_6 }}" onFocus="{{ h3_6 }}" style="position:absolute;left:39.914%;top:86.940%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">RProgrammingAssignment1</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">R</span></a>
+        <span style="position:absolute;left:39.914%;top:86.940%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ProgrammingAssignment2" target="_blank" rel="noopener" onMouseEnter="{{ h3_7 }}" onFocus="{{ h3_7 }}" style="position:absolute;left:22.944%;top:75.212%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ProgrammingAssignment2</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">R</span></a>
+        <span style="position:absolute;left:22.944%;top:75.212%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/RProgrammingAssignment3" target="_blank" rel="noopener" onMouseEnter="{{ h3_8 }}" onFocus="{{ h3_8 }}" style="position:absolute;left:14.564%;top:55.479%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">RProgrammingAssignment3</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">R</span></a>
+        <span style="position:absolute;left:14.564%;top:55.479%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ScalaFunctionalProgrammingPrinciples" target="_blank" rel="noopener" onMouseEnter="{{ h3_9 }}" onFocus="{{ h3_9 }}" style="position:absolute;left:17.435%;top:34.007%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ScalaFunctionalProgrammingPrinciples</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Scala</span></a>
+        <span style="position:absolute;left:17.435%;top:34.007%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ScalaFunctionalProgrammingDesign" target="_blank" rel="noopener" onMouseEnter="{{ h3_10 }}" onFocus="{{ h3_10 }}" style="position:absolute;left:30.645%;top:17.612%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ScalaFunctionalProgrammingDesign</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Scala</span></a>
+        <span style="position:absolute;left:30.645%;top:17.612%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+      </div>
+      <div class="lst">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(24px,5vw,32px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:10px">Machine learning &amp; statistics</div>
+        <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:17px;line-height:1.45;color:var(--ink2);margin:0 0 22px">Do I understand the algorithm well enough to implement it myself?</p>
+        <div style="border-top:1px solid var(--ink)">
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-3" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Machine-Learning-Exercise-3</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Multi-class classification and neural networks.</span></a>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-1" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Machine-Learning-Exercise-1</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Coursera Machine Learning exercise #1.</span></a>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-2" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Machine-Learning-Exercise-2</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Coursera Machine Learning exercise #2.</span></a>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-4" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Machine-Learning-Exercise-4</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Coursera Machine Learning exercise #4.</span></a>
+        <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-5" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Machine-Learning-Exercise-5</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Coursera Machine Learning exercise #5.</span></a>
+        <a href="https://github.com/SaiWebApps/CLT_ExponentialDistribution" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">CLT_ExponentialDistribution</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Examining the Central Limit Theorem in the context of random exponential distributions in R.</span></a>
+        <a href="https://github.com/SaiWebApps/RProgrammingAssignment1" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">RProgrammingAssignment1</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Coursera R Programming assignment #1.</span></a>
+        <a href="https://github.com/SaiWebApps/ProgrammingAssignment2" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ProgrammingAssignment2</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Programming Assignment 2 for R Programming on Coursera.</span></a>
+        <a href="https://github.com/SaiWebApps/RProgrammingAssignment3" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">RProgrammingAssignment3</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Coursera R Programming assignment #3.</span></a>
+        <a href="https://github.com/SaiWebApps/ScalaFunctionalProgrammingPrinciples" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ScalaFunctionalProgrammingPrinciples</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Completed assignments for Coursera’s Functional Programming Principles in Scala.</span></a>
+        <a href="https://github.com/SaiWebApps/ScalaFunctionalProgrammingDesign" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ScalaFunctionalProgrammingDesign</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Completed assignments for Coursera’s Functional Programming Design in Scala.</span></a>
+        </div>
+      </div>
+      <div class="rdo" style="border-top:1px solid var(--ink);margin-top:clamp(14px,2vw,22px);padding-top:clamp(16px,2vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,3vw,44px);align-items:start;min-height:120px">
+        <div>
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(21px,2.4vw,30px);line-height:1.1;letter-spacing:-0.025em;margin-bottom:9px" ref="{{ nmR3 }}">Machine-Learning-Exercise-3</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)" ref="{{ mtR3 }}">Coursera</div>
+        </div>
+        <div style="grid-column:span 2">
+          <p style="font-size:clamp(15px,1.4vw,17.5px);line-height:1.55;color:var(--ink2);margin:0 0 14px;text-wrap:pretty" ref="{{ dsR3 }}">Multi-class classification and neural networks.</p>
+          <a href="https://github.com/SaiWebApps/Machine-Learning-Exercise-3" ref="{{ urR3 }}" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--rule);background:var(--paper2)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(30px,4vw,50px) clamp(18px,4vw,44px) clamp(40px,5vw,66px)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:clamp(6px,1vw,10px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums">05</span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">11 repositories</span>
+      </div>
+      <div class="cst" style="position:relative;width:100%;aspect-ratio:1000/620">
+        <svg viewBox="0 0 1000 620" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+          <line x1="500" y1="310" x2="500.0" y2="71.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="693.5" y2="109.2" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="825.6" y2="210.8" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="854.4" y2="344.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="770.6" y2="466.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="600.9" y2="539.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="399.1" y2="539.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="229.4" y2="466.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="145.6" y2="344.0" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="174.4" y2="210.8" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="306.5" y2="109.2" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="500.0" y2="71.3" ref="{{ lnR4 }}" stroke="var(--accent)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+        </svg>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(34%,275px);background:var(--paper2);border:1px solid var(--ink);padding:clamp(16px,2vw,26px);text-align:center">
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(19px,2.2vw,28px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:12px">Mobile &amp; embedded</div>
+          <div style="width:34px;height:1px;background:var(--accent);margin:0 auto 12px"></div>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(13px,1.2vw,15px);line-height:1.45;color:var(--ink2);margin:0">What does it take to ship something onto someone else’s device?</p>
+        </div>
+        <a href="https://github.com/SaiWebApps/MedHub" target="_blank" rel="noopener" onMouseEnter="{{ h4_0 }}" onFocus="{{ h4_0 }}" style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">MedHub</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Android</span></a>
+        <span style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ClassApp" target="_blank" rel="noopener" onMouseEnter="{{ h4_1 }}" onFocus="{{ h4_1 }}" style="position:absolute;left:69.355%;top:17.612%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ClassApp</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Android</span></a>
+        <span style="position:absolute;left:69.355%;top:17.612%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/ArtistApp" target="_blank" rel="noopener" onMouseEnter="{{ h4_2 }}" onFocus="{{ h4_2 }}" style="position:absolute;left:82.565%;top:34.007%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">ArtistApp</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Android</span></a>
+        <span style="position:absolute;left:82.565%;top:34.007%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/MortgageCalculator" target="_blank" rel="noopener" onMouseEnter="{{ h4_3 }}" onFocus="{{ h4_3 }}" style="position:absolute;left:85.436%;top:55.479%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">MortgageCalculator</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Android</span></a>
+        <span style="position:absolute;left:85.436%;top:55.479%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/GoogleMapsIntro" target="_blank" rel="noopener" onMouseEnter="{{ h4_4 }}" onFocus="{{ h4_4 }}" style="position:absolute;left:77.056%;top:75.212%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">GoogleMapsIntro</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Android</span></a>
+        <span style="position:absolute;left:77.056%;top:75.212%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/LocationIntro" target="_blank" rel="noopener" onMouseEnter="{{ h4_5 }}" onFocus="{{ h4_5 }}" style="position:absolute;left:60.086%;top:86.940%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">LocationIntro</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Android</span></a>
+        <span style="position:absolute;left:60.086%;top:86.940%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/FirstApp" target="_blank" rel="noopener" onMouseEnter="{{ h4_6 }}" onFocus="{{ h4_6 }}" style="position:absolute;left:39.914%;top:86.940%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">FirstApp</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Android</span></a>
+        <span style="position:absolute;left:39.914%;top:86.940%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/PhotoApp" target="_blank" rel="noopener" onMouseEnter="{{ h4_7 }}" onFocus="{{ h4_7 }}" style="position:absolute;left:22.944%;top:75.212%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">PhotoApp</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Windows Store</span></a>
+        <span style="position:absolute;left:22.944%;top:75.212%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/HelloWorld" target="_blank" rel="noopener" onMouseEnter="{{ h4_8 }}" onFocus="{{ h4_8 }}" style="position:absolute;left:14.564%;top:55.479%;transform:translate(-50%,0) translateY(13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">HelloWorld</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Windows Store</span></a>
+        <span style="position:absolute;left:14.564%;top:55.479%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Drone-Megaddon" target="_blank" rel="noopener" onMouseEnter="{{ h4_9 }}" onFocus="{{ h4_9 }}" style="position:absolute;left:17.435%;top:34.007%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Drone-Megaddon</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Carnegie Mellon</span></a>
+        <span style="position:absolute;left:17.435%;top:34.007%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/Team5" target="_blank" rel="noopener" onMouseEnter="{{ h4_10 }}" onFocus="{{ h4_10 }}" style="position:absolute;left:30.645%;top:17.612%;transform:translate(-50%,-100%) translateY(-13px);width:15.2%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">Team5</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Carnegie Mellon</span></a>
+        <span style="position:absolute;left:30.645%;top:17.612%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+      </div>
+      <div class="lst">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(24px,5vw,32px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:10px">Mobile &amp; embedded</div>
+        <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:17px;line-height:1.45;color:var(--ink2);margin:0 0 22px">What does it take to ship something onto someone else’s device?</p>
+        <div style="border-top:1px solid var(--ink)">
+        <a href="https://github.com/SaiWebApps/MedHub" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">MedHub</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An Android app — StackOverflow/Piazza for medical issues.</span></a>
+        <a href="https://github.com/SaiWebApps/ClassApp" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ClassApp</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An Android app for class and grades management.</span></a>
+        <a href="https://github.com/SaiWebApps/ArtistApp" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">ArtistApp</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">Marketing a music group through an Android app.</span></a>
+        <a href="https://github.com/SaiWebApps/MortgageCalculator" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">MortgageCalculator</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An Android mortgage calculator.</span></a>
+        <a href="https://github.com/SaiWebApps/GoogleMapsIntro" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">GoogleMapsIntro</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An Android app using Google Maps.</span></a>
+        <a href="https://github.com/SaiWebApps/LocationIntro" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">LocationIntro</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An introduction to Android’s Location Services.</span></a>
+        <a href="https://github.com/SaiWebApps/FirstApp" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">FirstApp</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">The first Android app I created — an Echo program.</span></a>
+        <a href="https://github.com/SaiWebApps/PhotoApp" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">PhotoApp</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">A Windows Store photo app.</span></a>
+        <a href="https://github.com/SaiWebApps/HelloWorld" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">HelloWorld</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An intro to Windows Store app development with a Hello World app.</span></a>
+        <a href="https://github.com/SaiWebApps/Drone-Megaddon" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Drone-Megaddon</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">18848 drone project.</span></a>
+        <a href="https://github.com/SaiWebApps/Team5" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">Team5</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">18549 capstone project.</span></a>
+        </div>
+      </div>
+      <div class="rdo" style="border-top:1px solid var(--ink);margin-top:clamp(14px,2vw,22px);padding-top:clamp(16px,2vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,3vw,44px);align-items:start;min-height:120px">
+        <div>
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(21px,2.4vw,30px);line-height:1.1;letter-spacing:-0.025em;margin-bottom:9px" ref="{{ nmR4 }}">MedHub</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)" ref="{{ mtR4 }}">Android</div>
+        </div>
+        <div style="grid-column:span 2">
+          <p style="font-size:clamp(15px,1.4vw,17.5px);line-height:1.55;color:var(--ink2);margin:0 0 14px;text-wrap:pretty" ref="{{ dsR4 }}">An Android app — StackOverflow/Piazza for medical issues.</p>
+          <a href="https://github.com/SaiWebApps/MedHub" ref="{{ urR4 }}" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--rule);background:var(--paper)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(30px,4vw,50px) clamp(18px,4vw,44px) clamp(40px,5vw,66px)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:clamp(6px,1vw,10px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums">06</span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">2 repositories</span>
+      </div>
+      <div class="cst" style="position:relative;width:100%;aspect-ratio:1000/620">
+        <svg viewBox="0 0 1000 620" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+          <line x1="500" y1="310" x2="500.0" y2="71.3" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="500.0" y2="548.7" stroke="var(--rule)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+          <line x1="500" y1="310" x2="500.0" y2="71.3" ref="{{ lnR5 }}" stroke="var(--accent)" strokeWidth="1" vectorEffect="non-scaling-stroke"></line>
+        </svg>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(34%,275px);background:var(--paper);border:1px solid var(--ink);padding:clamp(16px,2vw,26px);text-align:center">
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(19px,2.2vw,28px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:12px">AI, explained</div>
+          <div style="width:34px;height:1px;background:var(--accent);margin:0 auto 12px"></div>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(13px,1.2vw,15px);line-height:1.45;color:var(--ink2);margin:0">How do you explain an AI problem to someone who does not build them?</p>
+        </div>
+        <a href="https://github.com/SaiWebApps/AI-ROI-Unconference" target="_blank" rel="noopener" onMouseEnter="{{ h5_0 }}" onFocus="{{ h5_0 }}" style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-100%) translateY(-13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">AI-ROI-Unconference</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">React · Vite</span></a>
+        <span style="position:absolute;left:50.000%;top:11.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+        <a href="https://github.com/SaiWebApps/TheBiasFiles" target="_blank" rel="noopener" onMouseEnter="{{ h5_1 }}" onFocus="{{ h5_1 }}" style="position:absolute;left:50.000%;top:88.500%;transform:translate(-50%,0) translateY(13px);width:16.8%;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center;color:var(--ink);cursor:pointer" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-weight:400;font-size:clamp(12px,1.2vw,16px);line-height:1.15;letter-spacing:-0.01em">TheBiasFiles</span><span style="font-family:'Martian Mono',monospace;font-size:clamp(8px,0.68vw,8.5px);letter-spacing:0.13em;text-transform:uppercase;color:var(--ink3);line-height:1.5">Interactive comic</span></a>
+        <span style="position:absolute;left:50.000%;top:88.500%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--star);pointer-events:none"></span>
+      </div>
+      <div class="lst">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(24px,5vw,32px);line-height:1.12;letter-spacing:-0.02em;margin-bottom:10px">AI, explained</div>
+        <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:17px;line-height:1.45;color:var(--ink2);margin:0 0 22px">How do you explain an AI problem to someone who does not build them?</p>
+        <div style="border-top:1px solid var(--ink)">
+        <a href="https://github.com/SaiWebApps/AI-ROI-Unconference" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">AI-ROI-Unconference</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An interactive RPG-themed infographic exploring AI investment ROI through the Discounted Cash Flow (DCF) framework.</span></a>
+        <a href="https://github.com/SaiWebApps/TheBiasFiles" target="_blank" rel="noopener" style="display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap;color:var(--ink)" style-hover="color:var(--accent)"><span style="font-family:'Spectral',Georgia,serif;font-size:18px;flex:0 0 auto;min-width:13em">TheBiasFiles</span><span style="font-size:14px;line-height:1.55;color:var(--ink2);flex:1;min-width:200px">An interactive 10-page comic that teaches the four types of AI bias — historical, representation, aggregation, and evaluation — through real-world stories like Amazon’s sexist hiring algorithm and facial recognition failing Black women.</span></a>
+        </div>
+      </div>
+      <div class="rdo" style="border-top:1px solid var(--ink);margin-top:clamp(14px,2vw,22px);padding-top:clamp(16px,2vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,3vw,44px);align-items:start;min-height:120px">
+        <div>
+          <div style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(21px,2.4vw,30px);line-height:1.1;letter-spacing:-0.025em;margin-bottom:9px" ref="{{ nmR5 }}">AI-ROI-Unconference</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)" ref="{{ mtR5 }}">React · Vite</div>
+        </div>
+        <div style="grid-column:span 2">
+          <p style="font-size:clamp(15px,1.4vw,17.5px);line-height:1.55;color:var(--ink2);margin:0 0 14px;text-wrap:pretty" ref="{{ dsR5 }}">An interactive RPG-themed infographic exploring AI investment ROI through the Discounted Cash Flow (DCF) framework.</p>
+          <a href="https://github.com/SaiWebApps/AI-ROI-Unconference" ref="{{ urR5 }}" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr" style="border-top:1px solid var(--ink);background:var(--paper)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(34px,4vw,52px) clamp(18px,4vw,44px) clamp(30px,3.4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:clamp(26px,3.4vw,48px);align-items:start">
+        <div>
+          <a href="/" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:11px;line-height:1.8">Engineering leadership · AI &amp; ML<br>Apple · Wharton MBA 2026</div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Pages</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="/#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+          <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Ventures</a>
+          <a href="/projects" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Projects</a>
+          <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Research</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">The record</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="/#experience" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Charted roles</a>
+          <a href="/#honors" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Honors</a>
+          <a href="/#words" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">In their words</a>
+          <a href="/assets/Sairam_Krishnan_Resume.pdf" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Résumé (PDF)</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Reach me</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="mailto:sairambkrishnan@gmail.com" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Email</a>
+          <a href="https://linkedin.com/in/sairambkrishnan" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">LinkedIn</a>
+          <a href="https://github.com/SaiWebApps" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">GitHub</a>
+          <a href="https://orcid.org/0009-0004-2626-1273" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">ORCID</a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.btnRef = React.createRef();
+    this.iconRef = React.createRef();
+    this.mode = 'auto';
+    // hovered index per cluster. Deliberately not React state: the hover path
+    // paints imperatively so no re-render can fight the seeded markup.
+    this.a = [0,0,0,0,0,0];
+    this.D = this.data();
+    this.R = {};
+    ['nm','mt','ds','ur','ln'].forEach(k => {
+      this.R[k] = [];
+      for (let i = 0; i < 6; i++) this.R[k][i] = React.createRef();
+    });
+  }
+
+  data(){ return [
+    [{x:500.0,y:71.3,name:'DT-Convolution',meta:'SSE · OpenMP',desc:'Optimizing purely sequential DT Convolution through SSE; parallelizing through OpenMP.',url:'https://github.com/SaiWebApps/DT-Convolution'},
+     {x:779.9,y:161.2,name:'Basic-CUDA',meta:'NVIDIA CUDA',desc:'NVIDIA CUDA programs.',url:'https://github.com/SaiWebApps/Basic-CUDA'},
+     {x:849.0,y:363.1,name:'GCC_Function_Tracer',meta:'C/C++ · gcc',desc:'Tracing function calls in C/C++ using gcc’s in-built profiling tools.',url:'https://github.com/SaiWebApps/GCC_Function_Tracer'},
+     {x:655.3,y:525.1,name:'InventoryManagement',meta:'C++ · FIFO / LIFO',desc:'C++ inventory management software. Supports FIFO and LIFO methods.',url:'https://github.com/SaiWebApps/InventoryManagement'},
+     {x:344.7,y:525.1,name:'XMLParser',meta:'C++',desc:'A C++ XML parser, built on the C++ Trie framework.',url:'https://github.com/SaiWebApps/XMLParser'},
+     {x:151.0,y:363.1,name:'Trie',meta:'C++',desc:'A C++ Trie framework.',url:'https://github.com/SaiWebApps/Trie'},
+     {x:220.1,y:161.2,name:'ColorPrinter',meta:'C++',desc:'A C++ program to print out characters in different colors.',url:'https://github.com/SaiWebApps/ColorPrinter'}],
+    [{x:500.0,y:81.6,name:'Magpie',meta:'Tampermonkey · Python',desc:'One-click YouTube audio stash — a Tampermonkey userscript plus a local Python server.',url:'https://github.com/SaiWebApps/Magpie'},
+     {x:693.5,y:125.0,name:'vsccc',meta:'VS Code',desc:'VS Code Theme Carousel — automatically switches your color theme on a schedule.',url:'https://github.com/SaiWebApps/vsccc'},
+     {x:825.6,y:241.4,name:'AppleScriptUtils',meta:'AppleScript',desc:'A collection of useful AppleScripts to automate common workflows on my Mac.',url:'https://github.com/SaiWebApps/AppleScriptUtils'},
+     {x:854.4,y:393.9,name:'arc-delete-archived-tabs',meta:'Script',desc:'A script which deletes archived Arc tabs at regular intervals.',url:'https://github.com/SaiWebApps/arc-delete-archived-tabs'},
+     {x:770.6,y:534.0,name:'claude-code-profile-switcher',meta:'VS Code',desc:'A VS Code extension to switch between multiple Claude Code configuration profiles via symlink management.',url:'https://github.com/SaiWebApps/claude-code-profile-switcher'},
+     {x:600.9,y:617.3,name:'ThemeSwitcher',meta:'Sublime Text',desc:'Switch themes in the current Sublime tab by pressing ctrl+alt+t.',url:'https://github.com/SaiWebApps/ThemeSwitcher'},
+     {x:399.1,y:617.3,name:'ExcelDataPartitioner',meta:'Excel',desc:'Given an Excel file with a single sheet of data, partition it into multiple sheets by the specified columns.',url:'https://github.com/SaiWebApps/ExcelDataPartitioner'},
+     {x:229.4,y:534.0,name:'DepreciationCalculator',meta:'Perl',desc:'An OO Perl script to calculate depreciation using different accounting methods.',url:'https://github.com/SaiWebApps/DepreciationCalculator'},
+     {x:145.6,y:393.9,name:'BingRewardsBot',meta:'Automation',desc:'Automates Bing searches to accumulate Bing Rewards points.',url:'https://github.com/SaiWebApps/BingRewardsBot'},
+     {x:174.4,y:241.4,name:'WindowsUtils',meta:'Windows',desc:'Windows utility scripts.',url:'https://github.com/SaiWebApps/WindowsUtils'},
+     {x:306.5,y:125.0,name:'ModernAppPSUtils',meta:'PowerShell',desc:'PowerShell 5.0 utilities for Windows 10 Modern/Universal apps.',url:'https://github.com/SaiWebApps/ModernAppPSUtils'}],
+    [{x:500.0,y:92.0,name:'StockWatcherAPI',meta:'API',desc:'Consolidate financials, headlines, and related companies info for a user-specified set of stock symbols.',url:'https://github.com/SaiWebApps/StockWatcherAPI'},
+     {x:679.0,y:133.3,name:'EnglishDictionaryAPI',meta:'Python',desc:'A Python English dictionary API.',url:'https://github.com/SaiWebApps/EnglishDictionaryAPI'},
+     {x:810.0,y:246.0,name:'PySynonymsCrawler',meta:'Python',desc:'A Python utility that fetches synonyms for a specified word.',url:'https://github.com/SaiWebApps/PySynonymsCrawler'},
+     {x:858.0,y:400.0,name:'Heroku-Synonyms-Crawler',meta:'D3.js',desc:'Visualize the Synonym Crawler API’s results in a D3.js collapsible tree.',url:'https://github.com/SaiWebApps/Heroku-Synonyms-Crawler'},
+     {x:810.0,y:554.0,name:'RandomWordGenerator',meta:'Python',desc:'A Python library for generating random words.',url:'https://github.com/SaiWebApps/RandomWordGenerator'},
+     {x:679.0,y:666.7,name:'node-linkedin-scraper',meta:'NodeJS',desc:'A NodeJS implementation of a LinkedIn profile scraper.',url:'https://github.com/SaiWebApps/node-linkedin-scraper'},
+     {x:500.0,y:708.0,name:'node-linkedin-headless-oauth',meta:'NodeJS',desc:'Handle node-linkedin API authentication without any browser interaction.',url:'https://github.com/SaiWebApps/node-linkedin-headless-oauth'},
+     {x:321.0,y:666.7,name:'Parallelax',meta:'NodeJS',desc:'A library that leverages the NodeJS async API to execute multiple Blockspring functions in parallel.',url:'https://github.com/SaiWebApps/Parallelax'},
+     {x:190.0,y:554.0,name:'Spring-MVC-Survey',meta:'Spring MVC',desc:'Survey apps created using Spring MVC.',url:'https://github.com/SaiWebApps/Spring-MVC-Survey'},
+     {x:142.0,y:400.0,name:'Django-Survey',meta:'Django',desc:'A Django-based survey web application.',url:'https://github.com/SaiWebApps/Django-Survey'},
+     {x:190.0,y:246.0,name:'DjangoPolls',meta:'Django',desc:'The first Django app I created.',url:'https://github.com/SaiWebApps/DjangoPolls'},
+     {x:321.0,y:133.3,name:'SimpleGoScripts',meta:'Go',desc:'A collection of simple Go language scripts.',url:'https://github.com/SaiWebApps/SimpleGoScripts'}],
+    [{x:500.0,y:92.0,name:'Machine-Learning-Exercise-3',meta:'Coursera',desc:'Multi-class classification and neural networks.',url:'https://github.com/SaiWebApps/Machine-Learning-Exercise-3'},
+     {x:693.5,y:140.9,name:'Machine-Learning-Exercise-1',meta:'Coursera',desc:'Coursera Machine Learning exercise #1.',url:'https://github.com/SaiWebApps/Machine-Learning-Exercise-1'},
+     {x:825.6,y:272.1,name:'Machine-Learning-Exercise-2',meta:'Coursera',desc:'Coursera Machine Learning exercise #2.',url:'https://github.com/SaiWebApps/Machine-Learning-Exercise-2'},
+     {x:854.4,y:443.8,name:'Machine-Learning-Exercise-4',meta:'Coursera',desc:'Coursera Machine Learning exercise #4.',url:'https://github.com/SaiWebApps/Machine-Learning-Exercise-4'},
+     {x:770.6,y:601.7,name:'Machine-Learning-Exercise-5',meta:'Coursera',desc:'Coursera Machine Learning exercise #5.',url:'https://github.com/SaiWebApps/Machine-Learning-Exercise-5'},
+     {x:600.9,y:695.5,name:'CLT_ExponentialDistribution',meta:'R',desc:'Examining the Central Limit Theorem in the context of random exponential distributions in R.',url:'https://github.com/SaiWebApps/CLT_ExponentialDistribution'},
+     {x:399.1,y:695.5,name:'RProgrammingAssignment1',meta:'R',desc:'Coursera R Programming assignment #1.',url:'https://github.com/SaiWebApps/RProgrammingAssignment1'},
+     {x:229.4,y:601.7,name:'ProgrammingAssignment2',meta:'R',desc:'Programming Assignment 2 for R Programming on Coursera.',url:'https://github.com/SaiWebApps/ProgrammingAssignment2'},
+     {x:145.6,y:443.8,name:'RProgrammingAssignment3',meta:'R',desc:'Coursera R Programming assignment #3.',url:'https://github.com/SaiWebApps/RProgrammingAssignment3'},
+     {x:174.4,y:272.1,name:'ScalaFunctionalProgrammingPrinciples',meta:'Scala',desc:'Completed assignments for Coursera’s Functional Programming Principles in Scala.',url:'https://github.com/SaiWebApps/ScalaFunctionalProgrammingPrinciples'},
+     {x:306.5,y:140.9,name:'ScalaFunctionalProgrammingDesign',meta:'Scala',desc:'Completed assignments for Coursera’s Functional Programming Design in Scala.',url:'https://github.com/SaiWebApps/ScalaFunctionalProgrammingDesign'}],
+    [{x:500.0,y:71.3,name:'MedHub',meta:'Android',desc:'An Android app — StackOverflow/Piazza for medical issues.',url:'https://github.com/SaiWebApps/MedHub'},
+     {x:693.5,y:109.2,name:'ClassApp',meta:'Android',desc:'An Android app for class and grades management.',url:'https://github.com/SaiWebApps/ClassApp'},
+     {x:825.6,y:210.8,name:'ArtistApp',meta:'Android',desc:'Marketing a music group through an Android app.',url:'https://github.com/SaiWebApps/ArtistApp'},
+     {x:854.4,y:344.0,name:'MortgageCalculator',meta:'Android',desc:'An Android mortgage calculator.',url:'https://github.com/SaiWebApps/MortgageCalculator'},
+     {x:770.6,y:466.3,name:'GoogleMapsIntro',meta:'Android',desc:'An Android app using Google Maps.',url:'https://github.com/SaiWebApps/GoogleMapsIntro'},
+     {x:600.9,y:539.0,name:'LocationIntro',meta:'Android',desc:'An introduction to Android’s Location Services.',url:'https://github.com/SaiWebApps/LocationIntro'},
+     {x:399.1,y:539.0,name:'FirstApp',meta:'Android',desc:'The first Android app I created — an Echo program.',url:'https://github.com/SaiWebApps/FirstApp'},
+     {x:229.4,y:466.3,name:'PhotoApp',meta:'Windows Store',desc:'A Windows Store photo app.',url:'https://github.com/SaiWebApps/PhotoApp'},
+     {x:145.6,y:344.0,name:'HelloWorld',meta:'Windows Store',desc:'An intro to Windows Store app development with a Hello World app.',url:'https://github.com/SaiWebApps/HelloWorld'},
+     {x:174.4,y:210.8,name:'Drone-Megaddon',meta:'Carnegie Mellon',desc:'18848 drone project.',url:'https://github.com/SaiWebApps/Drone-Megaddon'},
+     {x:306.5,y:109.2,name:'Team5',meta:'Carnegie Mellon',desc:'18549 capstone project.',url:'https://github.com/SaiWebApps/Team5'}],
+    [{x:500.0,y:71.3,name:'AI-ROI-Unconference',meta:'React · Vite',desc:'An interactive RPG-themed infographic exploring AI investment ROI through the Discounted Cash Flow (DCF) framework.',url:'https://github.com/SaiWebApps/AI-ROI-Unconference'},
+     {x:500.0,y:548.7,name:'TheBiasFiles',meta:'Interactive comic',desc:'An interactive 10-page comic that teaches the four types of AI bias — historical, representation, aggregation, and evaluation — through real-world stories like Amazon’s sexist hiring algorithm and facial recognition failing Black women.',url:'https://github.com/SaiWebApps/TheBiasFiles'}],
+  ]; }
+
+  pick(c,i){ if (this.a[c] === i) return; this.a[c] = i; this.paint(c); }
+
+  // Writes the hovered repo straight into the DOM the template already seeded.
+  paint(c){
+    const n = this.D[c][this.a[c]] || this.D[c][0];
+    if (!n) return;
+    const txt = (ref, v) => { const e = ref.current; if (e) e.textContent = v; };
+    txt(this.R.nm[c], n.name);
+    txt(this.R.mt[c], n.meta);
+    txt(this.R.ds[c], n.desc);
+    const a = this.R.ur[c].current; if (a) a.setAttribute("href", n.url);
+    const l = this.R.ln[c].current;
+    if (l) { l.setAttribute("x2", n.x); l.setAttribute("y2", n.y); }
+  }
+
+  renderVals(){
+    const D=this.D;
+    const v={
+      btnRef: this.btnRef, iconRef: this.iconRef,
+      cycleTheme: () => {
+        const order=['auto','light','dark'];
+        const next=order[(order.indexOf(this.mode)+1)%3];
+        this.applyMode(next);
+        try { localStorage.setItem('sk-ql-theme', next); } catch(e){}
+      },
+      h0_0: () => this.pick(0,0),
+      h0_1: () => this.pick(0,1),
+      h0_2: () => this.pick(0,2),
+      h0_3: () => this.pick(0,3),
+      h0_4: () => this.pick(0,4),
+      h0_5: () => this.pick(0,5),
+      h0_6: () => this.pick(0,6),
+      h1_0: () => this.pick(1,0),
+      h1_1: () => this.pick(1,1),
+      h1_2: () => this.pick(1,2),
+      h1_3: () => this.pick(1,3),
+      h1_4: () => this.pick(1,4),
+      h1_5: () => this.pick(1,5),
+      h1_6: () => this.pick(1,6),
+      h1_7: () => this.pick(1,7),
+      h1_8: () => this.pick(1,8),
+      h1_9: () => this.pick(1,9),
+      h1_10: () => this.pick(1,10),
+      h2_0: () => this.pick(2,0),
+      h2_1: () => this.pick(2,1),
+      h2_2: () => this.pick(2,2),
+      h2_3: () => this.pick(2,3),
+      h2_4: () => this.pick(2,4),
+      h2_5: () => this.pick(2,5),
+      h2_6: () => this.pick(2,6),
+      h2_7: () => this.pick(2,7),
+      h2_8: () => this.pick(2,8),
+      h2_9: () => this.pick(2,9),
+      h2_10: () => this.pick(2,10),
+      h2_11: () => this.pick(2,11),
+      h3_0: () => this.pick(3,0),
+      h3_1: () => this.pick(3,1),
+      h3_2: () => this.pick(3,2),
+      h3_3: () => this.pick(3,3),
+      h3_4: () => this.pick(3,4),
+      h3_5: () => this.pick(3,5),
+      h3_6: () => this.pick(3,6),
+      h3_7: () => this.pick(3,7),
+      h3_8: () => this.pick(3,8),
+      h3_9: () => this.pick(3,9),
+      h3_10: () => this.pick(3,10),
+      h4_0: () => this.pick(4,0),
+      h4_1: () => this.pick(4,1),
+      h4_2: () => this.pick(4,2),
+      h4_3: () => this.pick(4,3),
+      h4_4: () => this.pick(4,4),
+      h4_5: () => this.pick(4,5),
+      h4_6: () => this.pick(4,6),
+      h4_7: () => this.pick(4,7),
+      h4_8: () => this.pick(4,8),
+      h4_9: () => this.pick(4,9),
+      h4_10: () => this.pick(4,10),
+      h5_0: () => this.pick(5,0),
+      h5_1: () => this.pick(5,1),
+    };
+    D.forEach((cl,c)=>{
+      v['nmR'+c]=this.R.nm[c]; v['mtR'+c]=this.R.mt[c]; v['dsR'+c]=this.R.ds[c];
+      v['urR'+c]=this.R.ur[c]; v['lnR'+c]=this.R.ln[c];
+    });
+    return v;
+  }
+
+  applyMode(m){
+    this.mode = m;
+    const r = document.documentElement;
+    if (m === 'auto') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', m);
+    const b = this.btnRef.current;
+    if (b){
+      b.setAttribute('title', 'Theme: ' + m + ' — click to cycle (auto follows your system setting)');
+      b.style.boxShadow = '0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent)';
+      if (this._flashT) clearTimeout(this._flashT);
+      this._flashT = setTimeout(() => { b.style.boxShadow = ''; }, 340);
+    }
+    const ic = this.iconRef.current;
+    if (ic){
+      ic.innerHTML = this.themeIcon(m);
+      ic.style.transition = 'none';
+      ic.style.transform = 'rotate(-140deg) scale(.5)';
+      ic.style.opacity = '0';
+      if (this._iconT) clearTimeout(this._iconT);
+      this._iconT = setTimeout(() => {
+        ic.style.transition = 'transform .46s cubic-bezier(.22,1,.36,1), opacity .24s ease';
+        ic.style.transform = 'rotate(0deg) scale(1)';
+        ic.style.opacity = '1';
+      }, 16);
+    }
+  }
+
+  themeIcon(m){
+    const open = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block">';
+    if (m === 'light') return open + '<circle cx="12" cy="12" r="4.3"/><path d="M12 2.4v2.5M12 19.1v2.5M2.4 12h2.5M19.1 12h2.5M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></svg>';
+    if (m === 'dark') return open + '<path d="M20.4 14.9A8.7 8.7 0 0 1 9.1 3.6 8.7 8.7 0 1 0 20.4 14.9Z"/></svg>';
+    return open + '<circle cx="12" cy="12" r="8.3"/><path d="M12 3.7a8.3 8.3 0 0 0 0 16.6Z" fill="currentColor" stroke="none"/></svg>';
+  }
+
+  componentDidMount(){
+    let saved = 'auto';
+    try { saved = localStorage.getItem('sk-ql-theme') || 'auto'; } catch(e){}
+    if (['auto','light','dark'].indexOf(saved) < 0) saved = 'auto';
+    this.applyMode(saved);
+    for (let c = 0; c < 6; c++) this.paint(c);
+  }
+
+  componentDidUpdate(){ for (let c = 0; c < 6; c++) this.paint(c); }
+}
+</script>
+</body>
+</html>

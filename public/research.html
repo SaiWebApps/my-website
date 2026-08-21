@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research on AI and Engineering — Sairam Krishnan</title>
+<meta name="description" content="Research on how AI is changing engineering and how leaders should respond — grounded in a working knowledge-graph platform and eight enterprise case studies.">
+<link rel="canonical" href="https://sairambkrishnan.com/research">
+<meta name="author" content="Sairam Krishnan">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sairam Krishnan">
+<meta property="og:title" content="Research on AI and Engineering — Sairam Krishnan">
+<meta property="og:description" content="Research on how AI is changing engineering and how leaders should respond — grounded in a working knowledge-graph platform and eight enterprise case studies.">
+<meta property="og:url" content="https://sairambkrishnan.com/research">
+<meta property="og:image" content="https://sairambkrishnan.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sairam Krishnan — AI/ML engineering leadership">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Research on AI and Engineering — Sairam Krishnan">
+<meta name="twitter:description" content="Research on how AI is changing engineering and how leaders should respond — grounded in a working knowledge-graph platform and eight enterprise case studies.">
+<meta name="twitter:image" content="https://sairambkrishnan.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400&family=Martian+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1EA; --paper2:#EEEADF; --ink:#14120F; --ink2:#413A2F; --ink3:#6E685C;
+    --rule:#D8D1C2; --hair:#8A8274; --rule2:#E4DED0; --accent:#7A2E2E; --dot:#B8B0A0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+      --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+    --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Spectral',Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"kern" 1,"liga" 1}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--ink)}
+  @media print{
+    :root, :root[data-theme="dark"]{
+      --paper:#fff; --paper2:#fff; --ink:#14120F; --ink2:#413A2F; --ink3:#6E685C;
+      --rule:#C9C2B4; --hair:#8A8274; --rule2:#DED8CA; --accent:#7A2E2E; --dot:#B8B0A0;
+    }
+  }
+  .hdr{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
+  .hdrIn{max-width:1400px;margin:0 auto;padding:13px clamp(18px,4vw,44px);display:flex;align-items:center;gap:clamp(16px,2vw,24px)}
+  .mark{flex:0 0 auto;white-space:nowrap}
+  .nav{flex:1 1 auto;display:flex;align-items:center;justify-content:flex-end;gap:clamp(13px,1.9vw,26px);flex-wrap:wrap}
+  .nav a,.nav span{padding:7px 0}
+  .tgl{flex:0 0 auto}
+  div[id]{scroll-margin-top:80px}
+  @media(max-width:760px){
+    .hdrIn{flex-wrap:wrap;padding:11px clamp(18px,4vw,44px) 0;gap:0 14px}
+    .mark{flex:1 1 auto;order:1}
+    .tgl{order:2}
+    .nav{order:3;width:100%;justify-content:flex-start;gap:2px 12px;margin-top:9px;border-top:1px solid var(--rule2)}
+    .nav a,.nav span{padding:10px 0}
+    div[id]{scroll-margin-top:96px}
+  }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .ftr a{padding:7px 0}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ScholarlyArticle","headline":"Who Trains the Next Senior? Managing engineering teams when AI makes code cheap.","author":[{"@type":"Person","name":"Sairam Krishnan"},{"@type":"Person","name":"Gajendra Babu Thokala"}],"datePublished":"2026","url":"https://sairambkrishnan.com/research"},{"@type":"ScholarlyArticle","headline":"A Multi-Layer Framework for Evaluating the ROI of AI Projects","author":[{"@type":"Person","name":"Sairam Krishnan"},{"@type":"Person","name":"A. Hepp"},{"@type":"Person","name":"S. Gandhi"}],"identifier":"https://doi.org/10.2139/ssrn.6732598","sameAs":"https://doi.org/10.2139/ssrn.6732598","datePublished":"2026","url":"https://sairambkrishnan.com/research"},{"@type":"ScholarlyArticle","headline":"Drone-Megaddon: Commanding drone swarms like a real-time strategy game","author":[{"@type":"Person","name":"Sairam Krishnan"},{"@type":"Person","name":"D. Ting"}],"identifier":"https://doi.org/10.31224/6924","sameAs":["https://doi.org/10.31224/6924","https://doi.org/10.31224/6987"],"datePublished":"2014","url":"https://sairambkrishnan.com/research"}]}</script>
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<div style="background:var(--paper);color:var(--ink);min-height:100vh">
+
+  <div class="hdr">
+    <div class="hdrIn">
+      <a href="/" class="mark" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+      <div class="nav">
+        <a href="/#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+        <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Ventures</a>
+        <a href="/projects" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Projects</a>
+        <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink)">Research</a>
+        <a href="/#contact" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Contact</a>
+      </div>
+        <button type="button" class="tgl" ref="{{ btnRef }}" onClick="{{ cycleTheme }}" aria-label="Toggle colour theme" style="display:flex;align-items:center;justify-content:center;width:34px;height:30px;flex:0 0 auto;color:var(--ink3);background:transparent;border:1px solid var(--hair);padding:0;cursor:pointer;transition:transform .11s cubic-bezier(.22,1,.36,1),border-color .28s ease,color .28s ease,box-shadow .3s ease" style-hover="color:var(--ink);border-color:var(--ink3)" style-active="transform:scale(.88)"><span ref="{{ iconRef }}" style="display:flex;align-items:center;justify-content:center;width:16px;height:16px"></span></button>
+    </div>
+  </div>
+
+  <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,8vw,104px) clamp(18px,4vw,44px) clamp(40px,5vw,60px)">
+    <div style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(20px,3vw,32px)">Writing &amp; research</div>
+    <h1 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(38px,6.6vw,82px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 clamp(24px,3.2vw,34px);max-width:20ch">A point of view on AI, backed by the work.</h1>
+    <div style="width:52px;height:1px;background:var(--accent);margin-bottom:clamp(22px,2.8vw,30px)"></div>
+    <p style="font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:var(--ink2);margin:0 0 30px">Research and writing on how AI is changing engineering, and how leaders should respond. The thinking is not abstract: it is grounded in a working knowledge-graph platform and eight enterprise case studies.</p>
+    <a href="https://orcid.org/0009-0004-2626-1273" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:14px 22px;display:inline-block" style-hover="background:var(--accent)">Full record · ORCID 0009-0004-2626-1273</a>
+  </div>
+
+  <div style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6.5vw,92px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px">
+        <span style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);font-variant-numeric:tabular-nums">01</span>
+        <span style="height:1px;flex:1;background:var(--rule)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">Working paper · 2026 · engrXiv</span>
+      </div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(32px,5vw,64px);line-height:1.04;letter-spacing:-0.03em;margin:0 0 10px;max-width:18ch">Who Trains the Next Senior?</h2>
+      <div style="font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(18px,2vw,25px);color:var(--ink2);margin-bottom:clamp(28px,3.4vw,40px)">Managing engineering teams when AI makes code cheap.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4.5vw,60px);align-items:start">
+        <div>
+          <p style="font-size:16px;line-height:1.65;color:var(--ink2);margin:0 0 16px">Generative and agentic AI have made the breadth of software engineering — the plausible and conventional code — nearly free. The first casualty is the junior engineer, whose old work (the boilerplate, the well-specified tickets, the first-pass tests and debugging) was both the team's production and its apprenticeship.</p>
+          <p style="font-size:16px;line-height:1.65;color:var(--ink2);margin:0 0 16px">Cheap breadth raises the value of two scarce human contributions: depth, the judgment of which answer is right in this system, and divergence, the perspective from outside the consensus. Left to inertia, an organization slides toward a substitution equilibrium — review theater where the signature stays but verification drains out, a starved apprenticeship, and output that converges on the model's mean.</p>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink3);margin:0 0 26px">The alternative, complementarity, is not a slogan. It is a set of concrete management moves, grounded in a worked enterprise data-pipeline case with a labor-share projection to 2032 and a clear-eyed section on the risks and conditions of reversal.</p>
+          <div style="border-top:1px solid var(--ink);padding-top:18px">
+            <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px">The four moves</div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule2)">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:20px;flex:0 0 auto">01</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">Shrink the unit of review.</span> Atomic, single-responsibility pull requests, now enforceable because the producer is an agent.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule2)">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:20px;flex:0 0 auto">02</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">Tier scrutiny by consequence.</span> Senior-led, synchronous review for high-stakes change. Async-with-agent for the rest.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule2)">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:20px;flex:0 0 auto">03</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">Measure what is scarce.</span> Verified outcome, depth transfer, and divergence, not lines of code.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:20px;flex:0 0 auto">04</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">Rebuild the apprenticeship on purpose.</span> Juniors as directors of agents, under senior mentorship.</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div ref="{{ thesisRef }}" style="position:relative;height:clamp(300px,32vw,380px);border:1px solid var(--rule);background:var(--paper2)"></div>
+          <p style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7;margin:12px 0 0">Fig. 1 — the cost of breadth falls toward zero while the value of judgment rises. Where they cross is where management has to change.</p>
+        </div>
+      </div>
+      <div style="margin-top:clamp(26px,3vw,36px);padding-top:18px;border-top:1px solid var(--rule);font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)">Co-authored with Gajendra Babu Thokala, Senior Engineering Leader at Apple</div>
+    </div>
+  </div>
+
+  <div style="background:var(--paper2);border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6.5vw,92px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px">
+        <span style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);font-variant-numeric:tabular-nums">02</span>
+        <span style="height:1px;flex:1;background:var(--rule)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">SSRN · 2026</span>
+      </div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(30px,4.6vw,58px);line-height:1.05;letter-spacing:-0.03em;margin:0 0 10px;max-width:22ch">A Multi-Layer Framework for Evaluating the ROI of AI Projects</h2>
+      <div style="font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(18px,2vw,25px);color:var(--ink2);margin-bottom:clamp(28px,3.4vw,40px)">Why 80% of AI projects fail, and how to be in the 20%.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4.5vw,60px);align-items:start">
+        <div>
+          <p style="font-size:16px;line-height:1.65;color:var(--ink2);margin:0 0 16px">Most enterprise AI programs are approved on conviction — a striking demo, a competitor's press release, the fear of being left behind — and then quietly written off. The paper starts from the uncomfortable number that roughly four in five never earn back their cost, and argues the failure is almost never the model. It is the absence of a discipline for deciding what to fund, when to stop, and how to price the risk that a project simply will not land.</p>
+          <p style="font-size:16px;line-height:1.65;color:var(--ink2);margin:0 0 16px">Working from eight enterprise case studies, it builds that discipline into four analytical layers. An initiative moves from a go / no-go readiness check, through a decomposition of where return actually comes from and a stage-gate that releases money in tranches, to a single A-to-F grade — with a risk-adjustment table that tunes the discount rate by category, so a speculative bet and a routine automation are never valued on the same terms.</p>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink3);margin:0 0 26px">The payoff is a shared language for the funding decision. Boards get one comparable grade across competing bets, and teams get a defensible reason to stop a weak project at the next gate instead of letting it drain a roadmap for a year. It is the same framework behind the executive curriculum I teach to the C-suite.</p>
+          <div style="border-top:1px solid var(--ink);padding-top:18px">
+            <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px">The four layers</div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule2)">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:24px;flex:0 0 auto">L1</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">Readiness assessment.</span> A structured go / no-go before a dollar is spent.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule2)">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:24px;flex:0 0 auto">L2</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">ROIC decomposition.</span> Isolate where the return actually comes from.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule2)">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:24px;flex:0 0 auto">L3</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">Stage-gate phasing.</span> Release funding in tranches; exit at any gate.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:14px;padding:11px 0">
+              <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:24px;flex:0 0 auto">L4</span>
+              <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)"><span style="color:var(--ink)">A-to-F scorecard.</span> One grade a board can compare across bets, with a risk-adjusted discount rate by category.</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div ref="{{ stackRef }}" style="position:relative;height:clamp(320px,34vw,420px);border:1px solid var(--rule);background:var(--paper)"></div>
+          <p style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7;margin:12px 0 0">Fig. 2 — the four layers, exploded. Eight case studies rise to the layer each one tested.</p>
+        </div>
+      </div>
+      <div style="margin-top:clamp(26px,3vw,36px);padding-top:18px;border-top:1px solid var(--rule);font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)">DOI 10.2139/ssrn.6732598 · Co-authors A. Hepp and S. Gandhi · Faculty sponsor Prof. Gad Allon, The Wharton School</div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6.5vw,92px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px">
+        <span style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--accent);font-variant-numeric:tabular-nums">03</span>
+        <span style="height:1px;flex:1;background:var(--rule)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)">engrXiv · 2014 and 2026</span>
+      </div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(32px,5vw,62px);line-height:1.04;letter-spacing:-0.03em;margin:0 0 10px;max-width:18ch">Drone-Megaddon</h2>
+      <div style="font-family:'Spectral',Georgia,serif;font-style:italic;font-size:clamp(18px,2vw,25px);color:var(--ink2);margin-bottom:clamp(28px,3.4vw,40px)">Commanding drone swarms like a real-time strategy game.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4.5vw,60px);align-items:start">
+        <div>
+          <p style="font-size:16px;line-height:1.65;color:var(--ink2);margin:0 0 16px">Commanding a swarm the usual way does not scale: an operator drowns the moment every drone needs its own heading, target, and rule for what to do when the plan breaks. Drone-Megaddon borrows the grammar of the real-time strategy game instead — the operator sets high-level intent, formations, objectives, and rules of engagement, and the system resolves it into the per-agent control underneath.</p>
+          <p style="font-size:16px;line-height:1.65;color:var(--ink2);margin:0 0 16px">The idea is not new to the AI moment. The original interface was built in 2014 as a Carnegie Mellon capstone: a command layer for autonomous swarms years before the tooling to run them was widely available.</p>
+          <p style="font-size:15px;line-height:1.65;color:var(--ink3);margin:0">The 2026 extension, &ldquo;Co-Intelligent Swarm Control with Language and Vision Models,&rdquo; closes the loop with today's models. The operator can command in natural language, and the swarm can see, interpret, and adapt to a scene rather than execute a fixed script.</p>
+        </div>
+        <div style="border-top:1px solid var(--ink);padding-top:18px">
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px">Twelve years apart</div>
+          <div style="display:flex;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule2)">
+            <span style="font-family:'Martian Mono',monospace;font-size:10px;color:var(--ink3);width:44px;flex:0 0 auto;font-variant-numeric:tabular-nums">2014</span>
+            <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)">A real-time strategy command interface for autonomous swarms, built as a Carnegie Mellon capstone.</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:14px;padding:12px 0">
+            <span style="font-family:'Martian Mono',monospace;font-size:10px;color:var(--ink3);width:44px;flex:0 0 auto;font-variant-numeric:tabular-nums">2026</span>
+            <span style="font-size:14.5px;line-height:1.55;color:var(--ink2)">Natural-language command and visual perception added to the loop.</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:clamp(26px,3vw,36px);padding-top:18px;border-top:1px solid var(--rule);font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)">2014 original DOI 10.31224/6924 · 2026 extension DOI 10.31224/6987 · Co-author D. Ting</div>
+    </div>
+  </div>
+
+  <div id="speaking" style="background:var(--paper2);border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(46px,6.5vw,92px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(20px,2.6vw,28px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:var(--accent)">/ 04</span>
+        <span style="height:1px;width:36px;background:var(--accent)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3)">Speaking &amp; teaching</span>
+      </div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(28px,4vw,50px);line-height:1.06;letter-spacing:-0.03em;margin:0 0 12px;max-width:24ch">Translating the research for the people who set budgets.</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink2);margin:0 0 clamp(28px,3.4vw,40px)">And for the next generation of engineers.</p>
+      <div style="border-top:1px solid var(--ink)">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(24px,3.4vw,48px);padding-top:24px">
+          <div>
+            <div style="font-family:'Spectral',Georgia,serif;font-size:22px;margin-bottom:4px">Praxtera AI Institute</div>
+            <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">AI/ML Technical Leader · Executive education</div>
+            <p style="font-size:14.5px;line-height:1.6;color:var(--ink2);margin:0">I teach AI strategy to C-suite leaders and designed the executive curriculum for evaluating, governing, and implementing AI initiatives, grounded in the AI-ROI research. Clients include HP, Morgan Lewis, PBS, and the Philadelphia Eagles.</p>
+          </div>
+          <div>
+            <div style="font-family:'Spectral',Georgia,serif;font-size:22px;margin-bottom:4px">Eagles Care Summit 2026</div>
+            <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Keynote · Lincoln Financial Field</div>
+            <p style="font-size:14.5px;line-height:1.6;color:var(--ink2);margin:0">Keynoted the Philadelphia Eagles' 12th annual summit on &ldquo;AI for Impact: Basics to Advanced Automation,&rdquo; before more than 300 community and business leaders.</p>
+          </div>
+          <div>
+            <div style="font-family:'Spectral',Georgia,serif;font-size:22px;margin-bottom:4px">Carnegie Mellon</div>
+            <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Head TA · Web Applications Development</div>
+            <p style="font-size:14.5px;line-height:1.6;color:var(--ink2);margin:0">Supported more than 105 students, gave structured feedback on engineering practice and application security, and served as Agile Product Owner for the capstone project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--ink)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(18px,4vw,44px)">
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(32px,5vw,64px);line-height:1.04;letter-spacing:-0.03em;margin:0 0 20px;max-width:20ch">Speaking, advising, or a paper?</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink2);margin:0 0 32px">Open to keynotes, executive workshops, and research collaboration.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a href="mailto:sairambkrishnan@gmail.com?subject=Speaking%20inquiry" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:14px 22px" style-hover="background:var(--accent)">Book a talk</a>
+        <a href="https://orcid.org/0009-0004-2626-1273" style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">ORCID</a>
+        <a href="/" style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">Back to the record</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ftr" style="border-top:1px solid var(--ink);background:var(--paper)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(34px,4vw,52px) clamp(18px,4vw,44px) clamp(30px,3.4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:clamp(26px,3.4vw,48px);align-items:start">
+        <div>
+          <a href="/" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:11px;line-height:1.8">Engineering leadership · AI &amp; ML<br>Apple · Wharton MBA 2026</div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Pages</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="/#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+          <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Ventures</a>
+          <a href="/projects" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Projects</a>
+          <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Research</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">The record</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="/#experience" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Charted roles</a>
+          <a href="/#honors" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Honors</a>
+          <a href="/#words" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">In their words</a>
+          <a href="/assets/Sairam_Krishnan_Resume.pdf" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Résumé (PDF)</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Reach me</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="mailto:sairambkrishnan@gmail.com" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Email</a>
+          <a href="https://linkedin.com/in/sairambkrishnan" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">LinkedIn</a>
+          <a href="https://github.com/SaiWebApps" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">GitHub</a>
+          <a href="https://orcid.org/0009-0004-2626-1273" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">ORCID</a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.thesisRef = React.createRef();
+    this.stackRef = React.createRef();
+    this.btnRef = React.createRef();
+    this.iconRef = React.createRef();
+    this.mode = 'auto';
+  }
+
+  renderVals(){
+    return {
+      thesisRef: this.thesisRef, stackRef: this.stackRef, btnRef: this.btnRef, iconRef: this.iconRef,
+      cycleTheme: () => {
+        const order = ['auto','light','dark'];
+        const next = order[(order.indexOf(this.mode) + 1) % 3];
+        this.applyMode(next);
+        try { localStorage.setItem('sk-ql-theme', next); } catch(e){}
+      }
+    };
+  }
+
+  applyMode(m){
+    this.mode = m;
+    const r = document.documentElement;
+    if (m === 'auto') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', m);
+    const b = this.btnRef.current;
+    if (b){
+      b.setAttribute('title', 'Theme: ' + m + ' — click to cycle (auto follows your system setting)');
+      b.style.boxShadow = '0 0 0 3px ' + this.hexA(this.palette().accent, 0.22);
+      if (this._flashT) clearTimeout(this._flashT);
+      this._flashT = setTimeout(() => { b.style.boxShadow = ''; }, 340);
+    }
+    const ic = this.iconRef.current;
+    if (ic){
+      ic.innerHTML = this.themeIcon(m);
+      ic.style.transition = 'none';
+      ic.style.transform = 'rotate(-140deg) scale(.5)';
+      ic.style.opacity = '0';
+      if (this._iconT) clearTimeout(this._iconT);
+      this._iconT = setTimeout(() => {
+        ic.style.transition = 'transform .46s cubic-bezier(.22,1,.36,1), opacity .24s ease';
+        ic.style.transform = 'rotate(0deg) scale(1)';
+        ic.style.opacity = '1';
+      }, 16);
+    }
+    this.pal = null;
+    if (this._repaint) this._repaint();
+  }
+
+  themeIcon(m){
+    const open = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block">';
+    if (m === 'light') return open + '<circle cx="12" cy="12" r="4.3"/><path d="M12 2.4v2.5M12 19.1v2.5M2.4 12h2.5M19.1 12h2.5M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></svg>';
+    if (m === 'dark') return open + '<path d="M20.4 14.9A8.7 8.7 0 0 1 9.1 3.6 8.7 8.7 0 1 0 20.4 14.9Z"/></svg>';
+    return open + '<circle cx="12" cy="12" r="8.3"/><path d="M12 3.7a8.3 8.3 0 0 0 0 16.6Z" fill="currentColor" stroke="none"/></svg>';
+  }
+
+  componentDidMount(){
+    let saved = 'auto';
+    try { saved = localStorage.getItem('sk-ql-theme') || 'auto'; } catch(e){}
+    if (['auto','light','dark'].indexOf(saved) < 0) saved = 'auto';
+
+    this._panels = [];
+    const add = (ref, fn) => {
+      const host = ref.current; if (!host) return;
+      while (host.firstChild) host.removeChild(host.firstChild);
+      const cv = document.createElement('canvas');
+      cv.style.cssText = 'display:block;width:100%;height:100%';
+      host.appendChild(cv);
+      this._panels.push({host, cv, ctx: cv.getContext('2d'), fn, w:0, h:0});
+    };
+    add(this.thesisRef, (p,t,P)=>this.thesis(p,t,P));
+    add(this.stackRef,  (p,t,P)=>this.stack(p,t,P));
+
+    this._fit = () => {
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      this._panels.forEach(p => {
+        const r = p.host.getBoundingClientRect();
+        if (r.width < 4 || r.height < 4) return;
+        p.w = r.width; p.h = r.height;
+        const bw = Math.round(r.width*dpr), bh = Math.round(r.height*dpr);
+        if (p.cv.width !== bw || p.cv.height !== bh){
+          p.cv.width = bw; p.cv.height = bh;
+          p.ctx.setTransform(dpr,0,0,dpr,0,0);
+        }
+      });
+    };
+
+    this._t0 = performance.now();
+    this._repaint = () => { this._fit(); this.drawAll((performance.now() - this._t0)/1000); };
+    window.addEventListener('resize', this._repaint);
+    document.addEventListener('visibilitychange', this._repaint);
+    if (window.ResizeObserver){
+      this._ro = new ResizeObserver(() => this._repaint());
+      this._panels.forEach(p => this._ro.observe(p.host));
+    }
+    if (window.matchMedia){
+      this._mq = window.matchMedia('(prefers-color-scheme: dark)');
+      this._mqh = () => { this.pal = null; this._repaint(); };
+      if (this._mq.addEventListener) this._mq.addEventListener('change', this._mqh);
+      this._rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+      this.reduceMotion = this._rm.matches;
+      this._rmh = () => { this.reduceMotion = this._rm.matches; this.pump(); this._repaint(); };
+      if (this._rm.addEventListener) this._rm.addEventListener('change', this._rmh);
+    }
+    [0, 60, 240, 500, 1000, 1800, 3000].forEach(ms => setTimeout(this._repaint, ms));
+
+    this.applyMode(saved);
+
+    this._loop = () => { this.drawAll(this.clock()); this._raf = requestAnimationFrame(this._loop); };
+    if (window.IntersectionObserver && this._panels.length){
+      this._io = new IntersectionObserver(es => {
+        this.onScreen = es.some(e => e.isIntersecting);
+        this.pump();
+      }, { rootMargin: '140px' });
+      this._panels.forEach(pp => this._io.observe(pp.host));
+    } else {
+      this.onScreen = true;
+    }
+    this.pump();
+  }
+
+  clock(){
+    if (this.reduceMotion) return 7.4;
+    return (performance.now() - (this._t0 || 0))/1000;
+  }
+
+  // Figures animate only while on screen and only if the visitor has not asked for less motion.
+  pump(){
+    if (!this._loop) return;
+    const live = this.onScreen && !this.reduceMotion;
+    if (live && !this._raf){ this._raf = requestAnimationFrame(this._loop); return; }
+    if (!live && this._raf){
+      cancelAnimationFrame(this._raf);
+      this._raf = 0;
+      if (this._repaint) this._repaint();
+    }
+  }
+
+  componentWillUnmount(){
+    if (this._raf) cancelAnimationFrame(this._raf);
+    window.removeEventListener('resize', this._repaint);
+    document.removeEventListener('visibilitychange', this._repaint);
+    if (this._ro) this._ro.disconnect();
+    if (this._io) this._io.disconnect();
+    if (this._mq && this._mq.removeEventListener) this._mq.removeEventListener('change', this._mqh);
+    if (this._rm && this._rm.removeEventListener) this._rm.removeEventListener('change', this._rmh);
+  }
+
+  drawAll(t){
+    if (!this._panels) return;
+    const P = this.palette();
+    for (let k=0;k<this._panels.length;k++){
+      const p = this._panels[k];
+      if (p.w <= 4){ this._fit(); if (p.w <= 4) continue; }
+      try { p.ctx.save(); p.ctx.clearRect(0,0,p.w,p.h); p.fn(p,t,P); p.ctx.restore(); }
+      catch (err){ try { p.ctx.restore(); } catch(e2){} if (!p.warned){ p.warned = true; console.warn('panel '+k+' draw failed', err); } }
+    }
+  }
+
+  palette(){
+    if (this.pal) return this.pal;
+    const cs = getComputedStyle(document.documentElement);
+    const g = n => (cs.getPropertyValue(n) || '').trim();
+    this.pal = {
+      paper: g('--paper') || '#F4F1EA', paper2: g('--paper2') || '#EEEADF',
+      ink: g('--ink') || '#14120F', ink2: g('--ink2') || '#413A2F', ink3: g('--ink3') || '#6E685C',
+      rule: g('--rule') || '#D8D1C2', accent: g('--accent') || '#7A2E2E', dot: g('--dot') || '#B8B0A0'
+    };
+    return this.pal;
+  }
+
+  hexA(hx, a){
+    let h = (hx || '#000000').replace('#','').trim();
+    if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    const n = parseInt(h, 16);
+    if (isNaN(n)) return 'rgba(0,0,0,'+a+')';
+    return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';
+  }
+  mono(ctx, size, weight){ ctx.font = (weight||'400') + ' ' + size + "px 'Martian Mono', ui-monospace, monospace"; }
+
+  thesis(p, t, P){
+    const ctx = p.ctx, w = p.w, h = p.h;
+    const L = 46, R = w-26, T = 30, Bo = h-46;
+    ctx.strokeStyle = this.hexA(P.ink, 0.07); ctx.lineWidth = 0.7;
+    for (let i=1;i<=4;i++){ const y = Bo-(Bo-T)*i/5; ctx.beginPath(); ctx.moveTo(L,y); ctx.lineTo(R,y); ctx.stroke(); }
+    ctx.strokeStyle = this.hexA(P.ink, 0.4); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(L,T); ctx.lineTo(L,Bo); ctx.lineTo(R,Bo); ctx.stroke();
+    const fA = u => Math.exp(-3.2*u);
+    const fB = u => 1/(1+Math.exp(-7.5*(u-0.52)));
+    const px = u => L+(R-L)*u, py = v => Bo-(Bo-T)*v;
+    const prog = Math.min(1, ((t*0.16) % 1.55)/1.0);
+    const drawC = (f, col, lw) => {
+      const n = Math.max(2, Math.floor(96*prog));
+      ctx.beginPath();
+      for (let i=0;i<=n;i++){ const u = i/96; i?ctx.lineTo(px(u),py(f(u))):ctx.moveTo(px(u),py(f(u))); }
+      ctx.strokeStyle = col; ctx.lineWidth = lw; ctx.stroke();
+    };
+    drawC(fA, this.hexA(P.ink, 0.42), 1.5);
+    drawC(fB, this.hexA(P.accent, 0.95), 2.2);
+    this.mono(ctx, Math.min(9, Math.max(7.5, w*0.024)), '400'); ctx.textAlign = 'center';
+    if (prog > 0.72){
+      ctx.fillStyle = this.hexA(P.ink3, 0.95);
+      ctx.fillText('BREADTH OF ENGINEERING', px(0.72), py(fA(0.72))-10);
+      ctx.fillStyle = this.hexA(P.accent, 0.95);
+      ctx.fillText('JUDGMENT & DIVERGENCE', px(0.66), py(fB(0.66))-12);
+    }
+    if (prog > 0.5){
+      let uc = 0.4;
+      for (let i=0;i<80;i++){ const u = 0.05+0.9*i/79; if (fB(u) >= fA(u)){ uc = u; break; } }
+      const X = px(uc), Y = py(fA(uc)), pu = 0.5+0.5*Math.sin(t*2.1);
+      ctx.beginPath(); ctx.arc(X,Y,9+pu*7,0,6.2832);
+      ctx.strokeStyle = this.hexA(P.accent, 0.3*(1-pu)); ctx.lineWidth = 1; ctx.stroke();
+      ctx.beginPath(); ctx.arc(X,Y,5,0,6.2832);
+      ctx.fillStyle = P.paper2; ctx.fill();
+      ctx.strokeStyle = this.hexA(P.accent, 0.95); ctx.lineWidth = 1.7; ctx.stroke();
+      this.mono(ctx, 8.5, '500'); ctx.fillStyle = this.hexA(P.accent, 0.95);
+      ctx.fillText('WE ARE HERE', X, Y-17);
+    }
+    this.mono(ctx, 8, '300'); ctx.fillStyle = this.hexA(P.ink3, 0.9);
+    ctx.textAlign = 'left';  ctx.fillText('2015', L, Bo+17);
+    ctx.textAlign = 'right'; ctx.fillText('2030', R, Bo+17);
+    ctx.textAlign = 'left';  ctx.fillText('SCARCITY', 8, T-8);
+  }
+
+  stack(p, t, P){
+    const ctx = p.ctx, w = p.w, h = p.h;
+    const pw = Math.min(168, w*0.44), dy = 26, gap = Math.min(52, (h-104)/3);
+    const cx = w*0.34, base = h*0.76;
+    const L = ['Readiness assessment','ROIC decomposition','Stage-gate phasing','A-to-F scorecard'];
+    const plateY = i => base - i*gap;
+    for (let i=0;i<4;i++){
+      const y = plateY(i), x = cx - pw/2;
+      ctx.beginPath();
+      ctx.moveTo(x,y); ctx.lineTo(x+pw*0.5,y-dy); ctx.lineTo(x+pw,y); ctx.lineTo(x+pw*0.5,y+dy); ctx.closePath();
+      ctx.fillStyle = this.hexA(P.accent, 0.05+i*0.03); ctx.fill();
+      ctx.strokeStyle = this.hexA(P.accent, 0.4+i*0.15); ctx.lineWidth = i===3 ? 1.8 : 1; ctx.stroke();
+      ctx.strokeStyle = this.hexA(P.ink3, 0.4); ctx.lineWidth = 0.7;
+      ctx.beginPath(); ctx.moveTo(x+pw,y); ctx.lineTo(Math.min(w-118, x+pw+16), y); ctx.stroke();
+      this.mono(ctx, Math.min(9, Math.max(7.5, w*0.022)), i===3 ? '500' : '400'); ctx.textAlign = 'left';
+      ctx.fillStyle = i===3 ? this.hexA(P.accent,0.95) : this.hexA(P.ink2,0.9);
+      ctx.fillText(L[i], Math.min(w-114, x+pw+21), y+3.5);
+      this.mono(ctx, 8, '300'); ctx.fillStyle = this.hexA(P.ink3, 0.85);
+      ctx.textAlign = 'right'; ctx.fillText('L'+(i+1), x-9, y+3.5);
+    }
+    for (let i=0;i<8;i++){
+      const lay = [0,0,0,1,1,2,2,3][i];
+      const u = Math.min(1, ((t*0.28 + i*0.1) % 1.7));
+      const e = 1-Math.pow(1-u,3);
+      const off = (i-3.5)*(pw*0.085);
+      const y0 = base + dy + 30, y1 = plateY(lay);
+      ctx.beginPath(); ctx.arc(cx+off, y0+(y1-y0)*e, 2.6, 0, 6.2832);
+      ctx.fillStyle = this.hexA(P.ink, 0.25+0.6*e); ctx.fill();
+    }
+    ctx.textAlign = 'left'; this.mono(ctx, 8, '300'); ctx.fillStyle = this.hexA(P.ink3, 0.9);
+    ctx.fillText('8 CASE STUDIES · EACH RISING TO THE LAYER IT TESTED', 10, h-10);
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sairam Krishnan — AI/ML Engineering Leader at Apple</title>
+<meta name="description" content="Senior AI/ML engineering leader at Apple. Wharton MBA 2026. Eleven years building the platforms, then the teams that ship them — for 100M+ users.">
+<link rel="canonical" href="https://sairambkrishnan.com/">
+<meta name="author" content="Sairam Krishnan">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sairam Krishnan">
+<meta property="og:title" content="Sairam Krishnan — AI/ML Engineering Leader at Apple">
+<meta property="og:description" content="Senior AI/ML engineering leader at Apple. Wharton MBA 2026. Eleven years building the platforms, then the teams that ship them — for 100M+ users.">
+<meta property="og:url" content="https://sairambkrishnan.com/">
+<meta property="og:image" content="https://sairambkrishnan.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sairam Krishnan — AI/ML engineering leadership">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sairam Krishnan — AI/ML Engineering Leader at Apple">
+<meta name="twitter:description" content="Senior AI/ML engineering leader at Apple. Wharton MBA 2026. Eleven years building the platforms, then the teams that ship them — for 100M+ users.">
+<meta name="twitter:image" content="https://sairambkrishnan.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300;1,400&family=Martian+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1EA; --paper2:#EEEADF; --ink:#14120F; --ink2:#413A2F; --ink3:#6E685C;
+    --rule:#D8D1C2; --hair:#8A8274; --rule2:#E4DED0; --accent:#7A2E2E; --dot:#B8B0A0; --star:#14120F;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+      --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B; --star:#FFF8EB;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#131211; --paper2:#191715; --ink:#EFEAE0; --ink2:#C3BBAD; --ink3:#8F8779;
+    --rule:#302C26; --hair:#6B6459; --rule2:#25221D; --accent:#E8896E; --dot:#4A443B; --star:#FFF8EB;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Spectral',Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"kern" 1,"liga" 1}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--ink)}
+  @media print{
+    :root, :root[data-theme="dark"]{
+      --paper:#fff; --paper2:#fff; --ink:#14120F; --ink2:#413A2F; --ink3:#6E685C;
+      --rule:#C9C2B4; --hair:#8A8274; --rule2:#DED8CA; --accent:#7A2E2E; --dot:#B8B0A0; --star:#14120F;
+    }
+  }
+@keyframes qfadeA{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@keyframes qfadeB{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+  .hdr{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
+  .hdrIn{max-width:1400px;margin:0 auto;padding:13px clamp(18px,4vw,44px);display:flex;align-items:center;gap:clamp(16px,2vw,24px)}
+  .mark{flex:0 0 auto;white-space:nowrap}
+  .nav{flex:1 1 auto;display:flex;align-items:center;justify-content:flex-end;gap:clamp(13px,1.9vw,26px);flex-wrap:wrap}
+  .nav a,.nav span{padding:7px 0}
+  .tgl{flex:0 0 auto}
+  div[id]{scroll-margin-top:80px}
+  @media(max-width:760px){
+    .hdrIn{flex-wrap:wrap;padding:11px clamp(18px,4vw,44px) 0;gap:0 14px}
+    .mark{flex:1 1 auto;order:1}
+    .tgl{order:2}
+    .nav{order:3;width:100%;justify-content:flex-start;gap:2px 12px;margin-top:9px;border-top:1px solid var(--rule2)}
+    .nav a,.nav span{padding:10px 0}
+    div[id]{scroll-margin-top:96px}
+    /* side padding tuned for one row left the wrapped rows misaligned */
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+    .stats>div{padding:18px 16px!important;border-right:1px solid var(--rule)}
+    .stats>div:nth-child(2n){border-right:0;padding-right:0!important}
+    .stats>div:nth-child(2n+1){padding-left:0!important}
+    .stats>div:nth-child(-n+2){border-bottom:1px solid var(--rule2)}
+  }
+  /* a 190px portrait stranded beside 160px of empty paper; give it the column */
+  @media(max-width:560px){
+    .port{flex:1 1 100%!important}
+    /* the label gutter squeezed citations to a 250px measure on a phone */
+    .cite{grid-template-columns:minmax(0,1fr)!important;gap:10px!important}
+  }
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .ftr a{padding:7px 0}
+  /* the portrait's brick wall is the brightest thing in the frame on dark paper */
+  .port img{filter:saturate(.82) contrast(1.02)}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .port img{filter:saturate(.6) contrast(.94) brightness(.84)}
+  }
+  :root[data-theme="dark"] .port img{filter:saturate(.6) contrast(.94) brightness(.84)}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sairam Krishnan","url":"https://sairambkrishnan.com/","image":"https://sairambkrishnan.com/assets/portrait.jpg","email":"mailto:sairambkrishnan@gmail.com","jobTitle":"Principal Software Engineer, AI/ML Platform Lead","description":"Senior AI/ML engineering leader at Apple. Eleven years building data and ML platforms, then the teams that ship them.","worksFor":{"@type":"Organization","name":"Apple"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The Wharton School, University of Pennsylvania"},{"@type":"CollegeOrUniversity","name":"Carnegie Mellon University"}],"award":["Benjamin Franklin Award, The Wharton School","Palmer Scholar, The Wharton School","Graduation With Honors, The Wharton School","National Merit Finalist"],"knowsAbout":["AI/ML platforms","Knowledge graphs","Distributed systems","Engineering leadership","Enterprise AI ROI","Stream processing"],"sameAs":["https://github.com/SaiWebApps","https://linkedin.com/in/sairambkrishnan","https://orcid.org/0009-0004-2626-1273"],"hasOccupation":{"@type":"Occupation","name":"Principal Software Engineer, AI/ML Platform Lead","occupationalCategory":"Engineering leadership"},"affiliation":[{"@type":"Organization","name":"Apple"},{"@type":"Organization","name":"Praxtera AI Institute"},{"@type":"Organization","name":"The Wharton School, University of Pennsylvania"},{"@type":"Organization","name":"Amazon"},{"@type":"Organization","name":"Susquehanna International Group"},{"@type":"Organization","name":"Microsoft"},{"@type":"Organization","name":"Amazon Web Services"},{"@type":"Organization","name":"LeanFM Technologies"},{"@type":"Organization","name":"Carnegie Mellon University"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Sairam Krishnan","url":"https://sairambkrishnan.com/","author":{"@type":"Person","name":"Sairam Krishnan"}}</script>
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<div style="background:var(--paper);color:var(--ink);min-height:100vh">
+
+  <div class="hdr">
+    <div class="hdrIn">
+      <a href="#top" class="mark" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+      <div class="nav">
+        <a href="#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+        <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Ventures</a>
+        <a href="/projects" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Projects</a>
+        <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Research</a>
+        <a href="#contact" style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Contact</a>
+      </div>
+        <button type="button" class="tgl" ref="{{ btnRef }}" onClick="{{ cycleTheme }}" title="{{ themeTitle }}" aria-label="Toggle colour theme" style="display:flex;align-items:center;justify-content:center;width:34px;height:30px;flex:0 0 auto;color:var(--ink3);background:transparent;border:1px solid var(--hair);padding:0;cursor:pointer;transition:transform .11s cubic-bezier(.22,1,.36,1),border-color .28s ease,color .28s ease,box-shadow .3s ease" style-hover="color:var(--ink);border-color:var(--ink3)" style-active="transform:scale(.88)"><span ref="{{ iconRef }}" style="display:flex;align-items:center;justify-content:center;width:16px;height:16px"></span></button>
+    </div>
+  </div>
+
+  <div id="top" style="position:relative;max-width:1400px;margin:0 auto;padding:clamp(56px,9vw,120px) clamp(18px,4vw,44px) clamp(40px,5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,64px);align-items:flex-end">
+    <div style="flex:1 1 340px;min-width:0">
+    <div style="font-family:'Martian Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(22px,3vw,34px)">Engineering leadership · AI &amp; ML</div>
+    <h1 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(42px,7.6vw,96px);line-height:1.02;letter-spacing:-0.03em;margin:0 0 clamp(26px,3.4vw,38px);max-width:19ch">I take AI from whiteboard to boardroom.</h1>
+    <div style="width:52px;height:1px;background:var(--accent);margin-bottom:clamp(24px,3vw,32px)"></div>
+    <p style="font-size:clamp(16px,1.5vw,19px);line-height:1.5;color:var(--ink2);margin:0">Senior AI/ML engineering leader at Apple. Wharton MBA 2026. Eleven years building the platforms, then the teams that ship them.</p>
+    </div>
+      <figure class="port" style="margin:0;flex:0 1 clamp(190px,21vw,272px);min-width:0">
+        <img src="/assets/portrait.jpg" alt="Sairam Krishnan" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 26%;border:1px solid var(--rule)" />
+      </figure>
+    </div>
+
+    <div class="stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:clamp(34px,4.5vw,52px)">
+      <div style="padding:22px 22px 22px 0;border-right:1px solid var(--rule)">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(34px,4.2vw,52px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">$40M</div>
+        <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:10px;line-height:1.5">Saved per year<br>Alexa Core Engine</div>
+      </div>
+      <div style="padding:22px;border-right:1px solid var(--rule)">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(34px,4.2vw,52px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">100M+</div>
+        <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:10px;line-height:1.5">Users served<br>Apple Media Knowledge Graph</div>
+      </div>
+      <div style="padding:22px;border-right:1px solid var(--rule)">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(34px,4.2vw,52px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">8</div>
+        <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:10px;line-height:1.5">Engineers led &amp; 10 vendors<br>Three continents</div>
+      </div>
+      <div style="padding:22px 0 22px 22px">
+        <div style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(34px,4.2vw,52px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums">11</div>
+        <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:10px;line-height:1.5">Years of experience</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:clamp(28px,3.6vw,40px)">
+      <a href="mailto:sairambkrishnan@gmail.com" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:14px 22px" style-hover="background:var(--accent);color:var(--paper)">Start a conversation</a>
+      <a href="/assets/Sairam_Krishnan_Resume.pdf" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">Résumé</a>
+      <a href="https://linkedin.com/in/sairambkrishnan" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">LinkedIn</a>
+      <a href="https://orcid.org/0009-0004-2626-1273" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">ORCID</a>
+    </div>
+  </div>
+
+  <div id="about" style="background:var(--paper2);border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(24px,3vw,34px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:var(--accent)">/ 01</span>
+        <span style="height:1px;width:36px;background:var(--accent)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3)">About</span>
+      </div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(28px,3.6vw,46px);line-height:1.1;letter-spacing:-0.03em;margin:0 0 clamp(26px,3.4vw,40px);max-width:34ch">An engineering leader who pairs distributed-systems depth with documented business impact — and still ships the systems myself.</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4.5vw,60px);align-items:start">
+        <div>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0 0 18px">Eleven years across Apple, Amazon, Microsoft, and Susquehanna International Group — growing from engineer to the leader other engineers want to work for. Today I lead an eight-engineer team at Apple, spanning three continents, that ships AI-powered platforms for more than 100 million users.</p>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0">I pair distributed-systems and ML-platform depth with impact that holds up in the room: $40M saved per year at Amazon Alexa, 40% better data quality and 30% faster delivery at Apple. I'm equally at home in an architecture review, an executive briefing, or a 2 a.m. incident bridge.</p>
+        </div>
+        <div>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0 0 18px">I build teams, process, and tooling around a clear conviction about this moment, and publish the research behind it — a Wharton MBA earned in full while leading at Apple, and papers on SSRN and engrXiv.</p>
+          <p style="font-size:16px;line-height:1.62;color:var(--ink2);margin:0">And I ship by hand to this day — Apple's LLM-powered operations assistant and an agentic skill platform now used on-call, plus independent ventures in multi-provider LLM orchestration and full-stack products. I sell the strategy because I can still build the system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="experience" style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(20px,2.6vw,28px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:var(--accent)">/ 02</span>
+        <span style="height:1px;width:36px;background:var(--accent)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3)">Plate I · Charted roles</span>
+      </div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(30px,4vw,52px);line-height:1.08;letter-spacing:-0.03em;margin:0 0 14px;max-width:22ch">Engineer to engineering leader.</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink2);margin:0 0 clamp(22px,3vw,34px)">Every role on one axis. Bar weight is scope, and rows that overlap were held at the same time — school and first jobs at one end, Apple with Wharton and Praxtera at the other. Scroll the plate, or click a row.</p>
+
+      <div ref="{{ trackRef }}" style="position:relative;height:230vh;min-height:1560px">
+        <div style="position:sticky;top:80px;height:calc(100vh - 104px);max-height:780px;display:grid;grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;gap:clamp(14px,1.8vw,22px)">
+          <div ref="{{ starRef }}" style="position:relative;min-width:0;min-height:0;border:1px solid var(--rule);background:var(--paper2);cursor:pointer"></div>
+          <div style="min-width:0;min-height:0;border-top:1px solid var(--ink);padding-top:14px;overflow-y:auto">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+              <span ref="{{ nameRef }}" style="font-family:'Spectral',Georgia,serif;font-size:clamp(23px,2.8vw,34px);font-weight:400;letter-spacing:-0.02em">Apple</span>
+              <span style="display:flex;align-items:baseline;gap:14px">
+                <span ref="{{ dateRef }}" style="font-family:'Martian Mono',monospace;font-size:10px;color:var(--accent);font-variant-numeric:tabular-nums">2021&ndash;Present</span>
+                <span ref="{{ idxRef }}" style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--ink3);font-variant-numeric:tabular-nums">07 / 09</span>
+              </span>
+            </div>
+            <div ref="{{ metaRef }}" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:16px">Principal Software Engineer &middot; AI/ML platform lead</div>
+            <ul ref="{{ listRef }}" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px"><li style="font-size:15px;line-height:1.58;color:var(--ink2);padding-left:18px;position:relative"><span style="position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent)"></span>Led architecture and cross-functional delivery of Apple&rsquo;s media knowledge graph, unifying metadata from 15+ sources into one canonical model powering search, recommendations, and discovery for 100M+ users.</li><li style="font-size:15px;line-height:1.58;color:var(--ink2);padding-left:18px;position:relative"><span style="position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent)"></span>Directed the global launch of Apple Music Credits, coordinating a 15-engineer program across four international sites.</li><li style="font-size:15px;line-height:1.58;color:var(--ink2);padding-left:18px;position:relative"><span style="position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent)"></span>Drove the re-platform from batch to real-time streaming â Spark to an event-driven architecture on Flink, Kafka, and Cassandra.</li><li style="font-size:15px;line-height:1.58;color:var(--ink2);padding-left:18px;position:relative"><span style="position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent)"></span>Designed an ML entity-resolution system that improved data quality 40% and cut a core ingestion workflow from 1.5 hours to 30 minutes.</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="education" style="background:var(--paper2);border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(24px,3vw,34px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:var(--accent)">/ 03</span>
+        <span style="height:1px;width:36px;background:var(--accent)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3)">Education</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(30px,5vw,64px)">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;padding-bottom:10px;border-bottom:1px solid var(--ink)">
+            <span style="font-family:'Spectral',Georgia,serif;font-size:26px;font-weight:400;letter-spacing:-0.02em">The Wharton School</span>
+            <span style="font-family:'Martian Mono',monospace;font-size:10px;color:var(--accent);font-variant-numeric:tabular-nums">2024–2026</span>
+          </div>
+          <p style="font-size:15px;line-height:1.6;color:var(--ink2);margin:14px 0 18px">Executive MBA, Class of 2026 · University of Pennsylvania. Five majors: AI in Business, Business Analytics, Operations Information &amp; Decision-Making, Entrepreneurship &amp; Innovation, Strategic Management.</p>
+          <p style="font-size:15px;line-height:1.6;color:var(--ink2);margin:0">Benjamin Franklin Award, Palmer Scholar, graduation with honors, Director's List in all six terms. First-author research on enterprise AI ROI published on SSRN under faculty sponsor Prof. Gad Allon. All earned while working full-time at Apple.</p>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;padding-bottom:10px;border-bottom:1px solid var(--ink)">
+            <span style="font-family:'Spectral',Georgia,serif;font-size:26px;font-weight:400;letter-spacing:-0.02em">Carnegie Mellon</span>
+            <span style="font-family:'Martian Mono',monospace;font-size:10px;color:var(--ink3);font-variant-numeric:tabular-nums">2013–2014</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule2)">
+            <span style="font-size:15px">M.S., Electrical &amp; Computer Engineering</span>
+            <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px)"></span>
+            <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3)">Dec 2014</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule2)">
+            <span style="font-size:15px">B.S., Electrical &amp; Computer Engineering</span>
+            <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px)"></span>
+            <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3)">May 2014</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:12px;padding:12px 0">
+            <span style="font-size:15px">Minor, Business Administration</span>
+            <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px)"></span>
+            <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3)">May 2014</span>
+          </div>
+          <p style="font-size:14px;line-height:1.6;color:var(--ink3);margin:14px 0 0">Dean's List all three years. Selected coursework: Cloud Computing, Cyber-Intelligence &amp; Cyber-Security, Distributed &amp; Real-Time Embedded Systems, How to Write Fast Code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="honors" style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(24px,3vw,34px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:var(--accent)">/ 04</span>
+        <span style="height:1px;width:36px;background:var(--accent)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3)">Honors &amp; distinctions</span>
+      </div>
+      <div style="border-top:1px solid var(--ink)">
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--accent);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2026</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">Benjamin Franklin Award</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">Peer-voted · one of three in a class of 250</span>
+        </div>
+        <div class="cite" style="display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:clamp(16px,3vw,40px);padding:6px 0 24px;border-bottom:1px solid var(--rule2)">
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);line-height:1.7;max-width:14ch">Award citation</div>
+          <div>
+            <p style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(16px,1.4vw,18.5px);line-height:1.62;color:var(--ink);margin:0 0 14px;text-wrap:pretty">&ldquo;Sairam stands out for the consistency and substance he brought to every aspect of the program. He was always well-prepared, contributed thoughtfully, and had a clear ability to connect classroom concepts to practical, real-world situations in a way that benefited the broader discussion.&rdquo;</p>
+            <p style="font-family:'Spectral',Georgia,serif;font-weight:300;font-size:clamp(16px,1.4vw,18.5px);line-height:1.62;color:var(--ink);margin:0 0 14px;text-wrap:pretty">&ldquo;Equally important is how he supported those around him. Sairam was generous with his time and knowledge, readily offering help and insight to classmates and strengthening team outcomes without seeking recognition. He approached his work with focus and discipline, while maintaining a collaborative, grounded presence.&rdquo;</p>
+            <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.6">Wharton EMBA Global &middot; Class of 2026</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--accent);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2026</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">Palmer Scholar</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">Top 5% of the graduating class by cumulative GPA</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--accent);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2026</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">Graduation With Honors</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">Top 20% of the graduating class by cumulative GPA</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2025</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">First Year Honors</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">Top 20% of the class over the first three terms</span>
+        </div>
+        <div class="cite" style="display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:clamp(16px,3vw,40px);padding:6px 0 24px;border-bottom:1px solid var(--rule2)">
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);line-height:1.7;max-width:14ch">Honors letter</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,196px),216px));gap:clamp(16px,2.2vw,28px)">
+            <a href="/letters/first-year-honors.pdf" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit" style-hover="opacity:.82">
+              <img src="/letters/first-year-honors.png" alt="Wharton First Year Honors letter" style="display:block;width:100%;height:auto;border:1px solid var(--rule);background:#fff" />
+              <div style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);margin-top:9px;line-height:1.6">First Year Honors &middot; Jun 13, 2025<br><span style="color:var(--accent)">View letter (PDF)</span></div>
+            </a>
+          </div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2024–25</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">Director&rsquo;s List</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">Top 10% of the class &middot; all six terms</span>
+        </div>
+        <div class="cite" style="display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:clamp(16px,3vw,40px);padding:6px 0 24px;border-bottom:1px solid var(--rule2)">
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);line-height:1.7;max-width:14ch">Term letters</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,196px),216px));gap:clamp(16px,2.2vw,28px)">
+            <a href="/letters/directors-list-summer-2024.pdf" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit" style-hover="opacity:.82">
+              <img src="/letters/directors-list-summer-2024.png" alt="Wharton Director&rsquo;s List letter, Summer 2024" style="display:block;width:100%;height:auto;border:1px solid var(--rule);background:#fff" />
+              <div style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);margin-top:9px;line-height:1.6">Summer 2024 &middot; Oct 17, 2024<br><span style="color:var(--accent)">View letter (PDF)</span></div>
+            </a>
+            <a href="/letters/directors-list-fall-2024.pdf" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit" style-hover="opacity:.82">
+              <img src="/letters/directors-list-fall-2024.png" alt="Wharton Director&rsquo;s List letter, Fall 2024" style="display:block;width:100%;height:auto;border:1px solid var(--rule);background:#fff" />
+              <div style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);margin-top:9px;line-height:1.6">Fall 2024 &middot; Feb 4, 2025<br><span style="color:var(--accent)">View letter (PDF)</span></div>
+            </a>
+            <a href="/letters/directors-list-spring-2025.pdf" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit" style-hover="opacity:.82">
+              <img src="/letters/directors-list-spring-2025.png" alt="Wharton Director&rsquo;s List letter, Spring 2025" style="display:block;width:100%;height:auto;border:1px solid var(--rule);background:#fff" />
+              <div style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);margin-top:9px;line-height:1.6">Spring 2025 &middot; Jun 13, 2025<br><span style="color:var(--accent)">View letter (PDF)</span></div>
+            </a>
+          </div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2012–14</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">Dean's List</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">Carnegie Institute of Technology · all three years</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule2);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2010</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">Jesse Jones Scholarship</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">Houston Endowment</span>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--ink);flex-wrap:wrap">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;color:var(--ink3);width:64px;flex:0 0 auto;font-variant-numeric:tabular-nums">2010</span>
+          <span style="font-family:'Spectral',Georgia,serif;font-size:20px;flex:0 0 auto">National Merit Finalist</span>
+          <span style="flex:1;border-bottom:1px dotted var(--dot);transform:translateY(-4px);min-width:20px"></span>
+          <span style="font-size:14px;color:var(--ink3)">National Merit Scholarship Program</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="words" style="border-top:1px solid var(--rule)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(52px,7vw,96px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:clamp(20px,2.6vw,28px)">
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:var(--accent)">/ 05</span>
+        <span style="height:1px;width:36px;background:var(--accent)"></span>
+        <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink3)">In their words</span>
+      </div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(30px,4vw,52px);line-height:1.08;letter-spacing:-0.03em;margin:0 0 14px;max-width:24ch">The people who worked beside me.</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink2);margin:0 0 clamp(34px,4.5vw,52px)">Seven recommendations written over ten years by classmates, teammates, and senior engineers, plus my manager’s own words from four review cycles at Apple. All verbatim.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(30px,4.5vw,64px);padding-bottom:clamp(34px,4.5vw,52px);border-bottom:1px solid var(--rule)">
+        <div style="padding-top:20px;border-top:1px solid var(--ink)">
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.5vw,19px);line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;Sai is one of the most impressive peers I met at Wharton. He combines deep technical expertise in AI and engineering with genuine empathy, strong intrinsic motivation, and a rare ability to bring together individuals with very different perspectives and personalities. He leads with clarity and purpose, consistently elevating the performance of those around him.&rdquo;</p>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.5vw,19px);line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;In team settings, Sai naturally takes on complex, high-stakes challenges that require a sophisticated blend of analytics, operations, decision-making, and executive communication. He not only develops sharp, well-structured solutions, but also brings them to life as a compelling storyteller, equally effective with colleagues, senior stakeholders, and board-level audiences.&rdquo;</p>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.5vw,19px);line-height:1.56;margin:0 0 18px;text-wrap:pretty">&ldquo;I am confident Sai will excel as a high-impact manager and a purpose-driven leader. Any organization would be fortunate to have him.&rdquo;</p>
+          <div style="font-family:'Spectral',Georgia,serif;font-size:17px;margin-bottom:6px">Jonas Pulver</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7">Head of Communications &amp; Culture, Swiss Embassy in Japan<br>Wharton EMBA learning teams &middot; 2026</div>
+        </div>
+        <div style="padding-top:20px;border-top:1px solid var(--ink)">
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.5vw,19px);line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;Sairam has a deep commitment to his work; if there is something that needs to be completed, he acts on it immediately. As such, over time, I and others in our team rely on him for this response.&rdquo;</p>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.5vw,19px);line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;That rapid response to challenges is combined with a relatively rare combination of both solid technical ability and a sense of ownership over the issues he addresses. He learns the context surrounding a problem rapidly, he can accelerate into new domains quickly and collaborate well with other teams when a solution requires input from various areas of expertise.&rdquo;</p>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.5vw,19px);line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;He continues to provide support to those around him, whether by removing obstacles for colleagues, expanding on his own responsibilities or providing a consistent source of calmness during stressful periods.&rdquo;</p>
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.5vw,19px);line-height:1.56;margin:0 0 18px;text-wrap:pretty">&ldquo;As a result, Sairam will make a tangible impact on any engineering organization.&rdquo;</p>
+          <div style="font-family:'Spectral',Georgia,serif;font-size:17px;margin-bottom:6px">Gajendra Babu Thokala</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7">Senior Engineering Leader, Apple<br>Knowledge Graph team, four years &middot; 2026</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:clamp(26px,3.4vw,48px);margin-top:clamp(30px,4vw,44px)">
+        <div style="padding-top:18px;border-top:1px solid var(--rule)">
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:16.5px;line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;He is usually the first person in the team to step forward to take up any challenge. He is technically very strong and always puts extra effort to get things moving. Many times I felt comfortable discussing problems and solutions with him.&rdquo;</p>
+          <div style="font-family:'Spectral',Georgia,serif;font-size:16px;margin-bottom:6px">Manoj Mandam</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7">Principal Engineer<br>Amazon, same team &middot; 2020</div>
+        </div>
+        <div style="padding-top:18px;border-top:1px solid var(--rule)">
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:16.5px;line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;Sairam is a great engineer; he&rsquo;s very knowledgeable when it comes to system design and continuously seeks out new ways to improve the projects he works on. A great team player who works both diligently and smartly.&rdquo;</p>
+          <div style="font-family:'Spectral',Georgia,serif;font-size:16px;margin-bottom:6px">Connie Yao</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7">Software Engineer, Google &middot; ex-Amazon<br>Amazon, same team &middot; 2020</div>
+        </div>
+        <div style="padding-top:18px;border-top:1px solid var(--rule)">
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:16.5px;line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;Sairam is very detail oriented and at the same time has a bias for action. He often comes up with new tools and ideas for simplification that makes the team more efficient and productive.&rdquo;</p>
+          <div style="font-family:'Spectral',Georgia,serif;font-size:16px;margin-bottom:6px">Xinghai Zhang</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7">Software Engineer<br>Same team &middot; 2020</div>
+        </div>
+        <div style="padding-top:18px;border-top:1px solid var(--rule)">
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:16.5px;line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;The requirements were initially soft and he was willing and able to iterate back and forth as the requirements became clear. He included reasonable testing and validation. The jobs run reliably every day without intervention. It&rsquo;s good solid code.&rdquo;</p>
+          <div style="font-family:'Spectral',Georgia,serif;font-size:16px;margin-bottom:6px">Wayne Carson</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7">Senior Data Engineer<br>Susquehanna International Group &middot; 2018</div>
+        </div>
+        <div style="padding-top:18px;border-top:1px solid var(--rule)">
+          <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:16.5px;line-height:1.56;margin:0 0 16px;text-wrap:pretty">&ldquo;Sairam is a quick learner and eager to tackle different technical problems. Sairam is great to work with and makes the team better with his contributions.&rdquo;</p>
+          <div style="font-family:'Spectral',Georgia,serif;font-size:16px;margin-bottom:6px">Andy Davidson</div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7">Software Engineer<br>Same team &middot; 2016</div>
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(40px,5vw,64px);padding-top:clamp(24px,3vw,34px);border-top:1px solid var(--ink)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:clamp(18px,2.4vw,26px)">
+          <span style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent)">From my manager at Apple</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:clamp(16px,2.6vw,32px);flex-wrap:wrap;padding-bottom:13px;border-bottom:1px solid var(--rule)">
+          <div style="display:flex;gap:8px;flex:0 0 auto">
+            <button type="button" onClick="{{ prevReview }}" aria-disabled="{{ prevOff }}" aria-label="Previous review year" style="{{ prevStyle }}">&lsaquo;</button>
+            <button type="button" onClick="{{ nextReview }}" aria-disabled="{{ nextOff }}" aria-label="Next review year" style="{{ nextStyle }}">&rsaquo;</button>
+          </div>
+          <div style="display:flex;gap:clamp(16px,3vw,34px);flex-wrap:wrap;align-items:baseline">
+            <button type="button" onClick="{{ y0go }}" style="{{ y0st }}">2022</button>
+            <button type="button" onClick="{{ y1go }}" style="{{ y1st }}">2023</button>
+            <button type="button" onClick="{{ y2go }}" style="{{ y2st }}">2024</button>
+            <button type="button" onClick="{{ y3go }}" style="{{ y3st }}">2025</button>
+          </div>
+        </div>
+
+        <div style="padding-top:clamp(26px,3.4vw,38px);animation:{{ panelAnim }} .38s ease both">
+          <div ref="{{ quotesRef }}" style="display:flex;flex-direction:column;gap:clamp(16px,1.8vw,22px)">
+            <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(18px,1.75vw,23px);line-height:1.5;margin:0;text-wrap:pretty">&ldquo;Sairam has established himself as Trinity&rsquo;s expert on our curation infrastructure. He is a valuable team player, always willing to help others and step in to explain a new concept, pair program, or debug a tricky problem. Team members all know they can count on Sairam to provide high quality code reviews that encourage the whole team to write better Scala code.&rdquo;</p>
+            <p style="font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(18px,1.75vw,23px);line-height:1.5;margin:0;text-wrap:pretty">&ldquo;As Issue Response Lead, Sairam takes ownership of both maintenance of the production systems and the ongoing releases, and communicates with the team when issues are ongoing. He also served as an important mentor to an engineer on the Data Products team, helping her ramp up effectively on this complex system.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" style="background:var(--paper2);border-top:1px solid var(--ink)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(56px,8vw,110px) clamp(18px,4vw,44px)">
+      <div style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px">For recruiters &amp; hiring leaders</div>
+      <h2 style="font-family:'Spectral',Georgia,serif;font-weight:200;font-size:clamp(38px,6vw,80px);line-height:1.02;letter-spacing:-0.03em;margin:0 0 24px;max-width:16ch">Let&rsquo;s talk.</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink2);margin:0 0 36px">Open to senior AI/ML engineering leadership roles — VP, Director, or Head of AI/ML Engineering — and to speaking engagements.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a href="mailto:sairambkrishnan@gmail.com" style="font-family:'Martian Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:14px 22px" style-hover="background:var(--accent)">sairambkrishnan@gmail.com</a>
+        <a href="https://linkedin.com/in/sairambkrishnan" style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">LinkedIn</a>
+        <a href="https://github.com/SaiWebApps" style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">GitHub</a>
+        <a href="https://orcid.org/0009-0004-2626-1273" style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--hair);padding:6px 0 7px" style-hover="color:var(--ink);border-color:var(--ink)">ORCID</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ftr" style="border-top:1px solid var(--ink);background:var(--paper)">
+    <div style="max-width:1400px;margin:0 auto;padding:clamp(34px,4vw,52px) clamp(18px,4vw,44px) clamp(30px,3.4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:clamp(26px,3.4vw,48px);align-items:start">
+        <div>
+          <a href="#top" style="font-family:'Spectral',Georgia,serif;font-size:18px;font-style:italic;font-weight:400;color:var(--accent);letter-spacing:0.01em">Sairam Krishnan</a>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3);margin-top:11px;line-height:1.8">Engineering leadership · AI &amp; ML<br>Apple · Wharton MBA 2026</div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Pages</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="#about" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">About</a>
+          <a href="/ventures" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Ventures</a>
+          <a href="/projects" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Projects</a>
+          <a href="/research" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Research</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">The record</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="#experience" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Charted roles</a>
+          <a href="#honors" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Honors</a>
+          <a href="#words" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">In their words</a>
+          <a href="/assets/Sairam_Krishnan_Resume.pdf" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Résumé (PDF)</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">Reach me</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:2px">
+          <a href="mailto:sairambkrishnan@gmail.com" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">Email</a>
+          <a href="https://linkedin.com/in/sairambkrishnan" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">LinkedIn</a>
+          <a href="https://github.com/SaiWebApps" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">GitHub</a>
+          <a href="https://orcid.org/0009-0004-2626-1273" target="_blank" rel="noopener" style="font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink3)" style-hover="color:var(--ink)">ORCID</a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;live&quot;,&quot;still&quot;],&quot;default&quot;:&quot;live&quot;,&quot;tsType&quot;:&quot;'live' | 'still'&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;#7A2E2E&quot;,&quot;#9A6A34&quot;,&quot;#3F5B52&quot;,&quot;#2E3A5C&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Palette&quot;}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.starRef = React.createRef();
+    this.btnRef = React.createRef();
+    this.iconRef = React.createRef();
+    this.trackRef = React.createRef();
+    this.nameRef = React.createRef();
+    this.dateRef = React.createRef();
+    this.metaRef = React.createRef();
+    this.listRef = React.createRef();
+    this.idxRef = React.createRef();
+    this.quotesRef = React.createRef();
+    this.mode = 'auto';
+    this.REVIEWS = [
+      { y: '2022', q: [
+        'Sairam consistently collaborated with various members of the team to deliver on some of the key projects from the team. It\u2019s been a great year for Trinity, and Sairam had a key role to play in its success.'
+      ]},
+      { y: '2023', q: [
+        'Sairam has been instrumental in numerous key projects within the team. His dedication and effective problem-solving received commendations from various partner teams for staying on top of every necessary fix and providing support to cross-functional teams. This year has been phenomenal for Sairam and the team.'
+      ]},
+      { y: '2024', q: [
+        'Sairam made key contributions to the Nightwatch effort, leading the design of the genre work and working with stakeholders to understand the value and sign off on the design. These designs then translated into tasks for other team members, further showing the quality of the design he produced.',
+        'A trend across all of Sairam\u2019s work is his focus on always making quality-of-life improvements to whatever system he is working on. His contributions have saved everyone on the team time, every day. There are countless other examples, and they are invaluable to the team continuing to grow.'
+      ]},
+      { y: '2025', q: [
+        'Sairam has established himself as Trinity\u2019s expert on our curation infrastructure. He is a valuable team player, always willing to help others and step in to explain a new concept, pair program, or debug a tricky problem. Team members all know they can count on Sairam to provide high quality code reviews that encourage the whole team to write better Scala code.',
+        'As Issue Response Lead, Sairam takes ownership of both maintenance of the production systems and the ongoing releases, and communicates with the team when issues are ongoing. He also served as an important mentor to an engineer on the Data Products team, helping her ramp up effectively on this complex system.'
+      ]}
+    ];
+    this.state = { ry: this.REVIEWS.length - 1, flip: false };
+    this.sel = 6;
+    this.hover = -1;
+    this.ROLES = [
+      {n:'Carnegie Mellon University', s:2013, e:2015, g:1.5, k:'school', d:'2013–2014', m:'Dual-degree ECE · Head TA · NSF researcher', b:[
+        'Dual degrees in Electrical & Computer Engineering with a business minor, and my first real taste of building platforms and leading people.',
+        'Head TA and course developer for Web Applications Development, guiding 105+ students, and Agile Product Owner for the semester-long capstone.',
+        'NSF-funded cyberphysical-systems research, turning 10M+ raw sensor data points into research-ready datasets.'
+      ]},
+      {n:'LeanFM Technologies', s:2013, e:2015, g:1.0, k:'work', d:'2013–2014', m:'Full-Stack Developer · Pittsburgh · Concurrent with school', b:[
+        'Refined 3D building-visualization software used to operate and monitor facilities.',
+        'Built a Django admin for sensor-access control across connected building systems.'
+      ]},
+      {n:'Amazon Web Services', s:2014, e:2015, g:0.9, k:'work', d:'2014', m:'Software Engineering Intern · Seattle · First taste of hyperscale', b:[
+        'Unified logging into one framework serving up to 8M customers, with a 15% speedup — and returned with a full-time offer.'
+      ]},
+      {n:'Microsoft', s:2015, e:2017, g:1.4, k:'work', d:'2015–2016', m:'Software Development Engineer · Windows OS Group · Redmond', b:[
+        'Set power-consumption targets for Windows 10 Mobile Mail and delivered a 4× reduction versus Windows Phone 8.',
+        'Drove product decisions through telemetry, shipping real-time dashboards and weekly guidance to leadership, including a data-derived 15-minute default auto-sync interval.'
+      ]},
+      {n:'Susquehanna International Group', s:2016, e:2019, g:1.7, k:'work', d:'2016–2018', m:'Senior Financial Data Engineer · Promoted from Financial Data Engineer', b:[
+        "Led real-time FINRA compliance surveillance over the firm's market-making transactions, flagging violations as they occurred, in C++, Python/Pandas, and Django.",
+        'Conceived and shipped a real-time hardware asset-tracking and distribution system, automating capacity scaling for the first time.'
+      ]},
+      {n:'Amazon', s:2018, e:2022, g:2.3, k:'work', d:'2018–2021', m:'Senior Software Engineer, Alexa · Promoted L5 → L6 · Seattle', b:[
+        'Pioneered a batching and clustering approach to Alexa Engine data mining and modeling, improving model accuracy 40% and saving $40M per year.',
+        'Cut partner and new-customer onboarding from two weeks to 15 minutes with a self-service deployment platform.',
+        'Owned operational excellence, driving average weekly issue count from a peak of 40 down to 10 and cutting Christmas-peak customer issues tenfold.',
+        'Mentored half the team from entry level to associate engineer. Selected for Amazon\u2019s Mentorship and Leadership Development Program.'
+      ]},
+      {n:'Apple', s:2021, e:2027, g:3.2, k:'work', d:'2021–Present', m:'Principal Software Engineer · AI/ML platform lead · Reports to the engineering director', b:[
+        "Led architecture and cross-functional delivery of Apple\u2019s media knowledge graph, unifying metadata from 15+ sources into one canonical model powering search, recommendations, and discovery for 100M+ users.",
+        'Directed the global launch of Apple Music Credits, coordinating a 15-engineer program across four international sites.',
+        'Drove the re-platform from batch to real-time streaming — Spark to an event-driven architecture on Flink, Kafka, and Cassandra.',
+        'Designed an ML entity-resolution system that improved data quality 40% and cut a core ingestion workflow from 1.5 hours to 30 minutes.'
+      ]},
+      {n:'The Wharton School', s:2024, e:2027, g:1.8, k:'school', d:'2024–2026', m:'Executive MBA, Class of 2026 · Concurrent with Apple', b:[
+        'Five majors: AI in Business, Business Analytics, Operations Information & Decision-Making, Entrepreneurship & Innovation, Strategic Management.',
+        "Benjamin Franklin Award, Palmer Scholar, graduation with honors, Director's List in all six terms.",
+        'First-author research on enterprise AI ROI published on SSRN under faculty sponsor Prof. Gad Allon.'
+      ]},
+      {n:'Praxtera AI Institute', s:2025, e:2027, g:1.9, k:'work', d:'2025–Present', m:'AI/ML Technical Leader · Educator · Concurrent with Apple', b:[
+        'Designed the executive curriculum for evaluating, governing, and implementing AI initiatives, grounded in original Wharton research. Clients include HP, Morgan Lewis, PBS, and the Philadelphia Eagles.',
+        "Keynoted the Philadelphia Eagles' 12th annual Eagles Care Summit at Lincoln Financial Field before 300+ community and business leaders."
+      ]}
+    ];
+  }
+
+  renderVals(){
+    return {
+      starRef: this.starRef,
+      btnRef: this.btnRef, iconRef: this.iconRef, trackRef: this.trackRef, nameRef: this.nameRef, dateRef: this.dateRef,
+      metaRef: this.metaRef, listRef: this.listRef, idxRef: this.idxRef,
+      y0go: () => this.goReview(0), y0st: this.yearStyle(0),
+      y1go: () => this.goReview(1), y1st: this.yearStyle(1),
+      y2go: () => this.goReview(2), y2st: this.yearStyle(2),
+      y3go: () => this.goReview(3), y3st: this.yearStyle(3),
+      quotesRef: this.quotesRef,
+      reviewYear: this.REVIEWS[this.state.ry].y,
+      panelAnim: this.state.flip ? 'qfadeB' : 'qfadeA',
+      prevStyle: this.arrowStyle(this.state.ry === 0),
+      nextStyle: this.arrowStyle(this.state.ry === this.REVIEWS.length - 1),
+      prevOff: this.state.ry === 0 ? 'true' : 'false',
+      nextOff: this.state.ry === this.REVIEWS.length - 1 ? 'true' : 'false',
+      prevReview: () => this.goReview(this.state.ry - 1),
+      nextReview: () => this.goReview(this.state.ry + 1),
+      themeTitle: 'Theme: auto — click to cycle (auto follows your system setting)',
+      cycleTheme: () => {
+        const order = ['auto','light','dark'];
+        const next = order[(order.indexOf(this.mode) + 1) % 3];
+        this.applyMode(next);
+        try { localStorage.setItem('sk-ql-theme', next); } catch(e){}
+      }
+    };
+  }
+
+  yearStyle(i){
+    const on = i === this.state.ry;
+    return {
+      background: 'transparent', border: 0, padding: '7px 2px 8px', cursor: 'pointer',
+      fontFamily: "'Martian Mono',monospace", fontSize: '10px', letterSpacing: '0.18em',
+      fontVariantNumeric: 'tabular-nums', transition: 'color .2s ease,border-color .2s ease',
+      color: on ? 'var(--ink)' : 'var(--ink3)',
+      borderBottom: '1px solid ' + (on ? 'var(--accent)' : 'transparent'),
+      fontWeight: on ? 500 : 400
+    };
+  }
+
+  // Twin of renderDetail: empties the seeded panel and repaints for the chosen year.
+  renderQuotes(){
+    const host = this.quotesRef.current; if (!host) return;
+    const qs = this.REVIEWS[this.state.ry].q;
+    while (host.firstChild) host.removeChild(host.firstChild);
+    qs.forEach(q => {
+      const el = document.createElement('p');
+      el.style.cssText = "font-family:'Spectral',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(18px,1.75vw,23px);line-height:1.5;margin:0;text-wrap:pretty";
+      el.textContent = '\u201C' + q + '\u201D';
+      host.appendChild(el);
+    });
+  }
+
+  arrowStyle(off){
+    return {
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      width: '32px', height: '30px', padding: 0, background: 'transparent',
+      border: '1px solid ' + (off ? 'var(--rule)' : 'var(--hair)'),
+      cursor: off ? 'default' : 'pointer',
+      fontFamily: "'Spectral',Georgia,serif", fontSize: '17px', lineHeight: 1,
+      transition: 'color .2s ease,border-color .2s ease',
+      color: off ? 'var(--rule)' : 'var(--ink)'
+    };
+  }
+
+  goReview(i){
+    if (i < 0 || i >= this.REVIEWS.length || i === this.state.ry) return;
+    this.setState({ ry: i, flip: !this.state.flip });
+  }
+
+  applyMode(m){
+    this.mode = m;
+    const r = document.documentElement;
+    if (m === 'auto') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', m);
+    const a = this.props.accent;
+    if (a) r.style.setProperty('--accent', a);
+    const b = this.btnRef.current;
+    if (b){
+      b.setAttribute('title', 'Theme: ' + m + ' — click to cycle (auto follows your system setting)');
+      b.style.boxShadow = '0 0 0 3px ' + this.hexA(this.palette().accent, 0.22);
+      if (this._flashT) clearTimeout(this._flashT);
+      this._flashT = setTimeout(() => { b.style.boxShadow = ''; }, 340);
+    }
+    const ic = this.iconRef.current;
+    if (ic){
+      ic.innerHTML = this.themeIcon(m);
+      ic.style.transition = 'none';
+      ic.style.transform = 'rotate(-140deg) scale(.5)';
+      ic.style.opacity = '0';
+      if (this._iconT) clearTimeout(this._iconT);
+      this._iconT = setTimeout(() => {
+        ic.style.transition = 'transform .46s cubic-bezier(.22,1,.36,1), opacity .24s ease';
+        ic.style.transform = 'rotate(0deg) scale(1)';
+        ic.style.opacity = '1';
+      }, 16);
+    }
+    this.pal = null;
+    if (this._repaint) this._repaint();
+  }
+
+  componentDidMount(){
+    let saved = 'auto';
+    try { saved = localStorage.getItem('sk-ql-theme') || 'auto'; } catch(e){}
+    if (['auto','light','dark'].indexOf(saved) < 0) saved = 'auto';
+    this.applyMode(saved);
+
+    this._panels = [];
+    const add = (ref, fn) => {
+      const host = ref.current; if (!host) return;
+      while (host.firstChild) host.removeChild(host.firstChild);
+      const cv = document.createElement('canvas');
+      cv.style.cssText = 'display:block;width:100%;height:100%';
+      host.appendChild(cv);
+      this._panels.push({host, cv, ctx: cv.getContext('2d'), fn, w:0, h:0});
+    };
+    add(this.starRef, (p,t,P)=>this.roles(p,t,P));
+
+    this._fit = () => {
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      this._panels.forEach(p => {
+        const r = p.host.getBoundingClientRect();
+        if (r.width < 4 || r.height < 4) return;
+        p.w = r.width; p.h = r.height;
+        const bw = Math.round(r.width*dpr), bh = Math.round(r.height*dpr);
+        if (p.cv.width !== bw || p.cv.height !== bh){
+          p.cv.width = bw; p.cv.height = bh;
+          p.ctx.setTransform(dpr,0,0,dpr,0,0);
+        }
+      });
+    };
+
+    this._t0 = performance.now();
+    this._repaint = () => { this._fit(); this.drawAll(this.clock()); };
+
+    window.addEventListener('resize', this._repaint);
+    document.addEventListener('visibilitychange', this._repaint);
+    if (window.ResizeObserver){
+      this._ro = new ResizeObserver(() => this._repaint());
+      this._panels.forEach(p => this._ro.observe(p.host));
+    }
+    if (window.matchMedia){
+      this._mq = window.matchMedia('(prefers-color-scheme: dark)');
+      this._mqh = () => { this.pal = null; this._repaint(); };
+      if (this._mq.addEventListener) this._mq.addEventListener('change', this._mqh);
+      this._rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+      this.reduceMotion = this._rm.matches;
+      this._rmh = () => { this.reduceMotion = this._rm.matches; this.pump(); this._repaint(); };
+      if (this._rm.addEventListener) this._rm.addEventListener('change', this._rmh);
+    }
+    [0, 60, 240, 500, 1000, 1800, 3000].forEach(ms => setTimeout(this._repaint, ms));
+
+    const chart = this.starRef.current && this.starRef.current.querySelector('canvas');
+    if (chart){
+      const at = ev => {
+        const r = chart.getBoundingClientRect();
+        const x = ev.clientX - r.left, y = ev.clientY - r.top;
+        let best = -1;
+        (this._starHits || []).forEach(hh => {
+          if (y >= hh.y0 && y <= hh.y1 && x >= hh.x0 - 14 && x <= hh.x1 + 14) best = hh.i;
+        });
+        return best;
+      };
+      chart.addEventListener('click', ev => {
+        const i = at(ev);
+        if (i >= 0){
+          this.select(i);
+          this.lock = true;
+          if (this._lockT) clearTimeout(this._lockT);
+          this._lockT = setTimeout(() => { this.lock = false; }, 1200);
+        }
+      });
+      chart.addEventListener('mousemove', ev => {
+        const i = at(ev);
+        if (i !== this.hover){ this.hover = i; chart.style.cursor = i >= 0 ? 'pointer' : 'default'; if (this._repaint) this._repaint(); }
+      });
+      chart.addEventListener('mouseleave', () => { if (this.hover !== -1){ this.hover = -1; if (this._repaint) this._repaint(); } });
+    }
+
+    this._onScroll = () => {
+      const tr = this.trackRef.current; if (!tr) return;
+      if (this.lock) return;
+      const r = tr.getBoundingClientRect();
+      const total = r.height - window.innerHeight*0.86;
+      if (total <= 0) return;
+      const prog = Math.max(0, Math.min(0.9999, (-r.top + window.innerHeight*0.14) / total));
+      this.select(Math.floor(prog * this.ROLES.length));
+    };
+    window.addEventListener('scroll', this._onScroll, {passive:true});
+    this.renderDetail();
+    this.renderQuotes();
+
+    this._loop = () => {
+      this.drawAll(this.clock());
+      this._raf = requestAnimationFrame(this._loop);
+    };
+    if (window.IntersectionObserver && this.starRef.current){
+      this._io = new IntersectionObserver(es => {
+        this.onScreen = es.some(e => e.isIntersecting);
+        this.pump();
+      }, { rootMargin: '140px' });
+      this._io.observe(this.starRef.current);
+    } else {
+      this.onScreen = true;
+    }
+    this.pump();
+  }
+
+  // The plate animates only while it is on screen and the visitor has not asked for less motion.
+  pump(){
+    if (!this._loop) return;
+    const live = this.onScreen && !this.reduceMotion && this.props.motion !== 'still';
+    if (live && !this._raf){ this._raf = requestAnimationFrame(this._loop); return; }
+    if (!live && this._raf){
+      cancelAnimationFrame(this._raf);
+      this._raf = 0;
+      if (this._repaint) this._repaint();
+    }
+  }
+
+  componentDidUpdate(prev){
+    if (prev && prev.accent !== this.props.accent) this.applyMode(this.mode);
+    if (prev && prev.motion !== this.props.motion) this.pump();
+    this.renderDetail();
+    this.renderQuotes();
+  }
+
+  componentWillUnmount(){
+    if (this._raf) cancelAnimationFrame(this._raf);
+    window.removeEventListener('resize', this._repaint);
+    document.removeEventListener('visibilitychange', this._repaint);
+    if (this._ro) this._ro.disconnect();
+    if (this._io) this._io.disconnect();
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._mq && this._mq.removeEventListener) this._mq.removeEventListener('change', this._mqh);
+    if (this._rm && this._rm.removeEventListener) this._rm.removeEventListener('change', this._rmh);
+  }
+
+  themeIcon(m){
+    const open = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block">';
+    if (m === 'light'){
+      return open + '<circle cx="12" cy="12" r="4.3"/><path d="M12 2.4v2.5M12 19.1v2.5M2.4 12h2.5M19.1 12h2.5M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></svg>';
+    }
+    if (m === 'dark'){
+      return open + '<path d="M20.4 14.9A8.7 8.7 0 0 1 9.1 3.6 8.7 8.7 0 1 0 20.4 14.9Z"/></svg>';
+    }
+    return open + '<circle cx="12" cy="12" r="8.3"/><path d="M12 3.7a8.3 8.3 0 0 0 0 16.6Z" fill="currentColor" stroke="none"/></svg>';
+  }
+
+  select(i){
+    i = Math.max(0, Math.min(this.ROLES.length-1, i));
+    if (i === this.sel) return;
+    this.sel = i;
+    this.renderDetail();
+    if (this._repaint) this._repaint();
+  }
+
+  renderDetail(){
+    const r = this.ROLES[this.sel]; if (!r) return;
+    if (this.nameRef.current) this.nameRef.current.textContent = r.n;
+    if (this.dateRef.current) this.dateRef.current.textContent = r.d;
+    if (this.metaRef.current) this.metaRef.current.textContent = r.m;
+    if (this.idxRef.current) this.idxRef.current.textContent = ('0'+(this.sel+1)).slice(-2) + ' / 0' + this.ROLES.length;
+    const ul = this.listRef.current;
+    if (ul){
+      while (ul.firstChild) ul.removeChild(ul.firstChild);
+      r.b.forEach(txt => {
+        const li = document.createElement('li');
+        li.style.cssText = 'font-size:15px;line-height:1.58;color:var(--ink2);padding-left:18px;position:relative';
+        const dot = document.createElement('span');
+        dot.style.cssText = 'position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent)';
+        li.appendChild(dot);
+        li.appendChild(document.createTextNode(txt));
+        ul.appendChild(li);
+      });
+    }
+  }
+
+  clock(){
+    if (this.props.motion === 'still' || this.reduceMotion) return 7.4;
+    return (performance.now() - (this._t0 || 0))/1000;
+  }
+
+  drawAll(t){
+    if (!this._panels) return;
+    const P = this.palette();
+    for (let k=0;k<this._panels.length;k++){
+      const p = this._panels[k];
+      if (p.w <= 4){ this._fit(); if (p.w <= 4) continue; }
+      try {
+        p.ctx.save();
+        p.ctx.clearRect(0,0,p.w,p.h);
+        p.fn(p, t, P);
+        p.ctx.restore();
+      } catch (err){
+        try { p.ctx.restore(); } catch(e2){}
+        if (!p.warned){ p.warned = true; console.warn('panel '+k+' draw failed', err); }
+      }
+    }
+  }
+
+  palette(){
+    if (this.pal) return this.pal;
+    const cs = getComputedStyle(document.documentElement);
+    const g = n => (cs.getPropertyValue(n) || '').trim();
+    this.pal = {
+      paper: g('--paper') || '#F4F1EA', paper2: g('--paper2') || '#EEEADF',
+      ink: g('--ink') || '#14120F', ink2: g('--ink2') || '#413A2F', ink3: g('--ink3') || '#6E685C',
+      rule: g('--rule') || '#D8D1C2', accent: g('--accent') || '#7A2E2E', star: g('--star') || '#14120F'
+    };
+    return this.pal;
+  }
+
+  hexA(hx, a){
+    let h = (hx || '#000000').replace('#','').trim();
+    if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    const n = parseInt(h, 16);
+    if (isNaN(n)) return 'rgba(0,0,0,'+a+')';
+    return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';
+  }
+  mono(ctx, size, weight){ ctx.font = (weight||'400') + ' ' + size + "px 'Martian Mono', ui-monospace, monospace"; }
+
+  // Plate I: every role as a span on one time axis. Bar weight is scope;
+  // rows that share a column are roles held at the same time.
+  roles(p, t, P){
+    const ctx = p.ctx, w = p.w, h = p.h;
+    const R = this.ROLES;
+    const D0 = 2013, D1 = 2027;
+    const still = this.props.motion === 'still' || this.reduceMotion;
+
+    // Wide layout keeps names in a left gutter; narrow layout stacks the name over its bar.
+    const wide = w >= 660;
+    const padT = 26, padB = 34;
+    const padL = wide ? Math.min(230, Math.max(150, w * 0.20)) : 4;
+    const padR = wide ? Math.min(104, Math.max(66, w * 0.085)) : 4;
+    const plotL = padL + (wide ? 16 : 0), plotR = w - padR - (wide ? 12 : 0);
+    const span = Math.max(1, plotR - plotL);
+    const rowH = (h - padT - padB) / R.length;
+    const X = y => plotL + span * (Math.min(D1, Math.max(D0, y)) - D0) / (D1 - D0);
+
+    // year grid
+    this.mono(ctx, Math.min(8.5, Math.max(7, w * 0.011)), '300');
+    for (let yr = D0 + 1; yr <= D1 - 1; yr += 2){
+      const x = X(yr);
+      ctx.strokeStyle = this.hexA(P.ink, 0.07); ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x, padT - 8); ctx.lineTo(x, h - padB + 6); ctx.stroke();
+      ctx.fillStyle = this.hexA(P.ink3, 0.9); ctx.textAlign = 'center';
+      ctx.fillText(String(yr), x, h - padB + 20);
+    }
+    // baseline
+    ctx.strokeStyle = this.hexA(P.ink, 0.32); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(plotL, h - padB + 6); ctx.lineTo(plotR, h - padB + 6); ctx.stroke();
+
+    const hits = [];
+    R.forEach((r, i) => {
+      const on = i === this.sel, hv = i === this.hover;
+      const mid = padT + rowH * (i + 0.5) + (wide ? 0 : 6);
+      const x0 = X(r.s), x1 = X(r.e);
+      const bh = Math.max(3, Math.min(14, 2.4 + r.g * 3.1));
+      const open = r.d.indexOf('Present') >= 0;
+
+      // row rule
+      if (i){
+        ctx.strokeStyle = this.hexA(P.ink, 0.06); ctx.lineWidth = 1;
+        const ry = padT + rowH * i;
+        ctx.beginPath(); ctx.moveTo(wide ? padL - 12 : 0, ry); ctx.lineTo(plotR, ry); ctx.stroke();
+      }
+
+      // the span. An open-ended role fades at the right edge instead of
+      // stopping on an end date that does not exist, so the fade replaces
+      // the tail of the bar rather than painting a second layer over it.
+      const col = on ? P.accent : (r.k === 'school' ? P.ink2 : P.ink2);
+      const alpha = on ? 1 : (hv ? 0.92 : 0.7);
+      const bw = Math.max(2, x1 - x0);
+      const fade = open ? Math.min(52, Math.max(18, span * 0.05)) : 0;
+      const solid = Math.max(2, bw - fade);
+      if (r.k === 'school'){
+        // school reads as an open frame against the filled employment bars
+        ctx.fillStyle = this.hexA(col, alpha * 0.16);
+        ctx.fillRect(x0, mid - bh / 2, solid, bh);
+        ctx.strokeStyle = this.hexA(col, alpha * 0.95); ctx.lineWidth = 1.4;
+        ctx.strokeRect(x0 + 0.7, mid - bh / 2 + 0.7, solid - 1.4, bh - 1.4);
+      } else {
+        ctx.fillStyle = this.hexA(col, alpha);
+        ctx.fillRect(x0, mid - bh / 2, solid, bh);
+      }
+      if (fade){
+        const gx = ctx.createLinearGradient(x0 + solid, 0, x1, 0);
+        gx.addColorStop(0, this.hexA(col, alpha));
+        gx.addColorStop(1, this.hexA(col, 0));
+        ctx.fillStyle = gx;
+        ctx.fillRect(x0 + solid, mid - bh / 2, fade, bh);
+      }
+
+      // start tick
+      ctx.fillStyle = this.hexA(on ? P.accent : P.ink, on ? 1 : 0.5);
+      ctx.fillRect(x0, mid - bh / 2 - 4, 1, bh + 8);
+
+      if (on){
+        const pu = still ? 0.5 : 0.5 + 0.5 * Math.sin(t * 2.0);
+        ctx.strokeStyle = this.hexA(P.accent, 0.34 * (1 - pu) + 0.12); ctx.lineWidth = 1;
+        ctx.strokeRect(x0 - 5.5, mid - bh / 2 - 6.5, bw + 11, bh + 13);
+      }
+
+      // name + dates. The gutter is fixed, so a long name steps down in size
+      // rather than running off the plate.
+      const gutter = padL - 10;
+      let nameSize = wide ? Math.min(17, Math.max(12.5, w * 0.0125)) : 13;
+      ctx.fillStyle = on ? P.accent : this.hexA(P.ink, hv ? 0.95 : 0.78);
+      if (wide){
+        for (let guard = 0; guard < 12; guard++){
+          ctx.font = (on ? '500 ' : '400 ') + nameSize + "px 'Spectral', Georgia, serif";
+          if (ctx.measureText(r.n).width <= gutter || nameSize <= 10.5) break;
+          nameSize -= 0.5;
+        }
+        ctx.textAlign = 'right';
+        ctx.fillText(r.n, padL, mid + nameSize * 0.35);
+      } else {
+        ctx.font = (on ? '500 ' : '400 ') + nameSize + "px 'Spectral', Georgia, serif";
+        // keep the label inside the plate when its bar starts near the right edge
+        const nw = ctx.measureText(r.n).width;
+        ctx.textAlign = 'left';
+        ctx.fillText(r.n, Math.max(2, Math.min(x0, w - 4 - nw)), mid - bh / 2 - 7);
+      }
+      if (wide){
+        this.mono(ctx, Math.min(9, Math.max(7.5, w * 0.0072)), on ? '500' : '300');
+        ctx.fillStyle = on ? this.hexA(P.accent, 0.95) : this.hexA(P.ink3, 0.85);
+        ctx.textAlign = 'left';
+        ctx.fillText(r.d.replace('–', '–'), plotR + 10, mid + 3);
+      }
+
+      hits.push({ i: i, x0: Math.min(x0, wide ? padL - 140 : x0) , x1: x1 + (wide ? 90 : 0), y0: padT + rowH * i, y1: padT + rowH * (i + 1) });
+    });
+
+    // legend
+    this.mono(ctx, Math.min(8, Math.max(6.8, w * 0.0095)), '300');
+    ctx.fillStyle = this.hexA(P.ink3, 0.85); ctx.textAlign = 'left';
+    ctx.fillText(wide ? 'BAR WEIGHT = SCOPE · OUTLINE = SCHOOL · ROWS THAT OVERLAP WERE HELD AT ONCE'
+                      : 'WEIGHT = SCOPE · OUTLINE = SCHOOL', wide ? padL - 138 : 2, 14);
+
+    this._starHits = hits;
+  }
+}
+</script>
+</body>
+</html>
