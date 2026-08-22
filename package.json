@@ -1,0 +1,13 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "Sairam Krishnan's personal website",
+  "private": true,
+  "scripts": {
+    "serve": "npx serve public",
+    "validate": "echo 'Static HTML site - no build step required'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1"
+  }
+}
