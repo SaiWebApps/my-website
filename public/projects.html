@@ -743,7 +743,7 @@ class Component extends DCLogic {
     if (m === 'auto') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', m);
     const b = this.btnRef.current;
     if (b){
-      b.setAttribute('title', 'Theme: ' + m + ' — click to cycle (auto follows your system setting)');
+      b.setAttribute('title', 'Theme: ' + m);
       b.style.boxShadow = '0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent)';
       if (this._flashT) clearTimeout(this._flashT);
       this._flashT = setTimeout(() => { b.style.boxShadow = ''; }, 340);

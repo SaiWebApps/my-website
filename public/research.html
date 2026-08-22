@@ -145,7 +145,6 @@
         </div>
         <div>
           <div ref="{{ thesisRef }}" style="position:relative;height:clamp(300px,32vw,380px);border:1px solid var(--rule);background:var(--paper2)"></div>
-          <p style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7;margin:12px 0 0">Fig. 1 — the cost of breadth falls toward zero while the value of judgment rises. Where they cross is where management has to change.</p>
         </div>
       </div>
       <div style="margin-top:clamp(26px,3vw,36px);padding-top:18px;border-top:1px solid var(--rule);font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)">Co-authored with Gajendra Babu Thokala, Senior Engineering Leader at Apple</div>
@@ -188,7 +187,6 @@
         </div>
         <div>
           <div ref="{{ stackRef }}" style="position:relative;height:clamp(320px,34vw,420px);border:1px solid var(--rule);background:var(--paper)"></div>
-          <p style="font-family:'Martian Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3);line-height:1.7;margin:12px 0 0">Fig. 2 — the four layers, exploded. Eight case studies rise to the layer each one tested.</p>
         </div>
       </div>
       <div style="margin-top:clamp(26px,3vw,36px);padding-top:18px;border-top:1px solid var(--rule);font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink3)">DOI 10.2139/ssrn.6732598 · Co-authors A. Hepp and S. Gandhi · Faculty sponsor Prof. Gad Allon, The Wharton School</div>
@@ -338,7 +336,7 @@ class Component extends DCLogic {
     if (m === 'auto') r.removeAttribute('data-theme'); else r.setAttribute('data-theme', m);
     const b = this.btnRef.current;
     if (b){
-      b.setAttribute('title', 'Theme: ' + m + ' — click to cycle (auto follows your system setting)');
+      b.setAttribute('title', 'Theme: ' + m);
       b.style.boxShadow = '0 0 0 3px ' + this.hexA(this.palette().accent, 0.22);
       if (this._flashT) clearTimeout(this._flashT);
       this._flashT = setTimeout(() => { b.style.boxShadow = ''; }, 340);
@@ -565,7 +563,6 @@ class Component extends DCLogic {
       ctx.fillStyle = this.hexA(P.ink, 0.25+0.6*e); ctx.fill();
     }
     ctx.textAlign = 'left'; this.mono(ctx, 8, '300'); ctx.fillStyle = this.hexA(P.ink3, 0.9);
-    ctx.fillText('8 CASE STUDIES · EACH RISING TO THE LAYER IT TESTED', 10, h-10);
   }
 }
 </script>
