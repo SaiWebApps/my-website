@@ -10,7 +10,7 @@ interface Props {
 
 const { title, description, surface } = Astro.props;
 const base = Astro.url.pathname.startsWith('/explore/') ? '/explore/material-intelligence' : '';
-const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const pageUrl = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', Astro.site).href;
 const personId = 'https://sairambkrishnan.com/#person';
 const structuredData = {
   '@context': 'https://schema.org',
