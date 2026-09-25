@@ -1,0 +1,62 @@
+---
+import archivoUrl from '@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2?url';
+import instrumentSansUrl from '@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url';
+import martianMonoUrl from '@fontsource-variable/martian-mono/files/martian-mono-latin-wght-normal.woff2?url';
+import newsreaderUrl from '@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url';
+import PrototypeSwitcher from '@/components/explore/PrototypeSwitcher.astro';
+import sharedCss from '@/styles/explore/shared.css?inline';
+import Analytics from '@vercel/analytics/astro';
+
+interface Props {
+  title: string;
+  description: string;
+  current?: string;
+  bodyClass?: string;
+  themeColor?: string;
+  indexable?: boolean;
+}
+
+const { title, description, current = '/explore', bodyClass = '', themeColor = '#f6f3ec', indexable = false } = Astro.props;
+const fontCss = `
+@font-face{font-family:'Archivo Variable';font-style:normal;font-display:swap;font-weight:100 900;src:url('${archivoUrl}') format('woff2-variations')}
+@font-face{font-family:'Instrument Sans Variable';font-style:normal;font-display:swap;font-weight:400 700;src:url('${instrumentSansUrl}') format('woff2-variations')}
+@font-face{font-family:'Martian Mono Variable';font-style:normal;font-display:swap;font-weight:100 800;src:url('${martianMonoUrl}') format('woff2-variations')}
+@font-face{font-family:'Newsreader Variable';font-style:normal;font-display:swap;font-weight:200 800;src:url('${newsreaderUrl}') format('woff2-variations')}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={indexable ? 'index,follow' : 'noindex,nofollow'} />
+    <meta name="theme-color" content={themeColor} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/assets/portrait-2026.jpg" as="image" type="image/jpeg" />
+    <link rel="preload" href={archivoUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+    <style is:inline set:html={`${fontCss}\n${sharedCss}`} />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <a class="prototype-skip" href="#prototype-main">Skip to content</a>
+    <main id="prototype-main"><slot /></main>
+    {!indexable && <PrototypeSwitcher {current} />}
+    {indexable && import.meta.env.VERCEL === '1' && <Analytics />}
+    <script>
+      import { track } from '@vercel/analytics';
+      if (!location.pathname.startsWith('/explore') && location.hostname !== '127.0.0.1' && location.hostname !== 'localhost') {
+        document.addEventListener('click', (event) => {
+          const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href]') : null;
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          if (href.startsWith('mailto:') || href.startsWith('tel:')) track('contact_inquiry');
+          else if (href.endsWith('Sairam_Krishnan_Resume.pdf')) track('resume_download');
+          else if (href.startsWith('/leadership')) track('case_study_open');
+          else if (href.startsWith('https://doi.org/')) track('paper_open');
+        });
+      }
+    </script>
+  </body>
+</html>

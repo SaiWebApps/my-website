@@ -4,10 +4,35 @@
   "description": "Sairam Krishnan's personal website",
   "private": true,
   "scripts": {
-    "serve": "npx serve public",
-    "validate": "echo 'Static HTML site - no build step required'"
+    "dev": "astro dev",
+    "predev": "npm run export:brand",
+    "serve": "astro dev",
+    "build:og": "node scripts/build-og-card.mjs",
+    "export:brand": "node scripts/export-site-content.mjs",
+    "prebuild": "npm run export:brand",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "validate:dist": "node scripts/validate-site.mjs",
+    "validate:slice": "node scripts/validate-vertical-slice.mjs",
+    "validate": "npm run export:brand && npm run check && npm run build && npm run validate:dist"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.6.1"
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource-variable/martian-mono": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@vercel/analytics": "^2.0.1",
+    "astro": "^7.3.2",
+    "gsap": "^3.15.0",
+    "sharp": "^0.35.4",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "lighthouse": "^13.4.1",
+    "playwright": "^1.63.0"
   }
 }

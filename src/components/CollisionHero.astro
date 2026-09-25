@@ -1,0 +1,150 @@
+---
+import { careerLedger } from '@/data/career';
+const W = 1440, H = 920;
+const CX = 870, CY = 480;
+const seed = (n: number) => { const v = Math.sin(n * 999) * 10000; return v - Math.floor(v); };
+
+// Background tracks: many faint curved paths out of the vertex
+const bgTracks = Array.from({ length: 46 }, (_, i) => {
+  const a = seed(i) * Math.PI * 2;
+  const len = 220 + seed(i + 50) * 340;
+  const bend = (seed(i + 100) - 0.5) * 2.2;
+  const ex = CX + Math.cos(a) * len, ey = CY + Math.sin(a) * len;
+  const mx = CX + Math.cos(a + bend * 0.35) * len * 0.55, my = CY + Math.sin(a + bend * 0.35) * len * 0.55;
+  return { d: `M${CX} ${CY} Q ${mx} ${my} ${ex} ${ey}`, o: 0.1 + seed(i + 150) * 0.3, w: 0.6 + seed(i + 200) * 0.7 };
+});
+
+// Signal tracks: the nine roles, stiffer with seniority, fanned across the right and top
+const angles: Record<string, number> = { cmu: 0.34, leanfm: 0.11, aws: -0.12, microsoft: -0.35, sig: -0.58, amazon: -0.82, apple: -1.05, wharton: -1.24, praxtera: -1.42 };
+const signals = careerLedger.map((e, i) => {
+  const a = angles[e.id];
+  const len = 240 + e.level * 30;
+  const bend = (1.6 - e.level * 0.22) * (i % 2 ? 1 : -1) * 0.5;
+  const ex = CX + Math.cos(a) * len, ey = CY + Math.sin(a) * len;
+  const mx = CX + Math.cos(a + bend * 0.4) * len * 0.55, my = CY + Math.sin(a + bend * 0.4) * len * 0.55;
+  const lx = CX + Math.cos(a) * (len + 26), ly = CY + Math.sin(a) * (len + 26);
+  const anchor = (e.id === 'praxtera' || e.id === 'wharton' ? 'middle' : 'start') as 'start' | 'middle';
+  return { ...e, d: `M${CX} ${CY} Q ${mx} ${my} ${ex} ${ey}`, ex, ey, lx, ly, anchor };
+});
+
+// Detector rings
+const rings = [90, 150, 215, 290, 380];
+// Energy wedges: six metrics as stacked deposits on the outer ring, lower-right arc
+const metrics = [
+  { value: '$40M', label: 'saved / yr', h: 108 },
+  { value: '100M+', label: 'users', h: 92 },
+  { value: '54', label: 'repos', h: 46 },
+  { value: '11', label: 'years', h: 56 },
+  { value: '10', label: 'vendors', h: 42 },
+  { value: '8', label: 'engineers', h: 69 },
+];
+const wedges = metrics.map((m, i) => {
+  const a = 0.66 + i * 0.15;
+  const r0 = 320;
+  const x0 = CX + Math.cos(a) * r0, y0 = CY + Math.sin(a) * r0;
+  const x1 = CX + Math.cos(a) * (r0 + m.h), y1 = CY + Math.sin(a) * (r0 + m.h);
+  const lx = CX + Math.cos(a) * (r0 + m.h + 22), ly = CY + Math.sin(a) * (r0 + m.h + 22);
+  return { ...m, x0, y0, x1, y1, lx, ly };
+});
+---
+<section class="collision" aria-labelledby="hero-title" data-collision>
+  <svg class="collision-scene" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="collision-desc">
+    <desc id="collision-desc">Eleven years drawn as one collision event: nine roles as signal tracks curving out of a single vertex through detector rings, with $40M saved, 100M+ users, 54 repositories, 11 years, 10 vendors, and 8 engineers deposited on the outer ring.</desc>
+    <defs>
+      <filter id="col-bloom" x="-140%" y="-140%" width="380%" height="380%"><feGaussianBlur stdDeviation="3.2" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+      <radialGradient id="col-core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff4e0" /><stop offset=".35" stop-color="var(--accent-deep)" /><stop offset="1" stop-color="transparent" /></radialGradient>
+    </defs>
+
+    <g class="col-rings" aria-hidden="true">
+      {rings.map((r, i) => <circle cx={CX} cy={CY} r={r} style={`--k:${i}`} class={i % 2 ? 'col-ring-dash' : ''} />)}
+      {Array.from({ length: 48 }, (_, i) => { const a = (i / 48) * Math.PI * 2; return <line x1={CX + Math.cos(a) * 380} y1={CY + Math.sin(a) * 380} x2={CX + Math.cos(a) * 392} y2={CY + Math.sin(a) * 392} />; })}
+    </g>
+
+    <g class="col-bg-tracks" aria-hidden="true">
+      {bgTracks.map((t, i) => <path d={t.d} style={`--k:${i}; opacity:${t.o}; stroke-width:${t.w}`} />)}
+    </g>
+
+    <g class="col-wedges" aria-hidden="true">
+      {wedges.map((w, i) => (
+        <g style={`--k:${i}`}>
+          <line x1={w.x0} y1={w.y0} x2={w.x1} y2={w.y1} class="col-wedge-bar" />
+          <text x={w.lx} y={w.ly} text-anchor="middle" class="col-wedge-value">{w.value}</text>
+          <text x={w.lx} y={w.ly + 16} text-anchor="middle" class="col-wedge-label">{w.label}</text>
+        </g>
+      ))}
+    </g>
+
+    <g class="col-signals">
+      {signals.map((s, i) => (
+        <a href={`#career-${s.id}`} class="col-signal" data-kind={s.kind} style={`--k:${i}`} aria-label={`${s.org}, ${s.dates}`}>
+          <path d={s.d} class="col-signal-track" />
+          <circle cx={s.ex} cy={s.ey} r="4.5" class="col-signal-hit" filter="url(#col-bloom)" />
+          <text x={s.lx} y={s.ly} text-anchor={s.anchor} class="col-signal-name">{s.org}</text>
+          <text x={s.lx} y={s.ly + 15} text-anchor={s.anchor} class="col-signal-dates">{s.dates}</text>
+        </a>
+      ))}
+    </g>
+
+    <circle cx={CX} cy={CY} r="34" fill="url(#col-core)" class="col-vertex" aria-hidden="true" />
+    <circle cx={CX} cy={CY} r="5" class="col-vertex-dot" filter="url(#col-bloom)" aria-hidden="true" />
+  </svg>
+
+  <div class="collision-copy shell">
+    <p class="role-line">Engineering Leadership · AI &amp; ML</p>
+    <h1 id="hero-title" class="console-title"><span>Grow the people.</span><span class="console-title-accent">The platforms follow.</span></h1>
+    <p class="hero-summary">AI/ML Engineering Leader at Apple<br />Wharton Executive MBA 2026</p>
+    <div class="hero-actions console-actions" aria-label="Start a conversation">
+      <a class="console-action console-action-primary" href="mailto:sairambkrishnan@gmail.com?subject=Senior%20Engineering%20Manager%20conversation" data-analytics="leadership_role_inquiry">Discuss a leadership role</a>
+    </div>
+    <nav class="hero-profiles" aria-label="Profiles">
+      <a href="https://linkedin.com/in/sairambkrishnan" rel="me">LinkedIn</a>
+      <a href="/assets/Sairam_Krishnan_Resume.pdf" data-analytics="resume_download">R&eacute;sum&eacute;</a>
+      <a href="https://github.com/SaiWebApps" rel="me">GitHub</a>
+      <a href="https://orcid.org/0009-0004-2626-1273" rel="me">ORCID</a>
+    </nav>
+    <figure class="observer">
+      <img src="/assets/portrait-2026.jpg" alt="Sairam Krishnan" width="796" height="1000" fetchpriority="high" />
+    </figure>
+  </div>
+
+  <div class="readout-dock" data-readouts>
+    {careerLedger.map((e) => (
+      <article class="readout" id={`career-${e.id}`} data-readout={e.id} hidden>
+        <header>
+          <div>
+            <span class="readout-dates">{e.dates}</span>
+            <h3>{e.org}</h3>
+            <p class="readout-role">{e.role}{e.meta && <span class="career-meta"> · {e.meta}</span>}</p>
+          </div>
+          <button type="button" data-readout-close aria-label="Close"><i class="ph ph-x" aria-hidden="true"></i></button>
+        </header>
+        <ul>{e.bullets.map((b) => <li>{b.text}</li>)}</ul>
+      </article>
+    ))}
+  </div>
+</section>
+
+<script>
+  const hero = document.querySelector<HTMLElement>('[data-collision]');
+  if (hero) {
+    hero.querySelectorAll<SVGPathElement>('.col-signal-track, .col-bg-tracks path').forEach((p) => p.style.setProperty('--len', String(p.getTotalLength())));
+    requestAnimationFrame(() => (hero.dataset.entered = 'true'));
+
+    const readouts = Array.from(hero.querySelectorAll<HTMLElement>('[data-readout]'));
+    const signals = Array.from(hero.querySelectorAll<HTMLAnchorElement>('.col-signal'));
+    const open = (id: string | null) => {
+      readouts.forEach((r) => (r.hidden = r.dataset.readout !== id));
+      signals.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === `#career-${id}`));
+      hero.dataset.inspecting = id ? 'true' : 'false';
+    };
+    signals.forEach((a) => a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = a.getAttribute('href')!.replace('#career-', '');
+      const current = readouts.find((r) => !r.hidden)?.dataset.readout;
+      open(current === id ? null : id);
+    }));
+    hero.querySelectorAll('[data-readout-close]').forEach((b) => b.addEventListener('click', () => open(null)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') open(null); });
+    if (location.hash.startsWith('#career-')) open(location.hash.replace('#career-', ''));
+  }
+</script>

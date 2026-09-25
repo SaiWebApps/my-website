@@ -1,0 +1,67 @@
+---
+interface Props { currentPath: string; }
+const { currentPath } = Astro.props;
+const nav = [
+  ['/leadership', 'Leadership'],
+  ['/projects', 'Work'],
+  ['/research', 'Research'],
+  ['/work-with-me', 'Advising'],
+];
+const active = (href: string) => currentPath === href || currentPath.startsWith(`${href}/`);
+---
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="identity-lockup" href="/" aria-label="Sairam Krishnan, home">
+      <img src="/assets/portrait-2026.jpg" alt="" width="796" height="1000" />
+      <span>Sairam Krishnan</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {nav.map(([href, label]) => <a href={href} aria-current={active(href) ? 'page' : undefined}>{label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Switch color theme" title="Switch color theme"><i class="ph ph-sun" aria-hidden="true"></i></button>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation"><i class="ph ph-list" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" data-open="false">
+    {nav.map(([href, label]) => <a href={href} aria-current={active(href) ? 'page' : undefined}>{label}</a>)}
+  </nav>
+</header>
+<script>
+  const root = document.documentElement;
+  const toggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+  const resolvedTheme = () => root.dataset.theme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const updateThemeLabel = () => {
+    if (!toggle) return;
+    const current = resolvedTheme();
+    toggle.setAttribute('aria-label', `Switch to ${current === 'dark' ? 'light' : 'dark'} theme`);
+    const icon = toggle.querySelector('i');
+    if (icon) icon.className = current === 'dark' ? 'ph ph-moon' : 'ph ph-sun';
+  };
+  toggle?.addEventListener('click', () => {
+    const next = resolvedTheme() === 'dark' ? 'light' : 'dark';
+    const bounds = toggle.getBoundingClientRect();
+    root.style.setProperty('--theme-x', `${bounds.left + bounds.width / 2}px`);
+    root.style.setProperty('--theme-y', `${bounds.top + bounds.height / 2}px`);
+    const apply = () => {
+      root.dataset.theme = next;
+      localStorage.setItem('theme', next);
+      updateThemeLabel();
+    };
+    if ('startViewTransition' in document && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      (document as Document & { startViewTransition: (callback: () => void) => unknown }).startViewTransition(apply);
+    } else apply();
+  });
+  updateThemeLabel();
+
+  const menu = document.querySelector<HTMLButtonElement>('.menu-button');
+  const mobileNav = document.querySelector<HTMLElement>('.mobile-nav');
+  menu?.addEventListener('click', () => {
+    const open = menu.getAttribute('aria-expanded') !== 'true';
+    menu.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    const icon = menu.querySelector('i');
+    if (icon) icon.className = open ? 'ph ph-x' : 'ph ph-list';
+    if (mobileNav) mobileNav.dataset.open = String(open);
+  });
+</script>

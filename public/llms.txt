@@ -1,6 +1,6 @@
 # Sairam Krishnan
 
-> Senior AI/ML engineering leader at Apple and Wharton MBA 2026. Eleven years
+> Software engineering leader at Apple and Wharton MBA 2026. Eleven years
 > building data and ML platforms, then the teams that ship them. Publishes
 > research on managing engineering teams in the age of generative AI and on
 > evaluating enterprise AI return on investment, and builds independent
@@ -13,25 +13,26 @@ Alexa), Susquehanna International Group, Microsoft, and Amazon Web Services.
 Executive MBA from The Wharton School, Class of 2026, with five majors.
 Dual degrees in Electrical and Computer Engineering from Carnegie Mellon.
 
-Open to senior AI/ML engineering leadership roles — VP, Director, or Head of
-AI/ML Engineering — and to speaking engagements and executive workshops.
+Open to Senior Engineering Manager and Head of AI/ML Engineering roles, and
+to speaking engagements and executive workshops.
 
 ## Pages
 
-- [Home](https://sairambkrishnan.com/): Career record, education, honors, and
-  verbatim recommendations from colleagues and an Apple manager.
-- [Ventures](https://sairambkrishnan.com/ventures): Four products designed,
-  architected, coded, and operated solo — Ondoway, Persuaider, Lore / DependIQ,
-  and Crucible (claude-kit).
-- [Projects](https://sairambkrishnan.com/projects): Fifty-four open-source
-  repositories grouped into six clusters by the question behind them.
-- [Research](https://sairambkrishnan.com/research): Published papers, plus
-  speaking and teaching work.
+- [Home](https://sairambkrishnan.com/): Leadership scope and seven headline metrics.
+- [Leadership](https://sairambkrishnan.com/leadership): Three case studies:
+  Apple's media knowledge graph, the Apple Music Credits global launch, and
+  the $40M Alexa Core Engine re-architecture, plus complete Apple reviews.
+- [Projects](https://sairambkrishnan.com/projects): Independent products and
+  developer tools with purposes, dates, and explicit verification status.
+- [Research](https://sairambkrishnan.com/research): Papers and publication links.
+- [Full Record](https://sairambkrishnan.com/record): Career, education, honors
+  with supporting letters, recommendations, teaching, and repository archive.
+- [Contact](https://sairambkrishnan.com/contact): Email, LinkedIn, and phone.
 
 ## Research
 
 - Who Trains the Next Senior? Managing engineering teams when AI makes code
-  cheap. Working paper, engrXiv, 2026. Co-authored with Gajendra Babu Thokala.
+  cheap. SSRN, 2026. DOI 10.2139/ssrn.7083078. Co-authored with Gajendra Babu Thokala.
 - A Multi-Layer Framework for Evaluating the ROI of AI Projects. SSRN, 2026.
   DOI 10.2139/ssrn.6732598. Faculty sponsor Prof. Gad Allon, The Wharton School.
 - Drone-Megaddon: commanding drone swarms like a real-time strategy game.
@@ -40,7 +41,7 @@ AI/ML Engineering — and to speaking engagements and executive workshops.
 ## Documented impact
 
 - $40M saved per year at Amazon Alexa, via a batching and clustering approach
-  to Alexa Engine data mining that also improved model accuracy 40%.
+  to Alexa Core Engine data mining that also improved model accuracy 40%.
 - Apple's media knowledge graph unifying metadata from 15+ sources, powering
   search, recommendations, and discovery for 100M+ users.
 - 40% better data quality and 30% faster delivery at Apple.
@@ -55,7 +56,7 @@ Merit Finalist.
 
 ## Speaking and teaching
 
-- Praxtera AI Institute — AI/ML Technical Leader. Designed the executive
+- Praxtera AI Institute — CTO and Curriculum Designer. Designed the executive
   curriculum for evaluating, governing, and implementing AI initiatives.
   Clients include HP, Morgan Lewis, PBS, and the Philadelphia Eagles.
 - Eagles Care Summit 2026 keynote, Lincoln Financial Field, on "AI for Impact:

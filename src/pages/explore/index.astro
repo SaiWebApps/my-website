@@ -1,0 +1,71 @@
+---
+import PrototypeLayout from '@/layouts/PrototypeLayout.astro';
+import { prototypeRoutes } from '@/data/prototype';
+import '@/styles/explore/index.css';
+
+const directions = [
+  {
+    ...prototypeRoutes[0],
+    className: 'is-electric',
+    thesis: 'Editorial structure with the margins turned up loud.',
+    risk: 'The composition must stay legible when the asymmetry gets energetic.',
+  },
+  {
+    ...prototypeRoutes[1],
+    className: 'is-signal',
+    thesis: 'Cinematic sequencing with warmth inside the dark.',
+    risk: 'Atmosphere cannot become another anonymous black technology site.',
+  },
+  {
+    ...prototypeRoutes[2],
+    className: 'is-machine',
+    thesis: 'A playful system visitors can touch without decoding a dashboard.',
+    risk: 'Interaction must clarify the story instead of becoming the story.',
+  },
+  {
+    ...prototypeRoutes[3],
+    className: 'is-material',
+    thesis: 'A folded physical world where evidence opens out of consequence.',
+    risk: 'Depth must carry meaning across every page, not become hero decoration.',
+  },
+];
+---
+
+<PrototypeLayout
+  title="Design prototypes | Sairam Krishnan"
+  description="Four visual directions for the next Sairam Krishnan website."
+  current="/explore"
+  bodyClass="explore-index"
+  themeColor="#eef0f5"
+>
+  <header class="explore-header">
+    <p>Sairam Krishnan</p>
+    <h1>Four ways to make the story impossible to ignore.</h1>
+    <p>Open each direction on its own. React first. Compare second.</p>
+  </header>
+
+  <div class="explore-directions">
+    {directions.map((direction) => (
+      <article class={direction.className}>
+        <div class="direction-swatch" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div>
+          <h2>{direction.label}</h2>
+          <p>{direction.thesis}</p>
+          <p class="direction-risk"><strong>Watch for:</strong> {direction.risk}</p>
+          <a href={direction.href}>Open direction</a>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <section class="explore-criteria">
+    <h2>The decision</h2>
+    <ol>
+      <li>Does it feel unmistakably like Sairam?</li>
+      <li>Is the story clear within ten seconds?</li>
+      <li>Does it create a strong emotional reaction?</li>
+      <li>Can it sustain real evidence without becoming dense?</li>
+      <li>Does mobile keep the same character?</li>
+    </ol>
+  </section>
+</PrototypeLayout>

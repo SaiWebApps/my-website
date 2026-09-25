@@ -1,0 +1,11 @@
+uploads/
+source-material/
+brand/
+design-explorations/
+mockups/
+.impeccable/
+.claude/
+.codegraph/
+.git/
+node_modules/
+dist/

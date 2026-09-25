@@ -1,0 +1,52 @@
+---
+import MaterialPrototypeLayout from '@/layouts/MaterialPrototypeLayout.astro';
+import { auditedProjects, smallTools } from '@/data/materialPrototype';
+---
+
+<MaterialPrototypeLayout
+  title="Projects | Sairam Krishnan"
+  description="Software products and open-source tools built by Sairam Krishnan, with dated repository checks and explicit development status."
+  surface="work"
+>
+  <header class="surface-hero work-hero">
+    <div>
+      <h1>From idea to working software.</h1>
+    </div>
+    <p>Products I design, architect, and build—from knowledge graphs and negotiation practice to tools for other engineers. Each entry includes its current status.</p>
+  </header>
+
+  <section class="project-folios" aria-label="Featured projects">
+    {auditedProjects.map((project, index) => (
+      <article class={`project-folio project-${project.tone}`} id={project.slug} data-fold-reveal style={`--project-index:${index}`}>
+        <header>
+          <div>
+            <a href={project.href}>{project.title}</a>
+            <span>{project.repo}</span>
+          </div>
+          <strong>{project.status}</strong>
+        </header>
+        <p>{project.purpose}</p>
+        <footer>
+          <span>Built {project.built}</span>
+          <span>Checked {project.checked}</span>
+        </footer>
+      </article>
+    ))}
+  </section>
+
+  <section class="small-tools" aria-labelledby="small-tools-title">
+    <h2 id="small-tools-title">Small tools, sharp fixes.</h2>
+    <div>
+      {smallTools.map((tool) => (
+        <article>
+          <a href={tool.href}>{tool.title}</a>
+          <span>{tool.repo}</span>
+          <p>{tool.purpose}</p>
+          <p>{tool.status}</p>
+          <small>Built {tool.built} · Checked {tool.checked}</small>
+        </article>
+      ))}
+    </div>
+  </section>
+
+</MaterialPrototypeLayout>

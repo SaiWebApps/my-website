@@ -1,0 +1,20 @@
+---
+const metrics = [
+  { value: '$40M', label: 'Saved per year', detail: 'Alexa Core Engine' },
+  { value: '100M+', label: 'Users served', detail: 'Apple media knowledge graph' },
+  { value: '8', label: 'Engineers led', detail: 'Three continents' },
+  { value: '10', label: 'Vendors managed', detail: 'Apple' },
+  { value: '11', label: 'Years', detail: 'Apple, Amazon, Microsoft, SIG' },
+  { value: '54', label: 'Open-source repos', detail: 'Built and shipped by hand' },
+];
+---
+<section class="metric-banner" aria-label="Leadership at a glance">
+  <ul class="shell">
+    {metrics.map((m) => (
+      <li>
+        <strong>{m.value}</strong>
+        <span>{m.label}<br />{m.detail}</span>
+      </li>
+    ))}
+  </ul>
+</section>

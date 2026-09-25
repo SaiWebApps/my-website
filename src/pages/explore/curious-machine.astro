@@ -1,0 +1,90 @@
+---
+import PrototypeLayout from '@/layouts/PrototypeLayout.astro';
+import { prototypeContent as content } from '@/data/prototype';
+import '@/styles/explore/curious-machine.css';
+---
+
+<PrototypeLayout
+  title="Curious Machine | Sairam Krishnan prototype"
+  description="A playful systems prototype for Sairam Krishnan."
+  current="/explore/curious-machine"
+  bodyClass="machine-page"
+  themeColor="#d8f2ff"
+>
+  <header class="machine-nav">
+    <a href="#top">Sairam Krishnan</a>
+    <nav aria-label="Prototype page">
+      <a href="#proof">Leadership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="machine-hero" id="top" aria-labelledby="machine-title">
+    <div class="machine-copy">
+      <h1 id="machine-title">{content.proposition}</h1>
+      <p>{content.orientation}</p>
+    </div>
+
+    <figure class="machine-portrait">
+      <img src="/assets/portrait-2026.jpg" width="796" height="1000" alt="Sairam Krishnan" />
+      <figcaption>{content.conviction}</figcaption>
+    </figure>
+
+    <div class="machine-controls" aria-label="Arrange the leadership system">
+      <button type="button" data-machine="people" aria-pressed="true"><span>People</span><small>learn and lead</small></button>
+      <button type="button" data-machine="systems" aria-pressed="false"><span>Systems</span><small>make truth usable</small></button>
+      <button type="button" data-machine="outcomes" aria-pressed="false"><span>Outcomes</span><small>prove the choice</small></button>
+    </div>
+
+    <a class="machine-action" href="#proof">Open the case</a>
+  </section>
+
+  <section class="machine-proof" id="proof" aria-labelledby="machine-proof-title">
+    <header>
+      <p>{content.caseStudy.organization}</p>
+      <h2 id="machine-proof-title">{content.caseStudy.title}</h2>
+      <p>{content.caseStudy.tension}</p>
+    </header>
+
+    <div class="machine-story">
+      <div class="machine-responsibility">
+        <h3>The choice</h3>
+        <p>{content.caseStudy.responsibility}</p>
+      </div>
+      <div class="machine-decisions">
+        {content.caseStudy.choices.map((choice) => <p>{choice}</p>)}
+      </div>
+      <div class="machine-scope">
+        <h3>The reach</h3>
+        <p>{content.caseStudy.scope}</p>
+      </div>
+      <div class="machine-outcomes" aria-label="Outcomes">
+        {content.caseStudy.outcomes.map((outcome) => (
+          <p><strong>{outcome.value}</strong><span>{outcome.label}</span></p>
+        ))}
+      </div>
+    </div>
+
+    <blockquote>
+      <p>“{content.caseStudy.quote}”</p>
+      <cite>{content.caseStudy.quoteSource}</cite>
+    </blockquote>
+  </section>
+
+  <footer class="machine-contact" id="contact">
+    <h2>{content.invitation}</h2>
+    <a href="mailto:sairambkrishnan@gmail.com?subject=Let%27s%20build%20what%20comes%20next">Start a conversation</a>
+  </footer>
+
+  <script>
+    const page = document.querySelector('.machine-page');
+    document.querySelectorAll('[data-machine]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const mode = button.getAttribute('data-machine');
+        if (!page || !mode) return;
+        page.setAttribute('data-machine-mode', mode);
+        document.querySelectorAll('[data-machine]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      });
+    });
+  </script>
+</PrototypeLayout>

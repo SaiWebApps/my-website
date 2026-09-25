@@ -8,4 +8,7 @@ source-material/
 *.swp
 .vercel/
 node_modules/
+dist/
+.astro/
 .vercel
+brand/*.db*

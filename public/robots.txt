@@ -1,4 +1,4 @@
-# sairambkrishnan.com — Sairam Krishnan
+# sairambkrishnan.com: Sairam Krishnan
 # AI/ML engineering leadership, research, and independent ventures.
 #
 # Every crawler is welcome here, including AI search crawlers and AI
@@ -130,4 +130,4 @@ Allow: /
 User-agent: Webzio-Extended
 Allow: /
 
-Sitemap: https://sairambkrishnan.com/sitemap.xml
+Sitemap: https://sairambkrishnan.com/sitemap-index.xml

@@ -1,0 +1,80 @@
+---
+import { frameworkStages } from '@/data/content';
+---
+
+<section class="framework" aria-labelledby="framework-title" data-framework>
+  <h2 id="framework-title" class="visually-hidden">Architecture to ROI operating framework</h2>
+  <div class="framework-stage-rail" role="tablist" aria-label="Operating framework stages">
+    {frameworkStages.map((stage, index) => (
+      <button class="framework-stage" type="button" role="tab" id={`framework-tab-${stage.id}`} aria-label={stage.label} aria-selected={index === 0 ? 'true' : 'false'} aria-controls="framework-panel" tabindex={index === 0 ? 0 : -1} data-stage={stage.id}>
+        <span class="framework-stage-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+        <span class="stage-label-full" aria-hidden="true">{stage.label}</span>
+        <span class="stage-label-mobile" aria-hidden="true">{stage.id === 'architecture' ? 'Architect' : stage.id === 'implementation' ? 'Implement' : stage.id === 'adoption' ? 'Adopt' : 'ROI'}</span>
+      </button>
+    ))}
+  </div>
+
+  <div class="framework-canvas" id="framework-panel" role="tabpanel" aria-labelledby="framework-tab-architecture" data-active-stage="architecture" data-stages={JSON.stringify(frameworkStages)}>
+    <div class="framework-copy" aria-live="polite">
+      <h3 data-stage-title>{frameworkStages[0].title}</h3>
+      <p data-stage-body>{frameworkStages[0].body}</p>
+      <p class="framework-evidence" data-stage-evidence>{frameworkStages[0].evidence}</p>
+    </div>
+
+    <svg class="framework-diagram" viewBox="0 0 760 560" role="img" aria-labelledby="framework-diagram-title framework-diagram-desc">
+      <title id="framework-diagram-title">A media knowledge system moving from sources to product outcomes</title>
+      <desc id="framework-diagram-desc">Source data passes through normalization and event-driven ingestion into a canonical knowledge graph used by search, recommendations, and discovery.</desc>
+      <defs>
+        <linearGradient id="plane-warm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--material-lit)" /><stop offset="1" stop-color="var(--material-shadow)" /></linearGradient>
+        <linearGradient id="plane-glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--glass-lit)" /><stop offset="1" stop-color="var(--glass-shadow)" /></linearGradient>
+        <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="var(--diagram-shadow)" flood-opacity=".24" /></filter>
+      </defs>
+      <g class="diagram-grid" aria-hidden="true"><path d="M105 432 388 538 692 386 408 281Z" /><path d="M153 414 435 519M202 389 484 493M251 365 533 468M300 340 582 444M349 316 631 419" /><path d="M161 453 463 302M224 477 526 326M288 500 590 350M352 523 654 374" /></g>
+      <g class="diagram-plane plane-foundation" data-group="architecture" filter="url(#soft-shadow)"><path d="M130 362 395 460 592 362 328 264Z" fill="url(#plane-warm)" /><path d="M130 362 395 460 395 490 130 392Z" class="plane-edge" /><path d="M395 460 592 362 592 392 395 490Z" class="plane-edge plane-edge-dark" /></g>
+      <g class="diagram-plane plane-model" data-group="implementation"><path d="M178 288 401 370 563 290 340 207Z" fill="url(#plane-glass)" /><path d="M178 288 401 370 563 290 340 207Z" class="plane-outline" /></g>
+      <g class="diagram-plane plane-product" data-group="adoption"><path d="M237 221 408 284 530 223 359 160Z" fill="url(#plane-glass)" /><path d="M237 221 408 284 530 223 359 160Z" class="plane-outline" /></g>
+      <g class="source-streams" data-group="architecture" aria-hidden="true"><path d="M38 207 C96 207 120 244 178 258" /><path d="M38 238 C96 238 120 262 178 272" /><path d="M38 269 C96 269 120 279 178 286" /><path d="M38 300 C96 300 120 296 178 300" /><circle cx="38" cy="207" r="4" /><circle cx="38" cy="238" r="4" /><circle cx="38" cy="269" r="4" /><circle cx="38" cy="300" r="4" /></g>
+      <g class="model-nodes" data-group="implementation" aria-hidden="true"><circle cx="258" cy="286" r="7" /><circle cx="322" cy="311" r="7" /><circle cx="388" cy="335" r="7" /><path d="M258 286 322 311 388 335" /></g>
+      <g class="knowledge-nodes" data-group="adoption" aria-hidden="true"><path d="M357 216 407 200 444 226 414 252 367 248Z" /><circle cx="357" cy="216" r="8" /><circle cx="407" cy="200" r="8" /><circle cx="444" cy="226" r="8" /><circle cx="414" cy="252" r="8" /><circle cx="367" cy="248" r="8" /></g>
+      <g class="outcomes" data-group="roi"><path d="M444 226 C520 232 552 196 636 180" /><path d="M444 226 C532 250 566 255 659 257" /><path d="M414 252 C500 294 548 321 631 340" /><circle cx="636" cy="180" r="9" /><circle cx="659" cy="257" r="9" /><circle cx="631" cy="340" r="9" /><text x="655" y="184">Search</text><text x="681" y="261">Recommendations</text><text x="651" y="344">Discovery</text></g>
+      <path class="flow-path" d="M38 238 C100 238 130 265 190 278 L258 286 322 311 388 335 C410 341 421 318 408 284 L407 200 444 226 C520 232 552 196 636 180" aria-hidden="true" />
+      <circle class="flow-pulse" cx="38" cy="238" r="6" aria-hidden="true" />
+      <g class="diagram-labels" aria-hidden="true"><text x="38" y="178">15+ sources</text><text x="217" y="385">Normalization</text><text x="376" y="412">Event streams</text><text x="340" y="128">Canonical graph</text></g>
+    </svg>
+  </div>
+</section>
+
+<script>
+  const framework = document.querySelector<HTMLElement>('[data-framework]');
+  const canvas = framework?.querySelector<HTMLElement>('.framework-canvas');
+  const tabs = Array.from(framework?.querySelectorAll<HTMLButtonElement>('[role="tab"]') ?? []);
+  const stages = JSON.parse(canvas?.dataset.stages ?? '[]') as Array<{ id: string; title: string; body: string; evidence: string }>;
+  const selectStage = (tab: HTMLButtonElement) => {
+    const stage = stages.find((item) => item.id === tab.dataset.stage);
+    if (!canvas || !stage) return;
+    tabs.forEach((item) => { const selected = item === tab; item.setAttribute('aria-selected', String(selected)); item.tabIndex = selected ? 0 : -1; });
+    canvas.setAttribute('aria-labelledby', tab.id);
+    canvas.dataset.activeStage = stage.id;
+    const title = canvas.querySelector<HTMLElement>('[data-stage-title]');
+    const body = canvas.querySelector<HTMLElement>('[data-stage-body]');
+    const evidence = canvas.querySelector<HTMLElement>('[data-stage-evidence]');
+    canvas.classList.remove('is-switching');
+    if (title) title.textContent = stage.title;
+    if (body) body.textContent = stage.body;
+    if (evidence) evidence.textContent = stage.evidence;
+    requestAnimationFrame(() => canvas.classList.add('is-switching'));
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectStage(tab));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus(); selectStage(tabs[next]);
+    });
+  });
+  if (framework && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(([entry]) => { if (!entry.isIntersecting) return; framework.dataset.entered = 'true'; observer.disconnect(); }, { threshold: 0.35 });
+    observer.observe(framework);
+  } else if (framework) framework.dataset.entered = 'true';
+</script>

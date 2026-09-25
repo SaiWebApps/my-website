@@ -1,0 +1,34 @@
+---
+import type { LeadershipCaseStudy } from '@/data/content';
+interface Props { item: LeadershipCaseStudy; }
+const { item } = Astro.props;
+---
+
+<article class="leadership-chapter" id={item.slug} aria-labelledby={`${item.slug}-title`}>
+  <header class="chapter-intro">
+    <p class="chapter-org">{item.organization}</p>
+    <h2 id={`${item.slug}-title`}>{item.title}</h2>
+    <p class="chapter-situation">{item.situation}</p>
+    <div class="chapter-responsibility"><h3>My responsibility</h3><p>{item.responsibility}</p></div>
+  </header>
+  <figure class="knowledge-figure">
+    <svg viewBox="0 0 940 500" role="img" aria-labelledby="knowledge-title knowledge-desc">
+      <title id="knowledge-title">Apple media knowledge graph architecture</title>
+      <desc id="knowledge-desc">More than fifteen media sources converge through normalization and event-driven ingestion into a canonical knowledge graph that supports search, recommendations, and discovery.</desc>
+      <g class="kg-labels" aria-hidden="true"><text x="40" y="42">15+ sources</text><text x="260" y="42">Normalize</text><text x="430" y="42">Event ingestion</text><text x="613" y="42">Canonical graph</text><text x="808" y="42">Product outcomes</text></g>
+      <g class="kg-sources" aria-hidden="true">{Array.from({ length: 11 }).map((_, index) => { const y = 94 + index * 28; return <><circle cx="42" cy={y} r="4" /><path d={`M46 ${y} C132 ${y} 174 ${220 + (index - 5) * 8} 246 ${220 + (index - 5) * 8}`} /></>; })}</g>
+      <g class="kg-gate" aria-hidden="true"><path d="M246 86 356 126 356 398 246 358Z" />{Array.from({ length: 7 }).map((_, index) => <circle cx="301" cy={142 + index * 35} r="5" />)}</g>
+      <g class="kg-gate kg-gate-secondary" aria-hidden="true"><path d="M414 112 522 151 522 372 414 333Z" />{Array.from({ length: 5 }).map((_, index) => <circle cx="468" cy={171 + index * 39} r="5" />)}</g>
+      <g class="kg-graph" aria-hidden="true"><path d="M612 112 744 160 744 350 612 302Z" /><path d="M646 210 683 177 716 225 688 278 639 264 646 210Z" /><circle cx="646" cy="210" r="8" /><circle cx="683" cy="177" r="8" /><circle cx="716" cy="225" r="8" /><circle cx="688" cy="278" r="8" /><circle cx="639" cy="264" r="8" /></g>
+      <g class="kg-outcomes" aria-hidden="true"><path d="M716 225 C770 172 798 142 846 124" /><path d="M716 225 C774 225 807 229 866 229" /><path d="M688 278 C758 312 798 332 846 354" /><circle cx="846" cy="124" r="8" /><circle cx="866" cy="229" r="8" /><circle cx="846" cy="354" r="8" /><text x="870" y="128">Search</text><text x="890" y="233">Recommendations</text><text x="870" y="358">Discovery</text></g>
+      <path class="kg-flow" d="M42 234 C132 234 174 220 246 220 L301 247 414 247 468 249 612 249 646 210 683 177 716 225 C770 172 798 142 846 124" aria-hidden="true" />
+    </svg>
+  </figure>
+  <div class="chapter-evidence">
+    <section class="chapter-decisions" aria-labelledby="decisions-title"><h3 id="decisions-title">Key decisions</h3><ol>{item.decisions.map((decision) => <li>{decision}</li>)}</ol><p class="chapter-scope"><strong>Scope</strong>{item.scope}</p></section>
+    <div class="chapter-results" aria-label="Results">{item.metrics?.map((metric) => <p><strong>{metric.value}</strong><span>{metric.label}</span></p>)}</div>
+    {item.testimonial && <figure class="chapter-quote"><blockquote>“{item.testimonial.quote}”</blockquote><figcaption>{item.testimonial.person}<span>{item.testimonial.role}</span></figcaption></figure>}
+  </div>
+  <p class="chapter-narrative">{item.narrative}</p>
+  <a class="editorial-action" href="/leadership#knowledge-graph" data-analytics="case_study_open">Read the full leadership case <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+</article>

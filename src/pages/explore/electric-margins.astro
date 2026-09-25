@@ -1,0 +1,101 @@
+---
+import PrototypeLayout from '@/layouts/PrototypeLayout.astro';
+import { prototypeContent as content } from '@/data/prototype';
+import '@/styles/explore/electric-margins.css';
+---
+
+<PrototypeLayout
+  title="Electric Margins | Sairam Krishnan prototype"
+  description="A kinetic editorial prototype for Sairam Krishnan."
+  current="/explore/electric-margins"
+  bodyClass="electric-page"
+  themeColor="#f2ff48"
+>
+  <header class="electric-nav">
+    <a class="electric-name" href="#top">Sairam Krishnan</a>
+    <nav aria-label="Prototype page">
+      <a href="#proof">Leadership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="electric-hero" id="top" aria-labelledby="electric-title">
+    <div class="electric-statement">
+      <h1 id="electric-title">
+        <button type="button" data-margin="technology">Technology</button>
+        <span>is only</span>
+        <button type="button" data-margin="ambitious">ambitious</button>
+        <span>when it works for</span>
+        <button type="button" data-margin="people">people.</button>
+      </h1>
+      <p>{content.orientation}</p>
+      <a class="electric-action" href="#proof">See what that looks like</a>
+    </div>
+
+    <figure class="electric-portrait">
+      <img src="/assets/portrait-2026.jpg" width="796" height="1000" alt="Sairam Krishnan" />
+      <figcaption>Sairam Krishnan<br />AI/ML engineering leader</figcaption>
+    </figure>
+
+    <aside class="electric-margin" aria-live="polite">
+      <p class="margin-word" data-margin-word>People</p>
+      <p class="margin-copy" data-margin-copy>Grow the people. The platforms follow.</p>
+    </aside>
+  </section>
+
+  <section class="electric-proof" id="proof" aria-labelledby="electric-proof-title">
+    <div class="electric-proof-lead">
+      <p>{content.caseStudy.organization}</p>
+      <h2 id="electric-proof-title">{content.caseStudy.title}</h2>
+      <p class="electric-tension">{content.caseStudy.tension}</p>
+    </div>
+
+    <div class="electric-proof-body">
+      <p class="electric-role">{content.caseStudy.responsibility}</p>
+      <div class="electric-choices" aria-label="Leadership choices">
+        {content.caseStudy.choices.map((choice) => <p>{choice}</p>)}
+      </div>
+      <p class="electric-scope">{content.caseStudy.scope}</p>
+    </div>
+
+    <div class="electric-outcomes" aria-label="Outcomes">
+      {content.caseStudy.outcomes.map((outcome) => (
+        <div><strong>{outcome.value}</strong><span>{outcome.label}</span></div>
+      ))}
+    </div>
+
+    <blockquote>
+      <p>“{content.caseStudy.quote}”</p>
+      <cite>{content.caseStudy.quoteSource}</cite>
+    </blockquote>
+  </section>
+
+  <footer class="electric-contact" id="contact">
+    <h2>{content.invitation}</h2>
+    <a href="mailto:sairambkrishnan@gmail.com?subject=Let%27s%20build%20what%20comes%20next">Start a conversation</a>
+  </footer>
+
+  <script>
+    const notes = {
+      technology: ['Technology', 'Architecture matters when it changes what people can do.'],
+      ambitious: ['Ambition', 'Scale, adoption, and consequence belong in the same sentence.'],
+      people: ['People', 'Grow the people. The platforms follow.'],
+    };
+    const word = document.querySelector('[data-margin-word]');
+    const copy = document.querySelector('[data-margin-copy]');
+    document.querySelectorAll('[data-margin]').forEach((button) => {
+      const activate = () => {
+        const key = button.getAttribute('data-margin');
+        if (!key || !(key in notes) || !word || !copy) return;
+        const note = notes[key as keyof typeof notes];
+        word.textContent = note[0];
+        copy.textContent = note[1];
+        document.querySelectorAll('[data-margin]').forEach((item) => item.removeAttribute('data-active'));
+        button.setAttribute('data-active', 'true');
+      };
+      button.addEventListener('mouseenter', activate);
+      button.addEventListener('focus', activate);
+      button.addEventListener('click', activate);
+    });
+  </script>
+</PrototypeLayout>

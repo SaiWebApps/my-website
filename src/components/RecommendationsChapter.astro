@@ -1,0 +1,70 @@
+---
+import { featuredRecommendations, colleagueRecommendations, managerReviews } from '@/data/recommendations';
+---
+<section class="recs" id="words" aria-labelledby="recs-title">
+  <div class="shell">
+    <header class="career-head">
+      <h2 id="recs-title">In Their Words<span class="accent-stop">.</span></h2>
+      <p class="recs-lede">Seven recommendations written over ten years by classmates, teammates, and senior engineers, plus my manager&rsquo;s own words from four review cycles at Apple. All verbatim.</p>
+    </header>
+
+    <div class="recs-featured">
+      {featuredRecommendations.map((r) => (
+        <figure class="rec-large">
+          <blockquote>{r.quotes.map((q) => <p>&ldquo;{q}&rdquo;</p>)}</blockquote>
+          <figcaption><strong>{r.person}</strong><span>{r.role}</span><span class="rec-context">{r.context}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="recs-grid">
+      {colleagueRecommendations.map((r) => (
+        <figure class="rec-small">
+          <blockquote>{r.quotes.map((q) => <p>&ldquo;{q}&rdquo;</p>)}</blockquote>
+          <figcaption><strong>{r.person}</strong><span>{r.role}</span><span class="rec-context">{r.context}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="reviews" data-reviews>
+      <header class="reviews-head">
+        <h3>From my manager at Apple</h3>
+        <div class="reviews-rail" role="tablist" aria-label="Review year">
+          {managerReviews.map((r, i) => (
+            <button type="button" role="tab" id={`review-tab-${r.year}`} aria-selected={i === managerReviews.length - 1 ? 'true' : 'false'} aria-controls="review-panel" tabindex={i === managerReviews.length - 1 ? 0 : -1} data-year={r.year}>{r.year}</button>
+          ))}
+        </div>
+      </header>
+      <div class="reviews-panel" id="review-panel" role="tabpanel" aria-labelledby={`review-tab-${managerReviews[managerReviews.length - 1].year}`} data-panel>
+        <blockquote>{managerReviews[managerReviews.length - 1].quotes.map((q) => <p>&ldquo;{q}&rdquo;</p>)}</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { managerReviews } from '@/data/recommendations';
+  const wrap = document.querySelector<HTMLElement>('[data-reviews]');
+  if (wrap) {
+    const tabs = Array.from(wrap.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panel = wrap.querySelector<HTMLElement>('[data-panel]')!;
+    const select = (tab: HTMLButtonElement) => {
+      const review = managerReviews.find((r) => r.year === tab.dataset.year);
+      if (!review) return;
+      tabs.forEach((t) => { const on = t === tab; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; });
+      panel.setAttribute('aria-labelledby', tab.id);
+      panel.querySelector('blockquote')!.innerHTML = review.quotes.map((q) => `<p>“${q}”</p>`).join('');
+      panel.classList.remove('is-switching');
+      requestAnimationFrame(() => panel.classList.add('is-switching'));
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', (e) => {
+        if (!['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+        e.preventDefault();
+        const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
+        next.focus(); select(next);
+      });
+    });
+  }
+</script>

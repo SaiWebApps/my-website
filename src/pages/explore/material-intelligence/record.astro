@@ -1,0 +1,92 @@
+---
+import MaterialPrototypeLayout from '@/layouts/MaterialPrototypeLayout.astro';
+import { materialRecordSections as fullRecordSections, franklinCitation, honorLetters } from '@/data/materialEvidence';
+import { featuredRecommendations, colleagueRecommendations } from '@/data/recommendations';
+import { offerings, speakingTopics, repositoryArchive } from '@/data/content';
+import { auditedProjects, retiredProjects, smallTools } from '@/data/materialPrototype';
+const base = Astro.url.pathname.startsWith('/explore/') ? '/explore/material-intelligence' : '';
+const listedRepositories = new Set([...auditedProjects, ...smallTools, ...retiredProjects].map((item) => item.href.toLowerCase()));
+const archive = repositoryArchive.filter((item) => item.href && /^[A-Za-z0-9_.-]+$/.test(item.title) && !listedRepositories.has(item.href.toLowerCase()));
+---
+
+<MaterialPrototypeLayout
+  title="Full Record | Sairam Krishnan"
+  description="The complete career, education, honors, documents, and honest public repository record for Sairam Krishnan."
+  surface="record"
+>
+  <header class="surface-hero record-surface-hero">
+    <div>
+      <h1>The full record.</h1>
+    </div>
+    <p>Career achievements, education, honors, recommendations, teaching, and the public engineering archive.</p>
+  </header>
+
+  <nav class="record-tabs" aria-label="Full Record sections">
+    {fullRecordSections.map((section) => <a href={`#${section.id}`}>{section.title}</a>)}
+    <a href="#repositories">Repositories</a>
+    <a href="#recommendations">Recommendations</a>
+  </nav>
+
+  <div class="record-ledger">
+    {fullRecordSections.map((section) => (
+      <section id={section.id} data-fold-reveal>
+        <header><h2>{section.title}</h2></header>
+        <div>
+          {section.entries.map((entry) => (
+            <article>
+              <h3>{'href' in entry && entry.href ? <a href={entry.href}>{entry.title}</a> : entry.title}</h3>
+              {entry.detail && <p>{entry.detail}</p>}
+              {'bullets' in entry && <ul>{entry.bullets.map((bullet) => <li>{bullet}</li>)}</ul>}
+              {section.id === 'honors' && entry.title === 'Benjamin Franklin Award' &&
+                <blockquote class="award-citation">{franklinCitation.map((quote) => <p>“{quote}”</p>)}<cite>Wharton EMBA Global, Class of 2026</cite></blockquote>
+              }
+              {section.id === 'honors' && honorLetters.some((letter) => letter.award === entry.title) &&
+                <div class="honor-letter-grid">
+                  {honorLetters.filter((letter) => letter.award === entry.title).map(({file, label, award}) =>
+                    <a href={`/letters/${file}.pdf`}><img src={`/letters/${file}.png`} alt={`${award} letter${label === award ? '' : ` · ${label}`}`} loading="lazy" width="612" height="792" /><span>{label} · PDF</span></a>
+                  )}
+                </div>
+              }
+            </article>
+          ))}
+          {section.id === 'teaching' && <>
+            <h3>Advisory and speaking</h3>
+            {offerings.map((offering) => <article><h4>{offering.title}</h4><p>{offering.audience}</p><p>{offering.format} {offering.outcome}</p></article>)}
+            <h3>Speaking topics</h3>
+            {speakingTopics.map((topic) => <article><h4>{topic.title}</h4><p>{topic.promise}</p></article>)}
+          </>}
+        </div>
+      </section>
+    ))}
+
+    <section id="recommendations">
+      <header><h2>Recommendations</h2><a href={`${base}/leadership#apple-reviews`}>Apple performance reviews</a></header>
+      <div>{[...featuredRecommendations, ...colleagueRecommendations].map((person) => <figure class="record-recommendation"><blockquote>{person.quotes.map((quote) => <p>“{quote}”</p>)}</blockquote><figcaption><strong>{person.person}</strong><br />{person.role}<br />{person.context}</figcaption></figure>)}</div>
+    </section>
+    <section id="repositories" class="repository-ledger" data-fold-reveal>
+      <header>
+        <h2>Repository audit</h2>
+        <p>62 public repositories checked in September 2026. A listing is not proof that software still works.</p>
+      </header>
+      <div class="repo-era">
+        <h3>Current projects</h3>
+        <p><a href={`${base}/projects`}>Products and developer tools</a>, with purpose, dates, and repository checks. The archive below covers earlier work and retired dependencies.</p>
+      </div>
+      <div class="repo-era historical-era">
+        <h3>Early builder years</h3>
+        <p>Scrapers, APIs, automation, coursework, and utilities remain visible as historical artifacts. Broken dependencies are named directly.</p>
+        {retiredProjects.map((project) => (
+          <article>
+            <div><a href={project.href}>{project.title}</a><span>Built {project.built}</span></div>
+            <p><strong>{project.status}</strong> {project.reality}</p>
+          </article>
+        ))}
+      </div>
+      <div class="repo-era historical-era">
+        <h3>Further engineering archive</h3>
+        <p>Earlier tools, experiments, and coursework. Runtime status and build dates have not been verified for these entries.</p>
+        {archive.map((project) => <article><h4><a href={project.href}>{project.title}</a></h4><p>{project.detail}</p></article>)}
+      </div>
+    </section>
+  </div>
+</MaterialPrototypeLayout>

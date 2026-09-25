@@ -1,0 +1,63 @@
+---
+import type { LeadershipCaseStudy } from '@/data/content';
+interface Props { item: LeadershipCaseStudy; variant: 'launch' | 'economics'; }
+const { item, variant } = Astro.props;
+---
+
+<article class={`leadership-chapter system-chapter system-chapter-${variant}`} id={item.slug}>
+  <div class="chapter-intro">
+    <p class="chapter-org">{item.organization}</p>
+    <h2>{item.title}</h2>
+    <p class="chapter-situation">{item.situation}</p>
+    <div class="chapter-responsibility">
+      <h3>My responsibility</h3>
+      <p>{item.responsibility}</p>
+    </div>
+  </div>
+
+  <figure class="system-figure">
+    {variant === 'launch' ? (
+      <svg viewBox="0 0 820 520" role="img" aria-labelledby="launch-title launch-desc">
+        <title id="launch-title">Four international sites converging on one global launch</title>
+        <desc id="launch-desc">Four engineering sites connect through aligned ownership and dependencies to a coordinated Apple Music Credits release.</desc>
+        <g class="system-grid"><path d="M80 430H760M80 350H760M80 270H760M80 190H760" /><path d="M145 105V455M310 105V455M475 105V455M640 105V455" /></g>
+        <g class="site-planes">
+          <path d="M78 196 170 150 260 184 168 232Z" /><path d="M78 324 170 278 260 312 168 360Z" />
+          <path d="M560 184 652 138 742 172 650 220Z" /><path d="M560 312 652 266 742 300 650 348Z" />
+        </g>
+        <g class="launch-lines"><path d="M168 191C275 191 309 244 410 258" /><path d="M168 319C275 319 309 273 410 258" /><path d="M650 179C551 179 511 233 410 258" /><path d="M650 307C551 307 511 281 410 258" /></g>
+        <g class="launch-center"><circle cx="410" cy="258" r="82" /><circle cx="410" cy="258" r="54" /><path d="M385 258H435M410 233V283" /></g>
+        <g class="system-labels"><text x="84" y="137">Site 01</text><text x="84" y="265">Site 02</text><text x="654" y="125">Site 03</text><text x="654" y="253">Site 04</text><text x="352" y="372">Global launch</text></g>
+      </svg>
+    ) : (
+      <svg viewBox="0 0 820 520" role="img" aria-labelledby="economics-title economics-desc">
+        <title id="economics-title">Alexa workloads reorganized into efficient clusters</title>
+        <desc id="economics-desc">A large data workload is batched and clustered, producing lower annual cost and higher model accuracy.</desc>
+        <g class="system-grid"><path d="M60 420H760M60 340H760M60 260H760M60 180H760" /><path d="M120 110V450M280 110V450M440 110V450M600 110V450" /></g>
+        <g class="workload-cloud">
+          {Array.from({ length: 28 }).map((_, index) => <circle cx={88 + (index % 7) * 27} cy={178 + Math.floor(index / 7) * 34} r="6" />)}
+        </g>
+        <g class="cluster-gates"><path d="M315 154 412 202 412 318 315 270Z" /><path d="M453 202 550 154 550 270 453 318Z" /></g>
+        <g class="cluster-nodes"><circle cx="351" cy="215" r="12" /><circle cx="381" cy="258" r="12" /><circle cx="489" cy="258" r="12" /><circle cx="519" cy="215" r="12" /></g>
+        <g class="economics-lines"><path d="M250 230C286 230 295 224 315 218" /><path d="M250 266C286 266 296 276 315 282" /><path d="M550 218C604 218 618 188 696 164" /><path d="M550 282C604 282 619 317 696 342" /></g>
+        <g class="outcome-rings"><circle cx="706" cy="160" r="42" /><circle cx="706" cy="344" r="42" /></g>
+        <g class="system-labels"><text x="83" y="144">Raw workload</text><text x="335" y="134">Batch</text><text x="476" y="134">Cluster</text><text x="662" y="231">Cost</text><text x="655" y="414">Accuracy</text></g>
+      </svg>
+    )}
+    <figcaption>{variant === 'launch' ? 'Four sites, one release path, and explicit operating ownership.' : 'One technical intervention changed both unit economics and model performance.'}</figcaption>
+  </figure>
+
+  <div class="chapter-evidence">
+    <div class="chapter-decisions">
+      <h3>Key decisions</h3>
+      <ol>{item.decisions.map((decision) => <li>{decision}</li>)}</ol>
+      <p class="chapter-scope"><strong>Scope</strong>{item.scope}</p>
+    </div>
+    <div class="chapter-results">
+      {item.metrics?.map((metric) => <p><strong>{metric.value}</strong><span>{metric.label}</span></p>)}
+    </div>
+    <p class="chapter-result-statement"><span>Result</span>{item.result}</p>
+  </div>
+  {item.narrative && <p class="chapter-narrative">{item.narrative}</p>}
+  <a class="editorial-action" href={`/leadership#${item.slug}`} data-analytics="case_study_open">Read the full leadership case <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+</article>

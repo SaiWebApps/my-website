@@ -1,0 +1,101 @@
+.signal-page {
+  --prototype-ground: #080d19;
+  --prototype-ink: #f4f1e8;
+  --signal: #ff5f45;
+  --selection-bg: #ff5f45;
+  --selection-fg: #080d19;
+  background: var(--prototype-ground);
+  color: var(--prototype-ink);
+  font-family: 'Instrument Sans Variable', sans-serif;
+}
+.signal-page a:focus-visible,
+.signal-page button:focus-visible { outline: 3px solid var(--signal); outline-offset: 4px; }
+.signal-page[data-signal-mode='systems'] { --signal: #58b7ff; }
+.signal-page[data-signal-mode='outcomes'] { --signal: #f2d45c; }
+
+.signal-nav {
+  position: absolute;
+  z-index: 20;
+  inset: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.75rem;
+  padding-inline: clamp(1rem, 3vw, 3rem);
+  font-weight: 650;
+}
+.signal-nav nav { display: flex; gap: 1.8rem; }
+.signal-nav a { text-decoration: none; }
+
+.signal-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(20rem, .8fr);
+  grid-template-rows: 1fr auto;
+  gap: 2rem;
+  min-height: 100dvh;
+  overflow: hidden;
+  padding: 7rem clamp(1rem, 3vw, 3rem) 2rem;
+  isolation: isolate;
+}
+.signal-copy { align-self: center; position: relative; z-index: 2; }
+.signal-copy h1 { max-width: 10ch; margin: 0; font-family: 'Archivo Variable', sans-serif; font-size: clamp(3.5rem, 7.5vw, 7.4rem); font-weight: 730; line-height: .92; letter-spacing: -.04em; }
+.signal-copy p { max-width: 38rem; margin: 2rem 0; color: #cbd4e3; font-size: clamp(1.05rem, 1.6vw, 1.35rem); line-height: 1.5; }
+.signal-copy > a { display: inline-block; padding-bottom: .45rem; border-bottom: 2px solid var(--signal); color: var(--prototype-ink); font-weight: 700; text-decoration: none; transition: border-color .25s ease; }
+
+.signal-stage { position: relative; align-self: center; justify-self: end; width: min(36vw, 31rem); }
+.signal-stage::before { content: ''; position: absolute; inset: -1.2rem 1.2rem 1.2rem -1.2rem; border: 1px solid color-mix(in srgb, var(--signal) 70%, transparent); pointer-events: none; transition: border-color .4s ease; }
+.signal-stage img { position: relative; z-index: 2; width: 100%; height: auto; background: #ddd5ca; }
+.signal-beam { position: absolute; z-index: 0; inset: -42% -75% -42% -75%; background: conic-gradient(from 252deg at 50% 50%, transparent 0 34%, color-mix(in srgb, var(--signal) 30%, transparent) 40%, transparent 48% 100%); transform: rotate(-7deg); pointer-events: none; transition: background .45s ease; }
+
+.signal-words { grid-column: 1 / -1; display: flex; align-items: end; gap: clamp(1.2rem, 4vw, 4rem); border-top: 1px solid #3a4253; padding-top: 1.2rem; }
+.signal-words button { appearance: none; padding: 0 0 .4rem; border: 0; border-bottom: 3px solid transparent; background: transparent; color: #8d98aa; font-family: 'Archivo Variable', sans-serif; font-size: clamp(1.15rem, 2vw, 1.8rem); font-weight: 680; cursor: pointer; transition: color .25s ease, border-color .25s ease; }
+.signal-words button[aria-pressed='true'] { color: var(--prototype-ink); border-color: var(--signal); }
+
+.signal-proof { position: relative; padding: 9rem clamp(1rem, 3vw, 3rem); border-top: 1px solid #2d3545; }
+.signal-proof::before { content: ''; position: absolute; inset: 0 0 auto; height: 1rem; background: var(--signal); transition: background .4s ease; }
+.signal-frame { display: grid; min-height: 72vh; padding: clamp(4rem, 8vw, 8rem) 0; border-bottom: 1px solid #3a4253; }
+.signal-frame-opening { grid-template-columns: 1fr 2.4fr; align-items: start; }
+.signal-frame-opening > p:first-child { margin: .7rem 0 0; color: var(--signal); font-weight: 800; }
+.signal-frame-opening h2 { max-width: 10ch; margin: 0; font-family: 'Archivo Variable', sans-serif; font-size: clamp(3.8rem, 8vw, 7rem); line-height: .9; letter-spacing: -.04em; }
+.signal-frame-opening > p:last-child { grid-column: 2; max-width: 38rem; margin: 2rem 0 0; color: #cbd4e3; font-size: 1.2rem; line-height: 1.5; }
+.signal-frame-choice { grid-template-columns: 1.15fr .85fr; gap: 7vw; align-items: center; }
+.signal-role { margin: 0; font-family: 'Newsreader Variable', serif; font-size: clamp(2.4rem, 4.6vw, 4.8rem); line-height: 1.04; }
+.signal-decisions { display: grid; gap: 1.2rem; }
+.signal-decisions p { margin: 0; padding: 1.2rem 0; border-bottom: 1px solid #3a4253; color: #d9e0ea; font-size: 1.08rem; }
+.signal-scope { grid-column: 2; margin: 1.5rem 0 0; color: var(--signal); font-weight: 700; }
+.signal-frame-result { grid-template-columns: 1fr 1fr; gap: 5vw; align-items: center; border-bottom: 0; }
+.signal-outcomes { display: grid; gap: 2.2rem; }
+.signal-outcomes div { display: grid; }
+.signal-outcomes strong { color: var(--signal); font-family: 'Archivo Variable', sans-serif; font-size: clamp(5rem, 10vw, 10rem); line-height: .78; letter-spacing: -.04em; transition: color .4s ease; }
+.signal-outcomes span { margin-top: .75rem; color: #cbd4e3; font-size: 1.1rem; }
+.signal-reflection { max-width: 42rem; margin: 0 0 4rem; font-size: clamp(1.35rem, 2.3vw, 2.1rem); line-height: 1.35; }
+.signal-frame-result blockquote { margin: 0; padding-top: 1.5rem; border-top: 2px solid var(--signal); }
+.signal-frame-result blockquote p { margin: 0; color: #d9e0ea; font-family: 'Newsreader Variable', serif; font-size: 1.35rem; line-height: 1.35; }
+.signal-frame-result cite { display: block; margin-top: 1rem; color: #9ba6b8; font-style: normal; }
+
+.signal-contact { min-height: 80vh; display: grid; place-content: center; justify-items: center; padding: 7rem 1rem 9rem; text-align: center; }
+.signal-contact h2 { max-width: 10ch; margin: 0 0 2.5rem; font-family: 'Archivo Variable', sans-serif; font-size: clamp(4rem, 9vw, 9rem); font-weight: 680; line-height: .9; letter-spacing: -.04em; }
+.signal-contact a { padding: 1rem 1.35rem; background: var(--signal); color: #080d19; font-weight: 800; text-decoration: none; transition: background .4s ease; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .signal-copy h1 { animation: signal-reveal .95s cubic-bezier(.16,1,.3,1) both; }
+  .signal-stage { animation: signal-reveal .95s .16s cubic-bezier(.16,1,.3,1) both; }
+  .signal-beam { animation: beam-breathe 7s ease-in-out infinite alternate; }
+  @keyframes signal-reveal { from { opacity: 0; transform: translateY(2.5rem); clip-path: inset(0 0 80% 0); } }
+  @keyframes beam-breathe { to { transform: rotate(2deg) scale(1.08); } }
+}
+
+@media (max-width: 760px) {
+  .signal-nav { padding-inline: 1rem; }
+  .signal-nav nav { gap: 1rem; }
+  .signal-hero { display: flex; flex-direction: column; min-height: auto; padding: 7rem 1rem 3.5rem; }
+  .signal-copy h1 { font-size: clamp(3.2rem, 15vw, 5.2rem); }
+  .signal-stage { width: min(76vw, 24rem); margin: 3rem 0 2rem auto; }
+  .signal-words { justify-content: space-between; gap: .6rem; }
+  .signal-proof { padding: 6rem 1rem; }
+  .signal-frame { display: block; min-height: auto; padding: 5rem 0; }
+  .signal-frame-opening h2 { margin-top: 1.5rem; font-size: clamp(3.2rem, 14vw, 5rem); }
+  .signal-frame-opening > p:last-child { margin-top: 2rem; }
+  .signal-decisions, .signal-scope, .signal-outcomes, .signal-reflection { margin-top: 3rem; }
+}
