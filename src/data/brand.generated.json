@@ -34,37 +34,15 @@
       "source_sha256": "476eed848d9f1d573fb2dfb47db50b12ed4e8757f944ba2ca8e37982734bd826"
     },
     {
-      "id": "claim:fc940e442196d42b25f24a4d",
+      "id": "claim:06ae85b40cffb2aa6344b39e",
       "subject_id": "person:sairam",
       "predicate": "seeks",
-      "object_text": "Senior Engineering Manager roles at top-tier technology companies",
+      "object_text": "Senior Engineering Manager or Head of AI/ML Engineering Roles",
       "tier": "contact",
-      "source_line": 3,
-      "source_excerpt": "Senior Engineering Manager roles at top-tier technology companies",
-      "source_path": "brand/positioning.md",
-      "source_sha256": "476eed848d9f1d573fb2dfb47db50b12ed4e8757f944ba2ca8e37982734bd826"
-    },
-    {
-      "id": "claim:908981be1e67418b493e0ba9",
-      "subject_id": "person:sairam",
-      "predicate": "seeks",
-      "object_text": "VP, Director, or Head of AI/ML Engineering roles",
-      "tier": "contact",
-      "source_line": 16,
-      "source_excerpt": "VP, Director, or Head of AI/ML Engineering",
-      "source_path": "public/llms.txt",
-      "source_sha256": "e1784a0e8227a1f9596ea856700cec69ae2beccf9c1705579d018f661a171639"
-    },
-    {
-      "id": "claim:d6662237ddb16e597142235c",
-      "subject_id": "person:sairam",
-      "predicate": "seeks",
-      "object_text": "VP, Director, or Head of AI/ML Engineering roles",
-      "tier": "contact",
-      "source_line": 16,
-      "source_excerpt": "VP, Director, or Head of AI/ML Engineering",
-      "source_path": "brand/sources/legacy-site/llms.txt",
-      "source_sha256": "e1784a0e8227a1f9596ea856700cec69ae2beccf9c1705579d018f661a171639"
+      "source_line": 1,
+      "source_excerpt": "Senior Engineering Manager or Head of AI/ML Engineering Roles",
+      "source_path": "brand/sources/user/2026-09-24-career-goal.txt",
+      "source_sha256": "0eb23b31e6ee9f681860a031107cbe30492644ca218db1c5e359352f161dfd75"
     },
     {
       "id": "claim:27080e3664b11d0d686eda64",
@@ -417,6 +395,17 @@
       "source_excerpt": "Principal Software Engineer and AI/ML platform lead at Apple",
       "source_path": "brand/sources/legacy-site/llms.txt",
       "source_sha256": "e1784a0e8227a1f9596ea856700cec69ae2beccf9c1705579d018f661a171639"
+    },
+    {
+      "id": "claim:393df81a407fa0b17860686a",
+      "subject_id": "person:sairam",
+      "predicate": "headline",
+      "object_text": "Grow the people. The platforms follow.",
+      "tier": "identity",
+      "source_line": 1,
+      "source_excerpt": "Grow the people. The platforms follow.",
+      "source_path": "brand/sources/user/2026-09-24-headline.txt",
+      "source_sha256": "6afae2f24dd701978d6c8eb30639ab0984512ef1fe0831a21599ad6ae77d14a2"
     },
     {
       "id": "claim:8e3e11ef05264f1fd71a3f16",
@@ -1882,72 +1871,6 @@
       "source_sha256": "4754df5de262d13a3f0f77085a951069a9f92e87c171b7b12cadfecdf1fb6e6f"
     },
     {
-      "id": "claim:b4f11995d1819d091620393e",
-      "subject_id": "person:sairam",
-      "predicate": "explores",
-      "object_text": "Can I get at this data, and hand it to someone else cleanly?",
-      "tier": "portfolio",
-      "source_line": 22,
-      "source_excerpt": "Can I get at this data, and hand it to someone else cleanly?",
-      "source_path": "clusters.json",
-      "source_sha256": "4754df5de262d13a3f0f77085a951069a9f92e87c171b7b12cadfecdf1fb6e6f"
-    },
-    {
-      "id": "claim:58652926c24329469162c855",
-      "subject_id": "person:sairam",
-      "predicate": "explores",
-      "object_text": "Do I understand the algorithm well enough to implement it myself?",
-      "tier": "portfolio",
-      "source_line": 35,
-      "source_excerpt": "Do I understand the algorithm well enough to implement it myself?",
-      "source_path": "clusters.json",
-      "source_sha256": "4754df5de262d13a3f0f77085a951069a9f92e87c171b7b12cadfecdf1fb6e6f"
-    },
-    {
-      "id": "claim:470356f5cf1efaa6b797510b",
-      "subject_id": "person:sairam",
-      "predicate": "explores",
-      "object_text": "How do you explain an AI problem to someone who does not build them?",
-      "tier": "portfolio",
-      "source_line": 59,
-      "source_excerpt": "How do you explain an AI problem to someone who does not build them?",
-      "source_path": "clusters.json",
-      "source_sha256": "4754df5de262d13a3f0f77085a951069a9f92e87c171b7b12cadfecdf1fb6e6f"
-    },
-    {
-      "id": "claim:e78045347040b3d46fa4a9a8",
-      "subject_id": "person:sairam",
-      "predicate": "explores",
-      "object_text": "What does it take to ship something onto someone else’s device?",
-      "tier": "portfolio",
-      "source_line": 47,
-      "source_excerpt": "What does it take to ship something onto someone else’s device?",
-      "source_path": "clusters.json",
-      "source_sha256": "4754df5de262d13a3f0f77085a951069a9f92e87c171b7b12cadfecdf1fb6e6f"
-    },
-    {
-      "id": "claim:4214adcbfaefd8c2040b72fc",
-      "subject_id": "person:sairam",
-      "predicate": "explores",
-      "object_text": "What is the machine actually doing, and how much faster can it be made to do it?",
-      "tier": "portfolio",
-      "source_line": 2,
-      "source_excerpt": "What is the machine actually doing, and how much faster can it be made to do it?",
-      "source_path": "clusters.json",
-      "source_sha256": "4754df5de262d13a3f0f77085a951069a9f92e87c171b7b12cadfecdf1fb6e6f"
-    },
-    {
-      "id": "claim:9e864b1e5795b7a0e14a590c",
-      "subject_id": "person:sairam",
-      "predicate": "explores",
-      "object_text": "Why am I still doing this by hand?",
-      "tier": "portfolio",
-      "source_line": 10,
-      "source_excerpt": "Why am I still doing this by hand?",
-      "source_path": "clusters.json",
-      "source_sha256": "4754df5de262d13a3f0f77085a951069a9f92e87c171b7b12cadfecdf1fb6e6f"
-    },
-    {
       "id": "claim:5e6355a3fa8e8bb62d257609",
       "subject_id": "person:sairam",
       "predicate": "authored",
@@ -3071,7 +2994,7 @@
     },
     {
       "name": "source_manifest_sha256",
-      "value": "edac28e71b06c473ce4fe96e0a4d69f5272fbf1cc44db77d6c01adcbc95ea01c"
+      "value": "77843186545d4b2a7ee1e5118e286e8f8b9484e2a8741c29fa6468b80bb5317f"
     }
   ]
 }

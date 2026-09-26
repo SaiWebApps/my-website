@@ -1,4 +1,31 @@
 ---
-import Page from './explore/material-intelligence/research.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { research } from '../data/content';
+import '../styles/inner-pages.css';
+const linkLabels: Record<string, string> = {
+  'who-trains-the-next-senior': 'Read the management paper',
+  'ai-roi': 'Read the AI ROI paper',
+  'drone-megaddon': 'Read the swarm paper',
+};
+const takeaways: Record<string, string> = {
+  'who-trains-the-next-senior': 'When AI takes on work that used to train junior engineers, managers need a deliberate way to build the judgment those engineers will need later.',
+  'ai-roi': 'Evaluate AI investments in stages: decide what value to test, what evidence earns more funding, and when to stop.',
+  'drone-megaddon': 'Give a drone swarm a high-level objective and let the system coordinate the individual vehicles.',
+};
 ---
-<Page />
+<SiteLayout title="Research — Sairam Krishnan" description="Research by Sairam Krishnan on AI investment, engineering management, and autonomous systems.">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <SiteHeader active="research" />
+  <main id="main" class="inner-page">
+    <section class="inner-hero simple-hero" aria-labelledby="research-title"><h1 id="research-title" data-reveal>Research.</h1></section>
+    <section class="research-list" aria-label="Research papers">
+      {research.map(paper => <article class="research-row" id={paper.slug} data-reveal>
+        <div><span class="research-venue">{paper.venue}</span><h2>{paper.title}</h2><p>{paper.thesis}</p><p class="research-takeaway"><strong>In plain language</strong>{takeaways[paper.slug]}</p></div>
+        {paper.href && <a href={paper.href} target="_blank" rel="noopener noreferrer" aria-label={`Read ${paper.title}`}>{linkLabels[paper.slug]} ↗</a>}
+      </article>)}
+    </section>
+  </main>
+  <SiteFooter />
+</SiteLayout>

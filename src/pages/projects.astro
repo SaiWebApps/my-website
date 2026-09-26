@@ -1,4 +1,44 @@
 ---
-import Page from './explore/material-intelligence/projects.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { ventures } from '../data/content';
+import githubClusters from '../data/githubClusters.json';
+import '../styles/inner-pages.css';
+
+const repos: Record<string, string> = {
+  ondoway: 'https://github.com/SaiWebApps/Ondoway',
+  persuaider: 'https://github.com/SaiWebApps/persuaider',
+  lore: 'https://github.com/SaiWebApps/DependIQ',
+  crucible: 'https://github.com/SaiWebApps/claude-kit',
+};
+const descriptions: Record<string, string> = {
+  ondoway: 'Location-aware audio tours grounded in sourced stories.',
+  persuaider: 'AI-assisted negotiation practice and evaluation.',
+  lore: 'Cross-project dependency analysis for software teams.',
+  crucible: 'Engineering checks for AI coding agents.',
+};
 ---
-<Page />
+<SiteLayout title="Side projects — Sairam Krishnan" description="Products and tools built by Sairam Krishnan, including Ondoway, Persuaider, DependIQ, and Crucible.">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <SiteHeader active="projects" />
+  <main id="main" class="inner-page">
+    <section class="inner-hero simple-hero" aria-labelledby="projects-title"><h1 id="projects-title" data-reveal>Side projects.</h1></section>
+    <section class="project-list" aria-label="Featured projects">
+      {ventures.map(project => <article class="project-row" id={project.slug} data-reveal>
+        <div class="project-story"><h2>{project.name}</h2><p class="project-thesis">{descriptions[project.slug]}</p><dl class="project-facts"><div><dt>Problem</dt><dd>{project.problem}</dd></div><div><dt>My role</dt><dd>{project.role}</dd></div><div><dt>What exists now</dt><dd>{project.state}</dd></div></dl><p class="project-system"><strong>Built with</strong> {project.system}</p></div>
+        <a href={repos[project.slug]} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} on GitHub`}>GitHub ↗</a>
+      </article>)}
+    </section>
+    <section class="repo-archive" aria-labelledby="repo-title">
+      <h2 id="repo-title">Repository archive</h2>
+      <div class="repo-clusters">
+        {githubClusters.map(group => <details class="repo-cluster" data-reveal>
+          <summary><span>{group.title}</span><span>{group.projects.length} repositories</span></summary>
+          <ul>{group.projects.map(project => <li><a href={`https://github.com/SaiWebApps/${encodeURIComponent(project.name)}`} target="_blank" rel="noopener noreferrer">{project.name} on GitHub ↗</a><p>{project.description}</p></li>)}</ul>
+        </details>)}
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</SiteLayout>

@@ -2,23 +2,26 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/contact.css';
+
+const rows = [
+  { label: 'Email', value: 'sairambkrishnan@gmail.com', href: 'mailto:sairambkrishnan@gmail.com' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/sairambkrishnan', href: 'https://www.linkedin.com/in/sairambkrishnan', external: true },
+  { label: 'Phone', value: '+1 (281) 513-1263', href: 'tel:+12815131263' },
+  { label: 'Resume', value: 'Sairam_Krishnan_Resume.pdf', href: '/assets/Sairam_Krishnan_Resume.pdf', external: true },
+];
 ---
-<SiteLayout title="Contact — Sairam Krishnan" description="Get in touch with Sairam Krishnan about engineering leadership, AI platforms, research, or speaking.">
+<SiteLayout title="Contact — Sairam Krishnan" description="Contact Sairam Krishnan by email, LinkedIn, or phone, or view his resume.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="contact" />
   <main id="main" class="contact-page">
-    <div class="contact-page-grid" aria-hidden="true"></div>
-    <div class="contact-page-inner">
-      <h1>Get in <em>touch.</em></h1>
-      <div class="contact-page-bottom">
-        <p>Engineering leadership, AI platform strategy, workshops, and speaking.</p>
-        <div class="contact-page-links">
-          <a class="contact-primary" href="mailto:sairambkrishnan@gmail.com"><span>Email me</span><span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/in/sairambkrishnan/" target="_blank" rel="noopener noreferrer"><span>Connect on LinkedIn</span><span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/SaiWebApps" target="_blank" rel="noopener noreferrer"><span>See the work on GitHub</span><span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
+    <h1 data-reveal>Contact.</h1>
+    <dl class="contact-list">
+      {rows.map((row, i) => <div data-reveal style={`--i:${i + 1}`}>
+        <dt>{row.label}</dt>
+        <dd><a href={row.href} target={row.external ? '_blank' : undefined} rel={row.external ? 'noopener noreferrer' : undefined}>{row.value}{row.external && <span aria-hidden="true"> ↗</span>}</a></dd>
+      </div>)}
+    </dl>
   </main>
-  <SiteFooter />
+  <SiteFooter current="contact" />
 </SiteLayout>

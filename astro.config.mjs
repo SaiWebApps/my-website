@@ -7,6 +7,6 @@ export default defineConfig({
   devToolbar: { enabled: false },
   integrations: [sitemap({ filter: (page) => {
     const path = new URL(page).pathname.replace(/\/$/, '') || '/';
-    return ['/', '/leadership', '/projects', '/research', '/record', '/contact'].includes(path);
+    return ['/', '/career', '/projects', '/research', '/contact'].includes(path);
   } })],
 });

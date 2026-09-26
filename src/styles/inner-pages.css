@@ -1,0 +1,60 @@
+
+.inner-page{background:#ecece4;color:#14242c}
+.inner-hero{background:#102630;color:#f2f4ec;min-height:430px;padding:160px clamp(1.25rem,7.5vw,8.5rem) 70px}
+.inner-hero h1{font-size:clamp(5rem,10vw,11rem);line-height:.9;letter-spacing:-.08em;margin:0;font-weight:650}
+.inner-hero-copy p{font-size:1.2rem;line-height:1.4;max-width:450px;color:#d0dfd9;margin:2rem 0 0}
+.simple-hero{min-height:380px;display:flex;align-items:end}
+.hub-center{position:relative;z-index:1;height:75px;width:75px;border-radius:50%;display:grid;place-items:center;background:#102630;color:#d8fa77;font-weight:700;font-size:1.25rem}
+.hub-line{position:absolute;top:50%;left:50%;width:80%;height:1px;background:#719475;transform-origin:left center}
+.hub-line-one{transform:rotate(0deg) translateX(-50%)}.hub-line-two{transform:rotate(40deg) translateX(-50%)}.hub-line-three{transform:rotate(-40deg) translateX(-50%)}
+.project-index,.research-venue{font-family:'Martian Mono Variable',monospace;text-transform:uppercase;letter-spacing:.06em;font-size:.68rem;color:#476c56}
+.project-list,.research-list{padding:2rem clamp(1.25rem,7.5vw,8.5rem) 0}
+.project-row,.research-row{display:grid;grid-template-columns:90px minmax(0,1fr) 120px;gap:2rem;border-top:1px solid #6e8274;padding:2rem 0}
+.project-row h2,.research-row h2{font-size:clamp(2.6rem,4vw,4.5rem);line-height:1.05;letter-spacing:-.065em;margin:0 0 .7rem}
+.project-row p,.research-row p{max-width:760px;font-size:1.05rem;line-height:1.5;color:#435451;margin:.5rem 0}
+.project-row .project-thesis{font-size:1.22rem;color:#14242c;margin:.5rem 0 1rem}
+.project-row>a,.research-row>a{justify-self:end;align-self:start;white-space:nowrap;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.25rem}
+.project-row>a:hover,.research-row>a:hover{color:#476f5b}
+.archive-link{margin:2rem clamp(1.25rem,7.5vw,8.5rem) 5rem;padding:1.5rem 0;border-top:1px solid #6e8274;display:flex;justify-content:space-between;gap:2rem}
+.archive-link a{text-decoration:none;border-bottom:1px solid currentColor}
+.research-list{padding-bottom:5rem}
+.research-row:last-child{border-bottom:1px solid #6e8274}
+.research-venue{display:block;margin-bottom:1.1rem}
+@media(max-width:650px){.inner-hero{min-height:320px;padding:155px 1.25rem 3rem}.inner-hero h1{font-size:clamp(4.4rem,14vw,7rem)}.project-list,.research-list{padding:1rem 1.25rem 3rem}.project-row,.research-row{grid-template-columns:1fr auto;gap:1rem;padding:1.75rem 0}.project-index{grid-column:1/-1}.project-row>div,.research-row>div{grid-column:1/-1}.project-row>a,.research-row>a{grid-column:1/-1;justify-self:start}.archive-link{margin:0 1.25rem 3rem;display:block}.archive-link a{display:block;width:max-content;margin-top:1rem}}
+.project-row,.research-row{grid-template-columns:minmax(0,1fr) 160px}
+@media(max-width:650px){.project-row,.research-row{grid-template-columns:1fr}}
+.repo-archive{padding:2rem clamp(1.25rem,7.5vw,8.5rem) 5rem}
+.repo-archive h2{font-size:clamp(3rem,5vw,5.5rem);line-height:1;letter-spacing:-.07em;margin:0 0 2rem}
+.repo-clusters{border-top:1px solid #6e8274}
+.repo-cluster{border-bottom:1px solid #6e8274}
+.repo-cluster summary{list-style:none;display:flex;justify-content:space-between;gap:2rem;align-items:center;padding:1.2rem 0;cursor:pointer}
+.repo-cluster summary::-webkit-details-marker{display:none}
+.repo-cluster summary span:first-child{font-size:clamp(1.5rem,2.4vw,2.5rem);font-weight:650;letter-spacing:-.05em}
+.repo-cluster summary span:last-child{font-family:'Martian Mono Variable',monospace;font-size:.65rem;color:#486756;white-space:nowrap}
+.repo-cluster ul{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem;padding:0;margin:0 0 2rem}
+.repo-cluster li{border-top:1px solid #9daf9f;padding:1rem 0}
+.repo-cluster li a{text-decoration:none;border-bottom:1px solid currentColor;font-weight:650}
+.repo-cluster li p{font-size:.9rem;line-height:1.4;color:#435451;max-width:480px;margin:.6rem 0 0}
+@media(max-width:650px){.repo-archive{padding:1rem 1.25rem 3rem}.repo-cluster ul{grid-template-columns:1fr}.repo-cluster summary span:last-child{font-size:.55rem}}
+.cmu-aspects{grid-column:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#97ad98;border:1px solid #97ad98}
+.cmu-aspects>div{background:#e2e9dd;padding:1.1rem;scroll-margin-top:3rem}
+.cmu-aspects>div.is-selected{background:#d8fa77}
+.cmu-aspects strong{font-family:'Martian Mono Variable',monospace;text-transform:uppercase;letter-spacing:.04em;font-size:.58rem;color:#365a43}
+.cmu-aspects p{line-height:1.42;font-size:.91rem;color:#344b48;margin:.65rem 0}
+.cmu-aspects a{font-size:.8rem;text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){.cmu-aspects{grid-column:1/-1}}
+@media(max-width:650px){.cmu-aspects{grid-template-columns:1fr}}
+.project-row{grid-template-columns:minmax(0,1fr) 120px;padding:2.5rem 0 3rem}
+.project-row h2{margin-bottom:.5rem}
+.project-row .project-thesis{margin:.4rem 0 1.7rem;font-size:1.18rem}
+.project-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin:0 0 1.2rem}
+.project-facts>div{border-top:1px solid #8da590;padding-top:.7rem}
+.project-facts dt,.project-system strong{font-family:'Martian Mono Variable',monospace;text-transform:uppercase;letter-spacing:.05em;font-size:.63rem;color:#476c56}
+.project-facts dd{margin:.55rem 0 0;line-height:1.43;color:#344d4a;font-size:.96rem}
+.project-row .project-system{font-size:.91rem;color:#4b625b}
+.project-system strong{margin-right:.6rem}
+@media(max-width:850px){.project-facts{grid-template-columns:1fr;gap:.8rem}}
+@media(max-width:650px){.project-row{grid-template-columns:1fr;padding:1.8rem 0}.project-row>a{grid-column:1}.project-facts{gap:.7rem}}
+.research-row{padding:2.4rem 0 2.8rem}
+.research-takeaway{border-left:2px solid #789c7f;padding-left:1.1rem;margin:1.3rem 0 0!important;max-width:720px}
+.research-takeaway strong{display:block;font-family:'Martian Mono Variable',monospace;text-transform:uppercase;letter-spacing:.05em;font-size:.63rem;color:#476c56;margin-bottom:.4rem}

@@ -5,25 +5,17 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "predev": "npm run export:brand",
     "serve": "astro dev",
-    "build:og": "node scripts/build-og-card.mjs",
-    "export:brand": "node scripts/export-site-content.mjs",
-    "prebuild": "npm run export:brand",
     "build": "astro build",
+    "check:copy": "npm run build && node scripts/check-copy-repetition.mjs",
     "preview": "astro preview",
-    "check": "astro check",
-    "validate:dist": "node scripts/validate-site.mjs",
-    "validate:slice": "node scripts/validate-vertical-slice.mjs",
-    "validate": "npm run export:brand && npm run check && npm run build && npm run validate:dist"
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
     "@astrojs/sitemap": "^3.7.4",
     "@fontsource-variable/archivo": "^5.3.0",
-    "@fontsource-variable/instrument-sans": "^5.3.0",
     "@fontsource-variable/martian-mono": "^5.3.0",
-    "@fontsource-variable/newsreader": "^5.3.0",
     "@vercel/analytics": "^2.0.1",
     "astro": "^7.3.2",
     "gsap": "^3.15.0",

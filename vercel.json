@@ -34,21 +34,44 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    },
-    {
-      "source": "/support.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=604800"
-        }
-      ]
     }
   ],
   "redirects": [
-    { "source": "/ventures", "destination": "/projects", "permanent": true },
-    { "source": "/work", "destination": "/projects", "permanent": true },
-    { "source": "/work-with-me", "destination": "/contact", "permanent": true },
+    {
+      "source": "/ventures",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/work",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/work-with-me",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/leadership",
+      "destination": "/career#leadership",
+      "permanent": true
+    },
+    {
+      "source": "/record",
+      "destination": "/career",
+      "permanent": true
+    },
+    {
+      "source": "/explore",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/explore/:path*",
+      "destination": "/",
+      "permanent": true
+    },
     {
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",

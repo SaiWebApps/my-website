@@ -7,6 +7,7 @@ const links = [
   { id: 'projects', label: 'Side projects', href: '/projects' },
   { id: 'research', label: 'Research', href: '/research' },
   { id: 'contact', label: 'Contact', href: '/contact' },
+  { id: 'resume', label: 'Resume', href: '/assets/Sairam_Krishnan_Resume.pdf', external: true },
 ] as const;
 ---
 <header class="site-header" id="top">
@@ -15,6 +16,8 @@ const links = [
     <span>Sairam Krishnan</span>
   </a>
   <nav class="primary-nav" aria-label="Main navigation">
-    {links.map(link => <a href={link.href} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}
+    {links.map(link => 'external' in link
+      ? <a href={link.href} target="_blank" rel="noopener">{link.label}</a>
+      : <a href={link.href} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}
   </nav>
 </header>

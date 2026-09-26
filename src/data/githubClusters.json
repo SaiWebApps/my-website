@@ -1,0 +1,248 @@
+[
+  {
+    "title": "Systems & performance",
+    "projects": [
+      {
+        "name": "DT-Convolution",
+        "description": "Optimizing purely sequential DT Convolution through SSE; parallelizing through OpenMP."
+      },
+      {
+        "name": "Basic-CUDA",
+        "description": "NVIDIA CUDA programs."
+      },
+      {
+        "name": "GCC_Function_Tracer",
+        "description": "Tracing function calls in C/C++ using gcc’s in-built profiling tools."
+      },
+      {
+        "name": "InventoryManagement",
+        "description": "C++ inventory management software. Supports FIFO and LIFO methods."
+      },
+      {
+        "name": "XMLParser",
+        "description": "A C++ XML parser, built on the C++ Trie framework."
+      },
+      {
+        "name": "Trie",
+        "description": "A C++ Trie framework."
+      },
+      {
+        "name": "ColorPrinter",
+        "description": "A C++ program to print out characters in different colors."
+      }
+    ]
+  },
+  {
+    "title": "Automation & utilities",
+    "projects": [
+      {
+        "name": "Magpie",
+        "description": "One-click YouTube audio stash — a Tampermonkey userscript plus a local Python server."
+      },
+      {
+        "name": "vsccc",
+        "description": "VS Code Theme Carousel — automatically switches your color theme on a schedule."
+      },
+      {
+        "name": "AppleScriptUtils",
+        "description": "A collection of useful AppleScripts to automate common workflows on my Mac."
+      },
+      {
+        "name": "arc-delete-archived-tabs",
+        "description": "A script which deletes archived Arc tabs at regular intervals."
+      },
+      {
+        "name": "claude-code-profile-switcher",
+        "description": "A VS Code extension to switch between multiple Claude Code configuration profiles via symlink management."
+      },
+      {
+        "name": "ThemeSwitcher",
+        "description": "Switch themes in the current Sublime tab by pressing ctrl+alt+t."
+      },
+      {
+        "name": "ExcelDataPartitioner",
+        "description": "Given an Excel file with a single sheet of data, partition it into multiple sheets by the specified columns."
+      },
+      {
+        "name": "DepreciationCalculator",
+        "description": "An OO Perl script to calculate depreciation using different accounting methods."
+      },
+      {
+        "name": "BingRewardsBot",
+        "description": "Automates Bing searches to accumulate Bing Rewards points."
+      },
+      {
+        "name": "WindowsUtils",
+        "description": "Windows utility scripts."
+      },
+      {
+        "name": "ModernAppPSUtils",
+        "description": "PowerShell 5.0 utilities for Windows 10 Modern/Universal apps."
+      }
+    ]
+  },
+  {
+    "title": "APIs & web services",
+    "projects": [
+      {
+        "name": "StockWatcherAPI",
+        "description": "Consolidate financials, headlines, and related companies info for a user-specified set of stock symbols."
+      },
+      {
+        "name": "EnglishDictionaryAPI",
+        "description": "A Python English dictionary API."
+      },
+      {
+        "name": "PySynonymsCrawler",
+        "description": "A Python utility that fetches synonyms for a specified word."
+      },
+      {
+        "name": "Heroku-Synonyms-Crawler",
+        "description": "Visualize the Synonym Crawler API’s results in a D3.js collapsible tree."
+      },
+      {
+        "name": "RandomWordGenerator",
+        "description": "A Python library for generating random words."
+      },
+      {
+        "name": "node-linkedin-scraper",
+        "description": "A NodeJS implementation of a LinkedIn profile scraper."
+      },
+      {
+        "name": "node-linkedin-headless-oauth",
+        "description": "Handle node-linkedin API authentication without any browser interaction."
+      },
+      {
+        "name": "Parallelax",
+        "description": "A library that leverages the NodeJS async API to execute multiple Blockspring functions in parallel."
+      },
+      {
+        "name": "Spring-MVC-Survey",
+        "description": "Survey apps created using Spring MVC."
+      },
+      {
+        "name": "Django-Survey",
+        "description": "A Django-based survey web application."
+      },
+      {
+        "name": "DjangoPolls",
+        "description": "The first Django app I created."
+      },
+      {
+        "name": "SimpleGoScripts",
+        "description": "A collection of simple Go language scripts."
+      }
+    ]
+  },
+  {
+    "title": "Machine learning & statistics",
+    "projects": [
+      {
+        "name": "Machine-Learning-Exercise-3",
+        "description": "Multi-class classification and neural networks."
+      },
+      {
+        "name": "Machine-Learning-Exercise-1",
+        "description": "Coursera Machine Learning exercise #1."
+      },
+      {
+        "name": "Machine-Learning-Exercise-2",
+        "description": "Coursera Machine Learning exercise #2."
+      },
+      {
+        "name": "Machine-Learning-Exercise-4",
+        "description": "Coursera Machine Learning exercise #4."
+      },
+      {
+        "name": "Machine-Learning-Exercise-5",
+        "description": "Coursera Machine Learning exercise #5."
+      },
+      {
+        "name": "CLT_ExponentialDistribution",
+        "description": "Examining the Central Limit Theorem in the context of random exponential distributions in R."
+      },
+      {
+        "name": "RProgrammingAssignment1",
+        "description": "Coursera R Programming assignment #1."
+      },
+      {
+        "name": "ProgrammingAssignment2",
+        "description": "Programming Assignment 2 for R Programming on Coursera."
+      },
+      {
+        "name": "RProgrammingAssignment3",
+        "description": "Coursera R Programming assignment #3."
+      },
+      {
+        "name": "ScalaFunctionalProgrammingPrinciples",
+        "description": "Coursework in Functional Programming Principles in Scala."
+      },
+      {
+        "name": "ScalaFunctionalProgrammingDesign",
+        "description": "Coursework in Functional Programming Design in Scala."
+      }
+    ]
+  },
+  {
+    "title": "Mobile & embedded",
+    "projects": [
+      {
+        "name": "MedHub",
+        "description": "An Android app — StackOverflow/Piazza for medical issues."
+      },
+      {
+        "name": "ClassApp",
+        "description": "An Android app for class and grades management."
+      },
+      {
+        "name": "ArtistApp",
+        "description": "Marketing a music group through an Android app."
+      },
+      {
+        "name": "MortgageCalculator",
+        "description": "An Android mortgage calculator."
+      },
+      {
+        "name": "GoogleMapsIntro",
+        "description": "An Android app using Google Maps."
+      },
+      {
+        "name": "LocationIntro",
+        "description": "An introduction to Android’s Location Services."
+      },
+      {
+        "name": "FirstApp",
+        "description": "The first Android app I created — an Echo program."
+      },
+      {
+        "name": "PhotoApp",
+        "description": "A Windows Store photo app."
+      },
+      {
+        "name": "HelloWorld",
+        "description": "An intro to Windows Store app development with a Hello World app."
+      },
+      {
+        "name": "Drone-Megaddon",
+        "description": "18848 drone project."
+      },
+      {
+        "name": "Team5",
+        "description": "18549 capstone project."
+      }
+    ]
+  },
+  {
+    "title": "AI, explained",
+    "projects": [
+      {
+        "name": "AI-ROI-Unconference",
+        "description": "An interactive RPG-themed infographic exploring AI investment ROI through the Discounted Cash Flow (DCF) framework."
+      },
+      {
+        "name": "TheBiasFiles",
+        "description": "An interactive 10-page comic that teaches the four types of AI bias — historical, representation, aggregation, and evaluation — through real-world stories like Amazon’s sexist hiring algorithm and facial recognition failing Black women."
+      }
+    ]
+  }
+]

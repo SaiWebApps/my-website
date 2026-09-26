@@ -1,0 +1,186 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { careerLedger, careerById, leadershipHubs, leadershipSpokes, leadershipItems } from '../data/career';
+import '../styles/inner-pages.css';
+import '../styles/career.css';
+
+const lane = (id: string) => {
+  const entry = careerById[id];
+  if (entry.kind === 'aspect' || id === 'wharton' || id === 'praxtera') return -1;
+  if (entry.parent === 'cmu' && id !== 'microsoft') return 1;
+  return 0;
+};
+const edges = careerLedger.filter(entry => entry.parent);
+const defaultEntry = 'apple';
+
+// Leadership network geometry (viewBox units).
+const C = 300;
+const hubAngle = (i: number) => -Math.PI / 2 + (i * 2 * Math.PI) / leadershipHubs.length;
+const hubs = leadershipHubs.map((hub, i) => ({ hub, x: C + 82 * Math.cos(hubAngle(i)), y: C + 82 * Math.sin(hubAngle(i)) }));
+const spokeAngle = (i: number) => -Math.PI / 2 + (i * 2 * Math.PI) / leadershipSpokes.length;
+const spokes = leadershipSpokes.map((spoke, i) => {
+  const a = spokeAngle(i);
+  const x = C + 222 * Math.cos(a);
+  const y = C + 222 * Math.sin(a);
+  return { ...spoke, x, y, labelY: Math.sin(a) < -0.5 ? y - 24 : y + 38 };
+});
+const links = spokes.flatMap(spoke => hubs
+  .filter(hub => leadershipItems.some(item => item.spoke === spoke.id && item.hub === hub.hub))
+  .map(hub => ({ spoke: spoke.id, hub: hub.hub, x1: spoke.x, y1: spoke.y, x2: hub.x, y2: hub.y })));
+const spokeLabel = Object.fromEntries(leadershipSpokes.map(spoke => [spoke.id, spoke.label]));
+const f = (n: number) => n.toFixed(1);
+---
+<SiteLayout title="Career — Sairam Krishnan" description="Sairam Krishnan's career in engineering, leadership, research, and teaching across Apple, Amazon, Microsoft, SIG, Carnegie Mellon, Wharton, and Praxtera.">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <SiteHeader active="career" />
+  <main id="main" class="inner-page career-page">
+    <div class="career-intro">
+      <h1 data-reveal>Career.</h1>
+    </div>
+    <nav class="career-tabs" role="tablist" aria-label="Career views">
+      <a id="career-tab" href="#career" role="tab" aria-controls="career-panel" aria-selected="true" data-view="career">Career</a>
+      <a id="leadership-tab" href="#leadership" role="tab" aria-controls="leadership-panel" aria-selected="false" tabindex="-1" data-view="leadership">Leadership</a>
+    </nav>
+
+    <section id="career-panel" class="career-panel active" role="tabpanel" aria-labelledby="career-tab" data-panel="career">
+      <div class="cg" data-career-graph>
+        <svg class="cg-svg" viewBox="0 0 1200 620" role="group" aria-label="Career graph">
+          <g class="cg-edges">
+            {edges.map(entry => <g class="cg-edge" data-entry={entry.id} data-from={entry.parent} data-kind={entry.kind} role="button" tabindex="0" aria-label={`${entry.verb} ${entry.org}, ${entry.dates}`}>
+              <line class="cg-edge-hit" />
+              <line class="cg-edge-line" />
+            </g>)}
+          </g>
+          <g class="cg-nodes">
+            {careerLedger.map(entry => <g class="cg-node" data-entry={entry.id} data-kind={entry.kind} data-parent={entry.parent} data-time={entry.time} data-lane={lane(entry.id)} role="button" tabindex="0" aria-label={`${entry.org}, ${entry.role}, ${entry.dates}`} aria-pressed="false">
+              <circle class="cg-halo" r={entry.kind === 'aspect' ? 13 : 17} />
+              <circle class="cg-dot" r={entry.kind === 'aspect' ? 7 : 10} />
+              <text class="cg-label" text-anchor="middle" dy={entry.kind === 'aspect' ? 26 : 32}>{entry.label}</text>
+            </g>)}
+          </g>
+          <g class="cg-edge-labels" aria-hidden="true">
+            {edges.map(entry => <text class="cg-edge-label" data-entry={entry.id} text-anchor="middle"><tspan>{entry.verb}</tspan><tspan dy="1.3em">{entry.dates}</tspan></text>)}
+          </g>
+        </svg>
+      </div>
+      <div class="career-focus" aria-live="polite">
+        {careerLedger.map(entry => <article class:list={['career-detail', { active: entry.id === defaultEntry }]} data-detail={entry.id} id={`entry-${entry.id}`}>
+          <div class="career-detail-heading">
+            <span>{entry.dates}</span>
+            <h2>{entry.org}</h2>
+            <p>{entry.role}</p>
+            {entry.meta && <small>{entry.meta}</small>}
+          </div>
+          {entry.bullets.length > 0 && <ul>
+            {entry.bullets.map(text => <li>{text}</li>)}
+            {entry.links?.map(link => <li class="career-detail-link"><a href={link.href} target="_blank" rel="noopener">{link.label} ↗</a></li>)}
+          </ul>}
+          {entry.figures && <ul class="career-figures">
+            {entry.figures.map(figure => <li>
+              <a href={figure.href} target="_blank" rel="noopener">
+                <img src={figure.img} alt={figure.alt} width={figure.width} height={figure.height} loading="lazy" decoding="async" />
+                <span><strong>{figure.title}</strong>{figure.detail && ` · ${figure.detail}`}<small>{figure.date}</small></span>
+              </a>
+            </li>)}
+          </ul>}
+        </article>)}
+      </div>
+    </section>
+
+    <section id="leadership-panel" class="career-panel" role="tabpanel" aria-labelledby="leadership-tab" data-panel="leadership">
+      <div class="lead-layout">
+        <svg class="lead-svg" viewBox="-10 30 620 530" role="group" aria-label="Leadership network">
+          <g class="lead-mesh" aria-hidden="true">
+            {hubs.map((a, i) => { const b = hubs[(i + 1) % hubs.length]; return <line x1={f(a.x)} y1={f(a.y)} x2={f(b.x)} y2={f(b.y)} />; })}
+          </g>
+          {links.map(link => <g class="lead-link" data-spoke={link.spoke} data-hub={link.hub} role="button" tabindex="0" aria-label={`${spokeLabel[link.spoke]} · ${link.hub}`} aria-pressed="false">
+            <line class="lead-link-hit" x1={f(link.x1)} y1={f(link.y1)} x2={f(link.x2)} y2={f(link.y2)} />
+            <line class="lead-link-line" x1={f(link.x1)} y1={f(link.y1)} x2={f(link.x2)} y2={f(link.y2)} />
+          </g>)}
+          {hubs.map(hub => <g class="lead-hub" data-hub={hub.hub} role="button" tabindex="0" aria-pressed="false" transform={`translate(${f(hub.x)} ${f(hub.y)})`}>
+            <circle r="50" /><text text-anchor="middle" dy="0.35em">{hub.hub}</text>
+          </g>)}
+          {spokes.map(spoke => <g class="lead-spoke" data-spoke={spoke.id} role="button" tabindex="0" aria-pressed="false">
+            <circle cx={f(spoke.x)} cy={f(spoke.y)} r="11" />
+            <text x={f(spoke.x)} y={f(spoke.labelY)} text-anchor="middle">{spoke.label}</text>
+          </g>)}
+        </svg>
+        <ul class="lead-list" aria-live="polite">
+          {leadershipItems.map(item => <li data-spoke={item.spoke} data-hub={item.hub}>
+            <span>{spokeLabel[item.spoke]} · {item.hub}</span>
+            <p>{item.text}</p>
+            {item.links.length > 0 && <div class="lead-links">{item.links.map(link => <a href={link.href} target="_blank" rel="noopener">{link.label} ↗</a>)}</div>}
+          </li>)}
+        </ul>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+  <script>
+    import { mountCareerGraph } from '../scripts/career-graph';
+    import { mountLeadership } from '../scripts/leadership-network';
+
+    const tabs = [...document.querySelectorAll<HTMLAnchorElement>('.career-tabs [data-view]')];
+    const panels = [...document.querySelectorAll<HTMLElement>('.career-panel')];
+    const details = [...document.querySelectorAll<HTMLElement>('[data-detail]')];
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    const graphRoot = document.querySelector<HTMLElement>('[data-career-graph]');
+
+    function showDetail(id: string, scroll: boolean) {
+      if (!details.some(detail => detail.dataset.detail === id)) return;
+      details.forEach(detail => detail.classList.toggle('active', detail.dataset.detail === id));
+      if (scroll) document.querySelector('.career-focus')?.scrollIntoView({ behavior: reduced.matches ? 'instant' : 'smooth', block: 'nearest' });
+    }
+
+    const graph = graphRoot ? mountCareerGraph(graphRoot, {
+      initial: 'apple',
+      onSelect(id) {
+        showDetail(id, true);
+        history.replaceState(null, '', `#entry-${id}`);
+      },
+    }) : null;
+    mountLeadership(document.querySelector<HTMLElement>('#leadership-panel')!);
+
+    function show(view: string) {
+      tabs.forEach(tab => {
+        const selected = tab.dataset.view === view;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      panels.forEach(panel => panel.classList.toggle('active', panel.dataset.panel === view));
+      if (view === 'career') graph?.resume();
+    }
+
+    function fromHash() {
+      const hash = location.hash.slice(1);
+      show(hash === 'leadership' ? 'leadership' : 'career');
+      if (hash.startsWith('entry-')) {
+        const id = hash.slice(6);
+        showDetail(id, false);
+        graph?.select(id);
+      }
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', event => {
+        event.preventDefault();
+        const view = tab.dataset.view ?? 'career';
+        history.replaceState(null, '', `#${view}`);
+        show(view);
+      });
+      tab.addEventListener('keydown', event => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        const next = tabs[(index + (event.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+        const view = next.dataset.view ?? 'career';
+        history.replaceState(null, '', `#${view}`);
+        show(view);
+        next.focus();
+      });
+    });
+    addEventListener('hashchange', fromHash);
+    fromHash();
+  </script>
+</SiteLayout>

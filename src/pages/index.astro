@@ -3,143 +3,110 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { ventures, research } from '../data/content';
+import { careerById, eaglesSummitSources } from '../data/career';
+import '../styles/home.css';
 
-const metrics = [
-  { value: '$40M', label: 'saved every year', context: 'Amazon Alexa', detail: '40% better model accuracy', story: 'At Amazon Alexa, I changed the data mining workload to save $40 million a year while improving model accuracy by 40%.' },
-  { value: '100M+', label: 'users served', context: 'Apple · media knowledge graph', detail: '15+ sources · 40% better data · 30% faster delivery', story: 'At Apple, I led a media knowledge graph that unifies more than fifteen metadata sources for search, recommendations, and discovery on platforms serving more than 100 million users. Data quality improved by 40%, and delivery accelerated by 30%.' },
-  { value: '8 / 10 / 3', label: 'engineers / vendors / continents', context: 'Apple · platform team', detail: 'A distributed team', story: 'At Apple, I lead eight engineers across three continents and manage ten vendors building media knowledge and curation infrastructure.' },
-  { value: '300+', label: 'leaders addressed', context: 'Praxtera · Eagles Care Summit', detail: 'Lincoln Financial Field', story: 'At Lincoln Financial Field, Michelle Histand and I delivered the “AI for Impact” keynote. Praxtera founder Susan Jacobson confirmed an audience of more than 300 nonprofit leaders and CEOs.', sources: [
-    { label: 'Eagles Care Summit archive', href: 'https://web.archive.org/web/20260315052929/https://www.philadelphiaeagles.com/community/caresummit/' },
-    { label: 'Philadelphia Eagles post', href: 'https://www.linkedin.com/posts/philadelphia-eagles_flyeaglesfly-activity-7442306553736650753-JEDu' },
-    { label: 'Michelle Histand’s post', href: 'https://www.linkedin.com/posts/michelle-histand-9486308_yesterday-i-got-to-teach-ai-to-over-150-non-profit-activity-7440565809158115328-g9ug' },
-  ] },
-  { value: '11', label: 'years in engineering', context: 'Career', detail: 'Microsoft · SIG · Amazon · Apple', story: 'Since 2015, my work has spanned Windows, financial markets, Alexa, and Apple media platforms.' },
-  { value: '15 / 4', label: 'engineers / international sites', context: 'Apple · Music Credits', detail: 'Global launch', story: 'I directed the global Apple Music Credits launch, coordinating a fifteen-engineer program across four international sites.' },
-];
+const proof = [
+  { id: 'amazon', org: 'Amazon Alexa', value: '$40M', label: 'saved a year', bullets: [1, 2] },
+  { id: 'apple', org: 'Apple', value: '100M+', label: 'users on the media knowledge graph', bullets: [1, 0] },
+  { id: 'praxtera', org: 'Praxtera', value: '300+', label: 'leaders at the Eagles Care Summit', bullets: [1, 0], sources: eaglesSummitSources },
+].map(step => {
+  const entry = careerById[step.id];
+  return { ...step, role: entry.role, dates: entry.dates, lines: step.bullets.map(i => entry.bullets[i]) };
+});
 
 const chapters = [
-  { id: 'career', title: 'Career', description: 'Carnegie Mellon, Microsoft, SIG, Amazon, Apple, Wharton, and Praxtera. The roles, projects, and people involved.', accent: 'career' },
-  { id: 'projects', title: 'Side projects', description: `${ventures.length} products and tools I built outside my primary roles, including Ondoway, Persuaider, Lore / DependIQ, and Crucible.`, accent: 'projects' },
-  { id: 'research', title: 'Research', description: `${research.length} papers on AI investment, engineering teams, and machine learning systems.`, accent: 'research' },
+  { id: 'career', title: 'Career', description: 'Carnegie Mellon, Microsoft, SIG, Amazon, Apple, Wharton, and Praxtera. The roles, projects, and people involved.' },
+  { id: 'projects', title: 'Side projects', description: `${ventures.length} products and tools I built outside my primary roles, including Ondoway, Persuaider, Lore / DependIQ, and Crucible.` },
+  { id: 'research', title: 'Research', description: `${research.length} papers on AI investment, engineering teams, and machine learning systems.` },
+];
+
+const closing = [
+  { label: 'Email', href: 'mailto:sairambkrishnan@gmail.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sairambkrishnan', external: true },
+  { label: 'Resume', href: '/assets/Sairam_Krishnan_Resume.pdf', external: true },
 ];
 ---
 <SiteLayout title="Sairam Krishnan — Grow the people. The platforms follow." description="Sairam Krishnan builds AI and data platforms, and grows the teams that make them real.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="home" />
 
-  <main id="main">
+  <main id="main" class="home">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-image" aria-hidden="true"></div>
-      <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-content">
-        <h1 id="hero-title">Grow the <em>people.</em><br />The platforms follow.</h1>
-        <div class="hero-bottom">
-          <a class="scroll-cue" href="#approach" aria-label="Scroll to approach"><span class="scroll-arrow" aria-hidden="true">↓</span></a>
-        </div>
-      </div>
-      <div class="hero-notation" aria-hidden="true">
-        <svg viewBox="0 0 300 145" fill="none"><path d="M6 94 C48 93 39 17 91 35 S145 140 202 79 S248 33 294 30" /><circle cx="91" cy="35" r="4"/><circle cx="202" cy="79" r="4"/><circle cx="294" cy="30" r="4"/></svg>
-      </div>
-    </section>
-
-    <section class="approach-section" id="approach" aria-labelledby="approach-title">
-      <div class="approach-copy">
-        <h2 id="approach-title">A diagram can't <em>ship itself.</em></h2>
-        <p>I lead engineering teams that build AI and data platforms at scale.</p>
-      </div>
-      <div class="system-drawing" aria-hidden="true">
-        <svg viewBox="0 0 560 400" fill="none">
-          <defs><marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="currentColor"/></marker></defs>
-          <path class="draw-path faint" d="M36 264 C104 243 129 298 182 250 S272 169 329 201 S443 192 519 92"/>
-          <path class="draw-path primary" d="M70 264 C132 255 125 149 232 157 S341 282 414 225 S446 129 511 107" marker-end="url(#arrowhead)"/>
-          <circle class="draw-node" cx="70" cy="264" r="22"/><circle class="draw-node" cx="232" cy="157" r="34"/><circle class="draw-node" cx="414" cy="225" r="46"/><circle class="draw-node end" cx="511" cy="107" r="8"/>
-          <path class="crosshair" d="M70 227v74M33 264h74M232 109v96M184 157h96M414 164v122M353 225h122"/>
-        </svg>
-      </div>
-    </section>
-
-    <section class="evidence-section" id="results" aria-labelledby="evidence-title">
-      <div class="evidence-heading"><h2 id="evidence-title">Scale and <em>results.</em></h2></div>
-      <div class="metric-grid" role="group" aria-label="Results">
-        {metrics.map((metric, index) => (
-          <button class="metric" type="button" data-metric={index} aria-controls="metric-story" aria-expanded="false">
-            <span class="metric-context">{metric.context}</span>
-            <strong>{metric.value}</strong>
-            <span class="metric-label">{metric.label}</span>
-            <span class="metric-detail">{metric.detail}<span aria-hidden="true">↗</span></span>
-          </button>
-        ))}
-        <div class="metric-story" id="metric-story" hidden aria-live="polite">
-          <div class="result-rings" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div><span class="story-context" id="story-context"></span><h3 id="story-title"></h3><p id="story-copy"></p><div class="story-links" id="story-links" hidden></div></div>
-          <button class="story-close" type="button" aria-label="Close impact story">×</button>
+        <h1 id="hero-title" data-reveal>Grow the <em>people.</em><br />The platforms follow.</h1>
+        <div class="hero-bottom" data-reveal style="--i:2">
+          <p>I lead engineering teams that build AI and data platforms at scale.</p>
+          <a class="hero-cue" href="#results" aria-label="Scale and results"><span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </section>
 
-    <section class="chapters-section" aria-label="Career, side projects, and research">
-      <div class="chapter-list">
-        {chapters.map((chapter) => (
-          <a class={`chapter chapter-${chapter.accent}`} href={`/${chapter.id}`}>
-            <div class="chapter-main"><h2>{chapter.title} <span class="chapter-arrow" aria-hidden="true">↗</span></h2><p>{chapter.description}</p></div>
-            <div class="chapter-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-          </a>
-        ))}
+    <section class="proof" id="results" aria-labelledby="proof-title" data-proof>
+      <div class="proof-sticky" aria-hidden="true">
+        <p class="proof-title-mirror">Scale and <em>results.</em></p>
+        <div class="proof-numbers">
+          {proof.map((step, i) => <div class:list={['proof-number', { 'is-active': i === 0 }]} data-i={i}>
+            <span>{step.org}</span>
+            <strong>{step.value}</strong>
+            <p>{step.label}</p>
+          </div>)}
+        </div>
+      </div>
+      <div class="proof-steps">
+        <h2 id="proof-title" class="proof-title" data-reveal>Scale and <em>results.</em></h2>
+        {proof.map((step, i) => <article class:list={['proof-step', { 'is-active': i === 0 }]} data-step={i}>
+          <div class="proof-inline-number" data-reveal>
+            <span>{step.org}</span>
+            <strong>{step.value}</strong>
+            <p>{step.label}</p>
+          </div>
+          <div class="proof-body" data-reveal style="--i:1">
+            <span class="proof-meta">{step.org} · {step.role} · {step.dates}</span>
+            {step.lines.map(line => <p>{line}</p>)}
+            <div class="proof-links">
+              <a href={`/career#entry-${step.id}`}>Full chapter →</a>
+              {step.sources?.map(source => <a href={source.href} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>)}
+            </div>
+          </div>
+        </article>)}
       </div>
     </section>
 
+    <section class="chapters" aria-label="Career, side projects, and research">
+      {chapters.map((chapter, i) => <a class={`chapter-card chapter-${chapter.id}`} href={`/${chapter.id}`} data-reveal style={`--i:${i}`}>
+        <span class="chapter-glow" aria-hidden="true"></span>
+        <h2>{chapter.title}</h2>
+        <p>{chapter.description}</p>
+        <span class="chapter-pill">Explore</span>
+      </a>)}
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="closing-image" aria-hidden="true"></div>
+      <div class="closing-content">
+        <h2 id="closing-title" data-reveal>Contact.</h2>
+        <div class="closing-links" data-reveal style="--i:1">
+          {closing.map(link => <a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener noreferrer' : undefined}>{link.label}{link.external && <span aria-hidden="true"> ↗</span>}</a>)}
+        </div>
+      </div>
+    </section>
   </main>
   <SiteFooter />
-  <script is:inline define:vars={{ metricData: metrics.map(({ value, label, context, story, sources }) => ({ value, label, context, story, sources })) }}>
-    const buttons = [...document.querySelectorAll('[data-metric]')];
-    const panel = document.getElementById('metric-story');
-    const title = document.getElementById('story-title');
-    const context = document.getElementById('story-context');
-    const copy = document.getElementById('story-copy');
-    const links = document.getElementById('story-links');
-    const close = panel.querySelector('.story-close');
-    let active = null;
-    const placePanel = index => {
-      const columns = matchMedia('(max-width: 560px)').matches ? 1 : matchMedia('(max-width: 900px)').matches ? 2 : 3;
-      const rowEnd = Math.min(buttons.length - 1, Math.ceil((index + 1) / columns) * columns - 1);
-      buttons[rowEnd].insertAdjacentElement('afterend', panel);
-    };
-    const shut = (restoreFocus = false) => {
-      if (active === null) return;
-      const old = buttons[active];
-      buttons.forEach(button => button.setAttribute('aria-expanded', 'false'));
-      panel.hidden = true;
-      document.querySelector('.metric-grid').classList.remove('is-open');
-      active = null;
-      if (restoreFocus) old.focus();
-    };
-    buttons.forEach((button, index) => button.addEventListener('click', () => {
-      if (active === index) { shut(); return; }
-      active = index;
-      buttons.forEach((item, itemIndex) => item.setAttribute('aria-expanded', String(itemIndex === index)));
-      document.querySelector('.metric-grid').classList.add('is-open');
-      title.textContent = `${metricData[index].value} ${metricData[index].label}`;
-      context.textContent = metricData[index].context;
-      copy.textContent = metricData[index].story;
-      links.replaceChildren();
-      for (const source of metricData[index].sources ?? []) {
-        const anchor = document.createElement('a');
-        anchor.href = source.href;
-        anchor.textContent = `${source.label} ↗`;
-        anchor.target = '_blank';
-        anchor.rel = 'noopener noreferrer';
-        links.append(anchor);
-      }
-      links.hidden = links.childElementCount === 0;
-      placePanel(index);
-      panel.hidden = false;
-      panel.classList.remove('reveal');
-      void panel.offsetWidth;
-      panel.classList.add('reveal');
-      button.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest' });
-    }));
-    close.addEventListener('click', () => shut(true));
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') shut(true); });
-    window.addEventListener('resize', () => { if (active !== null) placePanel(active); });
+  <script>
+    const section = document.querySelector<HTMLElement>('[data-proof]');
+    if (section && 'IntersectionObserver' in window) {
+      const steps = [...section.querySelectorAll<HTMLElement>('[data-step]')];
+      const numbers = [...section.querySelectorAll<HTMLElement>('.proof-number')];
+      const activate = (index: number) => {
+        steps.forEach((step, i) => step.classList.toggle('is-active', i === index));
+        numbers.forEach((number, i) => number.classList.toggle('is-active', i === index));
+      };
+      const io = new IntersectionObserver(entries => {
+        for (const entry of entries) if (entry.isIntersecting) activate(Number((entry.target as HTMLElement).dataset.step));
+      }, { rootMargin: '-45% 0px -45% 0px' });
+      steps.forEach(step => io.observe(step));
+    }
   </script>
 </SiteLayout>

@@ -1,1 +1,5 @@
-<footer><span>Sairam Krishnan</span><a href="#top">Back to top ↑</a><a href="/contact">Contact ↗</a></footer>
+---
+interface Props { current?: string }
+const { current } = Astro.props;
+---
+<footer><span>Sairam Krishnan</span><a href="#top">Back to top ↑</a>{current === 'contact' ? <span></span> : <a href="/contact">Contact ↗</a>}</footer>
