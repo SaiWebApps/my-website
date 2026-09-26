@@ -1,4 +1,24 @@
 ---
-import Page from './explore/material-intelligence/contact.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 ---
-<Page />
+<SiteLayout title="Contact — Sairam Krishnan" description="Get in touch with Sairam Krishnan about engineering leadership, AI platforms, research, or speaking.">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <SiteHeader active="contact" />
+  <main id="main" class="contact-page">
+    <div class="contact-page-grid" aria-hidden="true"></div>
+    <div class="contact-page-inner">
+      <h1>Get in <em>touch.</em></h1>
+      <div class="contact-page-bottom">
+        <p>Engineering leadership, AI platform strategy, workshops, and speaking.</p>
+        <div class="contact-page-links">
+          <a class="contact-primary" href="mailto:sairambkrishnan@gmail.com"><span>Email me</span><span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/sairambkrishnan/" target="_blank" rel="noopener noreferrer"><span>Connect on LinkedIn</span><span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/SaiWebApps" target="_blank" rel="noopener noreferrer"><span>See the work on GitHub</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <SiteFooter />
+</SiteLayout>

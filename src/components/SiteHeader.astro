@@ -1,0 +1,20 @@
+---
+interface Props { active: 'home' | 'career' | 'projects' | 'research' | 'contact' }
+const { active } = Astro.props;
+const links = [
+  { id: 'home', label: 'Home', href: '/' },
+  { id: 'career', label: 'Career', href: '/career' },
+  { id: 'projects', label: 'Side projects', href: '/projects' },
+  { id: 'research', label: 'Research', href: '/research' },
+  { id: 'contact', label: 'Contact', href: '/contact' },
+] as const;
+---
+<header class="site-header" id="top">
+  <a class="identity" href="/" aria-label="Sairam Krishnan, home">
+    <img src="/assets/portrait-2026-mobile.webp" alt="" width="44" height="44" />
+    <span>Sairam Krishnan</span>
+  </a>
+  <nav class="primary-nav" aria-label="Main navigation">
+    {links.map(link => <a href={link.href} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}
+  </nav>
+</header>
