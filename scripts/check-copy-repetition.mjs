@@ -4,11 +4,13 @@ import { join, relative } from 'node:path';
 const root = new URL('../', import.meta.url).pathname;
 const dist = join(root, 'dist');
 const blocks = [];
+// Standalone pages copied from public/ carry their own markup and copy.
+const standalone = ['talks', 'projects/ondoway'].map(dir => join(dist, dir));
 
 function pages(dir) {
   for (const item of readdirSync(dir, { withFileTypes: true })) {
     const path = join(dir, item.name);
-    if (item.isDirectory()) pages(path);
+    if (item.isDirectory()) { if (!standalone.includes(path)) pages(path); }
     else if (item.name.endsWith('.html')) inspectPage(path);
   }
 }

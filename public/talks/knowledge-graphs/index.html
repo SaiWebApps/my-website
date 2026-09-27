@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge graphs</title>
+  <link rel="stylesheet" href="/talks/knowledge-graphs/css/styles.css">
+</head>
+<body>
+
+  <div id="graph-host">
+    <svg id="graph-svg">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 Z"></path>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <main id="stage" aria-live="polite"></main>
+
+  <nav id="rail" aria-label="Scenes"></nav>
+
+  <div id="live"></div>
+
+  <div id="nav">
+    <button id="nav-prev" title="Previous (←)">←</button>
+    <button id="nav-map" title="Scene map (Esc)">≡</button>
+    <button id="nav-next" title="Next (→)">→</button>
+  </div>
+
+  <section id="notes" aria-label="Speaker notes">
+    <div class="notes-head">Speaker notes (S to hide)</div>
+    <div class="notes-body"></div>
+    <button class="notes-close" aria-label="Close">×</button>
+  </section>
+
+  <section id="scene-map">
+    <div class="map-list"></div>
+    <button class="map-close" aria-label="Close">×</button>
+  </section>
+
+  <section id="help">
+    <div class="help-box">
+      <h2>Keys</h2>
+      <dl>
+        <dt>→ / ←</dt><dd>Next step or scene / previous scene</dd>
+        <dt>Enter</dt><dd>Ask, check, or retry in the example scenes</dd>
+        <dt>T</dt><dd>Switch between the two examples on a scene</dd>
+        <dt>V</dt><dd>Drafted by a model / verified by a person</dd>
+        <dt>1 – 4</dt><dd>Open a tile on the "Where this goes next" scene</dd>
+        <dt>S</dt><dd>Speaker notes</dd>
+        <dt>Esc</dt><dd>Scene map</dd>
+        <dt>?</dt><dd>This help</dd>
+      </dl>
+      <button class="help-close" aria-label="Close">×</button>
+    </div>
+  </section>
+
+  <script src="/talks/knowledge-graphs/vendor/d3.v7.min.js"></script>
+  <script src="/talks/knowledge-graphs/vendor/gsap.min.js"></script>
+  <script src="/talks/knowledge-graphs/js/content.js"></script>
+  <script src="/talks/knowledge-graphs/js/util.js"></script>
+  <script src="/talks/knowledge-graphs/js/graph.js"></script>
+  <script src="/talks/knowledge-graphs/js/scenes.js"></script>
+  <script src="/talks/knowledge-graphs/js/main.js"></script>
+</body>
+</html>

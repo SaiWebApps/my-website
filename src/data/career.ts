@@ -62,8 +62,9 @@ export const careerLedger: CareerEntry[] = [
   ]},
   { id: 'cmu-projects', label: 'Drone-Megaddon', org: 'Carnegie Mellon University', role: 'Projects · Drone-Megaddon', dates: 'Fall 2014', kind: 'aspect', parent: 'cmu', verb: 'built', time: 0.29, bullets: [
     'Implemented end-to-end cyberphysical system in which high-level, StarCraft-like RTS interface could be used to control drone swarms.',
-    'Krishnan, S., & Ting, D. (2014). Drone-Megaddon 2014: A Real-Time Strategy Interface for Managing Drone Swarms. engrXiv (archived 2026).',
-  ], links: [{ href: 'https://doi.org/10.31224/6924', label: 'doi:10.31224/6924' }] },
+    'Krishnan, S., & Ting, D. (2014). Drone-Megaddon: A Real-Time Strategy Interface for Managing Drone Swarms. engrXiv (archived 2026).',
+    'Krishnan, S., & Ting, D. (2026). Drone-Megaddon 2026: Co-Intelligent Swarm Control with Language and Vision Models. engrXiv.',
+  ], links: [{ href: 'https://doi.org/10.31224/6924', label: 'doi:10.31224/6924' }, { href: 'https://doi.org/10.31224/6987', label: 'doi:10.31224/6987' }] },
   { id: 'microsoft', label: 'Microsoft', org: 'Microsoft', role: 'Software Development Engineer, Windows OS Group', dates: 'Mar 2015 – Oct 2016', meta: 'Redmond, WA', kind: 'work', parent: 'cmu', verb: 'joined', time: 0.42, bullets: [
     "Cut Windows 10 Mobile Mail power consumption 4x against the Windows Phone 8 baseline, and set the app's power targets.",
     'Drove product decisions with telemetry: real-time dashboards, weekly guidance to leadership, and the data-derived default for the auto-sync interval.',
@@ -104,7 +105,7 @@ export const careerLedger: CareerEntry[] = [
   ]},
   { id: 'praxtera', label: 'Praxtera', org: 'Praxtera AI Institute', role: 'CTO and Curriculum Designer, AI/ML Executive Education', dates: 'Sep 2025 – Present', meta: 'Philadelphia-based AI executive-education firm · concurrent with the Apple role', kind: 'work', parent: 'wharton', verb: 'joined', time: 1, bullets: [
     'Taught AI strategy to C-suite leaders at HP, Morgan Lewis, PBS, and the Philadelphia Eagles, working from an executive curriculum built on original Wharton research to help executives evaluate, govern, and deploy AI.',
-    "Keynoted the Philadelphia Eagles' 12th annual Eagles Care Summit at Lincoln Financial Field in 2026, delivering \"AI for Impact\" to more than 300 community and business leaders.",
+    "Keynoted the Philadelphia Eagles' 12th annual Eagles Care Summit at Lincoln Financial Field on March 18, 2026, delivering \"AI for Impact\" to more than 300 community and business leaders.",
   ], links: eaglesSummitSources },
 ];
 

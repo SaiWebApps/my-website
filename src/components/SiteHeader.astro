@@ -1,11 +1,12 @@
 ---
-interface Props { active: 'home' | 'career' | 'projects' | 'research' | 'contact' }
+interface Props { active: 'home' | 'career' | 'projects' | 'research' | 'speaking' | 'contact' }
 const { active } = Astro.props;
 const links = [
   { id: 'home', label: 'Home', href: '/' },
   { id: 'career', label: 'Career', href: '/career' },
-  { id: 'projects', label: 'Side projects', href: '/projects' },
+  { id: 'projects', label: 'Side Projects', href: '/projects' },
   { id: 'research', label: 'Research', href: '/research' },
+  { id: 'speaking', label: 'Teaching & Speaking', href: '/speaking' },
   { id: 'contact', label: 'Contact', href: '/contact' },
   { id: 'resume', label: 'Resume', href: '/assets/Sairam_Krishnan_Resume.pdf', external: true },
 ] as const;

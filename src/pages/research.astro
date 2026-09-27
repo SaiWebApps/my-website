@@ -7,13 +7,13 @@ import '../styles/inner-pages.css';
 const linkLabels: Record<string, string> = {
   'who-trains-the-next-senior': 'Read the management paper',
   'ai-roi': 'Read the AI ROI paper',
-  'drone-megaddon': 'Read the swarm paper',
+  'drone-megaddon-2026': 'Read the 2026 swarm paper',
+  'drone-megaddon': 'Read the 2014 swarm paper',
 };
-const takeaways: Record<string, string> = {
-  'who-trains-the-next-senior': 'When AI takes on work that used to train junior engineers, managers need a deliberate way to build the judgment those engineers will need later.',
-  'ai-roi': 'Evaluate AI investments in stages: decide what value to test, what evidence earns more funding, and when to stop.',
-  'drone-megaddon': 'Give a drone swarm a high-level objective and let the system coordinate the individual vehicles.',
-};
+const profiles = [
+  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=iQAZ87gAAAAJ&hl=en' },
+  { label: 'ORCID', href: 'https://orcid.org/0009-0004-2626-1273' },
+];
 ---
 <SiteLayout title="Research — Sairam Krishnan" description="Research by Sairam Krishnan on AI investment, engineering management, and autonomous systems.">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -22,10 +22,11 @@ const takeaways: Record<string, string> = {
     <section class="inner-hero simple-hero" aria-labelledby="research-title"><h1 id="research-title" data-reveal>Research.</h1></section>
     <section class="research-list" aria-label="Research papers">
       {research.map(paper => <article class="research-row" id={paper.slug} data-reveal>
-        <div><span class="research-venue">{paper.venue}</span><h2>{paper.title}</h2><p>{paper.thesis}</p><p class="research-takeaway"><strong>In plain language</strong>{takeaways[paper.slug]}</p></div>
+        <div><span class="research-venue">{paper.venue}</span><h2>{paper.title}</h2>{paper.subtitle && <p class="research-subtitle">{paper.subtitle}</p>}<p class="research-authors">{paper.authors}</p><p class="research-summary">{paper.summary}</p></div>
         {paper.href && <a href={paper.href} target="_blank" rel="noopener noreferrer" aria-label={`Read ${paper.title}`}>{linkLabels[paper.slug]} ↗</a>}
       </article>)}
     </section>
+    <nav class="archive-link research-profiles" aria-label="Research profiles">{profiles.map(profile => <a href={profile.href} target="_blank" rel="noopener noreferrer">{profile.label} ↗</a>)}</nav>
   </main>
   <SiteFooter />
 </SiteLayout>

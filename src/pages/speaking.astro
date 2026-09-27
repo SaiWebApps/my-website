@@ -1,0 +1,41 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { talks } from '../data/speaking';
+import '../styles/inner-pages.css';
+---
+<SiteLayout title="Teaching & Speaking — Sairam Krishnan" description="Talks, courses, and workshops by Sairam Krishnan for Atos, HP, Morgan Lewis, PBS, the Philadelphia Eagles, and Carnegie Mellon.">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <SiteHeader active="speaking" />
+  <main id="main" class="inner-page">
+    <section class="inner-hero simple-hero" aria-labelledby="speaking-title"><h1 id="speaking-title" data-reveal>Teaching &amp; Speaking.</h1></section>
+    <section class="research-list" aria-label="Talks and teaching">
+      {talks.map(talk => <article class="research-row" id={talk.id} data-reveal>
+        <div>
+          <span class="research-venue">{talk.org} · {talk.date}</span>
+          <h2>{talk.title}</h2>
+          {talk.subtitle && <p class="research-subtitle">{talk.subtitle}</p>}
+          <p class="research-summary">{talk.summary}</p>
+          {talk.engagements && <div class="engagements">
+            {talk.engagements.map(engagement => <section class="engagement" id={engagement.id} aria-labelledby={`${engagement.id}-title`}>
+              <span class="research-venue">{engagement.date}</span>
+              <h3 id={`${engagement.id}-title`}>{engagement.org}</h3>
+              <p class="research-summary">{engagement.lead}</p>
+              {engagement.parts && <div class="engagement-parts">
+                {engagement.parts.map(part => <div>
+                  <h4>{part.title}{part.date && <span> · {part.date}</span>}</h4>
+                  {part.text && <p class="research-summary">{part.text}</p>}
+                  {part.steps && <ol>{part.steps.map(step => <li>{step}</li>)}</ol>}
+                </div>)}
+              </div>}
+              {engagement.links && <div class="engagement-links">{engagement.links.map(link => <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗</a>)}</div>}
+            </section>)}
+          </div>}
+        </div>
+        {talk.link && <a href={talk.link.href} target="_blank" rel="noopener">{talk.link.label} ↗</a>}
+      </article>)}
+    </section>
+  </main>
+  <SiteFooter />
+</SiteLayout>

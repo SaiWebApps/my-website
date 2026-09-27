@@ -41,7 +41,11 @@
       },
       {
         "name": "vsccc",
-        "description": "VS Code Theme Carousel — automatically switches your color theme on a schedule."
+        "description": "VS Code Theme Carousel — automatically switches your color theme on a schedule.",
+        "registry": {
+          "label": "VS Code Marketplace",
+          "href": "https://marketplace.visualstudio.com/items?itemName=sairambkrishnan.vsccc"
+        }
       },
       {
         "name": "AppleScriptUtils",
@@ -53,7 +57,11 @@
       },
       {
         "name": "claude-code-profile-switcher",
-        "description": "A VS Code extension to switch between multiple Claude Code configuration profiles via symlink management."
+        "description": "A VS Code extension to switch between multiple Claude Code configuration profiles via symlink management.",
+        "registry": {
+          "label": "VS Code Marketplace",
+          "href": "https://marketplace.visualstudio.com/items?itemName=sairambkrishnan.claude-code-profile-switcher"
+        }
       },
       {
         "name": "ThemeSwitcher",
@@ -94,7 +102,11 @@
       },
       {
         "name": "PySynonymsCrawler",
-        "description": "A Python utility that fetches synonyms for a specified word."
+        "description": "A Python utility that fetches synonyms for a specified word.",
+        "registry": {
+          "label": "PyPI",
+          "href": "https://pypi.org/project/synonymscrawler/"
+        }
       },
       {
         "name": "Heroku-Synonyms-Crawler",
@@ -102,7 +114,11 @@
       },
       {
         "name": "RandomWordGenerator",
-        "description": "A Python library for generating random words."
+        "description": "A Python library for generating random words.",
+        "registry": {
+          "label": "PyPI",
+          "href": "https://pypi.org/project/randomwordgenerator/"
+        }
       },
       {
         "name": "node-linkedin-scraper",
@@ -114,7 +130,11 @@
       },
       {
         "name": "Parallelax",
-        "description": "A library that leverages the NodeJS async API to execute multiple Blockspring functions in parallel."
+        "description": "A library that leverages the NodeJS async API to execute multiple Blockspring functions in parallel.",
+        "registry": {
+          "label": "npm",
+          "href": "https://www.npmjs.com/package/parallelax"
+        }
       },
       {
         "name": "Spring-MVC-Survey",
