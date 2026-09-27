@@ -258,7 +258,7 @@ export const speakingTopics: SpeakingTopic[] = [
 ];
 
 export const career = [
-  ['2021–Present', 'Apple', 'Principal Software Engineer, AI/ML platform lead', claim('Apple, Principal Software Engineer and AI/ML platform lead, 2021–Present')],
+  ['2021–Present', 'Apple', 'Senior Engineering Leader, AI/ML', claim('Apple, Principal Software Engineer and AI/ML platform lead, 2021–Present')],
   ['2018–2021', 'Amazon', 'Senior Software Engineer, Alexa', claim('Amazon, Senior Software Engineer for Alexa, 2018–2021')],
   ['2016–2018', 'Susquehanna International Group', 'Senior Financial Data Engineer', claim('Susquehanna International Group, Senior Financial Data Engineer, 2016–2018')],
   ['2015–2016', 'Microsoft', 'Software Development Engineer, Windows OS Group', claim('Microsoft, Software Development Engineer in the Windows OS Group, 2015–2016')],

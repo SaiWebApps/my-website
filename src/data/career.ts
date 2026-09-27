@@ -81,7 +81,7 @@ export const careerLedger: CareerEntry[] = [
     'Owned operational excellence, driving the weekly issue count from 40 to 10 and re-engineering the new-user registration flow to cut peak-holiday customer issues tenfold.',
     "Led capacity planning for Prime Day and Black Friday, forecasting hardware demand and winning leadership's commitment to expand the fleet ahead of peak.",
   ]},
-  { id: 'apple', label: 'Apple', org: 'Apple', role: 'Principal Engineer & Senior Engineering Leader, Knowledge Graph Platform', dates: 'Feb 2021 – Present', meta: 'Apple Media Products · Seattle, WA', kind: 'work', parent: 'amazon', verb: 'joined', time: 0.82, bullets: [
+  { id: 'apple', label: 'Apple', org: 'Apple', role: 'Senior Engineering Leader, Knowledge Graph Platform', dates: 'Feb 2021 – Present', meta: 'Apple Media Products · Seattle, WA', kind: 'work', parent: 'amazon', verb: 'joined', time: 0.82, bullets: [
     'Led an eight-engineer team across Seattle, London, and partner sites in Europe and Latin America, reporting to the engineering director.',
     "Led architecture and cross-functional delivery of Apple's media knowledge graph, the canonical model unifying 15+ sources to power search, recommendations, and discovery for over 100 million users.",
     'Mentored engineers to promotion, shaped performance reviews, and drove hiring; set the design-review and CI/CD standards that lifted team velocity 30% and cut production incidents 45%.',
