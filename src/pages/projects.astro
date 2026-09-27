@@ -4,6 +4,7 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { ventures } from '../data/content';
 import githubClusters from '../data/githubClusters.json';
+import { personId, SITE } from '../data/seo';
 import '../styles/inner-pages.css';
 
 const repos: Record<string, string> = {
@@ -21,8 +22,16 @@ const descriptions: Record<string, string> = {
   lore: 'Cross-project dependency analysis for software teams.',
   crucible: 'Engineering checks for AI coding agents.',
 };
+const schema = ventures.map(project => ({
+  '@type': 'SoftwareSourceCode',
+  '@id': `${SITE}/projects#${project.slug}`,
+  name: project.name,
+  description: descriptions[project.slug],
+  codeRepository: repos[project.slug],
+  author: { '@id': personId },
+}));
 ---
-<SiteLayout title="Side Projects — Sairam Krishnan" description="Products and tools built by Sairam Krishnan, including Ondoway, Persuaider, DependIQ, and Crucible.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Side Projects — Sairam Krishnan" description="Products and tools built by Sairam Krishnan, including Ondoway, Persuaider, DependIQ, and Crucible.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="projects" />
   <main id="main" class="inner-page">

@@ -2,12 +2,13 @@
 // (Google Drive, Ventures/Praxtera), Sairam's own account of the PBS session, and src/data/career.ts.
 import { careerById, eaglesSummitSources } from './career';
 
-export type TalkPart = { title: string; date?: string; text?: string; steps?: string[] };
-export type Engagement = { id: string; org: string; date: string; lead: string; parts?: TalkPart[]; links?: { href: string; label: string }[] };
+export type TalkPart = { title: string; date?: string; startDate?: string; text?: string; steps?: string[] };
+export type Engagement = { id: string; org: string; date: string; startDate?: string; eventName?: string; location?: string; lead: string; parts?: TalkPart[]; links?: { href: string; label: string }[] };
 export type Talk = {
   id: string;
   org: string;
   date: string;
+  startDate?: string;
   title: string;
   subtitle?: string;
   summary: string;
@@ -20,6 +21,7 @@ export const talks: Talk[] = [
     id: 'atos',
     org: 'Atos · Independent',
     date: 'Sept 3, 2026',
+    startDate: '2026-09-03',
     title: 'Knowledge Graphs, Then Small Language Models',
     summary: 'Walked through what a knowledge graph is, how it enriches questions before they reach a model, and how it checks the model’s answer afterward, then where graphs go next: sub-graphs by topic, failure graphs, codified expertise, and the graph behind an API. Then turned to small language models: what they are, when to go small and when to go big, a live setup of a local model in five minutes, and how they change the way people work.',
     link: { href: '/talks/knowledge-graphs', label: 'Open the deck' },
@@ -35,6 +37,9 @@ export const talks: Talk[] = [
         id: 'eagles',
         org: 'Philadelphia Eagles',
         date: 'Mar 18, 2026',
+        startDate: '2026-03-18',
+        eventName: 'AI for Impact · Eagles Care Summit',
+        location: 'Lincoln Financial Field',
         lead: careerById.praxtera.bullets[1],
         links: eaglesSummitSources,
       },
@@ -42,6 +47,8 @@ export const talks: Talk[] = [
         id: 'pbs',
         org: 'PBS',
         date: 'Feb 27, 2026',
+        startDate: '2026-02-27',
+        eventName: 'AI strategy session · PBS',
         lead: 'Designed and taught an AI strategy session for PBS.',
         parts: [
           { title: 'AI foundations', text: 'What generative AI is and isn’t, how large language models work, and where they fail.' },
@@ -59,6 +66,8 @@ export const talks: Talk[] = [
         id: 'morgan-lewis',
         org: 'Morgan Lewis',
         date: 'Jan 20, 2026',
+        startDate: '2026-01-20',
+        eventName: 'AI adoption and change-management workshop · Morgan Lewis',
         lead: 'Designed and taught an AI adoption and change-management workshop for the firm’s trainers and champions.',
         parts: [
           { title: 'Why adoption fails', text: 'The innovation adoption curve, Deloitte Business Chemistry, and the MAPPR model for diagnosing resistance: Motivation, Ability, Permission, Proof, and Reinforcement.' },
@@ -71,8 +80,8 @@ export const talks: Talk[] = [
         date: 'Oct – Nov 2025',
         lead: 'Designed and taught a two-session course at HP.',
         parts: [
-          { title: 'AI Foundations for Digital Innovators', date: 'Oct 2025', text: 'How large language models work and where they fail, from bias to hallucination; choosing among ChatGPT, Gemini, Claude, Copilot, Perplexity, and NotebookLM; the H4W and COSTAR prompt frameworks; and AI across the software development lifecycle. Participants rewrote one message for four audiences, built a slide deck from three reports, and generated a clickable prototype in Gemini.' },
-          { title: 'Applying AI in IT and Digital Solutions', date: 'Nov 12, 2025', text: 'Retrieval-augmented generation, vector databases, and knowledge graphs; custom GPTs; the difference between AI workflows and agents, and a checklist for when an agent is worth building; and AI governance. Participants built a business-requirements translator and designed an IT troubleshooting agent.' },
+          { title: 'AI Foundations for Digital Innovators', date: 'Oct 2025', startDate: '2025-10', text: 'How large language models work and where they fail, from bias to hallucination; choosing among ChatGPT, Gemini, Claude, Copilot, Perplexity, and NotebookLM; the H4W and COSTAR prompt frameworks; and AI across the software development lifecycle. Participants rewrote one message for four audiences, built a slide deck from three reports, and generated a clickable prototype in Gemini.' },
+          { title: 'Applying AI in IT and Digital Solutions', date: 'Nov 12, 2025', startDate: '2025-11-12', text: 'Retrieval-augmented generation, vector databases, and knowledge graphs; custom GPTs; the difference between AI workflows and agents, and a checklist for when an agent is worth building; and AI governance. Participants built a business-requirements translator and designed an IT troubleshooting agent.' },
         ],
       },
     ],

@@ -3,9 +3,31 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { talks } from '../data/speaking';
+import { personId, SITE } from '../data/seo';
 import '../styles/inner-pages.css';
+
+const event = (id: string, name: string, startDate: string, description: string, organizer: string, extra: Record<string, unknown> = {}) => ({
+  '@type': 'EducationEvent',
+  '@id': `${SITE}/speaking#${id}`,
+  url: `${SITE}/speaking#${id}`,
+  name,
+  startDate,
+  description,
+  organizer: { '@type': 'Organization', name: organizer },
+  performer: { '@id': personId },
+  ...extra,
+});
+const schema = talks.flatMap(talk => [
+  ...(talk.startDate ? [event(talk.id, talk.title, talk.startDate, talk.summary, talk.org.split(' · ')[0], talk.link ? { workFeatured: { '@type': 'PresentationDigitalDocument', name: talk.title, url: `${SITE}${talk.link.href}` } } : {})] : []),
+  ...(talk.engagements ?? []).flatMap(engagement => {
+    const sessions = engagement.parts?.filter(part => part.startDate) ?? [];
+    if (sessions.length) return sessions.map((part, i) => event(`${engagement.id}-${i + 1}`, `${part.title} · ${engagement.org}`, part.startDate!, part.text ?? engagement.lead, engagement.org));
+    if (!engagement.startDate || !engagement.eventName) return [];
+    return [event(engagement.id, engagement.eventName, engagement.startDate, engagement.lead, engagement.org, engagement.location ? { location: { '@type': 'Place', name: engagement.location } } : {})];
+  }),
+]);
 ---
-<SiteLayout title="Teaching & Speaking — Sairam Krishnan" description="Talks, courses, and workshops by Sairam Krishnan for Atos, HP, Morgan Lewis, PBS, the Philadelphia Eagles, and Carnegie Mellon.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Teaching & Speaking — Sairam Krishnan" description="Talks, courses, and workshops by Sairam Krishnan for Atos, HP, Morgan Lewis, PBS, the Philadelphia Eagles, and Carnegie Mellon.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="speaking" />
   <main id="main" class="inner-page">

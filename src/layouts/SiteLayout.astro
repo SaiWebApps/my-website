@@ -3,8 +3,28 @@ import '@fontsource-variable/archivo';
 import '@fontsource-variable/martian-mono';
 import '../styles/site.css';
 
-interface Props { title: string; description: string }
-const { title, description } = Astro.props;
+import { person, website, pageUrl, portrait, websiteId, personId } from '../data/seo';
+
+interface Props {
+  title: string;
+  description: string;
+  pageType?: 'WebPage' | 'ProfilePage' | 'ContactPage' | 'CollectionPage';
+  schema?: Record<string, unknown>[];
+}
+const { title, description, pageType = 'WebPage', schema = [] } = Astro.props;
+const url = pageUrl(Astro.url.pathname);
+const page = {
+  '@type': pageType,
+  '@id': url,
+  url,
+  name: title,
+  description,
+  inLanguage: 'en',
+  isPartOf: { '@id': websiteId },
+  about: { '@id': personId },
+  ...(pageType === 'ProfilePage' ? { mainEntity: { '@id': personId } } : {}),
+};
+const structuredData = { '@context': 'https://schema.org', '@graph': [person, website, page, ...schema] };
 ---
 <!doctype html>
 <html lang="en">
@@ -13,8 +33,24 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0b1c27" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
     <title>{title}</title>
+    <meta property="og:site_name" content="Sairam Krishnan" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={pageType === 'ProfilePage' ? 'profile' : 'website'} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={portrait.url} />
+    <meta property="og:image:width" content={String(portrait.width)} />
+    <meta property="og:image:height" content={String(portrait.height)} />
+    <meta property="og:image:alt" content={portrait.alt} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={portrait.url} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData).replaceAll('<', '\\u003c')} />
     <script is:inline>document.documentElement.classList.add('js')</script>
   </head>
   <body>

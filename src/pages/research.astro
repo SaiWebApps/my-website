@@ -3,6 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { research } from '../data/content';
+import { personId, fullTitle, profiles } from '../data/seo';
 import '../styles/inner-pages.css';
 const linkLabels: Record<string, string> = {
   'who-trains-the-next-senior': 'Read the management paper',
@@ -10,12 +11,27 @@ const linkLabels: Record<string, string> = {
   'drone-megaddon-2026': 'Read the 2026 swarm paper',
   'drone-megaddon': 'Read the 2014 swarm paper',
 };
-const profiles = [
-  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=iQAZ87gAAAAJ&hl=en' },
-  { label: 'ORCID', href: 'https://orcid.org/0009-0004-2626-1273' },
+const schema = research.map(paper => {
+  const [publisher, year] = paper.venue.split(', ');
+  return {
+    '@type': 'ScholarlyArticle',
+    '@id': paper.href,
+    url: paper.href,
+    headline: fullTitle(paper.title, paper.subtitle),
+    name: paper.title,
+    description: paper.summary,
+    datePublished: year,
+    publisher: { '@type': 'Organization', name: publisher },
+    identifier: { '@type': 'PropertyValue', propertyID: 'DOI', value: paper.href?.replace('https://doi.org/', '') },
+    author: paper.authors.split(', ').map(name => name === 'Sairam Krishnan' ? { '@id': personId } : { '@type': 'Person', name }),
+  };
+});
+const profileLinks = [
+  { label: 'Google Scholar', href: profiles.scholar },
+  { label: 'ORCID', href: profiles.orcid },
 ];
 ---
-<SiteLayout title="Research — Sairam Krishnan" description="Research by Sairam Krishnan on AI investment, engineering management, and autonomous systems.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Research — Sairam Krishnan" description="Research by Sairam Krishnan on AI investment, engineering management, and autonomous systems.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="research" />
   <main id="main" class="inner-page">
@@ -26,7 +42,7 @@ const profiles = [
         {paper.href && <a href={paper.href} target="_blank" rel="noopener noreferrer" aria-label={`Read ${paper.title}`}>{linkLabels[paper.slug]} ↗</a>}
       </article>)}
     </section>
-    <nav class="archive-link research-profiles" aria-label="Research profiles">{profiles.map(profile => <a href={profile.href} target="_blank" rel="noopener noreferrer">{profile.label} ↗</a>)}</nav>
+    <nav class="archive-link research-profiles" aria-label="Research profiles">{profileLinks.map(profile => <a href={profile.href} target="_blank" rel="noopener noreferrer">{profile.label} ↗</a>)}</nav>
   </main>
   <SiteFooter />
 </SiteLayout>
