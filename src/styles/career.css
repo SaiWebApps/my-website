@@ -5,6 +5,8 @@
 .career-tabs a{display:block;padding:1.25rem 0;text-decoration:none;font-size:1.05rem;color:#bdceca;border-bottom:3px solid transparent}
 .career-tabs a:hover,.career-tabs a:focus-visible{color:#fff}
 .career-tabs a[aria-selected=true]{color:#d8fa77;border-color:#d8fa77;font-weight:700}
+.career-tabs .career-tab-resume{margin-left:auto;color:#d8fa77;font-weight:600}
+.career-tabs .career-tab-resume:hover,.career-tabs .career-tab-resume:focus-visible{color:#fff}
 .career-panel{padding:2.7rem clamp(1.25rem,7.5vw,8.5rem) 6rem}
 .js .career-panel:not(.active){display:none}
 

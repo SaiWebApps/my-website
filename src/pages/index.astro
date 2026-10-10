@@ -16,10 +16,10 @@ const proof = [
 });
 
 const chapters = [
-  { id: 'career', title: 'Career', description: 'Carnegie Mellon, Microsoft, SIG, Amazon, Apple, Wharton, and Praxtera. The roles, projects, and people involved.' },
+  { id: 'career', title: 'Career', description: 'Carnegie Mellon, Microsoft, Amazon, Apple, Wharton, and Praxtera. The roles, systems, and engineering leadership.' },
   { id: 'projects', title: 'Side Projects', description: `${ventures.length} products and tools I built outside my primary roles, including Ondoway, Persuaider, Lore / DependIQ, and Crucible.` },
   { id: 'research', title: 'Research', description: `${research.length} papers on AI investment, engineering teams, and machine learning systems.` },
-  { id: 'speaking', title: 'Teaching & Speaking', description: 'Talks, courses, and workshops for Atos, HP, Morgan Lewis, PBS, the Philadelphia Eagles, and Carnegie Mellon.' },
+  { id: 'services', title: 'Services', description: 'AI investment reviews, data readiness, architecture audits, evals, coding-agent rollouts, and executive masterclasses, with prices.' },
 ];
 
 const closing = [
@@ -75,7 +75,7 @@ const closing = [
       </div>
     </section>
 
-    <section class="chapters" aria-label="Career, Side Projects, Research, and Teaching & Speaking">
+    <section class="chapters" aria-label="Career, Side Projects, Research, and Services">
       {chapters.map((chapter, i) => <a class={`chapter-card chapter-${chapter.id}`} href={`/${chapter.id}`} data-reveal style={`--i:${i}`}>
         <span class="chapter-glow" aria-hidden="true"></span>
         <h2>{chapter.title}</h2>

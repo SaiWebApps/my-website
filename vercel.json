@@ -38,6 +38,11 @@
   ],
   "redirects": [
     {
+      "source": "/speaking",
+      "destination": "/services#workshops",
+      "permanent": true
+    },
+    {
       "source": "/ventures",
       "destination": "/projects",
       "permanent": true
