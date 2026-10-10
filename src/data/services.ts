@@ -1,231 +1,146 @@
-// Sources: Sairam's resume, published SSRN research, Apple & Amazon platform architecture,
-// and executive education curricula taught at HP, PBS, Morgan Lewis, and the Philadelphia Eagles.
+// Sources: src/data/career.ts, src/data/content.ts, src/data/speaking.ts.
+// Prices: sourced 2024–2026 US market rates and amounts clients paid for past sessions (kept off the site).
 
-export type Stage = 'Strategy & ROI' | 'Systems & Scale' | 'Agentic AI & Teams' | 'Masterclasses';
 export type Figure = { value: string; label: string };
-export type Step = { title: string; text: string };
 
-export interface ServicePackage {
+export interface Service {
   id: string;
-  stage: Exclude<Stage, 'Masterclasses'>;
   name: string;
-  tag?: string;
-  ask: string;
-  askAs?: string;
-  problem: string;
-  prices: Figure[];
-  steps: Step[];
-  result: string;
-  resultLabel?: string;
+  price: number;
+  unit?: 'MON';
+  priceLabel: string;
+  length: string;
+  abstract: string;
   figures: Figure[];
   proof: string[];
-  quote?: { text: string; source: string };
   links?: { href: string; label: string; external?: boolean }[];
-  offer: { min: number; max: number; unit?: 'MON' };
 }
 
-export const stages: Stage[] = ['Strategy & ROI', 'Systems & Scale', 'Agentic AI & Teams', 'Masterclasses'];
-
-export const packages: ServicePackage[] = [
+export const services: Service[] = [
   {
-    id: 'payoff',
-    stage: 'Strategy & ROI',
-    name: 'AI Payoff Review',
-    tag: 'Capital allocation & ROI',
-    ask: 'Which AI projects will pay off?',
-    problem: 'Everyone says we need generative AI. We can’t tell which initiatives deserve funding, how much capital to commit, or how to measure real enterprise payback.',
-    prices: [
-      { value: '$25,000–$40,000', label: 'fixed fee' },
-      { value: '2–3', label: 'weeks' },
-    ],
-    steps: [
-      { title: 'SCALE readiness', text: 'Pre-financial sanity filter: categorize every initiative into Go, No-Go or Not Yet before building complex models.' },
-      { title: 'Value-driver tree', text: 'Trace each use case directly to the P&L lines it moves: cost avoidance, cycle-time compression, or net-new revenue.' },
-      { title: '8-vector risk discounting', text: 'Calibrate objective discount rates across data quality, model drift, inference unit economics, regulation, vendor dependency, and talent.' },
-      { title: 'Stage-gated tranches', text: 'Structure capital releases across proof-of-concept, pilot, and production scale, re-scoring risk at every gate.' },
-      { title: 'Executive decision scorecard', text: 'Deliver graded A–F capital allocation recommendations with explicit trigger conditions for executive sign-off.' },
-    ],
-    result: 'A board-ready decision scorecard for every AI initiative on the table, with stage-gated release criteria for every dollar.',
-    figures: [{ value: '8', label: 'public-company AI deployments the framework was applied to, from Salesforce Agentforce and Spotify to JPMorgan COiN' }],
-    proof: [
-      'Built on the Multi-Layer Framework for Evaluating the Return on Investment of AI Projects (Krishnan, Hepp and Gandhi, SSRN, 2026).',
-      'Taught AI strategy and capital allocation to C-suite leaders at HP, PBS, and Morgan Lewis, and keynoted the Eagles Care Summit for the Philadelphia Eagles.',
-    ],
-    links: [{ href: 'https://doi.org/10.2139/ssrn.6732598', label: 'The framework paper', external: true }],
-    offer: { min: 25000, max: 40000 },
+    id: 'call',
+    name: 'Architecture Call',
+    price: 500,
+    priceLabel: 'from',
+    length: '60 minutes',
+    abstract: 'One hour on the design, scaling problem, data model, or AI build your team is stuck on. Bring the doc or the diagram; leave with a recommendation.',
+    figures: [{ value: '100M+', label: 'users on the Apple media knowledge graph he architected' }],
+    proof: ['Led architecture and cross-functional delivery of Apple’s media knowledge graph, the canonical model unifying 15+ sources to power search, recommendations, and discovery.'],
   },
   {
-    id: 'data',
-    stage: 'Strategy & ROI',
-    name: 'Data Before AI',
-    tag: 'Governance & knowledge graphs',
-    ask: 'Our data isn’t ready for AI',
-    problem: 'We want an AI that understands our business, but our data sits across disconnected silos, RAG pipelines hallucinate, and sensitive data cannot leak to third-party model providers.',
-    prices: [
-      { value: '$30,000–$50,000', label: 'fixed fee' },
-      { value: '3–4', label: 'weeks' },
-    ],
-    steps: [
-      { title: 'Domain ontology modeling', text: 'Define strict entity schemas and relational models so AI reasons over structured business logic rather than ungrounded text chunks.' },
-      { title: 'Zero-leakage governance', text: 'Enforce access controls, PII isolation, and data-boundary rules at the retrieval layer before records ever touch a model context window.' },
-      { title: 'Graph vs. flat selection', text: 'Deploy knowledge graphs where relational multi-hop reasoning matters; maintain flat stores where simple semantic search suffices.' },
-      { title: 'Entity resolution & deduplication', text: 'Pair semantic similarity with clustering to deduplicate dirty records across disparate enterprise sources.' },
-      { title: 'Private & local deployment', text: 'Architect self-hosted and small language model pipelines for sensitive enterprise datasets that cannot leave on-prem infrastructure.' },
-    ],
-    result: 'A hardened enterprise data model, zero-leakage access boundaries, and an architectural blueprint for your primary AI use case.',
+    id: 'review',
+    name: 'Design Review',
+    price: 2500,
+    priceLabel: 'from',
+    length: '1 week',
+    abstract: 'A written review of one design doc before your team commits to building it: data models, service boundaries, failure modes, and scale. Every risk is ranked with a proposed fix, and the week closes with a call to walk your engineers through it.',
     figures: [
-      { value: '15+', label: 'sources unified in Apple’s media knowledge graph' },
-      { value: '100M+', label: 'users served daily by that graph' },
-      { value: '40%', label: 'gain in data quality from his entity-resolution system' },
+      { value: '45%', label: 'fewer production incidents under the design-review and CI/CD standards he set at Apple' },
+      { value: '30%', label: 'higher team velocity under the same standards' },
     ],
-    proof: [
-      'Architected the canonical knowledge graph model powering search, recommendations, and discovery for 100M+ users.',
-      'Re-architected graph generation from Spark batch jobs onto an event-driven Flink, Kafka, and Cassandra streaming platform.',
-      'Delivered executive briefings on Knowledge Graphs and Small Language Models for enterprise leaders at Atos.',
-    ],
-    offer: { min: 30000, max: 50000 },
+    proof: ['Set his Apple team’s design-review and CI/CD standards, and the shared Protobuf contracts adopted across the knowledge graph platform.'],
   },
   {
-    id: 'audit',
-    stage: 'Systems & Scale',
-    name: 'Architecture & Design Audit',
-    tag: 'High-scale systems de-risking',
-    ask: 'Is this architecture sound?',
-    problem: 'We are about to commit months of engineering to a new distributed architecture—or our existing system is buckling under scale and incident rates are climbing.',
-    prices: [
-      { value: '$7,500', label: 'single design' },
-      { value: '1', label: 'week' },
-      { value: '$25,000–$35,000', label: 'full system' },
-      { value: '2–3', label: 'weeks' },
-    ],
-    steps: [
-      { title: 'Data models & boundaries', text: 'Validate inputs, outputs, schemas, and strict single-responsibility boundaries across every service boundary.' },
-      { title: 'One clean architecture', text: 'Translate sprawling microservice complexity into a single, unambiguous end-to-end system diagram.' },
-      { title: 'Cycle & deadlock elimination', text: 'Identify every cyclic dependency, cascading retry loop, and runaway async process, giving each an explicit termination guarantee.' },
-      { title: 'Scale & contract rationalization', text: 'Standardize serialization onto unified Protobuf/gRPC contracts and eliminate multi-format translation friction.' },
-      { title: 'Batch-to-stream migration', text: 'Identify bottleneck batch processing and architect migration paths to event-driven Kafka and Flink streaming.' },
-      { title: 'Deterministic fail-loud contracts', text: 'Ensure AI and async components return exactly one of three typed responses: a validated result, a clarifying query, or a clean refusal.' },
-    ],
-    result: 'Prioritized risk findings, an architectural remediation blueprint, and a live red-team review session with your senior engineers.',
-    figures: [
-      { value: '45%', label: 'fewer production incidents under his design-review and CI/CD standards at Apple' },
-      { value: '30%', label: 'higher engineering velocity under the same standards' },
-      { value: '$40M', label: 'saved annually by the Alexa platform he designed' },
-    ],
-    proof: [
-      'Set the shared Protobuf contracts adopted across Apple’s knowledge graph platform.',
-      'Co-designed Drone-Megaddon 2026 with Daniel Ting, establishing fail-loud agent language contracts that mandate validated command sequences, clarifying questions, or explicit refusals.',
-    ],
-    offer: { min: 7500, max: 35000 },
-  },
-  {
-    id: 'evals',
-    stage: 'Systems & Scale',
-    name: 'Prove It Works',
-    tag: 'Production evals & AI judges',
-    ask: 'Is our AI getting better?',
-    problem: 'Our AI feature demos well, but users report erratic drift in production. We cannot tell whether this week’s prompt, model, or pipeline change made things better or worse.',
-    prices: [
-      { value: '$25,000–$40,000', label: 'fixed fee' },
-      { value: '2–3', label: 'weeks' },
-    ],
-    steps: [
-      { title: 'Algorithmic scripts first', text: 'Enforce deterministic code checks for everything verifiable (types, schemas, banned strings, latency) before calling an LLM.' },
-      { title: 'Curated golden dataset', text: 'Assemble the canonical ground-truth benchmark suite of challenging real-world queries paired with verified human expectations.' },
-      { title: 'Evidentiary AI judges', text: 'Design strict Pass/Fail judge harnesses that mandate verbatim citation of transcript evidence, rejecting vague vibes.' },
-      { title: 'Overturn tracking & calibration', text: 'Instrument telemetry to track human-overturned verdicts, automatically flagging and retiring drifting judges.' },
-      { title: 'Automated CI regression gates', text: 'Embed evaluation runs into your deployment pipeline so no prompt or agent updates ship without passing score thresholds.' },
-    ],
-    result: 'An automated evaluation harness integrated into CI that proves in hard numbers whether your AI improved before it touches users.',
-    figures: [],
-    proof: [
-      'Wrote Ondoway’s tour-quality rubric and tests that each fail if the check they name is deleted, plus golden tests scoring tours against human-curated benchmarks.',
-      'Built Persuaider’s AI judge, which analyzes full negotiation transcripts and scores multi-framework strategic moves.',
-      'Engineered the Peeraxis evidentiary judge architecture: strict Pass/Fail verification backed by quoted transcript evidence, with overturn telemetry to retire drifting judges.',
-    ],
-    links: [{ href: '/projects#ondoway', label: 'Ondoway' }, { href: '/projects#persuaider', label: 'Persuaider' }],
-    offer: { min: 25000, max: 40000 },
-  },
-  {
-    id: 'agents',
-    stage: 'Agentic AI & Teams',
-    name: 'Grow It Like a Tree',
-    tag: '30 days to coding agents that work',
-    ask: 'Our coding agents make a mess',
-    askAs: 'the 30-day rollout',
-    problem: 'We ship more code than ever with AI assistants, but incidents are up, review backlogs are crushing seniors, and ungrounded code is compounding technical debt.',
-    prices: [
-      { value: '$35,000–$50,000', label: 'per team' },
-      { value: '30', label: 'days' },
-    ],
-    steps: [
-      { title: 'Week 1 · Failure mapping', text: 'Map the codebase and isolate where AI-generated errors and regression clusters are concentrating.' },
-      { title: 'Week 2 · Codebase grounding', text: 'Ground agents in source reality: connect a code graph, enforce whole-file context reading, ban hallucinated snippets, lock down environment scripts, and configure adversarial guardrails (Crucible).' },
-      { title: 'Week 3 · The single-anchor use case', text: 'Anchor the workflow to one critical operational capability (such as on-call trace and log triage) until it succeeds 100% of the time.' },
-      { title: 'Week 4 · Verification loop', text: 'Establish the self-healing error database (LEARNINGS loop). Realign engineering incentives from lines generated to 30-day verification survival.' },
-    ],
-    result: 'An incident blast-radius map, grounded agent tooling that works reliably every time, and an engineering team trained on verification hygiene.',
-    figures: [],
-    proof: [
-      'Built and shipped the production LLM ops assistant his Apple team uses daily to debug logs, metrics, and traces over MCP.',
-      'Created DependIQ (mapping dependency blast-radii across repo graphs) and Crucible (adversarial QA and safety hooks for coding agents).',
-    ],
-    quote: { text: 'The scarce resource is no longer the capacity to produce code. It is the capacity to verify it.', source: 'Krishnan and Thokala, Who Trains the Next Senior? (SSRN, 2026)' },
-    offer: { min: 35000, max: 50000 },
-  },
-  {
-    id: 'office-hours',
-    stage: 'Agentic AI & Teams',
-    name: 'Fractional Principal Architect',
-    tag: 'Executive advisory & office hours',
-    ask: 'We need a principal architect on call',
-    problem: 'We don’t need a $600k+ full-time Principal Engineer. We need seasoned architectural judgment on call when distributed systems, data models, or AI designs get hard.',
-    prices: [
-      { value: '$5,000', label: 'a month · Strategic Advisory' },
-      { value: '$9,500', label: 'a month · Fractional Principal' },
-      { value: '3', label: 'month commitment' },
-    ],
-    steps: [
-      { title: 'Architecture design gate', text: 'Rigorous pre-commit review of design docs and system specs before engineering commits months of implementation.' },
-      { title: 'Standing office hours', text: 'Dedicated weekly slots for senior engineers to debug distributed bottlenecks, agent harnesses, and data modeling challenges.' },
-      { title: 'Spiking & prototyping', text: 'Direct technical sparring to co-design and unblock the first version of complex, high-consequence components.' },
-      { title: 'Staff engineer acceleration', text: 'Targeted 1-on-1 mentorship to elevate high-potential senior engineers into staff- and principal-caliber leaders.' },
-    ],
-    result: 'Strictly capped at two concurrent client retainers to guarantee direct, high-leverage principal attention.',
-    resultLabel: 'Terms',
+    id: 'retainer',
+    name: 'Advisory Retainer',
+    price: 5000,
+    unit: 'MON',
+    priceLabel: 'from, a month',
+    length: 'About 10 hours a month',
+    abstract: 'Standing access for your engineering leaders: design reviews before work starts, office hours for hard distributed-systems and AI problems, and mentoring for senior engineers growing into staff roles.',
     figures: [],
     proof: [
       'Mentored half his Amazon team from entry level to promotion, earning selection for Amazon’s Mentorship and Leadership Development Program.',
-      'Mentors Apple engineers to promotion and sets the design-review standards that cut production incidents by 45%.',
+      'Mentors Apple engineers to promotion, shapes performance reviews, and drives hiring.',
     ],
-    offer: { min: 5000, max: 9500, unit: 'MON' },
+  },
+  {
+    id: 'half-day',
+    name: 'Half-Day Masterclass',
+    price: 10000,
+    priceLabel: 'from',
+    length: 'Up to 4 hours',
+    abstract: 'One session from the catalog below, fitted to your firm, for executives or engineers.',
+    figures: [],
+    proof: ['Taught AI strategy to C-suite leaders at HP, Morgan Lewis, PBS, and the Philadelphia Eagles, working from an executive curriculum built on original Wharton research.'],
+    links: [{ href: '/speaking', label: 'Teaching & Speaking' }],
+  },
+  {
+    id: 'keynote',
+    name: 'Keynote',
+    price: 10000,
+    priceLabel: 'from, plus travel',
+    length: 'One talk',
+    abstract: 'A keynote on any topic in the catalog below, for a conference, summit, or company offsite.',
+    figures: [{ value: '300+', label: 'community and business leaders at his Eagles Care Summit keynote' }],
+    proof: ['Keynoted the Philadelphia Eagles’ 12th annual Eagles Care Summit at Lincoln Financial Field on March 18, 2026, delivering “AI for Impact.”'],
+    links: [{ href: '/speaking#eagles', label: 'The Eagles keynote' }],
+  },
+  {
+    id: 'audit',
+    name: 'Architecture Audit',
+    price: 15000,
+    priceLabel: 'from',
+    length: '2–3 weeks',
+    abstract: 'A review of a whole system, not one doc: every service boundary, data contract, and dependency, and the bottlenecks, failure loops, and batch jobs that should be streams. Ends with a ranked remediation plan and a working session with your senior engineers.',
+    figures: [{ value: '$40M', label: 'saved a year by the Alexa platform he designed' }],
+    proof: [
+      'Drove Apple’s knowledge graph platform from batch to real-time streaming, re-architecting ingestion, similarity mapping, and graph generation from Spark onto Flink, Kafka, and Cassandra.',
+      'Designed the GraphQL data-aggregation and caching platform for the Alexa Engine.',
+    ],
+  },
+  {
+    id: 'roi',
+    name: 'AI ROI Review',
+    price: 15000,
+    priceLabel: 'from',
+    length: '2–3 weeks',
+    abstract: 'Every AI initiative on your list run through the framework from his SSRN paper: a SCALE strategic readiness assessment, a value driver tree tracing each one to return on invested capital, a risk-adjusted discount rate, and stage gates that tie each tranche of funding to evidence. Ends with a decision scorecard for your executives.',
+    figures: [{ value: '8', label: 'deployments the framework was validated against, from Salesforce Agentforce to JPMorgan COiN' }],
+    proof: ['First author of A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects (SSRN, 2026).'],
+    links: [{ href: 'https://doi.org/10.2139/ssrn.6732598', label: 'The framework paper', external: true }],
+  },
+  {
+    id: 'full-day',
+    name: 'Full-Day Masterclass',
+    price: 15000,
+    priceLabel: 'from',
+    length: 'Up to 8 hours',
+    abstract: 'Two sessions from the catalog below in one day, built as a sequence, like the two-part course he designed and taught at HP.',
+    figures: [],
+    proof: ['Designed and taught a two-session course at HP: AI Foundations for Digital Innovators, then Applying AI in IT and Digital Solutions.'],
+    links: [{ href: '/speaking#hp', label: 'The HP course' }],
+  },
+  {
+    id: 'evals',
+    name: 'Evals Harness',
+    price: 20000,
+    priceLabel: 'from',
+    length: '3–4 weeks',
+    abstract: 'A test suite that shows whether a prompt, model, or pipeline change made your AI better or worse: deterministic checks first, a golden set of real queries with expected answers, and model-graded judges where code cannot check. It runs in CI, so no change ships without passing.',
+    figures: [],
+    proof: [
+      'Built and shipped Apple’s LLM ops assistant for debugging logs, traces, and metrics over MCP in natural language.',
+      'Built Persuaider end to end: in-character AI personas, framework-based evaluation, and a deep automated test suite.',
+      'Built Crucible, which holds coding agents to deterministic gates and adversarial evidence checks.',
+    ],
+    links: [{ href: '/projects#persuaider', label: 'Persuaider' }, { href: '/projects#crucible', label: 'Crucible' }],
   },
 ];
 
-export const workshops = {
-  ask: 'Our teams need to learn this',
-  prices: [
-    { value: '$5,000', label: 'half day intensive' },
-    { value: '$9,500', label: 'full day deep dive' },
-  ] as Figure[],
-  keynote: 'Executive keynotes are quoted per event.',
-  executive: [
-    { title: 'AI ROI & Capital Allocation: The Multi-Layer Framework', org: 'Wharton Research' },
-    { title: 'AI Adoption: From Resistance to Persuasion', org: 'Morgan Lewis' },
-    { title: 'Data Privacy, Governance & Security First', org: 'PBS' },
-    { title: 'AI Foundations for Digital Innovators', org: 'HP' },
-    { title: 'Applying AI in IT and Digital Solutions', org: 'HP' },
-    { title: 'AI for Impact: Intelligent Systems for Civic Good', org: 'Philadelphia Eagles' },
-  ],
-  engineering: [
-    { title: 'Who Trains the Next Senior? Engineering When Code Is Cheap', org: 'Research Working Paper' },
-    { title: 'Production Evals & Evidentiary AI Judges', org: 'Hands-On Lab' },
-    { title: 'Architecting Agent Harnesses with MCP & Code Graphs', org: 'Production Architecture' },
-    { title: 'Knowledge Graphs Before Small Language Models', org: 'Atos' },
-    { title: 'Event-Driven Architectures: From Batch to Real-Time Streaming', org: 'Apple & Amazon Scale' },
-    { title: 'Software Contracts & Fail-Loud Protocols for Autonomous Agents', org: 'Engineering Lab' },
-  ],
-};
+export const terms = 'Remote by default. On-site sessions add travel.';
+
+export const masterclasses = [
+  { title: 'AI Foundations for Digital Innovators', org: 'HP', abstract: 'How large language models work and where they fail, from bias to hallucination; choosing among ChatGPT, Gemini, Claude, Copilot, Perplexity, and NotebookLM; the H4W and COSTAR prompt frameworks; and AI across the software development lifecycle.' },
+  { title: 'Applying AI in IT and Digital Solutions', org: 'HP', abstract: 'Retrieval-augmented generation, vector databases, and knowledge graphs; custom GPTs; the difference between AI workflows and agents, and a checklist for when an agent is worth building; and AI governance.' },
+  { title: 'AI Adoption and Change Management', org: 'Morgan Lewis', abstract: 'Why adoption fails, diagnosed with the innovation adoption curve, Deloitte Business Chemistry, and the MAPPR model, then a live roleplay turning resisters into adopters with the CLEAR framework and a champion’s toolkit for the firm.' },
+  { title: 'AI Strategy, Governance First', org: 'PBS', abstract: 'What generative AI is and isn’t; privacy and governance frameworks as the first step; and a path to AI ROI that starts from the pain points taking people away from the mission.' },
+  { title: 'AI for Impact', org: 'Philadelphia Eagles', abstract: 'The keynote for more than 300 community and business leaders at the 12th annual Eagles Care Summit.' },
+  { title: 'Knowledge Graphs, Then Small Language Models', org: 'Atos', abstract: 'How a knowledge graph enriches questions before they reach a model and checks the answer afterward, then when to go small with language models, with a live setup of a local model in five minutes.', href: '/talks/knowledge-graphs' },
+  { title: 'Which AI Projects Will Pay Off?', org: 'SSRN, 2026', abstract: 'More than 80 percent of AI projects fail to deliver measurable returns. A four-layer method for deciding which initiatives to fund, validated against eight deployments including Salesforce Agentforce, Spotify, and JPMorgan COiN.', href: 'https://doi.org/10.2139/ssrn.6732598' },
+  { title: 'Who Trains the Next Senior?', org: 'SSRN, 2026', abstract: 'Managing software engineering when AI makes code cheap: shrink the unit of review, tier scrutiny by consequence, measure verified outcomes rather than raw output, and rebuild the apprenticeship on purpose.', href: 'https://doi.org/10.2139/ssrn.7083078' },
+];
 
 export const contactEmail = 'sairambkrishnan@gmail.com';
 export const mailto = (subject: string) => `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`;
+export const money = (n: number) => `$${n.toLocaleString('en-US')}`;

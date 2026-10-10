@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { careerById, careerLedger } from '../data/career';
 import { research, ventures } from '../data/content';
 import { talks } from '../data/speaking';
-import { packages, workshops } from '../data/services';
+import { services, masterclasses, terms, money } from '../data/services';
 import { SITE, profiles, fullTitle, midSentence } from '../data/seo';
 
 const apple = careerById.apple;
@@ -22,7 +22,8 @@ const lines = [
   `- [Career](${SITE}/career): Every role and school, with the work and results in each.`,
   `- [Side Projects](${SITE}/projects): ${ventures.map(v => v.name).join(', ')}, and the full repository archive.`,
   `- [Research](${SITE}/research): ${research.length} papers with DOIs.`,
-  `- [Services](${SITE}/services): ${packages.map(p => p.name).join(', ')}, and masterclasses, with prices.`,
+  `- [Teaching & Speaking](${SITE}/speaking): Talks, courses, and workshops.`,
+  `- [Services](${SITE}/services): ${services.map(s => s.name).join(', ')}, with starting prices.`,
   `- [Contact](${SITE}/contact): Email, LinkedIn, phone, and resume.`,
   '',
   '## Career',
@@ -46,8 +47,8 @@ const lines = [
   '',
   '## Services',
   '',
-  ...packages.map(p => `- ${p.name}${p.tag ? ` (${p.tag})` : ''}: ${p.prices.map(f => `${f.value} ${f.label}`).join(', ')}. ${p.result}`),
-  `- Workshops: ${workshops.prices.map(f => `${f.value} ${f.label}`).join(', ')}. ${workshops.keynote}`,
+  ...services.map(s => `- ${s.name} (${s.length}), ${s.priceLabel} ${money(s.price)}: ${s.abstract}`),
+  `- Masterclass and keynote topics: ${masterclasses.map(m => m.title).join('; ')}. ${terms}`,
   '',
   '## Side Projects',
   '',
