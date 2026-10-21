@@ -3,6 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { talks } from '../data/speaking';
+import { mailto } from '../data/services';
 import { personId, SITE } from '../data/seo';
 import '../styles/inner-pages.css';
 
@@ -18,7 +19,7 @@ const event = (id: string, name: string, startDate: string, description: string,
   ...extra,
 });
 const schema = talks.flatMap(talk => [
-  ...(talk.startDate ? [event(talk.id, talk.title, talk.startDate, talk.summary, talk.org.split(' · ')[0], talk.link ? { workFeatured: { '@type': 'PresentationDigitalDocument', name: talk.title, url: `${SITE}${talk.link.href}` } } : {})] : []),
+  ...(talk.startDate ? [event(talk.id, talk.title, talk.startDate, talk.summary, talk.org.split(' · ')[0], { ...(talk.link ? { workFeatured: { '@type': 'PresentationDigitalDocument', name: talk.title, url: `${SITE}${talk.link.href}` } } : {}), ...(talk.location ? { location: { '@type': 'Place', name: talk.location } } : {}) })] : []),
   ...(talk.engagements ?? []).flatMap(engagement => {
     const sessions = engagement.parts?.filter(part => part.startDate) ?? [];
     if (sessions.length) return sessions.map((part, i) => event(`${engagement.id}-${i + 1}`, `${part.title} · ${engagement.org}`, part.startDate!, part.text ?? engagement.lead, engagement.org));
@@ -27,11 +28,11 @@ const schema = talks.flatMap(talk => [
   }),
 ]);
 ---
-<SiteLayout pageType="CollectionPage" schema={schema} title="Teaching & Speaking — Sairam Krishnan" description="Talks, courses, and workshops by Sairam Krishnan for Atos, HP, Morgan Lewis, PBS, the Philadelphia Eagles, and Carnegie Mellon.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Speaking — Sairam Krishnan" description="I keynoted the Philadelphia Eagles’ Eagles Care Summit for 300+ leaders and delivered talks, courses, and workshops for HP, Morgan Lewis, PBS, Atos, and Carnegie Mellon.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="speaking" />
   <main id="main" class="inner-page">
-    <section class="inner-hero simple-hero" aria-labelledby="speaking-title"><h1 id="speaking-title" data-reveal>Teaching &amp; Speaking.</h1></section>
+    <section class="inner-hero simple-hero" aria-labelledby="speaking-title"><h1 id="speaking-title" data-reveal>Speaking.</h1></section>
     <section class="research-list" aria-label="Talks and teaching">
       {talks.map(talk => <article class="research-row" id={talk.id} data-reveal>
         <div>
@@ -39,6 +40,7 @@ const schema = talks.flatMap(talk => [
           <h2>{talk.title}</h2>
           {talk.subtitle && <p class="research-subtitle">{talk.subtitle}</p>}
           <p class="research-summary">{talk.summary}</p>
+          {talk.sources && <div class="engagement-links">{talk.sources.map(link => <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗</a>)}</div>}
           {talk.engagements && <div class="engagements">
             {talk.engagements.map(engagement => <section class="engagement" id={engagement.id} aria-labelledby={`${engagement.id}-title`}>
               <span class="research-venue">{engagement.date}</span>
@@ -55,9 +57,10 @@ const schema = talks.flatMap(talk => [
             </section>)}
           </div>}
         </div>
-        {talk.link && <a href={talk.link.href} target="_blank" rel="noopener">{talk.link.label} ↗</a>}
+        {talk.link && (talk.link.href.startsWith('/') ? <a href={talk.link.href}>{talk.link.label}</a> : <a href={talk.link.href} target="_blank" rel="noopener">{talk.link.label} ↗</a>)}
       </article>)}
     </section>
+    <nav class="archive-link" aria-label="Booking"><a href={mailto('Keynote')}>Book a keynote</a><a href={mailto('Masterclass')}>Book a masterclass</a><a href="/services#keynote">Keynote and masterclass pricing</a></nav>
   </main>
   <SiteFooter />
 </SiteLayout>

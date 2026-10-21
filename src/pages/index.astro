@@ -4,23 +4,31 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { ventures, research } from '../data/content';
 import { careerById, eaglesSummitSources } from '../data/career';
+import { featuredRecommendations } from '../data/recommendations';
 import '../styles/home.css';
 
 const proof = [
-  { id: 'amazon', org: 'Amazon Alexa', value: '$40M', label: 'saved a year', bullets: [1, 2] },
-  { id: 'apple', org: 'Apple', value: '100M+', label: 'users on the media knowledge graph', bullets: [1, 0] },
-  { id: 'praxtera', org: 'Praxtera', value: '300+', label: 'leaders at the Eagles Care Summit', bullets: [1, 0], sources: eaglesSummitSources },
+  { id: 'apple', org: 'Apple', value: '100M+', label: 'users on the media knowledge graph', lines: [1, 0] },
+  { id: 'apple', org: 'Apple', value: '30%', label: 'higher team velocity', lines: ['Set the design-review and CI/CD standards that lifted team velocity 30%.', 7] },
+  { id: 'apple', org: 'Apple', value: '45%', label: 'fewer production incidents', lines: ['Cut production incidents 45% with those same standards.', 4] },
+  { id: 'amazon', org: 'Amazon Alexa', value: '$40M', label: 'saved a year', lines: ['Designed a GraphQL data-aggregation and caching platform for the Alexa Engine, saving $40M a year.', 0] },
+  { id: 'amazon', org: 'Amazon Alexa', value: '40%', label: 'higher model accuracy', lines: ['Lifted Alexa model accuracy 40% with the same platform, whose annotation-driven rule engine batched and clustered results to the right downstream services.', 2] },
+  { id: 'amazon', org: 'Amazon Alexa', value: '15 min', label: 'to onboard a new partner', lines: [3, 4] },
+  { id: 'praxtera', org: 'Praxtera', value: '300+', label: 'leaders at the Eagles Care Summit', lines: [1, 0], sources: eaglesSummitSources, talk: '/speaking#eagles' },
+  { id: 'wharton', org: 'Wharton', value: 'Top 5%', label: 'of the Executive MBA class', lines: [0, 1, 2] },
 ].map(step => {
   const entry = careerById[step.id];
-  return { ...step, role: entry.role, dates: entry.dates, lines: step.bullets.map(i => entry.bullets[i]) };
+  return { ...step, role: entry.role, dates: entry.dates, lines: step.lines.map(line => typeof line === 'number' ? entry.bullets[line] : line) };
 });
 
+const praise = featuredRecommendations[0];
+
 const chapters = [
-  { id: 'career', title: 'Career', description: 'Carnegie Mellon, Microsoft, SIG, Amazon, Apple, Wharton, and Praxtera. The roles, projects, and people involved.' },
-  { id: 'projects', title: 'Side Projects', description: `${ventures.length} products and tools I built outside my primary roles, including Ondoway, Persuaider, Lore / DependIQ, and Crucible.` },
-  { id: 'research', title: 'Research', description: `${research.length} papers on AI investment, engineering teams, and machine learning systems.` },
-  { id: 'speaking', title: 'Teaching & Speaking', description: 'Talks, courses, and workshops for Atos, HP, Morgan Lewis, PBS, the Philadelphia Eagles, and Carnegie Mellon.' },
-  { id: 'services', title: 'Services', description: 'Architecture calls and reviews, AI ROI reviews, evals harnesses, advisory retainers, masterclasses, and keynotes.' },
+  { id: 'services', title: 'Services', description: 'Architecture calls and reviews, architecture audits, AI ROI reviews, evals harnesses, advisory retainers, masterclasses, and keynotes.' },
+  { id: 'speaking', title: 'Speaking', description: 'The Eagles Care Summit keynote, plus talks, courses, and workshops for HP, Morgan Lewis, PBS, Atos, and Carnegie Mellon.' },
+  { id: 'career', title: 'Career', description: 'Apple, Amazon Alexa, Praxtera, SIG, and Microsoft, with Wharton honors and an M.S. from Carnegie Mellon with a 4.00 GPA.' },
+  { id: 'research', title: 'Research', description: `${research.length} papers on AI investment, engineering teams, and drone-swarm control, including the AI ROI framework I published as first author.` },
+  { id: 'projects', title: 'Projects', description: `${ventures.length} products and tools I built: Ondoway, Persuaider, Lore / DependIQ, and Crucible.` },
 ];
 
 const closing = [
@@ -29,7 +37,7 @@ const closing = [
   { label: 'Resume', href: '/assets/Sairam_Krishnan_Resume.pdf', external: true },
 ];
 ---
-<SiteLayout title="Sairam Krishnan — Senior Engineering Leader, Apple AI/ML" description="Sairam Krishnan leads engineering teams that build AI and data platforms at scale, including Apple’s media knowledge graph for over 100 million users." pageType="ProfilePage">
+<SiteLayout title="Sairam Krishnan — Senior Engineering Leader, Apple AI/ML" description="I lead engineering teams that build AI and data platforms at Apple, including the media knowledge graph for over 100 million users." pageType="ProfilePage">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="home" />
 
@@ -37,9 +45,9 @@ const closing = [
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-image" aria-hidden="true"></div>
       <div class="hero-content">
-        <h1 id="hero-title" data-reveal>Grow the <em>people.</em><br />The platforms follow.</h1>
+        <h1 id="hero-title" data-reveal>I lead engineering teams at <em>Apple.</em></h1>
         <div class="hero-bottom" data-reveal style="--i:2">
-          <p>I lead engineering teams that build AI and data platforms at scale.</p>
+          <p>I led architecture of Apple’s media knowledge graph for over 100 million users, designed the data platform for Amazon’s Alexa Engine that saved $40M a year, keynoted the Philadelphia Eagles’ Eagles Care Summit for more than 300 leaders, and earned Palmer Scholar honors (top 5% of class) in Wharton’s Executive MBA.</p>
           <a class="hero-cue" href="#results" aria-label="Scale and results"><span aria-hidden="true">↓</span></a>
         </div>
       </div>
@@ -69,6 +77,7 @@ const closing = [
             {step.lines.map(line => <p>{line}</p>)}
             <div class="proof-links">
               <a href={`/career#entry-${step.id}`}>Full chapter →</a>
+              {step.talk && <a href={step.talk}>Speaking →</a>}
               {step.sources?.map(source => <a href={source.href} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>)}
             </div>
           </div>
@@ -76,12 +85,16 @@ const closing = [
       </div>
     </section>
 
-    <section class="chapters" aria-label="Career, Side Projects, Research, Teaching & Speaking, and Services">
+    <figure class="praise" data-reveal>
+      <blockquote><p>“{praise.quotes[0]}”</p></blockquote>
+      <figcaption>{praise.person} · {praise.role} · {praise.context}</figcaption>
+    </figure>
+
+    <section class="chapters" aria-label="Services, Speaking, Career, Research, and Projects">
       {chapters.map((chapter, i) => <a class={`chapter-card chapter-${chapter.id}`} href={`/${chapter.id}`} data-reveal style={`--i:${i}`}>
         <span class="chapter-glow" aria-hidden="true"></span>
         <h2>{chapter.title}</h2>
         <p>{chapter.description}</p>
-        <span class="chapter-pill">Explore</span>
       </a>)}
     </section>
 

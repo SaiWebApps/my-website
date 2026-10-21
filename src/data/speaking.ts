@@ -1,5 +1,3 @@
-// Sources: the Atos deck (public/talks/knowledge-graphs), Praxtera course materials for HP and Morgan Lewis
-// (Google Drive, Ventures/Praxtera), Sairam's own account of the PBS session, and src/data/career.ts.
 import { careerById, eaglesSummitSources } from './career';
 
 export type TalkPart = { title: string; date?: string; startDate?: string; text?: string; steps?: string[] };
@@ -12,19 +10,22 @@ export type Talk = {
   title: string;
   subtitle?: string;
   summary: string;
+  location?: string;
   link?: { href: string; label: string };
+  sources?: { href: string; label: string }[];
   engagements?: Engagement[];
 };
 
 export const talks: Talk[] = [
   {
-    id: 'atos',
-    org: 'Atos · Independent',
-    date: 'Sept 3, 2026',
-    startDate: '2026-09-03',
-    title: 'Knowledge Graphs, Then Small Language Models',
-    summary: 'Walked through what a knowledge graph is, how it enriches questions before they reach a model, and how it checks the model’s answer afterward, then where graphs go next: sub-graphs by topic, failure graphs, codified expertise, and the graph behind an API. Then turned to small language models: what they are, when to go small and when to go big, a live setup of a local model in five minutes, and how they change the way people work.',
-    link: { href: '/talks/knowledge-graphs', label: 'Open the deck' },
+    id: 'eagles',
+    org: 'Philadelphia Eagles',
+    location: 'Lincoln Financial Field',
+    date: 'Mar 18, 2026',
+    startDate: '2026-03-18',
+    title: 'AI for Impact',
+    summary: careerById.praxtera.bullets[1],
+    sources: eaglesSummitSources,
   },
   {
     id: 'praxtera',
@@ -33,16 +34,6 @@ export const talks: Talk[] = [
     title: 'Executive AI Education',
     summary: careerById.praxtera.bullets[0],
     engagements: [
-      {
-        id: 'eagles',
-        org: 'Philadelphia Eagles',
-        date: 'Mar 18, 2026',
-        startDate: '2026-03-18',
-        eventName: 'AI for Impact · Eagles Care Summit',
-        location: 'Lincoln Financial Field',
-        lead: careerById.praxtera.bullets[1],
-        links: eaglesSummitSources,
-      },
       {
         id: 'pbs',
         org: 'PBS',
@@ -71,7 +62,7 @@ export const talks: Talk[] = [
         lead: 'Designed and taught an AI adoption and change-management workshop for the firm’s trainers and champions.',
         parts: [
           { title: 'Why adoption fails', text: 'The innovation adoption curve, Deloitte Business Chemistry, and the MAPPR model for diagnosing resistance: Motivation, Ability, Permission, Proof, and Reinforcement.' },
-          { title: 'From resistance to persuasion', text: 'Participants listed why partners, associates, and staff would refuse AI. Gemini sorted that board into ten resister personas, from the accuracy skeptic to the billable-hour traditionalist. In a live roleplay, Gemini played one persona while the facilitator used the CLEAR framework to win them over. Groups then wrote persuasion messages for their own persona and designed a champion’s toolkit: a green, yellow, and red guide to which tasks are safe for AI, office hours, flash cards, and prompt-off competitions.' },
+          { title: 'From resistance to persuasion', text: 'Participants listed why partners, associates, and staff would refuse AI. Gemini sorted that board into ten resister personas, from the accuracy skeptic to the billable-hour traditionalist. In a live roleplay, Gemini played one persona while I used the CLEAR framework to win them over. Groups then wrote persuasion messages for their own persona and designed a champion’s toolkit: a green, yellow, and red guide to which tasks are safe for AI, office hours, flash cards, and prompt-off competitions.' },
         ],
       },
       {
@@ -87,11 +78,20 @@ export const talks: Talk[] = [
     ],
   },
   {
+    id: 'atos',
+    org: 'Atos',
+    date: 'Sep 3, 2026',
+    startDate: '2026-09-03',
+    title: 'Knowledge Graphs, Then Small Language Models',
+    summary: 'Presented what a knowledge graph is, how it enriches questions before they reach a model, and how it checks the model’s answer afterward, then where graphs go next: sub-graphs by topic, failure graphs, codified expertise, and the graph behind an API. Covered small language models next: what they are, when to go small and when to go big, a live setup of a local model in five minutes, and how they change the way people work.',
+    link: { href: '/talks/knowledge-graphs', label: 'Open the deck' },
+  },
+  {
     id: 'cmu',
     org: 'Carnegie Mellon University',
     date: careerById['cmu-teaching'].dates,
     title: 'Web Applications',
     subtitle: careerById['cmu-teaching'].role,
-    summary: 'Redesigned the Web Applications course with the professor, planning a 20-lecture semester from client-side code and HTTP through relational and NoSQL databases, servlets, security, and Django. Built the client-side and server-side exercise sets and reference survey apps in Spring MVC, Play, and Django, and instructed 105+ students as final projects’ Agile Product Owner.',
+    summary: 'Redesigned the Web Applications course with the professor, planning a 20-lecture semester from client-side code and HTTP through relational and NoSQL databases, servlets, security, and Django. Built the client-side and server-side exercise sets and reference survey apps in Spring MVC, Play, and Django, and instructed 105+ students as Agile Product Owner for their final projects.',
   },
 ];

@@ -44,7 +44,6 @@
 /* Chapter detail */
 .career-focus{margin:3rem 0 0;border-top:1px solid #6e8274}
 .career-detail{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:2rem 4rem;padding:2rem 0;border-bottom:1px solid #6e8274;scroll-margin-top:2rem}
-.js .career-detail:not(.active){display:none}
 .career-detail-heading>span{font-family:'Martian Mono Variable',monospace;font-size:.68rem;color:#476c56}
 .career-detail h2{font-size:clamp(2.7rem,4.8vw,5.7rem);line-height:.97;letter-spacing:-.065em;margin:.6rem 0 .8rem}
 .career-detail-heading p{font-size:1.16rem;line-height:1.3;margin:0 0 .55rem}

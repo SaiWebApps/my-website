@@ -4,10 +4,12 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { services, masterclasses, terms, mailto, money } from '../data/services';
 import { personId, SITE } from '../data/seo';
+import { featuredRecommendations } from '../data/recommendations';
 import '../styles/inner-pages.css';
 import '../styles/services.css';
 
 const pad = (n: number) => String(n).padStart(2, '0');
+const praise = featuredRecommendations[0];
 const schema = [{
   '@type': 'OfferCatalog',
   '@id': `${SITE}/services#catalog`,
@@ -19,12 +21,13 @@ const schema = [{
   })),
 }];
 ---
-<SiteLayout pageType="CollectionPage" schema={schema} title="Services — Sairam Krishnan" description="Architecture calls and design reviews, advisory retainers, masterclasses, keynotes, architecture audits, AI ROI reviews, and evals harnesses from Sairam Krishnan, with starting prices.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Services — Sairam Krishnan" description="Architecture calls, design reviews, advisory retainers, masterclasses, keynotes, architecture audits, AI ROI reviews, and evals harnesses, with my starting prices. I designed the Alexa platform that saved $40M a year and led architecture of Apple’s media knowledge graph for over 100 million users.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="services" />
   <main id="main" class="inner-page services-page">
     <section class="inner-hero services-hero" aria-labelledby="services-title">
       <h1 id="services-title" data-reveal>Services.</h1>
+      <p class="services-lede" data-reveal style="--i:1">I lead engineering teams that build AI and data platforms at Apple. At Amazon, I designed the Alexa Engine data platform that saved $40M a year.</p>
     </section>
 
     <section class="ladder" aria-label="Services">
@@ -40,38 +43,42 @@ const schema = [{
           <strong>{money(s.price)}</strong>
           <a class="rung-ask" href={mailto(s.name)}>Book</a>
         </div>
-        <details class="rung-more">
-          <summary>Track record</summary>
+        <div class="rung-more">
           {s.figures.length > 0 && <dl class="svc-figures">
             {s.figures.map(f => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
           </dl>}
           <ul class="svc-proof">{s.proof.map(line => <li>{line}</li>)}</ul>
           {s.links && <div class="svc-links">{s.links.map(link => <a href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener noreferrer' : undefined}>{link.label}{link.external && <span aria-hidden="true"> ↗</span>}</a>)}</div>}
-        </details>
+        </div>
       </article>)}
     </section>
+
+    <figure class="svc-praise" data-reveal>
+      <blockquote>“{praise.quotes[1]}”</blockquote>
+      <figcaption>{praise.person} · {praise.role} · {praise.context}</figcaption>
+    </figure>
 
     <section class="workshops" id="masterclasses" aria-labelledby="masterclasses-title">
       <div class="workshops-intro" data-reveal>
         <h2 id="masterclasses-title">Masterclasses and keynotes.</h2>
         <p>{terms}</p>
         <div class="svc-links">
-          <a href="/speaking">Teaching &amp; Speaking</a>
-          <a href={mailto('Masterclass or keynote')}>Ask about a session</a>
+          <a href="/speaking">Speaking</a>
+          <a href={mailto('Masterclass or keynote')}>Book a session</a>
         </div>
       </div>
       <ul class="catalog" data-reveal style="--i:1">
         {masterclasses.map(m => <li>
           <span class="catalog-org">{m.org}</span>
-          <h3>{m.href ? <a href={m.href} target="_blank" rel="noopener">{m.title} <span aria-hidden="true">↗</span></a> : m.title}</h3>
+          <h3>{m.href ? <a href={m.href}>{m.title}</a> : m.title}</h3>
           <p>{m.abstract}</p>
         </li>)}
       </ul>
     </section>
 
     <section class="services-close" aria-labelledby="close-title">
-      <h2 id="close-title" data-reveal>Start with a call.</h2>
-      <a href={mailto('Architecture Call')} data-reveal style="--i:1">Email Sairam</a>
+      <h2 id="close-title" data-reveal>Book an Architecture Call.</h2>
+      <a href={mailto('Architecture Call')} data-reveal style="--i:1">Email me</a>
     </section>
   </main>
   <SiteFooter />

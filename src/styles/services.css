@@ -2,7 +2,8 @@
 
 /* Ladder */
 .services-hero{min-height:0;padding-bottom:clamp(2rem,5vh,3rem)}
-.svc-figures dt,.svc-label,.rung-num,.rung-length,.rung-from,.catalog-org,.rung-more summary{font-family:'Martian Mono Variable',monospace;text-transform:uppercase;letter-spacing:.07em;font-size:.66rem}
+.services-lede{font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.45;color:#d0dfd9;margin:2rem 0 0}
+.svc-figures dt,.svc-label,.rung-num,.rung-length,.rung-from,.catalog-org{font-family:'Martian Mono Variable',monospace;text-transform:uppercase;letter-spacing:.07em;font-size:.66rem}
 .ladder{padding:clamp(2rem,6vh,4rem) clamp(1.25rem,7.5vw,8.5rem) clamp(4rem,10vh,6rem)}
 .rung{display:grid;grid-template-columns:3rem minmax(0,4fr) minmax(0,6fr) minmax(0,2.4fr);grid-template-areas:'num head abstract price' '. more more more';column-gap:clamp(1rem,2.5vw,2.5rem);padding:clamp(1.6rem,3.5vh,2.4rem) 0;border-top:1px solid #9daf9f;scroll-margin-top:1rem}
 .rung:last-child{border-bottom:1px solid #9daf9f}
@@ -17,10 +18,6 @@
 .rung-ask{margin-top:.6rem;border-radius:999px;padding:.6rem 1.3rem;font-size:.9rem;font-weight:600;text-decoration:none;background:#102630;color:#f2f4ec;transition:background .25s ease,color .25s ease}
 .rung-ask:hover,.rung-ask:focus-visible{background:#d8fa77;color:#102630}
 .rung-more{grid-area:more;margin-top:1.1rem}
-.rung-more summary{cursor:pointer;color:#476c56;width:max-content;list-style:none;border-bottom:1px solid currentColor;padding-bottom:.2rem}
-.rung-more summary::-webkit-details-marker{display:none}
-.rung-more summary:hover,.rung-more summary:focus-visible{color:#14242c}
-.rung-more[open] summary{margin-bottom:.4rem}
 .svc-figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#97ad98;border:1px solid #97ad98;margin:1.2rem 0 0}
 .svc-figures>div{background:#f2f4ec;padding:1rem 1.1rem;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:.45rem}
 .svc-figures dt{color:#476c56;line-height:1.5}
@@ -43,6 +40,10 @@
 .catalog h3 a{text-decoration:none}
 .catalog h3 a:hover{color:#476f5b}
 .catalog p{margin:0;line-height:1.5;color:#344d4a}
+
+.svc-praise{margin:0;padding:clamp(3.5rem,9vh,6rem) clamp(1.25rem,7.5vw,8.5rem);border-top:1px solid #6e8274}
+.svc-praise blockquote{margin:0;font-size:clamp(1.5rem,2.6vw,2.4rem);line-height:1.25;letter-spacing:-.04em;font-weight:600;color:#14242c}
+.svc-praise figcaption{margin-top:1.4rem;font-family:'Martian Mono Variable',monospace;text-transform:uppercase;letter-spacing:.07em;font-size:.66rem;color:#476c56}
 
 /* Close */
 .services-close{background:#0d212b;color:#f2f4ec;text-align:center;padding:clamp(5rem,14vh,9rem) 1.25rem}

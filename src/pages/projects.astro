@@ -31,24 +31,21 @@ const schema = ventures.map(project => ({
   author: { '@id': personId },
 }));
 ---
-<SiteLayout pageType="CollectionPage" schema={schema} title="Side Projects — Sairam Krishnan" description="Products and tools built by Sairam Krishnan, including Ondoway, Persuaider, DependIQ, and Crucible.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Projects — Sairam Krishnan" description="Products and tools I built: Ondoway, Persuaider, Lore / DependIQ, and Crucible.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="projects" />
   <main id="main" class="inner-page">
-    <section class="inner-hero simple-hero" aria-labelledby="projects-title"><h1 id="projects-title" data-reveal>Side Projects.</h1></section>
+    <section class="inner-hero simple-hero" aria-labelledby="projects-title"><h1 id="projects-title" data-reveal>Projects.</h1></section>
     <section class="project-grid" aria-label="Featured projects">
       {ventures.map(project => <article class="project-card" id={project.slug} data-reveal>
         <h2>{project.name}</h2>
         <p class="project-thesis">{descriptions[project.slug]}</p>
         <div class="project-links"><a href={repos[project.slug]} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} on GitHub`}>GitHub ↗</a>{extraLinks[project.slug]?.map(link => <a href={link.href} target="_blank" rel="noopener" aria-label={`View the ${project.name} ${link.label.toLowerCase()}`}>{link.label} ↗</a>)}</div>
-        <details class="project-more">
-          <summary>Details</summary>
-          <dl class="project-facts"><div><dt>Problem</dt><dd>{project.problem}</dd></div><div><dt>My role</dt><dd>{project.role}</dd></div><div><dt>What exists now</dt><dd>{project.state}</dd></div><div><dt>Built with</dt><dd>{project.system}</dd></div></dl>
-        </details>
+        <dl class="project-facts"><div><dt>Problem</dt><dd>{project.problem}</dd></div><div><dt>My role</dt><dd>{project.role}</dd></div><div><dt>What exists now</dt><dd>{project.state}</dd></div><div><dt>Built with</dt><dd>{project.system}</dd></div></dl>
       </article>)}
     </section>
     <section class="repo-archive" aria-labelledby="repo-title">
-      <h2 id="repo-title">And more…</h2>
+      <h2 id="repo-title">Repository archive.</h2>
       <div class="repo-clusters">
         {githubClusters.map(group => <details class="repo-cluster" data-reveal>
           <summary><span>{group.title}</span><span>{group.projects.length} repositories</span></summary>

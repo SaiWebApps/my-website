@@ -31,14 +31,14 @@ const profileLinks = [
   { label: 'ORCID', href: profiles.orcid },
 ];
 ---
-<SiteLayout pageType="CollectionPage" schema={schema} title="Research — Sairam Krishnan" description="Research by Sairam Krishnan on AI investment, engineering management, and autonomous systems.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Research — Sairam Krishnan" description="My research on AI investment, engineering management, and drone-swarm control, including the AI ROI framework I published as first author.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="research" />
   <main id="main" class="inner-page">
     <section class="inner-hero simple-hero" aria-labelledby="research-title"><h1 id="research-title" data-reveal>Research.</h1></section>
     <section class="research-list" aria-label="Research papers">
       {research.map(paper => <article class="research-row" id={paper.slug} data-reveal>
-        <div><span class="research-venue">{paper.venue}</span><h2>{paper.title}</h2>{paper.subtitle && <p class="research-subtitle">{paper.subtitle}</p>}<p class="research-authors">{paper.authors}</p><p class="research-summary">{paper.summary}</p></div>
+        <div><span class="research-venue">{paper.venue}{paper.authors.startsWith('Sairam Krishnan') && ' · First author'}</span><h2>{paper.title}</h2>{paper.subtitle && <p class="research-subtitle">{paper.subtitle}</p>}<p class="research-authors">{paper.authors}</p><p class="research-summary">{paper.summary}</p></div>
         {paper.href && <a href={paper.href} target="_blank" rel="noopener noreferrer" aria-label={`Read ${paper.title}`}>{linkLabels[paper.slug]} ↗</a>}
       </article>)}
     </section>

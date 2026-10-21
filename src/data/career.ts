@@ -1,8 +1,3 @@
-// Sources: public/assets/Sairam_Krishnan_Resume.pdf (Apple onward, Wharton, degrees, publications)
-// the legacy engineering resume (AWS, LeanFM, CMU teaching, NSF research, Hand-2048 capstone, Drone-Megaddon),
-// Sairam's own account of the AWS logging-schema and tracer work, the 18-549 team site, poster, and his RasPi setup guide,
-// and his Web Apps course-planning docs, exercise set, and reference apps (Google Drive, CMU/Web Apps Exercises).
-
 export const eaglesSummitSources = [
   { label: 'Eagles Care Summit archive', href: 'https://web.archive.org/web/20260315052929/https://www.philadelphiaeagles.com/community/caresummit/' },
   { label: 'Philadelphia Eagles post', href: 'https://www.linkedin.com/posts/philadelphia-eagles_flyeaglesfly-activity-7442306553736650753-JEDu' },
@@ -27,26 +22,26 @@ export type CareerEntry = {
 
 export const careerLedger: CareerEntry[] = [
   { id: 'cmu', label: 'Carnegie Mellon', org: 'Carnegie Mellon University', role: 'M.S. and B.S. in Electrical & Computer Engineering', dates: '2010 – Dec 2014', meta: 'Pittsburgh, PA', kind: 'school', time: 0.1, bullets: [
-    'M.S. in Electrical & Computer Engineering, GPA 4.00/4.00 · Dec 2014',
-    'B.S. in Electrical & Computer Engineering; Minor in Business Administration · May 2014',
-    "Dean's List, Carnegie Institute of Technology · 2012, 2013, 2014",
+    'Earned an M.S. in Electrical & Computer Engineering, GPA 4.00/4.00 · Dec 2014.',
+    'Earned a B.S. in Electrical & Computer Engineering with a minor in Business Administration · May 2014.',
+    "Made the Dean's List, Carnegie Institute of Technology · 2012, 2013, 2014.",
   ]},
   { id: 'cmu-research', label: 'NSF Research', org: 'Carnegie Mellon University', role: 'NSF Cyberphysical Systems Researcher', dates: 'Feb 2013 – Aug 2013', kind: 'aspect', parent: 'cmu', verb: 'researched', time: 0.16, bullets: [
-    'Designed bacterial simulator to replace live culture experiments.',
+    'Designed a bacterial simulator to replace live culture experiments.',
   ]},
   { id: 'cmu-teaching', label: 'Teaching', org: 'Carnegie Mellon University', role: 'Web Applications Course Developer · Teaching Assistant', dates: 'May 2013 – Dec 2013', kind: 'aspect', parent: 'cmu', verb: 'taught', time: 0.19, bullets: [
-    'Created cloud platform for course administration.',
-    "Instructed 105+ students as final projects' Agile Product Owner.",
+    'Created a cloud platform for course administration.',
+    'Instructed 105+ students as Agile Product Owner for their final projects.',
     'Redesigned the Web Applications course with the professor, planning a 20-lecture semester from client-side code and HTTP through relational and NoSQL databases, servlets, security, and Django, plus a follow-on Web Application Frameworks course.',
     'Built the client-side exercise set: HTML5, CSS3, and JavaScript demos, from form validation and a calculator to single-player Pong and an image gallery, each with extension exercises.',
     'Designed server-side exercises on sessions, cookies, and relational databases, an HTML-injection exercise on Django template escaping, and a deliberately flawed Django app for students to expose by writing tests.',
     'Built reference survey apps in Spring MVC, Play, and Django, taking the Spring version through six releases on Google App Engine with image upload, AJAX editing, and survey recommendations.',
-  ]},
+  ], links: [{ href: '/speaking#cmu', label: 'Speaking' }] },
   { id: 'leanfm', label: 'LeanFM', org: 'LeanFM Technologies', role: 'Full-Stack Web Developer Intern', dates: 'Dec 2013 – Feb 2014', kind: 'work', parent: 'cmu', verb: 'interned', time: 0.22, bullets: [
-    'Developed Django admin interface for building managers.',
+    'Developed a Django admin interface for building managers.',
   ]},
   { id: 'cmu-capstone', label: 'Hand-2048', org: 'Carnegie Mellon University', role: 'Embedded Capstone (18-549) · Hand-2048', dates: 'Spring 2014', kind: 'aspect', parent: 'cmu', verb: 'built', time: 0.24, bullets: [
-    'Reconfigured hit game 2048 to use hand-motions as inputs; utilized Raspberry Pi and Asus-Xtion-Pro motion sensor in motion-sensing-and-actuating framework.',
+    'Reconfigured the hit game 2048 to take hand motions as input, using a Raspberry Pi and an Asus Xtion Pro motion sensor in a motion-sensing-and-actuating framework.',
     "Wrote the team's Raspberry Pi setup guide for headless SSH access from a laptop and for building the OpenNI 2 samples on the Pi.",
     'Switched gesture tracking from an open palm to a closed fist after the Xtion Pro picked up other parts of the body, turning an unsteady position reading into a stable one.',
   ], links: [
@@ -58,10 +53,10 @@ export const careerLedger: CareerEntry[] = [
   { id: 'aws', label: 'AWS', org: 'Amazon Web Services (AWS)', role: 'SDE Intern', dates: 'May 2014 – Aug 2014', kind: 'work', parent: 'cmu', verb: 'interned', time: 0.26, bullets: [
     "Unified the logging system: designed a single common schema for every team's log messages, convinced the teams to adopt it, and consolidated their custom loggers under one shared framework.",
     'Built a log tracer on that framework that traced API calls end to end, pinpointing where in the flow a request failed and what the failure was.',
-    'Achieved 15% speedup in logging system for 8M+ customers.',
+    'Sped up the logging system 15% for 8M+ customers.',
   ]},
   { id: 'cmu-projects', label: 'Drone-Megaddon', org: 'Carnegie Mellon University', role: 'Projects · Drone-Megaddon', dates: 'Fall 2014', kind: 'aspect', parent: 'cmu', verb: 'built', time: 0.29, bullets: [
-    'Implemented end-to-end cyberphysical system in which high-level, StarCraft-like RTS interface could be used to control drone swarms.',
+    'Implemented an end-to-end cyberphysical system in which a high-level, StarCraft-like RTS interface controlled drone swarms.',
     'Krishnan, S., & Ting, D. (2014). Drone-Megaddon: A Real-Time Strategy Interface for Managing Drone Swarms. engrXiv (archived 2026).',
     'Krishnan, S., & Ting, D. (2026). Drone-Megaddon 2026: Co-Intelligent Swarm Control with Language and Vision Models. engrXiv.',
   ], links: [{ href: 'https://doi.org/10.31224/6924', label: 'doi:10.31224/6924' }, { href: 'https://doi.org/10.31224/6987', label: 'doi:10.31224/6987' }] },
@@ -82,7 +77,7 @@ export const careerLedger: CareerEntry[] = [
     "Led capacity planning for Prime Day and Black Friday, forecasting hardware demand and winning leadership's commitment to expand the fleet ahead of peak.",
   ]},
   { id: 'apple', label: 'Apple', org: 'Apple', role: 'Senior Engineering Leader, Knowledge Graph Platform', dates: 'Feb 2021 – Present', meta: 'Apple Media Products · Seattle, WA', kind: 'work', parent: 'amazon', verb: 'joined', time: 0.82, bullets: [
-    'Led an eight-engineer team across Seattle, London, and partner sites in Europe and Latin America, reporting to the engineering director.',
+    'Led an eight-engineer team across Seattle, London, and partner sites in Europe and Latin America.',
     "Led architecture and cross-functional delivery of Apple's media knowledge graph, the canonical model unifying 15+ sources to power search, recommendations, and discovery for over 100 million users.",
     'Mentored engineers to promotion, shaped performance reviews, and drove hiring; set the design-review and CI/CD standards that lifted team velocity 30% and cut production incidents 45%.',
     'Built and shipped production agentic AI: an LLM ops assistant for debugging logs, traces, and metrics over MCP in natural language, and a skill platform that turned pipeline work into plain-English workflows for daily, on-call use.',
@@ -92,11 +87,11 @@ export const careerLedger: CareerEntry[] = [
     'Owned the graph query services and the client library for partner teams to build on, and set the shared Protobuf contracts adopted across the platform.',
   ]},
   { id: 'wharton', label: 'Wharton', org: 'The Wharton School, University of Pennsylvania', role: 'Executive MBA, WEMBA Class of 2026', dates: 'May 2024 – May 2026', kind: 'school', parent: 'apple', verb: 'attended', time: 0.9, bullets: [
-    'Palmer Scholar (top 5% of class)',
-    'Benjamin Franklin Award (peer-voted)',
-    "Director's List, all six terms",
-    'First Year Honors',
-    'Majors (5): AI in Business · Strategic Management · Operations, Information & Decision-Making · Entrepreneurship & Innovation · Business Analytics',
+    'Earned Palmer Scholar honors (top 5% of class).',
+    'Won the Benjamin Franklin Award (peer-voted; one of three recipients in a class of 250).',
+    "Made the Director's List in all six terms.",
+    'Earned First Year Honors.',
+    'Completed five majors: AI in Business · Strategic Management · Operations, Information & Decision-Making · Entrepreneurship & Innovation · Business Analytics.',
   ], figures: [
     { img: '/letters/first-year-honors.png', href: '/letters/first-year-honors.pdf', title: 'First Year Honors', date: 'June 13, 2025', alt: 'First Year Honors letter from the Wharton MBA Program for Executives, June 13, 2025', width: 1224, height: 1130 },
     { img: '/letters/directors-list-summer-2024.png', href: '/letters/directors-list-summer-2024.pdf', title: "Director's List", detail: 'Summer 2024', date: 'October 17, 2024', alt: "Director's List letter for Summer 2024 from the Wharton MBA Program for Executives, October 17, 2024", width: 1224, height: 1130 },
@@ -104,9 +99,9 @@ export const careerLedger: CareerEntry[] = [
     { img: '/letters/directors-list-spring-2025.png', href: '/letters/directors-list-spring-2025.pdf', title: "Director's List", detail: 'Spring 2025', date: 'June 13, 2025', alt: "Director's List letter for Spring 2025 from the Wharton MBA Program for Executives, June 13, 2025", width: 1224, height: 1130 },
   ]},
   { id: 'praxtera', label: 'Praxtera', org: 'Praxtera AI Institute', role: 'CTO and Curriculum Designer, AI/ML Executive Education', dates: 'Sep 2025 – Present', meta: 'Philadelphia-based AI executive-education firm · concurrent with the Apple role', kind: 'work', parent: 'wharton', verb: 'joined', time: 1, bullets: [
-    'Taught AI strategy to C-suite leaders at HP, Morgan Lewis, PBS, and the Philadelphia Eagles, working from an executive curriculum built on original Wharton research to help executives evaluate, govern, and deploy AI.',
+    'Designed an executive AI curriculum built on original Wharton research and taught it to C-suite leaders at HP, Morgan Lewis, PBS, and the Philadelphia Eagles, helping executives evaluate, govern, and deploy AI.',
     "Keynoted the Philadelphia Eagles' 12th annual Eagles Care Summit at Lincoln Financial Field on March 18, 2026, delivering \"AI for Impact\" to more than 300 community and business leaders.",
-  ], links: eaglesSummitSources },
+  ], links: [{ href: '/speaking#eagles', label: 'Speaking' }, ...eaglesSummitSources] },
 ];
 
 export const careerById = Object.fromEntries(careerLedger.map(entry => [entry.id, entry])) as Record<string, CareerEntry>;

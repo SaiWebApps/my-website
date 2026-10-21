@@ -32,7 +32,7 @@ const links = spokes.flatMap(spoke => hubs
 const spokeLabel = Object.fromEntries(leadershipSpokes.map(spoke => [spoke.id, spoke.label]));
 const f = (n: number) => n.toFixed(1);
 ---
-<SiteLayout pageType="ProfilePage" title="Career — Sairam Krishnan" description="Sairam Krishnan's career in engineering, leadership, research, and teaching across Apple, Amazon, Microsoft, SIG, Carnegie Mellon, Wharton, and Praxtera.">
+<SiteLayout pageType="ProfilePage" title="Career — Sairam Krishnan" description="My career in engineering, leadership, research, and teaching across Apple, Amazon, Microsoft, SIG, Carnegie Mellon, Wharton, and Praxtera.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="career" />
   <main id="main" class="inner-page career-page">
@@ -67,7 +67,7 @@ const f = (n: number) => n.toFixed(1);
         </svg>
       </div>
       <div class="career-focus" aria-live="polite">
-        {careerLedger.map(entry => <article class:list={['career-detail', { active: entry.id === defaultEntry }]} data-detail={entry.id} id={`entry-${entry.id}`}>
+        {[...careerLedger].reverse().map(entry => <article class:list={['career-detail', { active: entry.id === defaultEntry }]} data-detail={entry.id} id={`entry-${entry.id}`}>
           <div class="career-detail-heading">
             <span>{entry.dates}</span>
             <h2>{entry.org}</h2>
@@ -76,7 +76,7 @@ const f = (n: number) => n.toFixed(1);
           </div>
           {entry.bullets.length > 0 && <ul>
             {entry.bullets.map(text => <li>{text}</li>)}
-            {entry.links?.map(link => <li class="career-detail-link"><a href={link.href} target="_blank" rel="noopener">{link.label} ↗</a></li>)}
+            {entry.links?.map(link => <li class="career-detail-link">{link.href.startsWith('/') ? <a href={link.href}>{link.label}</a> : <a href={link.href} target="_blank" rel="noopener">{link.label} ↗</a>}</li>)}
           </ul>}
           {entry.figures && <ul class="career-figures">
             {entry.figures.map(figure => <li>
@@ -132,7 +132,7 @@ const f = (n: number) => n.toFixed(1);
     function showDetail(id: string, scroll: boolean) {
       if (!details.some(detail => detail.dataset.detail === id)) return;
       details.forEach(detail => detail.classList.toggle('active', detail.dataset.detail === id));
-      if (scroll) document.querySelector('.career-focus')?.scrollIntoView({ behavior: reduced.matches ? 'instant' : 'smooth', block: 'nearest' });
+      if (scroll) document.getElementById(`entry-${id}`)?.scrollIntoView({ behavior: reduced.matches ? 'instant' : 'smooth', block: 'start' });
     }
 
     const graph = graphRoot ? mountCareerGraph(graphRoot, {
