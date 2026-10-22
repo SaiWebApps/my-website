@@ -8,9 +8,11 @@ import { featuredRecommendations } from '../data/recommendations';
 import '../styles/home.css';
 
 const proof = [
-  { id: 'apple', org: 'Apple', value: '100M+', label: 'users on the media knowledge graph', lines: [1, 0] },
+  { id: 'apple', org: 'Apple', value: '100M+', label: 'users on the media knowledge graph', lines: [1, 5] },
+  { id: 'apple', org: 'Apple', value: '8', label: 'engineers on Apple’s knowledge graph team', lines: [0, 'Mentored engineers to promotion, shaped performance reviews, and drove hiring.'] },
+  { id: 'apple', org: 'Apple', value: '15', label: 'engineers in the Apple Music Credits global launch', lines: [4] },
   { id: 'apple', org: 'Apple', value: '30%', label: 'higher team velocity', lines: ['Set the design-review and CI/CD standards that lifted team velocity 30%.', 7] },
-  { id: 'apple', org: 'Apple', value: '45%', label: 'fewer production incidents', lines: ['Cut production incidents 45% with those same standards.', 4] },
+  { id: 'apple', org: 'Apple', value: '45%', label: 'fewer production incidents', lines: ['Cut production incidents 45% with those same standards.', 3] },
   { id: 'amazon', org: 'Amazon Alexa', value: '$40M', label: 'saved a year', lines: ['Designed a GraphQL data-aggregation and caching platform for the Alexa Engine, saving $40M a year.', 0] },
   { id: 'amazon', org: 'Amazon Alexa', value: '40%', label: 'higher model accuracy', lines: ['Lifted Alexa model accuracy 40% with the same platform, whose annotation-driven rule engine batched and clustered results to the right downstream services.', 2] },
   { id: 'amazon', org: 'Amazon Alexa', value: '15 min', label: 'to onboard a new partner', lines: [3, 4] },
@@ -24,11 +26,11 @@ const proof = [
 const praise = featuredRecommendations[0];
 
 const chapters = [
-  { id: 'services', title: 'Services', description: 'Architecture calls and reviews, architecture audits, AI ROI reviews, evals harnesses, advisory retainers, masterclasses, and keynotes.' },
-  { id: 'speaking', title: 'Speaking', description: 'The Eagles Care Summit keynote, plus talks, courses, and workshops for HP, Morgan Lewis, PBS, Atos, and Carnegie Mellon.' },
-  { id: 'career', title: 'Career', description: 'Apple, Amazon Alexa, Praxtera, SIG, and Microsoft, with Wharton honors and an M.S. from Carnegie Mellon with a 4.00 GPA.' },
-  { id: 'research', title: 'Research', description: `${research.length} papers on AI investment, engineering teams, and drone-swarm control, including the AI ROI framework I published as first author.` },
-  { id: 'projects', title: 'Projects', description: `${ventures.length} products and tools I built: Ondoway, Persuaider, Lore / DependIQ, and Crucible.` },
+  { id: 'services', title: 'Services', description: 'I run architecture calls, design reviews, architecture audits, AI ROI reviews, and evals harnesses, advise engineering leaders on retainer, and teach masterclasses and deliver keynotes.' },
+  { id: 'speaking', title: 'Speaking', description: 'I keynoted the Philadelphia Eagles’ Eagles Care Summit for more than 300 leaders and delivered talks, courses, and workshops for HP, Morgan Lewis, PBS, Atos, and Carnegie Mellon.' },
+  { id: 'career', title: 'Career', description: 'I led eight-engineer teams at Apple and on Amazon’s Alexa Core Engine, mentored engineers to promotion at both, and drove hiring at Apple. Before that, I led real-time FINRA compliance surveillance at SIG and cut Windows 10 Mobile Mail power consumption 4x at Microsoft. I teach executives as CTO of Praxtera, and I earned Wharton honors and an M.S. from Carnegie Mellon with a 4.00 GPA.' },
+  { id: 'research', title: 'Research', description: 'I published, as first author, “Who Trains the Next Senior?” on managing software engineering when AI makes code cheap, a multi-layer framework for evaluating the return on investment of AI projects, and the Drone-Megaddon papers on drone-swarm control.' },
+  { id: 'projects', title: 'Projects', description: 'I built Ondoway, Persuaider, Lore / DependIQ, and Crucible.' },
 ];
 
 const closing = [
@@ -37,7 +39,7 @@ const closing = [
   { label: 'Resume', href: '/assets/Sairam_Krishnan_Resume.pdf', external: true },
 ];
 ---
-<SiteLayout title="Sairam Krishnan — Senior Engineering Leader, Apple AI/ML" description="I lead engineering teams that build AI and data platforms at Apple, including the media knowledge graph for over 100 million users." pageType="ProfilePage">
+<SiteLayout title={`Sairam Krishnan — ${careerById.apple.role}, ${careerById.apple.org}`} description="I lead engineering teams that build AI and data platforms at Apple, where I led an eight-engineer team and led architecture of the media knowledge graph for over 100 million users." pageType="ProfilePage">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="home" />
 
@@ -47,8 +49,8 @@ const closing = [
       <div class="hero-content">
         <h1 id="hero-title" data-reveal>I lead engineering teams at <em>Apple.</em></h1>
         <div class="hero-bottom" data-reveal style="--i:2">
-          <p>I led architecture of Apple’s media knowledge graph for over 100 million users, designed the data platform for Amazon’s Alexa Engine that saved $40M a year, keynoted the Philadelphia Eagles’ Eagles Care Summit for more than 300 leaders, and earned Palmer Scholar honors (top 5% of class) in Wharton’s Executive MBA.</p>
-          <a class="hero-cue" href="#results" aria-label="Scale and results"><span aria-hidden="true">↓</span></a>
+          <p>At Apple, I led an eight-engineer team across Seattle, London, and partner sites in Europe and Latin America, and led architecture of the media knowledge graph for over 100 million users. At Amazon, I designed the Alexa Engine data platform that saved $40M a year. I keynoted the Philadelphia Eagles’ Eagles Care Summit for more than 300 leaders and earned Palmer Scholar honors (top 5% of class) in Wharton’s Executive MBA.</p>
+          <div class="closing-links hero-doors"><a href="/services">Services</a><a href="/assets/Sairam_Krishnan_Resume.pdf" target="_blank" rel="noopener">Resume</a></div>
         </div>
       </div>
     </section>
@@ -86,7 +88,7 @@ const closing = [
     </section>
 
     <figure class="praise" data-reveal>
-      <blockquote><p>“{praise.quotes[0]}”</p></blockquote>
+      <blockquote><p>“{praise.quotes[2]}”</p></blockquote>
       <figcaption>{praise.person} · {praise.role} · {praise.context}</figcaption>
     </figure>
 

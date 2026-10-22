@@ -1,3 +1,8 @@
+// Sources: public/assets/Sairam_Krishnan_Resume.pdf (Apple onward, Wharton, degrees, publications)
+// the legacy engineering resume (AWS, LeanFM, CMU teaching, NSF research, Hand-2048 capstone, Drone-Megaddon),
+// Sairam's own account of the AWS logging-schema and tracer work, the 18-549 team site, poster, and his RasPi setup guide,
+// and his Web Apps course-planning docs, exercise set, and reference apps (Google Drive, CMU/Web Apps Exercises).
+
 export const eaglesSummitSources = [
   { label: 'Eagles Care Summit archive', href: 'https://web.archive.org/web/20260315052929/https://www.philadelphiaeagles.com/community/caresummit/' },
   { label: 'Philadelphia Eagles post', href: 'https://www.linkedin.com/posts/philadelphia-eagles_flyeaglesfly-activity-7442306553736650753-JEDu' },

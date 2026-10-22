@@ -10,6 +10,7 @@ import '../styles/services.css';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 const praise = featuredRecommendations[0];
+const peer = featuredRecommendations[1];
 const schema = [{
   '@type': 'OfferCatalog',
   '@id': `${SITE}/services#catalog`,
@@ -21,13 +22,14 @@ const schema = [{
   })),
 }];
 ---
-<SiteLayout pageType="CollectionPage" schema={schema} title="Services — Sairam Krishnan" description="Architecture calls, design reviews, advisory retainers, masterclasses, keynotes, architecture audits, AI ROI reviews, and evals harnesses, with my starting prices. I designed the Alexa platform that saved $40M a year and led architecture of Apple’s media knowledge graph for over 100 million users.">
+<SiteLayout pageType="CollectionPage" schema={schema} title="Services — Sairam Krishnan" description="I offer architecture calls, design reviews, advisory retainers, masterclasses, keynotes, architecture audits, AI ROI reviews, masterclass series, and evals harnesses, each with my starting price. I designed the Alexa platform that saved $40M a year and led architecture of Apple’s media knowledge graph for over 100 million users.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="services" />
   <main id="main" class="inner-page services-page">
     <section class="inner-hero services-hero" aria-labelledby="services-title">
       <h1 id="services-title" data-reveal>Services.</h1>
-      <p class="services-lede" data-reveal style="--i:1">I lead engineering teams that build AI and data platforms at Apple. At Amazon, I designed the Alexa Engine data platform that saved $40M a year.</p>
+      <p class="services-lede" data-reveal style="--i:1">I lead engineering teams that build AI and data platforms at Apple. There I led an eight-engineer team across Seattle, London, and partner sites in Europe and Latin America, and led architecture of the media knowledge graph for over 100 million users. At Amazon, I designed the Alexa Engine data platform that saved $40M a year. I keynoted the Philadelphia Eagles’ 12th annual Eagles Care Summit for more than 300 community and business leaders and published, as first author, the AI ROI framework behind the AI ROI Review.</p>
+      <nav class="svc-links" aria-label="Service list" data-reveal style="--i:2">{services.map(s => <a href={`#${s.id}`}>{s.name}</a>)}</nav>
     </section>
 
     <section class="ladder" aria-label="Services">
@@ -52,6 +54,11 @@ const schema = [{
         </div>
       </article>)}
     </section>
+
+    <figure class="svc-praise" data-reveal>
+      <blockquote>{peer.quotes.slice(0, 2).map(quote => <p>“{quote}”</p>)}</blockquote>
+      <figcaption>{peer.person} · {peer.role} · {peer.context}</figcaption>
+    </figure>
 
     <figure class="svc-praise" data-reveal>
       <blockquote>“{praise.quotes[1]}”</blockquote>

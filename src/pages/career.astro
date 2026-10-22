@@ -3,6 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { careerLedger, careerById, leadershipHubs, leadershipSpokes, leadershipItems } from '../data/career';
+import { featuredRecommendations, colleagueRecommendations, managerReviews } from '../data/recommendations';
 import '../styles/inner-pages.css';
 import '../styles/career.css';
 
@@ -14,6 +15,7 @@ const lane = (id: string) => {
 };
 const edges = careerLedger.filter(entry => entry.parent);
 const defaultEntry = 'apple';
+const publicReviews = [...managerReviews].reverse().map(review => ({ ...review, quotes: review.quotes.filter(quote => !/Trinity|Nightwatch/.test(quote)) })).filter(review => review.quotes.length > 0);
 
 // Leadership network geometry (viewBox units).
 const C = 300;
@@ -32,20 +34,21 @@ const links = spokes.flatMap(spoke => hubs
 const spokeLabel = Object.fromEntries(leadershipSpokes.map(spoke => [spoke.id, spoke.label]));
 const f = (n: number) => n.toFixed(1);
 ---
-<SiteLayout pageType="ProfilePage" title="Career — Sairam Krishnan" description="My career in engineering, leadership, research, and teaching across Apple, Amazon, Microsoft, SIG, Carnegie Mellon, Wharton, and Praxtera.">
+<SiteLayout pageType="ProfilePage" title="Career — Sairam Krishnan" description="I led eight-engineer teams at Apple and on Amazon’s Alexa Core Engine, mentored engineers to promotion at both, and drove hiring at Apple. My record spans Apple, Amazon, Microsoft, SIG, Carnegie Mellon, Wharton, and Praxtera, with recommendations from colleagues and Apple manager reviews.">
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="career" />
   <main id="main" class="inner-page career-page">
     <div class="career-intro">
       <h1 data-reveal>Career.</h1>
+      <p class="career-lede" data-reveal style="--i:1">I led an eight-engineer team at Apple across Seattle, London, and partner sites in Europe and Latin America, mentoring engineers to promotion, shaping performance reviews, and driving hiring. At Amazon, I led an eight-engineer team on the Alexa Core Engine and mentored half the team from entry level to promotion.</p>
     </div>
-    <nav class="career-tabs" role="tablist" aria-label="Career views">
-      <a id="career-tab" href="#career" role="tab" aria-controls="career-panel" aria-selected="true" data-view="career">Career</a>
-      <a id="leadership-tab" href="#leadership" role="tab" aria-controls="leadership-panel" aria-selected="false" tabindex="-1" data-view="leadership">Leadership</a>
+    <nav class="career-tabs" aria-label="Career views">
+      <a href="#career-panel">Career</a>
+      <a href="#leadership-panel">Leadership</a>
       <a href="/assets/Sairam_Krishnan_Resume.pdf" class="career-tab-resume" target="_blank" rel="noopener">Resume (PDF) ↗</a>
     </nav>
 
-    <section id="career-panel" class="career-panel active" role="tabpanel" aria-labelledby="career-tab" data-panel="career">
+    <section id="career-panel" class="career-panel active" aria-label="Career" data-panel="career">
       <div class="cg" data-career-graph>
         <svg class="cg-svg" viewBox="0 0 1200 620" role="group" aria-label="Career graph">
           <g class="cg-edges">
@@ -90,7 +93,7 @@ const f = (n: number) => n.toFixed(1);
       </div>
     </section>
 
-    <section id="leadership-panel" class="career-panel" role="tabpanel" aria-labelledby="leadership-tab" data-panel="leadership">
+    <section id="leadership-panel" class="career-panel" aria-label="Leadership" data-panel="leadership">
       <div class="lead-layout">
         <svg class="lead-svg" viewBox="-10 30 620 530" role="group" aria-label="Leadership network">
           <g class="lead-mesh" aria-hidden="true">
@@ -116,6 +119,28 @@ const f = (n: number) => n.toFixed(1);
           </li>)}
         </ul>
       </div>
+    </section>
+
+    <section class="repo-archive" id="recommendations" aria-labelledby="recommendations-title">
+      <h2 id="recommendations-title" data-reveal>Recommendations.</h2>
+      {featuredRecommendations.map(rec => <article class="research-row" data-reveal>
+        <div>
+          <span class="research-venue">{rec.person} · {rec.role} · {rec.context}</span>
+          {rec.quotes.map(quote => <p class="research-summary">“{quote}”</p>)}
+        </div>
+      </article>)}
+      {publicReviews.map(review => <article class="research-row" data-reveal>
+        <div>
+          <span class="research-venue">Apple manager review · {review.year}</span>
+          {review.quotes.map(quote => <p class="research-summary">“{quote}”</p>)}
+        </div>
+      </article>)}
+      {colleagueRecommendations.map(rec => <article class="research-row" data-reveal>
+        <div>
+          <span class="research-venue">{rec.person} · {rec.role} · {rec.context}</span>
+          {rec.quotes.map(quote => <p class="research-summary">“{quote}”</p>)}
+        </div>
+      </article>)}
     </section>
   </main>
   <SiteFooter />

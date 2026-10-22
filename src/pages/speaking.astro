@@ -6,6 +6,7 @@ import { talks } from '../data/speaking';
 import { mailto } from '../data/services';
 import { personId, SITE } from '../data/seo';
 import '../styles/inner-pages.css';
+import '../styles/services.css';
 
 const event = (id: string, name: string, startDate: string, description: string, organizer: string, extra: Record<string, unknown> = {}) => ({
   '@type': 'EducationEvent',
@@ -32,7 +33,11 @@ const schema = talks.flatMap(talk => [
   <a class="skip-link" href="#main">Skip to content</a>
   <SiteHeader active="speaking" />
   <main id="main" class="inner-page">
-    <section class="inner-hero simple-hero" aria-labelledby="speaking-title"><h1 id="speaking-title" data-reveal>Speaking.</h1></section>
+    <section class="inner-hero services-hero" aria-labelledby="speaking-title">
+      <h1 id="speaking-title" data-reveal>Speaking.</h1>
+      <p class="services-lede" data-reveal style="--i:1">I keynoted the Philadelphia Eagles’ 12th annual Eagles Care Summit at Lincoln Financial Field for more than 300 community and business leaders. I designed and taught a two-session course at HP, an AI adoption and change-management workshop for Morgan Lewis, and an AI strategy session for PBS, and presented knowledge graphs and small language models to Atos.</p>
+      <div class="svc-links" data-reveal style="--i:2"><a href={mailto('Keynote')}>Book a keynote</a><a href={mailto('Masterclass')}>Book a masterclass</a></div>
+    </section>
     <section class="research-list" aria-label="Talks and teaching">
       {talks.map(talk => <article class="research-row" id={talk.id} data-reveal>
         <div>
@@ -60,7 +65,7 @@ const schema = talks.flatMap(talk => [
         {talk.link && (talk.link.href.startsWith('/') ? <a href={talk.link.href}>{talk.link.label}</a> : <a href={talk.link.href} target="_blank" rel="noopener">{talk.link.label} ↗</a>)}
       </article>)}
     </section>
-    <nav class="archive-link" aria-label="Booking"><a href={mailto('Keynote')}>Book a keynote</a><a href={mailto('Masterclass')}>Book a masterclass</a><a href="/services#keynote">Keynote and masterclass pricing</a></nav>
+    <nav class="archive-link" aria-label="Booking"><a href={mailto('Keynote')}>Book a keynote</a><a href={mailto('Masterclass')}>Book a masterclass</a><a href="/services#masterclasses">Masterclass and keynote topics</a><a href="/services#keynote">Keynote and masterclass pricing</a></nav>
   </main>
   <SiteFooter />
 </SiteLayout>

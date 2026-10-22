@@ -67,6 +67,7 @@
 .closing-links a{padding:.8rem 1.5rem;border-radius:999px;border:1px solid #ffffff66;text-decoration:none;font-size:.95rem;font-weight:600;transition:background .25s ease,color .25s ease,border-color .25s ease}
 .closing-links a:first-child{background:#f2f4ec;color:#102630;border-color:#f2f4ec}
 .closing-links a:hover,.closing-links a:focus-visible{background:#d8fa77;color:#102630;border-color:#d8fa77}
+.hero-doors{flex:none;justify-content:flex-end}
 
 @media(max-width:900px){
   .proof{grid-template-columns:1fr}
@@ -84,6 +85,8 @@
   .hero-content{padding:0 1.25rem 2.5rem}
   .hero h1{font-size:clamp(3.4rem,12.3vw,6rem);letter-spacing:-.075em}
   .hero-cue{display:none}
+  .hero-bottom{flex-direction:column;align-items:flex-start}
+  .hero-doors{justify-content:flex-start}
 }
 @media(prefers-reduced-motion:reduce){
   .proof-number,.js .proof-step,.chapter-glow,.hero-cue,.closing-links a,.proof-links a{transition:none}

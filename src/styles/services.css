@@ -28,6 +28,7 @@
 .svc-links{display:flex;flex-wrap:wrap;gap:.9rem 1.8rem;margin-top:1rem}
 .svc-links a{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.25rem}
 .svc-links a:hover{color:#476f5b}
+.inner-hero .svc-links a:hover,.inner-hero .svc-links a:focus-visible{color:#d8fa77}
 
 /* Masterclasses */
 .workshops{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(2rem,4vw,5rem);padding:clamp(3.5rem,9vh,6rem) clamp(1.25rem,7.5vw,8.5rem);border-top:1px solid #6e8274;scroll-margin-top:1rem}

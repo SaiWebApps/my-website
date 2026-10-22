@@ -1,3 +1,6 @@
+// Sources: src/data/career.ts, src/data/content.ts, src/data/speaking.ts.
+// Prices: sourced 2024–2026 US market rates and amounts clients paid for past sessions (kept off the site).
+
 export type Figure = { value: string; label: string };
 
 export interface Service {
@@ -25,7 +28,7 @@ export const services: Service[] = [
       { value: '100M+', label: 'users on Apple’s media knowledge graph' },
       { value: '15+', label: 'sources unified into one canonical model' },
     ],
-    proof: ['Led architecture and cross-functional delivery of Apple’s media knowledge graph, the canonical model unifying 15+ sources to power search, recommendations, and discovery.'],
+    proof: ['Led architecture and cross-functional delivery of Apple’s media knowledge graph, the canonical model unifying 15+ sources to power search, recommendations, and discovery for over 100 million users.'],
   },
   {
     id: 'review',
@@ -38,7 +41,10 @@ export const services: Service[] = [
       { value: '45%', label: 'fewer production incidents on the Apple team' },
       { value: '30%', label: 'higher velocity on the Apple team' },
     ],
-    proof: ['Set my Apple team’s design-review and CI/CD standards and the shared Protobuf contracts adopted across the knowledge graph platform.'],
+    proof: [
+      'Set my Apple team’s design-review and CI/CD standards, lifting team velocity 30% and cutting production incidents 45%.',
+      'Set the shared Protobuf contracts adopted across Apple’s knowledge graph platform, and owned the graph query services and the client library for partner teams to build on.',
+    ],
   },
   {
     id: 'retainer',
@@ -49,13 +55,15 @@ export const services: Service[] = [
     length: 'About 10 hours a month',
     abstract: 'Standing access for your engineering leaders: design reviews before work starts, office hours for hard distributed-systems and AI problems, and mentoring for senior engineers growing into staff roles.',
     figures: [
-      { value: '8', label: 'engineers led on Apple’s knowledge graph team' },
-      { value: '15', label: 'engineers coordinated in the Apple Music Credits launch' },
+      { value: '8', label: 'engineers on Apple’s knowledge graph team' },
+      { value: '15', label: 'engineers in the Apple Music Credits global launch' },
     ],
     proof: [
+      'Led an eight-engineer team at Apple across Seattle, London, and partner sites in Europe and Latin America.',
+      'Led the four-office global launch of Apple Music Credits (Cupertino, Seattle, London, Singapore), coordinating a 15-engineer cross-functional program to deliver real-time credits curation for millions of tracks.',
       'Mentored half my Amazon team from entry level to promotion, earning selection for Amazon’s Mentorship and Leadership Development Program.',
       'Mentored Apple engineers to promotion, shaped performance reviews, and drove hiring.',
-      'Published, as first author, Who Trains the Next Senior? Managing Software Engineering When AI Makes Code Cheap (SSRN, 2026).',
+      'Published “Who Trains the Next Senior? Managing Software Engineering When AI Makes Code Cheap” as first author (SSRN, 2026).',
     ],
     links: [{ href: '/research#who-trains-the-next-senior', label: 'The management paper' }],
   },
@@ -78,8 +86,11 @@ export const services: Service[] = [
     length: 'One talk',
     abstract: 'A keynote on any topic in the catalog below, for a conference, summit, or company offsite.',
     figures: [{ value: '300+', label: 'community and business leaders at the Eagles Care Summit' }],
-    proof: ['Keynoted the Philadelphia Eagles’ 12th annual Eagles Care Summit at Lincoln Financial Field on March 18, 2026, delivering “AI for Impact.”'],
-    links: [{ href: '/speaking#eagles', label: 'The Eagles keynote' }, { href: '/speaking', label: 'Speaking' }],
+    proof: [
+      'Keynoted the Philadelphia Eagles’ 12th annual Eagles Care Summit at Lincoln Financial Field on March 18, 2026, delivering “AI for Impact” to more than 300 community and business leaders.',
+      'Presented “Knowledge Graphs, Then Small Language Models” to Atos on September 3, 2026, with a live setup of a local model in five minutes.',
+    ],
+    links: [{ href: '/speaking#eagles', label: 'The Eagles keynote' }, { href: '/speaking', label: 'Speaking' }, { href: '/talks/knowledge-graphs', label: 'The Atos deck' }],
   },
   {
     id: 'audit',
@@ -93,9 +104,11 @@ export const services: Service[] = [
       { value: '40%', label: 'higher model accuracy on the Alexa Engine' },
     ],
     proof: [
+      'Designed the GraphQL data-aggregation and caching platform for the Alexa Engine, saving $40M a year and lifting model accuracy 40%.',
       'Drove Apple’s knowledge graph platform from batch to real-time streaming, re-architecting ingestion, similarity mapping, and graph generation from Spark onto Flink, Kafka, and Cassandra.',
-      'Designed the GraphQL data-aggregation and caching platform for the Alexa Engine.',
       'Designed Apple’s ML entity-resolution system, lifting data quality 40% while cutting downstream cost.',
+      'Owned Alexa operational excellence, driving the weekly issue count from 40 to 10 and re-engineering the new-user registration flow to cut peak-holiday customer issues tenfold.',
+      'Led Alexa capacity planning for Prime Day and Black Friday, forecasting hardware demand and winning leadership’s commitment to expand the fleet ahead of peak.',
     ],
   },
   {
@@ -104,10 +117,10 @@ export const services: Service[] = [
     price: 15000,
     priceLabel: 'from',
     length: '2–3 weeks',
-    abstract: 'I run every AI initiative on your list through the framework from my SSRN paper: a readiness check for your firm, a value driver tree that traces each initiative to return on invested capital, a discount rate adjusted for AI-specific risk, and stage gates that release each tranche of funding only on evidence. You get a decision scorecard that tells your executives which initiatives to fund.',
+    abstract: 'I run every AI initiative on your list through the four-layer framework from my SSRN paper: a SCALE strategic readiness assessment of your firm, a value driver tree that traces each initiative to return on invested capital, a discount rate adjusted for AI-specific risks such as vendor and platform dependency and organizational friction, and stage gates that release each tranche of funding only on evidence. You get a decision scorecard that tells your executives which initiatives to fund.',
     figures: [{ value: '8', label: 'deployments in the validation set, from Salesforce Agentforce to JPMorgan COiN' }],
     proof: [
-      'Published, as first author, A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects (SSRN, 2026).',
+      'Published “A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects” as first author (SSRN, 2026).',
       'Taught PBS leaders first steps toward AI ROI, starting from the pain points that take employees’ time away from the mission.',
     ],
     links: [{ href: 'https://doi.org/10.2139/ssrn.6732598', label: 'The framework paper', external: true }],
@@ -129,14 +142,14 @@ export const services: Service[] = [
     price: 20000,
     priceLabel: 'from',
     length: '3–4 weeks',
-    abstract: 'A test suite that shows whether a prompt, model, or pipeline change made your AI better or worse: deterministic checks first, a golden set of real queries with expected answers, and model-graded judges where code cannot check. It runs in CI, so no change ships without passing.',
+    abstract: 'A test suite that shows whether a prompt, model, or pipeline change made your AI better or worse: deterministic checks first, a golden set of real queries with expected answers, and model-graded judges where code cannot check. It runs on every code change, so no change ships without passing.',
     figures: [{ value: '200+', label: 'tests in the Lore / DependIQ suite' }],
     proof: [
-      'Built and shipped Apple’s LLM ops assistant for debugging logs, traces, and metrics over MCP in natural language.',
+      'Built and shipped production agentic AI at Apple: an LLM ops assistant for debugging logs, traces, and metrics over MCP in natural language, and a skill platform that turned pipeline work into plain-English workflows for daily, on-call use.',
+      'Presented to Atos how a knowledge graph enriches questions before they reach a model and checks the model’s answer afterward.',
       'Built Persuaider end to end: in-character AI personas, framework-based evaluation, and a deep automated test suite.',
       'Built Crucible, which holds coding agents to deterministic gates and adversarial evidence checks.',
       'Designed Lore / DependIQ, a multi-tenant product with more than 200 tests.',
-      'Presented to Atos how a knowledge graph enriches questions before they reach a model and checks the model’s answer afterward.',
     ],
     links: [{ href: '/projects#persuaider', label: 'Persuaider' }, { href: '/projects#crucible', label: 'Crucible' }, { href: '/projects#lore', label: 'Lore / DependIQ' }, { href: '/talks/knowledge-graphs', label: 'The Atos deck' }],
   },

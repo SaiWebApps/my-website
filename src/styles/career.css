@@ -1,6 +1,7 @@
 .career-page{min-height:100svh}
 .career-intro{background:#102630;color:#f2f4ec;padding:155px clamp(1.25rem,7.5vw,8.5rem) 3.5rem}
 .career-intro h1{font-size:clamp(5rem,10vw,10.5rem);line-height:.9;letter-spacing:-.08em;font-weight:650;margin:0}
+.career-lede{font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.45;color:#d0dfd9;margin:2rem 0 0}
 .career-tabs{display:flex;gap:2.25rem;padding:0 clamp(1.25rem,7.5vw,8.5rem);background:#102630;border-bottom:1px solid #91a6a162}
 .career-tabs a{display:block;padding:1.25rem 0;text-decoration:none;font-size:1.05rem;color:#bdceca;border-bottom:3px solid transparent}
 .career-tabs a:hover,.career-tabs a:focus-visible{color:#fff}
@@ -8,7 +9,7 @@
 .career-tabs .career-tab-resume{margin-left:auto;color:#d8fa77;font-weight:600}
 .career-tabs .career-tab-resume:hover,.career-tabs .career-tab-resume:focus-visible{color:#fff}
 .career-panel{padding:2.7rem clamp(1.25rem,7.5vw,8.5rem) 6rem}
-.js .career-panel:not(.active){display:none}
+.career-panel+.career-panel{border-top:1px solid #6e8274}
 
 /* Career graph */
 .cg{display:none;position:relative;width:100%;aspect-ratio:1200/620;background:#102630;border:1px solid #698778;box-shadow:12px 12px 0 #ccd6c9;overflow:hidden;user-select:none;-webkit-user-select:none}

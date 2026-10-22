@@ -5,6 +5,7 @@ const links = [
   { id: 'services', label: 'Services', href: '/services' },
   { id: 'speaking', label: 'Speaking', href: '/speaking' },
   { id: 'career', label: 'Career', href: '/career' },
+  { id: 'resume', label: 'Resume', href: '/assets/Sairam_Krishnan_Resume.pdf' },
   { id: 'research', label: 'Research', href: '/research' },
   { id: 'projects', label: 'Projects', href: '/projects' },
   { id: 'contact', label: 'Contact', href: '/contact' },
@@ -16,6 +17,6 @@ const links = [
     <span>Sairam Krishnan</span>
   </a>
   <nav class="primary-nav" aria-label="Main navigation">
-    {links.map(link => <a href={link.href} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}
+    {links.map(link => <a href={link.href} aria-current={active === link.id ? 'page' : undefined} target={link.id === 'resume' ? '_blank' : undefined} rel={link.id === 'resume' ? 'noopener' : undefined}>{link.label}</a>)}
   </nav>
 </header>

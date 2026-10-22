@@ -1,3 +1,5 @@
+// Sources: the Atos deck (public/talks/knowledge-graphs), Praxtera course materials for HP and Morgan Lewis
+// (Google Drive, Ventures/Praxtera), Sairam's own account of the PBS session, and src/data/career.ts.
 import { careerById, eaglesSummitSources } from './career';
 
 export type TalkPart = { title: string; date?: string; startDate?: string; text?: string; steps?: string[] };
@@ -79,7 +81,7 @@ export const talks: Talk[] = [
   },
   {
     id: 'atos',
-    org: 'Atos',
+    org: 'Atos · Independent',
     date: 'Sep 3, 2026',
     startDate: '2026-09-03',
     title: 'Knowledge Graphs, Then Small Language Models',
