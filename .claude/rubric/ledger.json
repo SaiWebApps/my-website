@@ -2333,6 +2333,15 @@
    "class": "Career independent review verdict drift",
    "check": "P5",
    "plant": {"kind": "facts_mutation", "case": "career-independent-review-drift"}
+  },
+  {
+   "id": "loop-regressed-design",
+   "at": "2026-10-29",
+   "said": "It was fine before this loop started but now it looks awful",
+   "class": "checks passed, site got worse",
+   "check": "reviewer",
+   "reviewer": {"kind": "message", "text": "The rubric scores 100%, so the site is ready."},
+   "plant": null
   }
  ]
 }

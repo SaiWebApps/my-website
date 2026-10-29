@@ -12505,6 +12505,32 @@
    "rule": "See the corrections in the same message",
    "check": "reviewer",
    "class": "process-drags-on"
+  },
+  {
+   "session": "c8f4f9d5",
+   "at": "2026-10-29",
+   "applies_to": "site",
+   "images": [],
+   "said": "Oh my god, the website looks completely broken. What did Codex do?",
+   "reacting_to": "the current Career and Services screenshots after the overnight Codex rubric loop",
+   "kind": "question",
+   "what_went_wrong": null,
+   "rule": "Answer what changed and why, first",
+   "check": "reviewer",
+   "class": "no answer"
+  },
+  {
+   "session": "c8f4f9d5",
+   "at": "2026-10-29",
+   "applies_to": "site",
+   "images": [],
+   "said": "It was fine before this loop started but now it looks awful",
+   "reacting_to": "Career slides replaced by an all-at-once grid, sentences split mid-line, Services map flattened, while the rubric scored 100%",
+   "kind": "correction",
+   "what_went_wrong": "The overnight loop changed the accepted design to satisfy checks; the checks passed a visibly worse site",
+   "rule": "A passing score never licenses a visual regression from the accepted look",
+   "check": "reviewer",
+   "class": "checks passed, site got worse"
   }
  ]
 }
