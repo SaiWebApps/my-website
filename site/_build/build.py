@@ -535,6 +535,10 @@ CMU_LATER = {'cmu-capstone': 'It became Gestiq.', 'cmu-projects': 'It became the
 def quote(text, who):
     return f'<figure class="cr-quote"><blockquote><p>{t(text)}</p></blockquote><figcaption>{who}</figcaption></figure>'
 
+# Each job's book: jacket colour (a site line colour) and trim height in px.
+SHELF = {'cmu': ('red', 430), 'microsoft': ('blue', 392), 'sig': ('green', 410), 'amazon': ('orange', 448),
+         'apple': ('black', 468), 'wharton': ('purple', 438), 'praxtera': ('yellow', 400)}
+
 def career():
     L = {e['id']: e for e in D['careerLedger']}
     ledger_index = {entry['id']: index for index, entry in enumerate(D['careerLedger'])}
@@ -551,10 +555,9 @@ def career():
         'wharton': ['wharton'],
         'praxtera': ['praxtera'],
     }
-    def fact_route(fact, attributes=''):
-        tokens = fact.split()
-        parts = [' '.join(tokens[index:index + 22]) for index in range(0, len(tokens), 22)]
-        return f'<div class="route cr-fact-route"{attributes}>' + ' '.join(f'<span>{t(part)}</span>' for part in parts) + '</div>'
+    def fact_route(fact, attributes='', proof=False):
+        body = t(fact)
+        return f'<div class="route cr-fact-route"{attributes}><span>{body}</span></div>'
     def source_state(text, fact_id=''):
         return {'text': text, 'record': '', 'field': '', 'year': '', 'fact_id': fact_id}
     def supplemental(eid):
@@ -600,7 +603,7 @@ def career():
         supporting = ''.join(fact_route(text) for text in state.get('supporting', []))
         return (f'<div class="cr-proof__pane cr-proof__pane--{kind}" data-proof-pane="{state["index"]}"'
                 f' data-screen="{eid}-{state["index"]}"{testimonial_attrs(state)} tabindex="0">'
-                f'{fact_route(state["text"], marker)}{supporting}</div>')
+                f'{fact_route(state["text"], marker, kind == "fact")}{supporting}</div>')
     def proof_atlas(eid, states):
         ordered = []
         records = {}
@@ -613,19 +616,19 @@ def career():
                 records[record] = []
                 ordered.append(('testimonial', record))
             records[record].append(state)
-        out = ''
+        out = []
         for kind, value in ordered:
             if kind == 'fact':
-                out += proof_pane(eid, value)
+                out.append(proof_pane(eid, value))
                 continue
             record = value
             quote_states = [state for state in records[record] if state['field'].startswith('quote-')]
             cite_states = [state for state in records[record] if not state['field'].startswith('quote-')]
-            quotes = ''.join(proof_pane(eid, state, 'quote') for state in quote_states)
             cite = ''.join(proof_pane(eid, state, 'cite') for state in cite_states)
-            out += (f'<figure class="cr-testimonial" data-testimonial-card="{html.escape(record)}">'
-                    f'<blockquote>{quotes}</blockquote>'
-                    f'<figcaption>{cite}</figcaption></figure>')
+            for k, state in enumerate(quote_states):  # one quote per slide; who said it appears once, on the first
+                out.append(f'<figure class="cr-testimonial" data-testimonial-card="{html.escape(record)}">'
+                           f'<blockquote>{proof_pane(eid, state, "quote")}</blockquote>'
+                           + (f'<figcaption>{cite}</figcaption>' if k == 0 else '') + '</figure>')
         return out
     def evidence(eid, lead=False):
         e = L[eid]
@@ -647,30 +650,40 @@ def career():
         states += supplemental(eid)
         for index, state in enumerate(states):
             state['index'] = index
-        panes = proof_atlas(eid, states)
+        slides = proof_atlas(eid, states)
         links = ''.join(f'<a href="{href_fix(link["href"])}">{t(link["label"])}</a>' for link in e.get('links', []))
         figures = ''.join(f'<a href="/public{figure["href"]}"><img src="/public{figure["img"]}" width="{figure["width"]}" height="{figure["height"]}" loading="lazy" alt="{html.escape(figure["alt"])}"><span>{t(figure["title"])}</span></a>' for figure in e.get('figures', []))
-        extra = (f'<p class="cr-entry__links">{links}</p>' if links else '') + (f'<div class="cr-awards">{figures}</div>' if figures else '')
+        if links:
+            slides[-1] += f'<p class="cr-entry__links">{links}</p>'
+        if figures:
+            slides.append(f'<div class="cr-awards">{figures}</div>')
         org = (f'<span>{t(e["org"])}</span>' if eid == 'wharton' or not (names.get(eid, '') and names[eid] in e['org']) else '')
         identity = ('' if lead else
                     f'<h3 class="cr-entry__identity"><strong>{t(e["label"])}</strong><span>{t(role)}</span>'
                     f'<span>{t(e["dates"].replace(" – ", " - ").replace("–", "-"))}</span>{org}</h3>')
-        lead_class = ' cr-entry--lead' if lead else ''
-        return (f'<section class="cr-entry{lead_class}" data-entry-pane="{eid}" data-career-owner="{eid}">'
-                f'{identity}<div class="cr-proof__panes">{panes}</div>{extra}</section>')
+        slides[0] = identity + slides[0]
+        return [(eid, slide) for slide in slides]
     def skills_entry():
         fact = accepted_facts['resume:skills']
         state = {'text': fact['text'], 'record': '', 'field': '', 'year': '', 'accepted_id': fact['id'], 'index': 0}
-        return (f'<section class="cr-entry" id="resume-take" data-entry-pane="resume-take" data-career-owner="resume-take"'
-                f' aria-labelledby="resume-take-h"><h3 class="cr-entry__identity" id="resume-take-h">'
-                f'<strong>{t(career_evidence["skillsHeading"])}</strong></h3>'
-                f'<div class="cr-proof__panes">{proof_pane("resume-take", state)}</div></section>')
+        return [('resume-take', f'<h3 class="cr-entry__identity" id="resume-take-h"><strong>{t(career_evidence["skillsHeading"])}</strong></h3>'
+                                f'{proof_pane("resume-take", state)}')]
     def composition(station):
         entries = station_entries[station]
-        panes = ''.join(evidence(eid, index == 0) for index, eid in enumerate(entries))
+        slides = [slide for index, eid in enumerate(entries) for slide in evidence(eid, index == 0)]
         if station == 'apple':
-            panes += skills_entry()
-        return f'<div class="cr-atlas">{panes}</div>'
+            slides += skills_entry()
+        # One bullet, quote or figure per slide; the arrows ride through them.
+        # Each job is a book: one fact, quote or figure per page. The script opens the book; without it the pages read in order.
+        def kind(body):
+            return 'quote' if body.startswith('<figure class="cr-testimonial"') else ('figure' if body.startswith('<div class="cr-awards"') else 'fact')
+        pages = ''.join(f'<section class="bk-page" data-kind="{kind(body)}" data-career-owner="{eid}"'
+                        + (' id="resume-take" data-entry-pane="resume-take" aria-labelledby="resume-take-h"' if eid == 'resume-take' else '')
+                        + f'>{body}</section>' for eid, body in slides)
+        return f'<div class="bk-pages">{pages}</div>'
+    def composition_pages(station):
+        out = [slide for index, eid in enumerate(station_entries[station]) for slide in evidence(eid, index == 0)]
+        return out + (skills_entry() if station == 'apple' else [])
     def component_attribute(fact_id):
         return f' data-fact-id="{fact_id}"' if fact_id in component_fact_ids else ''
     def station_identity(eid):
@@ -691,15 +704,15 @@ def career():
         return (f'<p class="cr-station__identity"><strong{component_attribute(role_id)}>{t(role)}</strong>'
                 f'<span{component_attribute(dates_id)}>{t(station_dates)}</span>{org}{detail}</p>')
     names = {i: t(L[i]['label']) for i in RIDE}
-    # The line is the chronological navigation. Its labels remain present at every viewport size.
-    stops = ''
+    # The shelf is the navigation: one book per job, in date order. A spine's thickness is how many pages it holds.
+    spines = ''
     for i in RIDE:
-        branch = ' cr-strip__s--branch' if i in ('wharton', 'praxtera') else ''
-        stops += (f'<span class="cr-strip__item"><a class="cr-strip__s{branch}" href="#{i}" data-go="{i}">'
-                  f'<i aria-hidden="true"></i><b>{names[i]}</b></a></span>')
-    strip = (f'<span class="cr-strip__ln" aria-hidden="true"></span>'
-             f'<span class="cr-strip__lens" aria-hidden="true"></span>'
-             f'<div class="cr-strip__list">{stops}</div><span class="cr-train" aria-hidden="true"></span>')
+        line, height = SHELF[i]
+        count = len(composition_pages(i))
+        spines += (f'<a class="bk-spine" href="#{i}" data-go="{i}" data-line="{line}" style="--h:{height}px;--n:{min(count, 26)}">'
+                   f'<span class="bk-spine__name">{names[i]}</span>'
+                   f'<span class="bk-spine__dates">{t(L[i]["dates"].replace(" – ", " - ").replace("–", "-"))}</span></a>')
+    strip = f'<div class="bk-shelf__row">{spines}</div><span class="bk-slot" aria-hidden="true"></span>'
     flow = ['cmu', 'microsoft', 'sig', 'amazon', 'apple']
     def ride_nav(eid):
         links = ''
@@ -720,7 +733,7 @@ def career():
     sts = ''
     for i in RIDE:
         heading = 'Wharton Executive MBA' if i == 'wharton' else names[i]
-        sts += (f'<article class="cr-st" id="{i}" data-x="{RIDE_X[i]}" data-career-owner="{i}" aria-labelledby="{i}-h">\n'
+        sts += (f'<article class="cr-st" id="{i}" data-x="{RIDE_X[i]}" data-line="{SHELF[i][0]}" data-career-owner="{i}" aria-labelledby="{i}-h">\n'
                 f'  <div class="cr-body"><header class="cr-l"><h2 class="cr-sign" id="{i}-h" tabindex="-1">{heading}</h2>'
                 f'{station_identity(i)}</header><div class="cr-r">{composition(i)}</div></div>{ride_nav(i)}\n</article>\n')
     main = fill(read('career.html'), strip=strip, stations=sts)

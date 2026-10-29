@@ -28,15 +28,17 @@
 
   /* ---------- Cars: step through a unit's screens; dots show where you are ---------- */
   const carsOf = el => $('.cars__track', el);
+  // One step is one car: its width plus the gap (a car is narrower than the track on Career).
+  const carWidth = track => (track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0) : track.clientWidth);
   const carStep = (track, d) => {
     if (!track) return false;
-    const w = track.clientWidth, max = track.scrollWidth - w - 2;
+    const w = carWidth(track), max = track.scrollWidth - track.clientWidth - 2;
     if ((d > 0 && track.scrollLeft >= max) || (d < 0 && track.scrollLeft <= 2)) return false;
     track.scrollBy({ left: d * w, behavior: motionOK() ? 'smooth' : 'auto' });
     return true;
   };
   $$('[data-cars]').forEach(c => {
-    const track = carsOf(c), line = $('.cars__line', c), btns = $$('[data-car]', c);
+    const track = carsOf(c), line = $('.cars__line', c), btns = $$('[data-car]', c), consist = $$('.cr-consist i', c);
     const scope = c.closest('article, section');
     const heading = scope && $('h1, h2, h3, .sign, .eh__title, .eh__org', scope);
     track.tabIndex = 0;
@@ -45,6 +47,8 @@
     const sync = () => {
       const max = Math.max(1, track.scrollWidth - track.clientWidth);
       line?.style.setProperty('--p', Math.min(1, Math.max(0, track.scrollLeft / max)).toFixed(3));
+      const at = Math.round(track.scrollLeft / carWidth(track));
+      consist.forEach((pip, k) => pip.classList.toggle('on', k === at));
       btns.forEach(b => b.setAttribute('aria-disabled', (b.dataset.car < 0 ? track.scrollLeft <= 2 : track.scrollLeft >= track.scrollWidth - track.clientWidth - 2) ? 'true' : 'false'));
     };
     btns.forEach(b => b.addEventListener('click', () => carStep(track, +b.dataset.car)));
@@ -474,76 +478,135 @@
     show(start, false);
   }
 
-  /* ---------- Career rail: one station at a time, with every proof exposed ---------- */
+  /* ---------- Career shelf: each job is a book; pull one down and it opens, one fact per page ---------- */
   const cride = $('[data-career-ride]');
   if (cride) {
     const sts = $$('.cr-st', cride), ids = sts.map(s => s.id);
-    const strip = $('.cr-strip', cride), train = $('.cr-train', cride);
-    const stationLinks = $$('.cr-strip__s', strip);
-    cride.classList.add('is-ride');
-    let cur = -1;
-    const show = (id, record = true) => {
-      const i = ids.indexOf(id);
-      if (i < 0 || i === cur) return;
-      const from = cur;
-      sts.forEach((s, k) => s.classList.toggle('is-on', k === i));
-      stationLinks.forEach(a => {
-        const active = a.dataset.go === id;
-        a.classList.toggle('is-on', active);
-        a.classList.toggle('is-past', ids.indexOf(a.dataset.go) < i);
-        a.tabIndex = active ? 0 : -1;
-        if (active) a.setAttribute('aria-current', 'step');
-        else a.removeAttribute('aria-current');
-      });
-      cride.style.setProperty('--x', sts[i].dataset.x);
-      if (train) train.style.opacity = '1';
-      if (from >= 0 && G && motionOK()) G.fromTo(sts[i], { opacity: 0, x: i > from ? 48 : -48 }, { opacity: 1, x: 0, duration: 0.42, ease: 'expo.out', clearProps: 'transform,opacity' });
-      cur = i;
-      if (record) history.replaceState(null, '', '#' + id);
+    const shelf = $('.bk-shelf', cride), row = $('.bk-shelf__row', shelf), slot = $('.bk-slot', shelf);
+    const spineOf = id => $(`.bk-spine[data-go="${id}"]`, row);
+    const mk = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
+    const phone = matchMedia('(max-width: 860px)');
+    // The book: two pages between boards, page-block edges, and turn buttons.
+    const stage = mk('section', 'bk-stage'); stage.setAttribute('aria-label', 'Open book');
+    const book = mk('div', 'bk-book');
+    const verso = mk('div', 'bk-leafpage bk-verso'), recto = mk('div', 'bk-leafpage bk-recto');
+    verso.setAttribute('aria-hidden', 'true'); recto.setAttribute('aria-live', 'polite');
+    book.append(mk('div', 'bk-edge bk-edge--l'), verso, recto, mk('div', 'bk-edge bk-edge--r'));
+    const turns = mk('div', 'bk-turns');
+    const prev = mk('button', 'bk-turn', '<span aria-hidden="true">←</span>'), next = mk('button', 'bk-turn', '<span aria-hidden="true">→</span>');
+    prev.type = next.type = 'button'; prev.setAttribute('aria-label', 'Previous page'); next.setAttribute('aria-label', 'Next page');
+    turns.append(prev, next); stage.append(book, turns); cride.append(stage);
+    cride.classList.add('is-shelf');
+    document.documentElement.style.setProperty('--shelf-w', shelf.getBoundingClientRect().width + 'px');
+
+    let job = null, page = 0, busy = false;
+    const stOf = id => sts[ids.indexOf(id)];
+    const pagesOf = id => $$('.bk-page', stOf(id));
+    const count = id => pagesOf(id).length + 1;   // page 0 is the title page
+    // A page's content is a copy of the job's own page, with ids dropped so the original stays the only one.
+    const copy = node => { const c = node.cloneNode(true); c.removeAttribute('id'); $$('[id]', c).forEach(n => n.removeAttribute('id')); return c; };
+    const versoFor = (id, p) => {
+      const f = document.createDocumentFragment(), plate = mk('div', 'bk-plate');
+      if (p === 0) plate.append(mk('div', 'bk-plate__title', $('.cr-sign', stOf(id)).innerHTML));
+      else if (pagesOf(id)[p - 1].dataset.kind === 'quote') plate.append(mk('div', 'bk-plate__mark', '“'));
+      else plate.append(mk('div', 'bk-plate__num', String(p)));
+      f.append(plate, mk('div', 'bk-shade'));
+      return f;
     };
-    const step = d => {
-      const next = Math.max(0, Math.min(ids.length - 1, cur + d));
-      if (next !== cur) show(ids[next]);
+    const rectoFor = (id, p) => {
+      const f = document.createDocumentFragment(), sheet = mk('div', 'bk-sheet');
+      if (p === 0) { const t = mk('div', 'bk-title'); t.append(copy($('.cr-station__identity', stOf(id)))); sheet.append(t); }
+      else sheet.append(...copy(pagesOf(id)[p - 1]).childNodes);
+      f.append(sheet, mk('div', 'bk-shade'), mk('span', 'bk-folio', String(p * 2 + 1)));
+      return f;
     };
-    cride.addEventListener('click', e => {
+    const paint = (el, frag) => el.replaceChildren(frag);
+    const setEdges = () => {
+      const n = count(job), total = Math.min(3 + n * 0.4, 12);
+      const left = Math.max(1, Math.round(total * page / Math.max(1, n - 1)));
+      book.style.setProperty('--left', Math.min(left, 10) + 'px');
+      book.style.setProperty('--right', Math.min(10, Math.max(1, Math.round(total - left))) + 'px');
+      prev.disabled = page === 0; next.disabled = page === n - 1;
+      book.toggleAttribute('data-turnable', n > 1);
+    };
+    const placeSlot = () => {
+      if (!job) return;
+      const r = spineOf(job).getBoundingClientRect(), pr = shelf.getBoundingClientRect();
+      slot.style.left = (r.left - pr.left + shelf.scrollLeft) + 'px'; slot.style.width = r.width + 'px'; slot.style.height = r.height + 'px';
+    };
+    const animated = () => G && motionOK() && !phone.matches;
+    const open = (id, fromShelf) => {
+      if (busy || !ids.includes(id) || (id === job && fromShelf)) return;
+      job = id; page = 0;
+      const line = stOf(id).dataset.line;
+      book.dataset.line = line; stage.dataset.line = line;
+      $$('.bk-spine', row).forEach(a => a.toggleAttribute('aria-current', a.dataset.go === id));
+      placeSlot();
+      paint(verso, versoFor(job, 0)); paint(recto, rectoFor(job, 0)); setEdges();
+      if (!fromShelf || !G) return;
+      if (!animated()) { G.fromTo(book, { opacity: 0 }, { opacity: 1, duration: motionOK() ? 0.26 : 0.18, ease: 'power1.out' }); return; }
+      // Pull the book off the shelf, then swing the front board open.
+      busy = true;
+      const cover = mk('div', 'bk-cover'), front = mk('div', 'bk-cover__front'), back = mk('div', 'bk-cover__back');
+      front.append(mk('b', '', $('.cr-sign', stOf(id)).innerHTML), mk('span', '', $('.bk-spine__dates', spineOf(id)).innerHTML));
+      back.append(versoFor(job, 0)); cover.append(front, back); book.append(cover);
+      const s = spineOf(id).getBoundingClientRect(), bb = book.getBoundingClientRect();
+      G.set(verso, { opacity: 0 });
+      G.timeline({ onComplete: () => { cover.remove(); busy = false; } })
+        .fromTo(book, { x: s.left + s.width / 2 - (bb.left + bb.width * 0.75), y: 40, rotateY: -18, scale: 0.62, opacity: 0 },
+          { x: 0, y: 0, rotateY: 0, scale: 1, opacity: 1, duration: 0.62, ease: 'power3.out' })
+        .to(cover, { rotateY: -180, duration: 0.9, ease: 'power2.inOut' }, '-=0.08')
+        .set(verso, { opacity: 1 }, '-=0.45');
+    };
+    const turn = dir => {
+      const to = page + dir;
+      if (busy || !job || to < 0 || to > count(job) - 1) return;
+      if (!animated()) {
+        page = to;
+        const swap = () => { paint(verso, versoFor(job, page)); paint(recto, rectoFor(job, page)); setEdges(); };
+        if (!G) return swap();
+        busy = true;
+        G.to([verso, recto], { opacity: 0, x: motionOK() ? -14 * dir : 0, duration: 0.14, ease: 'power2.in', onComplete: () => {
+          swap();
+          G.fromTo([verso, recto], { opacity: 0, x: motionOK() ? 14 * dir : 0 }, { opacity: 1, x: 0, duration: 0.22, ease: 'power2.out', onComplete: () => { busy = false; } });
+        } });
+        return;
+      }
+      // A real leaf: the recto lifts over the gutter and lands as the next verso (or back again).
+      busy = true;
+      const leaf = mk('div', 'bk-leaf ' + (dir > 0 ? 'bk-leaf--fwd' : 'bk-leaf--back'));
+      const f = mk('div', 'bk-leaf__front'), b = mk('div', 'bk-leaf__back'), df = mk('div', 'bk-leaf__dark'), db = mk('div', 'bk-leaf__dark');
+      if (dir > 0) { f.append(...recto.cloneNode(true).childNodes); b.append(versoFor(job, to)); paint(recto, rectoFor(job, to)); }
+      else { f.append(...verso.cloneNode(true).childNodes); b.append(rectoFor(job, to)); paint(verso, versoFor(job, to)); }
+      f.append(df); b.append(db); leaf.append(f, b); book.append(leaf);
+      page = to; setEdges();
+      const d = dir > 0 ? 0.78 : 0.6;   // forward turns take their time; going back is quicker
+      G.timeline({ onComplete: () => { if (dir > 0) paint(verso, versoFor(job, page)); else paint(recto, rectoFor(job, page)); leaf.remove(); busy = false; } })
+        .to(leaf, { rotateY: dir > 0 ? -180 : 180, duration: d, ease: 'power2.inOut' })
+        .to(df, { opacity: 0.22, duration: d / 2, ease: 'power1.in' }, 0)
+        .fromTo(db, { opacity: 0.22 }, { opacity: 0, duration: d / 2, ease: 'power1.out' }, d / 2);
+    };
+    row.addEventListener('click', e => {
       const a = e.target.closest('[data-go]');
       if (!a) return;
-      e.preventDefault();
-      show(a.dataset.go);
-      if (a.closest('.cr-foot')) {
-        const heading = document.getElementById(a.dataset.go + '-h');
-        heading?.focus({ preventScroll: true });
-        scrollTo({ top: 0, behavior: motionOK() ? 'smooth' : 'auto' });
-      }
+      e.preventDefault(); open(a.dataset.go, true); history.replaceState(null, '', '#' + a.dataset.go);
     });
-    strip.addEventListener('keydown', e => {
-      if (!e.target.closest('.cr-strip__s')) return;
-      let next = cur;
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = Math.min(ids.length - 1, cur + 1);
-      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = Math.max(0, cur - 1);
-      else if (e.key === 'Home') next = 0;
-      else if (e.key === 'End') next = ids.length - 1;
-      else return;
-      e.preventDefault();
-      show(ids[next]);
-      stationLinks[next].focus({ preventScroll: true });
+    next.addEventListener('click', () => turn(1));
+    prev.addEventListener('click', () => turn(-1));
+    recto.addEventListener('click', e => { if (!phone.matches && !e.target.closest('a')) turn(1); });
+    verso.addEventListener('click', () => { if (!phone.matches) turn(-1); });
+    addEventListener('keydown', e => {
+      if (e.altKey || e.metaKey || e.ctrlKey || e.target.closest('input, textarea, select, [contenteditable]')) return;
+      if (e.key === 'ArrowRight') turn(1);
+      if (e.key === 'ArrowLeft') turn(-1);
     });
-    // A mostly horizontal touch gesture moves one station without creating a horizontal page scroller.
-    let sx = 0, sy = 0, st = false;
-    const stage = $('.cr-stage', cride);
-    stage.addEventListener('pointerdown', e => { if (e.pointerType === 'mouse') return; sx = e.clientX; sy = e.clientY; st = true; }, { passive: true });
-    stage.addEventListener('pointerup', e => {
-      if (!st) return; st = false;
-      const dx = e.clientX - sx, dy = e.clientY - sy;
-      if (Math.abs(dx) > 56 && Math.abs(dx) > Math.abs(dy) * 1.4) step(dx < 0 ? 1 : -1);
-    }, { passive: true });
-    stage.addEventListener('pointercancel', () => { st = false; });
-    // A station link (career.html#amazon) opens the ride at that station; the page stays at the top, strip in view.
-    const top = () => { if (ids.includes(location.hash.slice(1))) { scrollTo(0, 0); requestAnimationFrame(() => scrollTo(0, 0)); } };
-    addEventListener('hashchange', () => { show(location.hash.slice(1), false); top(); });
-    show(ids.includes(location.hash.slice(1)) ? location.hash.slice(1) : ids[0], false);
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    top(); addEventListener('load', top, { once: true });
+    addEventListener('resize', placeSlot);
+    addEventListener('hashchange', () => open(location.hash.slice(1), true));
+    // A link to career.html#amazon opens that book settled; otherwise Apple comes off the shelf.
+    const deep = ids.includes(location.hash.slice(1));
+    open(deep ? location.hash.slice(1) : 'apple', !deep);
+    const p = Number(new URLSearchParams(location.search).get('page'));
+    if (p > 0) { page = Math.min(p, count(job) - 1); paint(verso, versoFor(job, page)); paint(recto, rectoFor(job, page)); setEdges(); }
   }
 
   window.__transit = { G, $, $$, motionOK, nearest, makeTrain, visible };

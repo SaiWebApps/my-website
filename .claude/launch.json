@@ -6,18 +6,9 @@
       "runtimeExecutable": "sh",
       "runtimeArgs": [
         "-c",
-        "python3 site/_build/build.py --candidate && python3 -m http.server 4400 --bind 127.0.0.1 --directory .claude/rubric/out/candidate"
+        "RUBRIC_PIPELINE=1 python3 site/_build/build.py --candidate && python3 -m http.server 4400 --bind 127.0.0.1 --directory .claude/rubric/out/candidate"
       ],
       "port": 4400
-    },
-    {
-      "name": "before",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": [
-        "-m", "http.server", "4401", "--bind", "127.0.0.1",
-        "--directory", "/private/tmp/claude-501/-Users-sairambkrishnan-git-my-website/c8f4f9d5-3ed0-44a3-8e72-3ad8822477e1/scratchpad/dist-2026-10-28-2142"
-      ],
-      "port": 4401
     }
   ]
 }
