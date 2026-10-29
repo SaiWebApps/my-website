@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "route": "speaking",
+  "about": "Source-backed render compositions for accepted Speaking evidence. Every mapped fact remains governed; exact mirrors render once through their canonical detail owner.",
+  "compositions": [
+    {
+      "id": "cmu-teaching-accepted-composition",
+      "acceptedFactId": "resume:cmu-teaching:10:b0",
+      "coveredEquivalentFactIds": [
+        "site:talks[3].summary"
+      ],
+      "acceptedTextSha256": "d6d92e020961cf1cb1da1ee19b3e1f2aae7b1a0e69d832977d0c4248e4a370da",
+      "acceptedResumeSha256": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
+      "sourceReconciliationId": "cmu-teaching-accepted-deduplication",
+      "owner": {
+        "page": "speaking",
+        "unit": "cmu-teaching",
+        "block": "cmu",
+        "authorityGroup": "independent-speaking-teaching"
+      },
+      "coverageMarker": {
+        "attribute": "data-covers-fact",
+        "value": "resume:cmu-teaching:10:b0"
+      },
+      "requiredComponents": [
+        {
+          "factId": "head:pinned.career.ts.careerById.cmu-teaching.bullets[1]",
+          "role": "accepted-second-sentence-verbatim",
+          "textSha256": "64228abbaef53f4ec9ca9ef21700d27b1fbcf5cabadd6a1524b32cde06947a4d"
+        },
+        {
+          "factId": "site:careerLedger[2].bullets[1]",
+          "role": "detailed-20-lecture-curriculum",
+          "textSha256": "0feedf189ff9ae22afc33001b89aec2eab4791fd9a1e6128d148e15537ee1b6c"
+        },
+        {
+          "factId": "site:careerLedger[2].bullets[2]",
+          "role": "client-side-exercises",
+          "textSha256": "aa7077b644cc57c8faebb82a40039a7ddabe6b1258346720d43788130713aa70"
+        },
+        {
+          "factId": "site:careerLedger[2].bullets[3]",
+          "role": "server-side-exercises",
+          "textSha256": "4018f9ff1b6da80700f079a6b08386d5145548eb8e599c4523bf708592f01708"
+        },
+        {
+          "factId": "site:careerLedger[2].bullets[4]",
+          "role": "reference-applications",
+          "textSha256": "74559d70d0bb8e8e278dfb20da664a108955a771d750dd77dad0f0fcab860288"
+        }
+      ],
+      "renderPolicy": {
+        "markerOccurrences": 1,
+        "componentOccurrences": 1,
+        "fullAcceptedTextOccurrences": 0,
+        "allComponentsInsideMarker": true
+      }
+    }
+  ],
+  "canonicalMirrors": [
+    {
+      "id": "morgan-adoption-title",
+      "canonicalFactId": "site:talks[1].engagements[2].parts[0].title",
+      "mirrorFactIds": [
+        "site:teachingPrograms[2].sessions[0]"
+      ],
+      "textSha256": "1c4d868e22af0876b3689780607fcdafd3a4270c7d74041de7bf69eb7e3bbd42",
+      "owner": {
+        "page": "speaking",
+        "unit": "morgan-lewis",
+        "block": "morgan-lewis",
+        "authorityGroup": "praxtera-client-provenance"
+      }
+    },
+    {
+      "id": "morgan-persuasion-title",
+      "canonicalFactId": "site:talks[1].engagements[2].parts[1].title",
+      "mirrorFactIds": [
+        "site:teachingPrograms[2].sessions[1]"
+      ],
+      "textSha256": "232b3aa7f1dd96077a3643f65565f0fbb8ca8468127d1d80add63e663a75d2fe",
+      "owner": {
+        "page": "speaking",
+        "unit": "morgan-lewis",
+        "block": "morgan-lewis",
+        "authorityGroup": "praxtera-client-provenance"
+      }
+    },
+    {
+      "id": "pbs-foundations-title",
+      "canonicalFactId": "site:talks[1].engagements[1].parts[0].title",
+      "mirrorFactIds": [
+        "site:teachingPrograms[3].sessions[0]"
+      ],
+      "textSha256": "10fb4d5df87659c07df03c7ce5058cdc9754022e1112784e8b4f49d82b40f630",
+      "owner": {
+        "page": "speaking",
+        "unit": "pbs",
+        "block": "pbs",
+        "authorityGroup": "praxtera-client-provenance"
+      }
+    }
+  ],
+  "ownedDescriptions": [
+    {
+      "id": "atos-demo-poster-alt",
+      "text": "Demo from the Atos talk: a local model running in the Ollama desktop app on a Mac, ready for a first message",
+      "textSha256": "97454285801302125b8a24f4215ab7b3fc0ef0b8ea5580f005b74a3ce43820d1",
+      "attribute": "alt",
+      "tag": "img",
+      "asset": "/public/assets/atos-demo-poster.webp",
+      "proofId": "atos-deck",
+      "headingFactId": "site:talks[2].title",
+      "owner": {
+        "page": "speaking",
+        "unit": "atos",
+        "block": "atos",
+        "authorityGroup": "independent-speaking-teaching"
+      }
+    }
+  ],
+  "sectionHeadings": [
+    {
+      "id": "speaking-topics-heading",
+      "text": "Speaking topics",
+      "textSha256": "3051bc8643295f817b30fbd17e9865646e4cb656127af079ac43c6d81f0e3ecc",
+      "owner": {
+        "page": "speaking",
+        "unit": "talks",
+        "block": "talks"
+      }
+    }
+  ],
+  "consolidations": [
+    {
+      "id": "eagles-keynote-retirement-consolidation",
+      "canonicalFactId": "site:talks[0].summary:retirement-redaction",
+      "canonicalTextSha256": "46512ae3073b5fe54480c3b131ce6cca1b69207e936f7333af3789676e7f9651",
+      "coverageDecision": {
+        "type": "reviewed-semantic-coverage",
+        "precedence": "stronger-site-fact-retains-unique-clauses",
+        "coveredResumeFactId": "resume:praxtera:6:b4:retirement-redaction"
+      },
+      "coveredFactIds": [
+        "resume:praxtera:6:b4:retirement-redaction",
+        "site:careerLedger[12].bullets[1]:retirement-redaction",
+        "site:services[3].proof[0]:retirement-redaction"
+      ],
+      "requiredExcerpts": [
+        {
+          "factId": "resume:praxtera:6:b4:retirement-redaction",
+          "text": "300+ community and business leaders",
+          "textSha256": "4102d751b5ef0219161742c3ba24e45fccac6193c91c4cd3d05eeed88784dd0c",
+          "occurrences": 1
+        }
+      ],
+      "supportingFactIds": [
+        "site:talks[0].title",
+        "site:talks[0].date"
+      ],
+      "requiredClauses": [
+        "12th annual",
+        "delivering \"AI for Impact\"",
+        "March 18, 2026",
+        "more than 300"
+      ],
+      "sourceLinks": [
+        "https://web.archive.org/web/20260315052929/https://www.philadelphiaeagles.com/community/caresummit/",
+        "https://www.linkedin.com/posts/philadelphia-eagles_flyeaglesfly-activity-7442306553736650753-JEDu",
+        "https://www.linkedin.com/posts/michelle-histand-9486308_yesterday-i-got-to-teach-ai-to-over-150-non-profit-activity-7440565809158115328-g9ug"
+      ],
+      "owner": {
+        "page": "speaking",
+        "unit": "eagles",
+        "block": "eagles",
+        "authorityGroup": "praxtera-client-provenance"
+      },
+      "renderPolicy": {
+        "canonicalOccurrences": 1,
+        "coveredFactOccurrences": 0,
+        "supportingFactOccurrences": 1,
+        "sourceLinkOccurrences": 1
+      }
+    }
+  ]
+}

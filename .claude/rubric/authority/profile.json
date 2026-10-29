@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "sairam-krishnan",
+  "display_name": "Sairam Krishnan",
+  "entrypoint": "profile/profile.json",
+  "authority": {
+    "accepted_baseline": "baselines/accepted/Sairam_Krishnan_Resume.pdf",
+    "claim_graph": "evidence/graph/sairam-brand-sanitized.db",
+    "claim_export": "evidence/graph/brand-record.json",
+    "source_manifest": "evidence/source-manifest.json",
+    "corrections": "profile/corrections.ndjson",
+    "corrections_checkpoint": "profile/corrections.checkpoint.json",
+    "protected_claims": "profile/protected-claims.json",
+    "provenance_rules": "profile/provenance-rules.json",
+    "policies": "profile/policies.json"
+  },
+  "defaults": {
+    "application_type": "speaker",
+    "deliverables": ["resume", "cover_letter"],
+    "formats": ["pdf", "docx"],
+    "resume_pages": 2,
+    "cover_letter_pages": 1,
+    "review_policy": "independent_model_with_disclosed_fallback",
+    "block_only_on_material_conflict": true,
+    "output_promotion": "all_gates_pass"
+  },
+  "contact": {
+    "email": "sairambkrishnan@gmail.com",
+    "phone": "281-513-1263",
+    "website": "https://sairambkrishnan.com",
+    "linkedin": "https://www.linkedin.com/in/sairambkrishnan",
+    "github": "https://github.com/SaiWebApps"
+  },
+  "golden_fixtures": [
+    {
+      "id": "tomorrow-city-speaker-2027",
+      "root": "fixtures/tomorrow-city",
+      "run_manifest": "fixtures/tomorrow-city/input/run-manifest.json",
+      "release_manifest": "fixtures/tomorrow-city/expected/audit/release-manifest.json"
+    }
+  ]
+}

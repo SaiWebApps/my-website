@@ -6,9 +6,9 @@
       "runtimeExecutable": "sh",
       "runtimeArgs": [
         "-c",
-        "npm run build && node scripts/serve-dist.mjs"
+        "npm run dev"
       ],
-      "port": 4399
+      "port": 4400
     }
   ]
 }

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "speaking-wide-hero-collision",
+  "status": "accepted-governed-transition",
+  "scope": "Speaking hero at viewport widths of 1360 pixels and wider",
+  "authorization": "Root release instruction after read-only design and pixel-isolation preflight",
+  "reason": "Separate the Speaking title ink from the Praxtera, Philadelphia Eagles, and Morgan Lewis index ink at wide viewports without changing evidence, navigation, or smaller layouts.",
+  "sourceTransition": {
+    "priorProofContractSha256": "009430f7c5f95208d89c2db8e5cd2ed318795ad5e3c8f6f03d9bc5667e1d7b20",
+    "priorSpeakingCssSha256": "50bfcc62aecb982dfc116eb4ebc1a565f5026ce0a929152d9f279e0cd81add17",
+    "candidateSpeakingCssSha256": "72064ec290ce5ae713914a98f67cb974fadc32019164d6319bfe5364f31d4ae1",
+    "priorSpeakingHtmlSha256": "51673ea0d4c45bec0e1f8a7e40a6b629d59a2e25ceb40b2834c8f8a0b4ee13f1",
+    "candidateSpeakingHtmlSha256": "aa95f486ea4c8f15b06b4ff9d918b293f80861568fda7373192c22ecad1fc40a"
+  },
+  "preservedFrames": [
+    {"width": 375, "theme": "light", "sha256": "82aae91d7f498aa041f9a630c81ef9e20bdbec2384eafd511a075f4e0ef41cd1"},
+    {"width": 375, "theme": "dark", "sha256": "edba4a0656ae28b3660ef45c38cd0cd243292064f98604ebf3c1ad1813b36fd5"},
+    {"width": 768, "theme": "light", "sha256": "690b7ca17a5ee774887fac53313a4b4da88aaf36a662f1f8a28f183b5e4d6a2a"},
+    {"width": 768, "theme": "dark", "sha256": "bbeb23a187b25d1eaef92a6b69ec2ef4f469719a3dbfb875f2b6be9585aa127a"}
+  ],
+  "authorizedFrameChanges": [
+    {
+      "width": 1440,
+      "theme": "light",
+      "priorSha256": "f42dcb6f3ce29e6debc33970f12471f719e5d55b66c19ad89f938a7e81eceba0",
+      "candidateSha256": "66b6ac47ba564002857c5ed6c09337c901d6e8aea0c7780714ba8b6a5c5dbd47",
+      "differingPixels": 26243,
+      "differingRatio": 0.0014835807192734903,
+      "diffBbox": {"left": 578, "top": 180, "right": 1229, "bottom": 444, "width": 652, "height": 265}
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "priorSha256": "02736512e55a2fdcbbb2194e6add5a3f3e0aa538333cbd5c3512573b1350b425",
+      "candidateSha256": "39fc0efc292e77f164c7d3bce587999ca8b0fb4839d6c91bd1c2b4b5d799bde9",
+      "differingPixels": 26079,
+      "differingRatio": 0.001474309399761207,
+      "diffBbox": {"left": 578, "top": 180, "right": 1229, "bottom": 444, "width": 652, "height": 265}
+    }
+  ],
+  "pixelIsolation": {
+    "method": "isolated-hero-raster-mask-v1",
+    "viewportHeight": 900,
+    "differenceThreshold": 0,
+    "titleSelector": ".sp2-hero > h1",
+    "targets": [
+      {"id": "praxtera", "selector": ".sp2-index a[href=\"#praxtera\"]"},
+      {"id": "philadelphia", "selector": ".sp2-index a[href=\"#eagles\"]"},
+      {"id": "morgan", "selector": ".sp2-index a[href=\"#morgan-lewis\"]"}
+    ],
+    "contexts": [
+      {
+        "width": 1440,
+        "theme": "light",
+        "fullPageSha256": "66b6ac47ba564002857c5ed6c09337c901d6e8aea0c7780714ba8b6a5c5dbd47",
+        "titleInkPixels": 27410,
+        "titleBox": {"left": 115, "top": 162, "right": 616, "bottom": 289, "width": 502, "height": 128},
+        "targets": [
+          {"id": "praxtera", "inkPixels": 3857, "intersectionPixels": 0, "horizontalClearance": 113, "box": {"left": 730, "top": 180, "right": 984, "bottom": 289, "width": 255, "height": 110}},
+          {"id": "philadelphia", "inkPixels": 1370, "intersectionPixels": 0, "horizontalClearance": 135, "box": {"left": 752, "top": 233, "right": 922, "bottom": 250, "width": 171, "height": 18}},
+          {"id": "morgan", "inkPixels": 989, "intersectionPixels": 0, "horizontalClearance": 135, "box": {"left": 752, "top": 279, "right": 880, "bottom": 296, "width": 129, "height": 18}}
+        ]
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "fullPageSha256": "39fc0efc292e77f164c7d3bce587999ca8b0fb4839d6c91bd1c2b4b5d799bde9",
+        "titleInkPixels": 27375,
+        "titleBox": {"left": 115, "top": 162, "right": 616, "bottom": 289, "width": 502, "height": 128},
+        "targets": [
+          {"id": "praxtera", "inkPixels": 3845, "intersectionPixels": 0, "horizontalClearance": 113, "box": {"left": 730, "top": 180, "right": 984, "bottom": 289, "width": 255, "height": 110}},
+          {"id": "philadelphia", "inkPixels": 1359, "intersectionPixels": 0, "horizontalClearance": 135, "box": {"left": 752, "top": 233, "right": 922, "bottom": 250, "width": 171, "height": 18}},
+          {"id": "morgan", "inkPixels": 968, "intersectionPixels": 0, "horizontalClearance": 135, "box": {"left": 752, "top": 279, "right": 880, "bottom": 296, "width": 129, "height": 18}}
+        ]
+      },
+      {
+        "width": 1600,
+        "theme": "light",
+        "fullPageSha256": "1752a6a2a707b010c619d09b6c7300bbe48c01bdd2b467186c4e9ef1e93bb1ac",
+        "titleInkPixels": 30344,
+        "titleBox": {"left": 195, "top": 162, "right": 723, "bottom": 295, "width": 529, "height": 134},
+        "targets": [
+          {"id": "praxtera", "inkPixels": 3876, "intersectionPixels": 0, "horizontalClearance": 90, "box": {"left": 814, "top": 180, "right": 1068, "bottom": 289, "width": 255, "height": 110}},
+          {"id": "philadelphia", "inkPixels": 1375, "intersectionPixels": 0, "horizontalClearance": 112, "box": {"left": 836, "top": 233, "right": 1007, "bottom": 250, "width": 172, "height": 18}},
+          {"id": "morgan", "inkPixels": 968, "intersectionPixels": 0, "horizontalClearance": 112, "box": {"left": 836, "top": 279, "right": 964, "bottom": 296, "width": 129, "height": 18}}
+        ]
+      },
+      {
+        "width": 1600,
+        "theme": "dark",
+        "fullPageSha256": "5d56edbd9b7208c4960db6ebbc737d5e2a23c805d661402ed70a9c9b938c6b66",
+        "titleInkPixels": 30295,
+        "titleBox": {"left": 195, "top": 162, "right": 723, "bottom": 295, "width": 529, "height": 134},
+        "targets": [
+          {"id": "praxtera", "inkPixels": 3867, "intersectionPixels": 0, "horizontalClearance": 90, "box": {"left": 814, "top": 180, "right": 1068, "bottom": 289, "width": 255, "height": 110}},
+          {"id": "philadelphia", "inkPixels": 1360, "intersectionPixels": 0, "horizontalClearance": 112, "box": {"left": 836, "top": 233, "right": 1007, "bottom": 250, "width": 172, "height": 18}},
+          {"id": "morgan", "inkPixels": 958, "intersectionPixels": 0, "horizontalClearance": 112, "box": {"left": 836, "top": 279, "right": 964, "bottom": 296, "width": 129, "height": 18}}
+        ]
+      }
+    ]
+  },
+  "frozenCollateral": {
+    "sharedRouteOraclePath": ".claude/rubric/shared-route-oracle.json",
+    "sharedRouteOracleSha256": "748918bb8cce8354ed31ebfbffa92d61c01f98c484dd3d936300959c00553c7b",
+    "sharedAll": "160d42d18e7e31298496705f3ec66d4d1066ba5f91e19f6c499c49a6099e75f8",
+    "projectsProofContractPath": ".claude/rubric/projects-proof-contract.json",
+    "projectsProofContractSha256": "232ca14a9364d03a93510042c2456f1c77f422ef0307080770b7b9ddee36acc0",
+    "nonSpeakingHtmlCount": 6,
+    "sharedFrameCount": 68
+  }
+}

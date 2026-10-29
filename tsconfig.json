@@ -1,10 +1,24 @@
 {
-  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "exclude": ["brand/sources/legacy-site"]
+  "exclude": [
+    "dist",
+    "public",
+    "site",
+    "decks",
+    "brand/sources/legacy-site"
+  ],
+  "include": [
+    "src/**/*"
+  ]
 }

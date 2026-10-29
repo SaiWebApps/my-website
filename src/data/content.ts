@@ -118,6 +118,14 @@ export function claim(value: string): ClaimRef {
   };
 }
 
+// User-approved clarification, 26 October 2026; the current résumé supersedes the legacy graph wording.
+const alexaAccuracyClaim: ClaimRef = {
+  ...claim('Model accuracy 40% at Amazon Alexa'),
+  value: '40% improvement in end-to-end ASR and routing accuracy at Amazon Alexa',
+  sourcePath: 'public/assets/Resume.pdf',
+  sourceLine: 1,
+};
+
 export const frameworkStages: FrameworkStage[] = [
   {
     id: 'architecture',
@@ -132,7 +140,7 @@ export const frameworkStages: FrameworkStage[] = [
     label: 'Implementation',
     title: 'Build for coordinated change.',
     body: 'Turn the architecture into clear ownership, observable flows, and an operating rhythm teams can carry.',
-    evidence: 'Eight engineers worked across three continents.',
+    evidence: 'I lead eight engineers and own their performance reviews and development.',
     claim: claim('An eight-engineer team across three continents'),
   },
   {
@@ -156,20 +164,20 @@ export const frameworkStages: FrameworkStage[] = [
 export const evidence: EvidenceItem[] = [
   { value: '100M+', label: 'users served', detail: 'AI and data platforms at Apple', claim: claim('Platforms serving more than 100 million users') },
   { value: '$40M', label: 'annual impact', detail: 'savings delivered at Amazon Alexa', claim: claim('$40M per year at Amazon Alexa') },
-  { value: '8 / 3', label: 'engineers / continents', detail: 'a distributed team led at Apple', claim: claim('An eight-engineer team across three continents') },
+  { value: '8', label: 'engineers led', detail: 'performance reviews, hiring, and development at Apple', claim: claim('An eight-engineer team across three continents') },
   { value: '300+', label: 'leaders addressed', detail: 'Eagles Care Summit 2026', claim: claim('Eagles Care Summit 2026 before more than 300 leaders') },
 ];
 
 export const leadershipCases: LeadershipCaseStudy[] = [
   {
-    slug: 'knowledge-graph', organization: 'Apple', title: 'A shared knowledge layer for media',
+    slug: 'knowledge-graph', organization: 'Apple', title: 'Media intelligence, from identity to model evaluation',
     situation: 'Search, recommendations, and discovery depended on fragmented metadata and inconsistent models.',
-    responsibility: 'Led architecture and cross-functional delivery of a canonical media knowledge graph.',
-    decisions: ['Unified more than fifteen sources around one model', 'Moved critical ingestion from batch toward event-driven processing', 'Built quality and operational leverage into the platform'],
+    responsibility: 'I lead architecture, AI/ML engineering, and an eight-engineer team, including performance reviews, hiring, and engineer development.',
+    decisions: ['Integrated supervised classifier outputs with human corrections and canonical identities', 'Built graph-grounded evaluation and structured correction feedback for foundation models', 'Made partial and complete curation available through an event-driven platform'],
     scope: 'Eight engineers across three continents, serving more than 100 million users.',
     result: 'Improved data quality by 40% and accelerated delivery by 30%.',
     claims: [claim('Apple media knowledge graph unifying 15+ sources'), claim('An eight-engineer team across three continents'), claim('Platforms serving more than 100 million users'), claim('40% better data quality and 30% faster delivery at Apple')],
-    narrative: 'The difficult part was not choosing a graph. It was creating one technical truth that teams in different disciplines and locations could build on together.',
+    narrative: 'I connect candidate generation, human labels, classifier predictions, and canonical identities to the experiences people use. The same graph now grounds a delivered evaluation workflow for Gemini and internal foundation models: verify media claims, identify specific discrepancies, and supply structured corrections in subsequent model queries.',
     metrics: [
       { value: '40%', label: 'better data quality', claim: claim('40% better data quality and 30% faster delivery at Apple') },
       { value: '30%', label: 'faster delivery', claim: claim('40% better data quality and 30% faster delivery at Apple') },
@@ -182,28 +190,28 @@ export const leadershipCases: LeadershipCaseStudy[] = [
     },
   },
   {
-    slug: 'music-credits', organization: 'Apple', title: 'A global launch with one operating rhythm',
-    situation: 'Apple Music Credits required coordinated delivery across teams, sites, and technical boundaries.',
-    responsibility: 'Directed the program from architecture alignment through global launch.',
-    decisions: ['Made ownership and dependencies visible', 'Connected technical decisions to launch readiness', 'Kept geographically distributed contributors aligned'],
+    slug: 'music-credits', organization: 'Apple', title: 'Real-time credits, one integrated flow',
+    situation: 'Batch processing and separate real-time and curation paths duplicated business logic and slowed updates.',
+    responsibility: 'I led the global Credits launch, built the graph and curation infrastructure, and aligned product delivery with the streaming migration.',
+    decisions: ['Won Operations, PM, and client-team support for platform and product sequencing', 'Consolidated three processing paths into one flow', 'Delivered the Sticky Credits port in one sprint after the migration'],
     scope: 'A fifteen-engineer program across four international sites.',
-    result: 'Turned a cross-site initiative into a coordinated global release.',
+    result: 'Shipped the migration and Credits port to production; the platform transition reduced average processing time from approximately 60 hours to one minute.',
     claims: [claim('Apple Music Credits launch with a 15-engineer program across four international sites')],
-    narrative: 'The architecture mattered, but the launch depended on a shared operating rhythm: visible dependencies, explicit ownership, and decisions made at the level where they could move.',
-    metrics: [{ value: '15 / 4', label: 'engineers / international sites', claim: claim('Apple Music Credits launch with a 15-engineer program across four international sites') }],
+    narrative: 'I used recurring defects to make the architecture problem concrete for Operations, connected the migration to quality and delivery timelines for PMs, and used prototypes to show client teams the simpler integration. Sequencing the work around an already-underway migration let the product inherit one maintainable flow.',
+    metrics: [{ value: '15', label: 'engineers in the launch program', claim: claim('Apple Music Credits launch with a 15-engineer program across four international sites') }],
   },
   {
-    slug: 'alexa', organization: 'Amazon Alexa', title: 'A technical choice with P&L consequence',
-    situation: 'Large-scale data mining costs and model performance constrained the value of Alexa Core Engine.',
-    responsibility: 'Developed a batching and clustering approach that changed both economics and model quality.',
-    decisions: ['Reframed the workload around cost and throughput', 'Applied clustering where it improved both efficiency and signal', 'Measured the business outcome alongside model performance'],
-    scope: 'A production Alexa data-mining system at hyperscale.',
-    result: 'Saved $40 million per year and improved model accuracy by 40%.',
-    claims: [claim('$40M per year at Amazon Alexa'), claim('Model accuracy 40% at Amazon Alexa')],
-    narrative: 'The breakthrough was treating cost and model quality as one engineering problem. Reframing the workload improved the economics and the intelligence of the system at the same time.',
+    slug: 'alexa', organization: 'Amazon Alexa', title: 'Better speech-to-action decisions, lower operating cost',
+    situation: 'Alexa needed to connect recognized speech to the right skills and preserve context across compound requests.',
+    responsibility: 'I led eight engineers, owned reviews and hiring, and redesigned key mechanisms in Alexa’s orchestration router.',
+    decisions: ['Prefetched common queries and results using skill-specific cache semantics', 'Moved processing closer to ASR so context arrived earlier', 'Fed recurring intent associations back into recognition and hypothesis selection'],
+    scope: 'Alexa Core Engine, connecting ASR to skills and AWS Lambda functions.',
+    result: 'Improved end-to-end ASR and routing accuracy 40%, measured before and after the changes; the aggregation platform saved $40M annually.',
+    claims: [claim('$40M per year at Amazon Alexa'), alexaAccuracyClaim],
+    narrative: 'A compound request needs more than two independent routes. I preserved the relationship between its intents and used recurring associations to inform recognition itself, while skill-aware prefetching and early processing reduced redundant downstream work.',
     metrics: [
       { value: '$40M', label: 'saved per year', claim: claim('$40M per year at Amazon Alexa') },
-      { value: '40%', label: 'better model accuracy', claim: claim('Model accuracy 40% at Amazon Alexa') },
+      { value: '40%', label: 'better end-to-end ASR and routing accuracy', claim: alexaAccuracyClaim },
     ],
   },
 ];
@@ -231,17 +239,18 @@ export const managerReviews: Testimonial[] = [
 ];
 
 export const ventures: Venture[] = [
-  { slug: 'ondoway', name: 'Ondoway', thesis: 'A local storyteller in your pocket.', problem: 'Walking tours rarely know where a listener is, what they care about, or which story belongs to the exact corner in front of them.', role: 'Designed, architected, coded, and operated end to end.', system: 'A provenance-aware Neo4j knowledge graph, deterministic tour engine, FastAPI backend, authoring tools, and Flutter mobile app.', state: 'Launch system built around Paris as the first city.', lesson: 'Generative content becomes trustworthy when every spoken sentence can trace back to a sourced beat.', claim: claim('Ondoway') },
-  { slug: 'persuaider', name: 'Persuaider', thesis: 'Practice the hard conversation.', problem: 'Negotiation training is difficult to personalize, repeat, and evaluate consistently.', role: 'Built the complete product and its multi-provider AI operating model.', system: 'Scenario authoring, in-character AI personas, framework-based evaluation, security controls, and transparent model failover.', state: 'Production-grade application with a deep automated test suite.', lesson: 'An AI product becomes useful when simulation, evaluation, and operational reliability are designed as one system.', claim: claim('Persuaider') },
+  { slug: 'ondoway', name: 'Ondoway', thesis: 'A travel companion that adapts as you walk.', problem: 'A useful tour must connect accurate stories with personal interests, walking constraints, and the time a traveler actually has.', role: 'Co-founder & CTO. I lead technical strategy, AI architecture, and end-to-end engineering within the founding team.', system: 'Graph-grounded storytelling, deterministic itinerary planning, GPS-triggered narration, and calibrated LLM judges against frozen human labels. I trace model and prompt versions, evidence, tokens, latency, and costs—including failed attempts.', state: 'Private beta with early testers, including Wharton Executive MBA peers, and initial city support for New York City and Paris. Flutter app, FastAPI backend, and Neo4j graph.', lesson: 'I rejected a cheaper factual judge after calibration exposed false rejections of legitimate paraphrases, separating model-quality failures from truncation before making the cost decision.', claim: claim('Ondoway') },
+  { slug: 'persuaider', name: 'Persuaider', thesis: 'Practice, simulate, and evaluate the hard conversation.', problem: 'Negotiation practice needs credible competing interests and feedback grounded in what was actually said and agreed.', role: 'Creator & AI Engineering Lead. I built the product, agent behavior, multiagent simulation, and evaluation systems.', system: 'Role-conditioned agents with private objectives; stateful AI-versus-AI simulations; LLM deal extraction followed by deterministic utility, walk-away, and value-left-on-the-table calculations; configurable weighted coaching rubrics.', state: 'Working interactive practice and autonomous simulations with persisted transcripts and usage. Coaching quotations and numerical references are checked in code, returned for bounded repair, and withheld if validation still fails.', lesson: 'I evaluate negotiation economics separately from conversational skill, and require the coaching to point back to its evidence.', claim: claim('Persuaider') },
+  { slug: 'gestiq', name: 'Gestiq', thesis: 'Deliberate desktop actions from hand motion.', problem: 'Camera input is uncertain; useful gesture control must distinguish an intentional action from jitter, tracking loss, and return motion.', role: 'Creator. I designed and built the native macOS product, extending my CMU hand-controlled 2048 capstone.', system: 'On-device Apple Vision hand-pose estimation, palm-normalized temporal recognition, two-hand controls, and application- and website-aware command routing. Latest-frame processing, target revalidation, and live diagnostics connect perception to guarded actions.', state: 'Working macOS application with a SwiftUI interface, menu-bar controls, and local camera processing without uploading video.', lesson: 'I carry confidence, timing, and target identity through the whole perception-to-action path, including the final dispatch check.', claim: { id: 'session:gestiq-2026-10-26', value: 'Gestiq: on-device computer vision and contextual gesture control', sourcePath: 'public/assets/Resume.pdf', sourceLine: 1 } },
   { slug: 'lore', name: 'Lore / DependIQ', thesis: 'The verification layer AI coding agents lack.', problem: 'Repository-local tooling cannot explain the organization-wide blast radius of a dependency change.', role: 'Designed the product, graph model, algorithms, and senior-engineer audit.', system: 'PostgreSQL for identity and history, Neo4j for dependency traversal, and task-aware model routing across hosted and local models.', state: 'Working multi-tenant product with more than 200 tests.', lesson: 'AI-assisted engineering needs explicit dependency truth before it needs another generator.', claim: claim('Lore / DependIQ') },
-  { slug: 'crucible', name: 'Crucible', thesis: 'Discipline for AI coding agents.', problem: 'Prompt-only guidance is too easy for coding agents to ignore when delivery pressure rises.', role: 'Encoded engineering practice into skills, agents, hooks, and verifiable workflows.', system: 'Ten skills, ten agents, four patterns, deterministic gates, and adversarial evidence checks.', state: 'Open-source kit I use as the operational counterpart to my management research.', lesson: 'Reliable agent behavior comes from executable constraints, not aspirational prose.', claim: claim('Crucible (claude-kit)') },
+  { slug: 'crucible', name: 'Crucible', thesis: 'Engineering workflows that make agents show their work.', problem: 'An agent’s confident report is insufficient evidence that a change is correct, complete, or recoverable.', role: 'I turn engineering judgment into reusable agent workflows, adversarial review, and executable acceptance rules.', system: 'Structured agent reports, claim-level evidence checks, risk-based verification, mutation and undo evidence, concurrent review, and bounded revision loops.', state: 'Public toolkit with runtime hooks and regression tests. Separately, my internal agent-engineering work supports daily operations and was adopted and extended by QA, Operations, and upstream/downstream teams.', lesson: 'I separate model judgment from the code that checks evidence structure, enforces workflow decisions, and controls when work can proceed.', claim: claim('Crucible (claude-kit)') },
 ];
 
 export const research: ResearchItem[] = [
-  { slug: 'who-trains-the-next-senior', title: 'Who Trains the Next Senior?', subtitle: 'Managing Software Engineering When AI Makes Code Cheap', authors: 'Sairam Krishnan, Gajendra Babu Thokala', venue: 'SSRN, 2026', summary: 'Generative and agentic AI have made the routine work of software engineering nearly free, and the first casualty is the junior engineer. Cheap machine-made code commoditizes breadth while raising the value of depth, the judgment of which answer is right in this system, and divergence, the perspective from outside the consensus that a senior-plus-AI team structurally lacks. Left to inertia, organizations replace juniors and let review and apprenticeship hollow out. The paper lays out the alternative: shrink the unit of review, tier scrutiny by consequence, measure verified outcomes rather than raw output, and rebuild the apprenticeship on purpose.', href: 'https://doi.org/10.2139/ssrn.7083078', visual: 'apprenticeship', claim: claim('Who Trains the Next Senior?') },
-  { slug: 'ai-roi', title: 'A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects', authors: 'Sairam Krishnan, Andrea Hepp, Sonia Gandhi', venue: 'SSRN, 2026', summary: 'More than 80 percent of AI projects fail to deliver measurable returns, and traditional capital budgeting misses what sets AI apart: deeply uncertain costs, indirect and non-linear benefits, path-dependent value creation, and acute sensitivity to organizational readiness. The framework integrates four layers into one investment decision process: a SCALE strategic readiness assessment, ROIC decomposition through a value driver tree, stage-gate phased investment, and a synthesized decision scorecard. An eight-category risk-adjustment table sets the discount rate for AI-specific risks, including vendor and platform dependency and organizational friction. The framework is validated against eight deployments: Salesforce Agentforce, Palantir, Spotify, Duolingo, Shopify Magic, Uber, JPMorgan COiN, and NatWest.', href: 'https://doi.org/10.2139/ssrn.6732598', visual: 'layers', claim: claim('A Multi-Layer Framework for Evaluating the ROI of AI Projects') },
-  { slug: 'drone-megaddon-2026', title: 'Drone-Megaddon 2026', subtitle: 'Co-Intelligent Swarm Control with Language and Vision Models', authors: 'Sairam Krishnan, Daniel Ting', venue: 'engrXiv, 2026', summary: 'Twelve years after the original interface, commercial drones ship with LTE and GPS-denied navigation, drone warfare has produced public lessons on electronic warfare and operator load, and foundation models have made natural-language intent and visual grounding workable interfaces to robotic systems. The paper keeps the 2014 core of RTS selection, the $RAD command queue, ACK’d radio, and human oversight, and proposes three AI layers over it: an intent translator that turns an operator’s words into a validated command sequence, a perception grounder that binds a phrase like “follow the red sedan” to a tracked target in a drone’s video feed, and a coordination planner that gives every drone its own final position. It walks through a search-and-rescue example and addresses the ethical questions the 2014 paper did not.', href: 'https://doi.org/10.31224/6987', visual: 'swarm', claim: claim('Drone-Megaddon') },
-  { slug: 'drone-megaddon', title: 'Drone-Megaddon', subtitle: 'A Real-Time Strategy Interface for Managing Drone Swarms', authors: 'Sairam Krishnan, Daniel Ting', venue: 'engrXiv, 2014', summary: 'Researchers had controlled single drones through neural sensors, Oculus Rift, and mobile devices, but no adequate interface existed for commanding many drones at once. Drone-Megaddon is an Android real-time strategy interface patterned after StarCraft II, built end to end as a cyberphysical system: the operator selects drones, issues a high-level command, and the swarm executes it.', href: 'https://doi.org/10.31224/6924', visual: 'swarm', claim: claim('Drone-Megaddon') },
+  { slug: 'drone-megaddon', title: 'Drone-Megaddon', subtitle: 'A Real-Time Strategy Interface for Managing Drone Swarms', authors: 'Sairam Krishnan, Daniel Ting', venue: '2014 project · engrXiv archive, 2026', summary: 'I co-built an end-to-end Android, radio, and embedded-control prototype that translated real-time strategy interactions into drone commands. The 2014 work established the command interface and execution path; Drone-Megaddon 2026 extends that foundation with a proposed language-and-vision architecture for operator-supervised coordination.', href: 'https://doi.org/10.31224/6924', visual: 'swarm', claim: claim('Drone-Megaddon') },
+  { slug: 'drone-megaddon-2026', title: 'Drone-Megaddon 2026', subtitle: 'Co-Intelligent Swarm Control with Language and Vision Models', authors: 'Sairam Krishnan, Daniel Ting', venue: 'engrXiv, 2026', summary: 'I coauthored a proposed extension of our built 2014 drone-control prototype: translate operator language into checked commands, ground references in video and track targets, then coordinate assignments across drones. The architecture places language and vision models inside an operator-supervised system, with explicit choices about edge versus cloud execution, latency, bandwidth, and degraded connectivity. An illustrative search-and-rescue trace shows how the layers work together.', href: 'https://doi.org/10.31224/6987', visual: 'swarm', claim: claim('Drone-Megaddon') },
+  { slug: 'who-trains-the-next-senior', title: 'Who Trains the Next Senior?', subtitle: 'Managing Software Engineering When AI Makes Code Cheap', authors: 'Sairam Krishnan, Gajendra Babu Thokala', venue: 'SSRN, 2026', summary: 'I coauthored a framework for leading engineering organizations when AI makes code abundant but verification and judgment remain scarce. It connects review theater, engineer development, and team incentives to practical changes: smaller reviewable units, scrutiny matched to consequence, evidence-backed gates, and outcome-based metrics. An exploratory analysis of several thousand enterprise commits illustrates why raw activity can overstate progress; the paper turns those observations into testable propositions about verification and apprenticeship.', href: 'https://doi.org/10.2139/ssrn.7083078', visual: 'apprenticeship', claim: claim('Who Trains the Next Senior?') },
+  { slug: 'ai-roi', title: 'A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects', authors: 'Sairam Krishnan, Andrea Hepp, Sonia Gandhi', venue: 'SSRN, 2026', summary: 'I coauthored a decision framework connecting AI strategy to investment and execution: assess organizational readiness, trace business value through ROIC, phase investment through evidence-based gates, and synthesize a decision scorecard. An eight-category risk assessment makes inference economics, vendor dependency, and organizational friction explicit. Eight illustrative public-company cases, from Salesforce and Spotify to JPMorgan and NatWest, show how the framework changes investment conditions across deployment types.', href: 'https://doi.org/10.2139/ssrn.6732598', visual: 'layers', claim: claim('A Multi-Layer Framework for Evaluating the ROI of AI Projects') },
 ];
 
 export const offerings: EngagementOffering[] = [
@@ -258,7 +267,7 @@ export const speakingTopics: SpeakingTopic[] = [
 ];
 
 export const career = [
-  ['2021–Present', 'Apple', 'Senior Engineering Leader, AI/ML', claim('Apple, Principal Software Engineer and AI/ML platform lead, 2021–Present')],
+  ['2021–Present', 'Apple', 'Principal Software Engineer · Team Lead since 2022', claim('Apple, Principal Software Engineer and AI/ML platform lead, 2021–Present')],
   ['2018–2021', 'Amazon', 'Senior Software Engineer, Alexa', claim('Amazon, Senior Software Engineer for Alexa, 2018–2021')],
   ['2016–2018', 'Susquehanna International Group', 'Senior Financial Data Engineer', claim('Susquehanna International Group, Senior Financial Data Engineer, 2016–2018')],
   ['2015–2016', 'Microsoft', 'Software Development Engineer, Windows OS Group', claim('Microsoft, Software Development Engineer in the Windows OS Group, 2015–2016')],
@@ -322,7 +331,7 @@ export const fullRecordSections: FullRecordSection[] = [
     title: 'Documents',
     introduction: 'Primary materials for recruiting and verification.',
     entries: [
-      { title: 'Résumé', href: '/assets/Sairam_Krishnan_Resume.pdf', claim: claim('Résumé') },
+      { title: 'Résumé', href: '/assets/Resume.pdf', claim: claim('Résumé') },
       { title: 'ORCID research record', href: 'https://orcid.org/0009-0004-2626-1273' },
       { title: 'GitHub engineering archive', href: 'https://github.com/SaiWebApps' },
     ],

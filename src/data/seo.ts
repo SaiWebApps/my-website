@@ -51,7 +51,29 @@ export const website = {
   publisher: { '@id': personId },
 };
 
-export const pageUrl = (pathname: string) => new URL(pathname.replace(/\/$/, '') || '/', SITE).href;
+export const pageUrl = (pathname: string) => {
+  let clean = pathname;
+  while (clean.length > 1 && clean.endsWith('/')) clean = clean.slice(0, -1);
+  return new URL(clean || '/', SITE).href;
+};
 
-export const fullTitle = (title: string, subtitle?: string) => !subtitle ? title : /[?!]$/.test(title) ? `${title} ${subtitle}` : `${title}: ${subtitle}`;
-export const midSentence = (text: string) => /^[A-Z][a-z]*\b(?![-.])/.test(text) && !/^[A-Z][a-z]*[A-Z]/.test(text) ? text[0].toLowerCase() + text.slice(1) : text;
+export const fullTitle = (title: string, subtitle?: string) => {
+  if (!subtitle) return title;
+  const last = title.at(-1);
+  return last === '?' || last === '!' ? `${title} ${subtitle}` : `${title}: ${subtitle}`;
+};
+
+export const midSentence = (text: string) => {
+  if (!text) return text;
+  let end = 0;
+  while (end < text.length && text[end] >= 'A' && text[end] <= 'Z') end += 1;
+  while (end < text.length && text[end] >= 'a' && text[end] <= 'z') end += 1;
+  const firstWord = text.slice(0, end);
+  const next = text[end];
+  const oneInitialCapital = firstWord.length > 1
+    && firstWord[0] >= 'A' && firstWord[0] <= 'Z'
+    && firstWord.slice(1) === firstWord.slice(1).toLowerCase();
+  return oneInitialCapital && next !== '-' && next !== '.'
+    ? text[0].toLowerCase() + text.slice(1)
+    : text;
+};

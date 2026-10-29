@@ -1,0 +1,623 @@
+{
+  "schemaVersion": 1,
+  "status": "accepted-live-dom",
+  "route": "career",
+  "acceptedResumeSha256": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
+  "about": "Exact Career coverage contract accepted only after an executable validator independently derived every accepted and component fact from the governed stores, validated the live DOM, and proved every marker's real Career owner.",
+  "artifactBindings": {
+    "content": {
+      "path": "site/content.json",
+      "sha256": "00c2610f8d838c522332c0e60d409ea20cbbea32f32b2300b662236d9c8bb0d5"
+    },
+    "builder": {
+      "path": "site/_build/build.py",
+      "sha256": "18f1ff12f6d158f8422f03d8d35884724fa060dfbd6330967618fb17611c9de3"
+    },
+    "careerHtml": {
+      "path": "site/career.html",
+      "sha256": "f3c1087b4cbd7ecf188a94abc6b9df7994a78c21ad00490cfa96829b99e010a5"
+    },
+    "registry": {
+      "path": ".claude/rubric/registry.json",
+      "sha256": "b8588fdfe55abb8ca278136e5998128e85f4fbd068987cf7219f4218a16f332a"
+    }
+  },
+  "expectedCounts": {
+    "directVisibleRepairs": 9,
+    "compositions": 12,
+    "uniqueComponentFactIds": 24
+  },
+  "sectionHeading": {
+    "text": "The systems I build with",
+    "owner": {
+      "page": "career",
+      "unit": "resume-take",
+      "block": "resume-take"
+    },
+    "ariaLabelledby": "resume-take-h",
+    "occurrences": 1
+  },
+  "markerPolicy": {
+    "directAcceptedFactAttribute": "data-career-accepted-fact",
+    "componentFactAttribute": "data-fact-id",
+    "directAcceptedFactOccurrences": 1,
+    "componentOccurrences": 1,
+    "unmarkedTextDoesNotCount": true,
+    "allMarkersMustBeDescendantsOfExactOwnerBlock": true,
+    "syntheticFactIdsForbidden": true
+  },
+  "directVisibleRepairs": [
+    {
+      "acceptedFactId": "resume:apple:1:b0",
+      "acceptedTextSha256": "14be0ee6a9126f2b241b151ed23b096588529afea2afca9f13b137bf0d0cac3b",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "equivalentSourceFacts": [
+        {
+          "factId": "site:careerLedger[10].bullets[0]",
+          "textSha256": "f7ee3654998002acbc78f22b61cffd16f3d374a6727490223223ae6c99a79dc7"
+        },
+        {
+          "factId": "site:services[6].proof[3]",
+          "textSha256": "26ba2343f4c98c28197463d6871371a5dd93629c7c00ae725c6aece5c510bd20"
+        },
+        {
+          "factId": "site:services[7].proof[0]",
+          "textSha256": "f83eb2f19a4c1f86b8d938167e3f45a02c25d11ef29cb5898221666cdcc786f7"
+        }
+      ],
+      "supportingVisibleLines": [
+        {
+          "id": "apple-team-geography",
+          "sourceFactId": "site:services[6].proof[0]",
+          "sourceTextSha256": "7175e1e1a55e893b848472a89b54d0054631048cf604e1b7c5c5e08f302de414",
+          "text": "Led an eight-engineer team at Apple across Seattle, London, and partner sites in Europe and Latin America.",
+          "textSha256": "7175e1e1a55e893b848472a89b54d0054631048cf604e1b7c5c5e08f302de414",
+          "relation": "same-owner"
+        }
+      ],
+      "missingSubstance": [
+        "compensation recommendations"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:apple:1:b1",
+      "acceptedTextSha256": "dff8d61d2a2d70fa79f1008102c7675ba519ee1b843f6bdf9e3d86e0045e30a2",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "equivalentSourceFacts": [
+        {
+          "factId": "site:careerLedger[10].bullets[8]",
+          "textSha256": "486f0f25d067a2faba0056a89c9f4390077d9e9f72c8afc00bc42fc5e6b66b3b"
+        }
+      ],
+      "supportingVisibleLines": [
+        {
+          "id": "graphrag-verification-detail",
+          "sourceFactId": "site:careerLedger[10].bullets[8]",
+          "sourceTextSha256": "486f0f25d067a2faba0056a89c9f4390077d9e9f72c8afc00bc42fc5e6b66b3b",
+          "text": "The workflow verifies generated entities and relationships against canonical facts and identifies precise discrepancies.",
+          "textSha256": "c70fe262a8a4339bbd84fada69acf947a6c7f5f4eacf6c5953390a17c06529b0",
+          "relation": "same-proof-pane"
+        }
+      ],
+      "missingSubstance": [
+        "structured error reports",
+        "diagnostic hypotheses"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:apple:1:b2",
+      "acceptedTextSha256": "f899d9f1f73f5370933a8a9e9b21e83e6dd2db0297ad38dffd5963c799642458",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "equivalentSourceFacts": [
+        {
+          "factId": "site:careerLedger[10].bullets[6]",
+          "textSha256": "c0b5de84200225c3ce1eed7d5f9ac41fe9c6aabae0eafae31fab057e79964d2b"
+        }
+      ],
+      "supportingVisibleLines": [
+        {
+          "id": "entity-resolution-algorithms",
+          "sourceFactId": "site:careerLedger[10].bullets[6]",
+          "sourceTextSha256": "c0b5de84200225c3ce1eed7d5f9ac41fe9c6aabae0eafae31fab057e79964d2b",
+          "text": "The classifiers included logistic regression, random forests, and gradient-boosted trees, with canonical identity integration.",
+          "textSha256": "7ed7f7a5e1dec994a6554454c19cd51e4b446e5be36a140472bdafa266b6b03c",
+          "relation": "same-proof-pane"
+        }
+      ],
+      "missingSubstance": [
+        "corrected artist identities",
+        "transferred ongoing ownership"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:apple:1:b5",
+      "acceptedTextSha256": "850d622b43313feb33409630cb02630713805b392a4dcc4e71bb384de70671a8",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "equivalentSourceFacts": [
+        {
+          "factId": "site:careerLedger[10].bullets[3]",
+          "textSha256": "10ec8b29c8125397601e0017f0ae93f7eee401dd1947616f5436029dfa8c4d69"
+        }
+      ],
+      "supportingVisibleLines": [
+        {
+          "id": "crucible-adoption-detail",
+          "sourceFactId": "site:careerLedger[10].bullets[3]",
+          "sourceTextSha256": "10ec8b29c8125397601e0017f0ae93f7eee401dd1947616f5436029dfa8c4d69",
+          "text": "Used in daily operations and adopted by QA, Operations, and upstream/downstream teams.",
+          "textSha256": "708c74c462f7df6e5394f0a335848e6fb1ab9869e4d483c0b10100d333bb7c07",
+          "relation": "same-proof-pane"
+        }
+      ],
+      "missingSubstance": [
+        "cross-service tracing"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:apple:1:b6",
+      "acceptedTextSha256": "6ea9f956783272d8417d8ecf04306727ab522a0058e0fdb250259693436e148b",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "equivalentSourceFacts": [
+        {
+          "factId": "site:careerLedger[10].bullets[9]",
+          "textSha256": "8fc580a80ad8f945dd0aff6b78a424e97a8bfe803fdf6d4b7c7a5f8aab047655"
+        }
+      ],
+      "supportingVisibleLines": [
+        {
+          "id": "ml-workflow-engineering-detail",
+          "sourceFactId": "site:careerLedger[10].bullets[9]",
+          "sourceTextSha256": "8fc580a80ad8f945dd0aff6b78a424e97a8bfe803fdf6d4b7c7a5f8aab047655",
+          "text": "I own the architecture and hands-on engineering, including difficult candidate matching and canonical entity generation.",
+          "textSha256": "7be700cc6023479db88cb55ed343c422abe4ccbfb89c6392c56310ab080ed287",
+          "relation": "same-proof-pane"
+        }
+      ],
+      "missingSubstance": [
+        "preserve editorial decisions through model updates"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:apple:1:b7",
+      "acceptedTextSha256": "7737cc3a491c83903b72d57054bbb564636571de07e960d046a04e42393def9b",
+      "displayTransform": "words.no_dash",
+      "visibleTextSha256": "f4dd0b9a70ae17fc2c51e20dfc241e6cf90addee22f05ab806aa77a867d437bf",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "equivalentSourceFacts": [
+        {
+          "factId": "site:careerLedger[10].bullets[2]",
+          "textSha256": "f1f3bb5b0bce3d98eab7be61b7d480a69902bf294a7cddcfa2ae792103eddbae"
+        }
+      ],
+      "supportingVisibleLines": [
+        {
+          "id": "migration-stakeholder-alignment",
+          "sourceFactId": "site:careerLedger[10].bullets[2]",
+          "sourceTextSha256": "f1f3bb5b0bce3d98eab7be61b7d480a69902bf294a7cddcfa2ae792103eddbae",
+          "text": "That coaching path also built stakeholder alignment around migration performance.",
+          "textSha256": "400e226c89d006839ccea54cfcfc14aab85c5fb2a38a16ff6c279656dbf9b182",
+          "relation": "same-proof-pane"
+        }
+      ],
+      "missingSubstance": [
+        "incremental delivery"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:amazon:2:d1",
+      "acceptedTextSha256": "c6980c9bfb9734f3db6ae693b4c0f944eb714dbc0505d00d92ea222981a50a11",
+      "owner": {
+        "page": "career",
+        "unit": "amazon",
+        "block": "amazon"
+      },
+      "missingSubstance": [
+        "visible L5-to-L6 promotion"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:sig:3:d0",
+      "acceptedTextSha256": "906e12a1bbb5aab5937bb484ae4c045d59efb2cf2694676c32ca8c98be47c5bb",
+      "owner": {
+        "page": "career",
+        "unit": "sig",
+        "block": "sig"
+      },
+      "missingSubstance": [
+        "visible promotion from Financial Data Engineer"
+      ]
+    },
+    {
+      "acceptedFactId": "resume:skills",
+      "acceptedTextSha256": "99023c98671af628114335572ef8dde5dde160259a80aedc067aeb4d21bfcee2",
+      "owner": {
+        "page": "career",
+        "unit": "resume-take",
+        "block": "resume-take"
+      },
+      "missingSubstance": [
+        "coherent governed skills inventory"
+      ]
+    }
+  ],
+  "compositions": [
+    {
+      "id": "apple-music-credits-and-graph",
+      "acceptedFactId": "resume:apple:1:b3",
+      "acceptedTextSha256": "32aca5d8d68cd904e968ca04b3f8f1bef2fce25b51f2da57df6fc63e1a7bdf91",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[10].bullets[4]",
+          "textSha256": "335da8876497ebbb0682afc17e290ba135e904c999c77ed8862eb33229af274e",
+          "role": "15-engineer four-office Credits launch and Classical graph infrastructure"
+        },
+        {
+          "factId": "site:services[1].proof[1]",
+          "textSha256": "76a0970cbef0a50be4bebcb34147a59fe1deeb15caa2ecaf6113f57b3400652b",
+          "role": "15-plus-source media graph powering discovery for 100-million-plus users"
+        }
+      ]
+    },
+    {
+      "id": "apple-streaming-migration-scope",
+      "acceptedFactId": "resume:apple:1:b4",
+      "acceptedTextSha256": "17f41f470602a1210a73ce047ec56dfb594337ebe54b09bb6af4d8179229c6d4",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "coverageDecision": {
+        "type": "reviewed-exact-atom-entailment",
+        "scopeRule": "The millions-of-tracks scope, 60-hours-to-one-minute migration, stakeholder backing, and partial/complete edit consolidation must all remain visible. No one component entails the accepted fact alone.",
+        "requiredComponentFactIds": [
+          "site:careerLedger[10].bullets[4]",
+          "site:careerLedger[10].bullets[5]",
+          "site:careerLedger[10].bullets[10]"
+        ],
+        "requiredClauseWitnesses": [
+          {
+            "id": "millions-of-tracks",
+            "componentFactId": "site:careerLedger[10].bullets[4]",
+            "exactText": "millions of tracks"
+          },
+          {
+            "id": "streaming-migration-stack",
+            "componentFactId": "site:careerLedger[10].bullets[5]",
+            "exactText": "Spark batch processing to Flink, Kafka, and Cassandra streaming"
+          },
+          {
+            "id": "sixty-hours-to-one-minute",
+            "componentFactId": "site:careerLedger[10].bullets[5]",
+            "exactText": "from approximately 60 hours to one minute"
+          },
+          {
+            "id": "partial-and-complete-edits",
+            "componentFactId": "site:careerLedger[10].bullets[5]",
+            "exactText": "partial and complete edits to entities, relationships, and properties"
+          },
+          {
+            "id": "stakeholder-backing",
+            "componentFactId": "site:careerLedger[10].bullets[10]",
+            "exactText": "Secured agreement from Operations, PMs, and client teams"
+          },
+          {
+            "id": "logic-consolidation",
+            "componentFactId": "site:careerLedger[10].bullets[10]",
+            "exactText": "consolidating duplicated batch, real-time, and curation logic into one flow"
+          }
+        ]
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[10].bullets[4]",
+          "textSha256": "335da8876497ebbb0682afc17e290ba135e904c999c77ed8862eb33229af274e",
+          "role": "millions-of-tracks scope"
+        },
+        {
+          "factId": "site:careerLedger[10].bullets[5]",
+          "textSha256": "619b740c88a13607d872ca4024edc77a4eb1e6ed3bb5fbbe68e36d3a35591bed",
+          "role": "Spark-to-Flink-Kafka-Cassandra migration, 60-hours-to-one-minute result, and partial/complete edits"
+        },
+        {
+          "factId": "site:careerLedger[10].bullets[10]",
+          "textSha256": "050a2affa1fe3b04cb4c374f9d182c8ef2d47af77e90f8f50a7394790b7d44fd",
+          "role": "Operations, PM, and client backing plus batch/real-time/curation consolidation"
+        }
+      ]
+    },
+    {
+      "id": "apple-design-review-outcomes",
+      "acceptedFactId": "resume:apple:1:b8",
+      "acceptedTextSha256": "738c3d000919deb47016dceacf2a751a554dd9afb3e24993b3a2b6836674e092",
+      "owner": {
+        "page": "career",
+        "unit": "apple",
+        "block": "apple"
+      },
+      "canonicalOwnerPolicy": {
+        "canonicalComponentFactId": "site:careerLedger[10].bullets[7]",
+        "supportingMirrorFactId": "site:services[2].proof[0]",
+        "supportingMirrorTextSha256": "e4c6bd305d7331f3131f9117f73e2b67a2081f8c55280183b3885d046434e2b2",
+        "supportingMirrorMaySatisfyAcceptedCoverage": false,
+        "supportingMirrorMayCarryAcceptedMarker": false,
+        "supportingMirrorOccurrencesInsideCanonicalOwner": 0,
+        "acceptedOwnerOccurrences": 1,
+        "duplicateOwnerDriftForbidden": true
+      },
+      "equivalentSourceFacts": [
+        {
+          "factId": "site:services[2].proof[0]",
+          "textSha256": "e4c6bd305d7331f3131f9117f73e2b67a2081f8c55280183b3885d046434e2b2"
+        },
+        {
+          "factId": "site:services[2].proof[1]",
+          "textSha256": "9f34ff91392f968ee6d022bbb34cb2c7958e90c4a35a0d1b60324b8e344e954f"
+        }
+      ],
+      "components": [
+        {
+          "factId": "site:careerLedger[10].bullets[7]",
+          "textSha256": "43ae61301a7b6f20b2ed7e6fc41677e4256da585d85f004da6dae22c74c3ef84",
+          "role": "design-review and CI/CD standards with exact velocity and incident outcomes"
+        }
+      ]
+    },
+    {
+      "id": "amazon-asr-compound-intent",
+      "acceptedFactId": "resume:amazon:2:b1",
+      "acceptedTextSha256": "2db7a948a03b69ec13eeb1bb180ca29fea7ee7706b1d82c08ec8de7de98017ff",
+      "owner": {
+        "page": "career",
+        "unit": "amazon",
+        "block": "amazon"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[9].bullets[6]",
+          "textSha256": "e50e43243c3b79a40c063ab12a50ed5638a3a98cec15e780d6831a758ed20542",
+          "role": "40-percent ASR/routing improvement, prefetching, early processing, and recognition feedback"
+        },
+        {
+          "factId": "site:careerLedger[9].bullets[7]",
+          "textSha256": "acec24356f4bbea5b98c50dd2be22e31aeb186ac60fb5d40916bf0f013a70e82",
+          "role": "compound-intent relationships and skill-specific logic moved closer to ASR"
+        }
+      ]
+    },
+    {
+      "id": "amazon-graphql-savings",
+      "acceptedFactId": "resume:amazon:2:b2",
+      "acceptedTextSha256": "01bbeae5d64e868f974f65de479a3df8586013c1963e4d06f64c57b74bd7374e",
+      "owner": {
+        "page": "career",
+        "unit": "amazon",
+        "block": "amazon"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[9].bullets[1]",
+          "textSha256": "826a242a57c1ed426df5cbb590666e62e93add9c01641f1b8890a05ac3423f0d",
+          "role": "GraphQL orchestration, 40-million-dollar savings, rules, batching, prefetching, and semantic cache keys"
+        }
+      ]
+    },
+    {
+      "id": "amazon-onboarding-and-operations",
+      "acceptedFactId": "resume:amazon:2:b3",
+      "acceptedTextSha256": "2a1eae4e8e719ff01c1dec6a14f5bf650a524888505fe7f63e9dd944b1ffb560",
+      "owner": {
+        "page": "career",
+        "unit": "amazon",
+        "block": "amazon"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[9].bullets[3]",
+          "textSha256": "98285a0ba76568276d9976381b28c677536887df64c1e995f6efbcac45f3313f",
+          "role": "two-weeks-to-15-minutes self-service onboarding"
+        },
+        {
+          "factId": "site:careerLedger[9].bullets[4]",
+          "textSha256": "ff631e90df6c534da22b7c4f5f1ae7e4bf780532230c9dbd287373e4be1534d8",
+          "role": "weekly operational issues reduced from 40 to 10"
+        }
+      ]
+    },
+    {
+      "id": "amazon-capacity-and-registration",
+      "acceptedFactId": "resume:amazon:2:b4",
+      "acceptedTextSha256": "bde3138fa3b8de60fb54e07fc309aeb3dbaed0604cf7266690c0f00472464444",
+      "owner": {
+        "page": "career",
+        "unit": "amazon",
+        "block": "amazon"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[9].bullets[5]",
+          "textSha256": "a2ff70933ecc2ff2a21f8912fb65f4123c78d63168a1082a2949e3dac16c1a71",
+          "role": "Prime Day and Black Friday forecasting and fleet investment"
+        },
+        {
+          "factId": "site:careerLedger[9].bullets[4]",
+          "textSha256": "ff631e90df6c534da22b7c4f5f1ae7e4bf780532230c9dbd287373e4be1534d8",
+          "role": "peak-holiday registration issues reduced tenfold"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mail-power",
+      "acceptedFactId": "resume:microsoft:4:b0",
+      "acceptedTextSha256": "de27e8947865f6f19b9104fde67577d57583ae703737acb4a296150fc7d6efee",
+      "owner": {
+        "page": "career",
+        "unit": "microsoft",
+        "block": "microsoft"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[7].bullets[0]",
+          "textSha256": "1a0b82a957a1df015bdf5f8f3f4de29788e68849474db013d33c90ece17f808d",
+          "role": "four-times power reduction and app power targets"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-telemetry-decision",
+      "acceptedFactId": "resume:microsoft:4:b1",
+      "acceptedTextSha256": "4a9dfb33ed3e81aa79ec9b654a44acb7dedaeb67a681c7772a0555fbba41a1fd",
+      "owner": {
+        "page": "career",
+        "unit": "microsoft",
+        "block": "microsoft"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[7].bullets[1]",
+          "textSha256": "cd56aad3fc6b241a372d6a1311620f2bf2dd503a1ffc4679229cd4b40d9d63a4",
+          "role": "real-time telemetry, weekly leadership guidance, and data-derived auto-sync default"
+        }
+      ]
+    },
+    {
+      "id": "wharton-degree-identity",
+      "acceptedFactId": "resume:edu:1",
+      "acceptedTextSha256": "2a95d6eae00f6e5828d099fc7ddbd02e8ea00ec6821d6d9db9b7e8912d0e4d9a",
+      "owner": {
+        "page": "career",
+        "unit": "wharton",
+        "block": "wharton"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[11].role",
+          "textSha256": "69e7e17941608905c87d788d8c7ef04f0d1363338487d2739a235365084b14c3",
+          "role": "Executive MBA identity"
+        },
+        {
+          "factId": "site:careerLedger[11].dates",
+          "textSha256": "0f421824756adf116ee03aaf973449e75a19dc5fcebfc9e11064ee44f868bb1a",
+          "displayTransform": "career-date-ascii-hyphen",
+          "visibleTextSha256": "75b5c40a65e53e4bf7b741244ea7130f83b259e62e39612799c70f8aff94e206",
+          "role": "May 2026 completion date"
+        },
+        {
+          "factId": "site:careerLedger[11].org",
+          "textSha256": "9547ce84e6a530721a996e684b0039f90ed5ec582666fa67a80863a0b3c2b0ca",
+          "role": "Wharton School and University of Pennsylvania"
+        }
+      ]
+    },
+    {
+      "id": "wharton-honors-and-majors",
+      "acceptedFactId": "resume:edu:2",
+      "acceptedTextSha256": "f998ffb0799b0c2f8075f3a68e59c2927b5a57ec76adac7872bc2e4043d3f8f2",
+      "owner": {
+        "page": "career",
+        "unit": "wharton",
+        "block": "wharton"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[11].bullets[0]",
+          "textSha256": "1e9954d6c73ad2859d5510e4a6b7d9eccbacc34d8f9adb48f5e622a713a3b003",
+          "role": "Palmer Scholar top-five-percent honor"
+        },
+        {
+          "factId": "site:careerLedger[11].bullets[1]",
+          "textSha256": "e31d98e1ddc0b98591d2d657ba94a0346fcf5f049cccb964601e654ddda3d703",
+          "role": "Benjamin Franklin Award and class scale"
+        },
+        {
+          "factId": "site:careerLedger[11].bullets[2]",
+          "textSha256": "5e10bff93a8af3f2b705e2a67868c81d147833f56bc1da15ffe43878fb219e6c",
+          "role": "Director's List in all six terms"
+        },
+        {
+          "factId": "site:careerLedger[11].bullets[3]",
+          "textSha256": "e50cab53d293657f6d031fa75550cc4321052c51b71dbfb48621c4f19619c8d9",
+          "role": "First Year Honors"
+        },
+        {
+          "factId": "site:careerLedger[11].bullets[4]",
+          "textSha256": "b882ee042284f4fb8ccaa55bad5d6fc4e0d51ab8e3defa55ec79466eaf29cc3b",
+          "role": "all five majors"
+        }
+      ]
+    },
+    {
+      "id": "cmu-degrees-honors",
+      "acceptedFactId": "resume:edu:4",
+      "acceptedTextSha256": "0a1694ee16c86b9102c03bd04187d1eb2f8b8e94d67a692db8392e2413e3ddc9",
+      "owner": {
+        "page": "career",
+        "unit": "cmu",
+        "block": "cmu"
+      },
+      "components": [
+        {
+          "factId": "site:careerLedger[0].bullets[0]",
+          "textSha256": "55e5d5ffea757c612d238945e42018622ff35b58637e590ecb053248ebca0e93",
+          "role": "M.S. date and GPA"
+        },
+        {
+          "factId": "site:careerLedger[0].bullets[1]",
+          "textSha256": "36c82bfe0dbc5def41d20f1172f04da2ae9a06fbf9f4f18c7d5eebb4c51f32f8",
+          "role": "B.S. date and Business Administration minor"
+        },
+        {
+          "factId": "site:careerLedger[0].bullets[2]",
+          "textSha256": "eb3d030e76026799ea8b771b3226cc6a8b760379ed2e716f766dbbc1027826b9",
+          "role": "Dean's List and years"
+        }
+      ]
+    }
+  ],
+  "finalizationRequirements": {
+    "directVisibleRepairsMustRenderExactAcceptedText": true,
+    "everyCompositionComponentMustRenderOnce": true,
+    "everyMarkerMustHaveOneExactOwnerAncestor": true,
+    "componentTextMustEqualItsFactStoreText": true,
+    "acceptedAndComponentFactIdsMustExistInFactsStore": true,
+    "noSyntheticFactIds": true,
+    "isolatedMutationScenarios": [
+      "direct accepted fact omission",
+      "direct accepted fact duplication",
+      "direct accepted fact owner move",
+      "composition component omission",
+      "composition component duplication",
+      "composition component owner move",
+      "reviewed Apple migration scope removal"
+    ]
+  }
+}

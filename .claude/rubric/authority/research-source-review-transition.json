@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "accepted-hermetic-provenance-reseal",
+  "route": "research",
+  "contractPath": ".claude/rubric/authority/research-evidence-contract.json",
+  "sourceReviewedContractSha256": "03a48fa8fea7312e710887f45cb932eb70e711665bb578e2e5de7cf91baa3db8",
+  "currentContractSha256": "b017037b0219185712fda4c4403934863609329f36bb5cd22dadd029628736a7",
+  "onlyChangedJsonPointer": "/figureAssetManifest/sha256",
+  "substitution": {
+    "current": "2f19cd63a8d1c6c4a15a5e14ee64be14e5f6b3d8062a24e1b672f28f987adcb4",
+    "sourceReviewed": "a6d147b51757066ec923887c812773f3c67408a72e379c530943f549b1e9853c"
+  },
+  "reverseSubstitutionExpectedSha256": "03a48fa8fea7312e710887f45cb932eb70e711665bb578e2e5de7cf91baa3db8",
+  "provenanceManifest": {
+    "path": ".claude/rubric/sources/drone-megaddon-figure-assets.json",
+    "previousSha256": "a6d147b51757066ec923887c812773f3c67408a72e379c530943f549b1e9853c",
+    "currentSha256": "2f19cd63a8d1c6c4a15a5e14ee64be14e5f6b3d8062a24e1b672f28f987adcb4",
+    "change": "Private absolute workstation paths were replaced by hermetic provider, fileId, and displayName locators. Installed PDF, crop, page, box, renderer, and asset hashes are unchanged."
+  }
+}

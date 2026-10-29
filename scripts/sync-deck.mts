@@ -24,11 +24,18 @@ ${services.map((s, i) => `<tr><td>${pad(i + 1)}</td><td>${esc(s.name)}</td><td>$
 </table>
 <p style="font-size:24px;color:#476c56">${esc(terms)}</p>`));
 
-const titles = ['Getting started', 'Teaching and systems', 'Deeper engagements'];
-titles.forEach((title, page) => write(`abs${page + 1}`, section(`abs${page + 1}`, '#ecece4', `<h2 style="${H2}">${title}</h2>
+const pages: { title: string; ids: string[] }[] = [
+  { title: 'Lead and advise', ids: ['cto', 'retainer'] },
+  { title: 'Engagements', ids: ['call', 'review', 'audit'] },
+  { title: 'Deeper engagements', ids: ['roi', 'evals'] },
+  { title: 'Speaking and teaching', ids: ['keynote', 'masterclass', 'series'] },
+];
+const missing = services.filter(s => !pages.some(p => p.ids.includes(s.id)));
+if (missing.length) throw new Error(`Services missing from deck pages: ${missing.map(s => s.id).join(', ')}`);
+pages.forEach(({ title, ids }, page) => write(`abs${page + 1}`, section(`abs${page + 1}`, '#ecece4', `<h2 style="${H2}">${title}</h2>
 <div style="display:flex;gap:48px;flex:1">
-${services.slice(page * 3, page * 3 + 3).map((s, i) => `<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #14242c;padding:32px 0 0 0">
-<p style="${MONO};font-size:24px;color:#476c56">${pad(page * 3 + i + 1)} · ${esc(s.length)}${s.priceLabel.includes('travel') ? ', plus travel' : ''}</p>
+${ids.map(id => byId[id]).map(s => `<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #14242c;padding:32px 0 0 0">
+<p style="${MONO};font-size:24px;color:#476c56">${pad(services.indexOf(s) + 1)} · ${esc(s.length)}${s.priceLabel.includes('travel') ? ', plus travel' : ''}</p>
 <h3 style="font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.1">${esc(s.name)}</h3>
 <p style="font-size:44px;font-weight:700;letter-spacing:-1px">${from(s)}</p>
 <p style="font-size:26px;line-height:1.5;color:#344d4a">${esc(deckText(s.abstract))}</p>

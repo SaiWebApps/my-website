@@ -1,0 +1,97 @@
+{
+  "coverageSha256": "2304bdca84179fa781644063ce7007e992a505ef0964b80752a2c7449109ee93",
+  "factsSha256": "9180dce27548850b365b52a39845e57847d2a241495921c3fa1cba2fd1a3823c",
+  "generator": "deterministic-governed-sources-with-pinned-history",
+  "historicalHeadInput": {
+    "authorityRank": "historical-review",
+    "commit": "8f2a57ac23235c9cfbc7d3c24d6e071cb9c1dfe9",
+    "factPolicy": "may-except-research-never",
+    "files": {
+      "src/data/brand.generated.json": {
+        "gitBlob": "2149395ccaf7f258ac488d25de1792240eb7bf63",
+        "sha256": "cbe2d4e3ee55b16d736c149b9be950c0b1c8a349cf547b0348f1223bb4a79054"
+      },
+      "src/data/career.ts": {
+        "gitBlob": "27ac13125354ecdbb201f0b1375580ca6d63aceb",
+        "sha256": "41f5a1e8608cec5f7288d0ac9611f3a79cd128067c96b7733f8e2412020a8273"
+      },
+      "src/data/content.ts": {
+        "gitBlob": "8d35a7562c0d971d5925d9c68db7bed5c6171c36",
+        "sha256": "4cab77377de01979f4cbe13c9c38e70b1a3b66f6722718d8cc921151af8874af"
+      },
+      "src/data/githubClusters.json": {
+        "gitBlob": "1f37792efb1e8807b18ed0b9e56f6affeeb47595",
+        "sha256": "a26a2de7781d67235f5168f7728e95e3a13806850dc509234c1106cfe59968e1"
+      },
+      "src/data/recommendations.ts": {
+        "gitBlob": "d4bdb2eda76968197a5e5cd0d8a966f40d0a9716",
+        "sha256": "ee26c07648e3019af066714258b5ecf51450c1821f0b8deb0b75c938c11c7312"
+      },
+      "src/data/seo.ts": {
+        "gitBlob": "f7f78f84918506ad0e202d58b8b1ecd68969bc4f",
+        "sha256": "b8897f2faa64ebe530dcccf4d688ee949e111c42e262fe629b289a66562d479d"
+      },
+      "src/data/services.ts": {
+        "gitBlob": "6f988c9141e0bc8f952e02aa84167af843e78368",
+        "sha256": "4caf6f5e75f6948bc69a856d217289a932de157f4b09c31ec276a859470ebd33"
+      },
+      "src/data/speaking.ts": {
+        "gitBlob": "6a2971fc6608ec261c86ba5a25d03110b73b3d43",
+        "sha256": "5de1ea6bf11a3aadb82eb06b4b0a504b643c2a2f892d3baf84ced9874a8b53d9"
+      }
+    },
+    "mode": "pinned-quarantined",
+    "srcDataTree": "70481d69795c81f9748621223f42bb6f24a6eaca",
+    "tree": "ad8e824f71984ede88d408042021e7f0964e7d3b"
+  },
+  "inputs": {
+    ".claude/rubric/approved.json": "6a4c2ac05ff63d4354584e6bdef29f074cefeece5036d3ef58ca23a153370d23",
+    ".claude/rubric/authority.json": "63c37d48ac8a0d13d376bbec7de973c72e118e8d6972c9041e303d91780aa8ab",
+    ".claude/rubric/authority/career-amazon-transition.json": "ee386e57627353eeeb7152ca4684dd4fcc1f5fb67ebb18a25e4c6267f6948760",
+    ".claude/rubric/authority/career-evidence-contract.json": "70a139f6a0fc8028d021e0bac763c181cbc1b5f6c28c1f23efc487fcc90238ae",
+    ".claude/rubric/authority/career-evidence-visual-transition.json": "e0af218a0266fd0ff8357e3387e9c7525cfac1dd84579be080a679e8a071b73a",
+    ".claude/rubric/authority/corrections.ndjson": "ab9f4e2ce84c09bd0f0054a89d07d2b59107d17955da4f6314b95f434d898014",
+    ".claude/rubric/authority/profile.json": "39996a553ea6022ddf3db5134d68231a4f392a07e5d8efff22815a586c67d51f",
+    ".claude/rubric/authority/protected-claims.json": "3d84bd3cb4d8eb784b55f96fbe025b85f62affe27f320a516bf442a94f087db6",
+    ".claude/rubric/authority/research-evidence-contract.json": "b017037b0219185712fda4c4403934863609329f36bb5cd22dadd029628736a7",
+    ".claude/rubric/authority/resume-equivalence.json": "030440b1beb9aadcb00b8880677fe1dbd94ca5944b56efcbe81c41c5a1c9fe70",
+    ".claude/rubric/authority/source-manifest-mirror.json": "5d8efb0981a799b60d9a8162ab5b57f95730203dd6791e3b5cfd936323b40f48",
+    ".claude/rubric/authority/speaking-evidence-contract.json": "750bedd6316830dee1f6495feea0fefe1a80ddcc7dab8d427059fa8ee16cacae",
+    ".claude/rubric/authority_gate.py": "e4e94bd5562850126289a9249f02028c8f96b0ed4689ffb21bc86fea0b4c95c4",
+    ".claude/rubric/career_evidence.py": "cf27f2d4bff11c7b89636c00122745dab38bac7200287dce52689e4cf37f5df7",
+    ".claude/rubric/career_evidence_mutation_test.py": "78faf6932413d68148054098627be5ee726932cd33dca4c230bd4201e2987f8d",
+    ".claude/rubric/career_visual_transition_capture.mjs": "c53d932269e5e1b6b49377a511496bb8b230f0506e58c886c34e782129e5ad3b",
+    ".claude/rubric/career_visual_transition_verify.py": "7ce6eeea615be5a0fe7ab70496ea096f9ad71158f118046e8982dd777515d074",
+    ".claude/rubric/facts/README.md": "a7b9444d10510dc2cd0a49cfc51a982834b6ad9c98087340de86a7fa23bfcb61",
+    ".claude/rubric/facts/build_facts.py": "2df1dba7b4cad2e5e60e646a507556f181e46f1508b91b4b99557f05800b6f06",
+    ".claude/rubric/facts/export_head.py": "81d05bab3e0f007fd66b1def42a76cf48802ea87970f8568e618b76b3406b362",
+    ".claude/rubric/facts/load_head.mjs": "653d08d5e7cb6729506273babe3dff8f38f3ca8737efa97052ba2515c43c3f61",
+    ".claude/rubric/facts/mutation_test.py": "dc5efe3dc2e3fe840e16dbb3b96266a776982f030f7663e7f5806f028d50c9f7",
+    ".claude/rubric/facts/register.mjs": "08de8c5910071d52afefc734e753759f7b6eab43f278ae5e74a98809a288da4a",
+    ".claude/rubric/facts/verify_facts.py": "13bd76e740ed875f068d31c99b9652c4b97a61fd11afe461225e8c44adf3ae9a",
+    ".claude/rubric/facts/words.py": "7b53af68fa3da6171b044e6d60231828451b88f1e28f70d3a6f37ed5b1d420ba",
+    ".claude/rubric/guard.py": "0d3b3981a780766842c1ff508ccb4a6d43295213f2a46e9094c018d99934c44d",
+    ".claude/rubric/out/career-evidence-transition/capture.json": "df6b8c25ad1d3e911eb65deef56b67f45579b87882ecf80e65fb94241f24b989",
+    ".claude/rubric/out/career-evidence-transition/experience-audit-review.json": "4d036854b421b09b8a654348ae6fad89b48a0b2ee1c6394da3520e907ee92838",
+    ".claude/rubric/registry.json": "b8588fdfe55abb8ca278136e5998128e85f4fbd068987cf7219f4218a16f332a",
+    ".claude/rubric/retired.json": "1b02030179f94e15196fd0c63768c6548146b66a064c9294f2daffa1f15b2ecf",
+    ".claude/rubric/sources/drone-megaddon-figure-assets.json": "2f19cd63a8d1c6c4a15a5e14ee64be14e5f6b3d8062a24e1b672f28f987adcb4",
+    ".claude/rubric/sources/papers-full/SOURCES.md": "b0d2a53883224e1a6082dab7021b8d9f8c1356f2d7854e684c37738ee832b9a8",
+    ".claude/rubric/sources/papers-full/ai-roi.txt": "0001596f0b910cd7b9eaee670dcdb6294f02f25d2b573c7accaf90649d9750d0",
+    ".claude/rubric/sources/papers-full/drone-megaddon-2014.txt": "bc69cd3c667249c9f0328af476063c647239bde83a8d35c9b7448032cc96a2a8",
+    ".claude/rubric/sources/papers-full/drone-megaddon-2026.txt": "f8c82936c83e08afcc1f7e523a203074c3f056f32084482d41b1eefc1f14ece5",
+    ".claude/rubric/sources/papers-full/who-trains.txt": "7d6ea3c163b69c427f434e2f1d90c78b56e4c32527c71b320399ef4fd5b481d1",
+    ".claude/rubric/sources/papers.txt": "b91115f7d40dda6c4e4cd11e46f6ba8216b3f2be56ade2285cd6f7903794529a",
+    ".claude/rubric/sources/sheet.json": "7f09b45691f712ae3fa5a88ae652601435c687eadd72946e34afee0c7a1786da",
+    "public/assets/Resume.pdf": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
+    "public/assets/Sairam_Krishnan_Resume.pdf": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
+    "public/assets/atos-demo-poster.webp": "544b46f9a60392fd48a3324a694b5299bf3dc0d44a838d6022aafb7c36813910",
+    "public/assets/research/drone-megaddon-2014-architecture.png": "afca8c7f23e40c5f22a79784b398d92adbe0b573b06d42df718c683aae100871",
+    "public/assets/research/drone-megaddon-2014.pdf": "ae98e121563107488d2f297f0f541cb790f90ce4fb285c911309b7d9473b8005",
+    "public/assets/research/drone-megaddon-2026-language-vision-architecture.png": "99766997628d3f369e9c74da880dffcb2be0e42eca7731a90820f806908b5ebe",
+    "public/assets/research/drone-megaddon-2026.pdf": "0bad9c95e7d9476b52b187dab5dab195c1817fc18f9342d3e19949a0554f81da",
+    "site/content.json": "00c2610f8d838c522332c0e60d409ea20cbbea32f32b2300b662236d9c8bb0d5"
+  },
+  "recordCount": 1539,
+  "schemaVersion": 3
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "status": "accepted-dependency-only",
+  "route": "research",
+  "about": "A dependency-only re-seal caused by Research asset and route-style wiring in the shared deterministic builder. No Career fact, semantic rule, source HTML, or non-Research pixel authority changed.",
+  "builder": {
+    "path": "site/_build/build.py",
+    "previousSha256": "8ed13300616f1972d74095221aadc6b6874fd63a2766e75928b59a563bdeee5b",
+    "currentSha256": "18f1ff12f6d158f8422f03d8d35884724fa060dfbd6330967618fb17611c9de3",
+    "changeScope": "Exactly three builder edits: derive RESEARCH_VER from research.css; add research.css to the candidate copy list; replace the Speaking-only conditional route-style line with an equivalent two-entry route-style map that preserves the Speaking link and adds the Research-only head link. The generic public/ tree copy is unchanged, so native Research assets required no direct build.py wiring.",
+    "reverseSubstitutions": [
+      {
+        "id": "research-version",
+        "current": "RESEARCH_VER = hashlib.sha1(open(OUT + 'research.css', 'rb').read()).hexdigest()[:8]\n",
+        "previous": ""
+      },
+      {
+        "id": "research-candidate-stylesheet",
+        "current": "['style.css', 'speaking.css', 'research.css', 'main.js']",
+        "previous": "['style.css', 'speaking.css', 'main.js']"
+      },
+      {
+        "id": "research-head-link",
+        "current": "    route_styles = {\n        'speaking': f'\\n<link rel=\"stylesheet\" href=\"speaking.css?v={SPEAKING_VER}\">',\n        'research': f'\\n<link rel=\"stylesheet\" href=\"research.css?v={RESEARCH_VER}\">',\n    }\n    route_style = route_styles.get(page_key, '')",
+        "previous": "    route_style = f'\\n<link rel=\"stylesheet\" href=\"speaking.css?v={SPEAKING_VER}\">' if page_key == 'speaking' else ''"
+      }
+    ],
+    "reverseSubstitutionExpectedSha256": "8ed13300616f1972d74095221aadc6b6874fd63a2766e75928b59a563bdeee5b"
+  },
+  "careerContract": {
+    "path": ".claude/rubric/authority/career-evidence-contract.json",
+    "previousSha256": "197c3c532e12daa65794486fbaa6b22e4ceaa83dabecf4a6a087c2432d5b2620",
+    "currentSha256": "70a139f6a0fc8028d021e0bac763c181cbc1b5f6c28c1f23efc487fcc90238ae",
+    "onlyChangedJsonPointer": "/artifactBindings/builder/sha256",
+    "reverseSubstitutionExpectedSha256": "197c3c532e12daa65794486fbaa6b22e4ceaa83dabecf4a6a087c2432d5b2620"
+  },
+  "careerVisualTransition": {
+    "path": ".claude/rubric/authority/career-evidence-visual-transition.json",
+    "previousSha256": "0d6adfbb7c3c257f75def5f2522903b311499f395098641025f8d210aef64e48",
+    "currentSha256": "e0af218a0266fd0ff8357e3387e9c7525cfac1dd84579be080a679e8a071b73a",
+    "reverseSubstitutions": [
+      {"current": "70a139f6a0fc8028d021e0bac763c181cbc1b5f6c28c1f23efc487fcc90238ae", "previous": "197c3c532e12daa65794486fbaa6b22e4ceaa83dabecf4a6a087c2432d5b2620"},
+      {"current": "18f1ff12f6d158f8422f03d8d35884724fa060dfbd6330967618fb17611c9de3", "previous": "8ed13300616f1972d74095221aadc6b6874fd63a2766e75928b59a563bdeee5b"}
+    ],
+    "reverseSubstitutionExpectedSha256": "0d6adfbb7c3c257f75def5f2522903b311499f395098641025f8d210aef64e48"
+  },
+  "authorityManifest": {
+    "path": ".claude/rubric/authority.json",
+    "score100BoundarySha256": "dc953a53a041081ae4d491076172400eccf8178c4dda6909c56d15f2975dabaf",
+    "dependencyOnlyIntermediateSha256": "443e6dd1e25ea7be85e838bc6b8edf9faab228bbd2145c47cfcd281e49af9560",
+    "currentSha256": "63c37d48ac8a0d13d376bbec7de973c72e118e8d6972c9041e303d91780aa8ab",
+    "researchRegistration": {
+      "jsonPointer": "/sources/researchEvidenceContract",
+      "exactCurrentText": "    \"researchEvidenceContract\": {\n      \"path\": \".claude/rubric/authority/research-evidence-contract.json\",\n      \"sha256\": \"b017037b0219185712fda4c4403934863609329f36bb5cd22dadd029628736a7\",\n      \"schemaVersion\": 2,\n      \"status\": \"accepted-static-open-authority\",\n      \"route\": \"research\"\n    },\n",
+      "previousText": "",
+      "resultSha256": "443e6dd1e25ea7be85e838bc6b8edf9faab228bbd2145c47cfcd281e49af9560"
+    },
+    "dependencyOnlyChangedJsonPointers": [
+      "/sources/careerEvidenceContract/sha256",
+      "/sources/careerEvidenceVisualTransition/sha256"
+    ],
+    "careerDependencyOnlyResultSha256": "85e612c641cdf312c33a5dd485605938e7d19c8b0d14ac2c20ae51c17a298d0e",
+    "dependencyReverseSubstitutions": [
+      {"current": "70a139f6a0fc8028d021e0bac763c181cbc1b5f6c28c1f23efc487fcc90238ae", "previous": "197c3c532e12daa65794486fbaa6b22e4ceaa83dabecf4a6a087c2432d5b2620"},
+      {"current": "e0af218a0266fd0ff8357e3387e9c7525cfac1dd84579be080a679e8a071b73a", "previous": "0d6adfbb7c3c257f75def5f2522903b311499f395098641025f8d210aef64e48"}
+    ],
+    "combinedResearchRemovalAndCareerReverseSha256": "dc953a53a041081ae4d491076172400eccf8178c4dda6909c56d15f2975dabaf"
+  },
+  "byteStableNonResearchSources": {
+    "site/index.html": "236249dc423bce5e27f4aa4b23283650aa1a60fb9526bbf4f23db5ff1742c715",
+    "site/services.html": "1d77f0a18bf97d079b44ce1e4a52577da4e4d5a89663c7600628f503866d7dd2",
+    "site/speaking.html": "aa95f486ea4c8f15b06b4ff9d918b293f80861568fda7373192c22ecad1fc40a",
+    "site/career.html": "f3c1087b4cbd7ecf188a94abc6b9df7994a78c21ad00490cfa96829b99e010a5",
+    "site/projects.html": "2ec85de5764f453a0bd7ba346d98e6d8309f34ad7ab7fea4a067d8a160bfc746",
+    "site/contact.html": "4692bb8dd28cc4eb5bda1957bc10b1d325de84ab37d01d891391b26debfc722a",
+    "site/style.css": "4576d21e5e55bdf9ccd67a2e718a37b2422129fb640fc1e79446eb7fd9192196",
+    "site/main.js": "b4e00dddad211d67a085436049dcf139b2611779159e4d18056ea8dd1881d9e7"
+  },
+  "downstream": {
+    "sharedRouteOracle": {
+      "path": ".claude/rubric/shared-route-oracle.json",
+      "previousSha256": "748918bb8cce8354ed31ebfbffa92d61c01f98c484dd3d936300959c00553c7b",
+      "currentSha256": "748918bb8cce8354ed31ebfbffa92d61c01f98c484dd3d936300959c00553c7b"
+    },
+    "projectsProofContract": {
+      "path": ".claude/rubric/projects-proof-contract.json",
+      "previousSha256": "232ca14a9364d03a93510042c2456f1c77f422ef0307080770b7b9ddee36acc0",
+      "currentSha256": "232ca14a9364d03a93510042c2456f1c77f422ef0307080770b7b9ddee36acc0"
+    },
+    "speakingProofContract": {
+      "path": ".claude/rubric/speaking-proof-contract.json",
+      "previousSha256": "929ec5d70614620e22d39684a7bb4b99e33f7e73b5ba5783280c067ac81a2adc",
+      "currentSha256": "49e1eb1d2c2f50db63b47868d238eaa7c2bdc066d313bd1ae2f9df2f3ecf9437",
+      "rendererReferencesReversedSha256": "4c1621e9456899317f4e852ecfc6452d24885de9c81d3c0d510ff0313c2ec06f",
+      "reverseSubstitutions": [
+        {
+          "jsonPointer": "/frozenNonSpeaking/research/html/sha256",
+          "current": "    \"research\": {\n      \"html\": {\n        \"path\": \"site/research.html\",\n        \"sha256\": \"28c231dc783f98f3c3ca8f9d19a0992d78b95ec8f144ad6a5bd50f6db03dbc0b\"\n      },",
+          "previous": "    \"research\": {\n      \"html\": {\n        \"path\": \"site/research.html\",\n        \"sha256\": \"30dff21c1f2beea8d572589da2024200e7ff98ccbf3c8ee4b86781226970a944\"\n      },",
+          "stage": "renderer-reference"
+        },
+        {"jsonPointer": "/frozenNonSpeaking/research/frames/0/sha256", "current": "05049e30fe4d778191ad7cf58f02ace1dbc19ea1938011a16b27500e996b45c7", "previous": "313940d1f8e6b4d7142839cdffa6256d3e7829f836b56ad91af939274883ec82", "stage": "renderer-reference"},
+        {"jsonPointer": "/frozenNonSpeaking/research/frames/1/sha256", "current": "7d54416b647540ca40a13ccf7dea0b8ee7bcf9b6869bc9321b10cee7df1a895c", "previous": "5b61b10d9061beca2882f0281bcf8b82b856541fa5e9e45504066e836b31d1ba", "stage": "renderer-reference"},
+        {"jsonPointer": "/frozenNonSpeaking/research/frames/2/sha256", "current": "8fedd3e1a7813a1ffd42a5c19b0ad55b8d7f03c8f04023f5d794178b90e20812", "previous": "4e65e48a8f3c544173e1de59ec89450527d5cfdfbaf9e45dadd1781373986f7d", "stage": "renderer-reference"},
+        {"jsonPointer": "/frozenNonSpeaking/research/frames/3/sha256", "current": "6fb16b9ad92f7746b29ebe88c75fbfd14519e3457b3868256187d2a653c90d75", "previous": "2d4fbfb3c0dd72b42a7130aeadcc941eea4eae4a4e1387379ba7ea962b63dce7", "stage": "renderer-reference"},
+        {"jsonPointer": "/frozenNonSpeaking/research/frames/4/sha256", "current": "ff2512701d6cf223f8a26772fea140bae265a05a104f918b834637053d0992e9", "previous": "bd7e00110b8df233404d0dbd4e472cb27b812306a5037f5fd1357c322f360209", "stage": "renderer-reference"},
+        {"jsonPointer": "/frozenNonSpeaking/research/frames/5/sha256", "current": "677c10fb269b2dd03d97befa317f080f65b40b8df3848ba988ce06ff1cd47511", "previous": "4665ccadbaac81b97f550473aadec5c2411bb434d11de7b8c813423c9fc24ac5", "stage": "renderer-reference"},
+        {
+          "jsonPointer": "/frozenNonSpeaking/html/research/sha256",
+          "current": "      \"research\": {\n        \"path\": \"site/research.html\",\n        \"sha256\": \"28c231dc783f98f3c3ca8f9d19a0992d78b95ec8f144ad6a5bd50f6db03dbc0b\"\n      },",
+          "previous": "      \"research\": {\n        \"path\": \"site/research.html\",\n        \"sha256\": \"30dff21c1f2beea8d572589da2024200e7ff98ccbf3c8ee4b86781226970a944\"\n      },",
+          "stage": "renderer-reference"
+        },
+        {"jsonPointer": "/authority/sourceHashes/sha256", "current": "3e615abd2c8c996af7f50dba4ef054926269798e09f59c8790ef48b102128468", "previous": "bec6c1d095d52d028218a888f9ff6dc14a6318e3a4f76a2d5eb584d0a31d3831", "stage": "authority-dependency"},
+        {"jsonPointer": "/authority/authorityManifest/sha256", "current": "63c37d48ac8a0d13d376bbec7de973c72e118e8d6972c9041e303d91780aa8ab", "previous": "dc953a53a041081ae4d491076172400eccf8178c4dda6909c56d15f2975dabaf", "stage": "authority-dependency"}
+      ],
+      "reverseSubstitutionExpectedSha256": "929ec5d70614620e22d39684a7bb4b99e33f7e73b5ba5783280c067ac81a2adc"
+    }
+  }
+}

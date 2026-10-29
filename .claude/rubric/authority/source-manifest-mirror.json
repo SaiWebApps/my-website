@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "profileId": "sairam-krishnan",
+  "upstream": {
+    "profilePath": "evidence/source-manifest.json",
+    "sha256": "f90cd3c410daf61d19c71b9abf070fc0fd1399dd4c7b969eea31c53c2cf9eb35"
+  },
+  "sources": [
+    {
+      "id": "accepted-resume",
+      "classification": "user-approved-baseline",
+      "sha256": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
+      "governedPaths": [
+        "public/assets/Resume.pdf",
+        "public/assets/Sairam_Krishnan_Resume.pdf"
+      ]
+    },
+    {
+      "id": "research-drone-2014",
+      "classification": "primary-research",
+      "stableId": "doi:10.31224/6924",
+      "sha256": "ae98e121563107488d2f297f0f541cb790f90ce4fb285c911309b7d9473b8005",
+      "snapshotPath": ".claude/rubric/sources/papers-full/drone-megaddon-2014.txt",
+      "snapshotSha256": "bc69cd3c667249c9f0328af476063c647239bde83a8d35c9b7448032cc96a2a8"
+    },
+    {
+      "id": "research-drone-2026",
+      "classification": "primary-research",
+      "stableId": "doi:10.31224/6987",
+      "sha256": "0bad9c95e7d9476b52b187dab5dab195c1817fc18f9342d3e19949a0554f81da",
+      "snapshotPath": ".claude/rubric/sources/papers-full/drone-megaddon-2026.txt",
+      "snapshotSha256": "f8c82936c83e08afcc1f7e523a203074c3f056f32084482d41b1eefc1f14ece5"
+    },
+    {
+      "id": "research-next-senior",
+      "classification": "primary-research",
+      "stableId": "doi:10.2139/ssrn.7083078",
+      "sha256": "870c633afb42345a0ed7fd1ca7d0b00a4c312d4648123edaac9f9a4e983fb3f2",
+      "snapshotPath": ".claude/rubric/sources/papers-full/who-trains.txt",
+      "snapshotSha256": "7d6ea3c163b69c427f434e2f1d90c78b56e4c32527c71b320399ef4fd5b481d1",
+      "availability": "original-source-missing-local-copy"
+    },
+    {
+      "id": "research-ai-roi",
+      "classification": "primary-research",
+      "stableId": "doi:10.2139/ssrn.6732598",
+      "sha256": "0001596f0b910cd7b9eaee670dcdb6294f02f25d2b573c7accaf90649d9750d0",
+      "snapshotPath": ".claude/rubric/sources/papers-full/ai-roi.txt",
+      "snapshotSha256": "0001596f0b910cd7b9eaee670dcdb6294f02f25d2b573c7accaf90649d9750d0"
+    }
+  ]
+}

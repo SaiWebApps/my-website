@@ -1,0 +1,756 @@
+{
+ "about": "Where everything lives. A unit is one employer, school, paper, project, session, talk or offer. It has one home page and one block there (the element with that id). Which unit a fact belongs to comes from the fact store (facts/facts.json); a fact may appear only inside its unit's block, as the text of a link to its unit, or inside navigation. Names are the unit's own names. A new section cannot ship until it is a unit here.",
+ "authority_groups": [
+  "praxtera-client-provenance",
+  "independent-speaking-teaching"
+ ],
+ "project": {
+  "baseline": {
+   "id": "transit-v4",
+   "root": "site",
+   "said": "I wanted you to work off the mockup - the transit design?!"
+  },
+  "allowed_top_level_dirs": [
+   ".astro",
+   ".claude",
+   ".codegraph",
+   ".git",
+   ".impeccable",
+   ".vercel",
+   "brand",
+   "decks",
+   "dist",
+   "docs",
+   "node_modules",
+   "public",
+   "scripts",
+   "site",
+   "src"
+  ],
+  "forbidden_design_roots": [
+   "mockups"
+  ],
+  "forbidden_roots": [
+   "undefined",
+   "work"
+  ],
+  "parallel_implementation_paths": [
+   "src/components",
+   "src/layouts",
+   "src/pages",
+   "src/styles"
+  ],
+  "generated_in_source": [
+   "site/shots"
+  ],
+  "competing_control_paths": [
+   ".release",
+   ".claude/agents/site-governor.md",
+   ".claude/governor",
+   ".claude/hooks/governor_gate.py",
+   ".claude/workflows/site-polish.js",
+   "scripts/content-gate.mts",
+   "scripts/density-gate.mjs",
+   "scripts/deploy-gate.mjs",
+   "scripts/release-gate.mjs",
+   "scripts/release-lib.mjs",
+   "scripts/static-gate.mjs",
+   "scripts/sync-transit-content.mts",
+   "scripts/visual-capture.mjs"
+  ]
+ },
+ "content_contract": {
+  "about": "Content identity and page ownership are structural. A unit cannot move pages by being renamed or paraphrased.",
+  "collections": {
+   "speakingTopics": {
+    "page": "speaking",
+    "parent": "talks",
+    "id_field": "id",
+    "render_each": true,
+    "locked_records": [
+     {
+      "id": "architecture-adoption",
+      "title": "From architecture to adoption",
+      "promise": "Why technical decisions only matter when teams can carry them into the organization."
+     },
+     {
+      "id": "agentic-leadership",
+      "title": "Engineering leadership in the agentic era",
+      "promise": "How management systems change when software production becomes abundant."
+     }
+    ]
+   },
+   "research": {
+    "page": "research",
+    "id_field": "slug",
+    "members": [
+     "drone-megaddon",
+     "drone-megaddon-2026",
+     "who-trains-the-next-senior",
+     "ai-roi"
+    ]
+   },
+   "services": {
+    "page": "services",
+    "id_field": "id",
+    "members": [
+     "fit",
+     "call",
+     "review",
+     "keynote",
+     "masterclass",
+     "roi",
+     "retainer",
+     "cto"
+    ]
+   }
+  }
+ },
+ "nav": [
+  "map",
+  "strip",
+  "strip__stops",
+  "pf__nav",
+  "cr-strip",
+  "cr-foot",
+  "hd",
+  "ft",
+  "stop",
+  "zone",
+  "skip",
+  "me"
+ ],
+ "pages": {
+  "index": {
+   "file": "index.html",
+   "header": "none",
+   "lead": "map",
+   "units": [
+    "me"
+   ],
+   "sales": []
+  },
+  "career": {
+   "file": "career.html",
+   "header": "inner",
+   "lead": "cmu",
+      "flow_units": [
+        "cmu",
+        "microsoft",
+        "sig",
+        "amazon",
+        "apple"
+      ],
+      "branch_ends": [
+        "wharton",
+        "praxtera"
+      ],
+   "units": [
+    "cmu",
+    "microsoft",
+    "sig",
+    "amazon",
+    "apple",
+      "wharton",
+      "praxtera",
+      "resume-take"
+   ],
+   "sales": []
+  },
+  "speaking": {
+   "file": "speaking.html",
+   "header": "inner",
+   "lead": "eagles",
+   "units": [
+    "eagles",
+    "cmu-teaching",
+    "praxtera",
+    "jacobson-strategic",
+    "hp",
+    "morgan-lewis",
+    "pbs",
+    "sonova",
+    "atos",
+    "talks",
+    "fee"
+   ],
+   "sales": [
+    "Book a talk"
+   ],
+   "never_stops": [
+    "praxtera"
+   ]
+  },
+  "research": {
+   "file": "research.html",
+   "header": "inner",
+   "lead": "drone-megaddon",
+   "units": [
+    "drone-megaddon",
+    "drone-megaddon-2026",
+    "who-trains",
+    "ai-roi"
+   ],
+   "sales": []
+  },
+  "projects": {
+   "file": "projects.html",
+   "header": "inner",
+   "lead": "ondoway",
+   "units": [
+    "ondoway",
+    "persuaider",
+    "gestiq",
+    "lore",
+    "crucible"
+   ],
+   "sales": []
+  },
+  "services": {
+   "file": "services.html",
+   "header": "inner",
+   "lead": "offers",
+   "units": [
+    "offers",
+    "fit",
+    "call",
+    "review",
+    "keynote",
+    "masterclass",
+    "roi",
+    "retainer",
+    "cto",
+    "book-call"
+   ],
+   "sales": "any"
+  },
+  "contact": {
+   "file": "contact.html",
+   "header": "inner",
+   "lead": "contact",
+   "units": [
+    "contact"
+   ],
+   "sales": "any"
+  }
+ },
+ "units": {
+  "me": {
+   "home": "index",
+   "block": "me",
+   "names": [
+    "Sairam Krishnan"
+   ],
+   "mentions": [
+    "apple",
+    "praxtera",
+    "ondoway"
+   ],
+   "floor": [
+    "Sairam Krishnan",
+    "AI/ML Engineering Leader",
+    "Principal Software Engineer · Team Lead since 2022",
+    "Head of AI & Executive Education",
+    "Résumé"
+   ]
+  },
+  "cmu": {
+   "home": "career",
+   "block": "cmu",
+   "names": [
+    "Carnegie Mellon",
+    "CMU",
+    "Carnegie Mellon University"
+   ],
+   "mentions": [
+    "gestiq",
+    "drone-megaddon",
+    "drone-megaddon-2026",
+    "cmu-teaching"
+   ],
+   "floor": [
+    "img:hand-2048-poster"
+   ]
+  },
+  "microsoft": {
+   "home": "career",
+   "block": "microsoft",
+   "names": [
+    "Microsoft"
+   ],
+   "floor": []
+  },
+  "sig": {
+   "home": "career",
+   "block": "sig",
+   "names": [
+    "Susquehanna International Group (SIG)",
+    "Susquehanna (SIG)",
+    "Susquehanna",
+    "SIG",
+    "Susquehanna International Group"
+   ],
+   "floor": []
+  },
+  "amazon": {
+   "home": "career",
+   "block": "amazon",
+   "names": [
+    "Amazon Alexa",
+    "Amazon",
+    "Alexa"
+   ],
+   "floor": []
+  },
+  "apple": {
+   "home": "career",
+   "block": "apple",
+   "names": [
+    "Apple"
+   ],
+   "mentions": [
+    "wharton",
+    "praxtera",
+    "ondoway",
+    "crucible"
+   ],
+   "floor": []
+  },
+  "wharton": {
+   "home": "career",
+   "block": "wharton",
+   "names": [
+    "Wharton Executive MBA",
+    "Wharton",
+    "The Wharton School"
+   ],
+   "mentions": [
+    "apple"
+   ],
+   "floor": [
+    "img:/public/letters/"
+   ]
+  },
+  "resume-take": {
+   "home": "career",
+   "block": "resume-take",
+   "names": [
+    "Résumé",
+    "The systems I build with"
+   ],
+   "floor": []
+  },
+  "eagles": {
+   "home": "speaking",
+   "block": "eagles",
+   "names": [
+    "Philadelphia Eagles",
+    "Eagles Care Summit",
+    "AI for Impact"
+   ],
+   "mentions": [
+    "praxtera"
+   ],
+   "floor": [
+    "AI for Impact",
+    "300+"
+   ]
+  },
+  "cmu-teaching": {
+   "home": "speaking",
+   "block": "cmu",
+   "names": [
+    "Web Applications",
+    "Carnegie Mellon"
+   ],
+   "mentions": [
+    "cmu"
+   ],
+   "floor": []
+  },
+  "praxtera": {
+   "home": "speaking",
+   "block": "praxtera",
+   "names": [
+    "Praxtera AI Institute",
+    "Praxtera"
+   ],
+   "mentions": [
+    "jacobson-strategic",
+    "hp",
+    "morgan-lewis",
+    "pbs",
+    "eagles",
+    "sonova",
+    "wharton"
+   ],
+   "floor": []
+  },
+  "jacobson-strategic": {
+   "home": "speaking",
+   "block": "jacobson-strategic",
+   "names": [
+    "Jacobson Strategic"
+   ],
+   "mentions": [
+    "praxtera"
+   ],
+   "sheet": true,
+   "floor": []
+  },
+  "hp": {
+   "home": "speaking",
+   "block": "hp",
+   "names": [
+    "HP"
+   ],
+   "mentions": [
+    "praxtera"
+   ],
+   "sheet": true,
+   "floor": []
+  },
+  "morgan-lewis": {
+   "home": "speaking",
+   "block": "morgan-lewis",
+   "names": [
+    "Morgan Lewis"
+   ],
+   "mentions": [
+    "praxtera"
+   ],
+   "sheet": true,
+   "floor": []
+  },
+  "pbs": {
+   "home": "speaking",
+   "block": "pbs",
+   "names": [
+    "PBS"
+   ],
+   "mentions": [
+    "praxtera"
+   ],
+   "sheet": true,
+   "floor": []
+  },
+  "sonova": {
+   "home": "speaking",
+   "block": "sonova",
+   "names": [
+    "Sonova"
+   ],
+   "mentions": [
+    "praxtera"
+   ],
+   "sheet": true,
+   "floor": []
+  },
+  "atos": {
+   "home": "speaking",
+   "block": "atos",
+   "names": [
+    "Atos"
+   ],
+   "sheet": true,
+   "floor": [
+    "img:atos-demo-poster"
+   ]
+  },
+  "talks": {
+   "home": "speaking",
+   "block": "talks",
+   "names": [
+    "Speaking topics"
+   ],
+   "floor": []
+  },
+  "fee": {
+   "home": "speaking",
+   "block": "fee",
+   "names": [],
+   "mentions": [
+    "keynote",
+    "masterclass"
+   ],
+   "floor": [
+    "from $5,000 plus travel",
+    "Book a talk"
+   ]
+  },
+  "drone-megaddon": {
+   "home": "research",
+   "block": "drone-megaddon",
+   "names": [
+    "Drone-Megaddon",
+    "Drone-Megaddon 2014"
+   ],
+   "mentions": [
+    "drone-megaddon-2026"
+   ],
+   "floor": []
+  },
+  "drone-megaddon-2026": {
+   "home": "research",
+   "block": "drone-megaddon-2026",
+   "names": [
+    "Drone-Megaddon 2026"
+   ],
+   "mentions": [
+    "drone-megaddon"
+   ],
+   "floor": []
+  },
+  "who-trains": {
+   "home": "research",
+   "block": "who-trains-the-next-senior",
+   "names": [
+    "Who Trains the Next Senior?"
+   ],
+   "floor": []
+  },
+  "ai-roi": {
+   "home": "research",
+   "block": "ai-roi",
+   "names": [
+    "AI ROI Framework"
+   ],
+   "floor": []
+  },
+  "ondoway": {
+   "home": "projects",
+   "block": "ondoway",
+   "names": [
+    "Ondoway"
+   ],
+   "floor": [
+    "img:ondoway-journey-wireframe"
+   ]
+  },
+  "persuaider": {
+   "home": "projects",
+   "block": "persuaider",
+   "names": [
+    "Persuaider"
+   ],
+   "floor": []
+  },
+  "gestiq": {
+   "home": "projects",
+   "block": "gestiq",
+   "names": [
+    "Gestiq"
+   ],
+   "mentions": [
+    "cmu"
+   ],
+   "floor": []
+  },
+  "lore": {
+   "home": "projects",
+   "block": "lore",
+   "names": [
+    "Lore / DependIQ",
+    "Lore",
+    "DependIQ"
+   ],
+   "floor": []
+  },
+  "crucible": {
+   "home": "projects",
+   "block": "crucible",
+   "names": [
+    "Crucible"
+   ],
+   "floor": []
+  },
+  "offers": {
+   "home": "services",
+   "block": "offers",
+   "names": [
+    "Engineering leaders",
+    "Executives"
+   ],
+   "mentions": [
+    "fit",
+    "call",
+    "review",
+    "keynote",
+    "masterclass",
+    "roi",
+    "retainer",
+    "cto"
+   ],
+   "floor": []
+  },
+  "fit": {
+   "home": "services",
+   "block": "fit",
+   "names": [
+    "Fit Call"
+   ],
+   "floor": []
+  },
+  "call": {
+   "home": "services",
+   "block": "call",
+   "names": [
+    "Architecture Call"
+   ],
+   "floor": []
+  },
+  "review": {
+   "home": "services",
+   "block": "review",
+   "names": [
+    "Design Review"
+   ],
+   "floor": []
+  },
+  "keynote": {
+   "home": "services",
+   "block": "keynote",
+   "names": [
+    "Keynote"
+   ],
+   "mentions": [
+    "fee"
+   ],
+   "floor": []
+  },
+  "masterclass": {
+   "home": "services",
+   "block": "masterclass",
+   "names": [
+    "Masterclass"
+   ],
+   "floor": []
+  },
+  "roi": {
+   "home": "services",
+   "block": "roi",
+   "names": [
+    "AI ROI Review"
+   ],
+   "mentions": [
+    "ai-roi"
+   ],
+   "floor": []
+  },
+  "retainer": {
+   "home": "services",
+   "block": "retainer",
+   "names": [
+    "Advisory Retainer"
+   ],
+   "floor": []
+  },
+  "cto": {
+   "home": "services",
+   "block": "cto",
+   "names": [
+    "Fractional CTO"
+   ],
+   "floor": []
+  },
+  "book-call": {
+   "home": "services",
+   "block": "book",
+   "names": [],
+   "mentions": [
+    "fit",
+    "call"
+   ],
+   "floor": []
+  },
+  "contact": {
+   "home": "contact",
+   "block": "contact",
+   "names": [],
+   "mentions": [
+    "fit",
+    "call"
+   ],
+   "floor": [
+    "sairambkrishnan@gmail.com",
+    "LinkedIn"
+   ]
+  }
+ },
+ "allow": [
+  {
+   "page": "career",
+   "in": "cmu",
+   "unit": "drone-megaddon",
+   "text": "StarCraft",
+   "why": "his words, Oct 28 01:59: 'I built a prototype for commanding drones through a StarCraft-like real-time strategy interface... Don't forget the original Drone-Megaddon 2014 paper.'"
+  },
+  {
+   "page": "career",
+   "in": "cmu",
+   "unit": "drone-megaddon",
+   "text": "real-time strategy",
+   "why": "same"
+  }
+ ],
+ "map": {
+  "page": "index",
+  "lines": {
+   "Career": "career.html",
+   "Speaking": "speaking.html",
+   "Research": "research.html",
+   "Projects": "projects.html",
+   "Services": "services.html",
+   "Contact": "contact.html"
+  },
+  "never_stations": [
+   "Résumé",
+   "Resume"
+  ],
+  "one_station": [
+   "Apple"
+  ],
+  "branch_of_apple": [
+   "Wharton"
+  ],
+  "labels": [
+   "Drone-Megaddon 2014",
+   "Drone-Megaddon 2026",
+   "Who Trains the Next Senior?",
+   "AI ROI Framework",
+   "Carnegie Mellon",
+   "Microsoft",
+   "Susquehanna (SIG)",
+   "Amazon Alexa",
+   "Apple",
+   "Wharton",
+   "Jacobson Strategic",
+   "HP",
+   "Morgan Lewis",
+   "PBS",
+   "Philadelphia Eagles",
+   "Sonova",
+   "Praxtera AI Institute",
+   "Atos",
+   "Ondoway",
+   "Persuaider",
+   "Gestiq",
+   "Lore",
+   "Crucible",
+   "Fit Call",
+   "Keynote",
+   "Masterclass",
+   "Contact",
+   "Sairam Krishnan"
+  ],
+  "max_words": {
+   "index": 120
+  }
+ },
+ "pairs": [
+  [
+   "drone-megaddon",
+   "drone-megaddon-2026"
+  ]
+ ]
+}

@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 2,
+  "about": "Exact audit-preimage to accepted-baseline wording transitions. Canonical facts must equal acceptedText from the hash-locked public résumé; legacyText is retained only as the prior wording record.",
+  "semantics": {
+    "canonicalFactSide": "acceptedText",
+    "legacyFactSide": "audit-preimage-only",
+    "acceptedSource": "public/assets/Resume.pdf"
+  },
+  "sourceReconciliations": {
+    "sha256": "5188f60e8a57030974f096bf6e96aae88ed35db4e817e4af14325adae236be82",
+    "entries": [
+      {
+        "id": "amazon-management-accepted-merge",
+        "legacySourceIds": [
+          "site:careerLedger[9].bullets[0]",
+          "site:careerLedger[9].bullets[2]"
+        ],
+        "legacyTexts": [
+          "Led an eight-engineer Alexa Core Engine team, owning performance reviews, hiring, recurring 1:1s, and promotion recommendations.",
+          "Mentored half the team from entry level to promotion, earning selection for Amazon's Mentorship and Leadership Development Program."
+        ],
+        "acceptedFactId": "resume:amazon:2:b0",
+        "acceptedText": "Managed eight engineers; owned performance reviews, hiring, 1:1s, and promotion recommendations. Mentored half the team to promotion; selected for Amazon's Mentorship and Leadership Development Program.",
+        "preservedDimensions": [
+          "ownership",
+          "team-size",
+          "performance-management",
+          "hiring",
+          "promotion-mentoring",
+          "recognition"
+        ]
+      },
+      {
+        "id": "cmu-teaching-accepted-deduplication",
+        "legacySourceIds": [
+          "site:careerLedger[2].bullets[1]",
+          "site:talks[3].summary"
+        ],
+        "legacyTexts": [
+          "Instructed 105+ students as Agile Product Owner for their final projects.",
+          "Redesigned the Web Applications course with the professor, planning a 20-lecture semester from client-side code and HTTP through relational and NoSQL databases, servlets, security, and Django. Built the client-side and server-side exercise sets and reference survey apps in Spring MVC, Play, and Django, and instructed 105+ students as Agile Product Owner for their final projects."
+        ],
+        "acceptedFactId": "resume:cmu-teaching:10:b0",
+        "acceptedText": "Redesigned the course with the professor, planning a 20-lecture semester and building client-side and server-side exercises and reference applications in Spring MVC, Play, and Django. Instructed 105+ students as Agile Product Owner for their final projects.",
+        "preservedDetailFactId": "site:careerLedger[2].bullets[1]",
+        "preservedDetailTextSha256": "0feedf189ff9ae22afc33001b89aec2eab4791fd9a1e6128d148e15537ee1b6c",
+        "preservedDimensions": [
+          "course-ownership",
+          "20-lecture-scale",
+          "client-and-server-exercises",
+          "frameworks",
+          "105-plus-students",
+          "agile-product-owner"
+        ]
+      }
+    ]
+  },
+  "projectsTransition": {
+    "factIds": [
+      "resume:ondoway:5:b1",
+      "resume:persuaider:7:b0",
+      "resume:persuaider:7:b2",
+      "resume:gestiq:8:b0",
+      "resume:gestiq:8:b1"
+    ],
+    "changedField": "leading verb only",
+    "preservedDimensions": [
+      "ownership",
+      "metrics",
+      "mechanisms",
+      "scope",
+      "outcomes"
+    ],
+    "canonicalProjectsLedgerSha256": "eebab7d45349f624965cf5136439fc2b498291a4a5d9fedb1785215046049a9a",
+    "transitionSha256": "ac2e80a35458a1dd5c91e7a0409ed2441cc2a9165fcd76666289f316ed236d95"
+  },
+  "equivalences": [
+    {
+      "factId": "resume:apple:1:b0",
+      "legacyText": "Lead eight engineers, including five senior engineers. Own performance reviews, review conversations, ratings and calibration input, and compensation recommendations; lead hiring and mentor engineers toward promotion.",
+      "acceptedText": "Manage eight engineers, five of them senior, and seven vendors. Own performance reviews and conversations, ratings and calibration input, and compensation recommendations; lead hiring and mentor engineers toward promotion."
+    },
+    {
+      "factId": "resume:apple:1:b2",
+      "legacyText": "Led supervised ML entity resolution, improving data quality 40%. Defined candidate generation, features, labels, evaluation, and human overrides with ML engineers; integrated classifiers, corrected artist identities, and transferred ongoing ownership.",
+      "acceptedText": "Raised data quality 40% by leading supervised ML entity resolution. Defined candidate generation, features, labels, evaluation, and human overrides with ML engineers; integrated classifiers, corrected artist identities, and transferred ongoing ownership."
+    },
+    {
+      "factId": "resume:apple:1:b3",
+      "legacyText": "Led the 15-engineer, four-office Apple Music Credits launch; built graph infrastructure for Apple Music Classical. Unified 15+ sources in the media graph powering search, recommendations, and discovery for 100M+ users.",
+      "acceptedText": "Directed a 15-engineer program across four offices to launch Apple Music Credits; built graph infrastructure for Apple Music Classical. Unified 15+ sources in the media graph powering search, recommendations, and discovery for 100M+ users."
+    },
+    {
+      "factId": "resume:apple:1:b4",
+      "legacyText": "Led Spark-to-Flink/Kafka/Cassandra migration, cutting average processing from ~60 hours to one minute for millions of tracks. Won Ops, PM, and client backing to launch a credits feature on the new platform, consolidating batch, streaming, and instant-curation logic for partial and complete edits.",
+      "acceptedText": "Cut average processing time for millions of tracks from approximately 60 hours to one minute by leading the migration from Spark to Flink, Kafka, and Cassandra. Won Ops, PM, and client backing to launch a credits feature on the new platform, consolidating batch, streaming, and instant-curation logic for partial and complete edits."
+    },
+    {
+      "factId": "resume:apple:1:b6",
+      "legacyText": "Lead senior and junior engineers delivering ML-generated media tags and awards metadata; designed versioned predictions, persistent human overrides, and client integrations to preserve editorial decisions through model updates.",
+      "acceptedText": "Direct senior and junior engineers delivering ML-generated media tags and awards metadata; designed versioned predictions, persistent human overrides, and client integrations to preserve editorial decisions through model updates."
+    },
+    {
+      "factId": "resume:apple:1:b8",
+      "legacyText": "Established design-review and CI/CD standards that increased velocity 30% and reduced incidents 45%.",
+      "acceptedText": "Increased velocity 30% and reduced incidents 45% by establishing design-review and CI/CD standards."
+    },
+    {
+      "factId": "resume:amazon:2:b3",
+      "legacyText": "Cut onboarding from two weeks to 15 minutes with self-service deployment; reduced weekly operational issues from 40 to 10.",
+      "acceptedText": "Cut onboarding from 2 weeks to 15 minutes via self-service deployment; reduced weekly operational issues from 40 to 10."
+    },
+    {
+      "factId": "resume:amazon:2:b4",
+      "legacyText": "Led Prime Day/Black Friday capacity forecasting and secured fleet investment. Redesigned new-user registration, reducing peak-holiday registration issues tenfold.",
+      "acceptedText": "Secured fleet investment and directed Prime Day and Black Friday capacity forecasting. Redesigned new-user registration, reducing peak-holiday registration issues tenfold."
+    },
+    {
+      "factId": "resume:edu:2",
+      "legacyText": "Palmer Scholar (top 5%); Benjamin Franklin Award (peer-voted); five majors, including AI in Business.",
+      "acceptedText": "Palmer Scholar (top 5%); Benjamin Franklin Award (peer-voted, one of three recipients in a class of 250); Director's List in all six terms; First Year Honors. Five majors: AI in Business; Strategic Management; Operations, Information & Decision-Making; Entrepreneurship & Innovation; Business Analytics."
+    },
+    {
+      "factId": "resume:edu:4",
+      "legacyText": "M.S., Dec 2014, GPA 4.0/4.0 | B.S., May 2014, Minor in Business Administration",
+      "acceptedText": "M.S., Dec 2014 | B.S., May 2014 M.S. GPA: 4.0/4.0. B.S. minor: Business Administration. Dean's List, Carnegie Institute of Technology, 2012-2014."
+    },
+    {
+      "factId": "resume:ondoway:5:b1",
+      "legacyText": "Built LLM evaluations with frozen human-labeled cases, blinded comparisons, evidence checks, and code-enforced gates; rejected a cheaper LLM judge after calibration exposed false rejections of valid paraphrases.",
+      "acceptedText": "Established LLM evaluations with frozen human-labeled cases, blinded comparisons, evidence checks, and code-enforced gates; rejected a cheaper LLM judge after calibration exposed false rejections of valid paraphrases.",
+      "transition": {
+        "scope": "projects-proof-atom",
+        "legacyLeadingVerb": "Built",
+        "acceptedLeadingVerb": "Established",
+        "unchangedTailSha256": "a8b794d34ffb3f32d76b5ddb6fbcbcfb2f83983839d776d066b137e84ba9040e"
+      }
+    },
+    {
+      "factId": "resume:persuaider:7:b0",
+      "legacyText": "Built interactive practice and autonomous multiagent negotiation with distinct motivations, confidential objectives, and walk-away limits.",
+      "acceptedText": "Created interactive practice and autonomous multiagent negotiation with distinct motivations, confidential objectives, and walk-away limits.",
+      "transition": {
+        "scope": "projects-proof-atom",
+        "legacyLeadingVerb": "Built",
+        "acceptedLeadingVerb": "Created",
+        "unchangedTailSha256": "8b38d3e4bd0126a70baa59753b56b7c630f24838a2430582ea6cc4685f066b9b"
+      }
+    },
+    {
+      "factId": "resume:persuaider:7:b2",
+      "legacyText": "Built configurable coaching rubrics; checked feedback against transcript evidence, retried failures, and withheld unsupported coaching.",
+      "acceptedText": "Designed configurable coaching rubrics; checked feedback against transcript evidence, retried failures, and withheld unsupported coaching.",
+      "transition": {
+        "scope": "projects-proof-atom",
+        "legacyLeadingVerb": "Built",
+        "acceptedLeadingVerb": "Designed",
+        "unchangedTailSha256": "81ac6ff6b85ae661737220d28afafeb24f72f2961a93abf5df2c857af6037b7d"
+      }
+    },
+    {
+      "factId": "resume:gestiq:8:b0",
+      "legacyText": "Built a native macOS gesture-control application extending a CMU capstone: a hand-controlled 2048 puzzle game.",
+      "acceptedText": "Developed a native macOS gesture-control application extending a CMU capstone: a hand-controlled 2048 puzzle game.",
+      "transition": {
+        "scope": "projects-proof-atom",
+        "legacyLeadingVerb": "Built",
+        "acceptedLeadingVerb": "Developed",
+        "unchangedTailSha256": "9c705eb92055f343924a96ee4c70f318fc3a1645b0a8875d65ee5e4783896731"
+      }
+    },
+    {
+      "factId": "resume:gestiq:8:b1",
+      "legacyText": "Built temporal recognition over Apple Vision hand poses, normalizing motion to palm size for two-hand controls and context-aware commands.",
+      "acceptedText": "Implemented temporal recognition over Apple Vision hand poses, normalizing motion to palm size for two-hand controls and context-aware commands.",
+      "transition": {
+        "scope": "projects-proof-atom",
+        "legacyLeadingVerb": "Built",
+        "acceptedLeadingVerb": "Implemented",
+        "unchangedTailSha256": "9977e4270fe1e12c4424d14528192b582c035812b6a378dcd92b9d1d0e5385e0"
+      }
+    },
+    {
+      "factId": "resume:amazon:2:b0",
+      "legacyText": "Led an eight-engineer Alexa Core Engine team, owning performance reviews, hiring, recurring 1:1s, and promotion recommendations. Mentored half the team from entry level to promotion, earning selection for Amazon's Mentorship and Leadership Development Program.",
+      "acceptedText": "Managed eight engineers; owned performance reviews, hiring, 1:1s, and promotion recommendations. Mentored half the team to promotion; selected for Amazon's Mentorship and Leadership Development Program."
+    },
+    {
+      "factId": "resume:cmu-teaching:10:b0",
+      "legacyText": "Redesigned the Web Applications course with the professor, planning a 20-lecture semester from client-side code and HTTP through relational and NoSQL databases, servlets, security, and Django. Built the client-side and server-side exercise sets and reference survey apps in Spring MVC, Play, and Django, and instructed 105+ students as Agile Product Owner for their final projects.",
+      "acceptedText": "Redesigned the course with the professor, planning a 20-lecture semester and building client-side and server-side exercises and reference applications in Spring MVC, Play, and Django. Instructed 105+ students as Agile Product Owner for their final projects."
+    }
+  ]
+}

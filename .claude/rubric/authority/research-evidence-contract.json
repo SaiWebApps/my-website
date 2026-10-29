@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 2,
+  "status": "accepted-static-open-authority",
+  "route": "research",
+  "acceptedResumeSha256": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
+  "protectedClaimsSha256": "3d84bd3cb4d8eb784b55f96fbe025b85f62affe27f320a516bf442a94f087db6",
+  "about": "Sealed authority and proof architecture for four static-open Research articles. Renderer acceptance is decided separately by the executable Research proof contract.",
+  "figureAssetManifest": {
+    "path": ".claude/rubric/sources/drone-megaddon-figure-assets.json",
+    "sha256": "2f19cd63a8d1c6c4a15a5e14ee64be14e5f6b3d8062a24e1b672f28f987adcb4"
+  },
+  "preflight": {
+    "currentResearchHtmlSha256": "30dff21c1f2beea8d572589da2024200e7ff98ccbf3c8ee4b86781226970a944",
+    "currentLogicalRecordOrderCorrect": true,
+    "currentArticleRootCount": 3,
+    "currentNestedRecord": "research-drone-megaddon-2026",
+    "currentDoiLinksCorrect": true,
+    "currentDisplayAuthorOrderCorrect": true,
+    "currentSummariesStaticOpen": true,
+    "currentExactStatusLinesPresent": false,
+    "currentSemanticFigureRootsWithProvenance": 0,
+    "currentTypedRecordMarkersPresent": false,
+    "currentAiRoiEmptySubtitleNodePresent": true
+  },
+  "articleOrder": [
+    "research-drone-megaddon-2014",
+    "research-drone-megaddon-2026",
+    "research-who-trains",
+    "research-ai-roi"
+  ],
+  "domPolicy": {
+    "collectionSelector": ".research-collection[data-research-collection]",
+    "recordSelector": "article.research-record[data-research-record][data-research-authority-claim][data-research-unit][data-research-stable-id][data-research-claim-id][data-research-built-status]",
+    "recordOccurrences": 1,
+    "recordsMustBeDirectCollectionChildren": true,
+    "recordsMayNotNestOrOverlap": true,
+    "recordOrderMustEqualArticleOrder": true,
+    "ariaLabelledbyMustNameOneDescendantH2": true,
+    "requiredFieldSelectors": {
+      "title": "[data-research-title]",
+      "subtitle": "[data-research-subtitle]",
+      "authors": "[data-research-authors]",
+      "status": "[data-research-status]",
+      "summary": "[data-research-summary]",
+      "qualifier": "[data-research-qualifier]",
+      "evidence": "[data-research-evidence]",
+      "doiLink": "a[data-research-doi]"
+    },
+    "everyRequiredFieldMustHaveExactlyOneOwningRecordAncestor": true,
+    "nullFieldsMustProduceZeroNodes": true,
+    "classNamesDoNotEstablishAuthority": true,
+    "staticOpen": true,
+    "forbiddenState": [
+      "details",
+      "summary",
+      "hidden",
+      "aria-hidden=true on substantive evidence",
+      "aria-selected",
+      "aria-expanded",
+      "role=tab",
+      "role=tabpanel",
+      "data-cars",
+      "data-screen",
+      "class=cars",
+      "class=coach",
+      "Prev/Next controls"
+    ],
+    "unknownRecordsForbidden": true,
+    "allRequiredTextOccurrences": 1
+  },
+  "figurePolicy": {
+    "selector": "figure[data-research-figure][data-research-figure-id][data-research-owner][data-figure-kind][data-source-snapshot-sha256]",
+    "allowedKinds": [
+      "native-pdf-crop",
+      "text-derived-diagram",
+      "source-markdown-diagram"
+    ],
+    "occurrencesPerRecord": 1,
+    "mustBeDescendantOfExactRecord": true,
+    "mustHaveOneExactFigcaption": true,
+    "labelsMustAppearInDeclaredOrder": true,
+    "labelsMustEqualDeclaredTextAndHash": true,
+    "duplicateOrCrossOwnedFiguresForbidden": true,
+    "nativePdfAvailabilityMayNotBeClaimedForTextOnlySources": true,
+    "provenanceDataMustEqualTypedAuthority": true
+  },
+  "linkPolicy": {
+    "occurrencesPerRecord": 1,
+    "mustBeDescendantOfExactRecord": true,
+    "hrefMustEqualStableDoiUrl": true,
+    "visibleTextMustEqualBareDoiText": true,
+    "stableIdentityUsesDoiPrefix": true,
+    "hrefUsesHttpsDoiOrigin": true,
+    "duplicateOrCrossOwnedLinksForbidden": true
+  },
+  "records": [
+    {
+      "order": 0,
+      "authorityClaimId": "research-drone-megaddon-2014",
+      "unit": "drone-megaddon",
+      "block": "drone-megaddon",
+      "stableId": "doi:10.31224/6924",
+      "claimId": "claim:9e18e55c1fed4a36a9e3dfd2",
+      "title": {
+        "factId": "site:research[0].title",
+        "text": "Drone-Megaddon",
+        "textSha256": "27c7cb6059b4e0480e593e4efda9d1deae8cc696dc4e5d064e63b96630ed43b5"
+      },
+      "subtitle": {
+        "factId": "site:research[0].subtitle",
+        "text": "A Real-Time Strategy Interface for Managing Drone Swarms",
+        "textSha256": "4d2676e2dccad1d62aec375d1e842b883dd82b8fbe8a0f90bfcc563d8efa3882"
+      },
+      "authors": {
+        "manuscriptOrder": [
+          "Sairam Krishnan",
+          "Daniel Ting"
+        ],
+        "publicMetadataOrder": [
+          "Sairam Krishnan",
+          "Daniel Ting"
+        ],
+        "displayOrder": [
+          "Sairam Krishnan",
+          "Daniel Ting"
+        ],
+        "displayText": "Sairam Krishnan, Daniel Ting",
+        "displayTextSha256": "d7c98924a47c4459b4aaae6785324cdd67eb56b01fec38cadb6734bf32e14131",
+        "decision": "accepted-baseline-precedence",
+        "decisionSourceType": "inference"
+      },
+      "status": {
+        "factId": "authority:research-drone-megaddon-2014:status",
+        "text": "Carnegie Mellon course project, 2014; archived on engrXiv, 2026",
+        "textSha256": "2d862f93128dbfe0817d3bc9fffb26948eaa787df3f2918d255d8f2b61427fe2",
+        "year": 2014,
+        "builtStatus": "built-prototype",
+        "displayVenueFactId": "site:research[0].venue",
+        "displayVenue": "2014 project · engrXiv archive, 2026"
+      },
+      "doiLink": {
+        "factId": "site:research[0].href",
+        "doi": "10.31224/6924",
+        "href": "https://doi.org/10.31224/6924",
+        "bareText": "10.31224/6924"
+      },
+      "summary": {
+        "factId": "site:research[0].summary",
+        "textSha256": "b645fc4997698b883039bf3acffb76c42d2bfa733d0040470aa67aca346c1936",
+        "requiredPhrases": [
+          "end-to-end Android, radio, and embedded-control prototype",
+          "The 2014 work established"
+        ]
+      },
+      "qualifiers": [],
+      "acceptedResume": {
+        "factId": "resume:research:drone-megaddon",
+        "textSha256": "da3c1de166a60e253645ec5540a25279a49b9bb69c3e62ef0e136d2429c86d53",
+        "atoms": [
+          {
+            "id": "title-and-subtitle",
+            "text": "Drone-Megaddon: A Real-Time Strategy Interface for Managing Drone Swarms",
+            "textSha256": "0130357c0787633c7f2f203f598cff70929731f92ef1c73a00862f9f86e32a6f",
+            "surface": ["title", "subtitle"]
+          },
+          {
+            "id": "authors",
+            "text": "Sairam Krishnan, Daniel Ting",
+            "textSha256": "d7c98924a47c4459b4aaae6785324cdd67eb56b01fec38cadb6734bf32e14131",
+            "surface": ["authors"]
+          },
+          {
+            "id": "status",
+            "text": "Carnegie Mellon course project, 2014; archived on engrXiv, 2026",
+            "textSha256": "2d862f93128dbfe0817d3bc9fffb26948eaa787df3f2918d255d8f2b61427fe2",
+            "surface": ["status"]
+          },
+          {
+            "id": "doi",
+            "text": "doi:10.31224/6924",
+            "textSha256": "c8d8eb60e33bcd6bf682de5144ccb7347a1d4d719c80ca946898c34ccef6f811",
+            "surface": ["doiIdentity"]
+          },
+          {
+            "id": "built-prototype",
+            "text": "Android, Zigbee radio, and embedded-control prototype",
+            "textSha256": "08e831f78193a6e5c57388a81055566aa3e6002a4a616bc0dfb77b6bdc773230",
+            "surface": ["evidence"]
+          }
+        ]
+      },
+      "figure": {
+        "id": "research-drone-2014",
+        "kind": "native-pdf-crop",
+        "authorityProvenanceKind": "native-pdf-available",
+        "sourceSnapshotPath": ".claude/rubric/sources/papers-full/drone-megaddon-2014.txt",
+        "sourceSnapshotSha256": "bc69cd3c667249c9f0328af476063c647239bde83a8d35c9b7448032cc96a2a8",
+        "sourcePdfSha256": "ae98e121563107488d2f297f0f541cb790f90ce4fb285c911309b7d9473b8005",
+        "sourcePdfPath": "public/assets/research/drone-megaddon-2014.pdf",
+        "sourcePdfHref": "/public/assets/research/drone-megaddon-2014.pdf",
+        "sourcePage": 2,
+        "cropBoxPdfPoints": {
+          "left": 320,
+          "bottom": 280,
+          "right": 570,
+          "top": 510
+        },
+        "assetPath": "public/assets/research/drone-megaddon-2014-architecture.png",
+        "assetHref": "/public/assets/research/drone-megaddon-2014-architecture.png",
+        "assetSha256": "afca8c7f23e40c5f22a79784b398d92adbe0b573b06d42df718c683aae100871",
+        "assetWidth": 500,
+        "assetHeight": 460,
+        "imageAlt": {
+          "text": "Architecture diagram showing the Android RTS interface sending $RAD commands over serial and ZigBee through Firefly nodes to Drone-RK, with Piksi GPS connected by UART.",
+          "textSha256": "858be42299c64811162f15af3b5406f51cc1bdf722c6d4ae6ff55c04213d019b"
+        },
+        "topologyProof": "byte-pinned-native-pdf-crop",
+        "normalization": "collapse source-extraction whitespace and dehyphenate extraction line breaks only",
+        "figcaption": {
+          "factId": "approved:0",
+          "text": "Command a drone swarm like StarCraft",
+          "textSha256": "637eb0e9fca150bd3696a5e3cc92ec60995ec7adc470f5fe4b9dc4f6b1e06c6a"
+        },
+        "labels": [
+          {
+            "text": "Android RTS interface",
+            "textSha256": "f73f5df954fb2d79cbf2e77d76efaec37401fe6add96c4fa75c28dfa065617d6"
+          },
+          {
+            "text": "patterned after the hit RTS game StarCraft II",
+            "textSha256": "96aca63c9c6211e92dba4524700c686ab36e60668baf0eaf20174fc086390e82"
+          },
+          {
+            "text": "high-level management of a drone swarm",
+            "textSha256": "c0c067c955a258088e2ece60dc3e06af431cb2da1ff1c33b529c9036457f9204"
+          }
+        ]
+      }
+    },
+    {
+      "order": 1,
+      "authorityClaimId": "research-drone-megaddon-2026",
+      "unit": "drone-megaddon-2026",
+      "block": "drone-megaddon-2026",
+      "stableId": "doi:10.31224/6987",
+      "claimId": "claim:09aca18755f9edd25c86ce6c",
+      "claimIdDerivation": "sha256(stable_id)[:24]",
+      "title": {
+        "factId": "site:research[1].title",
+        "text": "Drone-Megaddon 2026",
+        "textSha256": "5d2cb3ede60cd2be7d252aa3e68c09a6dd71a71d7b733cf76f7b023e0147edeb"
+      },
+      "subtitle": {
+        "factId": "site:research[1].subtitle",
+        "text": "Co-Intelligent Swarm Control with Language and Vision Models",
+        "textSha256": "a116cdbb816d92cec11dd327a5711d08f001f4ad22119fd64a83cfaa920ef7f3"
+      },
+      "authors": {
+        "manuscriptOrder": [
+          "Sairam Krishnan",
+          "Daniel Ting"
+        ],
+        "publicMetadataOrder": [
+          "Sairam Krishnan",
+          "Daniel Ting"
+        ],
+        "displayOrder": [
+          "Sairam Krishnan",
+          "Daniel Ting"
+        ],
+        "displayText": "Sairam Krishnan, Daniel Ting",
+        "displayTextSha256": "d7c98924a47c4459b4aaae6785324cdd67eb56b01fec38cadb6734bf32e14131",
+        "decision": "accepted-baseline-precedence",
+        "decisionSourceType": "inference"
+      },
+      "status": {
+        "factId": "authority:research-drone-megaddon-2026:status",
+        "text": "engrXiv preprint, 2026; proposal, not a deployed-system evaluation",
+        "textSha256": "28418786acdcbfda7f842f8898ecfb79e7a7fa2562832001b003a27f94f024cf",
+        "year": 2026,
+        "builtStatus": "proposal",
+        "displayVenueFactId": "site:research[1].venue",
+        "displayVenue": "engrXiv, 2026"
+      },
+      "doiLink": {
+        "factId": "site:research[1].href",
+        "doi": "10.31224/6987",
+        "href": "https://doi.org/10.31224/6987",
+        "bareText": "10.31224/6987"
+      },
+      "summary": {
+        "factId": "site:research[1].summary",
+        "textSha256": "7ce3aaa0195a3d8b8e4081aaaef1d0ee9b36be141ca7da2d9c1ecb03a45518cf",
+        "requiredPhrases": [
+          "proposed extension",
+          "illustrative search-and-rescue trace",
+          "no quantitative results from a deployed 2026 system"
+        ]
+      },
+      "qualifiers": [
+        {
+          "factId": "authority:research-drone-megaddon-2026:qualifier:0",
+          "text": "illustrative search-and-rescue trace",
+          "textSha256": "7e7765beb4e8f54f699a1145e3780c3f131788a3eb6292dc6e2cc663dcfcd01a"
+        },
+        {
+          "factId": "authority:research-drone-megaddon-2026:qualifier:1",
+          "text": "no quantitative results from a deployed 2026 system",
+          "textSha256": "8b90e601b717a51cbde234095d3e4e8652476e6f5e1c8ace9c3e6bd6cbe1a6a8"
+        }
+      ],
+      "acceptedResume": {
+        "factId": "resume:research:drone-megaddon-2026",
+        "textSha256": "81ac05cc1364a13c63c3aefd2e31dfee08f005e8c85bd1b710b47740a7f6b069",
+        "atoms": [
+          {
+            "id": "title-and-subtitle",
+            "text": "Drone-Megaddon 2026: Co-Intelligent Swarm Control with Language and Vision Models",
+            "textSha256": "08870b616cc468a481b882199a1da7e92e4ee6d2d0fc1aee82dadb2de17964a9",
+            "surface": ["title", "subtitle"]
+          },
+          {
+            "id": "authors",
+            "text": "Sairam Krishnan, Daniel Ting",
+            "textSha256": "d7c98924a47c4459b4aaae6785324cdd67eb56b01fec38cadb6734bf32e14131",
+            "surface": ["authors"]
+          },
+          {
+            "id": "status",
+            "text": "engrXiv preprint, 2026",
+            "textSha256": "eb935e46c2148e5d0f5e0a1fceb4db1f2c8b8bbf3e6cb8fcfd71e472ffe2b874",
+            "surface": ["status"]
+          },
+          {
+            "id": "doi",
+            "text": "doi:10.31224/6987",
+            "textSha256": "09aca18755f9edd25c86ce6c98f8f0fc76e4b6c6c6f852bbb7a4d42486c28de6",
+            "surface": ["doiIdentity"]
+          },
+          {
+            "id": "operator-gates",
+            "text": "operator inspection gates",
+            "textSha256": "c1ef9ad430a7cc22ba3e6347dd2c8364fc22dfdfb49f6ef93d4d586ebf9baf02",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "audit-logs",
+            "text": "audit logs",
+            "textSha256": "71b519a3cd0049c4d992566a69097aefd7b001071b88088049c0239f0c869edc",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "manual-fallback",
+            "text": "manual-control fallback under degraded connectivity",
+            "textSha256": "47163682258a0e290a49011da5cee9f4fe1f587aa8ea81cf88fec54927868b01",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "illustrative-scenario",
+            "text": "Illustrated through a search-and-rescue scenario.",
+            "textSha256": "c0447db6cae06752516209d71d32567ad5c7805b16cac127cc9a06b6525397ca",
+            "surface": ["summary", "qualifier", "evidence"]
+          }
+        ]
+      },
+      "figure": {
+        "id": "research-drone-2026",
+        "kind": "native-pdf-crop",
+        "authorityProvenanceKind": "native-pdf-available",
+        "sourceSnapshotPath": ".claude/rubric/sources/papers-full/drone-megaddon-2026.txt",
+        "sourceSnapshotSha256": "f8c82936c83e08afcc1f7e523a203074c3f056f32084482d41b1eefc1f14ece5",
+        "sourcePdfSha256": "0bad9c95e7d9476b52b187dab5dab195c1817fc18f9342d3e19949a0554f81da",
+        "sourcePdfPath": "public/assets/research/drone-megaddon-2026.pdf",
+        "sourcePdfHref": "/public/assets/research/drone-megaddon-2026.pdf",
+        "sourcePage": 5,
+        "cropBoxPdfPoints": {
+          "left": 310,
+          "bottom": 340,
+          "right": 578,
+          "top": 735
+        },
+        "assetPath": "public/assets/research/drone-megaddon-2026-language-vision-architecture.png",
+        "assetHref": "/public/assets/research/drone-megaddon-2026-language-vision-architecture.png",
+        "assetSha256": "99766997628d3f369e9c74da880dffcb2be0e42eca7731a90820f806908b5ebe",
+        "assetWidth": 536,
+        "assetHeight": 790,
+        "imageAlt": {
+          "text": "An operator utterance enters the intent translator. Referring expressions route through the perception grounder, while multi-drone commands route through the coordination planner. The resulting $RAD messages enter the 2014 command queue, cross the ACK’d radio layer, and reach the drone commercial platform. Human inspection gates every AI-to-$RAD boundary.",
+          "textSha256": "1938ef44c51d68cc1ee3eac051f0946c564935f15d9b85c1722691a22fe044ca"
+        },
+        "topologyProof": "byte-pinned-native-pdf-crop",
+        "figcaption": {
+          "factId": "approved:1",
+          "text": "Speak to the swarm, approve each command",
+          "textSha256": "ee578bf8458870f86d3094e3dc2a9eeca66d1aa32386573a0c430afcabe5a3b9"
+        },
+        "labels": [
+          {
+            "text": "The intent translator",
+            "textSha256": "0e94ea028c3abeb3a3b1042aabaf68b69aa30411146b712c0ca04092484f6c66"
+          },
+          {
+            "text": "The perception grounder",
+            "textSha256": "e9354e550e77dadddbba4863c314e092c24a148276a213bfc1df9fc630577013"
+          },
+          {
+            "text": "The coordination planner",
+            "textSha256": "65a8a97398d427d49371b86889759c5ca35897cb41ca4b502ffbf82e5a8378e6"
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "authorityClaimId": "research-who-trains",
+      "unit": "who-trains",
+      "block": "who-trains-the-next-senior",
+      "stableId": "doi:10.2139/ssrn.7083078",
+      "claimId": "claim:62d5f06923d18b3ddea11c26",
+      "title": {
+        "factId": "site:research[2].title",
+        "text": "Who Trains the Next Senior?",
+        "textSha256": "d2d9e6d379fcdb450c4db97e877ae8f854ceeda3d629568f880c21087a17fc39"
+      },
+      "subtitle": {
+        "factId": "site:research[2].subtitle",
+        "text": "Managing Software Engineering When AI Makes Code Cheap",
+        "textSha256": "43c26ebab1a511dc94367d6b17557040540c368a95e8cd9471ad11be1f51058a"
+      },
+      "authors": {
+        "manuscriptOrder": [
+          "Gajendra Babu Thokala",
+          "Sairam Krishnan"
+        ],
+        "publicMetadataOrder": [
+          "Sairam Krishnan",
+          "Gajendra Babu Thokala"
+        ],
+        "displayOrder": [
+          "Gajendra Babu Thokala",
+          "Sairam Krishnan"
+        ],
+        "displayText": "Gajendra Babu Thokala, Sairam Krishnan",
+        "displayTextSha256": "6b5463006c0e1200c408416bf51c66422c6d9a94b2c152c567b25420e49d8c4f",
+        "decision": "accepted-baseline-precedence",
+        "decisionSourceType": "inference"
+      },
+      "status": {
+        "factId": "authority:research-who-trains:status",
+        "text": "SSRN working paper, 2026",
+        "textSha256": "02f76ada563bb40a6b6d6840d8665ef3156b4658c993d4598c19723338f8409b",
+        "year": 2026,
+        "builtStatus": "working-paper",
+        "displayVenueFactId": "site:research[2].venue",
+        "displayVenue": "SSRN, 2026"
+      },
+      "doiLink": {
+        "factId": "site:research[2].href",
+        "doi": "10.2139/ssrn.7083078",
+        "href": "https://doi.org/10.2139/ssrn.7083078",
+        "bareText": "10.2139/ssrn.7083078"
+      },
+      "summary": {
+        "factId": "site:research[2].summary",
+        "textSha256": "672c62eaf5f8d98285e3a8d5ff3a28186a7234e68c7fd18475f6ffc403e7315b",
+        "requiredPhrases": [
+          "correlational analysis",
+          "single organization"
+        ]
+      },
+      "qualifiers": [
+        {
+          "factId": "authority:research-who-trains:qualifier:0",
+          "text": "The analysis is correlational rather than causal.",
+          "textSha256": "b83badb5d51e9dc70a63d1ee8e8bd25700fc5090475be631525d69924692542a"
+        },
+        {
+          "factId": "authority:research-who-trains:qualifier:1",
+          "text": "single organization",
+          "textSha256": "ee0fa578521835f879cbb3f289fb3ab0d9e8596d842004acbaf1b33af0a4871f"
+        }
+      ],
+      "acceptedResume": {
+        "factId": "resume:research:who-trains",
+        "textSha256": "cbd52e47ca3df6b71359715f4f50797221a26d76963715921e704e8a26ae1748",
+        "atoms": [
+          {
+            "id": "title-and-subtitle",
+            "text": "Who Trains the Next Senior? Managing Software Engineering When AI Makes Code Cheap",
+            "textSha256": "739af0ed58cb34bcc2b5a669bfae8af844168f3c82e1313e3a8dbaab3485f425",
+            "surface": ["title", "subtitle"]
+          },
+          {
+            "id": "authors",
+            "text": "Gajendra Babu Thokala, Sairam Krishnan",
+            "textSha256": "6b5463006c0e1200c408416bf51c66422c6d9a94b2c152c567b25420e49d8c4f",
+            "surface": ["authors"]
+          },
+          {
+            "id": "status",
+            "text": "SSRN working paper, 2026",
+            "textSha256": "02f76ada563bb40a6b6d6840d8665ef3156b4658c993d4598c19723338f8409b",
+            "surface": ["status"]
+          },
+          {
+            "id": "doi",
+            "text": "doi:10.2139/ssrn.7083078",
+            "textSha256": "77571a051779b9af1aa52b5b21846216d3ab67aad0088e1fad0d3788659783bc",
+            "surface": ["doiIdentity"]
+          },
+          {
+            "id": "review-theater",
+            "text": "review theater",
+            "textSha256": "e469b30aba6f3d70c879dd021187a3abc3a785fe32a64e8bdbc2ac957ea835a4",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "reviewable-changes",
+            "text": "smaller reviewable changes",
+            "textSha256": "ea837f901d11e44ab24d12aa52ef9cdcf2d88d9e239c3d274585254a4e3f1da6",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "consequence-scrutiny",
+            "text": "scrutiny matched to consequence",
+            "textSha256": "f0969f9a258298d6e330cab01cd17066ab2e73de040bcafd0d5654a3df0c39e3",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "apprenticeship",
+            "text": "deliberate apprenticeship",
+            "textSha256": "30e6b0b8e2aa65c24eb8216b91ccb8b5a02c2b32f235bcdf4dfb416974e504dc",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "verified-outcomes",
+            "text": "verified outcomes rather than code volume",
+            "textSha256": "22e870f0485010b498a81371c7ba6eb1a4e0cb062f3fb76681be78e905d2430d",
+            "surface": ["evidence"]
+          }
+        ]
+      },
+      "figure": {
+        "id": "research-who-trains",
+        "kind": "text-derived-diagram",
+        "authorityProvenanceKind": "text-derived-only",
+        "sourceSnapshotPath": ".claude/rubric/sources/papers-full/who-trains.txt",
+        "sourceSnapshotSha256": "7d6ea3c163b69c427f434e2f1d90c78b56e4c32527c71b320399ef4fd5b481d1",
+        "nativeFigureClaimForbidden": true,
+        "figcaption": {
+          "factId": "approved:2",
+          "text": "Code is cheap; verifying it is not",
+          "textSha256": "8b021eac0d20ba3fd46661ab23fd4d5da9dbce3b437214588150b28bb4890f8a"
+        },
+        "labels": [
+          {"id": "code-abundant", "text": "AI makes code abundant", "textSha256": "dd3bf133ff81d92cc455ad10d1f85455c477f2924bf3b015c14020d0d66dad9c"},
+          {"id": "verification-judgment-scarce", "text": "verification and judgment remain scarce", "textSha256": "ec32aab2601628f9234c951433b3d63380be9728b5a2fd65332f6dbdaf464030"},
+          {"id": "smaller-reviewable-units", "text": "Smaller reviewable units", "textSha256": "76d534bdd5b040da303a6f1a595c627516ca7612d60516d3b444abb59981b305"},
+          {"id": "scrutiny-by-consequence", "text": "Scrutiny matched to consequence", "textSha256": "0c504281d7d24ee4170013f6c141879670706f85fb7426d39a1e30efc4d0c5a6"},
+          {"id": "evidence-backed-gates", "text": "Evidence-backed gates", "textSha256": "23247764aeddb3ed6a8d7bb2bbcfe3b1a7820d57b23cfadb0dc3e43a741cc5ca"},
+          {"id": "outcome-based-metrics", "text": "Outcome-based metrics", "textSha256": "68937d21104c9c8867a37d38cba227ee57f2134a78fb03b22989a58208a58d37"}
+        ],
+        "grouping": {
+          "id": "management-moves",
+          "selector": "[data-diagram-group=management-moves]",
+          "labelSelector": "[data-diagram-group-label]",
+          "labelText": "Four management moves",
+          "labelTextSha256": "d379860216d5a64cdf42a46b6b0a3576c95df7c6da62c7e719378d984c9abece",
+          "conceptNodeIds": ["code-abundant", "verification-judgment-scarce"],
+          "memberNodeIds": ["smaller-reviewable-units", "scrutiny-by-consequence", "evidence-backed-gates", "outcome-based-metrics"],
+          "labelMustBeFirstDirectChild": true,
+          "membersMustBeFollowingDirectChildren": true,
+          "conceptsMustBeSiblingsOutsideGroup": true
+        },
+        "edges": [],
+        "allDirectedEdgesForbidden": true,
+        "topologyProof": "exact-source-grounded-group-ancestry-with-zero-directed-edges"
+      }
+    },
+    {
+      "order": 3,
+      "authorityClaimId": "research-ai-roi",
+      "unit": "ai-roi",
+      "block": "ai-roi",
+      "stableId": "doi:10.2139/ssrn.6732598",
+      "claimId": "claim:774a2373faf987c726a39d8b",
+      "legacyClaimProvenance": {
+        "value": "A Multi-Layer Framework for Evaluating the ROI of AI Projects",
+        "sourcePath": "brand/sources/legacy-site/research.html",
+        "sourceLine": 78,
+        "policy": "Provenance-only legacy label; it may not replace the manuscript title in reader-visible copy."
+      },
+      "title": {
+        "factId": "site:research[3].title",
+        "text": "A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects",
+        "textSha256": "b6dce2e1203884b2ebe38eefe9e71441d0a983b99ca2a26548d7aad905a072fb"
+      },
+      "subtitle": null,
+      "authors": {
+        "manuscriptOrder": [
+          "Sairam Krishnan",
+          "Sonia Gandhi",
+          "Andrea Hepp"
+        ],
+        "publicMetadataOrder": [
+          "Sairam Krishnan",
+          "Andrea Hepp",
+          "Sonia Gandhi"
+        ],
+        "displayOrder": [
+          "Sairam Krishnan",
+          "Sonia Gandhi",
+          "Andrea Hepp"
+        ],
+        "displayText": "Sairam Krishnan, Sonia Gandhi, Andrea Hepp",
+        "displayTextSha256": "b11634d0e69a8f485001e0fa16502ccd16c58f5749a6829930baa76cea8c25d1",
+        "decision": "accepted-baseline-precedence",
+        "decisionSourceType": "inference"
+      },
+      "status": {
+        "factId": "authority:research-ai-roi:status",
+        "text": "SSRN working paper, 2026; Wharton independent study",
+        "textSha256": "a039bd7f42e66c1dd6f1e878cedde24162335786e481b2d76e285f0579f92473",
+        "year": 2026,
+        "builtStatus": "working-paper",
+        "displayVenueFactId": "site:research[3].venue",
+        "displayVenue": "SSRN, 2026"
+      },
+      "doiLink": {
+        "factId": "site:research[3].href",
+        "doi": "10.2139/ssrn.6732598",
+        "href": "https://doi.org/10.2139/ssrn.6732598",
+        "bareText": "10.2139/ssrn.6732598"
+      },
+      "summary": {
+        "factId": "site:research[3].summary",
+        "textSha256": "9ef330595a70e00133d666b34a3661ddb1fa83140b14f909f0debeb726fc7a31",
+        "requiredPhrases": [
+          "illustrative validation, not empirical validation",
+          "eight illustrative public-company cases",
+          "Professor Gad Allon"
+        ]
+      },
+      "qualifiers": [
+        {
+          "factId": "authority:research-ai-roi:qualifier:0",
+          "text": "illustrative validation, not empirical validation",
+          "textSha256": "5e7fcbea5d50ea7948deb9c3e3f64db8149f1484124a358d06f6e7243ae97e6e"
+        },
+        {
+          "factId": "authority:research-ai-roi:qualifier:1",
+          "text": "eight illustrative public-company cases",
+          "textSha256": "30e0530a88eb1636c41ec5477b40033bf5ef80a981cb40b4b08173f85c3892d1"
+        },
+        {
+          "factId": "authority:research-ai-roi:qualifier:2",
+          "text": "faculty sponsor Professor Gad Allon",
+          "textSha256": "cac09ba1bd4cdc4c14c1c78b78cbac908164a15166f31b656f5ef45b11bfc4bc"
+        }
+      ],
+      "acceptedResume": {
+        "factId": "resume:research:ai-roi",
+        "textSha256": "075daff00b4ed6c00bfaeda181c3c6b5fa32b96a710ca747e2feefbe9c05b351",
+        "atoms": [
+          {
+            "id": "title",
+            "text": "A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects",
+            "textSha256": "b6dce2e1203884b2ebe38eefe9e71441d0a983b99ca2a26548d7aad905a072fb",
+            "surface": ["title"]
+          },
+          {
+            "id": "authors",
+            "text": "Sairam Krishnan, Sonia Gandhi, Andrea Hepp",
+            "textSha256": "b11634d0e69a8f485001e0fa16502ccd16c58f5749a6829930baa76cea8c25d1",
+            "surface": ["authors"]
+          },
+          {
+            "id": "status",
+            "text": "SSRN working paper, 2026",
+            "textSha256": "02f76ada563bb40a6b6d6840d8665ef3156b4658c993d4598c19723338f8409b",
+            "surface": ["status"]
+          },
+          {
+            "id": "doi",
+            "text": "doi:10.2139/ssrn.6732598",
+            "textSha256": "c1c79677ec02d7d1ce3a20c2af7cedb43c5878abae85cc0ada210f690b526153",
+            "surface": ["doiIdentity"]
+          },
+          {
+            "id": "four-layers",
+            "text": "readiness, ROIC value drivers, staged investment, and a decision scorecard",
+            "textSha256": "2d2ae8c3b09ea2a5a1c8a672f96fa9647ac8a6ea97fdf5c97d4c6e7bd585b70d",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "risk-scope",
+            "text": "vendor dependency and organizational friction",
+            "textSha256": "843208d85b730d9a375054081861b832c97933fa393bd878ec09869cc8a9d689",
+            "surface": ["evidence"]
+          },
+          {
+            "id": "illustrative-cases",
+            "text": "Eight illustrative public-company cases",
+            "textSha256": "0f0c36a90718cb6118e2ef0748a696d9667d323e74ac97aa4635a30cbba00915",
+            "surface": ["summary", "qualifier", "evidence"]
+          },
+          {
+            "id": "independent-study",
+            "text": "Wharton independent study",
+            "textSha256": "c89cbe1da447906603e3307f786c638e92da9fe0b3316adf45cd9b3bd80e1feb",
+            "surface": ["status", "evidence"]
+          },
+          {
+            "id": "faculty-sponsor",
+            "text": "Professor Gad Allon",
+            "textSha256": "28c9ed6674b33686849c7e53e57494eab8df63a83b754446d9f593abf5b8a7b4",
+            "surface": ["evidence"]
+          }
+        ]
+      },
+      "figure": {
+        "id": "research-ai-roi",
+        "kind": "source-markdown-diagram",
+        "authorityProvenanceKind": "source-markdown-exact",
+        "sourceSnapshotPath": ".claude/rubric/sources/papers-full/ai-roi.txt",
+        "sourceSnapshotSha256": "0001596f0b910cd7b9eaee670dcdb6294f02f25d2b573c7accaf90649d9750d0",
+        "figcaption": {
+          "factId": "approved:3",
+          "text": "Which AI projects to fund, and when",
+          "textSha256": "eff4e97b82b74dc5d2958915e25a822402b8cc1a222c7880956b43a72088a2f3"
+        },
+        "labels": [
+          {"id": "scale", "text": "SCALE strategic readiness assessment", "textSha256": "4cdb3639f554a26b3fe4291a48db85ab9ab944b7fa90cb272e286edb1538ecc0"},
+          {"id": "roic", "text": "ROIC decomposition through a value driver tree", "textSha256": "b2b34fbb347cb50ab76e1762ec8629fb4cf16bf105bb5ce414620c3bc84f421d"},
+          {"id": "stage-gate", "text": "stage-gate phased investment", "textSha256": "1b0e3032389297cdc8f7b861c8194910104cb251113deab06b145ffe57fbf91d"},
+          {"id": "scorecard", "text": "synthesized decision scorecard", "textSha256": "c2e5457d18ae8f735a7771c5232cb5d043091fdbb143c2e24c26e00a8fbf5535"}
+        ],
+        "edges": [
+          {"from": "scale", "to": "roic"},
+          {"from": "roic", "to": "stage-gate"},
+          {"from": "stage-gate", "to": "scorecard"}
+        ],
+        "orderedList": {
+          "tag": "OL",
+          "itemTag": "LI",
+          "directNodeIds": ["scale", "roic", "stage-gate", "scorecard"]
+        },
+        "topologyProof": "exact-ordered-list-node-order-with-decorative-directed-edges"
+      }
+    }
+  ],
+  "finalizationRequirements": {
+    "contractMustBeMirroredAndByteSealedInAuthority": true,
+    "contractMustBeAnIndependentFactInput": true,
+    "fourRecordIdentitiesMustMatchTypedClaimsExactly": true,
+    "everyArticleMustBeStaticOpen": true,
+    "everyRequiredFieldMustBeVisibleExactlyOnceUnderItsOwner": true,
+    "acceptedResumeFactsMustRemainBoundToTheSameRecord": true,
+    "allMutationMatrixCasesMustHaveCleanControlAndOneApplication": true,
+    "noRendererClassMaySubstituteForAncestryOrIdentity": true
+  }
+}

@@ -40,7 +40,7 @@ function propsCard(node) {
   card.appendChild(U.el("div", "props-title", `${U.esc(node.name)} <span>${U.esc(node.type)}</span>`));
   const dl = U.el("dl");
   Object.entries(node.props || {}).forEach(([k, v]) => {
-    dl.appendChild(U.el("dt", null, U.esc(k.replace(/_/g, " "))));
+    dl.appendChild(U.el("dt", null, U.esc(k.split("_").join(" "))));
     dl.appendChild(U.el("dd", null, U.esc(v)));
   });
   card.appendChild(dl);
@@ -513,7 +513,7 @@ const sceneNext = {
   step() { return false; },
   keys(e, ctx) {
     if (e.key === "Escape" && this.overlay) { this.close(); return true; }
-    if (/^[1-4]$/.test(e.key)) { this.open(document.getElementById("stage"), ctx, +e.key - 1); return true; }
+    if (["1", "2", "3", "4"].includes(e.key)) { this.open(document.getElementById("stage"), ctx, +e.key - 1); return true; }
     return false;
   },
   unmount() { this.close(); }

@@ -1,0 +1,100 @@
+{
+ "index": {
+  "text": [
+   "Sairam Krishnan",
+   "Grow the people. The platforms follow.",
+   "AI/ML Engineering Leader",
+   "Principal Software Engineer · Team Lead since 2022",
+   "Head of AI & Executive Education",
+   "Co-founder & CTO",
+   "Wharton Executive MBA",
+   "Drone-Megaddon 2014",
+   "Drone-Megaddon 2026",
+   "Who Trains the Next Senior?",
+   "AI ROI Framework",
+   "Command a drone swarm like StarCraft",
+   "Speak to the swarm, approve each command",
+   "Code is cheap; verifying it is not",
+   "Which AI projects to fund, and when",
+   "Résumé"
+  ],
+  "absent": [
+   "Drone swarm commanded like a strategy game",
+   "Language and vision models for swarm control",
+   "AI activity overstates engineering progress",
+   "How to decide which AI projects to fund"
+  ]
+ },
+ "services": {
+  "text": [
+   "Fit Call",
+   "Architecture Call",
+   "Design Review",
+   "Keynote",
+   "Masterclass",
+   "AI ROI Review",
+   "Advisory Retainer",
+   "Fractional CTO"
+  ],
+  "absent": [
+   "$",
+   "Evals Harness",
+   "Architecture Audit"
+  ]
+ },
+ "speaking": {
+  "text": [
+   "AI for Impact",
+   "300+",
+   "from $5,000 plus travel",
+   "Carnegie Mellon",
+   "Praxtera",
+   "Jacobson Strategic",
+   "HP",
+   "Morgan Lewis",
+   "PBS",
+   "Sonova",
+   "Atos",
+   "Head of AI & Executive Education"
+  ],
+  "absent": [
+   "Teaching line"
+  ]
+ },
+ "career": {
+  "text": [
+   "Carnegie Mellon",
+   "Microsoft",
+   "Susquehanna",
+   "Amazon",
+   "Apple",
+   "Wharton Executive MBA",
+   "Principal Software Engineer"
+  ],
+  "images": [
+   "/public/letters/",
+   "hand-2048-poster"
+  ]
+ },
+ "research": {
+  "text": [
+   "Drone-Megaddon",
+   "Who Trains the Next Senior",
+   "Return on Investment of AI Projects"
+  ]
+ },
+ "projects": {
+  "text": [
+   "Ondoway",
+   "Persuaider",
+   "Gestiq",
+   "Lore",
+   "Crucible"
+  ]
+ },
+ "contact": {
+  "text": [
+   "sairambkrishnan@gmail.com"
+  ]
+ }
+}

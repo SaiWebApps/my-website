@@ -53,7 +53,9 @@ const U = {
 
   sleep(ms) { return new Promise(r => setTimeout(r, ms)); },
 
-  esc(s) { return String(s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c])); }
+  esc(s) {
+    return String(s).split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;");
+  }
 };
 
 window.U = U;

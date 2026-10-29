@@ -1,0 +1,9 @@
+// Delivered programs. Research publications belong in content.ts, not this collection.
+// Sources: approved Praxtera testimony (26 October 2026) and the session record in speaking.ts.
+export const teachingPrograms = [
+  { id: 'hp', org: 'HP', title: 'Applied AI for IT teams', abstract: 'I enabled HP teams to expand Copilot use into reusable workflows and skills for recurring tasks, with hands-on labs in requirements translation, rapid prototyping, and IT troubleshooting.', sessions: ['AI Foundations for Digital Innovators', 'Applying AI in IT and Digital Solutions'], href: '/speaking#hp' },
+  { id: 'sonova', org: 'Sonova', title: 'From prompting to reliable workflows', abstract: 'I built a beginner-to-advanced progression from prompting to reusable workflows, inventory tracking, and prediction use cases. Participants tested budget-analysis software against live formulas, edge cases, and invented explanations, then turned corrections into reusable rules.', sessions: ['AI Basics: Prompting', 'AI Agents: RAG, Workflows, Skills, and More'], href: '/speaking#sonova' },
+  { id: 'morgan-lewis', org: 'Morgan Lewis', title: 'Training the AI champions', abstract: 'I trained the firm’s internal trainers and champions to help initially resistant lawyers adopt AI, turning real objections into live roleplay and reusable enablement toolkits.', sessions: ['Why adoption fails', 'From resistance to persuasion'], href: '/speaking#morgan-lewis' },
+  { id: 'pbs', org: 'PBS', title: 'Reengineering Workflows with AI', abstract: 'I taught PBS leaders to reengineer workflows with AI, with privacy and governance first.', sessions: ['Reengineering Workflows with AI'], href: '/speaking#pbs' },
+  { id: 'jacobson-strategic', org: 'Jacobson Strategic', title: 'Prompting fundamentals', abstract: 'I taught Jacobson Strategic’s team to prompt AI tools well.', sessions: ['AI Basics: Prompting'], href: '/speaking#jacobson-strategic' },
+];

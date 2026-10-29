@@ -2,6 +2,7 @@
 // the legacy engineering resume (AWS, LeanFM, CMU teaching, NSF research, Hand-2048 capstone, Drone-Megaddon),
 // Sairam's own account of the AWS logging-schema and tracer work, the 18-549 team site, poster, and his RasPi setup guide,
 // and his Web Apps course-planning docs, exercise set, and reference apps (Google Drive, CMU/Web Apps Exercises).
+// Apple, Amazon, Praxtera: user-approved résumé sections and leadership-investigation.md, 26 October 2026.
 
 export const eaglesSummitSources = [
   { label: 'Eagles Care Summit archive', href: 'https://web.archive.org/web/20260315052929/https://www.philadelphiaeagles.com/community/caresummit/' },
@@ -61,11 +62,11 @@ export const careerLedger: CareerEntry[] = [
     'Sped up the logging system 15% for 8M+ customers.',
   ]},
   { id: 'cmu-projects', label: 'Drone-Megaddon', org: 'Carnegie Mellon University', role: 'Projects · Drone-Megaddon', dates: 'Fall 2014', kind: 'aspect', parent: 'cmu', verb: 'built', time: 0.29, bullets: [
-    'Implemented an end-to-end cyberphysical system in which a high-level, StarCraft-like RTS interface controlled drone swarms.',
+    'Built an end-to-end Android, radio, and embedded-control prototype for commanding drones through a StarCraft-like real-time strategy interface.',
     'Krishnan, S., & Ting, D. (2014). Drone-Megaddon: A Real-Time Strategy Interface for Managing Drone Swarms. engrXiv (archived 2026).',
-    'Krishnan, S., & Ting, D. (2026). Drone-Megaddon 2026: Co-Intelligent Swarm Control with Language and Vision Models. engrXiv.',
+    'Extended that work in Drone-Megaddon 2026, a proposed architecture connecting language-based intent, visual grounding and tracking, and multi-drone coordination under latency, bandwidth, and human-oversight constraints.',
   ], links: [{ href: 'https://doi.org/10.31224/6924', label: 'doi:10.31224/6924' }, { href: 'https://doi.org/10.31224/6987', label: 'doi:10.31224/6987' }] },
-  { id: 'microsoft', label: 'Microsoft', org: 'Microsoft', role: 'Software Development Engineer, Windows OS Group', dates: 'Mar 2015 – Oct 2016', meta: 'Redmond, WA', kind: 'work', parent: 'cmu', verb: 'joined', time: 0.42, bullets: [
+  { id: 'microsoft', label: 'Microsoft', org: 'Microsoft', role: 'Software Development Engineer', dates: 'Mar 2015 – Oct 2016', meta: 'Redmond, WA', kind: 'work', parent: 'cmu', verb: 'joined', time: 0.42, bullets: [
     "Cut Windows 10 Mobile Mail power consumption 4x against the Windows Phone 8 baseline, and set the app's power targets.",
     'Drove product decisions with telemetry: real-time dashboards, weekly guidance to leadership, and the data-derived default for the auto-sync interval.',
   ]},
@@ -74,22 +75,27 @@ export const careerLedger: CareerEntry[] = [
     'Designed and shipped a real-time hardware asset-tracking system that automated capacity scaling and ended chronic inter-team coordination failures.',
   ]},
   { id: 'amazon', label: 'Amazon Alexa', org: 'Amazon', role: 'Senior Software Engineer, Alexa', dates: 'Apr 2018 – Feb 2021', meta: 'Seattle, WA · Promoted from SDE II (L5) to Senior SDE (L6)', kind: 'work', parent: 'sig', verb: 'joined', time: 0.68, bullets: [
-    'Led an eight-engineer team on the Alexa Core Engine.',
-    'Designed a GraphQL data-aggregation and caching platform for the Alexa Engine whose annotation-driven rule engine batched and clustered results to the right downstream services, saving $40M a year and lifting model accuracy 40%.',
+    'Led an eight-engineer Alexa team, owning performance reviews, hiring, recurring 1:1s, and promotion recommendations.',
+    'Designed a GraphQL aggregation and orchestration platform that saved $40M annually, combining an annotation-driven rule engine, batched downstream results, common-query prefetching, and cache keys matched to each skill’s semantics.',
     "Mentored half the team from entry level to promotion, earning selection for Amazon's Mentorship and Leadership Development Program.",
     'Collapsed partner onboarding from two weeks to 15 minutes with a self-service rapid-deployment platform.',
     'Owned operational excellence, driving the weekly issue count from 40 to 10 and re-engineering the new-user registration flow to cut peak-holiday customer issues tenfold.',
     "Led capacity planning for Prime Day and Black Friday, forecasting hardware demand and winning leadership's commitment to expand the fleet ahead of peak.",
+    'Improved end-to-end ASR and routing accuracy 40%, measured before and after changes to the Alexa Orchestration Engine Router. Combined skill-aware prefetching, early request processing, and downstream context fed back into speech recognition and hypothesis selection.',
+    'Mapped compound spoken requests to multiple skills and queries, preserved their associations, and fed recurring intent relationships back into recognition. Moved skill-specific logic closer to ASR through FreeMarker templates, Python scripts, and lightweight Lambda functions.',
   ]},
-  { id: 'apple', label: 'Apple', org: 'Apple', role: 'Senior Engineering Leader, Knowledge Graph Platform', dates: 'Feb 2021 – Present', meta: 'Apple Media Products · Seattle, WA', kind: 'work', parent: 'amazon', verb: 'joined', time: 0.82, bullets: [
-    'Led an eight-engineer team across Seattle, London, and partner sites in Europe and Latin America.',
-    "Led architecture and cross-functional delivery of Apple's media knowledge graph, the canonical model unifying 15+ sources to power search, recommendations, and discovery for over 100 million users.",
-    'Mentored engineers to promotion, shaped performance reviews, and drove hiring; set the design-review and CI/CD standards that lifted team velocity 30% and cut production incidents 45%.',
-    'Built and shipped production agentic AI: an LLM ops assistant for debugging logs, traces, and metrics over MCP in natural language, and a skill platform that turned pipeline work into plain-English workflows for daily, on-call use.',
-    'Led the four-office global launch of Apple Music Credits (Cupertino, Seattle, London, Singapore), coordinating a 15-engineer cross-functional program to deliver real-time credits curation for millions of tracks.',
-    'Drove the platform from batch to real-time streaming, re-architecting ingestion, similarity mapping, and graph generation from Spark onto an event-driven Flink, Kafka, and Cassandra stack.',
-    'Designed the ML entity-resolution system pairing similarity mapping with clustering to deduplicate entities across sources, lifting data quality 40% while cutting downstream cost.',
-    'Owned the graph query services and the client library for partner teams to build on, and set the shared Protobuf contracts adopted across the platform.',
+  { id: 'apple', label: 'Apple', org: 'Apple', role: 'Principal Software Engineer · Team Lead since 2022', dates: 'Feb 2021 – Present', meta: 'Seattle, WA', kind: 'work', parent: 'amazon', verb: 'joined', time: 0.82, bullets: [
+    'Lead and develop eight engineers, including five senior engineers, across Seattle, London, and international partner teams. Own performance reviews and review conversations, assign or recommend ratings, participate in calibration, and drive hiring and promotion mentoring.',
+    'Lead architecture, AI/ML engineering, and delivery for Apple’s media intelligence platform, integrating 15+ sources to support search, recommendations, and discovery reaching 100M+ users.',
+    'Developed a senior engineer into independent ownership of migration performance engineering through prototype-driven decisions and stakeholder alignment; the engineer went on to lead load testing and optimization across workloads from 1M to 100M messages.',
+    'Built Crucible, an agent engineering framework used in daily operations and adopted by QA, Operations, and upstream/downstream teams. Combined MCP tools, multiagent review, model-based action checks, and executable acceptance rules; partner teams extended it into end-to-end test generation and cross-service diagnosis.',
+    'Led the Apple Music Credits launch across a 15-engineer, four-office program, delivering real-time credits curation for millions of tracks. Built graph and curation infrastructure supporting Apple Music Credits and Apple Music Classical.',
+    'Drove the production migration from Spark batch processing to Flink, Kafka, and Cassandra streaming, reducing average processing time from approximately 60 hours to one minute. Built the end-to-end curation pipeline for partial and complete edits to entities, relationships, and properties.',
+    'Led foundational development of supervised ML entity resolution, improving data quality 40%. Partnered with ML engineers on candidate generation, features, human labels, prediction overrides, evaluation, and canonical identity integration using logistic regression, random forests, and gradient-boosted trees.',
+    'Established design-review and CI/CD standards that increased team velocity 30% and reduced production incidents 45%. Own graph query services, the partner client library, and shared Protobuf contracts adopted across the platform.',
+    'Architected and delivered a GraphRAG evaluation and correction workflow for Gemini and internal foundation models across music, books, and podcasts. Verify generated entities and relationships against canonical facts, identify precise discrepancies, and feed structured corrections into subsequent model queries, with separate checks for contradictions in the graph.',
+    'Own architecture and hands-on engineering for ML tagging and awards workflows, directing a senior and junior engineer while implementing difficult candidate matching and canonical entity generation. Design versioned prediction metadata and persistent human overrides, and lead client-team integration.',
+    'Secured agreement from Operations, PMs, and client teams to sequence Sticky Credits behind an underway streaming migration, then delivered the production port in one sprint, consolidating duplicated batch, real-time, and curation logic into one flow.',
   ]},
   { id: 'wharton', label: 'Wharton', org: 'The Wharton School, University of Pennsylvania', role: 'Executive MBA, WEMBA Class of 2026', dates: 'May 2024 – May 2026', kind: 'school', parent: 'apple', verb: 'attended', time: 0.9, bullets: [
     'Earned Palmer Scholar honors (top 5% of class).',
@@ -103,9 +109,13 @@ export const careerLedger: CareerEntry[] = [
     { img: '/letters/directors-list-fall-2024.png', href: '/letters/directors-list-fall-2024.pdf', title: "Director's List", detail: 'Fall 2024', date: 'February 4, 2025', alt: "Director's List letter for Fall 2024 from the Wharton MBA Program for Executives, February 4, 2025", width: 1224, height: 1130 },
     { img: '/letters/directors-list-spring-2025.png', href: '/letters/directors-list-spring-2025.pdf', title: "Director's List", detail: 'Spring 2025', date: 'June 13, 2025', alt: "Director's List letter for Spring 2025 from the Wharton MBA Program for Executives, June 13, 2025", width: 1224, height: 1130 },
   ]},
-  { id: 'praxtera', label: 'Praxtera', org: 'Praxtera AI Institute', role: 'CTO and Curriculum Designer, AI/ML Executive Education', dates: 'Sep 2025 – Present', meta: 'Philadelphia-based AI executive-education firm · concurrent with the Apple role', kind: 'work', parent: 'wharton', verb: 'joined', time: 1, bullets: [
-    'Designed an executive AI curriculum built on original Wharton research and taught it to C-suite leaders at HP, Morgan Lewis, PBS, and the Philadelphia Eagles, helping executives evaluate, govern, and deploy AI.',
-    "Keynoted the Philadelphia Eagles' 12th annual Eagles Care Summit at Lincoln Financial Field on March 18, 2026, delivering \"AI for Impact\" to more than 300 community and business leaders.",
+  { id: 'praxtera', label: 'Praxtera', org: 'Praxtera AI Institute', role: 'Head of AI & Executive Education', dates: 'Sep 2025 – Present', meta: 'Philadelphia-based AI executive-education firm · concurrent with the Apple role', kind: 'work', parent: 'wharton', verb: 'joined', time: 1, bullets: [
+    'Own AI curriculum strategy and development as Praxtera’s principal AI subject-matter expert and lead speaker, translating production AI/ML leadership and original Wharton research into programs for HP, Morgan Lewis, PBS, and Sonova.',
+    "Keynoted the Philadelphia Eagles' 12th annual Eagles Care Summit on March 18, 2026, delivering \"AI for Impact\" to more than 300 community and business leaders.",
+    'Enabled HP teams to expand Copilot use into reusable workflows and skills for recurring tasks, progressing from LLM foundations to retrieval, knowledge graphs, and workflow versus agent architecture through hands-on labs.',
+    'Built Sonova’s beginner-to-advanced AI learning progression, with practical evaluation of budget-analysis workflows: verify formulas, test edge cases, challenge invented explanations, and turn corrections into reusable rules.',
+    'Trained Morgan Lewis’s internal trainers and champions to help initially resistant lawyers adopt AI, turning real objections into AI-assisted personas, live roleplay, and reusable enablement toolkits.',
+    'Lead client discovery, technical advisory sessions, and office hours; design AI solution architectures for contractor implementation and help teams decide what to automate and when agent coordination is warranted.',
   ], links: [{ href: '/speaking#eagles', label: 'Speaking' }, ...eaglesSummitSources] },
 ];
 
@@ -129,10 +139,14 @@ const leadershipRefs: { spoke: typeof leadershipSpokes[number]['id']; hub: Leade
   { spoke: 'apple', hub: 'People', entry: 'apple', bullet: 4 },
   { spoke: 'apple', hub: 'Systems', entry: 'apple', bullet: 1 },
   { spoke: 'apple', hub: 'Systems', entry: 'apple', bullet: 5 },
+  { spoke: 'apple', hub: 'Systems', entry: 'apple', bullet: 8 },
+  { spoke: 'apple', hub: 'Systems', entry: 'apple', bullet: 3 },
   { spoke: 'apple', hub: 'Decisions', entry: 'apple', bullet: 7 },
+  { spoke: 'apple', hub: 'Decisions', entry: 'apple', bullet: 10 },
   { spoke: 'amazon', hub: 'People', entry: 'amazon', bullet: 0 },
   { spoke: 'amazon', hub: 'People', entry: 'amazon', bullet: 2 },
   { spoke: 'amazon', hub: 'Systems', entry: 'amazon', bullet: 4 },
+  { spoke: 'amazon', hub: 'Systems', entry: 'amazon', bullet: 6 },
   { spoke: 'amazon', hub: 'Decisions', entry: 'amazon', bullet: 5 },
   { spoke: 'praxtera', hub: 'People', entry: 'praxtera', bullet: 1, links: eaglesSummitSources },
   { spoke: 'praxtera', hub: 'Decisions', entry: 'praxtera', bullet: 0 },

@@ -1,0 +1,133 @@
+DIRECTION CONCEPT SEED (key: 6d3d75b1; mode: persuade; source: api; approved pool: c3b204a1eed6; 306/564 human-approved; rerun with --scope direction --mode persuade --from 6d3d75b1 --reroll 1 --candidate-count 7 to reproduce this roll against this catalog revision)
+RE-ROLL ROUND 1: every candidate presented in earlier rounds, grounded
+  and challenger alike, is eliminated and may not return reworded. Derive
+  genuinely new grounded candidates from unexplored angles before judging
+  these fresh challengers.
+ASSIGNED INDEX: 4
+  After ordering the grounded directions by resonance, build candidate
+  4 of your own grounded list; the assignment never points at a
+  challenger. The assignment is the roll, not a suggestion: your top-ranked
+  direction is what every run would ship, so the script decides which grounded
+  direction gets built. Each direction joins a durable visual system to a
+  concrete expression for the requested first surface, decided as one. It must
+  survive the current task plus navigation, quiet and dense content,
+  interaction and state, and a substantially different future surface. In an
+  attended run, present the assigned direction fully committed and offer
+  re-roll. You may add ONE card for your top-ranked grounded candidate when
+  it is not the assigned direction, kicker IMPECCABLE’S PICK, with an honest risk line
+  naming its familiarity; one pick card, never a ranked lineup, and the pick
+  never takes the lead position. When the assignment IS your top candidate,
+  there is no pick card. Re-roll yourself only
+  on named factual grounds, when the assignment cannot carry the product's
+  truth or task; taste is never grounds.
+  The assignment exists to refuse the model's ranking rut, never to outrank
+  the user or the brief. Never expose assignment metadata in user-facing labels.
+CHALLENGERS:
+  1. an alien forest understory at nightfall, where luminescent spore canopies, breathing ground-veins, and slow light rain make botany feel newly invented
+     SOURCE ID: dream-surreal-impossible-worlds-luminescent-alien-understory
+     CREATIVE SPARK: The path lights itself two steps ahead: spores drift up like inverted rain and the roots pulse softly with something like attention.
+     SYSTEM GRAMMAR:
+       - Palette/material: near-black loam as ground, spore glow in cyan and lilac, root veins pulsing pale green, the brightest white bloom reserved for the focused element
+       - Type/composition: thin phosphor sans that brightens on approach, labels blooming beside their growths, no fixed grid, composition following the vein network's branching
+       - Topology/navigation: paths reveal by proximity glow; destinations announce themselves as distant pulses.
+       - Controls/state: touching a growth wakes it; attention, dormancy, and bloom are luminance states with afterglow.
+       - Responsive/motion: glow trails shorten on phones; pulses slow to still gradients under
+     WEB LEVERAGE: Pointer-proximity light fields and additive canvas glow make attention itself the illumination model.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-luminescent-alien-understory.webp · hero https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-luminescent-alien-understory-hero.webp
+  2. a vast Miura-fold sheet unfolding from a hand-sized packet, where one pull deploys a precise field of linked mountain and valley creases
+     SOURCE ID: paper-folds-pleats-deployable-miura-orbit-sheet
+     CREATIVE SPARK: A gold packet no larger than a book is tugged at two corners and opens in one breath into a rigid tessellated sail spanning the floor.
+     SYSTEM GRAMMAR:
+       - Palette/material: matte white sheet as ground, gold foil packet face as the accent, mountain creases scored in warm gray, valley creases in pale blue, body ink near-black
+       - Type/composition: aerospace spec mono for crease ids, a parallelogram grid ruling every block, headings folded along the tessellation's diagonal seams
+       - Topology/navigation: Move between compact packet, crease cell, linked row, and fully deployed sheet.
+       - Controls/state: Pull, lock, reverse, and inspect with folded, opening, deployed, misfolded, and collapsed states.
+       - Responsive/motion: Use stepped deployment on small screens and preserve the complete crease graph as an accessible diagram.
+     WEB LEVERAGE: Constraint-linked geometry can make one control propagate across the sheet while adaptive detail protects performance.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet.webp · hero https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet-hero.webp
+  3. an early-80s rhythm machine step row, sixteen candy-colored step keys under a running chase light, pattern banks behind them and a tempo readout above, accents lighting deeper as the loop swings around again
+     SOURCE ID: signals-instruments-drum-machine-step-row
+     CREATIVE SPARK: you punch four steps into the red quarter of the row and hit run, the chase light comes around, and the empty machine suddenly has a pulse you made, so you lean in and accent the offbeat
+     SYSTEM GRAMMAR:
+       - Palette/material: charcoal panel ground, the step row quartered in red, orange, yellow, and white keys, lit LEDs as the only glow, silkscreen white labels for everything else
+       - Type/composition: instrument names as small silkscreen caps above their rows, the tempo in a red segmented readout, the sixteen-step row as the page's one unbroken line
+       - Topology/navigation: patterns are pages and banks are chapters; the step row is a timeline you write into place, and the chase light always tells you where now is
+       - Controls/state: tapping a step arms it and lights it, a second tap accents it brighter, the chase light sweeps in tempo, and an empty pattern is sixteen dark keys of invitation
+       - Responsive/motion: the sixteen-step row never wraps, it scales; motion is the chase light and a key's press flash, both locked to the clock
+     WEB LEVERAGE: web audio clocks the chase light and playback while each step key stays a toggle button operable by keyboard
+     QUALITY BAR: board https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row.webp · hero https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp
+  4. a pixel-art arcade cabinet screen, where fat luminous pixels, scanlines, and phosphor bloom turn a 240-line grid into a stage with real glow
+     SOURCE ID: medium-native-crt-arcade-pixel-glow
+     CREATIVE SPARK: Up close it is just squares; at play distance the squares fuse into a hero, and the black between scanlines is doing half the work.
+     SYSTEM GRAMMAR:
+       - Palette/material: a sixteen-color sprite palette over phosphor black, scanline gaps doing half the shading, flashing white-gold reserved by law for power-ups
+       - Type/composition: eight-by-eight pixel caps for score and menus pinned to the top edge, the playfield composing in whole tiles with nothing allowed off-grid
+       - Topology/navigation: space is a tile grid with screen-by-screen rooms; the camera moves in whole-pixel steps.
+       - Controls/state: states are sprite swaps with strict palette discipline; damage, power, and rarity are palette laws.
+       - Responsive/motion: integer scaling preserves the grid at every size; bloom and scanlines are togglable capability layers.
+     WEB LEVERAGE: Crisp integer-scaled canvas with shader scanline glow, and every sprite state addressable in code.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/medium-native-crt-arcade-pixel-glow.webp · hero https://impeccable.style/worlds/cards/medium-native-crt-arcade-pixel-glow-hero.webp
+  5. a paris hoarding stripped back by hand, layers of pasted posters torn through to expose four earlier campaigns at once, the ragged tear edges becoming the only composition anybody planned
+     SOURCE ID: design-canon-decollage-torn-billboard
+     CREATIVE SPARK: somebody tore a strip off a wall of posters and found a concert from four years ago underneath, then another, then another, and the accidental edges are better than anything on any of the sheets.
+     SYSTEM GRAMMAR:
+       - Palette/material: aged poster inks bleached to chalk, paste-gray backing board, and the pale fibrous edge every tear exposes
+       - Type/composition: fragments of four type systems at four scales coexisting, no fragment complete, reading order set by tear depth alone
+       - Topology/navigation: depth is history, so navigation is tearing further down into older layers rather than moving across the surface
+       - Controls/state: controls are torn flaps, pulling one exposes the layer beneath, and exposed layers stay exposed as a record
+       - Responsive/motion: tears regenerate to fit any frame, and motion is a paper rip that accelerates and then catches
+     WEB LEVERAGE: layered svg tear masks generated responsive, pointer-driven reveal of lower strata, and persistent exposed state
+     QUALITY BAR: board https://impeccable.style/worlds/cards/design-canon-decollage-torn-billboard.webp · hero https://impeccable.style/worlds/cards/design-canon-decollage-torn-billboard-hero.webp
+  6. an old treasure map on salt-stiffened vellum, where a compass rose, missing corner, tide marks, coded marginalia, false trails, and a hand-drawn coastline turn navigation into inference
+     SOURCE ID: wayfinding-cartography-signage-salt-stiffened-treasure-map
+     CREATIVE SPARK: Oblique light raises a nearly erased red route beneath the ink; the torn corner aligns with a crescent island, and a tide stain suddenly becomes the boundary of a hidden harbor.
+     SYSTEM GRAMMAR:
+       - Palette/material: salt-stiffened vellum tan with iron-gall sepia ink, tide-stain gray blooms, one faded red route rising under oblique light as the active trail
+       - Type/composition: cramped manuscript hand with a flourished compass rose, coded marginalia crowding the edges, the coastline drawn first and words fit after
+       - Topology/navigation: Move from map edge to landmark, bearing, marginal clue, damaged gap, candidate route, hidden harbor, and final cache hypothesis.
+       - Controls/state: Rotate, measure, reveal, annotate, combine clues, and compare sealed, weathered, suspected, disproved, aligned, and solved states.
+       - Responsive/motion: Center one clue chain on phones while preserving the whole parchment as context
+     WEB LEVERAGE: Deep image zoom, oblique-light layers, URL-addressable annotations, collaborative hypothesis history, and accessible transcription let groups solve the artifact while every inference retains provenance.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/wayfinding-cartography-signage-salt-stiffened-treasure-map.webp · hero https://impeccable.style/worlds/cards/wayfinding-cartography-signage-salt-stiffened-treasure-map-hero.webp
+Fuse each challenger before judging it: the challenger supplies the form
+  and its system grammar, the product supplies every fact, and clarity wins
+  conflicts. Weigh the fused result against the assigned direction on exactly
+  two axes, audience identification and product clarity. Losing to strong
+  grounded material is a valid outcome; beating a thin or tool-monoculture
+  list is the point. A fused challenger that wins both axes becomes the build.
+  Close the weighing with a verdict per challenger, decided before any
+  borrowing is considered: wins (beats the assigned direction on both axes),
+  competitive (holds one axis), or declined (loses both). A declined
+  challenger is not spent: name the one discipline of its system the assigned
+  direction lacks, and raise the assigned direction to match before
+  presenting it. A donation transfers ambition and system discipline, never
+  the challenger's clothes; one world owns the page. Write each raise as its
+  own named line on the presented direction, and carry every verdict, kept
+  line, and raise into the decision page payload.
+When you can view images, open the QUALITY BAR board and hero for any
+challenger you weigh seriously and for the world you build. They exist as a
+craft bar, the finish level and commitment the build is expected to reach,
+never as a mockup to copy; your surface serves this product, not that render.
+PRODUCT.md and explicit incumbent brand commitments constrain every direction.
+The seed never chooses exact colors, fonts, tokens, or a user preference, and
+it never permits the world and first surface to be selected independently.
+The CREATIVE SPARK is a complete visual system, not a theme or decorative
+reference. Translate every supplied system rule into the product: palette and
+material, type and composition, topology, controls and states, and adaptation.
+Keep the source's visible character, scale, rhythm, and interaction instead of
+reducing vivid grammar to generic nouns. When the source is already a credible
+interface language, commit to it across navigation, content, controls, and
+states. Otherwise keep a literal carrier only when it becomes functional.
+Ambitious motion, spatial media, or interaction is welcome when it strengthens
+the product without weakening semantics, performance, or fallback behavior.
+TELEMETRY: after the user's choice resolves, rerun this script once with
+  --kind <assigned|pick|challenger|canon> --from 6d3d75b1 --scope direction --mode persuade,
+  adding --chosen <challenger-id> when a dealt challenger won and keeping
+  --register <safer|bolder> when the resolved round came from a steered hand.
+  One ping per resolved attended round. The ping is anonymous, the card kind
+  plus the catalog id when one won; your grounded candidates' names never
+  leave the machine, and the ping is skipped automatically when DO_NOT_TRACK
+  or IMPECCABLE_NO_TELEMETRY is set.
+A user- or brief-pinned decision beats the roll, always.
+ASSIGNED INDEX (restated for truncated readers): 4. Build candidate
+4 of your own grounded list; seed key 6d3d75b1.

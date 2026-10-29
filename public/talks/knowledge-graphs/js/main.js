@@ -110,6 +110,7 @@
 
   window.addEventListener("resize", () => ctx.graph.resize());
 
-  const start = parseInt((location.hash.match(/s(\d+)/) || [])[1] || "0", 10);
+  const hashValue = location.hash.startsWith("#s") ? location.hash.slice(2) : "0";
+  const start = Array.from(hashValue).every(ch => ch >= "0" && ch <= "9") ? parseInt(hashValue, 10) : 0;
   go(isNaN(start) ? 0 : start);
 })();

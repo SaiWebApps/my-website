@@ -1,0 +1,129 @@
+DIRECTION CONCEPT SEED (key: 6d3d75b1; mode: persuade; source: api; approved pool: c3b204a1eed6; 306/564 human-approved; rerun with --scope direction --mode persuade --from 6d3d75b1 --candidate-count 7 to reproduce this roll against this catalog revision)
+ASSIGNED INDEX: 6
+  After ordering the grounded directions by resonance, build candidate
+  6 of your own grounded list; the assignment never points at a
+  challenger. The assignment is the roll, not a suggestion: your top-ranked
+  direction is what every run would ship, so the script decides which grounded
+  direction gets built. Each direction joins a durable visual system to a
+  concrete expression for the requested first surface, decided as one. It must
+  survive the current task plus navigation, quiet and dense content,
+  interaction and state, and a substantially different future surface. In an
+  attended run, present the assigned direction fully committed and offer
+  re-roll. You may add ONE card for your top-ranked grounded candidate when
+  it is not the assigned direction, kicker IMPECCABLE’S PICK, with an honest risk line
+  naming its familiarity; one pick card, never a ranked lineup, and the pick
+  never takes the lead position. When the assignment IS your top candidate,
+  there is no pick card. Re-roll yourself only
+  on named factual grounds, when the assignment cannot carry the product's
+  truth or task; taste is never grounds.
+  The assignment exists to refuse the model's ranking rut, never to outrank
+  the user or the brief. Never expose assignment metadata in user-facing labels.
+CHALLENGERS:
+  1. the full-bleed portal of an experiential studio, where a GPU shader scene fills the screen and the interface floats as thin type over living pixels
+     SOURCE ID: webgl-shader-portal
+     CREATIVE SPARK: A full-screen shader breathes in slow color, a custom cursor trailing a soft distortion where it moves; a loader counts to one hundred, then thin uppercase links dissolve the mesh into the next scene as you click through.
+     SYSTEM GRAMMAR:
+       - Palette/material: a deep single-hue ground driven by a fragment shader, fine film grain, one incandescent accent for hovers
+       - Type/composition: an oversized variable grotesk for a single hero word against tiny tracked-out labels at the margins
+       - Topology/navigation: Move by hovering the shader to displace it, by clicking thin corner links, and by letting inertial scroll drift the camera through the scene.
+       - Controls/state: The cursor warps the field under it; page changes trigger a mesh transition that dissolves one scene into the next behind a percentage loader.
+       - Responsive/motion: physics-scroll inertia eases all movement, and reduced-motion freezes the scene and disables the custom cursor.
+     WEB LEVERAGE: Render the background as a single fullscreen WebGL fragment shader with a mouse-uniform displacement, and drive route changes through a shader dissolve transition rather than DOM swaps.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/webgl-shader-portal.webp · hero https://impeccable.style/worlds/cards/webgl-shader-portal-hero.webp
+  2. the seven-segment display family, bedside clocks, gas-station price totems, scoreboards, and microwave panels all speaking one eight-cell mask where unlit segments are designed too
+     SOURCE ID: signals-instruments-seven-segment-alarm-clock
+     CREATIVE SPARK: At 3am the bedroom hour hangs as four red digits; by noon the same alphabet quotes gasoline at two meters tall, and at the stadium the score slams from 98 to 100 with nothing sliding, segments simply dying and igniting.
+     SYSTEM GRAMMAR:
+       - Palette/material: lit segments in LED red, amber, or scoreboard green on matte near-black ground, unlit segments held as faint ghost cells; red glow owns the night register
+       - Type/composition: one eight-cell mask makes every glyph, digits ranked in fixed slots with the colon or decimal as its own cell; absence is drawn as deliberately as light
+       - Topology/navigation: the layout is a rigid mask of cells, from four bedside digits to a price totem's stack; place never moves, only which segments light
+       - Controls/state: modes cycle by held buttons, set digits blink while everything else holds; the flashing 12:00 of an unset clock is the canonical error state
+       - Responsive/motion: cells scale as whole units and never reflow mid-glyph; every change is an instant segment swap
+     WEB LEVERAGE: CSS grid and clip-path build a true segment mask with ghost cells, and a shared worker keeps blink phase synchronized across every open tab
+     QUALITY BAR: board https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock.webp · hero https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock-hero.webp
+  3. a tokyo boutique-pop sleeve wrapped in a printed paper obi band, the band crowded with dense vertical credits and catalog numbers while the sleeve face behind it holds one geometric mark and nothing else
+     SOURCE ID: posters-covers-sleeves-shibuya-boutique-sleeve
+     CREATIVE SPARK: a nearly empty sleeve with one small mark on it, and wrapped around the bottom third a paper band so crowded with credits that the collision between the two is the whole design.
+     SYSTEM GRAMMAR:
+       - Palette/material: a saturated obi band in one strong hue against a pale sleeve face, the band printed dense and the face left almost bare
+       - Type/composition: crowded vertical credits packed onto the obi band, a single geometric mark on the face behind, and a deliberate density collision between the two
+       - Topology/navigation: the band overlays the face, so navigation slides the band to reveal what it was covering
+       - Controls/state: controls are band segments, the active one slides clear of the face, and inactive ones stay wrapped across it
+       - Responsive/motion: the band holds its proportion of the face at any width, and motion is the band sliding off and back on
+     WEB LEVERAGE: a proportional overlay band that slides on pointer state, responsive density on the band, and reveal state for the face beneath
+     QUALITY BAR: board https://impeccable.style/worlds/cards/posters-covers-sleeves-shibuya-boutique-sleeve.webp · hero https://impeccable.style/worlds/cards/posters-covers-sleeves-shibuya-boutique-sleeve-hero.webp
+  4. the digital flagship of a fashion house, where monumental editorial type and vast negative space frame slow full-bleed imagery like a printed lookbook come to life
+     SOURCE ID: luxury-fashion-flagship
+     CREATIVE SPARK: A single garment fills the screen against acres of bone-white space, one enormous serif word set low; scroll and the image holds, then cuts slowly to the next look as a hairline nav waits quietly overhead.
+     SYSTEM GRAMMAR:
+       - Palette/material: near-monochrome bone-white and ink, one restrained seasonal accent, full-bleed photography as the only texture, and generous matte negative space.
+       - Type/composition: a monumental high-contrast serif for display against a spare grotesk for labels and product data
+       - Topology/navigation: Move by slow full-bleed look-to-look scroll, by a hairline top nav of few words, and into a spare product grid and a quiet cart drawer.
+       - Controls/state: Hover fades between garment views; add-to-cart slides a minimal drawer from the edge; size and color selectors are set as understated type rather than chips.
+       - Responsive/motion: reveals are slow full-bleed fades, and reduced-motion cuts directly between looks.
+     WEB LEVERAGE: Drive the full-bleed look transitions with scroll-snap sections and slow object-fit:cover crossfades, keeping a persistent hairline nav and a slide-in cart drawer across routes.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/luxury-fashion-flagship.webp · hero https://impeccable.style/worlds/cards/luxury-fashion-flagship-hero.webp
+  5. a sleeping city fold, where streets crease into blankets, towers become bedposts, and neighborhoods dream different weather beneath one night
+     SOURCE ID: dream-surreal-impossible-worlds-sleeping-city-fold
+     CREATIVE SPARK: At midnight an avenue rises like a quilt seam, apartment lights become embroidered stars, and a whole district folds gently over a park dreaming tropical rain.
+     SYSTEM GRAMMAR:
+       - Palette/material: night navy city as ground, window lights as embroidered gold stars, quilt seams in pale thread white, each dreaming district tinted its own weather hue
+       - Type/composition: soft rounded caps for district names stitched along seam lines, the map grid relaxing into blanket folds, morning notes set in a plain waking sans
+       - Topology/navigation: Move through waking streets, folded neighborhoods, shared dream edges, and morning return.
+       - Controls/state: Tuck a district, open its dream, connect two sleeping weather patterns, and unfold at dawn.
+       - Responsive/motion: Use layered city quilts on phones and substitute crossfades with static night and morning plates.
+     WEB LEVERAGE: Deformable map geometry, local time, and collaborative dream fragments create a nightly city that remains spatially recognizable.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold.webp · hero https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold-hero.webp
+  6. a sneaker archive wall, stacked cardboard boxes with silhouette line art printed on the ends, colorway names read as poetry beside monospaced size runs, tissue folded inside each lid
+     SOURCE ID: textiles-weave-drape-fashion-sneaker-box-stacks
+     CREATIVE SPARK: You slide a box from a stack taller than you; the end label lists the colorway name like a line of verse, the lid lifts with a cardboard sigh, and tissue paper folds back from the shape you already know by silhouette.
+     SYSTEM GRAMMAR:
+       - Palette/material: burnt orange box board as the ground, black one-line silhouette art for ink, tissue white interiors, the colorway chip strip carrying accent states
+       - Type/composition: condensed caps on the end label over monospaced size-run digits, the label grid of name, colorway, and size ruling every card
+       - Topology/navigation: a wall of stacked boxes indexed by their end labels; you browse the stack face, pull a box halfway, and open the lid to go deeper
+       - Controls/state: the selected box slides half out of the stack, opening hinges the lid and folds back tissue, the colorway chip marks which variant is live
+       - Responsive/motion: the wall re-shelves to a single column of end labels on narrow screens; motion is lid hinge and tissue lift
+     WEB LEVERAGE: css 3d transforms hinging box lids open on interaction, grid re-shelving the stack from wall to single column across breakpoints
+     QUALITY BAR: board https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-sneaker-box-stacks.webp · hero https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-sneaker-box-stacks-hero.webp
+Fuse each challenger before judging it: the challenger supplies the form
+  and its system grammar, the product supplies every fact, and clarity wins
+  conflicts. Weigh the fused result against the assigned direction on exactly
+  two axes, audience identification and product clarity. Losing to strong
+  grounded material is a valid outcome; beating a thin or tool-monoculture
+  list is the point. A fused challenger that wins both axes becomes the build.
+  Close the weighing with a verdict per challenger, decided before any
+  borrowing is considered: wins (beats the assigned direction on both axes),
+  competitive (holds one axis), or declined (loses both). A declined
+  challenger is not spent: name the one discipline of its system the assigned
+  direction lacks, and raise the assigned direction to match before
+  presenting it. A donation transfers ambition and system discipline, never
+  the challenger's clothes; one world owns the page. Write each raise as its
+  own named line on the presented direction, and carry every verdict, kept
+  line, and raise into the decision page payload.
+When you can view images, open the QUALITY BAR board and hero for any
+challenger you weigh seriously and for the world you build. They exist as a
+craft bar, the finish level and commitment the build is expected to reach,
+never as a mockup to copy; your surface serves this product, not that render.
+PRODUCT.md and explicit incumbent brand commitments constrain every direction.
+The seed never chooses exact colors, fonts, tokens, or a user preference, and
+it never permits the world and first surface to be selected independently.
+The CREATIVE SPARK is a complete visual system, not a theme or decorative
+reference. Translate every supplied system rule into the product: palette and
+material, type and composition, topology, controls and states, and adaptation.
+Keep the source's visible character, scale, rhythm, and interaction instead of
+reducing vivid grammar to generic nouns. When the source is already a credible
+interface language, commit to it across navigation, content, controls, and
+states. Otherwise keep a literal carrier only when it becomes functional.
+Ambitious motion, spatial media, or interaction is welcome when it strengthens
+the product without weakening semantics, performance, or fallback behavior.
+TELEMETRY: after the user's choice resolves, rerun this script once with
+  --kind <assigned|pick|challenger|canon> --from 6d3d75b1 --scope direction --mode persuade,
+  adding --chosen <challenger-id> when a dealt challenger won and keeping
+  --register <safer|bolder> when the resolved round came from a steered hand.
+  One ping per resolved attended round. The ping is anonymous, the card kind
+  plus the catalog id when one won; your grounded candidates' names never
+  leave the machine, and the ping is skipped automatically when DO_NOT_TRACK
+  or IMPECCABLE_NO_TELEMETRY is set.
+A user- or brief-pinned decision beats the roll, always.
+ASSIGNED INDEX (restated for truncated readers): 6. Build candidate
+6 of your own grounded list; seed key 6d3d75b1.

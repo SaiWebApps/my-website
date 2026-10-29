@@ -1,0 +1,34 @@
+{
+  "states": [
+    "SOURCE_DIRTY",
+    "CANDIDATE_BUILT",
+    "STATIC_PASS",
+    "RENDER_PASS",
+    "MUTATION_PASS",
+    "SNAPSHOTS_PASS",
+    "CONTENT_PASS",
+    "DESIGN_PASS",
+    "GATE_PASS",
+    "VISUAL_PASS",
+    "RELEASED",
+    "VIOLATION_LOCK"
+  ],
+  "gates": [
+    {"id": "authority", "script": ".claude/rubric/authority_gate.py", "agent": ".claude/agents/gate-integrity-reviewer.md"},
+    {"id": "product-routes-and-seo", "script": ".claude/rubric/product_gate.py", "agent": ".claude/agents/gate-integrity-reviewer.md"},
+    {"id": "fact-coverage", "script": ".claude/rubric/guard.py", "agent": ".claude/agents/content-preservation-reviewer.md"},
+    {"id": "content-ownership", "script": ".claude/rubric/guard.py", "agent": ".claude/agents/content-preservation-reviewer.md"},
+    {"id": "provenance", "script": ".claude/rubric/rubric_gate.py", "agent": ".claude/agents/gate-integrity-reviewer.md"},
+    {"id": "repository-cleanliness", "script": ".claude/rubric/rubric_gate.py", "agent": ".claude/agents/gate-integrity-reviewer.md"},
+    {"id": "no-regex", "script": ".claude/rubric/noregex.py", "agent": ".claude/agents/gate-integrity-reviewer.md"},
+    {"id": "rendered-layout", "script": "site/_build/audit.mjs", "agent": ".claude/agents/visual-release-reviewer.md"},
+    {"id": "density-and-occupancy", "script": "site/_build/audit.mjs", "agent": ".claude/agents/visual-release-reviewer.md"},
+    {"id": "accessibility", "script": ".claude/rubric/a11y.mjs", "agent": ".claude/agents/visual-release-reviewer.md"},
+    {"id": "mutation-resistance", "script": ".claude/rubric/test.py", "agent": ".claude/agents/gate-integrity-reviewer.md"},
+    {"id": "screenshot-coverage", "script": ".claude/rubric/shots.mjs", "agent": ".claude/agents/visual-release-reviewer.md"},
+    {"id": "content-review", "script": ".claude/rubric/review_gate.py", "agent": ".claude/agents/content-preservation-reviewer.md"},
+    {"id": "design-skill-compliance", "script": ".claude/rubric/design_gate.py", "agent": ".claude/agents/design-compliance-reviewer.md"},
+    {"id": "gate-integrity-review", "script": ".claude/rubric/review_gate.py", "agent": ".claude/agents/gate-integrity-reviewer.md"},
+    {"id": "visual-taste", "script": ".claude/rubric/review_gate.py", "agent": ".claude/agents/visual-release-reviewer.md"}
+  ]
+}

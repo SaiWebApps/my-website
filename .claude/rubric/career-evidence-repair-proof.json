@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "status": "superseded-stale-pre-authority",
+  "scope": "career",
+  "supersession": {
+    "reason": "The supporting reader copy was repaired after this narrow proof, so its content, Career HTML, Speaking, and proposed-contract hashes are not current and must not attest release.",
+    "currentContentSha256": "00c2610f8d838c522332c0e60d409ea20cbbea32f32b2300b662236d9c8bb0d5",
+    "currentCareerHtmlSha256": "f3c1087b4cbd7ecf188a94abc6b9df7994a78c21ad00490cfa96829b99e010a5",
+    "semanticAuthority": {
+      "path": ".claude/rubric/authority/career-evidence-contract.json",
+      "sha256": "197c3c532e12daa65794486fbaa6b22e4ceaa83dabecf4a6a087c2432d5b2620"
+    },
+    "liveValidation": {
+      "path": ".claude/rubric/out/career-evidence-final.json",
+      "sha256": "24f3ddfd0efc380326e8752200023b6acf0aadf67098e6609cc99f9b52101450"
+    },
+    "mutationValidation": {
+      "path": ".claude/rubric/out/career-evidence-mutations.json",
+      "sha256": "8cec315b5284f43880e6b560efa30cdc80dca9d1b9e44116445d5c229b63ea77"
+    },
+    "mayServeAsAuthority": false
+  },
+  "sourceTransition": {
+    "site/content.json": {
+      "beforeSha256": "0ca9ee2dcaf0ed87d6512fe56edbbf3e993deb6d16fdf9084bf6ad1e6c62af9a",
+      "afterSha256": "25e2e529e41afabf4eca4067dcce84ea9fee7decf26722f2b522eac4572fc4d3"
+    },
+    "site/_build/build.py": {
+      "beforeSha256": "b0d3ea0e3aab081f4a6380706d6870c250943b978cfac27fbf5c444262ec41ad",
+      "afterSha256": "8ed13300616f1972d74095221aadc6b6874fd63a2766e75928b59a563bdeee5b"
+    },
+    "site/career.html": {
+      "beforeSha256": "4f89aabe2bcb2f466c1fdf6fe932eb84a7bc517df6e9192cfa46d8d886da48e2",
+      "afterSha256": "2269d0104da18b6d3784eef32545d02738ed6aac680990c27ceb9ba78d816cd9",
+      "beforeBytes": 51568,
+      "afterBytes": 53305,
+      "byteDelta": 1737
+    }
+  },
+  "renderedEvidence": {
+    "acceptedFactMarkers": 9,
+    "uniqueAcceptedFactMarkers": 9,
+    "componentFactMarkers": 24,
+    "uniqueComponentFactMarkers": 24,
+    "acceptedFactsUseVisibleNoDashTransform": true,
+    "acceptedSourceTextAndShaRemainUnchanged": true,
+    "promotionOwners": {
+      "resume:amazon:2:d1": "amazon",
+      "resume:sig:3:d0": "sig"
+    },
+    "skillsOwner": {
+      "factId": "resume:skills",
+      "owner": "resume-take",
+      "heading": "The systems I build with"
+    },
+    "appleStreamingMigration": {
+      "coverageDecision": "reviewed-exact-atom-entailment",
+      "componentFactIds": [
+        "site:careerLedger[10].bullets[4]",
+        "site:careerLedger[10].bullets[5]",
+        "site:careerLedger[10].bullets[10]"
+      ]
+    },
+    "appleDesignReview": {
+      "canonicalFactId": "site:careerLedger[10].bullets[7]",
+      "servicesMirrorFactId": "site:services[2].proof[0]",
+      "servicesMirrorOccurrencesInsideApple": 0
+    }
+  },
+  "mutationInspection": {
+    "method": "in-memory exact DOM marker, text, and nearest-owner validation",
+    "killed": [
+      "direct accepted fact omission",
+      "direct accepted fact duplication",
+      "direct accepted fact owner move",
+      "composition component omission",
+      "composition component duplication",
+      "composition component owner move",
+      "reviewed Apple migration scope removal"
+    ],
+    "survived": []
+  },
+  "frozenBytes": {
+    "site/index.html": "236249dc423bce5e27f4aa4b23283650aa1a60fb9526bbf4f23db5ff1742c715",
+    "site/services.html": "1d77f0a18bf97d079b44ce1e4a52577da4e4d5a89663c7600628f503866d7dd2",
+    "site/speaking.html": "51673ea0d4c45bec0e1f8a7e40a6b629d59a2e25ceb40b2834c8f8a0b4ee13f1",
+    "site/projects.html": "2ec85de5764f453a0bd7ba346d98e6d8309f34ad7ab7fea4a067d8a160bfc746",
+    "site/research.html": "30dff21c1f2beea8d572589da2024200e7ff98ccbf3c8ee4b86781226970a944",
+    "site/contact.html": "4692bb8dd28cc4eb5bda1957bc10b1d325de84ab37d01d891391b26debfc722a",
+    "site/style.css": "4576d21e5e55bdf9ccd67a2e718a37b2422129fb640fc1e79446eb7fd9192196",
+    "site/main.js": "b4e00dddad211d67a085436049dcf139b2611779159e4d18056ea8dd1881d9e7",
+    ".claude/rubric/authority/career-evidence-contract.proposed.json": "3c80914211219eaed8497f97440bfb929194f0330cc3ba8d9a886f705da4d82d"
+  },
+  "authorityNeeds": [
+    "Register resume-take in pages.career.units with block resume-take.",
+    "Authorize the reader-facing heading The systems I build with.",
+    "Finalize the proposed Career evidence contract against these exact source and render hashes.",
+    "Renew exact-artifact review and the affected Career state frames for SIG, Amazon, and Apple.",
+    "Keep the Services design-review mirror non-covering and preserve Career as the canonical Apple b8 owner.",
+    "Refresh governed source hashes and the release lock only after the coordinated full score completes."
+  ]
+}

@@ -1,0 +1,103 @@
+{
+ "source": "Google Drive: Ventures/Speaking & Teaching Experiences (read Oct 29, 2026). Two independent rows are left out on purpose; see the unlisted-engagements memory. Fees and time ranges are left out: they never go on the site.",
+ "rows": [
+  {
+   "unit": "jacobson-strategic",
+   "org": "Jacobson Strategic",
+   "affiliation": "Praxtera",
+   "sessions": [
+    {
+     "title": "AI Basics - Prompting",
+     "date": "2025-09-03"
+    }
+   ]
+  },
+  {
+   "unit": "hp",
+   "org": "HP",
+   "affiliation": "Praxtera",
+   "sessions": [
+    {
+     "title": "AI Basics - Prompting",
+     "date": "2025-10-29"
+    },
+    {
+     "title": "AI Agents - RAG, Workflows, Skills, and More",
+     "date": "2025-11-12"
+    }
+   ]
+  },
+  {
+   "unit": "morgan-lewis",
+   "org": "Morgan Lewis",
+   "affiliation": "Praxtera",
+   "sessions": [
+    {
+     "title": "AI Basics - Prompting",
+     "date": "2026-01-20"
+    },
+    {
+     "title": "AI Agents - RAG, Workflows, Skills, and More",
+     "date": "2026-01-22"
+    }
+   ]
+  },
+  {
+   "unit": "pbs",
+   "org": "PBS",
+   "affiliation": "Praxtera",
+   "sessions": [
+    {
+     "title": "Reengineering Workflows with AI",
+     "date": "2026-02-27"
+    }
+   ]
+  },
+  {
+   "unit": "eagles",
+   "org": "Philadelphia Eagles",
+   "affiliation": "Praxtera",
+   "sessions": [
+    {
+     "title": "AI for Non-Profits",
+     "date": "2026-03-18",
+     "where": "Philadelphia Eagles Summit (EaglesCares Event)",
+     "aliases": [
+      "AI for Impact"
+     ],
+     "alias_why": "his résumé titles the keynote \"AI for Impact\"; the sheet labels the same talk \"AI for Non-Profits\""
+    }
+   ]
+  },
+  {
+   "unit": "atos",
+   "org": "Atos",
+   "affiliation": "Independent",
+   "sessions": [
+    {
+     "title": "Knowledge Graphs & Local Language Models",
+     "date": "2026-09-03",
+     "aliases": [
+      "Knowledge Graphs, Then Small Language Models"
+     ],
+     "alias_why": "the title on his own deck for the talk"
+    }
+   ]
+  },
+  {
+   "unit": "sonova",
+   "org": "Sonova",
+   "affiliation": "Praxtera",
+   "sessions": [
+    {
+     "title": "AI Basics - Prompting",
+     "date": "2026-10-21"
+    },
+    {
+     "title": "AI Agents - RAG, Workflows, Skills, and More",
+     "date": "2026-10-22"
+    }
+   ]
+  }
+ ]
+}

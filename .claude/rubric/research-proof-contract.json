@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "status": "accepted-quiescent-renderer",
+  "route": "research",
+  "about": "Executable proof contract for the four accepted static-open Research records, promoted only from a quiescent candidate after targeted visual inspection.",
+  "authority": {
+    "researchEvidenceContract": {"path": ".claude/rubric/authority/research-evidence-contract.json", "sha256": "b017037b0219185712fda4c4403934863609329f36bb5cd22dadd029628736a7"},
+    "sourceReviewTransition": {"path": ".claude/rubric/authority/research-source-review-transition.json", "sha256": "98445f1d30723bce4d9a898b8fd79f99147e4e64bfac874b7b855dc053a96d56"},
+    "builderDependencyTransition": {"path": ".claude/rubric/authority/research-builder-dependency-transition.json", "sha256": "492666bb11d2873476355922254fad4ab8f1f07badc1363dbbcd4b8611cd37cb"},
+    "readerSourceTransition": {"path": ".claude/rubric/authority/research-reader-source-transition.json", "sha256": "22d5bfb16c3b68f4ff86be434be0b819ab494db1a287ac80203ab3b0f8283c82"},
+    "authorityManifest": {"path": ".claude/rubric/authority.json", "sha256": "63c37d48ac8a0d13d376bbec7de973c72e118e8d6972c9041e303d91780aa8ab"},
+    "protectedClaims": {"path": ".claude/rubric/authority/protected-claims.json", "sha256": "3d84bd3cb4d8eb784b55f96fbe025b85f62affe27f320a516bf442a94f087db6"},
+    "acceptedResume": {"path": "public/assets/Resume.pdf", "sha256": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec"},
+    "facts": {"path": ".claude/rubric/facts/facts.json", "sha256": "9180dce27548850b365b52a39845e57847d2a241495921c3fa1cba2fd1a3823c"},
+    "sourceHashes": {"path": ".claude/rubric/facts/source-hashes.json", "sha256": "b3e0a9c9324a410e2bb3eedcce0f6aa0c0f1ae159da414a12268495c3a9f86ee"},
+    "figureAssetManifest": {"path": ".claude/rubric/sources/drone-megaddon-figure-assets.json", "sha256": "2f19cd63a8d1c6c4a15a5e14ee64be14e5f6b3d8062a24e1b672f28f987adcb4"}
+  },
+  "structure": {
+    "collectionSelector": ".research-collection[data-research-collection]",
+    "recordSelector": "article.research-record[data-research-record]",
+    "articleOrder": ["research-drone-megaddon-2014", "research-drone-megaddon-2026", "research-who-trains", "research-ai-roi"],
+    "recordsAreDirectSiblings": true,
+    "staticOpen": true,
+    "ownedTextSelectors": ["[data-research-title]", "[data-research-subtitle]", "[data-research-authors]", "[data-research-status]", "[data-research-doi]", "[data-research-summary-fragment]", "[data-research-evidence-atom]", "[data-research-qualifier]", "[data-diagram-node]", "[data-diagram-group-label]", "figcaption"],
+    "ownedTextSha256ByRecord": {
+      "drone-megaddon": "a1b91ac1b798b401b0464a9dfc7646d9c66f6249bc79182cb597d9dd41ad4f3d",
+      "drone-megaddon-2026": "859f07f1664d89a957e561ece91beb2a603b0a96ffd08889e62eb986ab69fac8",
+      "who-trains-the-next-senior": "93a82397dd2db570f720d725ce47ad40dfceced89629ab2439b70cc4bc5856e1",
+      "ai-roi": "a834d48267feb56973fb75ec513571637897168cb757a6d2c0852f2ef157c831"
+    },
+    "accessibilityTreeNormalization": "Playwright locator.ariaSnapshot(); CRLF to LF; trim trailing whitespace per line; trim outer whitespace; preserve every role, name, property, URL, and order",
+    "accessibilityTreeSha256ByRecord": {
+      "drone-megaddon": "bfe252db21089fbded779ee4c99a9305700e60c0e5fe152c0f40fb400e87e197",
+      "drone-megaddon-2026": "889ff5914967abe3ba5a4ea8235ca9b4c15dfa3b1d19640526e58037e7f3c6ed",
+      "who-trains-the-next-senior": "44f52d603a4ed468c736823ff3e2961505f276adcd82f4f1db14bb404ab34d47",
+      "ai-roi": "baaaea61a3fdecd661ecc6a8cd876fbdb9293dafb2e017665ecc317c229aa658"
+    },
+    "requiredFieldSelectors": ["[data-research-title]", "[data-research-authors]", "[data-research-status]", "a[data-research-doi]", "[data-research-summary]", "[data-research-evidence]", "figure[data-research-figure]"],
+    "forbiddenSelectors": ["[data-cars]", "[data-screen]", ".cars", ".coach", "details", "dialog", "[hidden]", "[inert]", "[aria-expanded]", "[aria-selected]", "[role=tab]", "[role=tabpanel]", "[role=tablist]", "[role=dialog]"],
+    "forbiddenControlText": ["prev", "previous", "next"]
+  },
+  "doiPolicy": {
+    "stableIdPrefix": "doi:",
+    "hrefPrefix": "https://doi.org/",
+    "visibleText": "bare-doi-without-prefix",
+    "oneOwnedLinkPerRecord": true
+  },
+  "figurePolicy": {
+    "nativeKinds": ["native-pdf-crop"],
+    "derivedKinds": ["text-derived-diagram", "source-markdown-diagram"],
+    "nativeAssets": [
+      {"record": "research-drone-megaddon-2014", "pdfPath": "public/assets/research/drone-megaddon-2014.pdf", "pdfHref": "/public/assets/research/drone-megaddon-2014.pdf", "pdfSha256": "ae98e121563107488d2f297f0f541cb790f90ce4fb285c911309b7d9473b8005", "imagePath": "public/assets/research/drone-megaddon-2014-architecture.png", "imageHref": "/public/assets/research/drone-megaddon-2014-architecture.png", "imageSha256": "afca8c7f23e40c5f22a79784b398d92adbe0b573b06d42df718c683aae100871", "width": 500, "height": 460, "sourcePage": 2, "cropBoxPdfPoints": [320, 280, 570, 510]},
+      {"record": "research-drone-megaddon-2026", "pdfPath": "public/assets/research/drone-megaddon-2026.pdf", "pdfHref": "/public/assets/research/drone-megaddon-2026.pdf", "pdfSha256": "0bad9c95e7d9476b52b187dab5dab195c1817fc18f9342d3e19949a0554f81da", "imagePath": "public/assets/research/drone-megaddon-2026-language-vision-architecture.png", "imageHref": "/public/assets/research/drone-megaddon-2026-language-vision-architecture.png", "imageSha256": "99766997628d3f369e9c74da880dffcb2be0e42eca7731a90820f806908b5ebe", "width": 536, "height": 790, "sourcePage": 5, "cropBoxPdfPoints": [310, 340, 578, 735]}
+    ]
+  },
+  "routeStyle": {
+    "expectedLinked": ["research.css"],
+    "sourcePath": "site/research.css",
+    "sourceSha256": "16dee700b75b0a1f9d0dd4df9df0f8c07a77d2e5d84e3885adffbbbf74ab7cce",
+    "generatedHtmlPath": "site/research.html",
+    "generatedHtmlSha256": "28c231dc783f98f3c3ca8f9d19a0992d78b95ec8f144ad6a5bd50f6db03dbc0b"
+  },
+  "runtime": {
+    "contexts": [
+      "375:light:no-preference:js", "375:light:no-preference:no-js", "375:light:reduce:js", "375:light:reduce:no-js",
+      "375:dark:no-preference:js", "375:dark:no-preference:no-js", "375:dark:reduce:js", "375:dark:reduce:no-js",
+      "768:light:no-preference:js", "768:light:no-preference:no-js", "768:light:reduce:js", "768:light:reduce:no-js",
+      "768:dark:no-preference:js", "768:dark:no-preference:no-js", "768:dark:reduce:js", "768:dark:reduce:no-js",
+      "1440:light:no-preference:js", "1440:light:no-preference:no-js", "1440:light:reduce:js", "1440:light:reduce:no-js",
+      "1440:dark:no-preference:js", "1440:dark:no-preference:no-js", "1440:dark:reduce:js", "1440:dark:reduce:no-js"
+    ],
+    "visualFrames": [
+      {"label": "375:light", "width": 375, "height": 812, "theme": "light", "sha256": "05049e30fe4d778191ad7cf58f02ace1dbc19ea1938011a16b27500e996b45c7"},
+      {"label": "375:dark", "width": 375, "height": 812, "theme": "dark", "sha256": "7d54416b647540ca40a13ccf7dea0b8ee7bcf9b6869bc9321b10cee7df1a895c"},
+      {"label": "768:light", "width": 768, "height": 1024, "theme": "light", "sha256": "8fedd3e1a7813a1ffd42a5c19b0ad55b8d7f03c8f04023f5d794178b90e20812"},
+      {"label": "768:dark", "width": 768, "height": 1024, "theme": "dark", "sha256": "6fb16b9ad92f7746b29ebe88c75fbfd14519e3457b3868256187d2a653c90d75"},
+      {"label": "1440:light", "width": 1440, "height": 900, "theme": "light", "sha256": "ff2512701d6cf223f8a26772fea140bae265a05a104f918b834637053d0992e9"},
+      {"label": "1440:dark", "width": 1440, "height": 900, "theme": "dark", "sha256": "677c10fb269b2dd03d97befa317f080f65b40b8df3848ba988ce06ff1cd47511"}
+    ],
+    "scriptlessDeepLinks": ["drone-megaddon", "drone-megaddon-2026", "who-trains-the-next-senior", "ai-roi"],
+    "axeImpactsForbidden": ["critical", "serious"],
+    "externalNetwork": "blocked",
+    "minimumAiRoiOrdinalLabelGapPx": 4,
+    "focusIndicator": {"contexts": "all 24 runtime contexts", "links": 6, "minimumOutlinePx": 2, "minimumContrast": 3, "minimumAlpha": 0.75, "boundedPixelDeltaRequired": true},
+    "realInputScroll": {
+      "touchWidths": [375, 768],
+      "wheelWidths": [375, 768, 1440],
+      "keyboardWidths": [375, 768, 1440],
+      "bottomTolerancePx": 100,
+      "restoreBeforeCapture": true,
+      "neutralReset": {
+        "maxAttempts": 60,
+        "consecutiveAnimationFrames": 2,
+        "javascriptMethod": "request-animation-frame-scroll-event",
+        "scriptlessMethod": "cdp-layout-metrics-compositor-barrier",
+        "requireNoAdvancingScrollEventInJavascript": true,
+        "requireNoAdvancingLayoutMovementInScriptless": true,
+        "mobilePhases": ["before-touch", "before-wheel", "before-keyboard", "final-capture"],
+        "desktopPhases": ["before-wheel", "before-keyboard", "final-capture"],
+        "scriptlessMobileInvariantCheckpoints": ["before-input", "after-touch", "after-wheel", "after-keyboard"],
+        "scriptlessDesktopInvariantCheckpoints": ["before-input", "after-wheel", "after-keyboard"]
+      },
+      "wheelAcknowledgement": {
+        "dispatchCap": 16,
+        "deltaY": 800,
+        "progressTimeoutMs": 1000,
+        "scriptlessMaxCompositorBarriersPerDispatch": 4,
+        "scriptlessWheelPoint": {"x": 8, "y": 8},
+        "javascriptMethod": "trusted-dom-wheel-event",
+        "scriptlessMethod": "playwright-wheel-cdp-layout-metrics",
+        "requiresTrustedWheelEventInJavascript": true,
+        "requiresProtocolDispatchInScriptless": true,
+        "requiresObservedScrollProgress": true
+      }
+    },
+    "locale": "en-US",
+    "timezone": "UTC",
+    "deviceScaleFactor": 1
+  },
+  "priorScore100Boundary": {
+    "normalizedMainTextSha256": "79febfab8220fba82fc3f33d5422d2d82dcfe792548f4199a04415388fef5401",
+    "articleOrder": ["drone-megaddon", "drone-megaddon-2026", "who-trains-the-next-senior", "ai-roi"],
+    "visualFrames": [
+      {"label": "375:light", "sha256": "0568c756d77a807d32a80c7fa9e4dd48ffd04a7ec93e5651311c9724f8755e14"},
+      {"label": "375:dark", "sha256": "916adaaf1b3c34c7d309b7ed506e924be812ff8f9dfd497d28f4e64df6136c28"},
+      {"label": "768:light", "sha256": "0454ace6055136c3f84aee8472557f8a565a826e07782937f5938838d01fd557"},
+      {"label": "768:dark", "sha256": "48030eefef8280cbd23504bf7d91a9ae2e1d3d379b8c2603455fdd59636e7c04"},
+      {"label": "1280:light", "sha256": "fdfddd3427ba7449391d3d458e3a97d101da3c623e1b5bc53abef1a738e381d2"},
+      {"label": "1280:dark", "sha256": "26d75f0ce5f91c55ec1d54986f965a8f68a534085681ea72755adae7ef855d24"},
+      {"label": "1440:light", "sha256": "0b67a0d4a1a2c6614793134f263d3113876955e2a7f4d92527fab7da164fb222"},
+      {"label": "1440:dark", "sha256": "6f6d979c7eec1d9f6a3a87c3263aab4438579a8d942c16cb9b4cbfd348e67a0e"},
+      {"label": "1600:light", "sha256": "2e94419af84abc9145982bfebf3970c549195a5557a5e8d85e72a892df618084"},
+      {"label": "1600:dark", "sha256": "aff88f49e57fddc90fdf4526a93c6e01d7093d391f7ac48dd2e7550eab1fa4c1"}
+    ]
+  },
+  "frozenNonResearch": {
+    "html": {"index.html": "236249dc423bce5e27f4aa4b23283650aa1a60fb9526bbf4f23db5ff1742c715", "services.html": "1d77f0a18bf97d079b44ce1e4a52577da4e4d5a89663c7600628f503866d7dd2", "speaking.html": "aa95f486ea4c8f15b06b4ff9d918b293f80861568fda7373192c22ecad1fc40a", "career.html": "f3c1087b4cbd7ecf188a94abc6b9df7994a78c21ad00490cfa96829b99e010a5", "projects.html": "2ec85de5764f453a0bd7ba346d98e6d8309f34ad7ab7fea4a067d8a160bfc746", "contact.html": "4692bb8dd28cc4eb5bda1957bc10b1d325de84ab37d01d891391b26debfc722a"},
+    "sharedSources": {"style.css": "4576d21e5e55bdf9ccd67a2e718a37b2422129fb640fc1e79446eb7fd9192196", "main.js": "b4e00dddad211d67a085436049dcf139b2611779159e4d18056ea8dd1881d9e7"},
+    "sharedRouteOracle": {"path": ".claude/rubric/shared-route-oracle.json", "sha256": "748918bb8cce8354ed31ebfbffa92d61c01f98c484dd3d936300959c00553c7b"},
+    "projectsProofContract": {"path": ".claude/rubric/projects-proof-contract.json", "sha256": "232ca14a9364d03a93510042c2456f1c77f422ef0307080770b7b9ddee36acc0"},
+    "speakingProofContract": {"path": ".claude/rubric/speaking-proof-contract.json", "sha256": "0fe285c858bde55d5640253762223b799bf849309079fdc71be52525243231fd"}
+  },
+  "mutationSuite": {
+    "runner": "site/_build/verify-research-mutations.py",
+    "verifier": "site/_build/verify-research.mjs",
+    "expectedCountPolicy": "length(caseIds)",
+    "cleanControls": ["research-scoped", "production-full"],
+    "inputStability": "Hash the complete verifier dependency closure derived from this contract, all three authority transitions, all native assets, frozen downstream contracts, the full site source tree, candidate provenance, and the full candidate tree at start and end.",
+    "applicationsPerCase": 1,
+    "caseIds": [
+      "authority-contract-drift", "proof-contract-drift", "reader-source-reverse-tail-drift", "speaking-reverse-tail-drift", "figure-manifest-crop-drift", "native-2014-png-drift", "native-2026-png-drift", "native-2014-pdf-drift",
+      "article-order-swap", "article-missing", "article-duplicate", "article-nested", "unknown-authority-claim", "unit-drift", "stable-id-drift", "claim-id-drift", "built-status-drift", "external-aria-label",
+      "title-manuscript-drift", "ai-legacy-title-substitution", "subtitle-omission", "author-order-swap", "status-omission", "resume-2014-zigbee-removal", "resume-2026-gates-removal", "resume-who-apprenticeship-removal", "resume-ai-sponsor-removal",
+      "limit-2026-proposal-removal", "limit-2026-results-removal", "limit-who-correlational-removal", "limit-who-single-org-removal", "limit-ai-illustrative-removal",
+      "doi-href-drift", "doi-visible-prefix-drift", "doi-duplicate", "doi-cross-owner", "carousel-markers", "details-wrapper", "hidden-record", "aria-hidden-evidence", "prev-next-control",
+      "figure-owner-drift", "figure-kind-drift", "native-image-src-swap", "native-pdf-href-drift", "who-directed-edge-added", "who-group-label-drift", "who-group-member-escape", "ai-edge-reversal", "ai-list-order-swap",
+      "scriptless-target-hide", "visual-matrix-drift", "frozen-nonresearch-html-drift", "shared-style-drift", "route-style-ownership-drift",
+      "reduced-motion-clip-record", "scriptless-native-image-hide", "target-only-summary-hide", "stray-record-outside-collection", "duplicate-collection",
+      "stray-title-outside-collection", "stray-authors-outside-collection", "stray-status-outside-collection", "stray-summary-outside-collection", "stray-evidence-outside-collection", "stray-qualifier-outside-collection", "stray-doi-outside-collection", "stray-figure-outside-collection",
+      "aria-expanded-state", "aria-selected-state", "inert-interactive", "dialog-state", "tab-role-state", "link-next-control", "unexpected-interactive-link",
+      "native-filter-blur", "native-mask", "native-transform-offscreen", "transparent-summary-text", "transparent-pointer-overlay", "doi-pointer-cancel", "pdf-keyboard-cancel", "link-activation-runtime-error", "title-accessible-name-override", "link-accessible-name-override", "pdf-link-accessible-name-override", "figure-accessible-name-override", "native-image-accessible-name-override", "unowned-screenreader-prose", "unowned-native-semantic-widget", "reduced-motion-pointer-cancel", "partial-pointer-overlay", "pointer-cancel-decoy-fetch", "bare-contenteditable", "stray-tabstop", "aria-busy-content-suppression", "local-language-override", "inline-event-handler", "focus-indicator-removal", "focus-indicator-transparent", "reduced-motion-focus-indicator-removal", "scriptless-focus-indicator-removal", "touch-scroll-lock", "reset-hijack", "intermittent-wheel-cancel", "scriptless-wheel-protocol-stall", "wheel-scroll-lock", "keyboard-scroll-lock", "transient-focus-indicator", "ai-mobile-counter-label-collision", "ai-mobile-counter-transform-collision"
+    ]
+  }
+}
