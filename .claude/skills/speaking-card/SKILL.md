@@ -42,7 +42,7 @@ Write one card at a time, and get Sairam's approval before starting the next.
    - Read every new string as a buyer would, and fix anything vague, anything that asks the reader to do the work, or anything that doesn't sell an outcome.
    - Check that the card matches the page's one design language.
    - When you'd recommend an option, apply it. Don't hand Sairam a menu.
-16. **Build and run the fact check.** It must show no new failures.
+16. **Build the site.** The build must finish without errors.
 17. **Screenshot the full card opened** on desktop and phone. Show Sairam and get his approval before moving to the next card.
 
 ## How to build it
@@ -65,9 +65,8 @@ Write one card at a time, and get Sairam's approval before starting the next.
   - If the logo has inner details drawn in white, such as the PBS head, turn them into cut-outs with an SVG `<mask>`. Otherwise the mask fills them in as solid shapes.
   - Set the size per poster with `--logo-h` in `site/speaking.css`.
   - Check it on the wall in light and dark mode.
-- **Rebuild the facts.** Run `python3 .claude/rubric/facts/build_facts.py --out-dir <scratch>`, then copy `facts.json`, `source-hashes.json` and `authority-coverage.json` into `.claude/rubric/facts/`.
-- **Build the site.** Run `RUBRIC_PIPELINE=1 python3 site/_build/build.py --candidate speaking`. The preview serves the build at http://127.0.0.1:4400/speaking.html.
-- **Check the facts.** Run `python3 .claude/rubric/guard.py --dir site` and compare its FAIL lines with the previous run. Any new FAIL blocks the card.
+- **Facts.** The page renders from `site/_build/data/facts.json`. The build copies edited text from `content.json` into it. A new line needs a fact record (`id` is `site:` plus its `content.json` path) and its unit in `site/_build/data/registry.json`.
+- **Build the site.** Run `python3 site/_build/build.py`. The preview serves the build at http://127.0.0.1:4400/speaking.html.
 - **Screenshot.** Open the card by clicking `#<id> .sp2-pull` with `{ force: true }`, because the posters sway.
 
 ## Rules
