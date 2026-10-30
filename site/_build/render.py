@@ -12,6 +12,42 @@ REG = json.load(open(os.path.join(HERE, 'data', 'registry.json')))
 import words
 
 FACTS = json.load(open(FACTS_PATH))
+
+
+def sync_site_facts():
+    """content.json is where site copy is edited. Copy each live `site:` fact's text from it into facts.json."""
+    content = json.load(open(os.path.join(os.path.dirname(HERE), 'content.json')))
+    changed = False
+    for fact in FACTS:
+        path = fact['id'][len('site:'):]
+        if fact['source'] != 'site' or ':' in path:  # a second ':' marks a retired record, not a live path
+            continue
+        keys, token = [], ''
+        for ch in path + '.':
+            if ch in '.[]':
+                if token:
+                    keys.append(int(token) if ch == ']' else token)
+                token = ''
+            else:
+                token += ch
+        value = content
+        try:
+            for key in keys:
+                value = value[key]
+        except (KeyError, IndexError, TypeError):
+            raise SystemExit(f'facts.json: {fact["id"]} has no matching entry in content.json')
+        if isinstance(value, dict):
+            value = value.get('text')
+        if isinstance(value, str) and value != fact['text']:
+            fact['text'] = value
+            changed = True
+    if changed:
+        with open(FACTS_PATH, 'w') as stream:
+            json.dump(FACTS, stream, indent=2, ensure_ascii=False)
+            stream.write('\n')
+
+
+sync_site_facts()
 BY_ID = {f['id']: f for f in FACTS}
 RANK = {'resume': 0, 'site': 1, 'sheet': 2, 'paper': 3, 'head': 4, 'approved': 5}
 HEAD_FIELDS = {'org', 'label', 'name', 'title', 'role', 'dates', 'date', 'detail', 'eventName', 'education', 'headline', 'year', 'subtitle', 'authors', 'venue', 'citation'}
