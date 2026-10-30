@@ -8514,6 +8514,19 @@
     "unit": "talks"
   },
   {
+    "field": "proof",
+    "id": "site:speakingTopics[0].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Morgan Lewis.",
+    "twins": [
+      "site:topicMenu[10].proof",
+      "site:topicMenu[25].proof",
+      "site:topicMenu[35].proof"
+    ],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:speakingTopics[1].id",
     "show": "never",
@@ -8937,6 +8950,7 @@
     "source": "site",
     "text": "Delivered for HP, Morgan Lewis and Sonova.",
     "twins": [
+      "site:speakingTopics[0].proof",
       "site:topicMenu[25].proof",
       "site:topicMenu[35].proof"
     ],
@@ -9401,6 +9415,7 @@
     "source": "site",
     "text": "Delivered for Morgan Lewis.",
     "twins": [
+      "site:speakingTopics[0].proof",
       "site:topicMenu[10].proof",
       "site:topicMenu[35].proof"
     ],
@@ -9752,6 +9767,7 @@
     "source": "site",
     "text": "Delivered for Morgan Lewis.",
     "twins": [
+      "site:speakingTopics[0].proof",
       "site:topicMenu[10].proof",
       "site:topicMenu[25].proof"
     ],
@@ -10709,6 +10725,15 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[0].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "morgan-lewis",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[1].id",
     "show": "never",
@@ -10784,6 +10809,15 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[3].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "atos",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[4].id",
     "show": "never",
@@ -10843,6 +10877,15 @@
     "show": "never",
     "source": "site",
     "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[6].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "atos",
     "twins": [],
     "unit": "talks"
   },
@@ -10970,6 +11013,15 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[11].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "sonova",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[12].id",
     "show": "never",
@@ -11021,6 +11073,33 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[13].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "hp",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[13].clients[1]",
+    "show": "never",
+    "source": "site",
+    "text": "morgan-lewis",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[13].clients[2]",
+    "show": "never",
+    "source": "site",
+    "text": "sonova",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[14].id",
     "show": "never",
@@ -11044,6 +11123,15 @@
     "show": "never",
     "source": "site",
     "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[14].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "pbs",
     "twins": [],
     "unit": "talks"
   },
@@ -11363,6 +11451,15 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[28].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "morgan-lewis",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[29].id",
     "show": "never",
@@ -11402,6 +11499,24 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[30].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "jacobson-strategic",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[30].clients[1]",
+    "show": "never",
+    "source": "site",
+    "text": "hp",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[31].id",
     "show": "never",
@@ -11423,6 +11538,15 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[31].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "sonova",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[32].id",
     "show": "never",
@@ -11437,6 +11561,15 @@
     "show": "never",
     "source": "site",
     "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[32].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eagles",
     "twins": [],
     "unit": "talks"
   },
@@ -11479,6 +11612,24 @@
     "show": "never",
     "source": "site",
     "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[34].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "cmu",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[34].clients[1]",
+    "show": "never",
+    "source": "site",
+    "text": "sonova",
     "twins": [],
     "unit": "talks"
   },
@@ -11564,6 +11715,15 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[38].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "morgan-lewis",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[39].id",
     "show": "never",
@@ -11578,6 +11738,15 @@
     "show": "never",
     "source": "site",
     "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[39].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eagles",
     "twins": [],
     "unit": "talks"
   },
@@ -11600,6 +11769,15 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[40].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "pbs",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[41].id",
     "show": "never",
@@ -11614,6 +11792,15 @@
     "show": "never",
     "source": "site",
     "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[41].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "sonova",
     "twins": [],
     "unit": "talks"
   },
@@ -11636,6 +11823,24 @@
     "unit": "talks"
   },
   {
+    "field": "clients",
+    "id": "site:topicAudiences[42].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "hp",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[42].clients[1]",
+    "show": "never",
+    "source": "site",
+    "text": "atos",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
     "field": "id",
     "id": "site:topicAudiences[43].id",
     "show": "never",
@@ -11650,6 +11855,15 @@
     "show": "never",
     "source": "site",
     "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "clients",
+    "id": "site:topicAudiences[43].clients[0]",
+    "show": "never",
+    "source": "site",
+    "text": "jacobson-strategic",
     "twins": [],
     "unit": "talks"
   },
@@ -11688,6 +11902,42 @@
     "text": "exec",
     "twins": [],
     "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicCustom.text",
+    "show": "must",
+    "source": "site",
+    "text": "None of these fits? I build talks for the room.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "link",
+    "id": "site:topicCustom.link",
+    "show": "must",
+    "source": "site",
+    "text": "Tell me what your people need",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "speakingWall",
+    "id": "site:speakingWall",
+    "show": "must",
+    "source": "site",
+    "text": "Where I’ve taught",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "speakingClose",
+    "id": "site:speakingClose",
+    "show": "must",
+    "source": "site",
+    "text": "Your people leave using AI, not just hearing about it.",
+    "twins": [],
+    "unit": "fee"
   },
   {
     "authorityRank": "historical-review",

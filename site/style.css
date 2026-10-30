@@ -58,7 +58,23 @@ svg [stroke="#FAFAF7"] { stroke: var(--map); }
 svg [fill="#FAFAF7"] { fill: var(--map); }
 svg [fill="#fff"] { fill: var(--paper); }
 svg [stroke="#fff"] { stroke: var(--paper); }
-.hd__end { display: flex; align-items: center; gap: 12px; }
+.hd__end { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+/* Breadcrumb and page switcher: "Sairam Krishnan / Speaking" */
+.hd__sep { font-size: 1.125rem; font-weight: 600; color: var(--ink-2); }
+.hd__pages { position: relative; }
+.hd__pages > summary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; list-style: none; cursor: pointer;
+  font-weight: 800; font-size: 1.125rem; letter-spacing: -0.01em; white-space: nowrap; }
+.hd__pages > summary::-webkit-details-marker { display: none; }
+.hd__pages > summary::after { content: ''; width: 7px; height: 7px; margin-top: -4px; border: solid currentColor; border-width: 0 2px 2px 0; rotate: 45deg; transition: rotate 180ms var(--ease-out), margin 180ms var(--ease-out); }
+.hd__pages[open] > summary::after { rotate: 225deg; margin-top: 4px; }
+.hd__pages > summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+.hd__pages nav { position: absolute; top: calc(100% + 6px); left: -12px; z-index: 40; min-width: 208px; padding: 8px; border-radius: 14px;
+  background: var(--paper); box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 12%, transparent), 0 24px 48px -20px rgb(0 0 0 / 0.45); }
+.hd__pages ul { list-style: none; margin: 0; padding: 0; }
+.hd__pages a { display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 8px; color: var(--ink); font-weight: 650; text-decoration: none; }
+.hd__pages a[aria-current="page"] { font-weight: 800; background: color-mix(in srgb, var(--ink) 8%, transparent); }
+@media (hover: hover) and (pointer: fine) { .hd__pages a:not([aria-current="page"]):hover { background: color-mix(in srgb, var(--ink) 6%, transparent); } }
+@media (prefers-reduced-motion: reduce) { .hd__pages > summary::after { transition: none; } }
 .theme {
   position: relative; display: inline-flex; align-items: center; justify-content: center; width: 34px; min-height: 34px; padding: 0; border: 0; border-radius: 999px;
   background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2.5px var(--ink); cursor: pointer;
@@ -102,6 +118,10 @@ p { margin: 0; text-wrap: pretty; }
 a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
 button { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 3px; }
+/* The page name sits on the right of the header, so each page's own h1 stays for screen readers only. */
+h1.hd-twin { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+body[data-page="research"] div.rs-hero, section.contact > .pagehead { display: contents; }
+section.pj .pj-hero { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: clamp(28px, 4vw, 48px); }
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 .skip { position: absolute; left: 12px; top: -60px; z-index: 50; background: var(--ink); color: var(--on-ink); padding: 10px 14px; border-radius: 4px; text-decoration: none; font-weight: 700; }
 .skip:focus { top: 12px; }

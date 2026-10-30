@@ -96,18 +96,21 @@ def dates(s):
 RESUME = '/public/assets/Resume.pdf'
 AV = '<img src="/public/assets/portrait-2026-mobile.webp" alt="" width="36" height="36">'
 
-def header(page):
+PAGES = [('career', 'Career'), ('services', 'Services'), ('speaking', 'Speaking'),
+         ('research', 'Research'), ('projects', 'Projects'), ('contact', 'Contact')]
+
+def header(page, label=''):
     cur = lambda k: ' aria-current="page"' if k == page else ''
-    me = (f'<div class="hd__sign"><a class="hd__me" href="index.html"{cur("home")}>{AV}<span>Sairam Krishnan</span></a>'
-          f'<a class="bullet" data-line="red" href="{RESUME}">Résumé</a></div>')
     toggle = '<button class="theme{cls}" type="button" data-theme-toggle aria-label="Switch to the dark theme"></button>'
     if page == 'home':  # no header: he is the map's hub, and his face opens the card with Résumé; the map is the navigation
         return '<a class="skip" href="#main">Skip to content</a>\n' + toggle.replace('{cls}', ' theme--float') + '\n'
-    # One way back: the map is home, and every line starts there.
+    # "Sairam Krishnan / Speaking": his name leads home, and the page name opens a switcher to every other page (Oct 29, 2026).
+    links = ''.join(f'<li><a href="{k}.html"{cur(k)}>{name}</a></li>' for k, name in PAGES)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="hd">
-  {me}
-  <div class="hd__end">{toggle.replace('{cls}', '')}<a class="hd__home" href="index.html">Home</a></div>
+  <div class="hd__sign"><a class="hd__me" href="index.html">{AV}<span>Sairam Krishnan</span></a><span class="hd__sep" aria-hidden="true">/</span>
+    <details class="hd__pages" data-pages><summary>{label}</summary><nav><ul>{links}</ul></nav></details></div>
+  <div class="hd__end">{toggle.replace('{cls}', '')}</div>
 </header>
 '''
 
@@ -185,7 +188,7 @@ def page(name, page_key, title, desc, main):
 <link rel="stylesheet" href="style.css?v={VER}">{route_style}
 </head>
 <body data-page="{page_key}">
-{header(page_key)}
+{header(page_key, title.split(',')[0])}
 <main id="main">
 {main}
 </main>

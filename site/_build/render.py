@@ -573,6 +573,7 @@ def speaking(B):
     held = {r['id']: i for i, r in enumerate(B.D['speakingTopics'])}
     menu = {r['id']: i for i, r in enumerate(B.D['topicMenu'])}
     aud = {r['id']: r['aud'] for r in B.D['topicAudiences']}
+    served = {r['id']: r.get('clients', []) for r in B.D['topicAudiences']}
 
     def talk(tid, rank):
         if tid in held:
@@ -582,7 +583,7 @@ def speaking(B):
         anchor = html.escape(tid, quote=True)
         body = (atom(fid + '.title', 'h4', 'ts__title') + atom(fid + '.promise', cls='ts__promise') +
                 (atom(fid + '.proof', cls='ts__proof') if 'proof' in rec else ''))
-        attrs = f'data-talk="{anchor}" data-aud="{" ".join(aud[tid])}" data-rank="{rank}"'
+        attrs = f'data-talk="{anchor}" data-aud="{" ".join(aud[tid])}" data-clients="{" ".join(served[tid])}" data-rank="{rank}"'
         if tid in held:
             return proof(f'topic-{held[tid] + 1}', 'talks', body, cls='ts__talk', content_unit=f'speakingTopics/{tid}').replace(
                 '<div class="sp2-proof ts__talk"', f'<article class="sp2-proof ts__talk" {attrs}', 1)[:-6] + '</article>'
@@ -593,12 +594,16 @@ def speaking(B):
         f'{atom(f"site:topicNeeds[{i}].text", "h3", "ts__need")}'
         f'<div class="ts__list">{"".join(talk(t["id"], k) for k, t in enumerate(n["topics"]))}</div></section>'
         for i, n in enumerate(B.D['topicNeeds']))
-    topics = (f'<section class="sp2-topics" id="talks" aria-labelledby="sp2-topics-h"><h2 id="sp2-topics-h">Speaking topics</h2>'
-              f'<div class="ts" data-ts><div class="ts__groups">{groups}</div></div></section>')
+    custom = (f'<p class="ts__custom">{atom("site:topicCustom.text", "span")} '
+              f'<a href="mailto:sairambkrishnan@gmail.com?subject=A%20talk%20for%20my%20team">{atom("site:topicCustom.link", "span")}</a></p>')
+    topics = (f'<section class="sp2-topics" id="talks" aria-labelledby="sp2-topics-h"><h2 class="vh" id="sp2-topics-h">Speaking topics</h2>'
+              f'<div class="ts" data-ts><div class="ts__groups">{groups}</div>{custom}</div></section>')
 
-    fee = (f'<section class="sp2-booking" id="fee" aria-labelledby="sp2-fee-h"><h2 id="sp2-fee-h">Keynote</h2>'
-           f'<a class="btn sp2-booking__link" data-line="orange" href="mailto:sairambkrishnan@gmail.com?subject=Keynote">Book a talk</a></section>')
-    main = f'<section class="sp2" data-line="orange" aria-labelledby="sp2-h"><header class="sp2-hero"><h1 id="sp2-h">Speaking</h1></header>{praxtera}{independent}{topics}{fee}</section>'
+    wall = atom('site:speakingWall', 'h2', 'sp2-wall')
+    close_h = atom('site:speakingClose', 'h2').replace('<h2 ', '<h2 id="sp2-fee-h" ', 1)
+    fee = (f'<section class="sp2-end" id="fee" aria-labelledby="sp2-fee-h">{close_h}'
+           f'<a class="sp2-end__link" data-line="orange" href="mailto:sairambkrishnan@gmail.com?subject=Keynote">Book a talk</a></section>')
+    main = f'<section class="sp2" data-line="orange" aria-labelledby="sp2-h"><h1 class="hd-twin" id="sp2-h">Speaking</h1>{topics}{wall}{praxtera}{independent}{fee}</section>'
     return B.page('speaking', 'speaking', 'Speaking, Sairam Krishnan', 'Keynote for the Philadelphia Eagles, executive AI education for HP, Morgan Lewis, PBS, Sonova and Jacobson Strategic, and the Atos knowledge-graph talk.', main)
 
 # ---------------------------------------------------------------- Research
@@ -837,7 +842,7 @@ def research(B):
             ('eight illustrative public-company cases', 'illustrative validation, not empirical validation', 'Professor Gad Allon'),
         ),
     ])
-    main = (f'<section class="research" aria-labelledby="research-h"><div class="rs-hero"><h1 id="research-h">Research</h1></div>'
+    main = (f'<section class="research" aria-labelledby="research-h"><div class="rs-hero"><h1 class="hd-twin" id="research-h">Research</h1></div>'
             f'<div class="research-collection" data-research-collection>{papers}</div></section>')
     return B.page('research', 'research', 'Research, Sairam Krishnan', 'Four papers: Drone-Megaddon 2014 and 2026, Who Trains the Next Senior?, and a multi-layer framework for the ROI of AI projects.', main)
 
@@ -906,7 +911,7 @@ def projects(B):
                      f'<h2 class="pj-venture__name" id="pj-{u}-h">{names[u]}</h2>{thesis}</div>'
                      f'{train(u, images=imgs, open_class="pj", heading_tag="h3", visible=B.t)}</article>\n')
     main = (f'<section class="pj" data-line="green" aria-labelledby="pj-h">'
-            f'<div class="pj-hero"><h1 id="pj-h">Projects</h1>'
+            f'<div class="pj-hero"><h1 class="hd-twin" id="pj-h">Projects</h1>'
             f'<nav class="pj-index" aria-label="Ventures"><ol>{index}</ol></nav></div>'
             f'<div class="pj-atlas">{ventures}</div></section>')
     return B.page('projects', 'projects', 'Projects, Sairam Krishnan', 'Five ventures: Ondoway, Persuaider, Gestiq, Lore / DependIQ, and Crucible.', main)
@@ -938,7 +943,7 @@ def services(B):
         for s in S
     )
     main = (f'<section class="svc2" aria-labelledby="svc2-h">'
-            f'<div class="svc2-hero" id="offers"><h1 id="svc2-h">Services</h1>'
+            f'<div class="svc2-hero" id="offers"><h1 class="hd-twin" id="svc2-h">Services</h1>'
             f'<nav class="svc2-map" aria-label="Services">{routes}</nav>'
             f'<p class="svc2-book" id="book"><a class="btn" data-line="blue" href="mailto:sairambkrishnan@gmail.com?subject=Fit%20Call">Book a free Fit Call</a></p></div>'
             f'<div class="svc2-atlas">{atlas}</div></section>')
@@ -946,7 +951,7 @@ def services(B):
 
 # ---------------------------------------------------------------- Contact
 def contact(B):
-    main = ('<section class="contact" id="contact" aria-labelledby="contact-h"><div class="pagehead"><h1 id="contact-h">Contact</h1></div>'
+    main = ('<section class="contact" id="contact" aria-labelledby="contact-h"><div class="pagehead"><h1 class="hd-twin" id="contact-h">Contact</h1></div>'
             '<div class="ic"><!--gen:map-x--><!--/gen:map-x--><!--gen:map-xm--><!--/gen:map-xm--></div>'
             '<p class="contact__book"><a class="btn" data-line="blue" href="mailto:sairambkrishnan@gmail.com?subject=Fit%20Call">Book a free Fit Call</a></p></section>')
     return B.page('contact', 'contact', 'Contact, Sairam Krishnan', 'Email, LinkedIn, phone, and résumé for Sairam Krishnan, and how to book a free Fit Call.', main)

@@ -171,8 +171,8 @@ def resume():
 # Which unit a record belongs to, from where it sits in the data.
 ID_UNIT = {'aws': 'cmu', 'leanfm': 'cmu', 'cmu-research': 'cmu', 'cmu-capstone': 'cmu', 'cmu-projects': 'cmu', 'cmu-teaching': 'cmu-teaching',
            'who-trains-the-next-senior': 'who-trains', 'stay': 'offers', 'eng': 'offers', 'exec': 'offers'}
-TOP_UNIT = {'speakingTopics': 'talks', 'topicLimbs': 'talks', 'topicMenu': 'talks', 'topicNeeds': 'talks', 'topicAudiences': 'talks', 'topicPrompt': 'talks', 'eaglesSummitSources': 'eagles', 'managerReviews': 'apple', 'groups': 'offers'}
-FIELD_SHOW = {'aud': 'never', 'location': 'never', 'length': 'never', 'startDate': 'never', 'href': 'never', 'img': 'never', 'width': 'never', 'height': 'never',
+TOP_UNIT = {'speakingTopics': 'talks', 'topicLimbs': 'talks', 'topicMenu': 'talks', 'topicNeeds': 'talks', 'topicAudiences': 'talks', 'topicCustom': 'talks', 'speakingWall': 'talks', 'speakingClose': 'fee', 'topicPrompt': 'talks', 'eaglesSummitSources': 'eagles', 'managerReviews': 'apple', 'groups': 'offers'}
+FIELD_SHOW = {'aud': 'never', 'clients': 'never', 'location': 'never', 'length': 'never', 'startDate': 'never', 'href': 'never', 'img': 'never', 'width': 'never', 'height': 'never',
               'slug': 'never', 'id': 'never', 'kind': 'never', 'group': 'never', 'visual': 'never', 'time': 'never', 'meta': 'may', 'alt': 'may',
               # Build plumbing, not facts: file paths, price labels ("from"), billing units, link relations.
               'sourcePath': 'never', 'priceLabel': 'never', 'unit': 'never', 'parent': 'never', 'verb': 'never', 'value': 'may'}

@@ -38,8 +38,12 @@ Write one card at a time, and get Sairam's approval before starting the next.
 12. **Keep every existing fact,** moving it if needed. Leave no orphan headings.
 13. **Write tight paragraphs,** each under 40 words, with no one-sentence-per-line fragments.
 14. **Use the client's logo** in place of its name on the poster. The name stays as hidden text for screen readers.
-15. **Build and run the fact check.** It must show no new failures.
-16. **Screenshot the full card opened** on desktop and phone. Show Sairam and get his approval before moving to the next card.
+15. **Critique before showing.**
+   - Read every new string as a buyer would, and fix anything vague, anything that asks the reader to do the work, or anything that doesn't sell an outcome.
+   - Check that the card matches the page's one design language.
+   - When you'd recommend an option, apply it. Don't hand Sairam a menu.
+16. **Build and run the fact check.** It must show no new failures.
+17. **Screenshot the full card opened** on desktop and phone. Show Sairam and get his approval before moving to the next card.
 
 ## How to build it
 

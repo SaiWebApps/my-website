@@ -1347,7 +1347,8 @@
     {
       "id": "architecture-adoption",
       "title": "From Architecture to Adoption",
-      "promise": "Turn AI skeptics into champions by taking their concerns seriously and showing how AI extends their expertise."
+      "promise": "Turn AI skeptics into champions by taking their concerns seriously and showing how AI extends their expertise.",
+      "proof": "Delivered for Morgan Lewis."
     },
     {
       "id": "ship-the-decision",
@@ -1776,51 +1777,350 @@
     }
   ],
   "topicAudiences": [
-    {"id": "architecture-adoption", "aud": ["exec", "teams"]},
-    {"id": "ship-the-decision", "aud": ["eng"]},
-    {"id": "agentic-leadership", "aud": ["eng", "exec"]},
-    {"id": "kg-local-models", "aud": ["eng", "exec"]},
-    {"id": "kg-verified-edges", "aud": ["eng"]},
-    {"id": "kg-trustworthy-data", "aud": ["exec"]},
-    {"id": "kg-failure-graph", "aud": ["eng"]},
-    {"id": "kg-editor-override", "aud": ["eng", "exec"]},
-    {"id": "kg-sourced-beat", "aud": ["eng"]},
-    {"id": "eval-deterministic-check", "aud": ["eng", "teams"]},
-    {"id": "eval-extract-score", "aud": ["eng"]},
-    {"id": "eval-cite-every-number", "aud": ["teams"]},
-    {"id": "eval-calibrate-judge", "aud": ["eng"]},
-    {"id": "ag-ai-agents", "aud": ["teams", "eng"]},
-    {"id": "ag-reengineering", "aud": ["exec", "teams"]},
-    {"id": "ag-hidden-test", "aud": ["eng"]},
-    {"id": "ag-private-objectives", "aud": ["eng"]},
-    {"id": "ag-acceptance-rules", "aud": ["eng"]},
-    {"id": "ag-silent-facts", "aud": ["eng"]},
-    {"id": "ld-next-senior", "aud": ["eng", "exec"]},
-    {"id": "ld-shrink-review", "aud": ["eng"]},
-    {"id": "ld-half-promoted", "aud": ["eng"]},
-    {"id": "st-which-scale", "aud": ["exec"]},
-    {"id": "st-discount-rate", "aud": ["exec"]},
-    {"id": "st-eight-cases", "aud": ["exec"]},
-    {"id": "st-gates", "aud": ["exec"]},
-    {"id": "gv-surveil-agents", "aud": ["exec"]},
-    {"id": "gv-simple-audit", "aud": ["exec", "eng"]},
-    {"id": "gv-traffic-light", "aud": ["teams", "exec"]},
-    {"id": "gv-confidence-to-action", "aud": ["eng"]},
-    {"id": "ad-basics", "aud": ["teams"]},
-    {"id": "ad-prompting-workflows", "aud": ["teams"]},
-    {"id": "ad-impact", "aud": ["exec"]},
-    {"id": "ad-mission-time", "aud": ["teams"]},
-    {"id": "ad-flawed-exercise", "aud": ["teams"]},
-    {"id": "pl-sixty-hours", "aud": ["eng"]},
-    {"id": "pl-cache-keys", "aud": ["eng"]},
-    {"id": "pl-two-weeks", "aud": ["eng"]},
-    {"id": "ind-law", "aud": ["exec"]},
-    {"id": "ind-nonprofits", "aud": ["exec"]},
-    {"id": "ind-public", "aud": ["exec"]},
-    {"id": "ind-healthcare", "aud": ["exec"]},
-    {"id": "ind-enterprise", "aud": ["exec"]},
-    {"id": "ind-communications", "aud": ["exec"]},
-    {"id": "ind-media", "aud": ["exec"]},
-    {"id": "ind-financial", "aud": ["exec"]}
-  ]
+    {
+      "id": "architecture-adoption",
+      "aud": [
+        "exec",
+        "teams"
+      ],
+      "clients": [
+        "morgan-lewis"
+      ]
+    },
+    {
+      "id": "ship-the-decision",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "agentic-leadership",
+      "aud": [
+        "eng",
+        "exec"
+      ]
+    },
+    {
+      "id": "kg-local-models",
+      "aud": [
+        "eng",
+        "exec"
+      ],
+      "clients": [
+        "atos"
+      ]
+    },
+    {
+      "id": "kg-verified-edges",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "kg-trustworthy-data",
+      "aud": [
+        "exec"
+      ]
+    },
+    {
+      "id": "kg-failure-graph",
+      "aud": [
+        "eng"
+      ],
+      "clients": [
+        "atos"
+      ]
+    },
+    {
+      "id": "kg-editor-override",
+      "aud": [
+        "eng",
+        "exec"
+      ]
+    },
+    {
+      "id": "kg-sourced-beat",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "eval-deterministic-check",
+      "aud": [
+        "eng",
+        "teams"
+      ]
+    },
+    {
+      "id": "eval-extract-score",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "eval-cite-every-number",
+      "aud": [
+        "teams"
+      ],
+      "clients": [
+        "sonova"
+      ]
+    },
+    {
+      "id": "eval-calibrate-judge",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ag-ai-agents",
+      "aud": [
+        "teams",
+        "eng"
+      ],
+      "clients": [
+        "hp",
+        "morgan-lewis",
+        "sonova"
+      ]
+    },
+    {
+      "id": "ag-reengineering",
+      "aud": [
+        "exec",
+        "teams"
+      ],
+      "clients": [
+        "pbs"
+      ]
+    },
+    {
+      "id": "ag-hidden-test",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ag-private-objectives",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ag-acceptance-rules",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ag-silent-facts",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ld-next-senior",
+      "aud": [
+        "eng",
+        "exec"
+      ]
+    },
+    {
+      "id": "ld-shrink-review",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ld-half-promoted",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "st-which-scale",
+      "aud": [
+        "exec"
+      ]
+    },
+    {
+      "id": "st-discount-rate",
+      "aud": [
+        "exec"
+      ]
+    },
+    {
+      "id": "st-eight-cases",
+      "aud": [
+        "exec"
+      ]
+    },
+    {
+      "id": "st-gates",
+      "aud": [
+        "exec"
+      ]
+    },
+    {
+      "id": "gv-surveil-agents",
+      "aud": [
+        "exec"
+      ]
+    },
+    {
+      "id": "gv-simple-audit",
+      "aud": [
+        "exec",
+        "eng"
+      ]
+    },
+    {
+      "id": "gv-traffic-light",
+      "aud": [
+        "teams",
+        "exec"
+      ],
+      "clients": [
+        "morgan-lewis"
+      ]
+    },
+    {
+      "id": "gv-confidence-to-action",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ad-basics",
+      "aud": [
+        "teams"
+      ],
+      "clients": [
+        "jacobson-strategic",
+        "hp"
+      ]
+    },
+    {
+      "id": "ad-prompting-workflows",
+      "aud": [
+        "teams"
+      ],
+      "clients": [
+        "sonova"
+      ]
+    },
+    {
+      "id": "ad-impact",
+      "aud": [
+        "exec"
+      ],
+      "clients": [
+        "eagles"
+      ]
+    },
+    {
+      "id": "ad-mission-time",
+      "aud": [
+        "teams"
+      ]
+    },
+    {
+      "id": "ad-flawed-exercise",
+      "aud": [
+        "teams"
+      ],
+      "clients": [
+        "cmu",
+        "sonova"
+      ]
+    },
+    {
+      "id": "pl-sixty-hours",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "pl-cache-keys",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "pl-two-weeks",
+      "aud": [
+        "eng"
+      ]
+    },
+    {
+      "id": "ind-law",
+      "aud": [
+        "exec"
+      ],
+      "clients": [
+        "morgan-lewis"
+      ]
+    },
+    {
+      "id": "ind-nonprofits",
+      "aud": [
+        "exec"
+      ],
+      "clients": [
+        "eagles"
+      ]
+    },
+    {
+      "id": "ind-public",
+      "aud": [
+        "exec"
+      ],
+      "clients": [
+        "pbs"
+      ]
+    },
+    {
+      "id": "ind-healthcare",
+      "aud": [
+        "exec"
+      ],
+      "clients": [
+        "sonova"
+      ]
+    },
+    {
+      "id": "ind-enterprise",
+      "aud": [
+        "exec"
+      ],
+      "clients": [
+        "hp",
+        "atos"
+      ]
+    },
+    {
+      "id": "ind-communications",
+      "aud": [
+        "exec"
+      ],
+      "clients": [
+        "jacobson-strategic"
+      ]
+    },
+    {
+      "id": "ind-media",
+      "aud": [
+        "exec"
+      ]
+    },
+    {
+      "id": "ind-financial",
+      "aud": [
+        "exec"
+      ]
+    }
+  ],
+  "topicCustom": {"text": "None of these fits? I build talks for the room.", "link": "Tell me what your people need"},
+  "speakingWall": "Where I’ve taught",
+  "speakingClose": "Your people leave using AI, not just hearing about it."
 }

@@ -990,18 +990,19 @@ class Run:
         hd = next((n for n in body.all() if n.tag == 'header'), None)
         if P['header'] == 'inner':
             if hd is None:
-                s.fail('E25', page, 'header', 'no header with his name, Résumé and Home')
+                s.fail('E25', page, 'header', 'no header with his name')
             else:
                 txt = [(a.text(), a.a.get('href', '')) for a in hd.all() if a.tag == 'a']
                 if not any('Sairam Krishnan' in t and h == 'index.html' for t, h in txt):
                     s.fail('E25', page, 'header', 'his name does not lead home')
-                if not any(t == 'Résumé' and h.endswith('.pdf') for t, h in txt):
-                    s.fail('E25', page, 'header', 'Résumé is not beside his name')
-                if not any(t == 'Home' and h == 'index.html' for t, h in txt):
-                    s.fail('E25', page, 'header', 'no Home')
-                extra = [t for t, h in txt if t not in ('Résumé', 'Home') and 'Sairam Krishnan' not in t]
+                # Oct 29, 2026: he dropped Résumé and Home from the navbar. His name leads home; the page name opens a switcher
+                # whose links are the site's pages. Nothing else belongs in the header.
+                pages = {'career.html', 'services.html', 'speaking.html', 'research.html', 'projects.html', 'contact.html'}
+                extra = [t for t, h in txt if 'Sairam Krishnan' not in t and h not in pages]
                 if extra:
-                    s.fail('E25', page, 'header', f'the header carries more than name, Résumé, Home and the theme switch: {extra}')
+                    s.fail('E25', page, 'header', f'the header carries more than his name, the page switcher and the theme switch: {extra}')
+                if {h for t, h in txt if h in pages} != pages:
+                    s.fail('E25', page, 'header', 'the page switcher does not reach every page')
         if not any(n.tag == 'button' and 'data-theme-toggle' in n.a for n in body.all()):
             s.fail('T35', page, 'page', 'no light/dark switch (he called it invariant, Sep 16)')
         for n in body.all():

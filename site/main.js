@@ -662,7 +662,6 @@
   const ts = document.querySelector('[data-ts]');
   if (!ts) return;
   const groups = [...ts.querySelectorAll('.ts__group')];
-  const total = ts.querySelectorAll('.ts__talk').length;
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; };
   const select = (label, options) => {
     const field = el('span', 'ts__field');
@@ -684,16 +683,23 @@
   const side = el('div', 'ts__side');
   side.append(alts);
   stage.append(lead, side);
-  const all = el('button', 'ts__all', `All ${total} talks`);
-  all.type = 'button';
-  all.setAttribute('aria-expanded', 'false');
-  side.append(all);
+  side.append(ts.querySelector('.ts__custom'));
   ts.prepend(sentence, stage);
   const show = (talk) => {
     const card = talk.cloneNode(true);
     card.removeAttribute('data-content-unit');
     const book = el('a', 'ts__book', 'Book a talk');
     book.href = 'mailto:sairambkrishnan@gmail.com?subject=' + encodeURIComponent('Talk: ' + talk.querySelector('.ts__title').textContent);
+    const proof = card.querySelector('.ts__proof');
+    const first = (talk.dataset.clients || '').split(' ').filter(Boolean)[0];
+    const poster = first && document.getElementById(first);
+    if (proof && poster) {
+      // The proof opens the client's own card on the wall.
+      const link = el('a', '', proof.textContent);
+      link.href = '#' + first;
+      link.addEventListener('click', (e) => { e.preventDefault(); poster.querySelector('.sp2-pull')?.click(); });
+      proof.replaceChildren(link);
+    }
     lead.replaceChildren(...card.children, book);
     lead.classList.remove('is-new'); void lead.offsetWidth; lead.classList.add('is-new');
   };
@@ -714,11 +720,6 @@
   };
   aud.addEventListener('change', () => update());
   need.addEventListener('change', () => update());
-  all.addEventListener('click', () => {
-    const open = all.getAttribute('aria-expanded') !== 'true';
-    all.setAttribute('aria-expanded', String(open));
-    ts.classList.toggle('is-all', open);
-  });
   groups.forEach((g) => g.querySelectorAll('.ts__talk').forEach((t) => {
     t.tabIndex = 0;
     const pick = () => {
@@ -732,5 +733,15 @@
   }));
   ts.classList.add('is-js');
   update();
+})();
+
+// ---- page switcher: close it on an outside click or Escape ----
+(() => {
+  const pages = document.querySelector('[data-pages]');
+  if (!pages) return;
+  document.addEventListener('click', (e) => { if (pages.open && !pages.contains(e.target)) pages.open = false; });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && pages.open) { pages.open = false; pages.querySelector('summary').focus(); }
+  });
 })();
 
