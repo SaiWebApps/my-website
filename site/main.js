@@ -609,6 +609,49 @@
     if (p > 0) { page = Math.min(p, count(job) - 1); paint(verso, versoFor(job, page)); paint(recto, rectoFor(job, page)); setEdges(); }
   }
 
+  /* ---------- Speaking poster wall: pull a poster forward to read its small print ---------- */
+  const wall = $('.sp2');
+  if (wall) {
+    const posters = $$('.sp2-member', wall);
+    let open = null, scrim = null, close = null, home = null;
+    const label = el => (el.querySelector('h3')?.textContent || '').trim();
+    posters.forEach(p => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'sp2-pull';
+      b.setAttribute('aria-label', 'Read ' + label(p));
+      b.addEventListener('click', () => pull(p));
+      p.append(b);
+    });
+    const put = () => {
+      if (!open) return;
+      const p = open; open = null;
+      const back = () => { p.classList.remove('is-open'); scrim?.remove(); close?.remove(); document.documentElement.classList.remove('sp2-locked'); home?.focus({ preventScroll: true }); };
+      if (G && motionOK()) G.to(p, { scale: 0.94, opacity: 0, duration: 0.18, ease: 'power2.in', onComplete: () => { back(); G.fromTo(p, { scale: 1.04, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: 'back.out(2)', clearProps: 'scale,opacity' }); } });
+      else back();
+    };
+    const pull = p => {
+      if (open) return;
+      home = p.querySelector('.sp2-pull');
+      const from = p.getBoundingClientRect();
+      open = p;
+      scrim = document.createElement('button'); scrim.type = 'button'; scrim.className = 'sp2-scrim'; scrim.setAttribute('aria-label', 'Put it back');
+      close = document.createElement('button'); close.type = 'button'; close.className = 'sp2-close'; close.textContent = 'Close';
+      scrim.addEventListener('click', put); close.addEventListener('click', put);
+      document.body.append(scrim, close);
+      document.documentElement.classList.add('sp2-locked');
+      p.classList.add('is-open'); p.scrollTop = 0;
+      close.focus({ preventScroll: true });
+      if (G && motionOK()) {
+        // Peel it off the wall: it starts where it hung and swings to the centre.
+        const to = p.getBoundingClientRect();
+        G.fromTo(p, { x: from.left - to.left, y: from.top - to.top, scale: from.width / to.width, rotate: -3, transformOrigin: '50% 0%' },
+          { x: 0, y: 0, scale: 1, rotate: 0, duration: 0.55, ease: 'expo.out', clearProps: 'transform' });
+        G.fromTo(scrim, { opacity: 0 }, { opacity: 1, duration: 0.26, ease: 'power1.out' });
+      }
+    };
+    addEventListener('keydown', e => { if (e.key === 'Escape') put(); });
+  }
+
   window.__transit = { G, $, $$, motionOK, nearest, makeTrain, visible };
   window.__SITE_READY__ = true;
   document.documentElement.dataset.siteReady = 'true';

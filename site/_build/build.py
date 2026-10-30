@@ -112,18 +112,7 @@ def header(page):
 '''
 
 def footer(page):
-    if page == 'home':
-        return ''
-    # The two audience doors stay one click away without changing the deliberately spare header.
-    return '''<footer class="ft">
-  <a class="ft__link" href="services.html">Services</a>
-  <a class="ft__link" href="speaking.html">Speaking</a>
-  <a class="ft__link" href="career.html">Career</a>
-  <a class="ft__link" href="contact.html">Contact</a>
-  <a class="ft__link" href="mailto:sairambkrishnan@gmail.com">sairambkrishnan@gmail.com</a>
-  <a class="ft__link" href="https://www.linkedin.com/in/sairambkrishnan">LinkedIn</a>
-</footer>
-'''
+    return ''  # No footer on any page; he asked for it gone (Oct 29, 2026).
 
 SCRIPTS = f'''<script src="/node_modules/gsap/dist/gsap.min.js"></script>
 <script src="/node_modules/gsap/dist/ScrollTrigger.min.js"></script>
@@ -570,6 +559,12 @@ def career():
             for field, text in fields:
                 if text:
                     facts.append({'text': str(text), 'record': record['id'], 'field': field, 'year': str(record.get('year', ''))})
+        if eid == 'praxtera':
+            # The résumé's Praxtera lines and the Praxtera lines from Services live here, in his record.
+            for fid in ('resume:praxtera:6:b0', 'resume:praxtera:6:b1', 'resume:praxtera:6:b2', 'resume:praxtera:6:b3'):
+                facts.append(source_state(_render.BY_ID[fid]['text']))
+            add_source('services', 4, 'proof', 1)
+            add_source('services', 7, 'proof', 2)
         if eid == 'apple':
             # Career owns the graph atom; the Design Review mirror stays on Services and cannot cover Career.
             add_source('services', 1, 'proof', 1)
@@ -633,11 +628,12 @@ def career():
     def evidence(eid, lead=False):
         e = L[eid]
         bullets = list(e['bullets'])
-        if eid == 'praxtera':
-            bullets = [bullets[0]]
+        # Praxtera's book carries its whole record except the line that names a venue.
+        keep = (0, 2, 3, 4) if eid == 'praxtera' else range(len(bullets))
         role = 'Software Development Engineer' if eid == 'microsoft' else e['role']
         states = []
-        for bullet_index, text in enumerate(bullets):
+        for bullet_index in keep:
+            text = bullets[bullet_index]
             fact_id = f'site:careerLedger[{ledger_index[eid]}].bullets[{bullet_index}]'
             accepted = accepted_replacements.get(fact_id)
             if accepted:

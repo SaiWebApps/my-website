@@ -349,11 +349,36 @@ def speaking(B):
                 f'{B.t(BY_ID[title_id]["text"])}</strong><span data-session-date-fact="{date_attr}">'
                 f'{B.t(BY_ID[date_id]["text"])}</span></li>')
 
+    LOGOS = {'jacobson-strategic': 'jacobson.png', 'hp': 'hp.svg', 'morgan-lewis': 'morgan-lewis.png', 'pbs': 'pbs.svg',
+             'sonova': 'sonova.svg', 'eagles': 'eagles.svg', 'cmu': 'cmu.svg', 'atos': 'atos.png'}
+
+    def logo_ratio(path):
+        if path.endswith('.png'):
+            head = open(path, 'rb').read(24)
+            return int.from_bytes(head[16:20], 'big') / int.from_bytes(head[20:24], 'big')
+        svg = open(path).read()
+        tag = svg[svg.index('<svg'):].split('>', 1)[0]
+        if 'viewBox="' in tag:
+            box = tag[tag.index('viewBox="') + 9:].split('"', 1)[0].replace(',', ' ').split()
+            return float(box[2]) / float(box[3])
+        size = lambda attr: float(tag[tag.index(f' {attr}="') + len(attr) + 3:].split('"', 1)[0])
+        return size('width') / size('height')
+
+    def logo(mid):
+        # Each client's logo, painted in the poster's ink through a mask; the name stays as hidden text.
+        name = LOGOS.get(mid)
+        if not name:
+            return ''
+        ratio = logo_ratio(os.path.join(ROOT, 'public/assets/logos', name))
+        return f'<span class="sp2-logo" style="--logo: url(/public/assets/logos/{name}); --ar: {ratio:.4f}"></span>'
+
     def member(mid, label, body, mod='', authority=None):
         modifier = f' sp2-member--{mod}' if mod else ''
         authority = authority or mid
+        mark = logo(mid)
+        name = f'{mark}<span class="vh">{B.t(label)}</span>' if mark else B.t(label)
         return (f'<article class="sp2-member{modifier}" id="{mid}" data-authority-member="{authority}" '
-                f'aria-labelledby="sp2-{mid}-h"><h3 class="sp2-member__name" id="sp2-{mid}-h">{B.t(label)}</h3>{body}</article>')
+                f'aria-labelledby="sp2-{mid}-h"><h3 class="sp2-member__name" id="sp2-{mid}-h">{name}</h3>{body}</article>')
 
     source_links = ''.join(
         f'<a href="{html.escape(B.D["eaglesSummitSources"][i]["href"], quote=True)}">'
@@ -372,72 +397,129 @@ def speaking(B):
         '<li><a href="#cmu">Carnegie Mellon</a></li><li><a href="#atos">Atos</a></li></ol></div></nav>'
     )
 
+    # The face is unchanged except the session line: displayTitle now sits where sheet:eagles:0:title was.
+    # The claim moves off the face proof into the card. Otherwise "Basics to Advanced Automation" (4 words)
+    # would make the face proof 4 lines, and guard D17 allows at most 3.
     eagles_proof = proof('eagles-lead', 'eagles',
         atom('site:talks[0].title', 'h4', 'sp2-eagles__title') +
-        atom('sheet:eagles:0:title', cls='sp2-eagles__session') +
+        atom('site:talks[0].displayTitle', cls='sp2-eagles__session') +
         atom('site:talks[0].date', cls='sp2-eagles__date') +
         fact_excerpt('resume:praxtera:6:b4:retirement-redaction', '300+ community and business leaders', cls='sp2-eagles__count') +
-        atom('site:talks[0].summary:retirement-redaction', cls='sp2-eagles__claim') +
         f'<p class="sp2-eagles__sources">{source_links}</p>', 'sp2-proof--eagles')
-    eagles = member('eagles', 'Philadelphia Eagles', '<div class="sp2-member__proofs">' + eagles_proof + '</div>', 'eagles')
+    eagles_photos = (
+        '<figure class="sp2-eagles__photo">'
+        '<img src="/public/assets/eagles-keynote-2.webp" width="1800" height="914" '
+        'alt="Two presenters on a stage with a black curtain, a man in a blue suit with his fists raised and a woman with her hand up, '
+        'while many audience members at round tables raise their hands; Praxtera AI Institute signs, an Eagles summit sign, and green, black, and white balloons stand behind them">'
+        '<img class="sp2-eagles__photo-more" src="/public/assets/eagles-keynote-1.webp" width="1200" height="1800" loading="lazy" '
+        'alt="The same stage seen from the back of the room: a large screen above the presenters reads How are you using AI today?, '
+        'and the audience at round tables, some in Eagles jackets, faces the stage">'
+        '</figure>')
+    eg = 'site:talks[0]'
+    eagles_card = (
+        proof('eagles-brief', 'eagles', atom('sheet:eagles:0:title', 'h4') + atom(f'{eg}.lead') + atom('site:talks[0].summary:retirement-redaction')) +
+        proof('eagles-context', 'eagles', atom(f'{eg}.context') + atom(f'{eg}.course', cls='sp2-course'), 'sp2-proof--cont') +
+        ''.join(proof(f'eagles-part-{i}', 'eagles',
+                      atom(f'{eg}.parts[{i}].title', 'h4') +
+                      ''.join(atom(f'{eg}.parts[{i}].paras[{k}]') for k in range(len(part['paras']))))
+                for i, part in enumerate(B.D['talks'][0]['parts'])) +
+        proof('eagles-quote', 'eagles', atom(f'{eg}.quote.text', cls='sp2-quote') + atom(f'{eg}.quote.by', cls='sp2-quote__by')) +
+        proof('eagles-credit', 'eagles', atom(f'{eg}.credit')))
+    eagles = member('eagles', 'Philadelphia Eagles',
+        eagles_photos + '<div class="sp2-member__proofs">' + eagles_proof + eagles_card + '</div>', 'eagles')
 
+    # Praxtera's own record: only what no client card already says.
     praxtera_proofs = (
         proof('praxtera-scope', 'praxtera',
             atom('resume:praxtera:6:title', 'h3', 'sp2-branch__role') +
             '<p class="sp2-branch__meta">' +
-            atom('resume:praxtera:6:d0', 'span') + atom('resume:praxtera:6:d1', 'span') + atom('resume:praxtera:6:dates', 'span') + '</p>' +
-            atom('resume:praxtera:6:b0') + atom('resume:praxtera:6:b1'), 'sp2-proof--scope') +
-        proof('praxtera-instructors', 'praxtera', atom('resume:praxtera:6:b2'), 'sp2-proof--instructors') +
-        proof('praxtera-curriculum', 'praxtera',
-            atom('resume:praxtera:6:b3') + atom('site:careerLedger[12].bullets[0]'), 'sp2-proof--curriculum') +
-        proof('praxtera-programs', 'praxtera',
-            atom('site:careerLedger[12].bullets[2]') + atom('site:careerLedger[12].bullets[3]'), 'sp2-proof--programs') +
-        proof('praxtera-adoption', 'praxtera',
-            atom('site:careerLedger[12].bullets[4]') + atom('site:careerLedger[12].bullets[5]'), 'sp2-proof--adoption') +
-        proof('praxtera-transfer', 'praxtera',
-            atom('site:services[4].proof[0]') + atom('site:services[4].proof[1]'), 'sp2-proof--transfer') +
-        proof('praxtera-advisory', 'praxtera', atom('site:services[7].proof[2]'), 'sp2-proof--advisory')
+            atom('resume:praxtera:6:d0', 'span') + atom('resume:praxtera:6:d1', 'span') + atom('resume:praxtera:6:dates', 'span') + '</p>', 'sp2-proof--scope') +
+        proof('praxtera-curriculum', 'praxtera', atom('site:careerLedger[12].bullets[0]'), 'sp2-proof--curriculum') +
+        proof('praxtera-transfer', 'praxtera', atom('site:services[4].proof[0]'), 'sp2-proof--transfer') +
+        proof('praxtera-adoption', 'praxtera', atom('site:careerLedger[12].bullets[5]'), 'sp2-proof--adoption')
     )
 
     jacobson = member('jacobson-strategic', 'Jacobson Strategic',
         '<ol class="sp2-sessions">' + session('jacobson-strategic', 'sheet:jacobson-strategic:0:title', 'sheet:jacobson-strategic:0:date') + '</ol>' +
         '<div class="sp2-member__proofs">' +
-        proof('jacobson-delivery', 'jacobson-strategic', atom('site:talks[1].engagements[4].lead')) +
-        proof('jacobson-program', 'jacobson-strategic', atom('site:teachingPrograms[4].title', 'h4')) + '</div>', 'jacobson')
+        proof('jacobson-delivery', 'jacobson-strategic', atom('site:teachingPrograms[4].title', 'h4') + atom('site:talks[1].engagements[4].lead') + atom('site:talks[1].engagements[4].context')) +
+        ''.join(proof(f'jacobson-part-{i}', 'jacobson-strategic',
+                      atom(f'site:talks[1].engagements[4].parts[{i}].title', 'h4') +
+                      ''.join(atom(f'site:talks[1].engagements[4].parts[{i}].paras[{k}]') for k in range(len(part['paras']))))
+                for i, part in enumerate(B.D['talks'][1]['engagements'][4]['parts'])) +
+        proof('jacobson-credit', 'jacobson-strategic', atom('site:talks[1].engagements[4].credit')) +
+        '</div>', 'jacobson')
 
+    # HP's sessions: the face carries the titles; the card names each session and the courses it came from.
+    hp_heading = tuple(atom(f'site:talks[1].engagements[3].parts[{i}].heading', 'h4') for i in range(2))
+    hp_course = tuple(atom(f'site:talks[1].engagements[3].parts[{i}].course', cls='sp2-course') for i in range(2))
     hp = member('hp', 'HP',
-        '<ol class="sp2-sessions">' + session('hp', 'sheet:hp:0:title', 'sheet:hp:0:date') + session('hp', 'sheet:hp:1:title', 'sheet:hp:1:date') + '</ol>' +
+        '<ol class="sp2-sessions">' + session('hp', 'site:talks[1].engagements[3].parts[0].title', 'sheet:hp:0:date') + session('hp', 'site:talks[1].engagements[3].parts[1].displayTitle', 'sheet:hp:1:date') + '</ol>' +
         '<div class="sp2-member__proofs">' +
-        proof('hp-program', 'hp', atom('site:talks[1].engagements[3].date', cls='sp2-proof__date') + atom('site:talks[1].engagements[3].lead')) +
-        proof('hp-foundations', 'hp', atom('site:talks[1].engagements[3].parts[0].title', 'h4') + atom('site:talks[1].engagements[3].parts[0].date', cls='sp2-proof__date') + fact_fragments('site:talks[1].engagements[3].parts[0].text', words.sentences(BY_ID['site:talks[1].engagements[3].parts[0].text']['text']))) +
-        proof('hp-solutions', 'hp', atom('site:talks[1].engagements[3].parts[1].title', 'h4') + atom('site:talks[1].engagements[3].parts[1].date', cls='sp2-proof__date') + atom('site:talks[1].engagements[3].parts[1].text')) +
-        proof('hp-title', 'hp', atom('site:teachingPrograms[0].title', 'h4')) + '</div>', 'hp')
+        proof('hp-program', 'hp', atom('site:teachingPrograms[0].title', 'h4') + atom('site:talks[1].engagements[3].date', cls='sp2-proof__date') + atom('site:talks[1].engagements[3].lead') + atom('site:talks[1].engagements[3].context')) +
+        ''.join(proof(('hp-foundations', 'hp-solutions')[i], 'hp',
+                      hp_heading[i] + atom(f'site:talks[1].engagements[3].parts[{i}].date', cls='sp2-proof__date') + hp_course[i] +
+                      fact_fragments(f'site:talks[1].engagements[3].parts[{i}].text', words.sentences(part['text']))) +
+                ''.join(proof(f'hp-{i}-detail-{k}', 'hp', atom(f'site:talks[1].engagements[3].parts[{i}].paras[{k}]'), 'sp2-proof--cont') for k in range(len(part['paras'])))
+                for i, part in enumerate(B.D['talks'][1]['engagements'][3]['parts'])) +
+        proof('hp-credit', 'hp', atom('site:talks[1].engagements[3].credit')) + '</div>', 'hp')
 
     ml_sentences = words.sentences(BY_ID['site:talks[1].engagements[2].parts[1].text']['text'])
+    ml = B.D['talks'][1]['engagements'][2]
+    def ml_para(i, k):
+        return proof(f'morgan-{i}-detail-{k}', 'morgan-lewis', atom(f'site:talks[1].engagements[2].sessions[{i}].paras[{k}]'), 'sp2-proof--cont')
     morgan = member('morgan-lewis', 'Morgan Lewis',
-        '<ol class="sp2-sessions">' + session('morgan-lewis', 'sheet:morgan-lewis:0:title', 'sheet:morgan-lewis:0:date') + session('morgan-lewis', 'sheet:morgan-lewis:1:title', 'sheet:morgan-lewis:1:date') + '</ol>' +
+        '<ol class="sp2-sessions">' + session('morgan-lewis', 'sheet:morgan-lewis:0:title', 'sheet:morgan-lewis:0:date') + session('morgan-lewis', 'site:talks[1].engagements[2].sessions[1].displayTitle', 'sheet:morgan-lewis:1:date') + '</ol>' +
         '<div class="sp2-member__proofs">' +
-        proof('morgan-brief', 'morgan-lewis', atom('site:talks[1].engagements[2].eventName', 'h4') + atom('site:talks[1].engagements[2].lead')) +
-        proof('morgan-adoption', 'morgan-lewis', atom('site:talks[1].engagements[2].parts[0].title', 'h4') + atom('site:talks[1].engagements[2].parts[0].text')) +
-        proof('morgan-roleplay', 'morgan-lewis', atom('site:talks[1].engagements[2].parts[1].title', 'h4') + ''.join(text_atom(x) for x in ml_sentences[:3])) +
-        proof('morgan-toolkit', 'morgan-lewis', text_atom(ml_sentences[3])) +
-        proof('morgan-title', 'morgan-lewis', atom('site:teachingPrograms[2].title', 'h4')) + '</div>', 'morgan')
+        proof('morgan-brief', 'morgan-lewis', atom('site:teachingPrograms[2].title', 'h4') + atom('site:talks[1].engagements[2].lead') + atom('site:talks[1].engagements[2].context')) +
+        proof('morgan-s1', 'morgan-lewis', atom('site:talks[1].engagements[2].sessions[0].heading', 'h4') + atom('site:talks[1].engagements[2].eventName', cls='sp2-course')) +
+        proof('morgan-adoption', 'morgan-lewis', atom('site:talks[1].engagements[2].parts[0].title', 'h5') + atom('site:talks[1].engagements[2].parts[0].text')) +
+        ml_para(0, 0) +
+        proof('morgan-roleplay', 'morgan-lewis', atom('site:talks[1].engagements[2].parts[1].title', 'h5') + ''.join(text_atom(x) for x in ml_sentences[:2])) +
+        ml_para(0, 1) +
+        proof('morgan-roleplay-live', 'morgan-lewis', text_atom(ml_sentences[2]), 'sp2-proof--cont') +
+        ml_para(0, 2) +
+        proof('morgan-toolkit', 'morgan-lewis', text_atom(ml_sentences[3]), 'sp2-proof--cont') +
+        proof('morgan-s2', 'morgan-lewis', atom('site:talks[1].engagements[2].sessions[1].heading', 'h4') + atom('site:talks[1].engagements[2].sessions[1].course', cls='sp2-course')) +
+        ''.join(ml_para(1, k) for k in range(len(ml['sessions'][1]['paras']))) +
+        proof('morgan-quote', 'morgan-lewis', atom('site:talks[1].engagements[2].quote.text', cls='sp2-quote') + atom('site:talks[1].engagements[2].quote.by', cls='sp2-quote__by')) +
+        proof('morgan-credit', 'morgan-lewis', atom('site:talks[1].engagements[2].credit')) + '</div>', 'morgan')
 
+    # PBS: one session. Sairam's three points are the sections; the retired AI ROI title stays unrendered, the steps carry a new heading.
+    pb = 'site:talks[1].engagements[1]'
     pbs = member('pbs', 'PBS',
         '<ol class="sp2-sessions">' + session('pbs', 'sheet:pbs:0:title', 'sheet:pbs:0:date') + '</ol>' +
         '<div class="sp2-member__proofs">' +
-        proof('pbs-brief', 'pbs', atom('site:talks[1].engagements[1].eventName', 'h4')) +
-        proof('pbs-foundations', 'pbs', atom('site:talks[1].engagements[1].parts[0].title', 'h4') + atom('site:talks[1].engagements[1].parts[0].text')) +
-        proof('pbs-governance', 'pbs', atom('site:talks[1].engagements[1].parts[1].title', 'h4') + atom('site:talks[1].engagements[1].parts[1].text')) +
-        proof('pbs-workflow', 'pbs', ''.join(atom(f'site:talks[1].engagements[1].parts[2].steps[{i}]') for i in range(3))) +
-        proof('pbs-coordination', 'pbs', ''.join(atom(f'site:talks[1].engagements[1].parts[2].steps[{i}]') for i in range(3, 5))) +
-        proof('pbs-title', 'pbs', atom('site:teachingPrograms[3].title', 'h4')) + '</div>', 'pbs')
+        proof('pbs-brief', 'pbs', atom('site:teachingPrograms[3].title', 'h4') + atom(f'{pb}.eventName', cls='sp2-course') +
+              atom(f'{pb}.lead') + atom(f'{pb}.context')) +
+        proof('pbs-foundations', 'pbs', atom(f'{pb}.parts[0].title', 'h4') + atom(f'{pb}.parts[0].text') +
+              atom(f'{pb}.parts[0].paras[0]') + atom(f'{pb}.parts[0].paras[1]')) +
+        proof('pbs-foundations-tools', 'pbs', atom(f'{pb}.parts[0].paras[2]'), 'sp2-proof--cont') +
+        proof('pbs-governance', 'pbs', atom(f'{pb}.parts[1].title', 'h4') + atom(f'{pb}.parts[1].text')) +
+        proof('pbs-workflow', 'pbs', atom(f'{pb}.parts[2].displayTitle', 'h4') +
+              ''.join(atom(f'{pb}.parts[2].steps[{i}]') for i in range(3))) +
+        proof('pbs-coordination', 'pbs', atom(f'{pb}.parts[2].paras[0]') +
+              ''.join(atom(f'{pb}.parts[2].steps[{i}]') for i in range(3, 5)), 'sp2-proof--cont') +
+        proof('pbs-examples', 'pbs', atom(f'{pb}.parts[2].paras[1]'), 'sp2-proof--cont') +
+        proof('pbs-credit', 'pbs', atom(f'{pb}.credit')) + '</div>', 'pbs')
 
+    # Sonova's sessions: the face carries the titles; the card names each session and the course it came from (HP model).
+    sv = B.D['talks'][1]['engagements'][0]
+    sv_heading = tuple(atom(f'site:talks[1].engagements[0].parts[{i}].heading', 'h4') for i in range(2))
+    sv_course = tuple(atom(f'site:talks[1].engagements[0].parts[{i}].course', cls='sp2-course') for i in range(2))
     sonova = member('sonova', 'Sonova',
-        '<ol class="sp2-sessions">' + session('sonova', 'sheet:sonova:0:title', 'sheet:sonova:0:date') + session('sonova', 'sheet:sonova:1:title', 'sheet:sonova:1:date') + '</ol>' +
+        '<ol class="sp2-sessions">' +
+        session('sonova', 'site:talks[1].engagements[0].parts[0].displayTitle', 'sheet:sonova:0:date') +
+        session('sonova', 'site:talks[1].engagements[0].parts[1].displayTitle', 'sheet:sonova:1:date') + '</ol>' +
         '<div class="sp2-member__proofs">' +
-        proof('sonova-progression', 'sonova', ''.join(text_atom(x) for x in words.sentences(BY_ID['site:talks[1].engagements[0].lead']['text']))) +
-        proof('sonova-title', 'sonova', atom('site:teachingPrograms[1].title', 'h4')) + '</div>', 'sonova')
+        proof('sonova-program', 'sonova', atom('site:teachingPrograms[1].title', 'h4') + atom('site:talks[1].engagements[0].date', cls='sp2-proof__date') +
+              atom('site:talks[1].engagements[0].lead') + atom('site:talks[1].engagements[0].context')) +
+        ''.join(proof(('sonova-prompting', 'sonova-skills')[i], 'sonova',
+                      sv_heading[i] + atom(f'site:talks[1].engagements[0].parts[{i}].date', cls='sp2-proof__date') + sv_course[i]) +
+                ''.join(proof(f'sonova-{i}-detail-{k}', 'sonova', atom(f'site:talks[1].engagements[0].parts[{i}].paras[{k}]'), 'sp2-proof--cont')
+                        for k in range(len(part['paras'])))
+                for i, part in enumerate(sv['parts'])) +
+        proof('sonova-credit', 'sonova', atom('site:talks[1].engagements[0].credit')) + '</div>', 'sonova')
 
     praxtera = (f'<section class="sp2-group sp2-group--praxtera" id="praxtera" '
         f'data-authority-group="praxtera-client-provenance" aria-labelledby="sp2-praxtera-h">'
@@ -445,27 +527,51 @@ def speaking(B):
         f'<div class="sp2-branch">{praxtera_proofs}</div><div class="sp2-group__members">'
         f'{eagles}{jacobson}{hp}{morgan}{pbs}{sonova}</div></section>')
 
+    # Carnegie Mellon: the face carries the approved title; the card follows the course from redesign to the fall 2013 class.
+    cmu_t = 'site:talks[3]'
     cmu = member('cmu', 'Carnegie Mellon University',
-        '<p class="sp2-member__title">' + B.t(BY_ID['site:talks[3].title']['text']) + '</p>' +
+        '<ol class="sp2-sessions">' + session('cmu-teaching', f'{cmu_t}.sessions[0].displayTitle', f'{cmu_t}.date') + '</ol>' +
         '<div class="sp2-member__proofs" data-covers-fact="resume:cmu-teaching:10:b0">' +
-        proof('cmu-accepted', 'cmu-teaching', atom('site:talks[3].subtitle', 'h4') + atom('site:talks[3].date', cls='sp2-proof__date') + atom('head:pinned.career.ts.careerById.cmu-teaching.bullets[1]')) +
-        proof('cmu-curriculum', 'cmu-teaching', atom('site:careerLedger[2].bullets[1]')) +
-        proof('cmu-exercises', 'cmu-teaching', atom('site:careerLedger[2].label', 'h4') + atom('site:careerLedger[2].bullets[0]') + atom('site:careerLedger[2].bullets[2]') + atom('site:careerLedger[2].bullets[3]')) +
-        proof('cmu-frameworks', 'cmu-teaching', atom('site:careerLedger[2].bullets[4]')) + '</div>', 'cmu', 'cmu-teaching')
+        proof('cmu-brief', 'cmu-teaching',
+              atom(f'{cmu_t}.title', 'h4') + atom(f'{cmu_t}.subtitle', cls='sp2-course') +
+              atom(f'{cmu_t}.lead') + atom(f'{cmu_t}.context')) +
+        proof('cmu-redesign', 'cmu-teaching',
+              atom(f'{cmu_t}.parts[0].title', 'h4') + atom('site:careerLedger[2].bullets[1]')) +
+        proof('cmu-exercises', 'cmu-teaching',
+              atom(f'{cmu_t}.parts[1].title', 'h4') + atom('site:careerLedger[2].bullets[2]') + atom('site:careerLedger[2].bullets[3]')) +
+        proof('cmu-exercises-apps', 'cmu-teaching', atom('site:careerLedger[2].bullets[4]'), 'sp2-proof--cont') +
+        proof('cmu-platform', 'cmu-teaching',
+              atom(f'{cmu_t}.parts[2].title', 'h4') + atom('site:careerLedger[2].bullets[0]') +
+              ''.join(atom(f'{cmu_t}.parts[2].paras[{k}]') for k in range(2))) +
+        # Keeps the id cmu-accepted: verify-speaking.mjs reads its third atom, the 105+ sentence.
+        proof('cmu-accepted', 'cmu-teaching',
+              atom('site:careerLedger[2].label', 'h4') + atom(f'{cmu_t}.parts[3].paras[0]') +
+              atom('head:pinned.career.ts.careerById.cmu-teaching.bullets[1]')) +
+        proof('cmu-credit', 'cmu-teaching', atom(f'{cmu_t}.credit')) +
+        '</div>', 'cmu', 'cmu-teaching')
 
+    # Atos: the face carries the approved title; the card opens with the talk title and the sheet's title as its course line,
+    # then the accepted summary, then his four closing lines as the sections. Paragraphs past the second go on a continuation screen.
     atos_summary = words.sentences(BY_ID['site:talks[2].summary']['text'])
     atos_intro, atos_graphs = atos_summary[0].split(', then where graphs go next:', 1)
     atos_fragments = [atos_intro + ',', 'then where graphs go next:' + atos_graphs, atos_summary[1]]
+    def atos_part(i, part):
+        paras = [atom(f'site:talks[2].parts[{i}].paras[{k}]') for k in range(len(part['paras']))]
+        return (proof(f'atos-part-{i}', 'atos', atom(f'site:talks[2].parts[{i}].title', 'h4') + ''.join(paras[:2])) +
+                (proof(f'atos-part-{i}-more', 'atos', ''.join(paras[2:]), 'sp2-proof--cont') if len(paras) > 2 else ''))
     atos = member('atos', BY_ID['site:talks[2].org']['text'],
-        '<ol class="sp2-sessions">' + session('atos', 'sheet:atos:0:title', 'sheet:atos:0:date') + '</ol>' +
+        '<ol class="sp2-sessions">' + session('atos', 'site:talks[2].sessions[0].displayTitle', 'sheet:atos:0:date') + '</ol>' +
         '<div class="sp2-member__proofs">' +
-        proof('atos-accepted', 'atos', atom('resume:atos:9:b0')) +
-        proof('atos-talk', 'atos', atom('site:talks[2].title', 'h4') + fact_fragments('site:talks[2].summary', atos_fragments)) +
+        proof('atos-brief', 'atos', atom('site:talks[2].title', 'h4') + atom('sheet:atos:0:title', cls='sp2-course') +
+              atom('resume:atos:9:b0') + atom('site:talks[2].context')) +
+        proof('atos-talk', 'atos', fact_fragments('site:talks[2].summary', atos_fragments)) +
+        ''.join(atos_part(i, part) for i, part in enumerate(B.D['talks'][2]['parts'])) +
         proof('atos-deck', 'atos',
             '<figure class="sp2-deck">'
             '<img src="/public/assets/atos-demo-poster.webp" width="1280" height="720" loading="eager" '
             'alt="Demo from the Atos talk: a local model running in the Ollama desktop app on a Mac, ready for a first message">'
-            '<figcaption data-atom><a href="/public/talks/knowledge-graphs/index.html">Open the deck</a></figcaption></figure>') + '</div>', 'atos')
+            '<figcaption data-atom><a href="/public/talks/knowledge-graphs/index.html">Open the deck</a></figcaption></figure>') +
+        proof('atos-credit', 'atos', atom('site:talks[2].credit')) + '</div>', 'atos')
 
     independent = (f'<section class="sp2-group sp2-group--independent" id="independent-speaking-teaching" '
         f'data-authority-group="independent-speaking-teaching" aria-labelledby="sp2-independent-h">'
@@ -473,14 +579,13 @@ def speaking(B):
         f'<div class="sp2-group__members">{cmu}{atos}</div></section>')
 
     topics = '<section class="sp2-topics" id="talks" aria-labelledby="sp2-topics-h"><h2 id="sp2-topics-h">Speaking topics</h2><div class="sp2-topics__grid">'
-    for i in range(2):
+    for i in range(len(B.D['speakingTopics'])):
         topic_id = B.D['speakingTopics'][i]['id']
         topics += proof(f'topic-{i + 1}', 'talks', atom(f'site:speakingTopics[{i}].title', 'h3') + atom(f'site:speakingTopics[{i}].promise'),
                         content_unit=f'speakingTopics/{topic_id}')
     topics += '</div></section>'
 
     fee = (f'<section class="sp2-booking" id="fee" aria-labelledby="sp2-fee-h"><h2 id="sp2-fee-h">Keynote</h2>'
-           f'<p class="sp2-booking__fare">{B.KEYNOTE_FLOOR}</p>'
            f'<a class="btn sp2-booking__link" data-line="orange" href="mailto:sairambkrishnan@gmail.com?subject=Keynote">Book a talk</a></section>')
     main = f'<section class="sp2" data-line="orange" aria-labelledby="sp2-h"><header class="sp2-hero"><h1 id="sp2-h">Speaking</h1>{index}</header>{praxtera}{independent}{topics}{fee}</section>'
     return B.page('speaking', 'speaking', 'Speaking, Sairam Krishnan', 'Keynote for the Philadelphia Eagles, executive AI education for HP, Morgan Lewis, PBS, Sonova and Jacobson Strategic, and the Atos knowledge-graph talk.', main)

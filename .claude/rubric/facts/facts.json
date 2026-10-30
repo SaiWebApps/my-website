@@ -668,7 +668,6 @@
     "text": "Web Applications Course Developer",
     "twins": [
       "site:careerLedger[2].role",
-      "site:talks[3].subtitle",
       "head:pinned.career.ts.careerById.cmu-teaching.role",
       "head:pinned.career.ts.careerLedger[2].role",
       "head:pinned.speaking.ts.talks[3].subtitle"
@@ -1311,6 +1310,7 @@
     "source": "site",
     "text": "Created a cloud platform for course administration.",
     "twins": [
+      "site:talks[3].parts[2].title",
       "head:pinned.career.ts.careerById.cmu-teaching.bullets[0]",
       "head:pinned.career.ts.careerLedger[2].bullets[0]"
     ],
@@ -4526,6 +4526,213 @@
     "unit": "eagles"
   },
   {
+    "field": "displayTitle",
+    "id": "site:talks[0].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "Basics to Advanced Automation",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "lead",
+    "id": "site:talks[0].lead",
+    "show": "must",
+    "source": "site",
+    "text": "I showed nonprofit leaders how to put AI to work for their missions, starting with the basics of models and prompts and building up to Claude skills, agents and retrieval over their own documents.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "context",
+    "id": "site:talks[0].context",
+    "show": "must",
+    "source": "site",
+    "text": "The summit is the team’s yearly gathering of Philadelphia’s nonprofit community, and this year’s room came from more than 150 local nonprofits. Praxtera’s live two-hour session was built around AI they could use right away.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "course",
+    "id": "site:talks[0].course",
+    "show": "must",
+    "source": "site",
+    "text": "From Praxtera’s AI Basics - Prompting course, with the higher-level concepts of its AI Agents - RAG, Workflows, Skills, and More course.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[0].parts[0].title",
+    "show": "must",
+    "source": "site",
+    "text": "How the models work",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[0].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "The session opened on one question for the room, “How are you using AI today?” Attendees traded what they already use it for and their time-saving shortcuts.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[0].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "A model is like a student made to read most of the internet: it learns patterns without understanding them and predicts one word at a time. That is why it can miss nuance or invent facts.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[0].parts[1].title",
+    "show": "must",
+    "source": "site",
+    "text": "Choosing the right model",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[1].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Most work needs one generalist, such as ChatGPT, Gemini or Copilot. Know when to call a specialist: Perplexity when an answer needs citations, Claude for very long reports, Copilot inside Word, Excel and Outlook, NotebookLM for your own files.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[0].parts[2].title",
+    "show": "must",
+    "source": "site",
+    "text": "Writing better prompts",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[2].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "A prompt works like a brief to a very literal assistant. H4W covers who you are, what you need, why, who it is for and how it should look; COSTAR adds context, objective, style, tone, audience and response.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[0].parts[3].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI across your workflows",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[3].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Then where AI fits in a working day: a long report turned into a few key points, a hard email started from a first draft instead of a blank page, and messy meeting notes turned into action items.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[0].parts[4].title",
+    "show": "must",
+    "source": "site",
+    "text": "Claude skills",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[4].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Claude skills were still very new. A skill saves the instructions for one kind of task so Claude can reuse them, the same idea as a custom GPT in ChatGPT, an agent in Copilot or a Gem in Gemini.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[0].parts[5].title",
+    "show": "must",
+    "source": "site",
+    "text": "Skills, MCPs, plugins, workflows and agents",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[5].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "How the pieces differ: a skill holds the know-how for a task, an MCP server connects the model to outside tools and data, and a plugin packages these to install in one step.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[5].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "A workflow runs the same steps every time; an agent works toward a goal and chooses its own steps, including which workflow to call.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[0].parts[6].title",
+    "show": "must",
+    "source": "site",
+    "text": "Retrieval over your own documents",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[0].parts[6].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Retrieval-augmented generation lets the model look things up in an organization’s documents first. It finds the passages that matter, adds them to the prompt and answers from them, so its answers rest on that organization’s information.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "text",
+    "id": "site:talks[0].quote.text",
+    "show": "must",
+    "source": "site",
+    "text": "Praxtera doesn’t just teach AI, they make it usable. More than 300 leaders walked away not just understanding AI, but actively applying it in their daily work. That’s the difference between exposure and real adoption.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "by",
+    "id": "site:talks[0].quote.by",
+    "show": "must",
+    "source": "site",
+    "text": "Tina D’Orazio, Chief of Staff, Philadelphia Eagles",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[0].credit",
+    "show": "must",
+    "source": "site",
+    "text": "I was the AI subject-matter expert, co-keynoting with Michelle Histand, a communications strategist.",
+    "twins": [],
+    "unit": "eagles"
+  },
+  {
     "field": "label",
     "id": "site:talks[0].sources[0].label",
     "show": "must",
@@ -4711,6 +4918,24 @@
     "unit": "sonova"
   },
   {
+    "field": "context",
+    "id": "site:talks[1].engagements[0].context",
+    "show": "must",
+    "source": "site",
+    "text": "Sonova is a Swiss hearing-care company and the maker of Phonak hearing aids. This was a two-session program for its US operations and back-office teams, built around their answers to a pre-course survey.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[1].engagements[0].credit",
+    "show": "must",
+    "source": "site",
+    "text": "I was the AI subject-matter expert, co-teaching both sessions with Michelle Histand, a communications strategist.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
     "field": "title",
     "id": "site:talks[1].engagements[0].parts[0].title",
     "show": "must",
@@ -4744,12 +4969,76 @@
     "unit": "sonova"
   },
   {
+    "field": "heading",
+    "id": "site:talks[1].engagements[0].parts[0].heading",
+    "show": "must",
+    "source": "site",
+    "text": "First session",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "displayTitle",
+    "id": "site:talks[1].engagements[0].parts[0].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "From Annual Report to Briefing",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "course",
+    "id": "site:talks[1].engagements[0].parts[0].course",
+    "show": "must",
+    "source": "site",
+    "text": "Built on Praxtera’s AI Basics - Prompting course.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[0].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Generative AI explained plainly: a language model is not magic; it predicts the most likely answer from patterns it has learned. Most people can stick with one tool, such as Copilot, and call on a specialist for the rest.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[0].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Prompting practice used their own customers: a vague delay email for a clinic waiting on Phonak devices, rewritten using H4W and COSTAR, then a reply to a hearing care professional, refined until it was ready to send.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[0].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "I ran the demo on Sonova’s own published reports: an outline for a briefing for new US employees, a performance section citing the file and page for every number, then a deck and an email to share it.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[0].paras[3]",
+    "show": "must",
+    "source": "site",
+    "text": "Then one Phonak EON paragraph, rewritten for a first-time hearing aid wearer, an audiologist and a worried adult daughter, with one check: did the model add any claim or number the source never made?",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
     "field": "title",
     "id": "site:talks[1].engagements[0].parts[1].title",
     "show": "must",
     "source": "site",
     "text": "AI Agents: RAG, Workflows, Skills, and More",
     "twins": [
+      "site:talks[1].engagements[0].parts[1].course",
       "site:teachingPrograms[1].sessions[1]",
       "sheet:sonova:1:title"
     ],
@@ -4773,6 +5062,91 @@
     "show": "never",
     "source": "site",
     "text": "2026-10-22",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "heading",
+    "id": "site:talks[1].engagements[0].parts[1].heading",
+    "show": "must",
+    "source": "site",
+    "text": "Second session",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "displayTitle",
+    "id": "site:talks[1].engagements[0].parts[1].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "Save It Once, Check It Every Time",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "course",
+    "id": "site:talks[1].engagements[0].parts[1].course",
+    "show": "must",
+    "source": "site",
+    "text": "Built on Praxtera’s AI Agents - RAG, Workflows, Skills, and More course.",
+    "twins": [
+      "site:talks[1].engagements[0].parts[1].title",
+      "site:teachingPrograms[1].sessions[1]",
+      "sheet:sonova:1:title"
+    ],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[1].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "A Project is the room where files and instructions wait; a skill is a recipe you carry into any room. In a Project, Claude explained a repair center’s overtime from the notes; a chat with no files guessed.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[1].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Grounding works like an open-book exam: the model finds the passages that match, sets them beside the request, and answers from them. Hand it an outdated file and you get a confident, outdated answer.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[1].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "Participants built one skill on September’s made-up budget-versus-actual export, then ran it on October’s with one line. Same model, same file: a plain chat guessed at causes, while the skill wrote “Needs explanation”.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[1].paras[3]",
+    "show": "must",
+    "source": "site",
+    "text": "The checks, in Excel: is each variance a formula, does the overtime flag hold when redone by hand, what happened to a freight line with no budget, and did the skill give any reason the file never did?",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[1].paras[4]",
+    "show": "must",
+    "source": "site",
+    "text": "One fix went into the rules on the spot: mark a row with no budget as “No budget” instead of calculating a percent, then rebuild and rerun October.",
+    "twins": [],
+    "unit": "sonova"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[0].parts[1].paras[5]",
+    "show": "must",
+    "source": "site",
+    "text": "Each person then built a skill for a task they repeat, from their survey answers: a KPI scorecard, WIP aging or a weekly Teams update, tested on made-up data until IT approves a tool.",
     "twins": [],
     "unit": "sonova"
   },
@@ -4832,13 +5206,28 @@
   {
     "field": "lead",
     "id": "site:talks[1].engagements[1].lead",
-    "retired": true,
-    "show": "never",
+    "show": "must",
     "source": "site",
-    "text": "I taught AI strategy with privacy and governance first, then a path to AI ROI rooted in the work that takes people away from the mission.",
-    "twins": [
-      "site:teachingPrograms[3].abstract"
-    ],
+    "text": "I taught a regional PBS station’s team how generative AI works, what has to be settled before anyone uses it, and how to turn work that pulls staff from the mission into workflows and simple agents.",
+    "twins": [],
+    "unit": "pbs"
+  },
+  {
+    "field": "context",
+    "id": "site:talks[1].engagements[1].context",
+    "show": "must",
+    "source": "site",
+    "text": "The room was one regional PBS member station: newsroom, programming, membership and grant staff, working across TV, radio and Microsoft 365. Every example in the session was rebuilt around public media work.",
+    "twins": [],
+    "unit": "pbs"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[1].engagements[1].credit",
+    "show": "must",
+    "source": "site",
+    "text": "I led the AI content as subject-matter expert, alongside Michelle Histand, communications strategist and nonprofit leader.",
+    "twins": [],
     "unit": "pbs"
   },
   {
@@ -4859,6 +5248,33 @@
     "twins": [
       "head:pinned.speaking.ts.talks[1].engagements[0].parts[0].text"
     ],
+    "unit": "pbs"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[1].parts[0].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Generative AI, in three words: advanced Google search. Search is already a prediction engine, and a large language model is a far more powerful version of that prediction, one word at a time.",
+    "twins": [],
+    "unit": "pbs"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[1].parts[0].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "A custom GPT is an app running on the model as its operating system. Retrieval-augmented generation sits under the hood: it lays the organization’s own files over the model, so answers come from that material.",
+    "twins": [],
+    "unit": "pbs"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[1].parts[0].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "Tool choice came from a programming director’s real task: ChatGPT to turn ratings, streaming and social data into one performance story, Claude to mine viewer feedback for underserved audiences, and Perplexity to benchmark reach against other public media.",
+    "twins": [],
     "unit": "pbs"
   },
   {
@@ -4895,6 +5311,33 @@
       "site:teachingPrograms[3].sessions[2]",
       "head:pinned.speaking.ts.talks[1].engagements[0].parts[2].title"
     ],
+    "unit": "pbs"
+  },
+  {
+    "field": "displayTitle",
+    "id": "site:talks[1].engagements[1].parts[2].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "From pain points to agents",
+    "twins": [],
+    "unit": "pbs"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[1].parts[2].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "A workflow runs predefined steps the same way every time. An agent reasons, plans and decides which workflows to use toward a goal.",
+    "twins": [],
+    "unit": "pbs"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[1].parts[2].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Examples were set in the station’s work, in Copilot: a daily rundown drafted from recent email and the calendar, one script rewritten for radio, web, social and the member newsletter, and a grant narrative built from stored impact reports.",
+    "twins": [],
     "unit": "pbs"
   },
   {
@@ -5016,6 +5459,125 @@
     "unit": "morgan-lewis"
   },
   {
+    "field": "context",
+    "id": "site:talks[1].engagements[2].context",
+    "show": "must",
+    "source": "site",
+    "text": "Morgan, Lewis & Bockius is a global law firm. The room was its internal AI trainers and champions. They already knew prompting basics, so the two sessions went straight to adoption and agents.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "heading",
+    "id": "site:talks[1].engagements[2].sessions[0].heading",
+    "show": "must",
+    "source": "site",
+    "text": "First session",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[2].sessions[0].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "I added principles of persuasion from my Wharton Executive MBA, so champions could answer each objection, not just name it.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[2].sessions[0].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Each persona came with a name and a mindset, such as Verification Veronica, who fears phantom citations, and Billable Bill, for whom efficiency is a penalty under hourly billing.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[2].sessions[0].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "The live Gemini roleplay was my idea: the model plays the resister and a champion rehearses the answer. It later grew into Persuaider.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "heading",
+    "id": "site:talks[1].engagements[2].sessions[1].heading",
+    "show": "must",
+    "source": "site",
+    "text": "Second session",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "displayTitle",
+    "id": "site:talks[1].engagements[2].sessions[1].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "From Retrieval to Agents",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "course",
+    "id": "site:talks[1].engagements[2].sessions[1].course",
+    "show": "must",
+    "source": "site",
+    "text": "Built on Praxtera’s AI Agents - RAG, Workflows, Skills, and More course.",
+    "twins": [
+      "sheet:morgan-lewis:1:title"
+    ],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[2].sessions[1].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "The agents course from HP, rebuilt for lawyers and not tied to any one vendor: retrieval grounded in the firm’s own documents, workflows versus agents, and the AGENT checklist for when an agent is worth building.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[2].sessions[1].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Each idea tied back to the first session: prototypes, demos and clear demonstrations that champions could use to show lawyers how AI simplifies their work and empowers them.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "text",
+    "id": "site:talks[1].engagements[2].quote.text",
+    "show": "must",
+    "source": "site",
+    "text": "Praxtera’s train-the-trainer approach is a game changer for us. Our AI teams are even more equipped to teach it, scale it, and embed it across the firm. That’s what drives real adoption.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "by",
+    "id": "site:talks[1].engagements[2].quote.by",
+    "show": "must",
+    "source": "site",
+    "text": "Colleen Nihill, Chief AI and Knowledge Officer, Morgan, Lewis & Bockius LLP",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[1].engagements[2].credit",
+    "show": "must",
+    "source": "site",
+    "text": "I was the AI subject-matter expert, co-teaching with Michelle Histand, a communications strategist.",
+    "twins": [],
+    "unit": "morgan-lewis"
+  },
+  {
     "field": "title",
     "id": "site:talks[1].engagements[2].parts[0].title",
     "show": "must",
@@ -5096,6 +5658,15 @@
     "unit": "hp"
   },
   {
+    "field": "context",
+    "id": "site:talks[1].engagements[3].context",
+    "show": "must",
+    "source": "site",
+    "text": "Praxtera’s first client program after the Jacobson pilot: two sessions for HP’s IT and digital-solutions teams, from how models work to building agents.",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
     "field": "title",
     "id": "site:talks[1].engagements[3].parts[0].title",
     "show": "must",
@@ -5105,6 +5676,24 @@
       "site:teachingPrograms[0].sessions[0]",
       "head:pinned.speaking.ts.talks[1].engagements[2].parts[0].title"
     ],
+    "unit": "hp"
+  },
+  {
+    "field": "heading",
+    "id": "site:talks[1].engagements[3].parts[0].heading",
+    "show": "must",
+    "source": "site",
+    "text": "First session",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "course",
+    "id": "site:talks[1].engagements[3].parts[0].course",
+    "show": "must",
+    "source": "site",
+    "text": "Built on Praxtera’s AI Basics - Prompting course.",
+    "twins": [],
     "unit": "hp"
   },
   {
@@ -5137,6 +5726,33 @@
     "unit": "hp"
   },
   {
+    "field": "paras",
+    "id": "site:talks[1].engagements[3].parts[0].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Model choice was taught on their own jobs: ChatGPT, Claude and Perplexity for a delivery manager’s AI return-on-investment report to leadership, and ChatGPT, Gemini and Perplexity for architects designing a customer-service chatbot on Salesforce.",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[3].parts[0].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "For each stage of that lifecycle, the team mapped what AI takes in and hands back: user stories from stakeholder interviews, architecture decision records, test suites built from negative scenarios, and rollout, canary and rollback plans.",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[3].parts[0].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "Between sessions, each participant used AI to research where the IT industry is headed and wrote a one-page brief.",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
     "field": "title",
     "id": "site:talks[1].engagements[3].parts[1].title",
     "show": "must",
@@ -5146,6 +5762,33 @@
       "site:teachingPrograms[0].sessions[1]",
       "head:pinned.speaking.ts.talks[1].engagements[2].parts[1].title"
     ],
+    "unit": "hp"
+  },
+  {
+    "field": "displayTitle",
+    "id": "site:talks[1].engagements[3].parts[1].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "From Retrieval to Agents",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "heading",
+    "id": "site:talks[1].engagements[3].parts[1].heading",
+    "show": "must",
+    "source": "site",
+    "text": "Second session",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "course",
+    "id": "site:talks[1].engagements[3].parts[1].course",
+    "show": "must",
+    "source": "site",
+    "text": "Taught at HP as Applying AI in IT and Digital Solutions, built on Praxtera’s AI Agents - RAG, Workflows, Skills, and More course.",
+    "twins": [],
     "unit": "hp"
   },
   {
@@ -5180,6 +5823,42 @@
     "twins": [
       "head:pinned.speaking.ts.talks[1].engagements[2].parts[1].text"
     ],
+    "unit": "hp"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[3].parts[1].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Retrieval was shown on their own work: a store of sample business and functional requirements sits in front of the model, so it translates a new RFP from the team’s own documents.",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[3].parts[1].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "A workflow follows fixed steps; an agent reasons and picks which workflows to run. The AGENT checklist: autonomous, goal-oriented, error-tolerant, necessary info, time saving. Strategic decisions, one-time tasks and judgment calls stay with people.",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[3].parts[1].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "The troubleshooter followed a live agent build: it greets the user, identifies the issue, walks through fixes or hands off to a person, and confirms the resolution.",
+    "twins": [],
+    "unit": "hp"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[1].engagements[3].credit",
+    "show": "must",
+    "source": "site",
+    "text": "I was the AI/ML specialist and subject-matter expert, co-teaching the first session with Michelle Histand, a communications strategist, and the second with Lakshman Mantha, a software engineer who covered Microsoft Copilot.",
+    "twins": [],
     "unit": "hp"
   },
   {
@@ -5241,6 +5920,114 @@
     "twins": [
       "site:teachingPrograms[4].abstract"
     ],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "context",
+    "id": "site:talks[1].engagements[4].context",
+    "show": "must",
+    "source": "site",
+    "text": "This was the first run of the Praxtera curriculum: Jacobson Strategic is the crisis-communications firm led by Praxtera’s founders.",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[1].engagements[4].parts[0].title",
+    "show": "must",
+    "source": "site",
+    "text": "Prompt engineering",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[4].parts[0].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Why structure and context change what a model writes. The team rewrote vague prompts with the 5 W’s + How and COSTAR frameworks, and wrote image prompts with VISUAL.",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[4].parts[0].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Then one piece of bad news, a delayed software rollout, went to four audiences: a colleague, the CEO, customers and an all-hands. Same facts, four messages.",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[4].parts[0].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "Everyday patterns followed: a 15-message email thread summarized into decisions, owners and deadlines; a budget request built on AIDA; and one board summary drawn from five department reports.",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[1].engagements[4].parts[1].title",
+    "show": "must",
+    "source": "site",
+    "text": "Which model for which task",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[4].parts[1].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "ChatGPT, Gemini, Claude, Perplexity, Microsoft Copilot and NotebookLM side by side. One generalist covers most work; each also has a specialty, such as Perplexity for cited research, Claude for long documents and Copilot inside Microsoft 365.",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[1].engagements[4].parts[2].title",
+    "show": "must",
+    "source": "site",
+    "text": "Trust, but verify",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[4].parts[2].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "How models learn patterns from examples, and why that makes them miss nuance, amplify bias and state made-up facts with confidence, shown with a live hallucination example. The rule: always verify, always edit.",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[1].engagements[4].parts[3].title",
+    "show": "must",
+    "source": "site",
+    "text": "Personas and roleplay",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[1].engagements[4].parts[3].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Putting a model’s ability to adopt a persona and roleplay to work in the team’s day-to-day communications.",
+    "twins": [],
+    "unit": "jacobson-strategic"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[1].engagements[4].credit",
+    "show": "must",
+    "source": "site",
+    "text": "Sairam was the AI subject-matter expert, co-teaching with Michelle Histand, a communications strategist.",
+    "twins": [],
     "unit": "jacobson-strategic"
   },
   {
@@ -5308,6 +6095,168 @@
     "twins": [
       "head:pinned.speaking.ts.talks[2].summary"
     ],
+    "unit": "atos"
+  },
+  {
+    "field": "context",
+    "id": "site:talks[2].context",
+    "show": "must",
+    "source": "site",
+    "text": "Atos is a global, AI-powered technology partner. This was an independent talk, and each graph example ran twice: once for a hospital or a bank, once for IT operations.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "displayTitle",
+    "id": "site:talks[2].sessions[0].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "Plan Big, Run Small, Check with the Graph",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[2].parts[0].title",
+    "show": "must",
+    "source": "site",
+    "text": "Nouns, verbs, adjectives",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[0].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "A node is a noun, an edge is a verb and a property is an adjective. Models draft the graph, people verify it, and only verified edges are the authority.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[0].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "The same shape relabels in place, from a patient, her doctor and her drugs to a client, its payment service, the server it runs on, a change and an incident.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[2].parts[1].title",
+    "show": "must",
+    "source": "site",
+    "text": "Before the model, and after",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[1].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Before the model, the graph finds the facts that matter and a verified example of a good answer. Asked if a patient with a penicillin allergy can take amoxicillin, the model gave a safe no.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[1].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "For a failing payment service, the same path led through its server to a library upgrade seventeen minutes before the incident, and to a rollback.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[1].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "After the model, an agent’s answer becomes a chain of claims tested against the graph. Blaming the data centre failed and went back as feedback; naming the change passed.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[1].paras[3]",
+    "show": "must",
+    "source": "site",
+    "text": "The graph is only an authority while someone keeps it current.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[2].parts[2].title",
+    "show": "must",
+    "source": "site",
+    "text": "Small models fit in the room",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[2].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "A small model runs on one laptop or one GPU, usually under fifteen billion parameters. It keeps data in the building, but reasons less well and needs sharper prompts, evaluation and often fine-tuning.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[2].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Four sliders set the choice: how sensitive the data is, how many requests, how hard the thinking and how fast the answer. Hard thinking on secret data meant the largest open model your hardware allows.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[2].paras[2]",
+    "show": "must",
+    "source": "site",
+    "text": "Then the setup, in three commands: install Ollama, run Gemma 4 12B, and call the same model as an API on the laptop.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[2].parts[3].title",
+    "show": "must",
+    "source": "site",
+    "text": "Big model plans, small models execute, graph checks",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[3].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "A small model does not want a conversation; it wants a task. A vague question about a payment problem got a generic answer. A narrow task with the graph’s facts named the change and the rollback.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[2].parts[3].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Together: a frontier model breaks the request into narrow tasks, small models run each one on your hardware, and the graph checks every claim.",
+    "twins": [],
+    "unit": "atos"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[2].credit",
+    "show": "must",
+    "source": "site",
+    "text": "I wrote and gave this talk alone, and built the interactive deck it runs on.",
+    "twins": [],
     "unit": "atos"
   },
   {
@@ -5383,9 +6332,8 @@
     "id": "site:talks[3].subtitle",
     "show": "must",
     "source": "site",
-    "text": "Web Applications Course Developer · Teaching Assistant",
+    "text": "Web Applications Course Developer · Head Teaching Assistant",
     "twins": [
-      "resume:cmu-teaching:10:title",
       "site:careerLedger[2].role",
       "head:pinned.career.ts.careerById.cmu-teaching.role",
       "head:pinned.career.ts.careerLedger[2].role",
@@ -5403,6 +6351,100 @@
       "resume:cmu-teaching:10:b0",
       "head:pinned.speaking.ts.talks[3].summary"
     ],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "lead",
+    "id": "site:talks[3].lead",
+    "show": "must",
+    "source": "site",
+    "text": "I helped rebuild Carnegie Mellon’s web application course, writing the demos, exercises and online platform that students learned from.",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "context",
+    "id": "site:talks[3].context",
+    "show": "must",
+    "source": "site",
+    "text": "15-437/15-637 Web Application Development is a Carnegie Mellon computer science course for upper-level undergraduates and graduate students. I built the new materials in summer 2013 for the fall semester, which added Django alongside J2EE.",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "displayTitle",
+    "id": "site:talks[3].sessions[0].displayTitle",
+    "show": "must",
+    "source": "site",
+    "text": "From HTTP to Django",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[3].parts[0].title",
+    "show": "must",
+    "source": "site",
+    "text": "Redesigning the course",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[3].parts[1].title",
+    "show": "must",
+    "source": "site",
+    "text": "Exercises and reference apps",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "title",
+    "id": "site:talks[3].parts[2].title",
+    "show": "must",
+    "source": "site",
+    "text": "A course platform in the cloud",
+    "twins": [
+      "site:careerLedger[2].bullets[0]",
+      "head:pinned.career.ts.careerById.cmu-teaching.bullets[0]",
+      "head:pinned.career.ts.careerLedger[2].bullets[0]"
+    ],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[3].parts[2].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Students logged in to view and try demos of each course concept; one set built up MVC step by step.",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[3].parts[2].paras[1]",
+    "show": "must",
+    "source": "site",
+    "text": "They also submitted assignments there, with guided walkthroughs such as building a survey app. It ran on Heroku first, then AWS.",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "paras",
+    "id": "site:talks[3].parts[3].paras[0]",
+    "show": "must",
+    "source": "site",
+    "text": "In the second half of the semester, each team designed and built a web application of its own choosing, then demonstrated it to the course staff.",
+    "twins": [],
+    "unit": "cmu-teaching"
+  },
+  {
+    "field": "credit",
+    "id": "site:talks[3].credit",
+    "show": "must",
+    "source": "site",
+    "text": "I was the course developer and head teaching assistant, working with Professor Charlie Garrod, who taught the course.",
+    "twins": [],
     "unit": "cmu-teaching"
   },
   {
@@ -5534,6 +6576,7 @@
     "text": "AI Agents: RAG, Workflows, Skills, and More",
     "twins": [
       "site:talks[1].engagements[0].parts[1].title",
+      "site:talks[1].engagements[0].parts[1].course",
       "sheet:sonova:1:title"
     ],
     "unit": "sonova"
@@ -5646,9 +6689,7 @@
     "show": "never",
     "source": "site",
     "text": "I taught AI strategy with privacy and governance first, then a path to AI ROI rooted in the work that takes people away from the mission.",
-    "twins": [
-      "site:talks[1].engagements[1].lead"
-    ],
+    "twins": [],
     "unit": "pbs"
   },
   {
@@ -7468,6 +8509,33 @@
     "id": "site:speakingTopics[0].promise",
     "show": "must",
     "source": "site",
+    "text": "Turn AI skeptics into champions by taking their concerns seriously and showing how AI extends their expertise.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:speakingTopics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "ship-the-decision",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:speakingTopics[1].title",
+    "show": "must",
+    "source": "site",
+    "text": "Ship the decision, not the diagram",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:speakingTopics[1].promise",
+    "show": "must",
+    "source": "site",
     "text": "Why technical decisions only matter when teams can carry them into the organization.",
     "twins": [
       "head:pinned.content.ts.speakingTopics[1].promise"
@@ -7476,7 +8544,7 @@
   },
   {
     "field": "id",
-    "id": "site:speakingTopics[1].id",
+    "id": "site:speakingTopics[2].id",
     "show": "never",
     "source": "site",
     "text": "agentic-leadership",
@@ -7485,7 +8553,7 @@
   },
   {
     "field": "title",
-    "id": "site:speakingTopics[1].title",
+    "id": "site:speakingTopics[2].title",
     "show": "must",
     "source": "site",
     "text": "Engineering leadership in the agentic era",
@@ -7496,7 +8564,7 @@
   },
   {
     "field": "promise",
-    "id": "site:speakingTopics[1].promise",
+    "id": "site:speakingTopics[2].promise",
     "show": "must",
     "source": "site",
     "text": "How management systems change when software production becomes abundant.",
@@ -7879,6 +8947,7 @@
     "text": "Created a cloud platform for course administration.",
     "twins": [
       "site:careerLedger[2].bullets[0]",
+      "site:talks[3].parts[2].title",
       "head:pinned.career.ts.careerLedger[2].bullets[0]"
     ],
     "unit": "cmu-teaching"
@@ -10564,6 +11633,7 @@
     "text": "Created a cloud platform for course administration.",
     "twins": [
       "site:careerLedger[2].bullets[0]",
+      "site:talks[3].parts[2].title",
       "head:pinned.career.ts.careerById.cmu-teaching.bullets[0]"
     ],
     "unit": "cmu-teaching"
@@ -14100,7 +15170,7 @@
     "source": "head",
     "text": "Why technical decisions only matter when teams can carry them into the organization.",
     "twins": [
-      "site:speakingTopics[0].promise"
+      "site:speakingTopics[1].promise"
     ],
     "unit": "talks"
   },
@@ -14113,7 +15183,7 @@
     "source": "head",
     "text": "Engineering leadership in the agentic era",
     "twins": [
-      "site:speakingTopics[1].title"
+      "site:speakingTopics[2].title"
     ],
     "unit": "talks"
   },
@@ -14126,7 +15196,7 @@
     "source": "head",
     "text": "How management systems change when software production becomes abundant.",
     "twins": [
-      "site:speakingTopics[1].promise"
+      "site:speakingTopics[2].promise"
     ],
     "unit": "talks"
   },
@@ -16903,7 +17973,7 @@
     "id": "sheet:morgan-lewis:0:title",
     "show": "must",
     "source": "sheet",
-    "text": "AI Basics - Prompting",
+    "text": "Turning AI Skeptics into Champions",
     "twins": [],
     "unit": "morgan-lewis"
   },
@@ -16925,7 +17995,9 @@
     "show": "must",
     "source": "sheet",
     "text": "AI Agents - RAG, Workflows, Skills, and More",
-    "twins": [],
+    "twins": [
+      "site:talks[1].engagements[2].sessions[1].course"
+    ],
     "unit": "morgan-lewis"
   },
   {
@@ -17067,6 +18139,7 @@
     "text": "AI Agents - RAG, Workflows, Skills, and More",
     "twins": [
       "site:talks[1].engagements[0].parts[1].title",
+      "site:talks[1].engagements[0].parts[1].course",
       "site:teachingPrograms[1].sessions[1]"
     ],
     "unit": "sonova"

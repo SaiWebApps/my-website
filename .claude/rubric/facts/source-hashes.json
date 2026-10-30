@@ -1,6 +1,6 @@
 {
   "coverageSha256": "2304bdca84179fa781644063ce7007e992a505ef0964b80752a2c7449109ee93",
-  "factsSha256": "9180dce27548850b365b52a39845e57847d2a241495921c3fa1cba2fd1a3823c",
+  "factsSha256": "e78725a2e9d774a91231c23ef800ee63b8a39ac3eac92701e0f5eded7f7b3745",
   "generator": "deterministic-governed-sources-with-pinned-history",
   "historicalHeadInput": {
     "authorityRank": "historical-review",
@@ -73,7 +73,7 @@
     ".claude/rubric/guard.py": "0d3b3981a780766842c1ff508ccb4a6d43295213f2a46e9094c018d99934c44d",
     ".claude/rubric/out/career-evidence-transition/capture.json": "df6b8c25ad1d3e911eb65deef56b67f45579b87882ecf80e65fb94241f24b989",
     ".claude/rubric/out/career-evidence-transition/experience-audit-review.json": "4d036854b421b09b8a654348ae6fad89b48a0b2ee1c6394da3520e907ee92838",
-    ".claude/rubric/registry.json": "b8588fdfe55abb8ca278136e5998128e85f4fbd068987cf7219f4218a16f332a",
+    ".claude/rubric/registry.json": "465c5c3ba8972cb8257bb20557f1840575e3e563ee76e602fbef927079bfa74c",
     ".claude/rubric/retired.json": "1b02030179f94e15196fd0c63768c6548146b66a064c9294f2daffa1f15b2ecf",
     ".claude/rubric/sources/drone-megaddon-figure-assets.json": "2f19cd63a8d1c6c4a15a5e14ee64be14e5f6b3d8062a24e1b672f28f987adcb4",
     ".claude/rubric/sources/papers-full/SOURCES.md": "b0d2a53883224e1a6082dab7021b8d9f8c1356f2d7854e684c37738ee832b9a8",
@@ -82,7 +82,7 @@
     ".claude/rubric/sources/papers-full/drone-megaddon-2026.txt": "f8c82936c83e08afcc1f7e523a203074c3f056f32084482d41b1eefc1f14ece5",
     ".claude/rubric/sources/papers-full/who-trains.txt": "7d6ea3c163b69c427f434e2f1d90c78b56e4c32527c71b320399ef4fd5b481d1",
     ".claude/rubric/sources/papers.txt": "b91115f7d40dda6c4e4cd11e46f6ba8216b3f2be56ade2285cd6f7903794529a",
-    ".claude/rubric/sources/sheet.json": "7f09b45691f712ae3fa5a88ae652601435c687eadd72946e34afee0c7a1786da",
+    ".claude/rubric/sources/sheet.json": "a32b3a05782b323f6d1cac0a74ddd6bd72e28f41bd59a6e2e5a702eba87bf455",
     "public/assets/Resume.pdf": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
     "public/assets/Sairam_Krishnan_Resume.pdf": "c3bbbb2bdb331d7822a380b3ce57449c1c7751d32ac99889c0e60ee4e18807ec",
     "public/assets/atos-demo-poster.webp": "544b46f9a60392fd48a3324a694b5299bf3dc0d44a838d6022aafb7c36813910",
@@ -90,8 +90,8 @@
     "public/assets/research/drone-megaddon-2014.pdf": "ae98e121563107488d2f297f0f541cb790f90ce4fb285c911309b7d9473b8005",
     "public/assets/research/drone-megaddon-2026-language-vision-architecture.png": "99766997628d3f369e9c74da880dffcb2be0e42eca7731a90820f806908b5ebe",
     "public/assets/research/drone-megaddon-2026.pdf": "0bad9c95e7d9476b52b187dab5dab195c1817fc18f9342d3e19949a0554f81da",
-    "site/content.json": "00c2610f8d838c522332c0e60d409ea20cbbea32f32b2300b662236d9c8bb0d5"
+    "site/content.json": "6c81fb114de0ee3f599be12c04adfc66a906a0932653f6ec8295dcf9e6119d49"
   },
-  "recordCount": 1539,
+  "recordCount": 1657,
   "schemaVersion": 3
 }

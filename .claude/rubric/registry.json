@@ -71,6 +71,11 @@
      {
       "id": "architecture-adoption",
       "title": "From architecture to adoption",
+      "promise": "Turn AI skeptics into champions by taking their concerns seriously and showing how AI extends their expertise."
+     },
+     {
+      "id": "ship-the-decision",
+      "title": "Ship the decision, not the diagram",
       "promise": "Why technical decisions only matter when teams can carry them into the organization."
      },
      {

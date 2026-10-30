@@ -654,6 +654,61 @@
       "startDate": "2026-03-18",
       "title": "AI for Impact",
       "summary": "Keynoted the Philadelphia Eagles' 12th annual Eagles Care Summit at Lincoln Financial Field on March 18, 2026, delivering \"AI for Impact\" to more than 300 community and business leaders.",
+      "displayTitle": "Basics to Advanced Automation",
+      "lead": "I showed nonprofit leaders how to put AI to work for their missions, starting with the basics of models and prompts and building up to Claude skills, agents and retrieval over their own documents.",
+      "context": "The summit is the team’s yearly gathering of Philadelphia’s nonprofit community, and this year’s room came from more than 150 local nonprofits. Praxtera’s live two-hour session was built around AI they could use right away.",
+      "course": "From Praxtera’s AI Basics - Prompting course, with the higher-level concepts of its AI Agents - RAG, Workflows, Skills, and More course.",
+      "parts": [
+        {
+          "title": "How the models work",
+          "paras": [
+            "The session opened on one question for the room, “How are you using AI today?” Attendees traded what they already use it for and their time-saving shortcuts.",
+            "A model is like a student made to read most of the internet: it learns patterns without understanding them and predicts one word at a time. That is why it can miss nuance or invent facts."
+          ]
+        },
+        {
+          "title": "Choosing the right model",
+          "paras": [
+            "Most work needs one generalist, such as ChatGPT, Gemini or Copilot. Know when to call a specialist: Perplexity when an answer needs citations, Claude for very long reports, Copilot inside Word, Excel and Outlook, NotebookLM for your own files."
+          ]
+        },
+        {
+          "title": "Writing better prompts",
+          "paras": [
+            "A prompt works like a brief to a very literal assistant. H4W covers who you are, what you need, why, who it is for and how it should look; COSTAR adds context, objective, style, tone, audience and response."
+          ]
+        },
+        {
+          "title": "AI across your workflows",
+          "paras": [
+            "Then where AI fits in a working day: a long report turned into a few key points, a hard email started from a first draft instead of a blank page, and messy meeting notes turned into action items."
+          ]
+        },
+        {
+          "title": "Claude skills",
+          "paras": [
+            "Claude skills were still very new. A skill saves the instructions for one kind of task so Claude can reuse them, the same idea as a custom GPT in ChatGPT, an agent in Copilot or a Gem in Gemini."
+          ]
+        },
+        {
+          "title": "Skills, MCPs, plugins, workflows and agents",
+          "paras": [
+            "How the pieces differ: a skill holds the know-how for a task, an MCP server connects the model to outside tools and data, and a plugin packages these to install in one step.",
+            "A workflow runs the same steps every time; an agent works toward a goal and chooses its own steps, including which workflow to call."
+          ]
+        },
+        {
+          "title": "Retrieval over your own documents",
+          "paras": [
+            "Retrieval-augmented generation lets the model look things up in an organization’s documents first. It finds the passages that matter, adds them to the prompt and answers from them, so its answers rest on that organization’s information."
+          ]
+        }
+      ],
+      "quote": {
+        "text": "Praxtera doesn’t just teach AI, they make it usable. More than 300 leaders walked away not just understanding AI, but actively applying it in their daily work. That’s the difference between exposure and real adoption.",
+        "by": "Tina D’Orazio, Chief of Staff, Philadelphia Eagles"
+      },
+      "credit": "I was the AI subject-matter expert, co-keynoting with Michelle Histand, a communications strategist.",
       "sources": [
         {
           "label": "Eagles Care Summit archive",
@@ -681,16 +736,38 @@
           "org": "Sonova",
           "date": "Oct 21 – 22, 2026",
           "lead": "I built a beginner-to-advanced progression from prompting to reusable workflows, inventory tracking, and prediction use cases. Participants tested budget-analysis software against live formulas, edge cases, and invented explanations, then turned corrections into reusable rules.",
+          "context": "Sonova is a Swiss hearing-care company and the maker of Phonak hearing aids. This was a two-session program for its US operations and back-office teams, built around their answers to a pre-course survey.",
+          "credit": "I was the AI subject-matter expert, co-teaching both sessions with Michelle Histand, a communications strategist.",
           "parts": [
             {
               "title": "AI Basics: Prompting",
               "date": "Oct 21, 2026",
-              "startDate": "2026-10-21"
+              "startDate": "2026-10-21",
+              "heading": "First session",
+              "displayTitle": "From Annual Report to Briefing",
+              "course": "Built on Praxtera’s AI Basics - Prompting course.",
+              "paras": [
+                "Generative AI explained plainly: a language model is not magic; it predicts the most likely answer from patterns it has learned. Most people can stick with one tool, such as Copilot, and call on a specialist for the rest.",
+                "Prompting practice used their own customers: a vague delay email for a clinic waiting on Phonak devices, rewritten using H4W and COSTAR, then a reply to a hearing care professional, refined until it was ready to send.",
+                "I ran the demo on Sonova’s own published reports: an outline for a briefing for new US employees, a performance section citing the file and page for every number, then a deck and an email to share it.",
+                "Then one Phonak EON paragraph, rewritten for a first-time hearing aid wearer, an audiologist and a worried adult daughter, with one check: did the model add any claim or number the source never made?"
+              ]
             },
             {
               "title": "AI Agents: RAG, Workflows, Skills, and More",
               "date": "Oct 22, 2026",
-              "startDate": "2026-10-22"
+              "startDate": "2026-10-22",
+              "heading": "Second session",
+              "displayTitle": "Save It Once, Check It Every Time",
+              "course": "Built on Praxtera’s AI Agents - RAG, Workflows, Skills, and More course.",
+              "paras": [
+                "A Project is the room where files and instructions wait; a skill is a recipe you carry into any room. In a Project, Claude explained a repair center’s overtime from the notes; a chat with no files guessed.",
+                "Grounding works like an open-book exam: the model finds the passages that match, sets them beside the request, and answers from them. Hand it an outdated file and you get a confident, outdated answer.",
+                "Participants built one skill on September’s made-up budget-versus-actual export, then ran it on October’s with one line. Same model, same file: a plain chat guessed at causes, while the skill wrote “Needs explanation”.",
+                "The checks, in Excel: is each variance a formula, does the overtime flag hold when redone by hand, what happened to a freight line with no budget, and did the skill give any reason the file never did?",
+                "One fix went into the rules on the spot: mark a row with no budget as “No budget” instead of calculating a percent, then rebuild and rerun October.",
+                "Each person then built a skill for a task they repeat, from their survey answers: a KPI scorecard, WIP aging or a weekly Teams update, tested on made-up data until IT approves a tool."
+              ]
             }
           ]
         },
@@ -700,11 +777,18 @@
           "date": "Feb 27, 2026",
           "startDate": "2026-02-27",
           "eventName": "AI strategy session · PBS",
-          "lead": "I taught AI strategy with privacy and governance first, then a path to AI ROI rooted in the work that takes people away from the mission.",
+          "lead": "I taught a regional PBS station’s team how generative AI works, what has to be settled before anyone uses it, and how to turn work that pulls staff from the mission into workflows and simple agents.",
+          "context": "The room was one regional PBS member station: newsroom, programming, membership and grant staff, working across TV, radio and Microsoft 365. Every example in the session was rebuilt around public media work.",
+          "credit": "I led the AI content as subject-matter expert, alongside Michelle Histand, communications strategist and nonprofit leader.",
           "parts": [
             {
               "title": "AI foundations",
-              "text": "What generative AI is and isn’t, how large language models work, and where they fail."
+              "text": "What generative AI is and isn’t, how large language models work, and where they fail.",
+              "paras": [
+                "Generative AI, in three words: advanced Google search. Search is already a prediction engine, and a large language model is a far more powerful version of that prediction, one word at a time.",
+                "A custom GPT is an app running on the model as its operating system. Retrieval-augmented generation sits under the hood: it lays the organization’s own files over the model, so answers come from that material.",
+                "Tool choice came from a programming director’s real task: ChatGPT to turn ratings, streaming and social data into one performance story, Claude to mine viewer feedback for underserved audiences, and Perplexity to benchmark reach against other public media."
+              ]
             },
             {
               "title": "Data privacy and governance first",
@@ -712,6 +796,11 @@
             },
             {
               "title": "First steps toward AI ROI",
+              "displayTitle": "From pain points to agents",
+              "paras": [
+                "A workflow runs predefined steps the same way every time. An agent reasons, plans and decides which workflows to use toward a goal.",
+                "Examples were set in the station’s work, in Copilot: a daily rundown drafted from recent email and the calendar, one script rewritten for radio, web, social and the member newsletter, and a grant narrative built from stored impact reports."
+              ],
               "steps": [
                 "Start with the pain points that take employees’ time away from work central to the mission.",
                 "Break each pain point into a list of steps.",
@@ -729,6 +818,31 @@
           "startDate": "2026-01-20",
           "eventName": "AI adoption and change-management workshop · Morgan Lewis",
           "lead": "I trained the firm’s internal trainers and champions to help initially resistant lawyers adopt AI, turning real objections into live roleplay and reusable enablement toolkits.",
+          "context": "Morgan, Lewis & Bockius is a global law firm. The room was its internal AI trainers and champions. They already knew prompting basics, so the two sessions went straight to adoption and agents.",
+          "sessions": [
+            {
+              "heading": "First session",
+              "paras": [
+                "I added principles of persuasion from my Wharton Executive MBA, so champions could answer each objection, not just name it.",
+                "Each persona came with a name and a mindset, such as Verification Veronica, who fears phantom citations, and Billable Bill, for whom efficiency is a penalty under hourly billing.",
+                "The live Gemini roleplay was my idea: the model plays the resister and a champion rehearses the answer. It later grew into Persuaider."
+              ]
+            },
+            {
+              "heading": "Second session",
+              "displayTitle": "From Retrieval to Agents",
+              "course": "Built on Praxtera’s AI Agents - RAG, Workflows, Skills, and More course.",
+              "paras": [
+                "The agents course from HP, rebuilt for lawyers and not tied to any one vendor: retrieval grounded in the firm’s own documents, workflows versus agents, and the AGENT checklist for when an agent is worth building.",
+                "Each idea tied back to the first session: prototypes, demos and clear demonstrations that champions could use to show lawyers how AI simplifies their work and empowers them."
+              ]
+            }
+          ],
+          "quote": {
+            "text": "Praxtera’s train-the-trainer approach is a game changer for us. Our AI teams are even more equipped to teach it, scale it, and embed it across the firm. That’s what drives real adoption.",
+            "by": "Colleen Nihill, Chief AI and Knowledge Officer, Morgan, Lewis & Bockius LLP"
+          },
+          "credit": "I was the AI subject-matter expert, co-teaching with Michelle Histand, a communications strategist.",
           "parts": [
             {
               "title": "Why adoption fails",
@@ -745,20 +859,37 @@
           "org": "HP",
           "date": "Oct – Nov 2025",
           "lead": "I enabled HP teams to expand Copilot use into reusable workflows and skills for recurring tasks, with hands-on labs in requirements translation, rapid prototyping, and IT troubleshooting.",
+          "context": "Praxtera’s first client program after the Jacobson pilot: two sessions for HP’s IT and digital-solutions teams, from how models work to building agents.",
           "parts": [
             {
               "title": "AI Foundations for Digital Innovators",
+              "heading": "First session",
+              "course": "Built on Praxtera’s AI Basics - Prompting course.",
               "date": "Oct 2025",
               "startDate": "2025-10",
-              "text": "How large language models work and where they fail, from bias to hallucination; choosing among ChatGPT, Gemini, Claude, Copilot, Perplexity, and NotebookLM; the H4W and COSTAR prompt frameworks; and AI across the software development lifecycle. Participants rewrote one message for four audiences, built a slide deck from three reports, and generated a clickable prototype in Gemini."
+              "text": "How large language models work and where they fail, from bias to hallucination; choosing among ChatGPT, Gemini, Claude, Copilot, Perplexity, and NotebookLM; the H4W and COSTAR prompt frameworks; and AI across the software development lifecycle. Participants rewrote one message for four audiences, built a slide deck from three reports, and generated a clickable prototype in Gemini.",
+            "paras": [
+              "Model choice was taught on their own jobs: ChatGPT, Claude and Perplexity for a delivery manager’s AI return-on-investment report to leadership, and ChatGPT, Gemini and Perplexity for architects designing a customer-service chatbot on Salesforce.",
+              "For each stage of that lifecycle, the team mapped what AI takes in and hands back: user stories from stakeholder interviews, architecture decision records, test suites built from negative scenarios, and rollout, canary and rollback plans.",
+              "Between sessions, each participant used AI to research where the IT industry is headed and wrote a one-page brief."
+            ]
             },
             {
               "title": "Applying AI in IT and Digital Solutions",
+              "displayTitle": "From Retrieval to Agents",
+              "heading": "Second session",
+              "course": "Taught at HP as Applying AI in IT and Digital Solutions, built on Praxtera’s AI Agents - RAG, Workflows, Skills, and More course.",
               "date": "Nov 12, 2025",
               "startDate": "2025-11-12",
-              "text": "Retrieval-augmented generation, vector databases, and knowledge graphs; custom GPTs; the difference between AI workflows and agents, and a checklist for when an agent is worth building; and AI governance. Participants built a business-requirements translator and designed an IT troubleshooting agent."
+              "text": "Retrieval-augmented generation, vector databases, and knowledge graphs; custom GPTs; the difference between AI workflows and agents, and a checklist for when an agent is worth building; and AI governance. Participants built a business-requirements translator and designed an IT troubleshooting agent.",
+            "paras": [
+              "Retrieval was shown on their own work: a store of sample business and functional requirements sits in front of the model, so it translates a new RFP from the team’s own documents.",
+              "A workflow follows fixed steps; an agent reasons and picks which workflows to run. The AGENT checklist: autonomous, goal-oriented, error-tolerant, necessary info, time saving. Strategic decisions, one-time tasks and judgment calls stay with people.",
+              "The troubleshooter followed a live agent build: it greets the user, identifies the issue, walks through fixes or hands off to a person, and confirms the resolution."
+            ]
             }
-          ]
+          ],
+          "credit": "I was the AI/ML specialist and subject-matter expert, co-teaching the first session with Michelle Histand, a communications strategist, and the second with Lakshman Mantha, a software engineer who covered Microsoft Copilot."
         },
         {
           "id": "jacobson-strategic",
@@ -766,7 +897,37 @@
           "date": "Sep 3, 2025",
           "startDate": "2025-09-03",
           "eventName": "AI Basics: Prompting · Jacobson Strategic",
-          "lead": "Taught Jacobson Strategic’s team to prompt AI tools well."
+          "lead": "Taught Jacobson Strategic’s team to prompt AI tools well.",
+          "context": "This was the first run of the Praxtera curriculum: Jacobson Strategic is the crisis-communications firm led by Praxtera’s founders.",
+          "parts": [
+            {
+              "title": "Prompt engineering",
+              "paras": [
+                "Why structure and context change what a model writes. The team rewrote vague prompts with the 5 W’s + How and COSTAR frameworks, and wrote image prompts with VISUAL.",
+                "Then one piece of bad news, a delayed software rollout, went to four audiences: a colleague, the CEO, customers and an all-hands. Same facts, four messages.",
+                "Everyday patterns followed: a 15-message email thread summarized into decisions, owners and deadlines; a budget request built on AIDA; and one board summary drawn from five department reports."
+              ]
+            },
+            {
+              "title": "Which model for which task",
+              "paras": [
+                "ChatGPT, Gemini, Claude, Perplexity, Microsoft Copilot and NotebookLM side by side. One generalist covers most work; each also has a specialty, such as Perplexity for cited research, Claude for long documents and Copilot inside Microsoft 365."
+              ]
+            },
+            {
+              "title": "Trust, but verify",
+              "paras": [
+                "How models learn patterns from examples, and why that makes them miss nuance, amplify bias and state made-up facts with confidence, shown with a live hallucination example. The rule: always verify, always edit."
+              ]
+            },
+            {
+              "title": "Personas and roleplay",
+              "paras": [
+                "Putting a model’s ability to adopt a persona and roleplay to work in the team’s day-to-day communications."
+              ]
+            }
+          ],
+          "credit": "Sairam was the AI subject-matter expert, co-teaching with Michelle Histand, a communications strategist."
         }
       ]
     },
@@ -777,6 +938,46 @@
       "startDate": "2026-09-03",
       "title": "Knowledge Graphs, Then Small Language Models",
       "summary": "Presented what a knowledge graph is, how it enriches questions before they reach a model, and how it checks the model’s answer afterward, then where graphs go next: sub-graphs by topic, failure graphs, codified expertise, and the graph behind an API. Covered small language models next: what they are, when to go small and when to go big, a live setup of a local model in five minutes, and how they change the way people work.",
+      "context": "Atos is a global, AI-powered technology partner. This was an independent talk, and each graph example ran twice: once for a hospital or a bank, once for IT operations.",
+      "sessions": [
+        {
+          "displayTitle": "Plan Big, Run Small, Check with the Graph"
+        }
+      ],
+      "parts": [
+        {
+          "title": "Nouns, verbs, adjectives",
+          "paras": [
+            "A node is a noun, an edge is a verb and a property is an adjective. Models draft the graph, people verify it, and only verified edges are the authority.",
+            "The same shape relabels in place, from a patient, her doctor and her drugs to a client, its payment service, the server it runs on, a change and an incident."
+          ]
+        },
+        {
+          "title": "Before the model, and after",
+          "paras": [
+            "Before the model, the graph finds the facts that matter and a verified example of a good answer. Asked if a patient with a penicillin allergy can take amoxicillin, the model gave a safe no.",
+            "For a failing payment service, the same path led through its server to a library upgrade seventeen minutes before the incident, and to a rollback.",
+            "After the model, an agent’s answer becomes a chain of claims tested against the graph. Blaming the data centre failed and went back as feedback; naming the change passed.",
+            "The graph is only an authority while someone keeps it current."
+          ]
+        },
+        {
+          "title": "Small models fit in the room",
+          "paras": [
+            "A small model runs on one laptop or one GPU, usually under fifteen billion parameters. It keeps data in the building, but reasons less well and needs sharper prompts, evaluation and often fine-tuning.",
+            "Four sliders set the choice: how sensitive the data is, how many requests, how hard the thinking and how fast the answer. Hard thinking on secret data meant the largest open model your hardware allows.",
+            "Then the setup, in three commands: install Ollama, run Gemma 4 12B, and call the same model as an API on the laptop."
+          ]
+        },
+        {
+          "title": "Big model plans, small models execute, graph checks",
+          "paras": [
+            "A small model does not want a conversation; it wants a task. A vague question about a payment problem got a generic answer. A narrow task with the graph’s facts named the change and the rollback.",
+            "Together: a frontier model breaks the request into narrow tasks, small models run each one on your hardware, and the graph checks every claim."
+          ]
+        }
+      ],
+      "credit": "I wrote and gave this talk alone, and built the interactive deck it runs on.",
       "link": {
         "href": "/talks/knowledge-graphs/index.html",
         "label": "Open the deck"
@@ -787,8 +988,36 @@
       "org": "Carnegie Mellon University",
       "date": "May 2013 – Dec 2013",
       "title": "Web Applications",
-      "subtitle": "Web Applications Course Developer · Teaching Assistant",
-      "summary": "Redesigned the course with the professor, planning a 20-lecture semester and building client-side and server-side exercises and reference applications in Spring MVC, Play, and Django. Instructed 105+ students as Agile Product Owner for their final projects."
+      "subtitle": "Web Applications Course Developer · Head Teaching Assistant",
+      "summary": "Redesigned the course with the professor, planning a 20-lecture semester and building client-side and server-side exercises and reference applications in Spring MVC, Play, and Django. Instructed 105+ students as Agile Product Owner for their final projects.",
+      "lead": "I helped rebuild Carnegie Mellon’s web application course, writing the demos, exercises and online platform that students learned from.",
+      "context": "15-437/15-637 Web Application Development is a Carnegie Mellon computer science course for upper-level undergraduates and graduate students. I built the new materials in summer 2013 for the fall semester, which added Django alongside J2EE.",
+      "sessions": [
+        {
+          "displayTitle": "From HTTP to Django"
+        }
+      ],
+      "parts": [
+        {
+          "title": "Redesigning the course"
+        },
+        {
+          "title": "Exercises and reference apps"
+        },
+        {
+          "title": "A course platform in the cloud",
+          "paras": [
+            "Students logged in to view and try demos of each course concept; one set built up MVC step by step.",
+            "They also submitted assignments there, with guided walkthroughs such as building a survey app. It ran on Heroku first, then AWS."
+          ]
+        },
+        {
+          "paras": [
+            "In the second half of the semester, each team designed and built a web application of its own choosing, then demonstrated it to the course staff."
+          ]
+        }
+      ],
+      "credit": "I was the course developer and head teaching assistant, working with Professor Charlie Garrod, who taught the course."
     }
   ],
   "teachingPrograms": [
@@ -1118,6 +1347,11 @@
     {
       "id": "architecture-adoption",
       "title": "From architecture to adoption",
+      "promise": "Turn AI skeptics into champions by taking their concerns seriously and showing how AI extends their expertise."
+    },
+    {
+      "id": "ship-the-decision",
+      "title": "Ship the decision, not the diagram",
       "promise": "Why technical decisions only matter when teams can carry them into the organization."
     },
     {
