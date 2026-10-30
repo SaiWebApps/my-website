@@ -958,19 +958,19 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
 .cr-awards { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 16px; max-width: 660px; margin-top: 24px; }
 .cr-awards a { min-width: 0; color: var(--ink); font-size: 0.8125rem; font-weight: 700; line-height: 1.25; text-decoration: none; }
 /* Career: each job is a book on a shelf. Pull one down and it opens; every page holds one fact, quote or figure. */
-.cr.is-shelf { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(32px, 4vw, 64px); align-items: end; padding-bottom: 40px; }
+.cr.is-shelf { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(32px, 4vw, 64px); align-items: start; padding-top: clamp(24px, 3.5vw, 56px); padding-bottom: 40px; min-height: 0; }
 .cr.is-shelf .cr-stage { display: none; }
 .bk-shelf { position: relative; padding-bottom: 14px; margin-bottom: 56px; }
 .bk-shelf__row { display: flex; align-items: flex-end; gap: 5px; padding: 0 10px; }
 .bk-shelf::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 14px; border-radius: 2px; background: color-mix(in srgb, var(--ink) 82%, var(--map)); box-shadow: 0 22px 30px -18px rgb(20 18 12 / 0.5); }
-.bk-spine { --w: calc(34px + var(--n) * 2.6px); position: relative; flex: none; width: var(--w); height: var(--h); padding: 24px 0 8px; border-radius: 3px 3px 1px 1px;
+.bk-spine { --w: calc(42px + var(--n) * 2.2px); position: relative; flex: none; width: var(--w); height: var(--h); padding: 24px 0 8px; border-radius: 3px 3px 1px 1px;
   background: var(--c); color: var(--on); text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px;
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.1), 0 1px 0 rgb(0 0 0 / 0.2); transition: transform 260ms var(--ease-pull), opacity 200ms ease; }
 /* Cloth: darker at the hinges, flat across the face. */
 .bk-spine::before { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(90deg, rgb(0 0 0 / 0.26), rgb(0 0 0 / 0) 10%, rgb(255 255 255 / 0.06) 50%, rgb(0 0 0 / 0) 90%, rgb(0 0 0 / 0.26)); }
 /* Head band: two stamped rules at the top. */
 .bk-spine::after { content: ''; position: absolute; left: 6px; right: 6px; top: 9px; height: 5px; pointer-events: none; border-block: 1.5px solid color-mix(in srgb, var(--on) 55%, transparent); }
-.bk-spine__name { position: relative; writing-mode: vertical-rl; font-weight: 800; font-size: clamp(1.05rem, calc(var(--w) * 0.44), 2.2rem); line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
+.bk-spine__name { position: relative; writing-mode: vertical-rl; font-weight: 800; font-size: 1.25rem; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
 /* The dates sit on a label block at the foot, in the jacket colour on the opposite tone. */
 .bk-spine__dates { position: relative; writing-mode: vertical-rl; width: calc(100% - 10px); padding: 10px 0; display: flex; align-items: center; justify-content: center; border-radius: 2px;
   background: var(--on); color: var(--c); font-weight: 700; font-size: 0.72rem; line-height: 1; white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -982,7 +982,7 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
 .bk-spine:active { transform: translateY(-4px) scale(0.98); }
 @media (hover: hover) and (pointer: fine) { .bk-spine:not([aria-current]):hover { transform: translateY(-14px); } }
 .bk-spine:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
-.bk-slot { position: absolute; bottom: 14px; border-radius: 3px 3px 0 0; pointer-events: none; background: linear-gradient(180deg, transparent, rgb(20 18 12 / 0.07)); transition: left 300ms var(--ease-pull), width 300ms var(--ease-pull), height 300ms var(--ease-pull); }
+.bk-slot { position: absolute; bottom: 14px; border-radius: 3px 3px 0 0; pointer-events: none; border: 2px dashed color-mix(in srgb, var(--ink) 34%, transparent); border-bottom: 0; background: color-mix(in srgb, var(--ink) 5%, transparent); transition: left 300ms var(--ease-pull), width 300ms var(--ease-pull), height 300ms var(--ease-pull); }
 :root { --ease-pull: cubic-bezier(0.32, 0.72, 0, 1); }
 .bk-stage { display: grid; justify-items: center; gap: 22px; perspective: 2400px; min-width: 0; }
 .bk-book { --pw: min(430px, calc((100vw - 2 * var(--gutter) - var(--shelf-w, 470px) - 64px) / 2 - 12px)); --ph: min(640px, calc(100dvh - var(--hd-h) - 150px), calc(var(--pw) * 1.5)); --left: 3px; --right: 10px;
@@ -1004,7 +1004,9 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
 .bk-plate__mark { font-size: 12rem; line-height: 0.6; align-self: start; }
 .bk-plate__title { font-weight: 600; font-size: clamp(2.5rem, 4.4vw, 3.75rem); line-height: 1.02; letter-spacing: -0.03em; text-wrap: balance; }
 .bk-sheet { position: absolute; inset: 0; padding: 52px 44px 48px 48px; display: flex; flex-direction: column; justify-content: center; overflow: auto; scrollbar-width: none; }
-.bk-folio { position: absolute; bottom: 22px; right: 28px; font-size: 0.75rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.bk-count { min-width: 4.5em; text-align: center; font-size: 1rem; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.bk-sheet--title { justify-content: flex-start; }
+.bk-sheet--title .bk-title { margin: 0 0 28px; padding-bottom: 22px; border-bottom: 2px solid color-mix(in srgb, var(--c) 65%, var(--ink)); }
 /* A fact page: the fact, set as plain text. */
 .bk-sheet .cr-fact-route { display: block; margin: 0; }
 .bk-sheet .cr-fact-route::before { content: none; }
@@ -1042,7 +1044,7 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
 .bk-cover__front b { position: relative; font-weight: 600; font-size: clamp(2.25rem, 3.6vw, 3.25rem); line-height: 1.02; letter-spacing: -0.03em; }
 .bk-cover__front span { position: relative; }
 .bk-cover__back { transform: rotateY(180deg); left: 0; right: 11px; border-radius: 6px 0 0 6px; }
-.bk-turns { display: flex; gap: 14px; }
+.bk-turns { display: flex; align-items: center; gap: 14px; }
 .bk-turn { width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer; font: inherit; font-size: 1.25rem; line-height: 1; background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); transition: background-color 160ms ease, color 160ms ease, transform 140ms var(--ease-pull), opacity 160ms ease; }
 .bk-turn:active { transform: scale(0.94); }
 .bk-turn:disabled { opacity: 0.3; cursor: default; }
@@ -1053,8 +1055,8 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
   .cr.is-shelf { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 28px; }
   .bk-shelf { margin: 0; overflow-x: auto; padding-top: 18px; scrollbar-width: none; }
   .bk-shelf__row { justify-content: center; gap: 4px; padding: 0 4px; }
-  .bk-spine { --w: calc(28px + var(--n) * 1.3px); height: calc(var(--h) * 0.42); padding: 18px 0 8px; }
-  .bk-spine__name { font-size: clamp(0.8125rem, calc(var(--w) * 0.4), 1.15rem); }
+  .bk-spine { --w: calc(30px + var(--n) * 1.2px); height: calc(var(--h) * 0.42); padding: 18px 0 8px; }
+  .bk-spine__name { font-size: 0.875rem; }
   .bk-spine__dates { display: none; }
   .bk-spine::after { top: 6px; height: 4px; }
   .bk-spine[aria-current] { transform: translateY(-16px); }
@@ -1293,7 +1295,7 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
 @media (hover: hover) and (pointer: fine) {
   .svc2-route__offers a:hover span { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 }
-.svc2-book { margin: clamp(18px, 3vh, 28px) 0 0; }
+.svc2-book { margin: clamp(18px, 3vh, 28px) 0 0; text-align: center; }
 .svc2-atlas {
   --svc2-col-gap: clamp(32px, 4vw, 64px);
   display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));

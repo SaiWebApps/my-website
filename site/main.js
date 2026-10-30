@@ -495,29 +495,30 @@
     const turns = mk('div', 'bk-turns');
     const prev = mk('button', 'bk-turn', '<span aria-hidden="true">←</span>'), next = mk('button', 'bk-turn', '<span aria-hidden="true">→</span>');
     prev.type = next.type = 'button'; prev.setAttribute('aria-label', 'Previous page'); next.setAttribute('aria-label', 'Next page');
-    turns.append(prev, next); stage.append(book, turns); cride.append(stage);
+    const counter = mk('span', 'bk-count');   // which spread of how many, between the arrows that move through them
+    turns.append(prev, counter, next); stage.append(book, turns); cride.append(stage);
     cride.classList.add('is-shelf');
     document.documentElement.style.setProperty('--shelf-w', shelf.getBoundingClientRect().width + 'px');
 
     let job = null, page = 0, busy = false;
     const stOf = id => sts[ids.indexOf(id)];
     const pagesOf = id => $$('.bk-page', stOf(id));
-    const count = id => pagesOf(id).length + 1;   // page 0 is the title page
+    const count = id => pagesOf(id).length;   // spread 0 pairs the title with the job's first page
     // A page's content is a copy of the job's own page, with ids dropped so the original stays the only one.
     const copy = node => { const c = node.cloneNode(true); c.removeAttribute('id'); $$('[id]', c).forEach(n => n.removeAttribute('id')); return c; };
     const versoFor = (id, p) => {
       const f = document.createDocumentFragment(), plate = mk('div', 'bk-plate');
       if (p === 0) plate.append(mk('div', 'bk-plate__title', $('.cr-sign', stOf(id)).innerHTML));
-      else if (pagesOf(id)[p - 1].dataset.kind === 'quote') plate.append(mk('div', 'bk-plate__mark', '“'));
-      else plate.append(mk('div', 'bk-plate__num', String(p)));
+      else if (pagesOf(id)[p].dataset.kind === 'quote') plate.append(mk('div', 'bk-plate__mark', '“'));
+      else plate.append(mk('div', 'bk-plate__num', String(p + 1)));
       f.append(plate, mk('div', 'bk-shade'));
       return f;
     };
     const rectoFor = (id, p) => {
       const f = document.createDocumentFragment(), sheet = mk('div', 'bk-sheet');
-      if (p === 0) { const t = mk('div', 'bk-title'); t.append(copy($('.cr-station__identity', stOf(id)))); sheet.append(t); }
-      else sheet.append(...copy(pagesOf(id)[p - 1]).childNodes);
-      f.append(sheet, mk('div', 'bk-shade'), mk('span', 'bk-folio', String(p * 2 + 1)));
+      if (p === 0) { const t = mk('div', 'bk-title'); t.append(copy($('.cr-station__identity', stOf(id)))); sheet.append(t); sheet.classList.add('bk-sheet--title'); }
+      sheet.append(...copy(pagesOf(id)[p]).childNodes);
+      f.append(sheet, mk('div', 'bk-shade'));
       return f;
     };
     const paint = (el, frag) => el.replaceChildren(frag);
@@ -527,6 +528,7 @@
       book.style.setProperty('--left', Math.min(left, 10) + 'px');
       book.style.setProperty('--right', Math.min(10, Math.max(1, Math.round(total - left))) + 'px');
       prev.disabled = page === 0; next.disabled = page === n - 1;
+      counter.textContent = `${page + 1} / ${n}`;
       book.toggleAttribute('data-turnable', n > 1);
     };
     const placeSlot = () => {

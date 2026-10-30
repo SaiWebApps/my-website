@@ -1050,7 +1050,7 @@
     "id": "site:careerLedger[0].dates",
     "show": "must",
     "source": "site",
-    "text": "2010 – Dec 2014",
+    "text": "Aug 2010 – Dec 2014",
     "twins": [
       "head:pinned.career.ts.careerById.cmu.dates",
       "head:pinned.career.ts.careerLedger[0].dates"
