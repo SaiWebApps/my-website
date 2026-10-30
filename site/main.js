@@ -89,18 +89,24 @@
     const [hx, hy] = hub ? [+hub.dataset.x, +hub.dataset.y] : (map.dataset.hub || '').split(',').map(Number);
     const isWide = map.classList.contains('map--wide');
     const train = G && window.MotionPathPlugin ? makeTrain(svg, isWide ? 40 : 28, isWide ? 16 : 12) : null;
+    // The phone map has no room for a parked train beside the hub; it appears only to ride.
+    if (train && !isWide) train.style.opacity = '0';
     const pathFor = line => $(`.ln[data-line="${line}"]`, svg);
     let busy = false;
 
     // The train is parked at Apple, the station I work from today.
     const park = $('.stn[href$="#apple"]', map);
-    if (train) {
+    // A hidden map (phone map on desktop, or the reverse) can't place the train, so place it whenever the map shows or resizes.
+    const parkTrain = () => {
+      if (!train || busy || !map.getBoundingClientRect().width) return;
       const red = pathFor('red');
       let at = park ? nearest(red, +park.dataset.x, +park.dataset.y).f : nearest(red, hx, hy).f;
       // Apple is the hub ring on desktop: park just past it so the train never sits on the ring.
       if (park && Math.hypot(+park.dataset.x - hx, +park.dataset.y - hy) < 5) at = Math.min(1, at + 46 / red.getTotalLength());
       G.set(train, { motionPath: { path: red, align: red, alignOrigin: [0.5, 0.5], start: at, end: at, autoRotate: true } });
-    }
+    };
+    parkTrain();
+    if (train) new ResizeObserver(parkTrain).observe(map);
 
     // Short grace on leave, so moving from a line to its stations keeps the line lit.
     let idle;
@@ -185,6 +191,7 @@
         if (!parked) G.set(train, { motionPath: { path, align: path, alignOrigin: [0.5, 0.5], start, end: start, autoRotate: true } });
         const end = to.d < 30 ? to.f : 1;
         const dur = Math.min(0.9, Math.max(0.45, Math.abs(end - start) * to.len / 1100));
+        G.set(train, { opacity: 1 });
         G.to(train, {
           duration: dur, ease: 'power2.inOut',
           motionPath: { path, align: path, alignOrigin: [0.5, 0.5], start, end, autoRotate: true },
@@ -204,7 +211,7 @@
       map.classList.add('is-loading');
       tl.fromTo([...$$('.tk, .ix', svg), ...$$('.stn__face', map)], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.012, clearProps: 'opacity' }, 0.45);
       tl.eventCallback('onComplete', () => map.classList.remove('is-loading'));
-      if (train) tl.from(train, { opacity: 0, scale: 0.6, transformOrigin: '50% 50%', duration: 0.3, ease: 'power3.out' }, 1.05);
+      if (train && isWide) tl.from(train, { opacity: 0, scale: 0.6, transformOrigin: '50% 50%', duration: 0.3, ease: 'power3.out' }, 1.05);
     }
   };
   $$('.map--home').forEach(initMap);
