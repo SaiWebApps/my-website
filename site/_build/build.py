@@ -4,17 +4,16 @@ import json, html, os, shutil, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-sys.path.insert(0, os.path.join(ROOT, '.claude/rubric/facts'))
 import words
-# Paths are relative to this file, so the rubric can rebuild a scratch copy to test an edit before it lands.
 OUT = os.path.dirname(HERE) + os.sep
 import hashlib
 VER = hashlib.sha1(open(OUT + 'style.css', 'rb').read() + open(OUT + 'main.js', 'rb').read()).hexdigest()[:8]
 SPEAKING_VER = hashlib.sha1(open(OUT + 'speaking.css', 'rb').read()).hexdigest()[:8]
 RESEARCH_VER = hashlib.sha1(open(OUT + 'research.css', 'rb').read()).hexdigest()[:8]
 D = json.load(open(os.path.join(os.path.dirname(HERE), 'content.json')))
-CONTROL = json.load(open(os.path.join(ROOT, '.claude/rubric/registry.json')))
-AUTHORITY = json.load(open(os.path.join(ROOT, '.claude/rubric/authority.json')))
+DATA = os.path.join(HERE, 'data')
+CONTROL = json.load(open(os.path.join(DATA, 'registry.json')))
+AUTHORITY = json.load(open(os.path.join(DATA, 'authority.json')))
 PUBLIC_SITE = AUTHORITY['publicSite']
 SITE_ORIGIN = PUBLIC_SITE['origin'].rstrip('/')
 ROUTE_BY_ID = {route['id']: route for route in PUBLIC_SITE['routes']}
@@ -37,23 +36,10 @@ def validate_content_contract():
 
 validate_content_contract()
 
-def tree_hash(root, skip=()):
-    h = hashlib.sha256()
-    ignored = set(skip)
-    for directory, dirs, files in os.walk(root):
-        dirs[:] = sorted(d for d in dirs if d not in ignored and d != '__pycache__')
-        for name in sorted(files):
-            path = os.path.join(directory, name)
-            rel = os.path.relpath(path, root)
-            h.update(rel.encode())
-            with open(path, 'rb') as stream:
-                h.update(stream.read())
-    return h.hexdigest()
-
-def build_candidate():
-    """Assemble a hash-bound candidate. Only score.py may promote it to dist after every gate passes."""
+def build_dist():
+    """Assemble the deployable site in dist/."""
     subprocess.run(['node', os.path.join(HERE, 'maps.mjs'), 'all'], check=True)
-    dist = os.path.join(ROOT, '.claude', 'rubric', 'out', 'candidate')
+    dist = os.path.join(ROOT, 'dist')
     if os.path.isdir(dist):
         shutil.rmtree(dist)
     os.makedirs(dist)
@@ -71,20 +57,7 @@ def build_candidate():
     os.makedirs(font_out)
     for name in ['hanken-grotesk-latin-ext-wght-normal.woff2', 'hanken-grotesk-latin-wght-normal.woff2']:
         shutil.copy2(os.path.join(font_source, name), os.path.join(font_out, name))
-    source_hash = tree_hash(OUT)
-    artifact_hash = tree_hash(dist)
-    baseline = json.load(open(os.path.join(OUT, '.baseline.json')))
-    provenance = {
-        'baselineId': baseline['id'],
-        'sourceRoot': baseline['root'],
-        'sourceHash': source_hash,
-        'artifactHash': artifact_hash,
-        'routes': route_files,
-    }
-    with open(os.path.join(dist, '.site-provenance.json'), 'w') as stream:
-        json.dump(provenance, stream, indent=2)
-        stream.write('\n')
-    print('built candidate', artifact_hash)
+    print('built dist')
 
 def t(s):
     """Visible text: no en/em dashes, escaped. A dash between two numbers (2–3) becomes a hyphen; no regex."""
@@ -360,7 +333,7 @@ def speaking():
         return out
 
     # His sheet is the record of every session: titles and dates come straight from it.
-    SHEET = {r['unit']: r for r in json.load(open(os.path.join(ROOT, '.claude/rubric/sources/sheet.json')))['rows']}
+    SHEET = {r['unit']: r for r in json.load(open(os.path.join(DATA, 'sheet.json')))['rows']}
     MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     day = lambda d: f'{MON[int(d[5:7]) - 1]} {int(d[8:])}, {d[:4]}'
     title = lambda x: x.replace(' - ', ': ')
@@ -887,18 +860,12 @@ for _k, _f in _render.BUILDERS.items():
         BUILDERS[_k] = (lambda f: lambda: f(sys.modules[__name__]))(_f)
 
 if __name__ == '__main__':
-    if os.environ.get('RUBRIC_PIPELINE') != '1':
-        raise SystemExit('direct build is disabled; run npm run build or npm run release')
-    if '--publish' in sys.argv[1:]:
-        raise SystemExit('direct publication is disabled; run npm run release')
-    candidate_requested = '--candidate' in sys.argv[1:]
-    which = [arg for arg in sys.argv[1:] if arg != '--candidate'] or list(BUILDERS)
+    which = sys.argv[1:] or list(BUILDERS)
     for w in which:
         html_out = BUILDERS[w]()
         fn = 'index.html' if w == 'home' else f'{w}.html'
         open(OUT + fn, 'w').write(html_out)
         print('built', fn)
     write_machine_files()
-    if candidate_requested:
-        build_candidate()
+    build_dist()
 

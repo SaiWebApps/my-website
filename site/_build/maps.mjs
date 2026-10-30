@@ -1,6 +1,5 @@
 import { C, renderMap, inject } from './lib.mjs';
 
-// Relative to this file, so the rubric can rebuild a scratch copy to test an edit before it lands.
 const DIR = new URL('..', import.meta.url).pathname;
 const S = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0], ul: [-1, -1], ur: [1, -1], dl: [-1, 1], dr: [1, 1] };
 

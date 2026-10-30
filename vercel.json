@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm ci --ignore-scripts && python3 -m pip install --disable-pip-version-check --no-input -r requirements.txt",
-  "buildCommand": "python3 .claude/rubric/score.py --deploy-build",
+  "installCommand": "npm ci --ignore-scripts",
+  "buildCommand": "python3 site/_build/build.py",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,

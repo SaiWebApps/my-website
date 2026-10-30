@@ -9,14 +9,4 @@ source-material/
 .vercel/
 node_modules/
 dist/
-.astro/
-.vercel
-brand/*.db*
-
-# Governor working files (spec, verdict, prompt stamp)
-.claude/governor/
-.claude/rubric/out/
-.claude/rubric/**/out/
-
-# Exact release evidence is regenerated for each build.
-.release/out/
+__pycache__/

@@ -1,5 +1,5 @@
 """Builds the content pages from his facts. Every visible line is one of his facts in his exact words (the fact store,
-.claude/rubric/facts/facts.json), shown inside the unit it belongs to. Nothing is cut: every fact marked "must" is
+site/_build/data/facts.json), shown inside the unit it belongs to. Nothing is cut: every fact marked "must" is
 placed. A fact too long for one line is shown as several lines or stops, never shortened. A unit with more than three
 lines gets more screens (cars on its train), never fewer words. No regular expressions.
 """
@@ -7,9 +7,8 @@ import html, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-FACTS_PATH = os.path.join(ROOT, '.claude/rubric/facts/facts.json')
-REG = json.load(open(os.path.join(ROOT, '.claude/rubric/registry.json')))
-sys.path.insert(0, os.path.join(ROOT, '.claude/rubric/facts'))
+FACTS_PATH = os.path.join(HERE, 'data', 'facts.json')
+REG = json.load(open(os.path.join(HERE, 'data', 'registry.json')))
 import words
 
 FACTS = json.load(open(FACTS_PATH))
