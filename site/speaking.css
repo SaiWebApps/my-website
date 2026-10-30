@@ -101,7 +101,7 @@
 .sp2-group--praxtera { padding-bottom: 12px; }
 
 /* The topic tree and the keynote fee */
-.sp2-topics { max-width: 1328px; margin: 0 auto; padding: 0 var(--gutter); }
+.sp2-topics { max-width: 1328px; margin: 0 auto; padding: clamp(40px, 6vw, 88px) var(--gutter) 0; }
 .sp2-topics > h2 { font-size: clamp(2rem, 3.6vw, 3.25rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.1; padding-bottom: 20px; border-bottom: 2px solid var(--ink); }
 
 /* Pulling a poster forward */
