@@ -8500,7 +8500,7 @@
     "id": "site:speakingTopics[0].title",
     "show": "must",
     "source": "site",
-    "text": "From architecture to adoption",
+    "text": "From Architecture to Adoption",
     "twins": [],
     "unit": "talks"
   },
@@ -8527,7 +8527,7 @@
     "id": "site:speakingTopics[1].title",
     "show": "must",
     "source": "site",
-    "text": "Ship the decision, not the diagram",
+    "text": "Ship the Decision, Not the Diagram",
     "twins": [],
     "unit": "talks"
   },
@@ -8556,7 +8556,7 @@
     "id": "site:speakingTopics[2].title",
     "show": "must",
     "source": "site",
-    "text": "Engineering leadership in the agentic era",
+    "text": "Engineering Leadership in the Agentic Era",
     "twins": [
       "head:pinned.content.ts.speakingTopics[2].title"
     ],
@@ -8571,6 +8571,3122 @@
     "twins": [
       "head:pinned.content.ts.speakingTopics[2].promise"
     ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-local-models",
+    "twins": [
+      "site:topicNeeds[0].topics[2].id",
+      "site:topicAudiences[3].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[0].title",
+    "show": "must",
+    "source": "site",
+    "text": "Plan Big, Run Small, Check with the Graph",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[0].promise",
+    "show": "must",
+    "source": "site",
+    "text": "How a knowledge graph enriches a question before the model sees it and checks the answer afterward, and when a small model on your own laptop is the better tool.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[0].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Atos.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-verified-edges",
+    "twins": [
+      "site:topicNeeds[0].topics[3].id",
+      "site:topicAudiences[4].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[1].title",
+    "show": "must",
+    "source": "site",
+    "text": "Only Verified Edges Count",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[1].promise",
+    "show": "must",
+    "source": "site",
+    "text": "When a graph beats plain vector retrieval, and how to prove it with a loop that checks each generated claim against canonical facts and feeds the errors back.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-trustworthy-data",
+    "twins": [
+      "site:topicNeeds[0].topics[4].id",
+      "site:topicAudiences[5].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[2].title",
+    "show": "must",
+    "source": "site",
+    "text": "Trustworthy AI Starts with the Data",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[2].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing on grounding AI in records you trust: fresh data, resolved identities, human corrections that persist, and a graph someone keeps current.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-failure-graph",
+    "twins": [
+      "site:topicNeeds[3].topics[9].id",
+      "site:topicAudiences[6].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[3].title",
+    "show": "must",
+    "source": "site",
+    "text": "Put the Failure Graph Behind an API",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[3].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Capture incidents as trigger, fault, symptom and fix, keep that graph current, and let your own and your clients' agents query it.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[3].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Atos.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-editor-override",
+    "twins": [
+      "site:topicNeeds[0].topics[8].id",
+      "site:topicAudiences[7].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[4].title",
+    "show": "must",
+    "source": "site",
+    "text": "Editorial Decisions That Survive the Next Model Update",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[4].promise",
+    "show": "must",
+    "source": "site",
+    "text": "How to run supervised entity resolution and ML-generated metadata so that human corrections persist when the model is retrained.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-sourced-beat",
+    "twins": [
+      "site:topicNeeds[0].topics[7].id",
+      "site:topicAudiences[8].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[5].title",
+    "show": "must",
+    "source": "site",
+    "text": "Every Sentence Traces to a Source",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[5].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A case study of a provenance-aware graph behind generated audio tours, where a line that is not true for the place is dropped rather than spoken.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-deterministic-check",
+    "twins": [
+      "site:topicNeeds[0].topics[1].id",
+      "site:topicAudiences[9].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[6].title",
+    "show": "must",
+    "source": "site",
+    "text": "The Model Drafts, Code Checks",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[6].promise",
+    "show": "must",
+    "source": "site",
+    "text": "One principle at four levels, from a production correction loop to a finance team's skill that writes 'Needs explanation' instead of inventing a reason.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[7].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-extract-score",
+    "twins": [
+      "site:topicNeeds[0].topics[5].id",
+      "site:topicAudiences[10].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[7].title",
+    "show": "must",
+    "source": "site",
+    "text": "Extract with the Model, Score in Code",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[7].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Use a narrow model call to pull out the facts, compute the score in code, and withhold generated feedback that cannot point to its evidence.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[8].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-cite-every-number",
+    "twins": [
+      "site:topicNeeds[0].topics[0].id",
+      "site:topicAudiences[11].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[8].title",
+    "show": "must",
+    "source": "site",
+    "text": "Cite the File and Page for Every Number",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[8].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An all-staff session on checking an AI answer before you send it, taught from real failure cases, with a record that the training happened.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[8].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Sonova.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[9].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-calibrate-judge",
+    "twins": [
+      "site:topicNeeds[0].topics[6].id",
+      "site:topicAudiences[12].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[9].title",
+    "show": "must",
+    "source": "site",
+    "text": "Calibrate the Judge Before You Cut the Cost",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[9].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Freeze human-labeled cases, compare judges blind, and separate model failures from truncation before you switch to the cheaper model.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[10].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-ai-agents",
+    "twins": [
+      "site:topicNeeds[3].topics[0].id",
+      "site:topicAudiences[13].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[10].title",
+    "show": "must",
+    "source": "site",
+    "text": "From Retrieval to Agents",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[10].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A hands-on session for working teams on retrieval, workflows versus agents, and reusable skills, ending with a checklist for when an agent is worth building.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[10].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for HP, Morgan Lewis and Sonova.",
+    "twins": [
+      "site:topicMenu[25].proof",
+      "site:topicMenu[35].proof"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[11].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-reengineering",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[11].title",
+    "show": "must",
+    "source": "site",
+    "text": "Reengineering Workflows with AI",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[11].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A sequence leaders can audit: governance first, then deterministic steps, then simple agents only where the automations need coordinating.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[11].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for PBS.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[12].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-hidden-test",
+    "twins": [
+      "site:topicNeeds[3].topics[3].id",
+      "site:topicAudiences[15].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[12].title",
+    "show": "must",
+    "source": "site",
+    "text": "A Hidden Test That Must Fail First",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[12].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Make agent-built code verifiable: a test the builder never sees, written and reviewed by a different model family, and mutation checks that prove the test guards the fix.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[13].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-private-objectives",
+    "twins": [
+      "site:topicNeeds[3].topics[6].id",
+      "site:topicAudiences[16].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[13].title",
+    "show": "must",
+    "source": "site",
+    "text": "Agents with Hidden Goals and Hard Limits",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[13].promise",
+    "show": "must",
+    "source": "site",
+    "text": "How to build multiagent simulations where each agent holds its line, and score the outcome with arithmetic rather than a model's opinion.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[14].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-acceptance-rules",
+    "twins": [
+      "site:topicNeeds[3].topics[4].id",
+      "site:topicAudiences[17].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[14].title",
+    "show": "must",
+    "source": "site",
+    "text": "Rules Every Agent Change Must Pass",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[14].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Team operating standards for coding agents: design review, CI gates and acceptance rules every agent change must pass, taught from a framework other teams adopted.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[15].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-silent-facts",
+    "twins": [
+      "site:topicNeeds[3].topics[5].id",
+      "site:topicAudiences[18].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[15].title",
+    "show": "must",
+    "source": "site",
+    "text": "No Silent Rewrites",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[15].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Hash-bound release gates for agent pipelines, so a model can draft and revise but cannot change an accepted fact without failing the release.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[16].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-next-senior",
+    "twins": [
+      "site:topicNeeds[4].topics[0].id",
+      "site:topicAudiences[19].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[16].title",
+    "show": "must",
+    "source": "site",
+    "text": "Who Trains the Next Senior?",
+    "twins": [
+      "head:pinned.content.ts.speakingTopics[3].title"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[16].promise",
+    "show": "must",
+    "source": "site",
+    "text": "When AI drafts the code juniors used to learn from, apprenticeship has to be rebuilt on purpose; leave with four management moves and the measures that survive.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[17].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-shrink-review",
+    "twins": [
+      "site:topicNeeds[4].topics[2].id",
+      "site:topicAudiences[20].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[17].title",
+    "show": "must",
+    "source": "site",
+    "text": "Shrink the Unit of Review",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[17].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A working session for managers on ending review theater: smaller changes, scrutiny matched to consequence, and metrics that count verified outcomes instead of commits.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[18].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-half-promoted",
+    "twins": [
+      "site:topicNeeds[4].topics[4].id",
+      "site:topicAudiences[21].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[18].title",
+    "show": "must",
+    "source": "site",
+    "text": "Half the Team to Promotion",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[18].promise",
+    "show": "must",
+    "source": "site",
+    "text": "How I coached half my team of eight to promotion and a senior engineer into independent ownership, and what that takes when juniors work beside agents.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[19].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-which-scale",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[19].title",
+    "show": "must",
+    "source": "site",
+    "text": "Which AI Investments Deserve to Scale?",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[19].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Define success before choosing technology, then decide with evidence which pilots to expand, redesign or stop.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[20].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-discount-rate",
+    "twins": [
+      "site:topicNeeds[2].topics[3].id",
+      "site:topicAudiences[23].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[20].title",
+    "show": "must",
+    "source": "site",
+    "text": "Eight Risks That Move the Discount Rate",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[20].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Price AI risk into the discount rate, including inference cost scaling and vendor dependency, and see why build versus buy trades one risk for another.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[21].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-eight-cases",
+    "twins": [
+      "site:topicNeeds[2].topics[2].id",
+      "site:topicAudiences[24].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[21].title",
+    "show": "must",
+    "source": "site",
+    "text": "Eight AI Deployments, Scored the Same Way",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[21].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A case session that runs Salesforce Agentforce, Spotify, Shopify Magic, JPMorgan COiN and their comparison cases through one framework, so a class sees why similar bets get different verdicts.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[22].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-gates",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[22].title",
+    "show": "must",
+    "source": "site",
+    "text": "Re-score the Risk at Every Gate",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[22].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A working session on the buyer's own pilots: score each against three stage gates and eight risk categories, and leave with an expand, redesign or stop call for each.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[23].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-surveil-agents",
+    "twins": [
+      "site:topicNeeds[3].topics[7].id",
+      "site:topicAudiences[26].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[23].title",
+    "show": "must",
+    "source": "site",
+    "text": "Surveil Agents the Way We Surveilled Trades",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[23].promise",
+    "show": "must",
+    "source": "site",
+    "text": "For broker-dealers and wealth firms: apply real-time surveillance thinking to AI agents, tracking each action and limiting system access as FINRA's 2026 report suggests.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[24].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-simple-audit",
+    "twins": [
+      "site:topicNeeds[3].topics[2].id",
+      "site:topicAudiences[27].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[24].title",
+    "show": "must",
+    "source": "site",
+    "text": "Keep Each Agent Simple Enough to Audit",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[24].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Engineering controls translated for risk owners: scoped tool permissions, action checks, audit logs, autonomy limits, and evals kept as audit evidence.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[25].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-traffic-light",
+    "twins": [
+      "site:topicNeeds[1].topics[6].id",
+      "site:topicAudiences[28].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[25].title",
+    "show": "must",
+    "source": "site",
+    "text": "Green, Yellow, Red: Which Tasks Are Safe for AI",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[25].promise",
+    "show": "must",
+    "source": "site",
+    "text": "For law and professional-services firms: sort everyday tasks into safe, check first, and off limits, and give champions a kit that keeps the guide current.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[25].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Morgan Lewis.",
+    "twins": [
+      "site:topicMenu[10].proof",
+      "site:topicMenu[35].proof"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[26].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-confidence-to-action",
+    "twins": [
+      "site:topicNeeds[3].topics[8].id",
+      "site:topicAudiences[29].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[26].title",
+    "show": "must",
+    "source": "site",
+    "text": "Carry the Confidence All the Way to the Action",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[26].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A live-demo talk on systems that act for people: start disarmed, drop stale input, recheck the target, and keep a human able to stop it, from a 2014 drone swarm to a 2026 gesture app.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[27].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-basics",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[27].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI Foundations for Digital Innovators",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[27].promise",
+    "show": "must",
+    "source": "site",
+    "text": "How these tools work in plain words, which one to pick, and how to prompt so the model shows its work.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[27].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Jacobson Strategic and HP.",
+    "twins": [
+      "site:topicMenu[40].proof"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[28].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-prompting-workflows",
+    "twins": [
+      "site:topicNeeds[1].topics[3].id",
+      "site:topicAudiences[31].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[28].title",
+    "show": "must",
+    "source": "site",
+    "text": "Save It Once, Check It Every Time",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[28].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A two-part course that takes a team from prompting to a reusable skill they have tested against formulas, edge cases and invented explanations.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[28].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Sonova.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[29].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-impact",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[29].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Impact",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[29].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A keynote for mission-driven leaders on using AI to win back staff time and reach more people, safely.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[29].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Philadelphia Eagles.",
+    "twins": [
+      "site:topicMenu[36].proof"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[30].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-mission-time",
+    "twins": [
+      "site:topicNeeds[1].topics[4].id",
+      "site:topicAudiences[33].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[30].title",
+    "show": "must",
+    "source": "site",
+    "text": "Win Back Time for the Mission",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[30].promise",
+    "show": "must",
+    "source": "site",
+    "text": "A funder-sponsored cohort for nonprofit teams: an AI use policy, one automated workflow per team, and the habit of checking answers.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[31].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-flawed-exercise",
+    "twins": [
+      "site:topicNeeds[1].topics[5].id",
+      "site:topicAudiences[34].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[31].title",
+    "show": "must",
+    "source": "site",
+    "text": "Plant the Flaw",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[31].promise",
+    "show": "must",
+    "source": "site",
+    "text": "For trainers and faculty: design AI exercises where learners catch a planted error, from a flawed web app in 2013 to a budget skill that invents reasons in 2026.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[31].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Carnegie Mellon and Sonova.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[32].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-sixty-hours",
+    "twins": [
+      "site:topicNeeds[5].topics[0].id",
+      "site:topicAudiences[35].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[32].title",
+    "show": "must",
+    "source": "site",
+    "text": "From Sixty Hours to One Minute",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[32].promise",
+    "show": "must",
+    "source": "site",
+    "text": "How a Spark batch pipeline became Flink, Kafka and Cassandra streaming for millions of tracks, and why grounded AI depends on data that fresh.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[33].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-cache-keys",
+    "twins": [
+      "site:topicNeeds[5].topics[1].id",
+      "site:topicAudiences[36].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[33].title",
+    "show": "must",
+    "source": "site",
+    "text": "Context In, Accuracy Up",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[33].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Two separate Alexa results: an orchestration layer that saved $40M a year by removing redundant processing, and a 40% gain in recognition and routing accuracy from feeding context back.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[34].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-two-weeks",
+    "twins": [
+      "site:topicNeeds[5].topics[2].id",
+      "site:topicAudiences[37].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[34].title",
+    "show": "must",
+    "source": "site",
+    "text": "Onboarding from Two Weeks to Fifteen Minutes",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[34].promise",
+    "show": "must",
+    "source": "site",
+    "text": "Self-service deployment and peak-event capacity planning: what cut weekly operational issues from 40 to 10 and peak registration issues tenfold.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[35].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-law",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[35].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Law Firms",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[35].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for law firms: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[36].promise",
+      "site:topicMenu[37].promise",
+      "site:topicMenu[38].promise",
+      "site:topicMenu[39].promise",
+      "site:topicMenu[40].promise",
+      "site:topicMenu[41].promise",
+      "site:topicMenu[42].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[35].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Morgan Lewis.",
+    "twins": [
+      "site:topicMenu[10].proof",
+      "site:topicMenu[25].proof"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[36].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-nonprofits",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[36].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Nonprofits",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[36].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for nonprofits: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[35].promise",
+      "site:topicMenu[37].promise",
+      "site:topicMenu[38].promise",
+      "site:topicMenu[39].promise",
+      "site:topicMenu[40].promise",
+      "site:topicMenu[41].promise",
+      "site:topicMenu[42].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[36].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Philadelphia Eagles.",
+    "twins": [
+      "site:topicMenu[29].proof"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[37].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-public",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[37].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Public Media",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[37].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for public media: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[35].promise",
+      "site:topicMenu[36].promise",
+      "site:topicMenu[38].promise",
+      "site:topicMenu[39].promise",
+      "site:topicMenu[40].promise",
+      "site:topicMenu[41].promise",
+      "site:topicMenu[42].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[37].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for PBS.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[38].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-healthcare",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[38].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Healthcare",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[38].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for healthcare teams: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[35].promise",
+      "site:topicMenu[36].promise",
+      "site:topicMenu[37].promise",
+      "site:topicMenu[39].promise",
+      "site:topicMenu[40].promise",
+      "site:topicMenu[41].promise",
+      "site:topicMenu[42].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[38].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Sonova.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[39].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-enterprise",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[39].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Enterprise IT",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[39].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for IT organizations: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[35].promise",
+      "site:topicMenu[36].promise",
+      "site:topicMenu[37].promise",
+      "site:topicMenu[38].promise",
+      "site:topicMenu[40].promise",
+      "site:topicMenu[41].promise",
+      "site:topicMenu[42].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[39].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for HP and Atos.",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[40].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-communications",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[40].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Communications and PR",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[40].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for communications teams: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[35].promise",
+      "site:topicMenu[36].promise",
+      "site:topicMenu[37].promise",
+      "site:topicMenu[38].promise",
+      "site:topicMenu[39].promise",
+      "site:topicMenu[41].promise",
+      "site:topicMenu[42].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "proof",
+    "id": "site:topicMenu[40].proof",
+    "show": "must",
+    "source": "site",
+    "text": "Delivered for Jacobson Strategic.",
+    "twins": [
+      "site:topicMenu[27].proof"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[41].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-media",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[41].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Media and Streaming",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[41].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for media companies: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[35].promise",
+      "site:topicMenu[36].promise",
+      "site:topicMenu[37].promise",
+      "site:topicMenu[38].promise",
+      "site:topicMenu[39].promise",
+      "site:topicMenu[40].promise",
+      "site:topicMenu[42].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicMenu[42].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-financial",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "title",
+    "id": "site:topicMenu[42].title",
+    "show": "must",
+    "source": "site",
+    "text": "AI for Financial Services",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "promise",
+    "id": "site:topicMenu[42].promise",
+    "show": "must",
+    "source": "site",
+    "text": "An executive briefing for financial firms: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+    "twins": [
+      "site:topicMenu[35].promise",
+      "site:topicMenu[36].promise",
+      "site:topicMenu[37].promise",
+      "site:topicMenu[38].promise",
+      "site:topicMenu[39].promise",
+      "site:topicMenu[40].promise",
+      "site:topicMenu[41].promise"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "trust",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicNeeds[0].text",
+    "show": "must",
+    "source": "site",
+    "text": "trust what AI tells them",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-cite-every-number",
+    "twins": [
+      "site:topicMenu[8].id",
+      "site:topicAudiences[11].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-deterministic-check",
+    "twins": [
+      "site:topicMenu[6].id",
+      "site:topicAudiences[9].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-local-models",
+    "twins": [
+      "site:topicMenu[0].id",
+      "site:topicAudiences[3].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-verified-edges",
+    "twins": [
+      "site:topicMenu[1].id",
+      "site:topicAudiences[4].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-trustworthy-data",
+    "twins": [
+      "site:topicMenu[2].id",
+      "site:topicAudiences[5].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-extract-score",
+    "twins": [
+      "site:topicMenu[7].id",
+      "site:topicAudiences[10].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-calibrate-judge",
+    "twins": [
+      "site:topicMenu[9].id",
+      "site:topicAudiences[12].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[7].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-sourced-beat",
+    "twins": [
+      "site:topicMenu[5].id",
+      "site:topicAudiences[8].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[0].topics[8].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-editor-override",
+    "twins": [
+      "site:topicMenu[4].id",
+      "site:topicAudiences[7].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "adopt",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicNeeds[1].text",
+    "show": "must",
+    "source": "site",
+    "text": "stop resisting AI and start using it",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].topics[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "architecture-adoption",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].topics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-basics",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].topics[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-impact",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].topics[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-prompting-workflows",
+    "twins": [
+      "site:topicMenu[28].id",
+      "site:topicAudiences[31].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].topics[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-mission-time",
+    "twins": [
+      "site:topicMenu[30].id",
+      "site:topicAudiences[33].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].topics[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-flawed-exercise",
+    "twins": [
+      "site:topicMenu[31].id",
+      "site:topicAudiences[34].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[1].topics[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-traffic-light",
+    "twins": [
+      "site:topicMenu[25].id",
+      "site:topicAudiences[28].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "fund",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicNeeds[2].text",
+    "show": "must",
+    "source": "site",
+    "text": "know which AI bets to fund",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[2].topics[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-which-scale",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[2].topics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-gates",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[2].topics[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-eight-cases",
+    "twins": [
+      "site:topicMenu[21].id",
+      "site:topicAudiences[24].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[2].topics[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-discount-rate",
+    "twins": [
+      "site:topicMenu[20].id",
+      "site:topicAudiences[23].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "agents",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicNeeds[3].text",
+    "show": "must",
+    "source": "site",
+    "text": "run agents without losing control",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-ai-agents",
+    "twins": [
+      "site:topicMenu[10].id",
+      "site:topicAudiences[13].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-reengineering",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-simple-audit",
+    "twins": [
+      "site:topicMenu[24].id",
+      "site:topicAudiences[27].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-hidden-test",
+    "twins": [
+      "site:topicMenu[12].id",
+      "site:topicAudiences[15].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-acceptance-rules",
+    "twins": [
+      "site:topicMenu[14].id",
+      "site:topicAudiences[17].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-silent-facts",
+    "twins": [
+      "site:topicMenu[15].id",
+      "site:topicAudiences[18].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-private-objectives",
+    "twins": [
+      "site:topicMenu[13].id",
+      "site:topicAudiences[16].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[7].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-surveil-agents",
+    "twins": [
+      "site:topicMenu[23].id",
+      "site:topicAudiences[26].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[8].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-confidence-to-action",
+    "twins": [
+      "site:topicMenu[26].id",
+      "site:topicAudiences[29].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[3].topics[9].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-failure-graph",
+    "twins": [
+      "site:topicMenu[3].id",
+      "site:topicAudiences[6].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "lead",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicNeeds[4].text",
+    "show": "must",
+    "source": "site",
+    "text": "lead engineers when AI writes the code",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[4].topics[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-next-senior",
+    "twins": [
+      "site:topicMenu[16].id",
+      "site:topicAudiences[19].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[4].topics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "agentic-leadership",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[4].topics[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-shrink-review",
+    "twins": [
+      "site:topicMenu[17].id",
+      "site:topicAudiences[20].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[4].topics[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "ship-the-decision",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[4].topics[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-half-promoted",
+    "twins": [
+      "site:topicMenu[18].id",
+      "site:topicAudiences[21].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "scale",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicNeeds[5].text",
+    "show": "must",
+    "source": "site",
+    "text": "build AI that holds up at scale",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[5].topics[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-sixty-hours",
+    "twins": [
+      "site:topicMenu[32].id",
+      "site:topicAudiences[35].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[5].topics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-cache-keys",
+    "twins": [
+      "site:topicMenu[33].id",
+      "site:topicAudiences[36].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[5].topics[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-two-weeks",
+    "twins": [
+      "site:topicMenu[34].id",
+      "site:topicAudiences[37].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "industry",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "text",
+    "id": "site:topicNeeds[6].text",
+    "show": "must",
+    "source": "site",
+    "text": "rebuild our industry around AI",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-law",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-nonprofits",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-public",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-healthcare",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-enterprise",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-communications",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-media",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicNeeds[6].topics[7].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-financial",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "architecture-adoption",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[0].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[0].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "ship-the-decision",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[1].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "agentic-leadership",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[2].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[2].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-local-models",
+    "twins": [
+      "site:topicMenu[0].id",
+      "site:topicNeeds[0].topics[2].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[3].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[3].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-verified-edges",
+    "twins": [
+      "site:topicMenu[1].id",
+      "site:topicNeeds[0].topics[3].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[4].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-trustworthy-data",
+    "twins": [
+      "site:topicMenu[2].id",
+      "site:topicNeeds[0].topics[4].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[5].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-failure-graph",
+    "twins": [
+      "site:topicMenu[3].id",
+      "site:topicNeeds[3].topics[9].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[6].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[7].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-editor-override",
+    "twins": [
+      "site:topicMenu[4].id",
+      "site:topicNeeds[0].topics[8].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[7].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[7].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[8].id",
+    "show": "never",
+    "source": "site",
+    "text": "kg-sourced-beat",
+    "twins": [
+      "site:topicMenu[5].id",
+      "site:topicNeeds[0].topics[7].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[8].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[9].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-deterministic-check",
+    "twins": [
+      "site:topicMenu[6].id",
+      "site:topicNeeds[0].topics[1].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[9].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[9].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[10].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-extract-score",
+    "twins": [
+      "site:topicMenu[7].id",
+      "site:topicNeeds[0].topics[5].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[10].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[11].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-cite-every-number",
+    "twins": [
+      "site:topicMenu[8].id",
+      "site:topicNeeds[0].topics[0].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[11].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[12].id",
+    "show": "never",
+    "source": "site",
+    "text": "eval-calibrate-judge",
+    "twins": [
+      "site:topicMenu[9].id",
+      "site:topicNeeds[0].topics[6].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[12].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[13].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-ai-agents",
+    "twins": [
+      "site:topicMenu[10].id",
+      "site:topicNeeds[3].topics[0].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[13].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[13].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[14].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-reengineering",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[14].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[14].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[15].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-hidden-test",
+    "twins": [
+      "site:topicMenu[12].id",
+      "site:topicNeeds[3].topics[3].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[15].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[16].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-private-objectives",
+    "twins": [
+      "site:topicMenu[13].id",
+      "site:topicNeeds[3].topics[6].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[16].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[17].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-acceptance-rules",
+    "twins": [
+      "site:topicMenu[14].id",
+      "site:topicNeeds[3].topics[4].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[17].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[18].id",
+    "show": "never",
+    "source": "site",
+    "text": "ag-silent-facts",
+    "twins": [
+      "site:topicMenu[15].id",
+      "site:topicNeeds[3].topics[5].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[18].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[19].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-next-senior",
+    "twins": [
+      "site:topicMenu[16].id",
+      "site:topicNeeds[4].topics[0].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[19].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[19].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[20].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-shrink-review",
+    "twins": [
+      "site:topicMenu[17].id",
+      "site:topicNeeds[4].topics[2].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[20].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[21].id",
+    "show": "never",
+    "source": "site",
+    "text": "ld-half-promoted",
+    "twins": [
+      "site:topicMenu[18].id",
+      "site:topicNeeds[4].topics[4].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[21].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[22].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-which-scale",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[22].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[23].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-discount-rate",
+    "twins": [
+      "site:topicMenu[20].id",
+      "site:topicNeeds[2].topics[3].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[23].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[24].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-eight-cases",
+    "twins": [
+      "site:topicMenu[21].id",
+      "site:topicNeeds[2].topics[2].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[24].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[25].id",
+    "show": "never",
+    "source": "site",
+    "text": "st-gates",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[25].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[26].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-surveil-agents",
+    "twins": [
+      "site:topicMenu[23].id",
+      "site:topicNeeds[3].topics[7].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[26].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[27].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-simple-audit",
+    "twins": [
+      "site:topicMenu[24].id",
+      "site:topicNeeds[3].topics[2].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[27].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[27].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[28].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-traffic-light",
+    "twins": [
+      "site:topicMenu[25].id",
+      "site:topicNeeds[1].topics[6].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[28].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[28].aud[1]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[29].id",
+    "show": "never",
+    "source": "site",
+    "text": "gv-confidence-to-action",
+    "twins": [
+      "site:topicMenu[26].id",
+      "site:topicNeeds[3].topics[8].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[29].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[30].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-basics",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[30].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[31].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-prompting-workflows",
+    "twins": [
+      "site:topicMenu[28].id",
+      "site:topicNeeds[1].topics[3].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[31].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[32].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-impact",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[32].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[33].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-mission-time",
+    "twins": [
+      "site:topicMenu[30].id",
+      "site:topicNeeds[1].topics[4].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[33].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[34].id",
+    "show": "never",
+    "source": "site",
+    "text": "ad-flawed-exercise",
+    "twins": [
+      "site:topicMenu[31].id",
+      "site:topicNeeds[1].topics[5].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[34].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "teams",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[35].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-sixty-hours",
+    "twins": [
+      "site:topicMenu[32].id",
+      "site:topicNeeds[5].topics[0].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[35].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[36].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-cache-keys",
+    "twins": [
+      "site:topicMenu[33].id",
+      "site:topicNeeds[5].topics[1].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[36].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[37].id",
+    "show": "never",
+    "source": "site",
+    "text": "pl-two-weeks",
+    "twins": [
+      "site:topicMenu[34].id",
+      "site:topicNeeds[5].topics[2].id"
+    ],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[37].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[38].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-law",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[38].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[39].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-nonprofits",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[39].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[40].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-public",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[40].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[41].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-healthcare",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[41].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[42].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-enterprise",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[42].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[43].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-communications",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[43].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[44].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-media",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[44].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "id",
+    "id": "site:topicAudiences[45].id",
+    "show": "never",
+    "source": "site",
+    "text": "ind-financial",
+    "twins": [],
+    "unit": "talks"
+  },
+  {
+    "field": "aud",
+    "id": "site:topicAudiences[45].aud[0]",
+    "show": "never",
+    "source": "site",
+    "text": "exec",
+    "twins": [],
     "unit": "talks"
   },
   {
@@ -15208,7 +18324,9 @@
     "show": "may",
     "source": "head",
     "text": "Who trains the next senior?",
-    "twins": [],
+    "twins": [
+      "site:topicMenu[16].title"
+    ],
     "unit": "talks"
   },
   {

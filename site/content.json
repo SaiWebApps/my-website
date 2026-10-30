@@ -1346,18 +1346,481 @@
   "speakingTopics": [
     {
       "id": "architecture-adoption",
-      "title": "From architecture to adoption",
+      "title": "From Architecture to Adoption",
       "promise": "Turn AI skeptics into champions by taking their concerns seriously and showing how AI extends their expertise."
     },
     {
       "id": "ship-the-decision",
-      "title": "Ship the decision, not the diagram",
+      "title": "Ship the Decision, Not the Diagram",
       "promise": "Why technical decisions only matter when teams can carry them into the organization."
     },
     {
       "id": "agentic-leadership",
-      "title": "Engineering leadership in the agentic era",
+      "title": "Engineering Leadership in the Agentic Era",
       "promise": "How management systems change when software production becomes abundant."
     }
+  ],
+  "topicMenu": [
+    {
+      "id": "kg-local-models",
+      "title": "Plan Big, Run Small, Check with the Graph",
+      "promise": "How a knowledge graph enriches a question before the model sees it and checks the answer afterward, and when a small model on your own laptop is the better tool.",
+      "proof": "Delivered for Atos."
+    },
+    {
+      "id": "kg-verified-edges",
+      "title": "Only Verified Edges Count",
+      "promise": "When a graph beats plain vector retrieval, and how to prove it with a loop that checks each generated claim against canonical facts and feeds the errors back."
+    },
+    {
+      "id": "kg-trustworthy-data",
+      "title": "Trustworthy AI Starts with the Data",
+      "promise": "An executive briefing on grounding AI in records you trust: fresh data, resolved identities, human corrections that persist, and a graph someone keeps current."
+    },
+    {
+      "id": "kg-failure-graph",
+      "title": "Put the Failure Graph Behind an API",
+      "promise": "Capture incidents as trigger, fault, symptom and fix, keep that graph current, and let your own and your clients' agents query it.",
+      "proof": "Delivered for Atos."
+    },
+    {
+      "id": "kg-editor-override",
+      "title": "Editorial Decisions That Survive the Next Model Update",
+      "promise": "How to run supervised entity resolution and ML-generated metadata so that human corrections persist when the model is retrained."
+    },
+    {
+      "id": "kg-sourced-beat",
+      "title": "Every Sentence Traces to a Source",
+      "promise": "A case study of a provenance-aware graph behind generated audio tours, where a line that is not true for the place is dropped rather than spoken."
+    },
+    {
+      "id": "eval-deterministic-check",
+      "title": "The Model Drafts, Code Checks",
+      "promise": "One principle at four levels, from a production correction loop to a finance team's skill that writes 'Needs explanation' instead of inventing a reason."
+    },
+    {
+      "id": "eval-extract-score",
+      "title": "Extract with the Model, Score in Code",
+      "promise": "Use a narrow model call to pull out the facts, compute the score in code, and withhold generated feedback that cannot point to its evidence."
+    },
+    {
+      "id": "eval-cite-every-number",
+      "title": "Cite the File and Page for Every Number",
+      "promise": "An all-staff session on checking an AI answer before you send it, taught from real failure cases, with a record that the training happened.",
+      "proof": "Delivered for Sonova."
+    },
+    {
+      "id": "eval-calibrate-judge",
+      "title": "Calibrate the Judge Before You Cut the Cost",
+      "promise": "Freeze human-labeled cases, compare judges blind, and separate model failures from truncation before you switch to the cheaper model."
+    },
+    {
+      "id": "ag-ai-agents",
+      "title": "From Retrieval to Agents",
+      "promise": "A hands-on session for working teams on retrieval, workflows versus agents, and reusable skills, ending with a checklist for when an agent is worth building.",
+      "proof": "Delivered for HP, Morgan Lewis and Sonova."
+    },
+    {
+      "id": "ag-reengineering",
+      "title": "Reengineering Workflows with AI",
+      "promise": "A sequence leaders can audit: governance first, then deterministic steps, then simple agents only where the automations need coordinating.",
+      "proof": "Delivered for PBS."
+    },
+    {
+      "id": "ag-hidden-test",
+      "title": "A Hidden Test That Must Fail First",
+      "promise": "Make agent-built code verifiable: a test the builder never sees, written and reviewed by a different model family, and mutation checks that prove the test guards the fix."
+    },
+    {
+      "id": "ag-private-objectives",
+      "title": "Agents with Hidden Goals and Hard Limits",
+      "promise": "How to build multiagent simulations where each agent holds its line, and score the outcome with arithmetic rather than a model's opinion."
+    },
+    {
+      "id": "ag-acceptance-rules",
+      "title": "Rules Every Agent Change Must Pass",
+      "promise": "Team operating standards for coding agents: design review, CI gates and acceptance rules every agent change must pass, taught from a framework other teams adopted."
+    },
+    {
+      "id": "ag-silent-facts",
+      "title": "No Silent Rewrites",
+      "promise": "Hash-bound release gates for agent pipelines, so a model can draft and revise but cannot change an accepted fact without failing the release."
+    },
+    {
+      "id": "ld-next-senior",
+      "title": "Who Trains the Next Senior?",
+      "promise": "When AI drafts the code juniors used to learn from, apprenticeship has to be rebuilt on purpose; leave with four management moves and the measures that survive."
+    },
+    {
+      "id": "ld-shrink-review",
+      "title": "Shrink the Unit of Review",
+      "promise": "A working session for managers on ending review theater: smaller changes, scrutiny matched to consequence, and metrics that count verified outcomes instead of commits."
+    },
+    {
+      "id": "ld-half-promoted",
+      "title": "Half the Team to Promotion",
+      "promise": "How I coached half my team of eight to promotion and a senior engineer into independent ownership, and what that takes when juniors work beside agents."
+    },
+    {
+      "id": "st-which-scale",
+      "title": "Which AI Investments Deserve to Scale?",
+      "promise": "Define success before choosing technology, then decide with evidence which pilots to expand, redesign or stop."
+    },
+    {
+      "id": "st-discount-rate",
+      "title": "Eight Risks That Move the Discount Rate",
+      "promise": "Price AI risk into the discount rate, including inference cost scaling and vendor dependency, and see why build versus buy trades one risk for another."
+    },
+    {
+      "id": "st-eight-cases",
+      "title": "Eight AI Deployments, Scored the Same Way",
+      "promise": "A case session that runs Salesforce Agentforce, Spotify, Shopify Magic, JPMorgan COiN and their comparison cases through one framework, so a class sees why similar bets get different verdicts."
+    },
+    {
+      "id": "st-gates",
+      "title": "Re-score the Risk at Every Gate",
+      "promise": "A working session on the buyer's own pilots: score each against three stage gates and eight risk categories, and leave with an expand, redesign or stop call for each."
+    },
+    {
+      "id": "gv-surveil-agents",
+      "title": "Surveil Agents the Way We Surveilled Trades",
+      "promise": "For broker-dealers and wealth firms: apply real-time surveillance thinking to AI agents, tracking each action and limiting system access as FINRA's 2026 report suggests."
+    },
+    {
+      "id": "gv-simple-audit",
+      "title": "Keep Each Agent Simple Enough to Audit",
+      "promise": "Engineering controls translated for risk owners: scoped tool permissions, action checks, audit logs, autonomy limits, and evals kept as audit evidence."
+    },
+    {
+      "id": "gv-traffic-light",
+      "title": "Green, Yellow, Red: Which Tasks Are Safe for AI",
+      "promise": "For law and professional-services firms: sort everyday tasks into safe, check first, and off limits, and give champions a kit that keeps the guide current.",
+      "proof": "Delivered for Morgan Lewis."
+    },
+    {
+      "id": "gv-confidence-to-action",
+      "title": "Carry the Confidence All the Way to the Action",
+      "promise": "A live-demo talk on systems that act for people: start disarmed, drop stale input, recheck the target, and keep a human able to stop it, from a 2014 drone swarm to a 2026 gesture app."
+    },
+    {
+      "id": "ad-basics",
+      "title": "AI Foundations for Digital Innovators",
+      "promise": "How these tools work in plain words, which one to pick, and how to prompt so the model shows its work.",
+      "proof": "Delivered for Jacobson Strategic and HP."
+    },
+    {
+      "id": "ad-prompting-workflows",
+      "title": "Save It Once, Check It Every Time",
+      "promise": "A two-part course that takes a team from prompting to a reusable skill they have tested against formulas, edge cases and invented explanations.",
+      "proof": "Delivered for Sonova."
+    },
+    {
+      "id": "ad-impact",
+      "title": "AI for Impact",
+      "promise": "A keynote for mission-driven leaders on using AI to win back staff time and reach more people, safely.",
+      "proof": "Delivered for Philadelphia Eagles."
+    },
+    {
+      "id": "ad-mission-time",
+      "title": "Win Back Time for the Mission",
+      "promise": "A funder-sponsored cohort for nonprofit teams: an AI use policy, one automated workflow per team, and the habit of checking answers."
+    },
+    {
+      "id": "ad-flawed-exercise",
+      "title": "Plant the Flaw",
+      "promise": "For trainers and faculty: design AI exercises where learners catch a planted error, from a flawed web app in 2013 to a budget skill that invents reasons in 2026.",
+      "proof": "Delivered for Carnegie Mellon and Sonova."
+    },
+    {
+      "id": "pl-sixty-hours",
+      "title": "From Sixty Hours to One Minute",
+      "promise": "How a Spark batch pipeline became Flink, Kafka and Cassandra streaming for millions of tracks, and why grounded AI depends on data that fresh."
+    },
+    {
+      "id": "pl-cache-keys",
+      "title": "Context In, Accuracy Up",
+      "promise": "Two separate Alexa results: an orchestration layer that saved $40M a year by removing redundant processing, and a 40% gain in recognition and routing accuracy from feeding context back."
+    },
+    {
+      "id": "pl-two-weeks",
+      "title": "Onboarding from Two Weeks to Fifteen Minutes",
+      "promise": "Self-service deployment and peak-event capacity planning: what cut weekly operational issues from 40 to 10 and peak registration issues tenfold."
+    },
+    {
+      "id": "ind-law",
+      "title": "AI for Law Firms",
+      "promise": "An executive briefing for law firms: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+      "proof": "Delivered for Morgan Lewis."
+    },
+    {
+      "id": "ind-nonprofits",
+      "title": "AI for Nonprofits",
+      "promise": "An executive briefing for nonprofits: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+      "proof": "Delivered for Philadelphia Eagles."
+    },
+    {
+      "id": "ind-public",
+      "title": "AI for Public Media",
+      "promise": "An executive briefing for public media: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+      "proof": "Delivered for PBS."
+    },
+    {
+      "id": "ind-healthcare",
+      "title": "AI for Healthcare",
+      "promise": "An executive briefing for healthcare teams: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+      "proof": "Delivered for Sonova."
+    },
+    {
+      "id": "ind-enterprise",
+      "title": "AI for Enterprise IT",
+      "promise": "An executive briefing for IT organizations: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+      "proof": "Delivered for HP and Atos."
+    },
+    {
+      "id": "ind-communications",
+      "title": "AI for Communications and PR",
+      "promise": "An executive briefing for communications teams: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan.",
+      "proof": "Delivered for Jacobson Strategic."
+    },
+    {
+      "id": "ind-media",
+      "title": "AI for Media and Streaming",
+      "promise": "An executive briefing for media companies: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan."
+    },
+    {
+      "id": "ind-financial",
+      "title": "AI for Financial Services",
+      "promise": "An executive briefing for financial firms: where the work loses time, why generic AI fails there, three deployments that pay off first, and a 60-day plan."
+    }
+  ],
+  "topicNeeds": [
+    {
+      "id": "trust",
+      "text": "trust what AI tells them",
+      "topics": [
+        {
+          "id": "eval-cite-every-number"
+        },
+        {
+          "id": "eval-deterministic-check"
+        },
+        {
+          "id": "kg-local-models"
+        },
+        {
+          "id": "kg-verified-edges"
+        },
+        {
+          "id": "kg-trustworthy-data"
+        },
+        {
+          "id": "eval-extract-score"
+        },
+        {
+          "id": "eval-calibrate-judge"
+        },
+        {
+          "id": "kg-sourced-beat"
+        },
+        {
+          "id": "kg-editor-override"
+        }
+      ]
+    },
+    {
+      "id": "adopt",
+      "text": "stop resisting AI and start using it",
+      "topics": [
+        {
+          "id": "architecture-adoption"
+        },
+        {
+          "id": "ad-basics"
+        },
+        {
+          "id": "ad-impact"
+        },
+        {
+          "id": "ad-prompting-workflows"
+        },
+        {
+          "id": "ad-mission-time"
+        },
+        {
+          "id": "ad-flawed-exercise"
+        },
+        {
+          "id": "gv-traffic-light"
+        }
+      ]
+    },
+    {
+      "id": "fund",
+      "text": "know which AI bets to fund",
+      "topics": [
+        {
+          "id": "st-which-scale"
+        },
+        {
+          "id": "st-gates"
+        },
+        {
+          "id": "st-eight-cases"
+        },
+        {
+          "id": "st-discount-rate"
+        }
+      ]
+    },
+    {
+      "id": "agents",
+      "text": "run agents without losing control",
+      "topics": [
+        {
+          "id": "ag-ai-agents"
+        },
+        {
+          "id": "ag-reengineering"
+        },
+        {
+          "id": "gv-simple-audit"
+        },
+        {
+          "id": "ag-hidden-test"
+        },
+        {
+          "id": "ag-acceptance-rules"
+        },
+        {
+          "id": "ag-silent-facts"
+        },
+        {
+          "id": "ag-private-objectives"
+        },
+        {
+          "id": "gv-surveil-agents"
+        },
+        {
+          "id": "gv-confidence-to-action"
+        },
+        {
+          "id": "kg-failure-graph"
+        }
+      ]
+    },
+    {
+      "id": "lead",
+      "text": "lead engineers when AI writes the code",
+      "topics": [
+        {
+          "id": "ld-next-senior"
+        },
+        {
+          "id": "agentic-leadership"
+        },
+        {
+          "id": "ld-shrink-review"
+        },
+        {
+          "id": "ship-the-decision"
+        },
+        {
+          "id": "ld-half-promoted"
+        }
+      ]
+    },
+    {
+      "id": "scale",
+      "text": "build AI that holds up at scale",
+      "topics": [
+        {
+          "id": "pl-sixty-hours"
+        },
+        {
+          "id": "pl-cache-keys"
+        },
+        {
+          "id": "pl-two-weeks"
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "text": "rebuild our industry around AI",
+      "topics": [
+        {
+          "id": "ind-law"
+        },
+        {
+          "id": "ind-nonprofits"
+        },
+        {
+          "id": "ind-public"
+        },
+        {
+          "id": "ind-healthcare"
+        },
+        {
+          "id": "ind-enterprise"
+        },
+        {
+          "id": "ind-communications"
+        },
+        {
+          "id": "ind-media"
+        },
+        {
+          "id": "ind-financial"
+        }
+      ]
+    }
+  ],
+  "topicAudiences": [
+    {"id": "architecture-adoption", "aud": ["exec", "teams"]},
+    {"id": "ship-the-decision", "aud": ["eng"]},
+    {"id": "agentic-leadership", "aud": ["eng", "exec"]},
+    {"id": "kg-local-models", "aud": ["eng", "exec"]},
+    {"id": "kg-verified-edges", "aud": ["eng"]},
+    {"id": "kg-trustworthy-data", "aud": ["exec"]},
+    {"id": "kg-failure-graph", "aud": ["eng"]},
+    {"id": "kg-editor-override", "aud": ["eng", "exec"]},
+    {"id": "kg-sourced-beat", "aud": ["eng"]},
+    {"id": "eval-deterministic-check", "aud": ["eng", "teams"]},
+    {"id": "eval-extract-score", "aud": ["eng"]},
+    {"id": "eval-cite-every-number", "aud": ["teams"]},
+    {"id": "eval-calibrate-judge", "aud": ["eng"]},
+    {"id": "ag-ai-agents", "aud": ["teams", "eng"]},
+    {"id": "ag-reengineering", "aud": ["exec", "teams"]},
+    {"id": "ag-hidden-test", "aud": ["eng"]},
+    {"id": "ag-private-objectives", "aud": ["eng"]},
+    {"id": "ag-acceptance-rules", "aud": ["eng"]},
+    {"id": "ag-silent-facts", "aud": ["eng"]},
+    {"id": "ld-next-senior", "aud": ["eng", "exec"]},
+    {"id": "ld-shrink-review", "aud": ["eng"]},
+    {"id": "ld-half-promoted", "aud": ["eng"]},
+    {"id": "st-which-scale", "aud": ["exec"]},
+    {"id": "st-discount-rate", "aud": ["exec"]},
+    {"id": "st-eight-cases", "aud": ["exec"]},
+    {"id": "st-gates", "aud": ["exec"]},
+    {"id": "gv-surveil-agents", "aud": ["exec"]},
+    {"id": "gv-simple-audit", "aud": ["exec", "eng"]},
+    {"id": "gv-traffic-light", "aud": ["teams", "exec"]},
+    {"id": "gv-confidence-to-action", "aud": ["eng"]},
+    {"id": "ad-basics", "aud": ["teams"]},
+    {"id": "ad-prompting-workflows", "aud": ["teams"]},
+    {"id": "ad-impact", "aud": ["exec"]},
+    {"id": "ad-mission-time", "aud": ["teams"]},
+    {"id": "ad-flawed-exercise", "aud": ["teams"]},
+    {"id": "pl-sixty-hours", "aud": ["eng"]},
+    {"id": "pl-cache-keys", "aud": ["eng"]},
+    {"id": "pl-two-weeks", "aud": ["eng"]},
+    {"id": "ind-law", "aud": ["exec"]},
+    {"id": "ind-nonprofits", "aud": ["exec"]},
+    {"id": "ind-public", "aud": ["exec"]},
+    {"id": "ind-healthcare", "aud": ["exec"]},
+    {"id": "ind-enterprise", "aud": ["exec"]},
+    {"id": "ind-communications", "aud": ["exec"]},
+    {"id": "ind-media", "aud": ["exec"]},
+    {"id": "ind-financial", "aud": ["exec"]}
   ]
 }

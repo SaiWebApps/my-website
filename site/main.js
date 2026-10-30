@@ -656,3 +656,81 @@
   window.__SITE_READY__ = true;
   document.documentElement.dataset.siteReady = 'true';
 })();
+
+// ---- speaking topics: "I need my [audience] to [need]." lifts the best-matching talk forward ----
+(() => {
+  const ts = document.querySelector('[data-ts]');
+  if (!ts) return;
+  const groups = [...ts.querySelectorAll('.ts__group')];
+  const total = ts.querySelectorAll('.ts__talk').length;
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; };
+  const select = (label, options) => {
+    const field = el('span', 'ts__field');
+    const s = el('select', 'ts__pick');
+    s.setAttribute('aria-label', label);
+    options.forEach(([value, text]) => s.append(new Option(text, value)));
+    field.append(s);
+    return [field, s];
+  };
+  const [audField, aud] = select('Who is in the room', [['exec', 'executives'], ['eng', 'engineering leaders'], ['teams', 'teams']]);
+  const [needField, need] = select('What they need', groups.map((g) => [g.dataset.need, g.querySelector('.ts__need').textContent]));
+  const sentence = el('p', 'ts__sentence');
+  const tail = el('span', 'ts__tail');
+  tail.append(needField, '.');
+  sentence.append('I need my ', audField, ' to ', tail);
+  const lead = el('div', 'ts__lead');
+  const alts = el('div', 'ts__alts');
+  const stage = el('div', 'ts__stage');
+  const side = el('div', 'ts__side');
+  side.append(alts);
+  stage.append(lead, side);
+  const all = el('button', 'ts__all', `All ${total} talks`);
+  all.type = 'button';
+  all.setAttribute('aria-expanded', 'false');
+  side.append(all);
+  ts.prepend(sentence, stage);
+  const show = (talk) => {
+    const card = talk.cloneNode(true);
+    card.removeAttribute('data-content-unit');
+    const book = el('a', 'ts__book', 'Book a talk');
+    book.href = 'mailto:sairambkrishnan@gmail.com?subject=' + encodeURIComponent('Talk: ' + talk.querySelector('.ts__title').textContent);
+    lead.replaceChildren(...card.children, book);
+    lead.classList.remove('is-new'); void lead.offsetWidth; lead.classList.add('is-new');
+  };
+  const update = (first) => {
+    const group = groups.find((g) => g.dataset.need === need.value);
+    const talks = [...group.querySelectorAll('.ts__talk')].sort((a, b) => a.dataset.rank - b.dataset.rank);
+    const fit = talks.filter((t) => t.dataset.aud.split(' ').includes(aud.value));
+    const pool = fit.length ? fit : talks;
+    const top = first && pool.includes(first) ? first : pool[0];
+    show(top);
+    alts.replaceChildren(...pool.filter((t) => t !== top).slice(0, 3).map((t) => {
+      const b = el('button', 'ts__alt');
+      b.type = 'button';
+      b.append(el('b', '', t.querySelector('.ts__title').textContent), el('span', '', t.querySelector('.ts__promise').textContent));
+      b.addEventListener('click', () => update(t));
+      return b;
+    }));
+  };
+  aud.addEventListener('change', () => update());
+  need.addEventListener('change', () => update());
+  all.addEventListener('click', () => {
+    const open = all.getAttribute('aria-expanded') !== 'true';
+    all.setAttribute('aria-expanded', String(open));
+    ts.classList.toggle('is-all', open);
+  });
+  groups.forEach((g) => g.querySelectorAll('.ts__talk').forEach((t) => {
+    t.tabIndex = 0;
+    const pick = () => {
+      need.value = g.dataset.need;
+      if (!t.dataset.aud.split(' ').includes(aud.value)) aud.value = t.dataset.aud.split(' ')[0];
+      update(t);
+      sentence.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    };
+    t.addEventListener('click', pick);
+    t.addEventListener('keydown', (e) => { if (e.key === 'Enter') pick(); });
+  }));
+  ts.classList.add('is-js');
+  update();
+})();
+

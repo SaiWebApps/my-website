@@ -389,11 +389,11 @@ def speaking(B):
     index = (
         '<nav class="sp2-index" aria-label="Speaking"><div class="sp2-index__branch">'
         '<a class="sp2-index__group" href="#praxtera">Praxtera AI Institute</a><ol>'
-        '<li><a href="#eagles">Philadelphia Eagles</a></li><li><a href="#jacobson-strategic">Jacobson Strategic</a></li>'
-        '<li><a href="#hp">HP</a></li><li><a href="#morgan-lewis">Morgan Lewis</a></li>'
-        '<li><a href="#pbs">PBS</a></li><li><a href="#sonova">Sonova</a></li></ol></div>'
+        '<li><a href="#jacobson-strategic">Jacobson Strategic</a></li><li><a href="#hp">HP</a></li>'
+        '<li><a href="#morgan-lewis">Morgan Lewis</a></li><li><a href="#pbs">PBS</a></li>'
+        '<li><a href="#eagles">Philadelphia Eagles</a></li><li><a href="#sonova">Sonova</a></li></ol></div>'
         '<div class="sp2-index__branch sp2-index__branch--independent">'
-        '<a class="sp2-index__group" href="#independent-speaking-teaching">Independent Speaking &amp; Teaching</a><ol>'
+        '<a class="sp2-index__group" href="#independent-speaking-teaching">Independent</a><ol>'
         '<li><a href="#cmu">Carnegie Mellon</a></li><li><a href="#atos">Atos</a></li></ol></div></nav>'
     )
 
@@ -578,12 +578,33 @@ def speaking(B):
         f'<header class="sp2-group__head"><h2 id="sp2-independent-h">Independent Speaking &amp; Teaching</h2></header>'
         f'<div class="sp2-group__members">{cmu}{atos}</div></section>')
 
-    topics = '<section class="sp2-topics" id="talks" aria-labelledby="sp2-topics-h"><h2 id="sp2-topics-h">Speaking topics</h2><div class="sp2-topics__grid">'
-    for i in range(len(B.D['speakingTopics'])):
-        topic_id = B.D['speakingTopics'][i]['id']
-        topics += proof(f'topic-{i + 1}', 'talks', atom(f'site:speakingTopics[{i}].title', 'h3') + atom(f'site:speakingTopics[{i}].promise'),
-                        content_unit=f'speakingTopics/{topic_id}')
-    topics += '</div></section>'
+    # Speaking topics: every talk once, grouped by the buyer's need. main.js turns the groups into one sentence,
+    # "I need my [audience] to [need].", and lifts the best match forward; without script the grouped list stands.
+    held = {r['id']: i for i, r in enumerate(B.D['speakingTopics'])}
+    menu = {r['id']: i for i, r in enumerate(B.D['topicMenu'])}
+    aud = {r['id']: r['aud'] for r in B.D['topicAudiences']}
+
+    def talk(tid, rank):
+        if tid in held:
+            fid, rec = f'site:speakingTopics[{held[tid]}]', B.D['speakingTopics'][held[tid]]
+        else:
+            fid, rec = f'site:topicMenu[{menu[tid]}]', B.D['topicMenu'][menu[tid]]
+        anchor = html.escape(tid, quote=True)
+        body = (atom(fid + '.title', 'h4', 'ts__title') + atom(fid + '.promise', cls='ts__promise') +
+                (atom(fid + '.proof', cls='ts__proof') if 'proof' in rec else ''))
+        attrs = f'data-talk="{anchor}" data-aud="{" ".join(aud[tid])}" data-rank="{rank}"'
+        if tid in held:
+            return proof(f'topic-{held[tid] + 1}', 'talks', body, cls='ts__talk', content_unit=f'speakingTopics/{tid}').replace(
+                '<div class="sp2-proof ts__talk"', f'<article class="sp2-proof ts__talk" {attrs}', 1)[:-6] + '</article>'
+        return f'<article class="ts__talk" data-content-unit="topicMenu/{anchor}" {attrs}>{body}</article>'
+
+    groups = ''.join(
+        f'<section class="ts__group" data-need="{n["id"]}" data-content-unit="topicNeeds/{n["id"]}">'
+        f'{atom(f"site:topicNeeds[{i}].text", "h3", "ts__need")}'
+        f'<div class="ts__list">{"".join(talk(t["id"], k) for k, t in enumerate(n["topics"]))}</div></section>'
+        for i, n in enumerate(B.D['topicNeeds']))
+    topics = (f'<section class="sp2-topics" id="talks" aria-labelledby="sp2-topics-h"><h2 id="sp2-topics-h">Speaking topics</h2>'
+              f'<div class="ts" data-ts><div class="ts__groups">{groups}</div></div></section>')
 
     fee = (f'<section class="sp2-booking" id="fee" aria-labelledby="sp2-fee-h"><h2 id="sp2-fee-h">Keynote</h2>'
            f'<a class="btn sp2-booking__link" data-line="orange" href="mailto:sairambkrishnan@gmail.com?subject=Keynote">Book a talk</a></section>')
