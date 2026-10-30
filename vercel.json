@@ -77,6 +77,11 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true
+    },
+    {
+      "source": "/public/assets/Sairam_Krishnan_Resume.pdf",
+      "destination": "/public/assets/Resume.pdf",
+      "permanent": true
     }
   ]
 }
