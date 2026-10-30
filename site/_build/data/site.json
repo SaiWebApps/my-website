@@ -1,0 +1,58 @@
+{
+  "origin": "https://sairambkrishnan.com",
+  "image": "/public/assets/portrait-2026-mobile.webp",
+  "routes": [
+    {
+      "id": "home",
+      "file": "index.html",
+      "path": "/"
+    },
+    {
+      "id": "services",
+      "file": "services.html",
+      "path": "/services"
+    },
+    {
+      "id": "speaking",
+      "file": "speaking.html",
+      "path": "/speaking"
+    },
+    {
+      "id": "career",
+      "file": "career.html",
+      "path": "/career"
+    },
+    {
+      "id": "research",
+      "file": "research.html",
+      "path": "/research"
+    },
+    {
+      "id": "projects",
+      "file": "projects.html",
+      "path": "/projects"
+    },
+    {
+      "id": "contact",
+      "file": "contact.html",
+      "path": "/contact"
+    },
+    {
+      "id": "resume",
+      "file": "public/assets/Resume.pdf",
+      "path": "/public/assets/Resume.pdf"
+    }
+  ],
+  "oneClickDestinations": [
+    "services",
+    "speaking",
+    "career",
+    "resume"
+  ],
+  "machineFiles": [
+    "llms.txt",
+    "robots.txt",
+    "sitemap-index.xml",
+    "sitemap-pages.xml"
+  ]
+}

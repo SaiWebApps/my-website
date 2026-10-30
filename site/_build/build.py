@@ -13,8 +13,7 @@ RESEARCH_VER = hashlib.sha1(open(OUT + 'research.css', 'rb').read()).hexdigest()
 D = json.load(open(os.path.join(os.path.dirname(HERE), 'content.json')))
 DATA = os.path.join(HERE, 'data')
 CONTROL = json.load(open(os.path.join(DATA, 'registry.json')))
-AUTHORITY = json.load(open(os.path.join(DATA, 'authority.json')))
-PUBLIC_SITE = AUTHORITY['publicSite']
+PUBLIC_SITE = json.load(open(os.path.join(DATA, 'site.json')))
 SITE_ORIGIN = PUBLIC_SITE['origin'].rstrip('/')
 ROUTE_BY_ID = {route['id']: route for route in PUBLIC_SITE['routes']}
 

@@ -1,4 +1,4 @@
-"""Plain string helpers shared by the rubric scripts. No regular expressions anywhere in the rubric."""
+"""Plain string helpers for the build. No regular expressions."""
 import unicodedata
 
 MONTHS = {'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Sept', 'Oct', 'Nov', 'Dec', 'January', 'February', 'March', 'April',
