@@ -1432,16 +1432,14 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
   content: ''; position: absolute; left: 10px; top: 10px; bottom: 16px;
   width: 10px; border-radius: 5px; background: var(--c);
 }
-.pj-venture--ondoway .pj-proof:nth-child(-n + 4)::before {
+.pj-venture--ondoway .pj-proof:not(:has(.pf__phone))::before {
   content: ''; position: absolute; left: -48px; top: 8px; width: 18px; height: 18px;
   border-radius: 50%; background: var(--map); box-shadow: 0 0 0 5px var(--c);
 }
-.pj-venture--ondoway .pj-proof:nth-child(1) { grid-column: 1 / 8; }
-.pj-venture--ondoway .pj-proof:nth-child(2) { grid-column: 2 / 8; }
-.pj-venture--ondoway .pj-proof:nth-child(3) { grid-column: 1 / 8; }
-.pj-venture--ondoway .pj-proof:nth-child(4) { grid-column: 2 / 8; }
-.pj-venture--ondoway .pj-proof:nth-child(5) {
-  grid-column: 9 / -1; grid-row: 1 / span 4; align-self: start; justify-self: center;
+.pj-venture--ondoway .pj-proof { grid-column: 1 / 8; }
+.pj-venture--ondoway .pj-proof:nth-child(even) { grid-column: 2 / 8; }
+.pj-venture--ondoway .pj-proof:has(.pf__phone) {
+  grid-column: 9 / -1; grid-row: 1 / span 5; align-self: start; justify-self: center;
 }
 .pj-venture--ondoway .pf__phone { width: min(100%, 300px); margin: 0; }
 .pj-venture--ondoway .pf__phone img { width: 100%; border-radius: 0; }
@@ -1455,6 +1453,7 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
 .pj-venture--persuaider .pj-proof:nth-child(2) { grid-column: 7 / -1; margin-top: clamp(56px, 7vw, 104px); }
 .pj-venture--persuaider .pj-proof:nth-child(3) { grid-column: 4 / 10; }
 .pj-venture--persuaider .pj-proof:nth-child(4) { grid-column: 1 / -1; }
+.pj-venture--persuaider .pj-proof:has(.pj-system) { grid-column: 3 / 11; }
 .pj-system { position: relative; min-width: 0; }
 .pj-system--persuaider {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1578,7 +1577,7 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
   }
   .pj-venture--ondoway .pj-evidence { padding-left: 36px; }
   .pj-venture--ondoway .pj-evidence::before { left: 6px; top: 8px; bottom: 8px; width: 8px; }
-  .pj-venture--ondoway .pj-proof:nth-child(-n + 4)::before { left: -35px; top: 7px; width: 16px; height: 16px; box-shadow: 0 0 0 4px var(--c); }
+  .pj-venture--ondoway .pj-proof:not(:has(.pf__phone))::before { left: -35px; top: 7px; width: 16px; height: 16px; box-shadow: 0 0 0 4px var(--c); }
   .pj-venture--ondoway .pj-proof:nth-child(n),
   .pj-venture--persuaider .pj-proof:nth-child(n),
   .pj-venture--gestiq .pj-proof:nth-child(n),
@@ -1586,7 +1585,7 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
   .pj-venture--crucible .pj-proof:nth-child(n) {
     grid-column: 1; grid-row: auto; margin-top: 0;
   }
-  .pj-venture--ondoway .pj-proof:nth-child(5) { justify-self: center; }
+  .pj-venture--ondoway .pj-proof:has(.pf__phone) { justify-self: center; }
   .pj-venture--ondoway .pf__phone { width: min(100%, 250px); }
 
   .pj-venture--gestiq .pj-evidence::before {

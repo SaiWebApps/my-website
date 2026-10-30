@@ -893,11 +893,11 @@ def projects(B):
     def system_figure(unit):
         if unit == 'persuaider':
             nodes = [
-                ('private-objectives', 'input', 'Role-conditioned agents with private objectives'),
-                ('simulations', 'input', 'stateful AI-versus-AI simulations'),
+                ('private-objectives', 'input', 'Side A, private objectives'),
+                ('simulations', 'input', 'Side B, private objectives'),
                 ('extraction', 'extract', 'LLM deal extraction'),
-                ('utility', 'output', 'deterministic utility, walk-away, and value-left-on-the-table calculations'),
-                ('coaching', 'output', 'configurable weighted coaching rubrics'),
+                ('utility', 'output', 'Deal scored in code'),
+                ('coaching', 'output', 'Coaching checked against the transcript'),
             ]
             edges = [
                 ('private-objectives-to-extraction', 'private-objectives', 'extraction', 250, 170, 445, 265),
@@ -921,15 +921,15 @@ def projects(B):
                     '<path d="M0 0 L24 12 L0 24 Z"></path></marker></defs>' + edge_markup + '</svg>' + node_markup + '</div>')
         if unit == 'lore':
             return ('<div class="pj-system pj-system--lore">'
-                    '<span class="pj-system__term pj-system__term--1">a dependency change</span>'
-                    '<span class="pj-system__term pj-system__term--2">the organization-wide blast radius</span></div>')
+                    '<span class="pj-system__term pj-system__term--1">One change</span>'
+                    '<span class="pj-system__term pj-system__term--2">Blast radius</span></div>')
         if unit == 'crucible':
             return ('<div class="pj-system pj-system--crucible">'
-                    '<span class="pj-system__term pj-system__term--1">model judgment</span>'
-                    '<span class="pj-system__term pj-system__term--2">Structured agent reports</span>'
-                    '<span class="pj-system__term pj-system__term--3">the code that checks evidence structure</span>'
-                    '<span class="pj-system__term pj-system__term--4">claim-level evidence checks</span>'
-                    '<span class="pj-system__term pj-system__term--5">controls when work can proceed</span></div>')
+                    '<span class="pj-system__term pj-system__term--1">Model judgment</span>'
+                    '<span class="pj-system__term pj-system__term--2">Agent report</span>'
+                    '<span class="pj-system__term pj-system__term--3">Code checks it</span>'
+                    '<span class="pj-system__term pj-system__term--4">Claim by claim</span>'
+                    '<span class="pj-system__term pj-system__term--5">Work proceeds</span></div>')
         return ''
 
     ventures = ''

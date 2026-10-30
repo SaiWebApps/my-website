@@ -807,7 +807,9 @@
     "source": "resume",
     "text": "Own product strategy and architecture: graph-grounded storytelling, deterministic routing, and location-triggered narration using Flutter, FastAPI, and Neo4j. Turned beta feedback in New York and Paris into route-sequencing priorities.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "claim",
@@ -816,7 +818,9 @@
     "source": "resume",
     "text": "Established LLM evaluations with frozen human-labeled cases, blinded comparisons, evidence checks, and code-enforced gates; rejected a cheaper LLM judge after calibration exposed false rejections of valid paraphrases.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "claim",
@@ -825,7 +829,9 @@
     "source": "resume",
     "text": "Instrumented model/prompt identity, tokens, latency, responses, and evidence; tracked generation and narration costs including failed attempts to guide debugging, model selection, and unit economics.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "org",
@@ -870,7 +876,9 @@
     "source": "resume",
     "text": "Created interactive practice and autonomous multiagent negotiation with distinct motivations, confidential objectives, and walk-away limits.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "claim",
@@ -879,7 +887,9 @@
     "source": "resume",
     "text": "Extracted negotiated terms with LLMs; scored utility, deal feasibility, and outcomes deterministically against fixed rules.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "claim",
@@ -888,7 +898,9 @@
     "source": "resume",
     "text": "Designed configurable coaching rubrics; checked feedback against transcript evidence, retried failures, and withheld unsupported coaching.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "org",
@@ -933,7 +945,9 @@
     "source": "resume",
     "text": "Developed a native macOS gesture-control application extending a CMU capstone: a hand-controlled 2048 puzzle game.",
     "twins": [],
-    "unit": "gestiq"
+    "unit": "gestiq",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "claim",
@@ -942,7 +956,9 @@
     "source": "resume",
     "text": "Implemented temporal recognition over Apple Vision hand poses, normalizing motion to palm size for two-hand controls and context-aware commands.",
     "twins": [],
-    "unit": "gestiq"
+    "unit": "gestiq",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "claim",
@@ -951,7 +967,9 @@
     "source": "resume",
     "text": "Discarded stale frames, rechecked active targets, and added live diagnostics to guard desktop actions against uncertain camera input; video stays on device.",
     "twins": [],
-    "unit": "gestiq"
+    "unit": "gestiq",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "field": "education",
@@ -8578,7 +8596,7 @@
     "id": "site:ventures[0].thesis",
     "show": "must",
     "source": "site",
-    "text": "A travel companion that adapts as you walk.",
+    "text": "A local storyteller in your pocket that adapts as you walk.",
     "twins": [],
     "unit": "ondoway"
   },
@@ -8587,7 +8605,7 @@
     "id": "site:ventures[0].problem",
     "show": "must",
     "source": "site",
-    "text": "A useful tour must connect accurate stories with personal interests, walking constraints, and the time a traveler actually has.",
+    "text": "Walking tours rarely know where a listener is, what they care about, or how much time they have. A good tour ties accurate stories to the exact corner in front of you, your interests, and your walking constraints.",
     "twins": [],
     "unit": "ondoway"
   },
@@ -8596,7 +8614,7 @@
     "id": "site:ventures[0].role",
     "show": "must",
     "source": "site",
-    "text": "Co-founder & CTO. I lead technical strategy, AI architecture, and end-to-end engineering within the founding team.",
+    "text": "I own product strategy, AI architecture, and end-to-end engineering in the founding team. I designed, architected, coded, and operate the whole system.",
     "twins": [],
     "unit": "ondoway"
   },
@@ -8605,7 +8623,7 @@
     "id": "site:ventures[0].system",
     "show": "must",
     "source": "site",
-    "text": "Graph-grounded storytelling, deterministic itinerary planning, GPS-triggered narration, and calibrated LLM judges against frozen human labels. I trace model and prompt versions, evidence, tokens, latency, and costs—including failed attempts.",
+    "text": "A provenance-aware Neo4j knowledge graph grounds every story. A deterministic tour engine plans and sequences the route, and GPS triggers narration at each stop. FastAPI backend, authoring tools, and a Flutter mobile app.",
     "twins": [],
     "unit": "ondoway"
   },
@@ -8614,7 +8632,7 @@
     "id": "site:ventures[0].state",
     "show": "must",
     "source": "site",
-    "text": "Private beta with early testers, including Wharton Executive MBA peers, and initial city support for New York City and Paris. Flutter app, FastAPI backend, and Neo4j graph.",
+    "text": "Private beta with early testers, including Wharton Executive MBA peers, in New York City and Paris, the first launch city. I turned their feedback into route-sequencing priorities.",
     "twins": [],
     "unit": "ondoway"
   },
@@ -8623,7 +8641,7 @@
     "id": "site:ventures[0].lesson",
     "show": "must",
     "source": "site",
-    "text": "I rejected a cheaper factual judge after calibration exposed false rejections of legitimate paraphrases, separating model-quality failures from truncation before making the cost decision.",
+    "text": "Every spoken sentence traces back to a sourced beat. I evaluate with frozen human-labeled cases, blinded comparisons, evidence checks, and code-enforced gates. I rejected a cheaper LLM judge after calibration exposed false rejections of valid paraphrases, separating model-quality failures from truncation before making the cost decision. I instrument model and prompt identity, tokens, latency, responses, evidence, and the cost of every generation and narration, failed attempts included, to guide debugging, model selection, and unit economics.",
     "twins": [],
     "unit": "ondoway"
   },
@@ -8690,7 +8708,7 @@
     "id": "site:ventures[1].problem",
     "show": "must",
     "source": "site",
-    "text": "Negotiation practice needs credible competing interests and feedback grounded in what was actually said and agreed.",
+    "text": "Negotiation training is hard to personalize, repeat, and evaluate consistently. Practice needs credible competing interests and feedback grounded in what was actually said and agreed.",
     "twins": [],
     "unit": "persuaider"
   },
@@ -8699,7 +8717,7 @@
     "id": "site:ventures[1].role",
     "show": "must",
     "source": "site",
-    "text": "Creator & AI Engineering Lead. I built the product, agent behavior, multiagent simulation, and evaluation systems.",
+    "text": "I built the complete product: agent behavior, multiagent simulation, evaluation, and its multi-provider AI operating model.",
     "twins": [],
     "unit": "persuaider"
   },
@@ -8708,7 +8726,7 @@
     "id": "site:ventures[1].system",
     "show": "must",
     "source": "site",
-    "text": "Role-conditioned agents with private objectives; stateful AI-versus-AI simulations; LLM deal extraction followed by deterministic utility, walk-away, and value-left-on-the-table calculations; configurable weighted coaching rubrics.",
+    "text": "Scenario authoring and in-character AI personas with distinct motivations, confidential objectives, and walk-away limits. Interactive practice and stateful AI-versus-AI negotiations. LLMs extract the negotiated terms, then code scores utility, deal feasibility, walk-away, and value left on the table against fixed rules.",
     "twins": [],
     "unit": "persuaider"
   },
@@ -8717,7 +8735,7 @@
     "id": "site:ventures[1].state",
     "show": "must",
     "source": "site",
-    "text": "Working interactive practice and autonomous simulations with persisted transcripts and usage. Coaching quotations and numerical references are checked in code, returned for bounded repair, and withheld if validation still fails.",
+    "text": "Production-grade application with persisted transcripts and usage, security controls, transparent model failover, and a deep automated test suite.",
     "twins": [],
     "unit": "persuaider"
   },
@@ -8726,7 +8744,7 @@
     "id": "site:ventures[1].lesson",
     "show": "must",
     "source": "site",
-    "text": "I evaluate negotiation economics separately from conversational skill, and require the coaching to point back to its evidence.",
+    "text": "I score negotiation economics separately from conversational skill. Coaching follows configurable, weighted, framework-based rubrics, and every quotation and number in it is checked against the transcript in code, returned for bounded repair, and withheld if it still fails.",
     "twins": [],
     "unit": "persuaider"
   },
@@ -8791,7 +8809,7 @@
     "id": "site:ventures[2].problem",
     "show": "must",
     "source": "site",
-    "text": "Camera input is uncertain; useful gesture control must distinguish an intentional action from jitter, tracking loss, and return motion.",
+    "text": "Camera input is uncertain. Useful gesture control must tell an intentional action from jitter, tracking loss, and the hand returning to rest.",
     "twins": [],
     "unit": "gestiq"
   },
@@ -8800,7 +8818,7 @@
     "id": "site:ventures[2].role",
     "show": "must",
     "source": "site",
-    "text": "Creator. I designed and built the native macOS product, extending my CMU hand-controlled 2048 capstone.",
+    "text": "I designed and built the native macOS product, extending my Carnegie Mellon capstone: a 2048 puzzle game played with hand gestures.",
     "twins": [],
     "unit": "gestiq"
   },
@@ -8809,7 +8827,7 @@
     "id": "site:ventures[2].system",
     "show": "must",
     "source": "site",
-    "text": "On-device Apple Vision hand-pose estimation, palm-normalized temporal recognition, two-hand controls, and application- and website-aware command routing. Latest-frame processing, target revalidation, and live diagnostics connect perception to guarded actions.",
+    "text": "Apple Vision hand-pose estimation runs on device. Temporal recognition normalizes motion to palm size, which makes two-hand controls possible and routes commands by the active application or website.",
     "twins": [],
     "unit": "gestiq"
   },
@@ -8818,7 +8836,7 @@
     "id": "site:ventures[2].state",
     "show": "must",
     "source": "site",
-    "text": "Working macOS application with a SwiftUI interface, menu-bar controls, and local camera processing without uploading video.",
+    "text": "Working macOS application with a SwiftUI interface and menu-bar controls. Video never leaves the Mac.",
     "twins": [],
     "unit": "gestiq"
   },
@@ -8827,7 +8845,7 @@
     "id": "site:ventures[2].lesson",
     "show": "must",
     "source": "site",
-    "text": "I carry confidence, timing, and target identity through the whole perception-to-action path, including the final dispatch check.",
+    "text": "Confidence, timing, and target identity travel through the whole perception-to-action path. The app processes only the latest frame, rechecks the target at the final dispatch, and shows live diagnostics, so uncertain camera input never fires a desktop action.",
     "twins": [],
     "unit": "gestiq"
   },
@@ -8903,7 +8921,7 @@
     "id": "site:ventures[3].role",
     "show": "must",
     "source": "site",
-    "text": "Designed the product, graph model, algorithms, and senior-engineer audit.",
+    "text": "I designed the product, the graph model, the algorithms, and the senior-engineer audit.",
     "twins": [
       "head:pinned.content.ts.ventures[2].role"
     ],
@@ -8914,7 +8932,7 @@
     "id": "site:ventures[3].system",
     "show": "must",
     "source": "site",
-    "text": "PostgreSQL for identity and history, Neo4j for dependency traversal, and task-aware model routing across hosted and local models.",
+    "text": "PostgreSQL holds identity and history, Neo4j traverses dependencies, and task-aware routing sends each job to a hosted or local model.",
     "twins": [
       "head:pinned.content.ts.ventures[2].system"
     ],
@@ -8994,7 +9012,7 @@
     "id": "site:ventures[4].thesis",
     "show": "must",
     "source": "site",
-    "text": "Engineering workflows that make agents show their work.",
+    "text": "Engineering workflows that make AI agents show their work.",
     "twins": [
       "approved:25"
     ],
@@ -9005,7 +9023,7 @@
     "id": "site:ventures[4].problem",
     "show": "must",
     "source": "site",
-    "text": "An agent’s confident report is insufficient evidence that a change is correct, complete, or recoverable.",
+    "text": "An agent’s confident report is weak evidence that a change is correct, complete, or recoverable, and prompt-only guidance is easy for an agent to ignore when delivery pressure rises.",
     "twins": [],
     "unit": "crucible"
   },
@@ -9014,7 +9032,7 @@
     "id": "site:ventures[4].role",
     "show": "must",
     "source": "site",
-    "text": "I turn engineering judgment into reusable agent workflows, adversarial review, and executable acceptance rules.",
+    "text": "I turn engineering judgment into reusable skills, agent perspectives, hooks, adversarial review, and executable acceptance rules.",
     "twins": [],
     "unit": "crucible"
   },
@@ -9023,7 +9041,7 @@
     "id": "site:ventures[4].system",
     "show": "must",
     "source": "site",
-    "text": "Structured agent reports, claim-level evidence checks, risk-based verification, mutation and undo evidence, concurrent review, and bounded revision loops.",
+    "text": "Twelve skills and four pattern guides built on structured agent reports, claim-level evidence checks, risk-based verification, mutation and undo evidence, concurrent review, deterministic gates, and bounded revision loops.",
     "twins": [],
     "unit": "crucible"
   },
@@ -9032,7 +9050,7 @@
     "id": "site:ventures[4].state",
     "show": "must",
     "source": "site",
-    "text": "Public toolkit with runtime hooks and regression tests. Separately, my internal agent-engineering work supports daily operations and was adopted and extended by QA, Operations, and upstream/downstream teams.",
+    "text": "Open-source toolkit with runtime hooks and regression tests, and the working counterpart to my management research. Separately, my internal agent-engineering work supports daily operations and was adopted and extended by QA, Operations, and upstream and downstream teams.",
     "twins": [],
     "unit": "crucible"
   },
@@ -9041,7 +9059,7 @@
     "id": "site:ventures[4].lesson",
     "show": "must",
     "source": "site",
-    "text": "I separate model judgment from the code that checks evidence structure, enforces workflow decisions, and controls when work can proceed.",
+    "text": "Reliable agents come from executable constraints. I keep model judgment separate from the code that checks evidence structure, enforces workflow decisions, and controls when work can proceed.",
     "twins": [],
     "unit": "crucible"
   },
@@ -19189,7 +19207,9 @@
     "source": "head",
     "text": "ondoway",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19200,7 +19220,9 @@
     "source": "head",
     "text": "Ondoway",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19211,7 +19233,9 @@
     "source": "head",
     "text": "A local storyteller in your pocket.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19222,7 +19246,9 @@
     "source": "head",
     "text": "Walking tours rarely know where a listener is, what they care about, or which story belongs to the exact corner in front of them.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19233,7 +19259,9 @@
     "source": "head",
     "text": "Designed, architected, coded, and operated end to end.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19244,7 +19272,9 @@
     "source": "head",
     "text": "A provenance-aware Neo4j knowledge graph, deterministic tour engine, FastAPI backend, authoring tools, and Flutter mobile app.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19255,7 +19285,9 @@
     "source": "head",
     "text": "Launch system built around Paris as the first city.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19266,7 +19298,9 @@
     "source": "head",
     "text": "Generative content becomes trustworthy when every spoken sentence can trace back to a sourced beat.",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19277,7 +19311,9 @@
     "source": "head",
     "text": "claim:d8e340c3066bb3debf4b4e28",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19288,7 +19324,9 @@
     "source": "head",
     "text": "Ondoway",
     "twins": [],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19301,7 +19339,9 @@
     "twins": [
       "site:ventures[0].claim.sourcePath"
     ],
-    "unit": "ondoway"
+    "unit": "ondoway",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19312,7 +19352,9 @@
     "source": "head",
     "text": "persuaider",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19323,7 +19365,9 @@
     "source": "head",
     "text": "Persuaider",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19336,7 +19380,9 @@
     "twins": [
       "site:ventures[1].thesis"
     ],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19347,7 +19393,9 @@
     "source": "head",
     "text": "Negotiation training is difficult to personalize, repeat, and evaluate consistently.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19358,7 +19406,9 @@
     "source": "head",
     "text": "Built the complete product and its multi-provider AI operating model.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19369,7 +19419,9 @@
     "source": "head",
     "text": "Scenario authoring, in-character AI personas, framework-based evaluation, security controls, and transparent model failover.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19380,7 +19432,9 @@
     "source": "head",
     "text": "Production-grade application with a deep automated test suite.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19391,7 +19445,9 @@
     "source": "head",
     "text": "An AI product becomes useful when simulation, evaluation, and operational reliability are designed as one system.",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19402,7 +19458,9 @@
     "source": "head",
     "text": "claim:3edd3471c7efc85a2b5d084b",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19413,7 +19471,9 @@
     "source": "head",
     "text": "Persuaider",
     "twins": [],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19426,7 +19486,9 @@
     "twins": [
       "site:ventures[1].claim.sourcePath"
     ],
-    "unit": "persuaider"
+    "unit": "persuaider",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19437,7 +19499,9 @@
     "source": "head",
     "text": "lore",
     "twins": [],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19448,7 +19512,9 @@
     "source": "head",
     "text": "Lore / DependIQ",
     "twins": [],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19461,7 +19527,9 @@
     "twins": [
       "site:ventures[3].thesis"
     ],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19474,7 +19542,9 @@
     "twins": [
       "site:ventures[3].problem"
     ],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19487,7 +19557,9 @@
     "twins": [
       "site:ventures[3].role"
     ],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19500,7 +19572,9 @@
     "twins": [
       "site:ventures[3].system"
     ],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19513,7 +19587,9 @@
     "twins": [
       "site:ventures[3].state"
     ],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19526,7 +19602,9 @@
     "twins": [
       "site:ventures[3].lesson"
     ],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19537,7 +19615,9 @@
     "source": "head",
     "text": "claim:f85fb24e9409d143dfbf9f01",
     "twins": [],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19548,7 +19628,9 @@
     "source": "head",
     "text": "Lore / DependIQ",
     "twins": [],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19561,7 +19643,9 @@
     "twins": [
       "site:ventures[3].claim.sourcePath"
     ],
-    "unit": "lore"
+    "unit": "lore",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19572,7 +19656,9 @@
     "source": "head",
     "text": "crucible",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19583,7 +19669,9 @@
     "source": "head",
     "text": "Crucible",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19594,7 +19682,9 @@
     "source": "head",
     "text": "Discipline for AI coding agents.",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19605,7 +19695,9 @@
     "source": "head",
     "text": "Prompt-only guidance is too easy for coding agents to ignore when delivery pressure rises.",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19616,7 +19708,9 @@
     "source": "head",
     "text": "Encoded engineering practice into skills, agents, hooks, and verifiable workflows.",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19627,7 +19721,9 @@
     "source": "head",
     "text": "Ten skills, ten agents, four patterns, deterministic gates, and adversarial evidence checks.",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19638,7 +19734,9 @@
     "source": "head",
     "text": "Open-source kit I use as the operational counterpart to my management research.",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19649,7 +19747,9 @@
     "source": "head",
     "text": "Reliable agent behavior comes from executable constraints, not aspirational prose.",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19660,7 +19760,9 @@
     "source": "head",
     "text": "claim:10cb612f6e25caa1a660432b",
     "twins": [],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19673,7 +19775,9 @@
     "twins": [
       "site:ventures[4].claim.value"
     ],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
@@ -19686,7 +19790,9 @@
     "twins": [
       "site:ventures[4].claim.sourcePath"
     ],
-    "unit": "crucible"
+    "unit": "crucible",
+    "retired": true,
+    "mergedInto": "site:ventures"
   },
   {
     "authorityRank": "historical-review",
