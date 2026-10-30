@@ -232,7 +232,7 @@ a.stn:hover .stn__name { text-decoration: underline; text-decoration-color: var(
 body[data-page="home"] { --hd-h: 0px; }
 /* Clipped so the zoom toward the hub never grows the page. */
 .hero { position: relative; height: calc(100svh - var(--hd-h)); min-height: 560px; display: grid; place-items: center; padding: clamp(24px, 4.5svh, 48px) var(--gutter) 12px; overflow: clip; }
-.hero__frame { position: relative; width: min(100%, calc((100svh - var(--hd-h) - 76px) * 1440 / 780)); container-type: inline-size; }
+.hero__frame { position: relative; width: min(100%, calc((100svh - var(--hd-h) - 76px) * 1440 / 960)); container-type: inline-size; }
 .hero .map--tall { display: none; }
 
 /* The hub is his face: the label box is the ring's outer circle, the photo fills its white inside. */
@@ -240,7 +240,7 @@ body[data-page="home"] { --hd-h: 0px; }
 .stn__face { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
 .stn--me .stn__name { position: absolute; }
 .stn--me-nw .stn__name { right: calc(100% - var(--d) * 0.1); bottom: calc(100% - var(--d) * 0.1); }
-.stn--me-sw .stn__name { right: calc(100% - var(--d) * 0.03); top: calc(100% - var(--d) * 0.03); }
+.stn--me-sw .stn__name { right: calc(100% + 14px); top: calc(100% + 2px); }
 .stn--me:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 
 /* The card behind the face: what he says, who he is, where he works now. */
