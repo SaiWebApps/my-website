@@ -747,3 +747,149 @@
   });
 })();
 
+// ---- services: "I [seats] and need [needs]." Each need adds a departure to the board. ----
+(() => {
+  const sf = document.querySelector('[data-sf]');
+  if (!sf) return;
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; };
+  const ask = sf.querySelector('.sf-ask');
+  const board = sf.querySelector('.sf-board');
+  const panel = sf.querySelector('.sf-panel');
+  const seatBtns = [...ask.querySelectorAll('[data-seat]')];
+  const needBtns = [...ask.querySelectorAll('[data-offer]')];
+  const offers = Object.fromEntries([...sf.querySelectorAll('.sf-offer')].map((o) => [o.id, o]));
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  // Who each offer is for, read before the details are reordered: the Fit Call says Free, the rest name their group.
+  const forWhom = Object.fromEntries(Object.values(offers).map((o) => [o.id, (o.querySelector('.sf-offer__tag') || o.closest('.sf-group').querySelector('.sf-group__name')).textContent]));
+  const seatsOf = (id) => needBtns.find((b) => b.dataset.offer === id).dataset.seats.split(' ');
+  const listed = (parts) => parts.length < 2 ? parts.join('') : parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+
+  const sentence = el('p', 'sf-sentence');
+  sentence.setAttribute('aria-live', 'polite');
+  const joinText = ask.querySelector('.sf-join').textContent;
+  ask.prepend(sentence);
+  const departures = el('div', 'sf-deps');
+  board.append(departures);
+
+  // A departure: a colour bar, the offer's name, and who it is for. Narrow boards wrap each line to two rows.
+  const LETTERS = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-,.&';
+  const timers = new Set();
+  let shape = [], shapeKey = '';
+  let seats = ['eng'], picked = ['fit'];
+  const live = new Map();
+  const wrap = (text, n, r) => {
+    const lines = [''];
+    for (const w of text.toUpperCase().split(' ')) {
+      const last = lines[lines.length - 1];
+      if (!last) lines[lines.length - 1] = w;
+      else if ((last + ' ' + w).length <= n) lines[lines.length - 1] = last + ' ' + w;
+      else lines.push(w);
+    }
+    while (lines.length < r) lines.push('');
+    return lines.slice(0, r).map((l) => l.padEnd(n).slice(0, n)).join('');
+  };
+  const flip = (row, text, instant) => {
+    const goal = wrap(text, row.n, row.r);
+    row.cells.forEach((c, k) => {
+      const face = c.firstChild, want = goal[k];
+      if (instant || still.matches || face.textContent === want) { face.textContent = want; return; }
+      const from = Math.max(0, LETTERS.indexOf(face.textContent));
+      const steps = 6 + (k % row.n) % 7 + Math.floor(Math.random() * 4);
+      let s = 0;
+      const tick = () => {
+        s += 1;
+        face.textContent = s >= steps ? want : LETTERS[(from + s) % LETTERS.length];
+        c.classList.remove('is-flip'); void c.offsetWidth; c.classList.add('is-flip');
+        if (s < steps) { const t = setTimeout(tick, 55); timers.add(t); }
+      };
+      const t = setTimeout(tick, (k % row.n) * 22);
+      timers.add(t);
+    });
+  };
+  const departure = (id, instant) => {
+    const o = offers[id];
+    const dep = el('div', 'sf-dep');
+    dep.dataset.line = o.dataset.line;
+    dep.append(el('i', 'sf-bar'));
+    const rows = el('div', 'sf-rows');
+    const texts = [o.querySelector('.sf-offer__name').textContent, forWhom[id]];
+    // Only as many rows as the words need: a short name stays one row even on a narrow board.
+    const made = shape.map(([n, most], k) => {
+      const r = Math.min(most, Math.max(1, wrap(texts[k], n, most).trimEnd().length > n ? 2 : 1));
+      const row = el('div', 'sf-row sf-row--' + (k + 1));
+      row.style.setProperty('--n', n);
+      const cells = [];
+      for (let i = 0; i < n * r; i++) { const c = el('span', 'sf-cell'); c.append(el('span', '', ' ')); row.append(c); cells.push(c); }
+      rows.append(row);
+      return { n, r, cells };
+    });
+    dep.append(rows);
+    flip(made[0], texts[0], instant);
+    flip(made[1], texts[1], instant);
+    return dep;
+  };
+  const reshape = () => {
+    const next = board.clientWidth < 560 ? [[12, 2], [16, 2]] : [[17, 1], [20, 1]];
+    if (next.join(';') === shapeKey) return false;
+    shapeKey = next.join(';'); shape = next;
+    return true;
+  };
+
+  const render = (instant) => {
+    // The sentence.
+    const seatText = seats.map((id) => seatBtns.find((b) => b.dataset.seat === id).textContent);
+    const needText = picked.map((id) => needBtns.find((b) => b.dataset.offer === id).textContent);
+    sentence.textContent = '';
+    sentence.dataset.size = picked.length + seats.length > 4 ? 'long' : picked.length + seats.length > 2 ? 'mid' : '';
+    const slot = (text, line) => { const s = el('span', 'sf-slot', text); if (line) s.dataset.line = line; return s; };
+    const parts = (items, mk) => items.flatMap((x, k) => [k === 0 ? '' : (k === items.length - 1 ? ' and ' : ', '), mk(x)]);
+    sentence.append(...parts(seatText, (t) => slot(t)), ' ' + joinText + ' ',
+      ...parts(picked.map((id, k) => [needText[k], offers[id].dataset.line]), ([t, line]) => slot(t, line)), '.');
+    // The choices.
+    seatBtns.forEach((b) => b.setAttribute('aria-pressed', String(seats.includes(b.dataset.seat))));
+    needBtns.forEach((b) => {
+      b.hidden = !b.dataset.seats.split(' ').some((x) => seats.includes(x));
+      b.setAttribute('aria-pressed', String(picked.includes(b.dataset.offer)));
+    });
+    // The board: keep the departures that stay, flip in the new ones, in the order they were picked.
+    if (instant) { timers.forEach(clearTimeout); timers.clear(); live.clear(); departures.textContent = ''; }
+    for (const [id, dep] of live) if (!picked.includes(id)) { dep.remove(); live.delete(id); }
+    picked.forEach((id) => { if (!live.has(id)) live.set(id, departure(id, instant)); departures.append(live.get(id)); });
+    // The details, in the same order.
+    Object.values(offers).forEach((o) => o.classList.remove('is-on'));
+    picked.forEach((id) => { offers[id].classList.add('is-on'); panel.append(offers[id]); });
+  };
+
+  seatBtns.forEach((b) => b.addEventListener('click', () => {
+    const id = b.dataset.seat;
+    if (seats.includes(id)) { if (seats.length === 1) return; seats = seats.filter((x) => x !== id); }
+    else seats = [...seats, id];
+    picked = picked.filter((o) => seatsOf(o).some((x) => seats.includes(x)));
+    if (!picked.length) picked = ['fit'];
+    render();
+  }));
+  needBtns.forEach((b) => b.addEventListener('click', () => {
+    const id = b.dataset.offer;
+    // The Fit Call stands alone: it is where you start when you are not sure yet.
+    if (id === 'fit') picked = ['fit'];
+    else if (picked.includes(id)) picked = picked.filter((x) => x !== id);
+    else picked = [...picked.filter((x) => x !== 'fit'), id];
+    if (!picked.length) picked = ['fit'];
+    history.replaceState(null, '', '#' + picked.join(','));
+    render();
+  }));
+  const fromHash = () => {
+    const ids = location.hash.slice(1).split(',').filter((h) => offers[h]);
+    if (ids.length) {
+      picked = ids.includes('fit') ? ['fit'] : ids;
+      seats = [];
+      for (const id of picked) if (!seatsOf(id).some((x) => seats.includes(x))) seats.push(seatsOf(id)[0]);
+    } else if (location.hash === '#executives') { seats = ['org']; picked = ['fit']; }
+  };
+  sf.classList.add('is-live');
+  reshape();
+  fromHash();
+  render();
+  addEventListener('hashchange', () => { fromHash(); render(); });
+  new ResizeObserver(() => { if (reshape()) render(true); }).observe(board);
+})();

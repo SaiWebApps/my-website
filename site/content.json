@@ -449,6 +449,26 @@
       "title": "Every month"
     }
   ],
+  "serviceSeats": [
+    {"id": "eng", "text": "I lead engineering"},
+    {"id": "org", "text": "I run an organization"},
+    {"id": "founder", "text": "I founded a company"},
+    {"id": "learning", "text": "I lead training or AI adoption"},
+    {"id": "event", "text": "I’m planning an event"}
+  ],
+  "serviceJoin": {
+    "text": "and need"
+  },
+  "serviceNeeds": [
+    {"id": "need-call", "offer": "call", "seats": ["eng", "founder"], "text": "a second opinion on a hard problem"},
+    {"id": "need-review", "offer": "review", "seats": ["eng", "founder"], "text": "a design checked before we build it"},
+    {"id": "need-retainer", "offer": "retainer", "seats": ["eng"], "text": "a senior advisor every month"},
+    {"id": "need-keynote", "offer": "keynote", "seats": ["org", "learning", "event"], "text": "a keynote for our event"},
+    {"id": "need-masterclass", "offer": "masterclass", "seats": ["org", "learning"], "text": "my team trained on AI"},
+    {"id": "need-roi", "offer": "roi", "seats": ["org", "founder"], "text": "a scorecard for our AI projects"},
+    {"id": "need-cto", "offer": "cto", "seats": ["eng", "org", "founder"], "text": "someone to lead our technology"},
+    {"id": "need-fit", "offer": "fit", "seats": ["eng", "org", "founder", "learning", "event"], "text": "to talk it through first"}
+  ],
   "services": [
     {
       "id": "fit",
@@ -571,7 +591,14 @@
       "price": 15000,
       "priceLabel": "from",
       "length": "2–3 weeks",
-      "abstract": "I run every AI initiative on your list through the four-layer framework from my SSRN paper: a SCALE strategic readiness assessment of your firm, a value driver tree that traces each initiative to return on invested capital, a discount rate adjusted for AI-specific risks such as vendor and platform dependency and organizational friction, and stage gates that release each tranche of funding only on evidence. You get a decision scorecard that tells your executives which initiatives to fund.",
+      "abstract": "I run every AI initiative on your list through a four-layer framework.",
+      "layers": [
+        "A SCALE strategic readiness assessment of your firm",
+        "A value driver tree that traces each initiative to return on invested capital",
+        "A discount rate adjusted for AI-specific risks such as vendor and platform dependency and organizational friction",
+        "Stage gates that release each tranche of funding only on evidence"
+      ],
+      "outcome": "You get a decision scorecard that tells your executives which initiatives to fund.",
       "figures": [
         {
           "value": "8",
@@ -579,7 +606,6 @@
         }
       ],
       "proof": [
-        "Coauthored “A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects,” integrating strategic readiness, value drivers, staged investment, and AI-specific risks (SSRN, 2026).",
         "Taught PBS leaders first steps toward AI ROI, starting from the pain points that take employees’ time away from the mission."
       ],
       "links": [
@@ -613,8 +639,7 @@
         "Led an eight-engineer team at Apple across Seattle, London, and partner sites in Europe and Latin America.",
         "Led the four-office global launch of Apple Music Credits (Cupertino, Seattle, London, Singapore), coordinating a 15-engineer cross-functional program to deliver real-time credits curation for millions of tracks.",
         "Mentored half my Amazon team from entry level to promotion, earning selection for Amazon’s Mentorship and Leadership Development Program.",
-        "Own Apple engineers’ performance reviews and review conversations, participate in calibration, drive hiring, and mentor engineers to promotion.",
-        "Coauthored “Who Trains the Next Senior? Managing Software Engineering When AI Makes Code Cheap,” connecting verification, apprenticeship, and engineering outcomes (SSRN, 2026)."
+        "Own Apple engineers’ performance reviews and review conversations, participate in calibration, drive hiring, and mentor engineers to promotion."
       ],
       "links": [
         {
@@ -631,7 +656,17 @@
       "unit": "MON",
       "priceLabel": "from, a month",
       "length": "Monthly, 3-month minimum",
-      "abstract": "I become your technical leader, accountable for outcomes: technical strategy and roadmap, architecture and design reviews, hiring loops for your first engineers, mentoring and performance management, vendor and agency oversight, investor technical due diligence and board updates, and AI strategy and ROI decisions. Month one opens with a two-week stack audit and a 90-day plan, included.",
+      "abstract": "I become your technical leader, accountable for outcomes.",
+      "duties": [
+        "Technical strategy and roadmap",
+        "Architecture and design reviews",
+        "Hiring loops for your first engineers",
+        "Mentoring and performance management",
+        "Vendor and agency oversight",
+        "Investor technical due diligence and board updates",
+        "AI strategy and ROI decisions"
+      ],
+      "outcome": "Month one opens with a two-week stack audit and a 90-day plan, included.",
       "figures": [
         {
           "value": "5",
@@ -2120,7 +2155,7 @@
       ]
     }
   ],
-  "topicCustom": {"text": "None of these fits? I build talks for the room.", "link": "Tell me what your people need"},
+  "topicCustom": {"text": "Not listed?", "link": "Tell me what your people need"},
   "speakingWall": "Where I’ve taught",
-  "speakingClose": "Your people leave using AI, not just hearing about it."
+  "speakingClose": "I build each talk for the room it’s in."
 }

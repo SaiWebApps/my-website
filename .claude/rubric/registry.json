@@ -325,6 +325,33 @@
      }
     ]
    },
+   "serviceSeats": {
+    "page": "services",
+    "parent": "offers",
+    "id_field": "id",
+    "members": [
+     "eng",
+     "org",
+     "founder",
+     "learning",
+     "event"
+    ]
+   },
+   "serviceNeeds": {
+    "page": "services",
+    "parent": "offers",
+    "id_field": "id",
+    "members": [
+     "need-call",
+     "need-review",
+     "need-retainer",
+     "need-keynote",
+     "need-masterclass",
+     "need-roi",
+     "need-cto",
+     "need-fit"
+    ]
+   },
    "topicNeeds": {
     "page": "speaking",
     "parent": "talks",

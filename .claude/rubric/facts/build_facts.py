@@ -171,11 +171,13 @@ def resume():
 # Which unit a record belongs to, from where it sits in the data.
 ID_UNIT = {'aws': 'cmu', 'leanfm': 'cmu', 'cmu-research': 'cmu', 'cmu-capstone': 'cmu', 'cmu-projects': 'cmu', 'cmu-teaching': 'cmu-teaching',
            'who-trains-the-next-senior': 'who-trains', 'stay': 'offers', 'eng': 'offers', 'exec': 'offers'}
-TOP_UNIT = {'speakingTopics': 'talks', 'topicLimbs': 'talks', 'topicMenu': 'talks', 'topicNeeds': 'talks', 'topicAudiences': 'talks', 'topicCustom': 'talks', 'speakingWall': 'talks', 'speakingClose': 'fee', 'topicPrompt': 'talks', 'eaglesSummitSources': 'eagles', 'managerReviews': 'apple', 'groups': 'offers'}
+TOP_UNIT = {'speakingTopics': 'talks', 'topicLimbs': 'talks', 'topicMenu': 'talks', 'topicNeeds': 'talks', 'topicAudiences': 'talks', 'topicCustom': 'talks', 'speakingWall': 'talks', 'speakingClose': 'fee', 'topicPrompt': 'talks', 'eaglesSummitSources': 'eagles', 'managerReviews': 'apple', 'groups': 'offers', 'serviceSeats': 'offers', 'serviceJoin': 'offers', 'serviceNeeds': 'offers'}
 FIELD_SHOW = {'aud': 'never', 'clients': 'never', 'location': 'never', 'length': 'never', 'startDate': 'never', 'href': 'never', 'img': 'never', 'width': 'never', 'height': 'never',
               'slug': 'never', 'id': 'never', 'kind': 'never', 'group': 'never', 'visual': 'never', 'time': 'never', 'meta': 'may', 'alt': 'may',
               # Build plumbing, not facts: file paths, price labels ("from"), billing units, link relations.
-              'sourcePath': 'never', 'priceLabel': 'never', 'unit': 'never', 'parent': 'never', 'verb': 'never', 'value': 'may'}
+              'sourcePath': 'never', 'priceLabel': 'never', 'unit': 'never', 'parent': 'never', 'verb': 'never', 'value': 'may',
+              # The Services sentence: which offer a need opens, and which seats see it.
+              'offer': 'never', 'seats': 'never'}
 CONTEXT_UNIT = [('Apple', 'apple'), ('Amazon', 'amazon'), ('Susquehanna', 'sig'), ('Microsoft', 'microsoft'), ('Wharton', 'wharton'), ('Carnegie Mellon', 'cmu')]
 
 def unit_for(path, top, obj_stack):
@@ -397,7 +399,8 @@ def twins():
     home = {u: v['home'] for u, v in REG['units'].items()}
     pool = [r for r in records if (r['source'] == 'resume' and r['field'] == 'claim') or r['field'] == 'bullets']
     for r in records:
-        if r in pool or len(r['words']) < 4 or home.get(r['unit']) != 'services':
+        # What an offer includes (its duties, layers, outcome) and the Services sentence (offers) are never career results.
+        if r in pool or len(r['words']) < 4 or home.get(r['unit']) != 'services' or r['field'] in ('duties', 'layers', 'outcome') or r['unit'] == 'offers':
             continue
         nums = {w for w in r['words'] if w[:1].isdigit() or w[:1] == '$'}
         def score(R):

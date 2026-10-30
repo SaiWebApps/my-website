@@ -3447,6 +3447,501 @@
   },
   {
     "field": "id",
+    "id": "site:serviceSeats[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceSeats[0].text",
+    "show": "must",
+    "source": "site",
+    "text": "I lead engineering",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceSeats[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "org",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceSeats[1].text",
+    "show": "must",
+    "source": "site",
+    "text": "I run an organization",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceSeats[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "founder",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceSeats[2].text",
+    "show": "must",
+    "source": "site",
+    "text": "I founded a company",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceSeats[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "learning",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceSeats[3].text",
+    "show": "must",
+    "source": "site",
+    "text": "I lead training or AI adoption",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceSeats[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "event",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceSeats[4].text",
+    "show": "must",
+    "source": "site",
+    "text": "I’m planning an event",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceJoin.text",
+    "show": "must",
+    "source": "site",
+    "text": "and need",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[0].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-call",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[0].offer",
+    "show": "never",
+    "source": "site",
+    "text": "call",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[0].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[0].seats[1]",
+    "show": "never",
+    "source": "site",
+    "text": "founder",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[0].text",
+    "show": "must",
+    "source": "site",
+    "text": "a second opinion on a hard problem",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[1].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-review",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[1].offer",
+    "show": "never",
+    "source": "site",
+    "text": "review",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[1].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[1].seats[1]",
+    "show": "never",
+    "source": "site",
+    "text": "founder",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[1].text",
+    "show": "must",
+    "source": "site",
+    "text": "a design checked before we build it",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[2].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-retainer",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[2].offer",
+    "show": "never",
+    "source": "site",
+    "text": "retainer",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[2].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[2].text",
+    "show": "must",
+    "source": "site",
+    "text": "a senior advisor every month",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[3].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-keynote",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[3].offer",
+    "show": "never",
+    "source": "site",
+    "text": "keynote",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[3].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "org",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[3].seats[1]",
+    "show": "never",
+    "source": "site",
+    "text": "learning",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[3].seats[2]",
+    "show": "never",
+    "source": "site",
+    "text": "event",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[3].text",
+    "show": "must",
+    "source": "site",
+    "text": "a keynote for our event",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[4].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-masterclass",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[4].offer",
+    "show": "never",
+    "source": "site",
+    "text": "masterclass",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[4].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "org",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[4].seats[1]",
+    "show": "never",
+    "source": "site",
+    "text": "learning",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[4].text",
+    "show": "must",
+    "source": "site",
+    "text": "my team trained on AI",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[5].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-roi",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[5].offer",
+    "show": "never",
+    "source": "site",
+    "text": "roi",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[5].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "org",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[5].seats[1]",
+    "show": "never",
+    "source": "site",
+    "text": "founder",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[5].text",
+    "show": "must",
+    "source": "site",
+    "text": "a scorecard for our AI projects",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[6].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-cto",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[6].offer",
+    "show": "never",
+    "source": "site",
+    "text": "cto",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[6].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[6].seats[1]",
+    "show": "never",
+    "source": "site",
+    "text": "org",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[6].seats[2]",
+    "show": "never",
+    "source": "site",
+    "text": "founder",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[6].text",
+    "show": "must",
+    "source": "site",
+    "text": "someone to lead our technology",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
+    "id": "site:serviceNeeds[7].id",
+    "show": "never",
+    "source": "site",
+    "text": "need-fit",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "offer",
+    "id": "site:serviceNeeds[7].offer",
+    "show": "never",
+    "source": "site",
+    "text": "fit",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[7].seats[0]",
+    "show": "never",
+    "source": "site",
+    "text": "eng",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[7].seats[1]",
+    "show": "never",
+    "source": "site",
+    "text": "org",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[7].seats[2]",
+    "show": "never",
+    "source": "site",
+    "text": "founder",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[7].seats[3]",
+    "show": "never",
+    "source": "site",
+    "text": "learning",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "seats",
+    "id": "site:serviceNeeds[7].seats[4]",
+    "show": "never",
+    "source": "site",
+    "text": "event",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "text",
+    "id": "site:serviceNeeds[7].text",
+    "show": "must",
+    "source": "site",
+    "text": "to talk it through first",
+    "twins": [],
+    "unit": "offers"
+  },
+  {
+    "field": "id",
     "id": "site:services[0].id",
     "show": "never",
     "source": "site",
@@ -4080,10 +4575,53 @@
     "id": "site:services[5].abstract",
     "show": "must",
     "source": "site",
-    "text": "I run every AI initiative on your list through the four-layer framework from my SSRN paper: a SCALE strategic readiness assessment of your firm, a value driver tree that traces each initiative to return on invested capital, a discount rate adjusted for AI-specific risks such as vendor and platform dependency and organizational friction, and stage gates that release each tranche of funding only on evidence. You get a decision scorecard that tells your executives which initiatives to fund.",
-    "twins": [
-      "head:pinned.services.ts.services[6].abstract"
-    ],
+    "text": "I run every AI initiative on your list through a four-layer framework.",
+    "twins": [],
+    "unit": "roi"
+  },
+  {
+    "field": "layers",
+    "id": "site:services[5].layers[0]",
+    "show": "must",
+    "source": "site",
+    "text": "A SCALE strategic readiness assessment of your firm",
+    "twins": [],
+    "unit": "roi"
+  },
+  {
+    "field": "layers",
+    "id": "site:services[5].layers[1]",
+    "show": "must",
+    "source": "site",
+    "text": "A value driver tree that traces each initiative to return on invested capital",
+    "twins": [],
+    "unit": "roi"
+  },
+  {
+    "field": "layers",
+    "id": "site:services[5].layers[2]",
+    "show": "must",
+    "source": "site",
+    "text": "A discount rate adjusted for AI-specific risks such as vendor and platform dependency and organizational friction",
+    "twins": [],
+    "unit": "roi"
+  },
+  {
+    "field": "layers",
+    "id": "site:services[5].layers[3]",
+    "show": "must",
+    "source": "site",
+    "text": "Stage gates that release each tranche of funding only on evidence",
+    "twins": [],
+    "unit": "roi"
+  },
+  {
+    "field": "outcome",
+    "id": "site:services[5].outcome",
+    "show": "must",
+    "source": "site",
+    "text": "You get a decision scorecard that tells your executives which initiatives to fund.",
+    "twins": [],
     "unit": "roi"
   },
   {
@@ -4107,15 +4645,6 @@
   {
     "field": "proof",
     "id": "site:services[5].proof[0]",
-    "show": "must",
-    "source": "site",
-    "text": "Coauthored “A Multi-Layer Framework for Evaluating the Return on Investment of AI Projects,” integrating strategic readiness, value drivers, staged investment, and AI-specific risks (SSRN, 2026).",
-    "twins": [],
-    "unit": "roi"
-  },
-  {
-    "field": "proof",
-    "id": "site:services[5].proof[1]",
     "retired": true,
     "show": "never",
     "source": "site",
@@ -4308,17 +4837,6 @@
     "unit": "apple"
   },
   {
-    "field": "proof",
-    "id": "site:services[6].proof[4]",
-    "show": "must",
-    "source": "site",
-    "text": "Coauthored “Who Trains the Next Senior? Managing Software Engineering When AI Makes Code Cheap,” connecting verification, apprenticeship, and engineering outcomes (SSRN, 2026).",
-    "twins": [
-      "head:pinned.services.ts.services[2].proof[4]"
-    ],
-    "unit": "retainer"
-  },
-  {
     "field": "href",
     "id": "site:services[6].links[0].href",
     "show": "never",
@@ -4397,7 +4915,79 @@
     "id": "site:services[7].abstract",
     "show": "must",
     "source": "site",
-    "text": "I become your technical leader, accountable for outcomes: technical strategy and roadmap, architecture and design reviews, hiring loops for your first engineers, mentoring and performance management, vendor and agency oversight, investor technical due diligence and board updates, and AI strategy and ROI decisions. Month one opens with a two-week stack audit and a 90-day plan, included.",
+    "text": "I become your technical leader, accountable for outcomes.",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "duties",
+    "id": "site:services[7].duties[0]",
+    "show": "must",
+    "source": "site",
+    "text": "Technical strategy and roadmap",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "duties",
+    "id": "site:services[7].duties[1]",
+    "show": "must",
+    "source": "site",
+    "text": "Architecture and design reviews",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "duties",
+    "id": "site:services[7].duties[2]",
+    "show": "must",
+    "source": "site",
+    "text": "Hiring loops for your first engineers",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "duties",
+    "id": "site:services[7].duties[3]",
+    "show": "must",
+    "source": "site",
+    "text": "Mentoring and performance management",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "duties",
+    "id": "site:services[7].duties[4]",
+    "show": "must",
+    "source": "site",
+    "text": "Vendor and agency oversight",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "duties",
+    "id": "site:services[7].duties[5]",
+    "show": "must",
+    "source": "site",
+    "text": "Investor technical due diligence and board updates",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "duties",
+    "id": "site:services[7].duties[6]",
+    "show": "must",
+    "source": "site",
+    "text": "AI strategy and ROI decisions",
+    "twins": [],
+    "unit": "cto"
+  },
+  {
+    "field": "outcome",
+    "id": "site:services[7].outcome",
+    "show": "must",
+    "source": "site",
+    "text": "Month one opens with a two-week stack audit and a 90-day plan, included.",
     "twins": [],
     "unit": "cto"
   },
@@ -11908,7 +12498,7 @@
     "id": "site:topicCustom.text",
     "show": "must",
     "source": "site",
-    "text": "None of these fits? I build talks for the room.",
+    "text": "Not listed?",
     "twins": [],
     "unit": "talks"
   },
@@ -11935,7 +12525,7 @@
     "id": "site:speakingClose",
     "show": "must",
     "source": "site",
-    "text": "Your people leave using AI, not just hearing about it.",
+    "text": "I build each talk for the room it’s in.",
     "twins": [],
     "unit": "fee"
   },
@@ -19905,9 +20495,7 @@
     "show": "may",
     "source": "head",
     "text": "Published “Who Trains the Next Senior? Managing Software Engineering When AI Makes Code Cheap” as first author (SSRN, 2026).",
-    "twins": [
-      "site:services[6].proof[4]"
-    ],
+    "twins": [],
     "unit": "retainer"
   },
   {
@@ -20270,9 +20858,7 @@
     "show": "may",
     "source": "head",
     "text": "I run every AI initiative on your list through the four-layer framework from my SSRN paper: a SCALE strategic readiness assessment of your firm, a value driver tree that traces each initiative to return on invested capital, a discount rate adjusted for AI-specific risks such as vendor and platform dependency and organizational friction, and stage gates that release each tranche of funding only on evidence. You get a decision scorecard that tells your executives which initiatives to fund.",
-    "twins": [
-      "site:services[5].abstract"
-    ],
+    "twins": [],
     "unit": "roi"
   },
   {
@@ -20318,7 +20904,7 @@
     "source": "head",
     "text": "Taught PBS leaders first steps toward AI ROI, starting from the pain points that take employees’ time away from the mission.",
     "twins": [
-      "site:services[5].proof[1]"
+      "site:services[5].proof[0]"
     ],
     "unit": "roi"
   },

@@ -1,6 +1,6 @@
 {
   "coverageSha256": "2304bdca84179fa781644063ce7007e992a505ef0964b80752a2c7449109ee93",
-  "factsSha256": "fc3d7bc5bf85beabc2ea6c6284fccd3353c5753fa60780e265653a4d2127a036",
+  "factsSha256": "de7b67772b56d5c67f383ba493f0ef726c1101ade2b8b459d4ee51a19710b2a3",
   "generator": "deterministic-governed-sources-with-pinned-history",
   "historicalHeadInput": {
     "authorityRank": "historical-review",
@@ -63,7 +63,7 @@
     ".claude/rubric/career_visual_transition_capture.mjs": "c53d932269e5e1b6b49377a511496bb8b230f0506e58c886c34e782129e5ad3b",
     ".claude/rubric/career_visual_transition_verify.py": "7ce6eeea615be5a0fe7ab70496ea096f9ad71158f118046e8982dd777515d074",
     ".claude/rubric/facts/README.md": "a7b9444d10510dc2cd0a49cfc51a982834b6ad9c98087340de86a7fa23bfcb61",
-    ".claude/rubric/facts/build_facts.py": "745fb7882eb86e33388c4e98a032a0d00d565a920b0f0d5cba0681e01cc386c4",
+    ".claude/rubric/facts/build_facts.py": "6e12cc45fccad1885b25cf2433e44d563a43743a799aba80b9260fbe62f2dfe9",
     ".claude/rubric/facts/export_head.py": "81d05bab3e0f007fd66b1def42a76cf48802ea87970f8568e618b76b3406b362",
     ".claude/rubric/facts/load_head.mjs": "653d08d5e7cb6729506273babe3dff8f38f3ca8737efa97052ba2515c43c3f61",
     ".claude/rubric/facts/mutation_test.py": "dc5efe3dc2e3fe840e16dbb3b96266a776982f030f7663e7f5806f028d50c9f7",
@@ -73,7 +73,7 @@
     ".claude/rubric/guard.py": "caf874f8e777d05ef0f7c92a527519ba232ab2998190c484021c2b62380f7387",
     ".claude/rubric/out/career-evidence-transition/capture.json": "df6b8c25ad1d3e911eb65deef56b67f45579b87882ecf80e65fb94241f24b989",
     ".claude/rubric/out/career-evidence-transition/experience-audit-review.json": "4d036854b421b09b8a654348ae6fad89b48a0b2ee1c6394da3520e907ee92838",
-    ".claude/rubric/registry.json": "569197a56523ee6c5a6ec5376e1ecce621462946ed5ff5b56f68bab85eae7aae",
+    ".claude/rubric/registry.json": "b9ff52879097456db003c4d6076a0937c9853db20b4c38ccbddeca35f6063bd3",
     ".claude/rubric/retired.json": "1b02030179f94e15196fd0c63768c6548146b66a064c9294f2daffa1f15b2ecf",
     ".claude/rubric/sources/drone-megaddon-figure-assets.json": "2f19cd63a8d1c6c4a15a5e14ee64be14e5f6b3d8062a24e1b672f28f987adcb4",
     ".claude/rubric/sources/papers-full/SOURCES.md": "b0d2a53883224e1a6082dab7021b8d9f8c1356f2d7854e684c37738ee832b9a8",
@@ -90,8 +90,8 @@
     "public/assets/research/drone-megaddon-2014.pdf": "ae98e121563107488d2f297f0f541cb790f90ce4fb285c911309b7d9473b8005",
     "public/assets/research/drone-megaddon-2026-language-vision-architecture.png": "99766997628d3f369e9c74da880dffcb2be0e42eca7731a90820f806908b5ebe",
     "public/assets/research/drone-megaddon-2026.pdf": "0bad9c95e7d9476b52b187dab5dab195c1817fc18f9342d3e19949a0554f81da",
-    "site/content.json": "b679bdf4c13c50a59db055776a245d704073f4b43ada2167eb6321c53b6e3afd"
+    "site/content.json": "b364c3b9ebeb07f0b413469ce0ed2a972f62aea37ec1c2106ea1faba233290df"
   },
-  "recordCount": 1991,
+  "recordCount": 2057,
   "schemaVersion": 3
 }

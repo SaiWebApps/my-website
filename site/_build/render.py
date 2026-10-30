@@ -918,35 +918,71 @@ def projects(B):
 
 # ---------------------------------------------------------------- Services
 def services(B):
+    """A departure board: the visitor says who they are and what they need, and the board flips to the offer.
+    Every offer is in the page, grouped by who it is for; the board and the sentence are built by main.js."""
     S = B.D['services']
-    groups = B.D['groups']
     line = {'eng': 'blue', 'exec': 'orange', 'stay': 'red'}
-    names = {s['id']: name(s['id']) for s in S}
-    routes = ''
-    for i, group in enumerate(groups):
-        gid = group['id']
-        offers = [s for s in S if s['group'] == gid]
-        title = take_fact(f'site:groups[{i}].title')
-        links = ''.join(
-            f'<li><a href="#{s["id"]}"><span>{names[s["id"]]}</span></a></li>'
-            for s in offers
-        )
-        routes += (f'<section class="svc2-route" data-line="{line[gid]}">'
-                   f'<h2 id="svc2-route-{gid}" class="svc2-route__name">{title}</h2>'
-                   f'<ol class="svc2-route__offers" style="--count:{len(offers)}">{links}</ol></section>')
-    last = {group['id']: [s for s in S if s['group'] == group['id']][-1]['id'] for group in groups}
-    atlas = ''.join(
-        f'<article class="svc2-offer svc2-offer--{s["group"]}{" svc2-offer--has-next" if s["id"] != last[s["group"]] else ""}" '
-        f'id="{s["id"]}" data-line="{line[s["group"]]}" aria-labelledby="svc2-offer-{s["id"]}">'
-        f'<h3 class="svc2-offer__name" id="svc2-offer-{s["id"]}">{names[s["id"]]}</h3>'
-        f'{train(s["id"], open_layout=True)}</article>'
-        for s in S
-    )
-    main = (f'<section class="svc2" aria-labelledby="svc2-h">'
-            f'<div class="svc2-hero" id="offers"><h1 class="hd-twin" id="svc2-h">Services</h1>'
-            f'<nav class="svc2-map" aria-label="Services">{routes}</nav>'
+    def fact(f, tag='p', cls=''):
+        PLACER.take(f)
+        klass = f' class="{cls}"' if cls else ''
+        return f'<{tag}{klass}>{B.t(f["text"])}</{tag}>'
+    def href(h):
+        # The site links pages as speaking.html#id and serves files from /public.
+        return h[1:].replace('#', '.html#', 1) if h.startswith('/speaking#') else '/public' + h
+    def offer(s):
+        u = s['id']
+        get, lists, proof = [], {}, []
+        for f in facts_of(u):
+            if f['field'] == 'name' or not PLACER.take(f):
+                continue
+            if f['field'] in ('duties', 'layers'):
+                lists.setdefault(f['field'], []).append(f)
+            elif f['field'] == 'proof':
+                proof.append(f)
+            else:
+                get.append(f)
+        body = ''
+        for f in get:
+            if f['field'] == 'outcome':
+                continue
+            # One sentence a line, each whole (D40), the first the lead.
+            PLACER.take(f)
+            body += ''.join(f'<p class="sf-offer__lead">{B.t(x)}</p>' if f['field'] == 'abstract' and k == 0 else f'<p>{B.t(x)}</p>'
+                            for k, x in enumerate(words.sentences(f['text'])))
+            if f['field'] == 'abstract':
+                for fl in lists.values():
+                    body += '<ul class="route-svc">' + ''.join(fact(x, 'li') for x in fl) + '</ul>'
+        body += ''.join(fact(f) for f in get if f['field'] == 'outcome')
+        links = [(k, x) for k, x in enumerate(s.get('links', [])) if x['href'].startswith(('/speaking#', '/talks/'))]
+        tail = ''.join(fact(f, cls='sf-offer__proof') for f in proof)
+        if links:
+            tail += '<p class="sf-offer__links">' + ''.join(
+                f'<a href="{href(x["href"])}">{take_fact(f"site:services[{S.index(s)}].links[{k}].label")}<span aria-hidden="true"> \u2192</span></a>'
+                for k, x in links) + '</p>'
+        tag = '<p class="sf-offer__tag">' + take_fact('approved:19') + '</p>' if u == 'fit' else ''
+        return (f'<article class="sf-offer" id="{u}" data-line="{line[s["group"]]}" aria-labelledby="sf-n-{u}">'
+                f'<h3 class="sf-offer__name" id="sf-n-{u}">{name(u)}</h3>{tag}'
+                f'<div class="sf-offer__get" data-screen>{body}</div>'
+                + (f'<div class="sf-offer__done" data-screen>{tail}</div>' if tail else '') + '</article>')
+    groups = ''.join(
+        f'<section class="sf-group" data-line="{line[g["id"]]}" aria-labelledby="sf-g-{g["id"]}">'
+        f'<h2 class="sf-group__name" id="sf-g-{g["id"]}">{take_fact(f"site:groups[{i}].title")}</h2>'
+        + ''.join(offer(s) for s in S if s['group'] == g['id']) + '</section>'
+        for i, g in enumerate(B.D['groups']))
+    seats = ''.join(
+        f'<button type="button" class="sf-chip" data-seat="{x["id"]}" data-content-unit="serviceSeats/{x["id"]}">'
+        f'{take_fact(f"site:serviceSeats[{i}].text")}</button>' for i, x in enumerate(B.D['serviceSeats']))
+    needs = ''.join(
+        f'<button type="button" class="sf-chip" data-offer="{x["offer"]}" data-seats="{" ".join(x["seats"])}" '
+        f'data-content-unit="serviceNeeds/{x["id"]}">{take_fact(f"site:serviceNeeds[{i}].text")}</button>'
+        for i, x in enumerate(B.D['serviceNeeds']))
+    main = (f'<section class="svc2" aria-labelledby="svc2-h"><div class="sf" id="offers" data-sf>'
+            f'<h1 class="hd-twin" id="svc2-h">Services</h1>'
+            f'<nav class="sf-ask" aria-labelledby="svc2-h"><p class="sf-seats">{seats}</p>'
+            f'<span class="sf-join">{take_fact("site:serviceJoin.text")}</span><p class="sf-needs">{needs}</p></nav>'
+            f'<div class="sf-stage"><div class="sf-board" aria-hidden="true"></div><div class="sf-panel">{groups}</div>'
             f'<p class="svc2-book" id="book"><a class="btn" data-line="blue" href="mailto:sairambkrishnan@gmail.com?subject=Fit%20Call">Book a free Fit Call</a></p></div>'
-            f'<div class="svc2-atlas">{atlas}</div></section>')
+            f'</div></section>')
     return B.page('services', 'services', 'Services, Sairam Krishnan', 'Advisory for engineering leaders and executives: a free Fit Call, design reviews, AI ROI reviews, keynotes and masterclasses, an advisory retainer, and Fractional CTO.', main)
 
 # ---------------------------------------------------------------- Contact
