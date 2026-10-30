@@ -2,14 +2,6 @@
 .sp2 { overflow-x: clip; padding-bottom: 96px; }
 .sp2-hero { max-width: 1328px; margin: 0 auto; padding: clamp(16px, 3vw, 36px) var(--gutter) clamp(20px, 3vw, 36px); display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 40px; }
 .sp2-hero > h1 { font-size: clamp(3.5rem, 6.4vw, 6rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.045em; }
-.sp2-index { display: grid; grid-template-columns: auto auto; justify-content: start; gap: 16px 48px; font-size: 1rem; }
-.sp2-index__branch { display: flex; flex-direction: column; padding-top: 10px; border-top: 3px solid var(--purple); }
-.sp2-index__branch--independent { border-top-color: var(--ink); }
-.sp2-index__group { display: inline-flex; align-items: center; min-height: 32px; font-size: 0.875rem; font-weight: 700; color: var(--ink); text-decoration: none; }
-.sp2-index__branch ol { display: flex; flex-wrap: wrap; gap: 0 20px; margin: 0; padding: 0; list-style: none; }
-.sp2-index__branch li a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-2); font-weight: 600; text-decoration: none; }
-@media (max-width: 760px) { .sp2-index { grid-template-columns: minmax(0, 1fr); } }
-@media (hover: hover) and (pointer: fine) { .sp2-index a:hover { color: var(--ink); text-decoration: underline; } }
 .sp2-group, .sp2-topics, .sp2-booking { scroll-margin-top: 24px; }
 
 /* The frame */

@@ -386,16 +386,6 @@ def speaking(B):
         for i in range(3)
     )
 
-    index = (
-        '<nav class="sp2-index" aria-label="Speaking"><div class="sp2-index__branch">'
-        '<a class="sp2-index__group" href="#praxtera">Praxtera AI Institute</a><ol>'
-        '<li><a href="#jacobson-strategic">Jacobson Strategic</a></li><li><a href="#hp">HP</a></li>'
-        '<li><a href="#morgan-lewis">Morgan Lewis</a></li><li><a href="#pbs">PBS</a></li>'
-        '<li><a href="#eagles">Philadelphia Eagles</a></li><li><a href="#sonova">Sonova</a></li></ol></div>'
-        '<div class="sp2-index__branch sp2-index__branch--independent">'
-        '<a class="sp2-index__group" href="#independent-speaking-teaching">Independent</a><ol>'
-        '<li><a href="#cmu">Carnegie Mellon</a></li><li><a href="#atos">Atos</a></li></ol></div></nav>'
-    )
 
     # The face is unchanged except the session line: displayTitle now sits where sheet:eagles:0:title was.
     # The claim moves off the face proof into the card. Otherwise "Basics to Advanced Automation" (4 words)
@@ -608,7 +598,7 @@ def speaking(B):
 
     fee = (f'<section class="sp2-booking" id="fee" aria-labelledby="sp2-fee-h"><h2 id="sp2-fee-h">Keynote</h2>'
            f'<a class="btn sp2-booking__link" data-line="orange" href="mailto:sairambkrishnan@gmail.com?subject=Keynote">Book a talk</a></section>')
-    main = f'<section class="sp2" data-line="orange" aria-labelledby="sp2-h"><header class="sp2-hero"><h1 id="sp2-h">Speaking</h1>{index}</header>{praxtera}{independent}{topics}{fee}</section>'
+    main = f'<section class="sp2" data-line="orange" aria-labelledby="sp2-h"><header class="sp2-hero"><h1 id="sp2-h">Speaking</h1></header>{praxtera}{independent}{topics}{fee}</section>'
     return B.page('speaking', 'speaking', 'Speaking, Sairam Krishnan', 'Keynote for the Philadelphia Eagles, executive AI education for HP, Morgan Lewis, PBS, Sonova and Jacobson Strategic, and the Atos knowledge-graph talk.', main)
 
 # ---------------------------------------------------------------- Research
