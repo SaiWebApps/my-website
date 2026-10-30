@@ -9,7 +9,7 @@ Run `npm run build` (or `python3 site/_build/build.py`). It writes the pages int
 ## Editing content
 
 - Site copy lives in `site/content.json`. The pages render from `site/_build/data/facts.json`, and the build copies each `site:` fact's text from `content.json` into it. The build stops if a fact points at a `content.json` entry that no longer exists.
-- A new line on a page needs its `content.json` entry, a fact record in `facts.json` (`id` is `site:` plus its `content.json` path, with `unit`, `field` and `show`), and its unit in `site/_build/data/registry.json`.
+- The Projects yard (`yard` in `content.json`) renders straight from `content.json`. Elsewhere, a new line on a page needs its `content.json` entry, a fact record in `facts.json` (`id` is `site:` plus its `content.json` path, with `unit`, `field` and `show`), and its unit in `site/_build/data/registry.json`.
 - `registry.json` also holds the accepted records. The build stops if a content ID is missing or duplicated, a member list changes order, or a locked record differs.
 - `PRODUCT.md` holds the audiences and positioning the owner confirmed.
 

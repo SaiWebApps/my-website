@@ -1620,3 +1620,51 @@ a.stn--route:hover .stn__name { text-decoration-color: currentColor; }
   .pj-system--lore { min-height: 270px; }
   .pj-system--lore .pj-system__term { max-width: 15ch; }
 }
+
+/* The yard: everything else I've built, parked on four sidings off one lead track. */
+.yd { position: relative; margin-top: clamp(140px, 16vw, 240px); scroll-margin-top: calc(var(--hd-h) + 24px); }
+.yd__h { margin: 0; font-size: clamp(2.75rem, 5.4vw, 5rem); font-weight: 850; letter-spacing: -0.05em; line-height: 0.95; }
+.yd__yard { position: relative; margin-top: clamp(40px, 5vw, 64px); padding-left: 56px; }
+.yd__yard::before {
+  content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 10px; border-radius: 5px; background: var(--zone-2);
+}
+.yd__siding { position: relative; }
+.yd__siding + .yd__siding { margin-top: clamp(36px, 4vw, 52px); }
+.yd__siding::before {
+  content: ''; position: absolute; left: -42px; width: 42px; top: calc(1.6em + 10px + 31px); height: 10px; background: var(--zone-2);
+}
+.yd__label { margin: 0 0 10px; font-size: 0.9375rem; font-weight: 750; color: var(--ink-2); line-height: 1.6; }
+.yd__track {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  background: repeating-linear-gradient(to bottom, transparent 0 31px, var(--zone-2) 31px 41px, transparent 41px 86px);
+}
+.yd__car {
+  display: flex; flex-direction: column; justify-content: center; min-height: 72px; padding: 8px 30px;
+  border: 0; border-radius: 36px; background: var(--zone); color: var(--ink); box-shadow: inset 0 0 0 3px var(--zone-2);
+  font: inherit; text-align: left; cursor: pointer;
+  transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
+}
+.yd__car b { font-size: 1.0625rem; font-weight: 800; line-height: 1.2; }
+.yd__car span { margin-top: 2px; font-size: 0.875rem; font-weight: 550; color: var(--ink-2); line-height: 1.3; }
+.yd__car--lead { background: var(--green); box-shadow: none; color: #0F1A12; }
+.yd__car--lead span { color: rgb(15 26 18 / 0.82); }
+.yd__car[aria-expanded="true"] { box-shadow: 0 0 0 4px var(--map), 0 0 0 7px var(--ink); }
+.yd__car:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.yd__car:active { transform: scale(0.98); }
+@media (hover: hover) and (pointer: fine) { .yd__car:hover { transform: translateY(-2px); } }
+@media (prefers-reduced-motion: reduce) { .yd__car { transition: none; } .yd__car:hover, .yd__car:active { transform: none; } }
+.yd__details:empty { display: none; }
+.yd__detail { max-width: 64ch; margin-top: 28px; padding: 4px 0 4px 24px; box-shadow: inset 6px 0 0 var(--green); }
+.yd.is-live .yd__detail:not(.is-on) { display: none; }
+.yd__detail h3 { margin: 0; font-size: clamp(1.375rem, 2.2vw, 1.875rem); font-weight: 850; letter-spacing: -0.02em; line-height: 1.15; }
+.yd__year { margin: 4px 0 0; font-size: 0.9375rem; font-weight: 700; color: var(--ink-2); }
+.yd__text { margin: 14px 0 0; font-size: clamp(1rem, 1.15vw, 1.125rem); line-height: 1.55; }
+.yd__link { display: inline-block; padding: 12px 0; margin-top: -2px; color: var(--ink); font-weight: 800; text-underline-offset: 5px; text-decoration-thickness: 2px; }
+@media (max-width: 767.98px) {
+  .yd__yard { padding-left: 40px; }
+  .yd__yard::before { left: 6px; width: 8px; }
+  .yd__siding::before { left: -34px; width: 34px; }
+  .yd__track { flex-direction: column; background: none; }
+  .yd__car { width: 100%; }
+  .yd__detail { padding-left: 18px; }
+}

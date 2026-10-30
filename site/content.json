@@ -2157,5 +2157,155 @@
   ],
   "topicCustom": {"text": "Not listed?", "link": "Tell me what your people need"},
   "speakingWall": "Where I’ve taught",
-  "speakingClose": "I build each talk for the room it’s in."
+  "speakingClose": "I build each talk for the room it’s in.",
+  "yard": [
+    {
+      "id": "strangers",
+      "label": "Shipped to strangers",
+      "cars": [
+        {
+          "id": "profile-switcher",
+          "name": "Claude Code Profile Switcher",
+          "proof": "4,400+ installs",
+          "year": "2026",
+          "featured": true,
+          "detail": "A VS Code extension that switches Claude Code between accounts, such as work and personal. It moves the ~/.claude link, sets CLAUDE_CONFIG_DIR, and shows the active profile in the status bar. Developers have installed it more than 4,400 times.",
+          "link": {
+            "label": "VS Code Marketplace",
+            "href": "https://marketplace.visualstudio.com/items?itemName=sairambkrishnan.claude-code-profile-switcher"
+          }
+        },
+        {
+          "id": "synonym-graph",
+          "name": "Synonym graph",
+          "proof": "Two PyPI packages",
+          "year": "2015-16",
+          "detail": "synonymscrawler maps words by degrees of separation through a thesaurus, and randomwordgenerator serves random words; both have been on PyPI since September 2016, and an outside developer contributed a fix I merged. A Node app draws the crawl as a D3 tree you expand word by word.",
+          "link": {
+            "label": "GitHub",
+            "href": "https://github.com/SaiWebApps/PySynonymsCrawler"
+          }
+        },
+        {
+          "id": "parallelax",
+          "name": "Parallelax",
+          "proof": "npm package",
+          "year": "2015",
+          "detail": "An npm package that runs several Blockspring functions in parallel and merges their results into one object. It ran my stock-briefing and dictionary APIs side by side, and was downloaded more than 1,500 times in 2016 and 2017.",
+          "link": {
+            "label": "GitHub",
+            "href": "https://github.com/SaiWebApps/Parallelax"
+          }
+        }
+      ]
+    },
+    {
+      "id": "agents",
+      "label": "Built with AI agents",
+      "cars": [
+        {
+          "id": "peeraxis",
+          "name": "Peeraxis",
+          "proof": "Agents ship features while I review",
+          "year": "2026",
+          "featured": true,
+          "detail": "A harness that runs coding agents for me. I approve one feature card; it writes a hidden test, builds the feature, has a model from a different company check the work, and records a demo I accept or reject. It delivered its first Persuaider feature with no message from me, and it built 12 of its own 43 commits, including its own approval screens.",
+          "link": {
+            "label": "GitHub",
+            "href": "https://github.com/SaiWebApps/peeraxis"
+          }
+        },
+        {
+          "id": "newsleaf",
+          "name": "Newsleaf",
+          "proof": "Energy news, by direction",
+          "year": "2026",
+          "detail": "I lead product and technology with co-founder Katera Mujadidi. An eight-step pipeline reads six news sources, extracts events with LLMs, merges duplicate stories, records when each event happened and when it was learned, and shows which way each story moves crude, LNG, tankers, and airlines. Pre-launch.",
+          "link": {
+            "label": "Live site",
+            "href": "https://newsleaf.vercel.app"
+          }
+        }
+      ]
+    },
+    {
+      "id": "taught",
+      "label": "Taught",
+      "cars": [
+        {
+          "id": "bias-files",
+          "name": "The Bias Files",
+          "proof": "AI bias, as a comic",
+          "year": "2025",
+          "detail": "A ten-page interactive comic, drawn entirely in HTML and CSS, that teaches four kinds of AI bias (historical, representation, aggregation, and evaluation) through real cases, including Amazon's scrapped hiring model and the Gender Shades study.",
+          "link": {
+            "label": "Live site",
+            "href": "https://saiwebapps.github.io/TheBiasFiles/"
+          }
+        },
+        {
+          "id": "roi-quest",
+          "name": "The AI ROI quest",
+          "proof": "Discounted cash flow, played",
+          "year": "2026",
+          "detail": "The reader becomes Chief Innovation Officer of the Kingdom of TechRealm and works through the costs and benefits of an AI investment, one discounted-cash-flow decision at a time.",
+          "link": {
+            "label": "Live site",
+            "href": "https://saiwebapps.github.io/AI-ROI-Unconference/"
+          }
+        }
+      ]
+    },
+    {
+      "id": "learn",
+      "label": "Built to learn",
+      "cars": [
+        {
+          "id": "ml-by-hand",
+          "name": "Machine learning by hand",
+          "proof": "Backpropagation from the equations",
+          "year": "2016",
+          "featured": true,
+          "detail": "I worked through Coursera's Machine Learning exercises in Octave and wrote each algorithm from its equations: linear regression by gradient descent and the normal equation, regularized logistic regression, a one-vs-all digit classifier, backpropagation for a 400-25-10 network, and learning curves to tune regularization. Around it, statistics in R and functional programming in Scala.",
+          "link": {
+            "label": "GitHub",
+            "href": "https://github.com/SaiWebApps/Machine-Learning-Exercise-4"
+          }
+        },
+        {
+          "id": "hand-2048",
+          "name": "Hand-2048",
+          "proof": "Became Gestiq",
+          "year": "2014",
+          "detail": "My Carnegie Mellon capstone team played 2048 with hand motions in the air. A C++ tracker on a depth sensor sent each swipe over TCP to a Node proxy that the browser game polled; a dead zone and re-arming made one swipe exactly one move. Gestiq grew from it.",
+          "link": {
+            "label": "GitHub",
+            "href": "https://github.com/SaiWebApps/Team5"
+          }
+        },
+        {
+          "id": "survey",
+          "name": "One survey app, three ways",
+          "proof": "Spring, App Engine, Django",
+          "year": "2013-14",
+          "detail": "I built the same survey product three times: Spring MVC with Hibernate and MySQL, Spring MVC on Google App Engine, and Django on App Engine. Login, image uploads, transactional saves, salted password hashing, and survey suggestions based on what others took.",
+          "link": {
+            "label": "GitHub",
+            "href": "https://github.com/SaiWebApps/Spring-MVC-Survey"
+          }
+        },
+        {
+          "id": "medhub",
+          "name": "MedHub",
+          "proof": "Android, with Meghna Thakur",
+          "year": "2014",
+          "detail": "An Android forum for medical questions, built with Meghna Thakur. Patients post symptoms, doctors and patients reply, and replies are voted up or down, with separate doctor and patient accounts and about 3,800 lines of layered Java.",
+          "link": {
+            "label": "GitHub",
+            "href": "https://github.com/SaiWebApps/MedHub"
+          }
+        }
+      ]
+    }
+  ]
 }

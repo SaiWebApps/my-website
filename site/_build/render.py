@@ -945,10 +945,27 @@ def projects(B):
                      f'aria-labelledby="pj-{u}-h"><div class="pj-venture__head">'
                      f'<h2 class="pj-venture__name" id="pj-{u}-h">{names[u]}</h2>{thesis}</div>'
                      f'{train(u, images=imgs, open_class="pj", heading_tag="h3", visible=B.t)}</article>\n')
+    # The yard: everything else, parked on sidings. A car opens its detail; without script every detail shows.
+    sidings = ''
+    for s in B.D['yard']:
+        cars, details = '', ''
+        for c in s['cars']:
+            lead = ' yd__car--lead' if c.get('featured') else ''
+            cars += (f'<button type="button" class="yd__car{lead}" aria-controls="yd-{c["id"]}" aria-expanded="false">'
+                     f'<b>{B.t(c["name"])}</b><span>{B.t(c["proof"])}</span></button>')
+            details += (f'<article class="yd__detail" id="yd-{c["id"]}" aria-labelledby="yd-{c["id"]}-h">'
+                        f'<h3 id="yd-{c["id"]}-h">{B.t(c["name"])}</h3><p class="yd__year">{B.t(c["year"])}</p>'
+                        f'<p class="yd__text">{B.t(c["detail"])}</p>'
+                        f'<a class="yd__link" href="{html.escape(c["link"]["href"])}">{B.t(c["link"]["label"])}'
+                        f'<span aria-hidden="true"> →</span></a></article>')
+        sidings += (f'<div class="yd__siding"><p class="yd__label">{B.t(s["label"])}</p>'
+                    f'<div class="yd__track">{cars}</div><div class="yd__details">{details}</div></div>')
+    yard = (f'<section class="yd" aria-labelledby="yd-h"><h2 class="yd__h" id="yd-h">More I’ve built</h2>'
+            f'<div class="yd__yard">{sidings}</div></section>')
     main = (f'<section class="pj" data-line="green" aria-labelledby="pj-h">'
             f'<div class="pj-hero"><h1 class="hd-twin" id="pj-h">Projects</h1>'
             f'<nav class="pj-index" aria-label="Ventures"><ol>{index}</ol></nav></div>'
-            f'<div class="pj-atlas">{ventures}</div></section>')
+            f'<div class="pj-atlas">{ventures}{yard}</div></section>')
     return B.page('projects', 'projects', 'Projects, Sairam Krishnan', 'Five ventures: Ondoway, Persuaider, Gestiq, Lore / DependIQ, and Crucible.', main)
 
 # ---------------------------------------------------------------- Services

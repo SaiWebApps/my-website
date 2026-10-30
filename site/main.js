@@ -900,3 +900,18 @@
   addEventListener('hashchange', () => { fromHash(); render(); });
   new ResizeObserver(() => { if (reshape()) render(true); }).observe(board);
 })();
+
+/* ---------- The yard: one car open at a time; its detail shows under its siding ---------- */
+(() => {
+  const yd = document.querySelector('.yd');
+  if (!yd) return;
+  const cars = [...yd.querySelectorAll('.yd__car')];
+  const open = car => cars.forEach(c => {
+    const on = c === car;
+    c.setAttribute('aria-expanded', String(on));
+    document.getElementById(c.getAttribute('aria-controls'))?.classList.toggle('is-on', on);
+  });
+  cars.forEach(c => c.addEventListener('click', () => open(c)));
+  yd.classList.add('is-live');
+  open(cars[0]);
+})();
